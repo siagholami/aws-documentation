@@ -1,0 +1,20 @@
+
+
+Creating and Deploying Flows (AWS IoT Greengrass)
+After you model a flow and upload all of the entities that it contains, you create and deploy the flow. 
+Prerequisites
+Note
+The AWS IoT Greengrass group and Amazon S3 bucket must be created in the same AWS Region. The AWS IoT Things Graph entities that you create must also be in the same Region as these resources.
+ An AWS account
+ An AWS IoT Greengrass core, version 1.7 or later
+Create a directory named thingsgraph at the root of your core. For information on how to configure Greengrass logs, see Monitoring with AWS IoT Greengrass Logs
+ An Amazon S3 bucket
+ An AWS IoT Greengrass IAM role that has access to your S3 bucket
+Add this role to your Greengrass group. For information on how to configure IAM roles for Greengrass, see Configure IAM Roles.
+ Completion of the steps in Creating and Uploading Models
+We provide procedures for creating and deploying flows using either the AWS CLI or the AWS IoT Things Graph console. Both the AWS CLI and the console use the two devices that you created in Creating and Uploading Models.
+Note
+You must create a thingsgraph directory at the root of your AWS IoT Greengrass core device. If this directory doesn't exist, deployments to your core device won't work.
+Topics
+ Create and Deploy a Flow (CLI)
+ Create and Deploy a Flow (AWS IoT Things Graph console)

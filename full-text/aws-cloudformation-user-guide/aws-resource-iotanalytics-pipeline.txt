@@ -1,0 +1,243 @@
+AWS::IoTAnalytics::Pipeline
+The AWS::IoTAnalytics::Pipeline resource consumes messages from one or more channels and allows you to process the messages before storing them in a data store. You must specify both a channel and a datastore activity and, optionally, as many as 23 additional activities in the pipelineActivities array. For more information, see  How to Use AWS IoT Analytics in the AWS IoT Analytics User Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoTAnalytics::Pipeline",
+  "Properties" : {
+      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ Activity, ... ],
+      "[PipelineName](#cfn-iotanalytics-pipeline-pipelinename)" : String,
+      "[Tags](#cfn-iotanalytics-pipeline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::IoTAnalytics::Pipeline
+Properties: 
+  [PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities): 
+    - Activity
+  [PipelineName](#cfn-iotanalytics-pipeline-pipelinename): String
+  [Tags](#cfn-iotanalytics-pipeline-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+PipelineActivities 
+A list of "PipelineActivity" objects. Activities perform transformations on your messages, such as removing, renaming or adding message attributes; filtering messages based on attribute values; invoking your Lambda functions on messages for advanced processing; or performing mathematical transformations to normalize device data.
+The list can be 2-25 PipelineActivity objects and must contain both a channel and a datastore activity. Each entry in the list must contain only one activity, for example:
+pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ] 
+Required: Yes
+Type: List of Activity
+Maximum: 25
+Update requires: No interruption
+PipelineName 
+The name of the pipeline.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z0-9_]$
+Update requires: Replacement
+Tags 
+Metadata which can be used to manage the pipeline.
+For more information, see Tag.
+Required: No
+Type: List of Tag
+Maximum: 50
+Update requires: No interruption
+Examples
+Simple Pipeline
+The following example creates a simple pipeline.
+JSON
+{
+    "Description": "Create a simple Pipeline",
+    "Resources": {
+        "Pipeline": {
+            "Type": "AWS::IoTAnalytics::Pipeline",
+            "Properties": {
+                "PipelineName": "SimplePipeline",
+                "PipelineActivities": [
+                    {
+                        "Channel": {
+                            "Name": "ChannelActivity",
+                            "ChannelName": "SimpleChannel",
+                            "Next": "DatastoreActivity"
+                        },
+                        "Datastore": {
+                            "Name": "DatastoreActivity",
+                            "DatastoreName": "SimpleDatastore"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+YAML
+```
+Description: "Create a simple Pipeline"
+Resources:
+  Pipeline:
+    Type: "AWS::IoTAnalytics::Pipeline"
+    Properties:
+      PipelineName: "SimplePipeline"
+      PipelineActivities:
+        -
+          Channel:
+            Name: "ChannelActivity"
+            ChannelName: "SimpleChannel"
+            Next: "DatastoreActivity"
+          Datastore:
+            Name: "DatastoreActivity"
+            DatastoreName: "SimpleDatastore"
+```
+Complex Pipeline
+The following example creates a complex pipeline.
+JSON
+{
+    "Description": "Create a complex Pipeline",
+    "Resources": {
+        "Pipeline": {
+            "Type": "AWS::IoTAnalytics::Pipeline",
+            "Properties": {
+                "PipelineName": "ComplexPipeline",
+                "PipelineActivities": [
+                    {
+                        "Channel": {
+                            "Name": "ChannelActivity",
+                            "ChannelName": "Channel",
+                            "Next": "LambdaActivity"
+                        },
+                        "Lambda": {
+                            "Name": "LambdaActivity",
+                            "LambdaName": "Lambda",
+                            "BatchSize": 1,
+                            "Next": "AddAttributesActivity"
+                        },
+                        "AddAttributes": {
+                            "Name": "AddAttributesActivity",
+                            "Attributes": {
+                                "key1": "attribute1",
+                                "key2": "attribute2"
+                            },
+                            "Next": "RemoveAttributesActivity"
+                        },
+                        "RemoveAttributes": {
+                            "Name": "RemoveAttributesActivity",
+                            "Attributes": [
+                                "attribute1",
+                                "attribute2"
+                            ],
+                            "Next": "SelectAttributesActivity"
+                        },
+                        "SelectAttributes": {
+                            "Name": "SelectAttributesActivity",
+                            "Attributes": [
+                                "attribute1",
+                                "attribute2"
+                            ],
+                            "Next": "FilterActivity"
+                        },
+                        "Filter": {
+                            "Name": "FilterActivity",
+                            "Filter": "attribute1 > 40 AND attribute2 < 20",
+                            "Next": "MathActivity"
+                        },
+                        "Math": {
+                            "Name": "MathActivity",
+                            "Attribute": "attribute",
+                            "Math": "attribute - 10",
+                            "Next": "DeviceRegistryEnrichActivity"
+                        },
+                        "DeviceRegistryEnrich": {
+                            "Name": "DeviceRegistryEnrichActivity",
+                            "Attribute": "attribute",
+                            "ThingName": "thingName",
+                            "RoleArn": "arn:aws:iam::<your_Account_Id>:role/Enrich",
+                            "Next": "DeviceShadowEnrichActivity"
+                        },
+                        "DeviceShadowEnrich": {
+                            "Name": "DeviceShadowEnrichActivity",
+                            "Attribute": "attribute",
+                            "ThingName": "thingName",
+                            "RoleArn": "arn:aws:iam::<your_Account_Id>:role/Enrich",
+                            "Next": "DatastoreActivity"
+                        },
+                        "Datastore": {
+                            "Name": "DatastoreActivity",
+                            "DatastoreName": "Datastore"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+YAML
+```
+Description: "Create a complex Pipeline"
+Resources:
+  Pipeline:
+    Type: "AWS::IoTAnalytics::Pipeline"
+    Properties:
+      PipelineName: "ComplexPipeline"
+      PipelineActivities:
+        -
+          Channel:
+            Name: "ChannelActivity"
+            ChannelName: "Channel"
+            Next: "LambdaActivity"
+          Lambda:
+            Name: "LambdaActivity"
+            LambdaName: "Lambda"
+            BatchSize: 1
+            Next: "AddAttributesActivity"
+          AddAttributes:
+            Name: "AddAttributesActivity"
+            Attributes:
+              key1: "attribute1"
+              key2: "attribute2"
+            Next: "RemoveAttributesActivity"
+          RemoveAttributes:
+            Name: "RemoveAttributesActivity"
+            Attributes:
+              -
+                "attribute1"
+              -
+                "attribute2"
+            Next: "SelectAttributesActivity"
+          SelectAttributes:
+            Name: "SelectAttributesActivity"
+            Attributes:
+              -
+                "attribute1"
+              -
+                "attribute2"
+            Next: "FilterActivity"
+          Filter:
+            Name: "FilterActivity"
+            Filter: "attribute1 > 40 AND attribute2 < 20"
+            Next: "MathActivity"
+          Math:
+            Name: "MathActivity"
+            Attribute: "attribute"
+            Math: "attribute - 10"
+            Next: "DeviceRegistryEnrichActivity"
+          DeviceRegistryEnrich:
+            Name: "DeviceRegistryEnrichActivity"
+            Attribute: "attribute"
+            ThingName: "thingName"
+            RoleArn: "arn:aws:iam:::role/Enrich"
+            Next: "DeviceShadowEnrichActivity"
+          DeviceShadowEnrich:
+            Name: "DeviceShadowEnrichActivity"
+            Attribute: "attribute"
+            ThingName: "thingName"
+            RoleArn: "arn:aws:iam:::role/Enrich"
+            Next: "DatastoreActivity"
+          Datastore:
+            Name: "DatastoreActivity"
+            DatastoreName: "Datastore"
+```
+See also
+
+How to Use AWS IoT Analytics in the AWS IoT Analytics User Guide 
+CreatePipeline in the AWS IoT Analytics API Reference 

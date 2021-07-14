@@ -1,0 +1,21 @@
+Applying a River Material
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+After you place the river entity, you can apply a material to the river. Rivers use the WaterVolume Shader.
+To apply a material to a river
+
+
+In the Rollup Bar, on the Objects tab, click Misc, River.
+
+
+Click  to open Material Editor.
+
+
+In the Material Editor, expand the tree and select your asset.
+
+
+Modify material settings and WaterVolume Shader parameters as needed.
+
+
+When finished, click Assign Item to Selected Objects, and close Material Editor.
+

@@ -1,0 +1,22 @@
+
+
+OneDriveUsers
+User accounts whose documents should be indexed.
+Contents
+OneDriveUserList 
+A list of users whose documents should be indexed. Specify the user names in email format, for example, username@tenantdomain. If you need to index the documents of more than 100 users, use the OneDriveUserS3Path field to specify the location of a file containing a list of users.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 100 items.
+Length Constraints: Minimum length of 1. Maximum length of 256.
+Pattern: ^(?!\s).@([a-zA-Z0-9_\-\.])\.([a-zA-Z]{2,5})$ 
+Required: No
+OneDriveUserS3Path 
+The S3 bucket location of a file containing a list of users whose documents should be indexed.
+Type: S3Path object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

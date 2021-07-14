@@ -1,0 +1,14 @@
+PI function
+The PI function returns the value of PI to 14 decimal places. 
+Syntax
+PI()
+Return type
+PI returns a DOUBLE PRECISION number. 
+Examples
+Return the value of pi: 
+```
+select pi();
+pi
+3.14159265358979
+(1 row)
+```

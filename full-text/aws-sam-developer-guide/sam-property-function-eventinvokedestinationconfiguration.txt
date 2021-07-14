@@ -1,0 +1,30 @@
+EventInvokeDestinationConfiguration
+A configuration object that specifies the destination of an event after Lambda processes it.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[OnFailure](#sam-function-eventinvokedestinationconfiguration-onfailure): OnFailure
+  [OnSuccess](#sam-function-eventinvokedestinationconfiguration-onsuccess): OnSuccess
+Properties
+OnFailure 
+A destination for events that failed processing.
+Type: OnFailure
+Required: No
+AWS CloudFormation compatibility: This property is similar to the [OnFailure](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure.html) property of an AWS::Lambda::EventInvokeConfig resource. Requires Type, an additional SAM-only property.
+OnSuccess 
+A destination for events that were processed successfully.
+Type: OnSuccess
+Required: No
+AWS CloudFormation compatibility: This property is similar to the [OnSuccess](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess.html) property of an AWS::Lambda::EventInvokeConfig resource. Requires Type, an additional SAM-only property.
+Examples
+OnSuccess
+OnSuccess example
+YAML
+EventInvokeConfig:
+  DestinationConfig:
+    OnSuccess:
+      Type: SQS
+      Destination: arn:aws:sqs:us-west-2:012345678901:my-queue
+    OnFailure:
+      Type: Lambda
+      Destination: !GetAtt DestinationLambda.Arn

@@ -1,0 +1,16 @@
+Deleting a budget
+You can delete your budgets and the associated email and Amazon SNS notifications at any time. You can't recover a budget after you delete it. Deleting a budget also deletes all notifications and notification subscribers.
+To delete a budget
+
+
+Sign in to the AWS Management Console and open the Billing and Cost Management console at https://console.aws.amazon.com/billing/home#/.
+
+
+On the navigation pane, choose Budgets.
+
+
+On the Budgets page, choose the budget's name in your list of budgets.
+
+
+On the budget page box, under ..., choose Delete.
+

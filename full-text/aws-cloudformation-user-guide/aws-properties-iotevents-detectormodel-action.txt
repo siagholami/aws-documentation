@@ -1,0 +1,113 @@
+AWS::IoTEvents::DetectorModel Action
+An action to be performed when the condition is TRUE.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ClearTimer](#cfn-iotevents-detectormodel-action-cleartimer)" : ClearTimer,
+  "[DynamoDB](#cfn-iotevents-detectormodel-action-dynamodb)" : DynamoDB,
+  "[DynamoDBv2](#cfn-iotevents-detectormodel-action-dynamodbv2)" : DynamoDBv2,
+  "[Firehose](#cfn-iotevents-detectormodel-action-firehose)" : Firehose,
+  "[IotEvents](#cfn-iotevents-detectormodel-action-iotevents)" : IotEvents,
+  "[IotSiteWise](#cfn-iotevents-detectormodel-action-iotsitewise)" : IotSiteWise,
+  "[IotTopicPublish](#cfn-iotevents-detectormodel-action-iottopicpublish)" : IotTopicPublish,
+  "[Lambda](#cfn-iotevents-detectormodel-action-lambda)" : Lambda,
+  "[ResetTimer](#cfn-iotevents-detectormodel-action-resettimer)" : ResetTimer,
+  "[SetTimer](#cfn-iotevents-detectormodel-action-settimer)" : SetTimer,
+  "[SetVariable](#cfn-iotevents-detectormodel-action-setvariable)" : SetVariable,
+  "[Sns](#cfn-iotevents-detectormodel-action-sns)" : Sns,
+  "[Sqs](#cfn-iotevents-detectormodel-action-sqs)" : Sqs
+}
+YAML
+[ClearTimer](#cfn-iotevents-detectormodel-action-cleartimer): 
+    ClearTimer
+  [DynamoDB](#cfn-iotevents-detectormodel-action-dynamodb): 
+    DynamoDB
+  [DynamoDBv2](#cfn-iotevents-detectormodel-action-dynamodbv2): 
+    DynamoDBv2
+  [Firehose](#cfn-iotevents-detectormodel-action-firehose): 
+    Firehose
+  [IotEvents](#cfn-iotevents-detectormodel-action-iotevents): 
+    IotEvents
+  [IotSiteWise](#cfn-iotevents-detectormodel-action-iotsitewise): 
+    IotSiteWise
+  [IotTopicPublish](#cfn-iotevents-detectormodel-action-iottopicpublish): 
+    IotTopicPublish
+  [Lambda](#cfn-iotevents-detectormodel-action-lambda): 
+    Lambda
+  [ResetTimer](#cfn-iotevents-detectormodel-action-resettimer): 
+    ResetTimer
+  [SetTimer](#cfn-iotevents-detectormodel-action-settimer): 
+    SetTimer
+  [SetVariable](#cfn-iotevents-detectormodel-action-setvariable): 
+    SetVariable
+  [Sns](#cfn-iotevents-detectormodel-action-sns): 
+    Sns
+  [Sqs](#cfn-iotevents-detectormodel-action-sqs): 
+    Sqs
+Properties
+ClearTimer 
+Information needed to clear the timer.
+Required: No
+Type: ClearTimer
+Update requires: No interruption
+DynamoDB 
+Writes to the DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can customize the payload. One column of the DynamoDB table receives all attribute-value pairs in the payload that you specify. For more information, see Actions in AWS IoT Events Developer Guide.
+Required: No
+Type: DynamoDB
+Update requires: No interruption
+DynamoDBv2 
+Writes to the DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can customize the payload. A separate column of the DynamoDB table receives one attribute-value pair in the payload that you specify. For more information, see Actions in AWS IoT Events Developer Guide.
+Required: No
+Type: DynamoDBv2
+Update requires: No interruption
+Firehose 
+Sends information about the detector model instance and the event that triggered the action to an Amazon Kinesis Data Firehose delivery stream.
+Required: No
+Type: Firehose
+Update requires: No interruption
+IotEvents 
+Sends AWS IoT Events input, which passes information about the detector model instance and the event that triggered the action.
+Required: No
+Type: IotEvents
+Update requires: No interruption
+IotSiteWise 
+Sends information about the detector model instance and the event that triggered the action to an asset property in AWS IoT SiteWise .
+Required: No
+Type: IotSiteWise
+Update requires: No interruption
+IotTopicPublish 
+Publishes an MQTT message with the given topic to the AWS IoT message broker.
+Required: No
+Type: IotTopicPublish
+Update requires: No interruption
+Lambda 
+Calls a Lambda function, passing in information about the detector model instance and the event that triggered the action.
+Required: No
+Type: Lambda
+Update requires: No interruption
+ResetTimer 
+Information needed to reset the timer.
+Required: No
+Type: ResetTimer
+Update requires: No interruption
+SetTimer 
+Information needed to set the timer.
+Required: No
+Type: SetTimer
+Update requires: No interruption
+SetVariable 
+Sets a variable to a specified value.
+Required: No
+Type: SetVariable
+Update requires: No interruption
+Sns 
+Sends an Amazon SNS message.
+Required: No
+Type: Sns
+Update requires: No interruption
+Sqs 
+Sends an Amazon SNS message.
+Required: No
+Type: Sqs
+Update requires: No interruption

@@ -1,0 +1,78 @@
+
+This guide is for the Snowball Edge. If you are looking for documentation for the Snowball, see the AWS Snowball User Guide.
+
+Managing Amazon S3 Storage
+You can use AWS OpsHub to create and manage Amazon Simple Storage Service (Amazon S3) storage on your Snow Family Devices.
+Topics
+ Creating Amazon S3 Storage
+ Uploading Files to Amazon S3 Storage
+ Downloading Files from Amazon S3 Storage
+ Deleting Files from S3 Storage
+Creating Amazon S3 Storage
+You can upload files to your device and access the files locally. You can physically move them to another location on the device, or import them back to the AWS Cloud when the device is returned. 
+Snow Family Devices use Amazon S3 buckets to store and manage files on your device.
+To create an S3 bucket
+
+
+Open the AWS OpsHub application.
+
+
+In the Manage file storage section of the dashboard, choose Get started. 
+
+
+If you have S3 buckets on your device, they appear in the Buckets section on the File storage page. You can see details of each bucket on the page.
+
+
+Choose the Devices menu, and then choose the name of your device.
+
+
+Under Services, choose S3 Storage, and then choose Start service.
+
+
+Uploading Files to Amazon S3 Storage
+To upload a file
+
+In the Manage file storage section on the dashboard, choose Get started. 
+
+If you have S3 buckets on your device, they appear in the Buckets section on the File storage page. You can see details of each bucket on the page.
+
+
+Choose the bucket that you want to upload files into.
+
+
+Choose Upload files, or drag and drop the files in the bucket, and choose OK.
+Note
+To upload larger files, you can use the multipart upload feature in Amazon S3. For more information, see Multipart Upload Overview in the Amazon Simple Storage Service Developer Guide.
+
+
+Downloading Files from Amazon S3 Storage
+To download a file
+
+
+In the Manage file storage section of the dashboard, choose Get started. If you have S3 buckets on your device, they appear in the Buckets section on the File storage page. You can see details of each bucket on the page.
+
+
+Choose the bucket that you want to download files from and navigate to the file that you want to download.
+
+
+In the Actions menu, choose Download.
+
+
+Choose a location to download the file to, and choose OK.
+
+
+Deleting Files from S3 Storage
+To delete a file
+
+
+In the Manage file storage section of the dashboard, choose Get started. If you have S3 buckets on your device, they appear in the Buckets section on the File storage page. You can see details of each bucket on the page.
+
+
+Choose the bucket you want to delete files from, and navigate to the file that you want to delete.
+
+
+On the Actions menu, choose Delete.
+
+
+In the dialog box that appears, choose Confirm delete.
+

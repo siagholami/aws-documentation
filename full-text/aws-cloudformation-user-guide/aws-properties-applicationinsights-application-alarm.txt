@@ -1,0 +1,23 @@
+AWS::ApplicationInsights::Application Alarm
+The AWS::ApplicationInsights::Application Alarm property type defines a CloudWatch alarm to be monitored for the component.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AlarmName](#cfn-applicationinsights-application-alarm-alarmname)" : String,
+  "[Severity](#cfn-applicationinsights-application-alarm-severity)" : String
+}
+YAML
+[AlarmName](#cfn-applicationinsights-application-alarm-alarmname): String
+  [Severity](#cfn-applicationinsights-application-alarm-severity): String
+Properties
+AlarmName 
+The name of the CloudWatch alarm to be monitored for the component.
+Required: Yes
+Type: String
+Update requires: No interruption
+Severity 
+ Indicates the degree of outage when the alarm goes off. 
+Required: No
+Type: String
+Update requires: No interruption

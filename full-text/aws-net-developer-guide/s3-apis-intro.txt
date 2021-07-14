@@ -1,0 +1,47 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Using Amazon Simple Storage Service Internet storage
+The AWS SDK for .NET supports Amazon S3, which is storage for the Internet. It is designed to make web-scale computing easier for developers.
+APIs
+The AWS SDK for .NET provides APIs for Amazon S3 clients. The APIs enable you to work with Amazon S3 resources such as buckets and items. To view the full set of APIs for Amazon S3, see the following:
+ AWS SDK for .NET API Reference (and scroll to "Amazon.S3").
+ Amazon.Extensions.S3.Encryption documentation
+The Amazon S3 APIs are provided by the following NuGet packages:
+ AWSSDK.S3
+ Amazon.Extensions.S3.Encryption
+Prerequisites
+Before you begin, be sure you have set up your environment. Also review the information in Setting up your project and SDK features.
+Examples in this document
+The following topics in this document show you how to use the AWS SDK for .NET to work with Amazon S3.
+ Using KMS keys for S3 encryption
+Examples in other documents
+The following links to the Amazon S3 Developer Guide provide additional examples of how to use the AWS SDK for .NET to work with Amazon S3.
+Note
+Although these examples and additional programming considerations were created for Version 3 of the AWS SDK for .NET using .NET Framework, they are also viable for later versions of the AWS SDK for .NET using .NET Core. Small adjustments in the code are sometimes necessary.
+Amazon S3 programming examples
+  Managing ACLs 
+  Creating a Bucket 
+  Upload an Object 
+  Multipart Upload with the High-Level API ([Amazon.S3.Transfer.TransferUtility](https://docs.aws.amazon.com/sdkfornet/v3/apidocs/items/S3/TTransferUtility.html)) 
+  Multipart Upload with the Low-Level API 
+  Listing Objects 
+  Listing Keys 
+  Get an Object 
+  Copy an Object 
+  Copy an Object with the Multipart Upload API 
+  Deleting an Object 
+  Deleting Multiple Objects 
+  Restore an Object 
+  Configure a Bucket for Notifications 
+  Manage an Object’s Lifecycle 
+  Generate a Pre-signed Object URL 
+  Managing Websites 
+  Enabling Cross-Origin Resource Sharing (CORS) 
+Additional programming considerations
+  Using the AWS SDK for .NET for Amazon S3 Programming 
+  Making Requests Using IAM User Temporary Credentials 
+  Making Requests Using Federated User Temporary Credentials 
+  Specifying Server-Side Encryption 
+  Specifying Server-Side Encryption with Customer-Provided Encryption Keys 

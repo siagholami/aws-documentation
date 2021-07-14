@@ -1,0 +1,3 @@
+Amazon Kinesis Data Firehose resource type reference
+Resource types
+ AWS::KinesisFirehose::DeliveryStream

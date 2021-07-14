@@ -1,0 +1,98 @@
+AWS::GroundStation::DataflowEndpointGroup
+Creates a Dataflow Endpoint Group request.
+Dataflow endpoint groups contain a list of endpoints. When the name of a dataflow endpoint group is specified in a mission profile, the Ground Station service will connect to the endpoints and flow data during a contact. 
+For more information about dataflow endpoint groups, see Dataflow Endpoint Groups. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::GroundStation::DataflowEndpointGroup",
+  "Properties" : {
+      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ EndpointDetails, ... ],
+      "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::GroundStation::DataflowEndpointGroup
+Properties: 
+  [EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist): 
+    - EndpointDetails
+  [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+EndpointDetailsList 
+ List of Endpoint Details, containing address and port for each endpoint. 
+Required: Yes
+Type: List of EndpointDetails
+Update requires: No interruption
+Tags 
+ Tags assigned to a resource. 
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ARN of the dataflow endpoint group. For example: 
+{ "Ref": "DataflowEndpointGroup" } 
+For the Ground Station dataflow endpoint group, Ref returns the ARN of the dataflow endpoint group. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The ARN of the dataflow endpoint group, such as arn:aws:groundstation:us-east-2:1234567890:dataflow-endpoint-group/9940bf3b-d2ba-427e-9906-842b5e5d2296. 
+Id 
+ UUID of a dataflow endpoint group. 
+Examples
+Create a DataflowEndpointGroup
+The following example creates a Ground Station DataflowEndpointGroup
+JSON
+{
+  "Resources": {
+    "myDataflowEndpointGroup": {
+      "Type": "AWS::GroundStation::DataflowEndpointGroup",
+      "Properties": {
+        "EndpointDetails": [
+          {
+            "SecurityDetails": {
+              "SubnetIds": [
+                "subnet-6782e71e"
+              ],
+              "SecurityGroupIds": [
+                "sg-6979fe18"
+              ],
+              "RoleArn": "arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEBQ4PI"
+            },
+            "Endpoint": {
+              "Name": "myEndpoint",
+              "Address": {
+                "Name": "172.10.0.2",
+                "Port": 44720
+              },
+              "Mtu": 1500
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+YAML
+Resources:
+  myDataflowEndpointGroup:
+    Type: AWS::GroundStation::DataflowEndpointGroup
+    Properties:
+      EndpointDetails:
+        - SecurityDetails:
+            SubnetIds:
+              - subnet-12345678
+            SecurityGroupIds:
+              - sg-87654321
+            RoleArn: arn:aws:iam::012345678910:role/groundstation-service-role-AWSServiceRoleForAmazonGroundStation-EXAMPLEABCDE
+      Endpoint:
+        Name: myEndpoint
+        Address:
+          Name: 172.10.0.2
+          Port: 44720
+        Mtu: 1500

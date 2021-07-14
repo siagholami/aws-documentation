@@ -1,0 +1,19 @@
+AWS::EMR::Cluster InstanceFleetProvisioningSpecifications
+InstanceFleetProvisioningSpecification is a subproperty of InstanceFleetConfig. InstanceFleetProvisioningSpecification defines the launch specification for Spot instances in an instance fleet, which determines the defined duration and provisioning timeout behavior for Spot instances.
+Note
+The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : SpotProvisioningSpecification
+}
+YAML
+[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
+    SpotProvisioningSpecification
+Properties
+SpotSpecification 
+The launch specification for Spot instances in the fleet, which determines the defined duration, provisioning timeout behavior, and allocation strategy.
+Required: Yes
+Type: SpotProvisioningSpecification
+Update requires: No interruption

@@ -1,0 +1,24 @@
+Setting up Amazon EC2 Auto Scaling
+Before you start using Amazon EC2 Auto Scaling, complete the following tasks.
+Topics
+ Sign up for AWS
+ Prepare to use Amazon EC2
+ Install the AWS CLI
+Sign up for AWS
+When you create an AWS account, we automatically sign up your account for all AWS services. You pay only for the services that you use. You can use Amazon EC2 Auto Scaling at no additional charge beyond what you are paying for your EC2 instances.
+If you don't have an AWS account, sign up for AWS as follows.
+To sign up for an AWS account
+
+
+Open https://portal.aws.amazon.com/billing/signup.
+
+
+Follow the online instructions.
+
+
+Part of the sign-up procedure involves receiving a phone call and entering a verification code on the phone keypad.
+AWS sends you a confirmation email after the sign-up process is complete.
+Prepare to use Amazon EC2
+If you haven't used Amazon EC2 before, complete the tasks described in the Amazon EC2 documentation. For more information, see Setting up with Amazon EC2 in the Amazon EC2 User Guide for Linux Instances or Setting up with Amazon EC2 in the Amazon EC2 User Guide for Windows Instances.
+Install the AWS CLI
+To use the AWS CLI with Amazon EC2 Auto Scaling, install the latest AWS CLI version. For information about installing the AWS CLI or upgrading it to the latest version, see Installing the AWS Command Line Interface in the AWS Command Line Interface User Guide.

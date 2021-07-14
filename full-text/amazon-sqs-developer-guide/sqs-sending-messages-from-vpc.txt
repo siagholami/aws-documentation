@@ -1,0 +1,180 @@
+Tutorial: Sending a message to an Amazon SQS queue from Amazon Virtual Private Cloud
+In this tutorial, you learn how to send messages to an Amazon SQS queue over a secure, private network. This network consists of a VPC that contains an Amazon EC2 instance. The instance connects to Amazon SQS through an interface VPC endpoint, allowing you to connect to the Amazon EC2 instance and send messages to the Amazon SQS queue even though the network is disconnected from the public internet. For more information, see Amazon Virtual Private Cloud endpoints for Amazon SQS.
+Important
+You can use Amazon Virtual Private Cloud only with HTTPS Amazon SQS endpoints.
+When you configure Amazon SQS to send messages from Amazon VPC, you must enable private DNS and specify endpoints in the format sqs.us-east-2.amazonaws.com.
+Private DNS doesn't support legacy endpoints such as queue.amazonaws.com or us-east-2.queue.amazonaws.com.
+Topics
+ Step 1: Create an Amazon EC2 key pair
+ Step 2: Create AWS resources
+ Step 3: Confirm that your EC2 instance isn't publicly accessible
+ Step 4: Create an Amazon VPC endpoint for Amazon SQS
+ Step 5: Send a message to your Amazon SQS queue
+Step 1: Create an Amazon EC2 key pair
+A key pair lets you connect to an Amazon EC2 instance. It consists of a public key that encrypts your login information and a private key that decrypts it.
+
+
+Sign in to the Amazon EC2 console.
+
+
+On the navigation menu, under Network & Security, choose Key Pairs.
+
+
+Choose Create Key Pair.
+
+
+In the Create Key Pair dialog box, for Key pair name, enter SQS-VPCE-Tutorial-Key-Pair, and then choose Create.
+
+
+Your browser downloads the private key file SQS-VPCE-Tutorial-Key-Pair.pem automatically. 
+Important
+Save this file in a safe place. EC2 does not generate a .pem file for the same key pair a second time.
+
+
+To allow an SSH client to connect to your EC2 instance, set the permissions for your private key file so that only your user can have read permissions for it, for example:
+
+
+chmod 400 SQS-VPCE-Tutorial-KeyPair.pem
+Step 2: Create AWS resources
+To set up the necessary infrastructure, you must use an AWS CloudFormation template, which is a blueprint for creating a stack comprised of AWS resources, such as Amazon EC2 instances and Amazon SQS queues.
+The stack for this tutorial includes the following resources:
+ A VPC and the associated networking resources, including a subnet, a security group, an internet gateway, and a route table
+ An Amazon EC2 instance launched into the VPC subnet
+ An Amazon SQS queue
+
+
+Download the AWS CloudFormation template named https://github.com/aws-samples/amazon-sqs-samples/blob/master/templates/SQS-VPCE-Tutorial-CloudFormation.yaml from GitHub.
+
+
+Sign in to the AWS CloudFormation console.
+
+
+Choose Create Stack.
+
+
+On the Select Template page, choose Upload a template to Amazon S3, select the SQS-VPCE-SQS-Tutorial-CloudFormation.yaml file, and then choose Next.
+
+
+On the Specify Details page, do the following:
+
+
+For Stack name, enter SQS-VPCE-Tutorial-Stack.
+
+
+For KeyName, choose SQS-VPCE-Tutorial-Key-Pair.
+
+
+Choose Next.
+
+
+On the Options page, choose Next.
+
+
+On the Review page, in the Capabilities section, choose I acknowledge that AWS CloudFormation might create IAM resources with custom names., and then choose Create.
+
+
+AWS CloudFormation begins to create the stack and displays the CREATE_IN_PROGRESS status. When the process is complete, AWS CloudFormation displays the CREATE_COMPLETE status.
+Step 3: Confirm that your EC2 instance isn't publicly accessible
+Your AWS CloudFormation template launches an EC2 instance named SQS-VPCE-Tutorial-EC2-Instance into your VPC. This EC2 instance doesn't allow outbound traffic and isn't able to send messages to Amazon SQS. To verify this, you must connect to the instance, try to connect to a public endpoint, and then try to message Amazon SQS.
+
+
+Sign in to the Amazon EC2 console.
+
+
+On the navigation menu, under Instances, choose Instances.
+
+
+Select SQS-VPCE-Tutorial-EC2Instance.
+
+
+Copy the hostname under Public DNS (IPv4), for example, ec2-203-0-113-0.us-west-2.compute.amazonaws.com.
+
+
+From the directory that contains the key pair that you created earlier, connect to the instance using the following command, for example:
+
+
+ssh -i SQS-VPCE-Tutorial-KeyPair.pem ec2-user@ec2-203-0-113-0.us-east-2.compute.amazonaws.com
+
+Try to connect to any public endpoint, for example:
+
+ping amazon.com
+The connection attempt fails, as expected.
+
+
+Sign in to the Amazon SQS console.
+
+
+From the list of queues, select the queue created by your AWS CloudFormation template, for example, VPCE-SQS-Tutorial-Stack-CFQueue-1ABCDEFGH2IJK.
+
+
+On the Details table, copy the URL, for example, https://sqs.us-east-2.amazonaws.com/123456789012/.
+
+
+From your EC2 instance, try to publish a message to the queue using the following command, for example:
+
+
+aws sqs send-message --region us-east-2 --endpoint-url https://sqs.us-east-2.amazonaws.com/ --queue-url https://sqs.us-east-2.amazonaws.com/123456789012/ --message-body "Hello from Amazon SQS."
+The sending attempt fails, as expected.
+Important
+Later, when you create a VPC endpoint for Amazon SQS, your sending attempt will succeed.
+Step 4: Create an Amazon VPC endpoint for Amazon SQS
+To connect your VPC to Amazon SQS, you must define an interface VPC endpoint. After you add the endpoint, you can use the Amazon SQS API from the EC2 instance in your VPC. This allows you to send messages to a queue within the AWS network without crossing the public internet.
+Note
+The EC2 instance still doesn't have access to other AWS services and endpoints on the internet.
+
+
+Sign in to the Amazon VPC console.
+
+
+On the navigation menu, choose Endpoints.
+
+
+Choose Create Endpoint.
+
+
+On the Create Endpoint page, for Service Name, choose the service name for Amazon SQS.
+Note
+The service names vary based on the current AWS Region. For example, if you are in US East (Ohio), the service name is com.amazonaws.us-east-2.sqs.
+
+
+For VPC, choose SQS-VPCE-Tutorial-VPC.
+
+
+For Subnets, choose the subnet whose Subnet ID contains SQS-VPCE-Tutorial-Subnet.
+
+
+For Security group, choose Select security groups, and then choose the security group whose Group Name contains SQS VPCE Tutorial Security Group.
+
+
+Choose Create endpoint.
+
+
+The interface VPC endpoint is created and its ID is displayed, for example, vpce-0ab1cdef2ghi3j456k.
+
+Choose Close. 
+
+The Amazon VPC console opens the Endpoints page.
+Amazon VPC begins to create the endpoint and displays the pending status. When the process is complete, Amazon VPC displays the available status.
+Step 5: Send a message to your Amazon SQS queue
+Now that your VPC includes an endpoint for Amazon SQS, you can connect to your EC2 instance and send messages to your queue.
+
+Reconnect to your EC2 instance, for example:
+
+ssh -i SQS-VPCE-Tutorial-KeyPair.pem ec2-user@ec2-203-0-113-0.us-east-2.compute.amazonaws.com
+
+Try to publish a message to the queue again using the following command, for example:
+
+aws sqs send-message --region us-east-2 --endpoint-url https://sqs.us-east-2.amazonaws.com/ --queue-url https://sqs.us-east-2.amazonaws.com/123456789012/ --message-body "Hello from Amazon SQS."
+The sending attempt succeeds and the MD5 digest of the message body and the message ID are displayed, for example:
+{
+    "MD5OfMessageBody": "a1bcd2ef3g45hi678j90klmn12p34qr5",
+    "MessageId": "12345a67-8901-2345-bc67-d890123e45fg"
+   }
+For information about receiving and deleting the message from the queue created by your AWS CloudFormation template (for example, VPCE-SQS-Tutorial-Stack-CFQueue-1ABCDEFGH2IJK), see Receiving and deleting messages (console).
+For information about deleting your resources, see the following:
+ Deleting a VPC Endpoint in the Amazon VPC User Guide
+ Deleting an Amazon SQS queue
+ Terminate Your Instance in the Amazon EC2 User Guide for Linux Instances
+ Deleting Your VPC in the Amazon VPC User Guide
+ Deleting a Stack on the AWS CloudFormation Console in the AWS CloudFormation User Guide
+ Deleting Your Key Pair in the Amazon EC2 User Guide for Linux Instances

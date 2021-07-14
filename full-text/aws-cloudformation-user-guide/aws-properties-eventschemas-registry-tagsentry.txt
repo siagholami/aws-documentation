@@ -1,0 +1,23 @@
+AWS::EventSchemas::Registry TagsEntry
+Tags to associate with the schema registry.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-eventschemas-registry-tagsentry-key)" : String,
+  "[Value](#cfn-eventschemas-registry-tagsentry-value)" : String
+}
+YAML
+[Key](#cfn-eventschemas-registry-tagsentry-key): String
+  [Value](#cfn-eventschemas-registry-tagsentry-value): String
+Properties
+Key 
+They key of a key-value pair.
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+They value of a key-value pair.
+Required: Yes
+Type: String
+Update requires: No interruption

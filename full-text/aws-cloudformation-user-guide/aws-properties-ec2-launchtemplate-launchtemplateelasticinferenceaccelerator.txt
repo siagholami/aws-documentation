@@ -1,0 +1,26 @@
+AWS::EC2::LaunchTemplate LaunchTemplateElasticInferenceAccelerator
+Specifies an elastic inference accelerator.
+LaunchTemplateElasticInferenceAccelerator is a property of AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Count](#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count)" : Integer,
+  "[Type](#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type)" : String
+}
+YAML
+[Count](#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count): Integer
+  [Type](#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-type): String
+Properties
+Count 
+ The number of elastic inference accelerators to attach to the instance. 
+Default: 1
+Required: No
+Type: Integer
+Minimum: 1
+Update requires: No interruption
+Type 
+ The type of elastic inference accelerator. The possible values are eia1.medium, eia1.large, and eia1.xlarge. 
+Required: No
+Type: String
+Update requires: No interruption

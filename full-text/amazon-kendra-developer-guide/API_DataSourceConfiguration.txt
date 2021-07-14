@@ -1,0 +1,35 @@
+
+
+DataSourceConfiguration
+Configuration information for a Amazon Kendra data source.
+Contents
+DatabaseConfiguration 
+Provides information necessary to create a connector for a database.
+Type: DatabaseConfiguration object
+Required: No
+OneDriveConfiguration 
+Provided configuration for data sources that connect to Microsoft OneDrive.
+Type: OneDriveConfiguration object
+Required: No
+S3Configuration 
+Provides information to create a connector for a document repository in an Amazon S3 bucket.
+Type: S3DataSourceConfiguration object
+Required: No
+SalesforceConfiguration 
+Provides configuration information for data sources that connect to a Salesforce site.
+Type: SalesforceConfiguration object
+Required: No
+ServiceNowConfiguration 
+Provides configuration for data sources that connect to ServiceNow instances.
+Type: ServiceNowConfiguration object
+Required: No
+SharePointConfiguration 
+Provides information necessary to create a connector for a Microsoft SharePoint site.
+Type: SharePointConfiguration object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

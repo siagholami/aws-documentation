@@ -1,0 +1,33 @@
+Multi-Account Multi-Region Data Aggregation
+An aggregator is an AWS Config resource type that collects AWS Config configuration and compliance data from the following:
+ Multiple accounts and multiple regions.
+ Single account and multiple regions.
+ An organization in AWS Organizations and all the accounts in that organization.
+Use an aggregator to view the resource configuration and compliance data recorded in AWS Config.
+
+For more information about concepts, see Multi-Account Multi-Region Data Aggregation section in the Concepts topic.
+To collect your AWS Config data from source accounts and regions, start with:
+
+
+Adding an aggregator to aggregate AWS Config configuration and compliance data from multiple accounts and regions.
+
+
+Authorizing aggregator accounts to collect AWS Config configuration and compliance data. Authorization is required when your source accounts are individual accounts. Authorization is not required if you are aggregating source accounts that are part of AWS Organizations.
+
+
+Monitoring compliance data for rules and accounts in the aggregated view.
+
+
+Region Support
+Currently, multi-account multi-region data aggregation is supported in the following regions:
+
+[See the AWS documentation website for more details]
+Learn More
+
+Concepts
+Viewing Configuration and Compliance Data in the Aggregated View
+Setting Up an Aggregator Using the Console
+Setting Up an Aggregator Using the AWS Command Line Interface
+Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console
+Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the AWS Command Line Interface
+Troubleshooting for Multi-Account Multi-Region Data Aggregation

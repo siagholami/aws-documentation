@@ -1,0 +1,7 @@
+Getting Started with Simple AD
+Simple AD creates a fully managed, Samba-based directory in the AWS cloud. When you create a directory with Simple AD, AWS Directory Service creates two domain controllers and DNS servers on your behalf. The domain controllers are created in different subnets in a VPC; this redundancy helps ensures that your directory remains accessible even if a failure occurs.
+Topics
+ Simple AD Prerequisites
+ Create a Simple AD Directory
+ What Gets Created
+ Configure DNS

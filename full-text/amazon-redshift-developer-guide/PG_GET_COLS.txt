@@ -1,0 +1,44 @@
+PG_GET_COLS
+Returns the column metadata for a table or view definition.
+Syntax
+pg_get_cols('name')
+Arguments
+name 
+The name of an Amazon Redshift table or view.
+Return type
+VARCHAR 
+Usage notes
+The PG_GET_COLS function returns one row for each column in the table or view definition. The row contains a comma-separated list with the schema name, relation name, column name, data type, and column number. 
+Example
+The following example returns the column metadata for a view named SALES_VW.
+```
+select pg_get_cols('sales_vw');
+pg_get_cols
+(public,sales_vw,salesid,integer,1)                      
+(public,sales_vw,listid,integer,2)                       
+(public,sales_vw,sellerid,integer,3)                     
+(public,sales_vw,buyerid,integer,4)                      
+(public,sales_vw,eventid,integer,5)                      
+(public,sales_vw,dateid,smallint,6)                      
+(public,sales_vw,qtysold,smallint,7)                     
+(public,sales_vw,pricepaid,"numeric(8,2)",8)             
+(public,sales_vw,commission,"numeric(8,2)",9)            
+(public,sales_vw,saletime,"timestamp without time zone",10)
+```
+The following example returns the column metadata for the SALES_VW view in table format.
+```
+select * from pg_get_cols('sales_vw') 
+cols(view_schema name, view_name name, col_name name, col_type varchar, col_num int);
+view_schema | view_name | col_name   | col_type                    | col_num
+------------------------------------------------------------------------
+public      | sales_vw  | salesid    | integer                     |       1
+public      | sales_vw  | listid     | integer                     |       2
+public      | sales_vw  | sellerid   | integer                     |       3
+public      | sales_vw  | buyerid    | integer                     |       4
+public      | sales_vw  | eventid    | integer                     |       5
+public      | sales_vw  | dateid     | smallint                    |       6
+public      | sales_vw  | qtysold    | smallint                    |       7
+public      | sales_vw  | pricepaid  | numeric(8,2)                |       8
+public      | sales_vw  | commission | numeric(8,2)                |       9
+public      | sales_vw  | saletime   | timestamp without time zone |      10
+```

@@ -1,0 +1,100 @@
+Set up Pipeline, Create a Security Group, and Create an Amazon Redshift Cluster
+To set up for the tutorial
+
+
+Complete the tasks in Setting up for AWS Data Pipeline.
+
+
+Create a security group.
+
+
+Open the Amazon EC2 console.
+
+
+In the navigation pane, click Security Groups.
+
+
+Click Create Security Group.
+
+
+Specify a name and description for the security group.
+
+
+[EC2-Classic] Select No VPC for VPC.
+
+
+[EC2-VPC] Select the ID of your VPC for VPC.
+
+
+Click Create.
+
+
+[EC2-Classic] Create an Amazon Redshift cluster security group and specify the Amazon EC2 security group.
+
+
+Open the Amazon Redshift console.
+
+
+In the navigation pane, click Security Groups.
+
+
+Click Create Cluster Security Group.
+
+
+In the Create Cluster Security Group dialog box, specify a name and description for the cluster security group.
+
+
+Click the name of the new cluster security group.
+
+
+Click Add Connection Type.
+
+
+In the Add Connection Type dialog box, select EC2 Security Group from Connection Type, select the security group that you created from EC2 Security Group Name, and then click Authorize.
+
+
+[EC2-VPC] Create an Amazon Redshift cluster security group and specify the VPC security group.
+
+
+Open the Amazon EC2 console.
+
+
+In the navigation pane, click Security Groups.
+
+
+Click Create Security Group.
+
+
+In the Create Security Group dialog box, specify a name and description for the security group, and select the ID of your VPC for VPC.
+
+
+Click Add Rule. Specify the type, protocol, and port range, and start typing the ID of the security group in Source. Select the security group that you created in the second step.
+
+
+Click Create.
+
+
+The following is a summary of the steps.
+
+
+If you have an existing Amazon Redshift cluster, make a note of the cluster ID. 
+To create a new cluster and load sample data, follow the steps in Getting Started with Amazon Redshift. For more information about creating clusters, see Creating a Cluster in the Amazon Redshift Cluster Management Guide. 
+
+
+Open the Amazon Redshift console.
+
+
+Click Launch Cluster.
+
+
+Provide the required details for your cluster, and then click Continue.
+
+
+Provide the node configuration, and then click Continue.
+
+
+On the page for additional configuration information, select the cluster security group that you created, and then click Continue.
+
+
+Review the specifications for your cluster, and then click Launch Cluster.
+

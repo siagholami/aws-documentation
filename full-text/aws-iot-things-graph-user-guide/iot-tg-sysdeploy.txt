@@ -1,0 +1,9 @@
+
+
+Working with Systems and Flow Configurations
+The AWS IoT Things Graph console creates a system for you when you publish a flow. This section describes the elements of systems and flow configurations. It also describes how to create them by using the AWS CLI. 
+Topics
+ Creating Systems
+ Creating Flow Configurations (AWS IoT Greengrass)
+ Creating Flow Configurations (Cloud)
+ Viewing Flow Configurations and Flow Executions in the AWS IoT Things Graph Console

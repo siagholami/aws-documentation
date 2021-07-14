@@ -1,0 +1,39 @@
+Add users to a group
+After you create and enable an Amazon WorkMail group, use the Amazon WorkMail console to add users to that group.
+Note
+If Amazon WorkMail is integrated with a connected Active Directory service or Microsoft Active Directory, you can manage your group members using Active Directory. This can take a longer time to propagate to Amazon WorkMail.
+You can add up to 100 users at a time by using the following procedure.
+To add users to a group
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+If you require a different AWS Region, change it from the navigation bar. For more information, see Regions and endpoints in the Amazon Web Services General Reference.
+
+
+For Organizations, choose the name of your organization.
+
+
+Choose Groups.
+
+
+Select the name of the group.
+
+
+On the Group details page, choose Members.
+
+
+Choose Edit.
+
+
+Under Users and groups, search for the users to add to the group, and select them.
+
+
+Choose >>. The users appear under Group members.
+
+
+Choose Save.
+
+
+Your changes might take a few minutes to propagate.

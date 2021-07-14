@@ -1,0 +1,28 @@
+Modifying Site-to-Site VPN tunnel options
+You can modify the tunnel options for the VPN tunnels in your Site-to-Site VPN connection. You can modify one VPN tunnel at a time.
+Important
+When you modify a VPN tunnel, connectivity over the tunnel is interrupted for up to several minutes. Ensure that you plan for the expected downtime.
+To modify the VPN tunnel options using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Site-to-Site VPN Connections.
+
+
+Select the Site-to-Site VPN connection, and choose Actions, Modify VPN Tunnel Options.
+
+
+For VPN Tunnel Outside IP Address, choose the tunnel endpoint IP of the VPN tunnel that you're modifying options for.
+
+
+Choose or enter new values for the tunnel options. For more information, see Tunnel options for your Site-to-Site VPN connection.
+
+
+Choose Save.
+
+
+To modify the VPN tunnel options using the command line or API
+  (AWS CLI) Use describe-vpn-connections to view the current tunnel options, and modify-vpn-tunnel-options to modify the tunnel options.
+ (Amazon EC2 Query API) Use DescribeVpnConnections to view the current tunnel options, and ModifyVpnTunnelOptions to modify the tunnel options.

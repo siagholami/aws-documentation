@@ -1,0 +1,95 @@
+Grant Permissions to AWS Service Catalog Administrators
+As a catalog administrator, you require access to the AWS Service Catalog administrator console view and IAM permissions that allow you to perform tasks such as the following:
+ Creating and managing portfolios
+ Creating and managing products
+ Adding template constraints to control the options that are available to end users when launching a product
+ Adding launch constraints to define the IAM roles that AWS Service Catalog assumes when end users launch products
+ Granting end users access to your products
+You, or an administrator who manages your IAM permissions, must attach policies to your IAM user, group, or role that are required to complete this tutorial.
+To grant permissions to a catalog administrator
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+In the navigation pane, choose Users. If you have already created an IAM user that you would like to use as the catalog administrator, choose the user name and choose Add permissions. Otherwise, create a user as follows:
+
+
+Choose Add user.
+
+
+For User name, type ServiceCatalogAdmin.
+
+
+Select Programmatic access and AWS Management Console access.
+
+
+Choose Next: Permissions.
+
+
+Choose Attach existing policies directly.
+
+
+Choose Create policy and do the following:
+
+
+Choose the JSON tab.
+
+
+Copy the following example policy and paste it in Policy Document:
+{
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Effect": "Allow",
+              "Action": [
+                  "ec2:CreateKeyPair",
+                  "iam:AddRoleToInstanceProfile",
+                  "iam:AddUserToGroup",
+                  "iam:AttachGroupPolicy",
+                  "iam:CreateAccessKey",
+                  "iam:CreateGroup",
+                  "iam:CreateInstanceProfile",
+                  "iam:CreateLoginProfile",
+                  "iam:CreateRole",
+                  "iam:CreateUser",
+                  "iam:Get*",
+                  "iam:List*",
+                  "iam:PutRolePolicy",
+                  "iam:UpdateAssumeRolePolicy"
+              ],
+              "Resource": [
+                  "*"
+              ]
+          }
+      ]
+  }
+
+
+Choose Review policy.
+
+
+For Policy Name, type ServiceCatalogAdmin-AdditionalPermissions.
+
+
+You must grant administrators permissions for Amazon S3 so they can access templates stored by AWS Service Catalog in Amazon S3. For more information, see User Policy Examples in the Amazon Simple Storage Service Developer Guide
+
+
+Choose Create Policy.
+
+
+Return to the browser window with the permissions page and choose Refresh.
+
+
+In the search field, type ServiceCatalog to filter the policy list.
+
+
+Select the checkboxes for the AWSServiceCatalogAdminFullAccess and ServiceCatalogAdmin-AdditionalPermissions policies, and then choose Next: Review.
+
+
+If you are updating a user, choose Add permissions.
+
+
+If you are creating a user, choose Create user. You can download or copy the credentials and then choose Close.
+
+To sign in as the catalog administrator, use your account-specific URL. To find this URL, choose Dashboard in the navigation pane and choose Copy Link. Paste the link in your browser, and use the name and password of the IAM user you created or updated in this procedure.

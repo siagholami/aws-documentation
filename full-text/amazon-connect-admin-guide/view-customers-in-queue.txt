@@ -1,0 +1,13 @@
+View How Many Customers Are Waiting In Queue
+To see the number of customers waiting in queue
+
+
+Go to Metrics and quality, Real-time metrics, Queues.
+
+
+By default, customers who are waiting for a call back are counted in the In queue column. This column counts all customers who are in a queue for an agent, not just the callback customers.
+
+
+View How Many Customers Are Waiting For A Callback
+To only see a count of the customers waiting for a call back, you need to create a queue that only takes callback contacts. To learn how to do this, see Set Up Routing.
+Currently there isn't a way to see the phone numbers of the contacts waiting for callbacks.

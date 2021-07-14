@@ -1,0 +1,9 @@
+Events and Event Patterns in EventBridge
+Events in Amazon EventBridge are represented as JSON objects. All events have a similar structure, and the same top-level fields.
+EventBridge rules use event patterns to match on AWS events on an event bus. When a pattern matches, the rule routes that event to a target.
+Topics
+ AWS Events
+ Event Patterns
+ Matching Null Values and Empty Strings in EventBridge Event Patterns
+ Arrays in EventBridge Event Patterns
+ Content-based Filtering with Event Patterns

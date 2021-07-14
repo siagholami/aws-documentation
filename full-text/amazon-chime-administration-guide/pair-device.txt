@@ -1,0 +1,56 @@
+Pairing a Dolby device
+Depending on whether you are setting up a Dolby device in a shared room or for a single user, perform one of the following procedures.
+To pair a Dolby device for a shared conference room
+
+
+Open a browser window on your laptop or phone, then go to https://app.chime.aws/pair/input.
+
+
+On the Pair device screen, enter the 8-digit pairing code that appears on the large screen and choose Next.
+Note
+The pairing code automatically refreshes after 10 minutes. 
+
+
+On the Sign into Dolby Voice Room? or Sign into Dolby Voice Huddle? screen, choose Continue.
+
+
+Enter the email address of an admin user who has permissions to configure the conference room, and choose Sign in. 
+
+
+When asked to Allow access to your Amazon Chime profile, choose Allow.
+
+
+Enter the Amazon Chime Username and Password associated with an admin user who has permissions to set up conference rooms.
+
+
+On the Select Profile page, select the room name from the list and choose Sign in.
+
+
+If pairing is successful, you receive a Sign in successful message.
+
+
+To pair a Dolby device for a single user
+
+
+Open a browser window on your laptop or phone, then go to https://app.chime.aws/pair/input.
+
+
+On the Pair device screen, enter the 8-digit pairing code that appears on the large screen and choose Next.
+Note
+The pairing code automatically refreshes after 10 minutes. 
+
+
+On the Sign into Dolby Voice Room? or Sign into Dolby Voice Huddle? screen, choose Continue.
+
+
+Enter the user's email address and choose Sign in. 
+
+
+When asked to Allow access to your Amazon Chime profile, choose Allow.
+
+
+Complete the sign-in process based on your company’s Amazon Chime account settings.
+
+
+If pairing is successful, you receive a Sign in successful message.
+

@@ -1,0 +1,77 @@
+AWS Toolkit for JetBrains User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is the AWS Toolkit for JetBrains?
+Key tasks for the AWS Toolkit for JetBrains
+Setting up the AWS Toolkit for JetBrains
+Installing the AWS Toolkit for JetBrains
+Updating the AWS Toolkit for JetBrains
+Setting AWS credentials for the AWS Toolkit for JetBrains
+Setting an AWS Region for the AWS Toolkit for JetBrains
+HTTP proxy setup for the AWS Toolkit for JetBrains
+Working with AWS services by using the AWS Toolkit for JetBrains
+Working with AWS serverless applications by using the AWS Toolkit for JetBrains
+Creating an AWS serverless application by using the AWS Toolkit for JetBrains
+Deploying an AWS serverless application by using the AWS Toolkit for JetBrains
+Changing (updating) AWS Serverless application settings by using the AWS Toolkit for JetBrains
+Deleting an AWS serverless application by using the AWS Toolkit for JetBrains
+
+
+Working with AWS Lambda by using the AWS Toolkit for JetBrains
+Creating an AWS Lambda function by using the AWS Toolkit for JetBrains
+Running (invoking) or debugging the local version of an AWS Lambda function by using the AWS Toolkit for JetBrains
+Running (invoking) the remote version of an AWS Lambda function by using the AWS Toolkit for JetBrains
+Changing (updating) AWS Lambda function settings by using the AWS Toolkit for JetBrains
+Deleting an AWS Lambda function by using the AWS Toolkit for JetBrains
+
+
+Working with AWS CloudFormation by using the AWS Toolkit for JetBrains
+Viewing event logs for an AWS CloudFormation stack by using the AWS Toolkit for JetBrains
+Deleting an AWS CloudFormation stack by using the AWS Toolkit for JetBrains
+
+
+Working with CloudWatch Logs by using the AWS Toolkit for JetBrains
+Viewing CloudWatch log groups and log streams by using the AWS Toolkit for JetBrains
+Working with CloudWatch log events in log streams by using the AWS Toolkit for JetBrains
+
+
+Working with Amazon Elastic Container Service by Using the AWS Toolkit for JetBrains
+Debugging code in an Amazon Elastic Container Service cluster by using the AWS Toolkit for JetBrains
+
+
+Working with Amazon EventBridge by using the AWS Toolkit for JetBrains
+Working with Amazon EventBridge schemas
+
+
+Working with Amazon S3 by using the AWS Toolkit for JetBrains
+Working with Amazon S3 buckets by using the AWS Toolkit for JetBrains
+Working with Amazon S3 objects by using the AWS Toolkit for JetBrains
+
+
+User interface reference for the AWS Toolkit for JetBrains
+AWS Explorer
+Create Function dialog box
+Deploy Serverless Application dialog box
+Edit Configuration dialog box
+New Project dialog box
+Run/Debug Configurations dialog box
+Update Code dialog box
+Update Configuration dialog box
+Security for this AWS Product or Service
+Data protection in this AWS Product or Service
+Identity and Access Management for this AWS Product or Service
+Compliance Validation for this AWS Product or Service
+Resilience for this AWS Product or Service
+Infrastructure Security for this AWS Product or Service
+Document history for the AWS Toolkit for JetBrains User Guide

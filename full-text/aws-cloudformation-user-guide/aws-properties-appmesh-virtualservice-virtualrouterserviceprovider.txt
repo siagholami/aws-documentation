@@ -1,0 +1,16 @@
+AWS::AppMesh::VirtualService VirtualRouterServiceProvider
+An object that represents a virtual node service provider.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VirtualRouterName](#cfn-appmesh-virtualservice-virtualrouterserviceprovider-virtualroutername)" : String
+}
+YAML
+[VirtualRouterName](#cfn-appmesh-virtualservice-virtualrouterserviceprovider-virtualroutername): String
+Properties
+VirtualRouterName 
+The name of the virtual router that is acting as a service provider.
+Required: Yes
+Type: String
+Update requires: No interruption

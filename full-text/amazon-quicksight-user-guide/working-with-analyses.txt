@@ -1,0 +1,18 @@
+Working with Analyses
+You use an analysis to create and interact with visuals and stories. You can think of an analysis as a container for a set of related visuals and stories, for example ones that are all applicable to a given business goal or key performance indicator. You can use multiple data sets in an analysis, although any given visual can only use one of those data sets.
+After you create an analysis and an initial visual, you can expand the analysis by adding data sets and visuals, and also by creating stories to add narrative to the analysis data.
+Amazon QuickSight supports up to 20 data sets in a single analysis, and up to 20 visuals in a single analysis.
+Topics
+ Creating an Analysis
+ Saving Changes to an Analysis
+ Renaming an Analysis
+ Adding a Title and Description to an Analysis
+ Viewing Analysis Details
+ Deleting an Analysis
+ Export Data from an Analysis to a CSV File
+ Adding a Data Set to an Analysis
+ Modifying Data Set Fields in an Analysis
+ Adding a Calculated Field to an Analysis
+ Parameters in Amazon QuickSight
+ SPICE Data in an Analysis
+ Sharing Analyses

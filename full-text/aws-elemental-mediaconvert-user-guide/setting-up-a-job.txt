@@ -1,0 +1,14 @@
+Setting up a job in AWS Elemental MediaConvert
+An AWS Elemental MediaConvert job does the work of transcoding a media file into packages and files in various formats and in different sizes for distribution to end viewers. When you create a job, you specify the information that the service requires to perform the transcoding: which file to transcode, which types of files to create and where to store them, which encoding settings to use, which advanced features to apply, and so on.
+To set up a job, you define input files for the service to transcode, and you specify the source for each video, audio, and captions media element. That source might be a specific part of the primary input file, or it might be a separate file. Next, you specify the types of output files and packages that you want AWS Elemental MediaConvert to generate from the input. You also specify the detailed encoding settings to produce the quality and type of output that you want. The following illustration shows these pieces of a job that you set up.
+
+To set up your job, complete the procedures in the following topics.
+Topics
+ Optional: Pause your queues
+ Step 1: Specify input files
+ Step 2: Create input selectors
+ Step 3: Create output groups
+ Step 4: Create outputs
+ Step 5: Specify global job settings
+ Creating and setting up File outputs
+ Using variables in your job settings

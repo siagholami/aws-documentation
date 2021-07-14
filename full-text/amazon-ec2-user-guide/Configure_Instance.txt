@@ -1,0 +1,19 @@
+Configuring your Amazon Linux instance
+After you have successfully launched and logged into your Amazon Linux instance, you can make changes to it. There are many different ways you can configure an instance to meet the needs of a specific application. The following are some common tasks to help get you started.
+Topics
+ Common configuration scenarios
+ Managing software on your Amazon Linux instance
+ Managing user accounts on your Amazon Linux instance
+ Processor state control for your EC2 instance
+ Setting the time for your Linux instance
+ Optimizing CPU options
+ Changing the hostname of your Amazon Linux instance
+ Setting up dynamic DNS on Your Amazon Linux instance
+ Running commands on your Linux instance at launch
+ Instance metadata and user data
+Common configuration scenarios
+The base distribution of Amazon Linux contains many software packages and utilities that are required for basic server operations. However, many more software packages are available in various software repositories, and even more packages are available for you to build from source code. For more information on installing and building software from these locations, see Managing software on your Amazon Linux instance.
+Amazon Linux instances come pre-configured with an ec2-user account, but you may want to add other user accounts that do not have super-user privileges. For more information on adding and removing user accounts, see Managing user accounts on your Amazon Linux instance.
+The default time configuration for Amazon Linux instances uses Amazon Time Sync Service to set the system time on an instance. The default time zone is UTC. For more information on setting the time zone for an instance or using your own time server, see Setting the time for your Linux instance.
+If you have your own network with a domain name registered to it, you can change the hostname of an instance to identify itself as part of that domain. You can also change the system prompt to show a more meaningful name without changing the hostname settings. For more information, see Changing the hostname of your Amazon Linux instance. You can configure an instance to use a dynamic DNS service provider. For more information, see Setting up dynamic DNS on Your Amazon Linux instance.
+When you launch an instance in Amazon EC2, you have the option of passing user data to the instance that can be used to perform common configuration tasks and even run scripts after the instance starts. You can pass two types of user data to Amazon EC2: cloud-init directives and shell scripts. For more information, see Running commands on your Linux instance at launch.

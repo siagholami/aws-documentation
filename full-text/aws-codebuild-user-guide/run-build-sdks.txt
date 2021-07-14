@@ -1,0 +1,3 @@
+Run a build (AWS SDKs)
+To use CodePipeline to run a build with AWS CodeBuild, skip these steps and follow the instructions in Use AWS CodePipeline with AWS CodeBuild to test code and run builds instead.
+For information about using CodeBuild with the AWS SDKs, see the AWS SDKs and tools reference.

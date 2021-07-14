@@ -1,0 +1,330 @@
+Integration subtype reference
+The following integration subtypes are supported for HTTP APIs.
+Topics
+ EventBridge-PutEvents
+ SQS-SendMessage
+ SQS-ReceiveMessage
+ SQS-DeleteMessage
+ SQS-PurgeQueue
+ AppConfig-GetConfiguration
+ Kinesis-PutRecord
+ StepFunctions-StartExecution
+ StepFunctions-StopExecution
+EventBridge-PutEvents
+Sends custom events to Amazon EventBridge so that they can be matched to rules.
+EventBridge-PutEvents 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+Detail
+True
+
+
+DetailType
+True
+
+
+Source
+True
+
+
+Time
+False
+
+
+EventBusName
+False
+
+
+Resources
+False
+
+
+Region
+False
+
+
+
+To learn more, see PutEvents in the Amazon EventBridge API Reference.
+SQS-SendMessage
+Delivers a message to the specified queue.
+SQS-SendMessage 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+QueueUrl
+True
+
+
+MessageBody
+True
+
+
+DelaySeconds
+False
+
+
+MessageAttributes
+False
+
+
+MessageDeduplicationId
+False
+
+
+MessageGroupId
+False
+
+
+MessageSystemAttributes
+False
+
+
+Region
+False
+
+
+
+To learn more, see SendMessage in the Amazon Simple Queue Service API Reference.
+SQS-ReceiveMessage
+Retrieves one or more messages (up to 10), from the specified queue.
+SQS-ReceiveMessage 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+QueueUrl
+True
+
+
+AttributeName
+False
+
+
+MaxNumberOfMessages
+False
+
+
+MessageAttributeNames
+False
+
+
+ReceiveRequestAttemptId
+False
+
+
+VisibilityTimeout
+False
+
+
+WaitTimeSeconds
+False
+
+
+Region
+False
+
+
+
+To learn more, see ReceiveMessage in the Amazon Simple Queue Service API Reference.
+SQS-DeleteMessage
+Deletes the specified message from the specified queue.
+SQS-DeleteMessage 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+ReceiptHandle
+True
+
+
+QueueUrl
+True
+
+
+Region
+False
+
+
+
+To learn more, see DeleteMessage in the Amazon Simple Queue Service API Reference.
+SQS-PurgeQueue
+Deletes all messages in the specified queue.
+SQS-PurgeQueue 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+QueueUrl
+True
+
+
+Region
+False
+
+
+
+To learn more, see PurgeQueue in the Amazon Simple Queue Service API Reference.
+AppConfig-GetConfiguration
+Receive information about a configuration.
+AppConfig-GetConfiguration 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+Application
+True
+
+
+Environment
+True
+
+
+Configuration
+True
+
+
+ClientId
+True
+
+
+ClientConfigurationVersion
+False
+
+
+Region
+False
+
+
+
+To learn more, see GetConfiguration in the AWS AppConfig API Reference.
+Kinesis-PutRecord
+Writes a single data record into an Amazon Kinesis data stream.
+Kinesis-PutRecord 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+StreamName
+True
+
+
+Data
+True
+
+
+PartitionKey
+True
+
+
+SequenceNumberForOrdering
+False
+
+
+ExplicitHashKey
+False
+
+
+Region
+False
+
+
+
+To learn more, see PutRecord in the Amazon Kinesis Data Streams API Reference.
+StepFunctions-StartExecution
+Starts a state machine execution.
+StepFunctions-StartExecution 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+StateMachineArn
+True
+
+
+Name
+False
+
+
+Input
+False
+
+
+Region
+False
+
+
+
+To learn more, see StartExecution in the AWS Step Functions API Reference.
+StepFunctions-StopExecution
+Stops an execution.
+StepFunctions-StopExecution 1.0 
+
+
+
+Parameter
+Required
+
+
+
+
+ExecutionArn
+True
+
+
+Cause
+False
+
+
+Error
+False
+
+
+Region
+False
+
+
+
+To learn more, see StopExecution in the AWS Step Functions API Reference.

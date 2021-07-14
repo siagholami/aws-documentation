@@ -1,0 +1,3 @@
+WorkSpaces resource type reference
+Resource types
+ AWS::WorkSpaces::Workspace

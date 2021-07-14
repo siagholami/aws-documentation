@@ -1,0 +1,23 @@
+Creating the Timer Parent and Child Entities
+You create a parent entity and name it TimerParent. Inside TimerParent, you create a child entity and name it TimerStart.
+To create the timer parent and child entities
+
+
+In the viewport, right-click just outside the maze and choose Create entity.
+
+
+
+In the Entity Outliner, select the new entity and name it TimerParent.
+
+
+
+Right-click TimerParent and choose Create child entity.
+
+
+
+In the Entity Inspector, rename the new child entity TimerStart.
+
+
+
+Next, you add components to the child entity TimerStart.
+Next: Adding Components to TimerStart

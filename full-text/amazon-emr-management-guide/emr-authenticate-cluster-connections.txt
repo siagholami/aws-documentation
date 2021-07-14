@@ -1,0 +1,5 @@
+Authenticate to Amazon EMR Cluster Nodes
+SSH clients can use an Amazon EC2 key pair to authenticate to cluster instances. Alternatively, with Amazon EMR release version 5.10.0 or later, you can configure Kerberos to authenticate users and SSH connections to the master node. For more information, see Use Kerberos Authentication.
+Topics
+ Use an Amazon EC2 Key Pair for SSH Credentials
+ Use Kerberos Authentication

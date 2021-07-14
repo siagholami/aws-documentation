@@ -1,0 +1,17 @@
+AWS::MSK::Cluster Tls
+Details for client authentication using TLS.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist)" : [ String, ... ]
+}
+YAML
+[CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist): 
+    - String
+Properties
+CertificateAuthorityArnList 
+List of ACM Certificate Authority ARNs.
+Required: No
+Type: List of String
+Update requires: Replacement

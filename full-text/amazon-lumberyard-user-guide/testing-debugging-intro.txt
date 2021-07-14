@@ -1,0 +1,8 @@
+Profiling, Testing, and Debugging Game Projects
+Lumberyard includes a number of tools that are used for testing builds, profiling performance, and debugging various issues that may be encountered.
+Topics
+ Profiler
+ Using AZ Test Scanner
+ Writing Tests for AzTest
+ Debugging Issues
+ Tracking File Access

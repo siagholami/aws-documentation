@@ -1,0 +1,23 @@
+FLOOR function
+The FLOOR function rounds a number down to the next whole number. 
+Syntax
+FLOOR (number)
+Argument
+number 
+DOUBLE PRECISION number to be rounded down. 
+Return type
+FLOOR returns an integer. 
+Example
+The example shows the value of the commission paid for a given sales transaction before and after using the FLOOR function. 
+```
+select commission from sales
+where salesid=10000;
+floor
+28.05
+(1 row)
+select floor(commission) from sales
+where salesid=10000;
+floor
+28
+(1 row)
+```

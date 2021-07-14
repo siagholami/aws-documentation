@@ -1,0 +1,5 @@
+PG_ATTRIBUTE_INFO
+PG_ATTRIBUTE_INFO is an Amazon Redshift system view built on the PostgreSQL catalog table PG_ATTRIBUTE and the internal catalog table PG_ATTRIBUTE_ACL. PG_ATTRIBUTE_INFO includes details about columns of a table or view, including column access control lists, if any.
+Table columns
+PG_ATTRIBUTE_INFO shows the following column in addition to the columns in PG_ATTRIBUTE.
+[See the AWS documentation website for more details]

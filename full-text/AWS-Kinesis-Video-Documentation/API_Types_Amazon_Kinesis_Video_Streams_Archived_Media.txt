@@ -1,0 +1,11 @@
+Amazon Kinesis Video Streams Archived Media
+The following data types are supported by Amazon Kinesis Video Streams Archived Media:
+  ClipFragmentSelector 
+  ClipTimestampRange 
+  DASHFragmentSelector 
+  DASHTimestampRange 
+  Fragment 
+  FragmentSelector 
+  HLSFragmentSelector 
+  HLSTimestampRange 
+  TimestampRange 

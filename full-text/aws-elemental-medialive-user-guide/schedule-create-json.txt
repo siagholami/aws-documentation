@@ -1,0 +1,12 @@
+JSON Payload for Create Actions
+The following sections show the structure of the payload and an example of the payload for every type of create action for a MediaLive schedule.
+Topics
+ Payload for an Input Switch Action
+ Payload for an Activate Image Action
+ Payload for a Deactivate Overlay Action
+ Payload for a Splice_Insert Message
+ Payload for a Time_Signal Message
+ Payload for a Return-to-Network Message
+ Payload for an ID3 Metadata Item
+ Payload for a Pause Pipeline Action
+ Combination of Create Actions

@@ -1,0 +1,16 @@
+AWS::EKS::Cluster Provider
+Identifies the AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the secrets.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[KeyArn](#cfn-eks-cluster-provider-keyarn)" : String
+}
+YAML
+[KeyArn](#cfn-eks-cluster-provider-keyarn): String
+Properties
+KeyArn 
+Amazon Resource Name (ARN) or alias of the customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.
+Required: No
+Type: String
+Update requires: No interruption

@@ -1,0 +1,95 @@
+AWS::DMS::Endpoint MongoDbSettings
+Provides information that defines a MongoDB endpoint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism)" : String,
+  "[AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource)" : String,
+  "[AuthType](#cfn-dms-endpoint-mongodbsettings-authtype)" : String,
+  "[DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename)" : String,
+  "[DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)" : String,
+  "[ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid)" : String,
+  "[NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel)" : String,
+  "[Password](#cfn-dms-endpoint-mongodbsettings-password)" : String,
+  "[Port](#cfn-dms-endpoint-mongodbsettings-port)" : Integer,
+  "[ServerName](#cfn-dms-endpoint-mongodbsettings-servername)" : String,
+  "[Username](#cfn-dms-endpoint-mongodbsettings-username)" : String
+}
+YAML
+[AuthMechanism](#cfn-dms-endpoint-mongodbsettings-authmechanism): String
+  [AuthSource](#cfn-dms-endpoint-mongodbsettings-authsource): String
+  [AuthType](#cfn-dms-endpoint-mongodbsettings-authtype): String
+  [DatabaseName](#cfn-dms-endpoint-mongodbsettings-databasename): String
+  [DocsToInvestigate](#cfn-dms-endpoint-mongodbsettings-docstoinvestigate): String
+  [ExtractDocId](#cfn-dms-endpoint-mongodbsettings-extractdocid): String
+  [NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel): String
+  [Password](#cfn-dms-endpoint-mongodbsettings-password): String
+  [Port](#cfn-dms-endpoint-mongodbsettings-port): Integer
+  [ServerName](#cfn-dms-endpoint-mongodbsettings-servername): String
+  [Username](#cfn-dms-endpoint-mongodbsettings-username): String
+Properties
+AuthMechanism 
+ The authentication mechanism you use to access the MongoDB source endpoint.
+For the default value, in MongoDB version 2.x, "default" is "mongodb_cr". For MongoDB version 3.x or later, "default" is "scram_sha_1". This setting isn't used when AuthType is set to "no".
+Required: No
+Type: String
+Allowed values: default | mongodb_cr | scram_sha_1
+Update requires: No interruption
+AuthSource 
+ The MongoDB database name. This setting isn't used when AuthType is set to "no". 
+The default is "admin".
+Required: No
+Type: String
+Update requires: No interruption
+AuthType 
+ The authentication type you use to access the MongoDB source endpoint.
+When when set to "no", user name and password parameters are not used and can be empty. 
+Required: No
+Type: String
+Allowed values: no | password
+Update requires: No interruption
+DatabaseName 
+ The database name on the MongoDB source endpoint. 
+Required: No
+Type: String
+Update requires: No interruption
+DocsToInvestigate 
+ Indicates the number of documents to preview to determine the document organization. Use this setting when NestingLevel is set to "one". 
+Must be a positive value greater than 0. Default value is 1000.
+Required: No
+Type: String
+Update requires: No interruption
+ExtractDocId 
+ Specifies the document ID. Use this setting when NestingLevel is set to "none". 
+Default value is "false". 
+Required: No
+Type: String
+Update requires: No interruption
+NestingLevel 
+ Specifies either document or table mode. 
+Default value is "none". Specify "none" to use document mode. Specify "one" to use table mode.
+Required: No
+Type: String
+Allowed values: none | one
+Update requires: No interruption
+Password 
+ The password for the user account you use to access the MongoDB source endpoint. 
+Required: No
+Type: String
+Update requires: No interruption
+Port 
+ The port value for the MongoDB source endpoint. 
+Required: No
+Type: Integer
+Update requires: No interruption
+ServerName 
+ The name of the server on the MongoDB source endpoint. 
+Required: No
+Type: String
+Update requires: No interruption
+Username 
+The user name you use to access the MongoDB source endpoint. 
+Required: No
+Type: String
+Update requires: No interruption

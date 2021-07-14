@@ -1,0 +1,30 @@
+Creating High Quality Terrain
+After you create a level, you can refine your terrain to use 2k height and 16k color.
+To refine your terrain to a 2k world with 16k color
+
+
+In your Lumberyard Editor level, choose Game, Terrain, Refine Terrain Texture Tiles.
+
+
+In the dialog box, click Yes and in the next dialog, click OK.
+
+
+Save your level.
+
+
+Repeat steps 1 through 3.
+
+
+Choose Game, Terrain, Export/Import Megaterrain Texture.
+
+
+In the Export/Import Megaterrain Texture tool, click and drag to select all of the tiles.
+
+
+Click Change tile resolution, select 2048x2048, and then click OK.
+
+
+Your result should look like the following. You can now import and export high quality textures.
+
+Tip
+You can verify that your texture is in 16k color. Export and then open the texture file in a DCC such as Photoshop.

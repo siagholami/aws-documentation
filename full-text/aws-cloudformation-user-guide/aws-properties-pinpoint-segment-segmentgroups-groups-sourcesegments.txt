@@ -1,0 +1,23 @@
+AWS::Pinpoint::Segment SourceSegments
+Specifies the base segment to build a segment on. A base segment, also referred to as a source segment, defines the initial population of endpoints for a segment. When you add dimensions to a segment, Amazon Pinpoint filters the base segment by using the dimensions that you specify. You can specify more than one dimensional segment or only one imported segment.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Id](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-id)" : String,
+  "[Version](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-version)" : Integer
+}
+YAML
+[Id](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-id): String
+  [Version](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments-version): Integer
+Properties
+Id 
+The unique identifier for the segment.
+Required: Yes
+Type: String
+Update requires: No interruption
+Version 
+The version number of the segment.
+Required: No
+Type: Integer
+Update requires: No interruption

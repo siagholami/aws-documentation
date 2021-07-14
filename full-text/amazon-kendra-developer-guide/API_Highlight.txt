@@ -1,0 +1,23 @@
+
+
+Highlight
+Provides information that you can use to highlight a search result so that your users can quickly identify terms in the response.
+Contents
+BeginOffset 
+The zero-based location in the response string where the highlight starts.
+Type: Integer
+Required: Yes
+EndOffset 
+The zero-based location in the response string where the highlight ends.
+Type: Integer
+Required: Yes
+TopAnswer 
+Indicates whether the response is the best response. True if this is the best response; otherwise, false.
+Type: Boolean
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

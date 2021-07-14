@@ -1,0 +1,12 @@
+mysql.rds_kill
+Ends a connection to the MySQL server.
+Syntax
+CALL mysql.rds_kill(processID);
+Parameters
+processID 
+The identity of the connection thread to be ended.
+Usage Notes
+Each connection to the MySQL server runs in a separate thread. To end a connection, use the mysql.rds_kill procedure and pass in the thread ID of that connection. To obtain the thread ID, use the MySQL SHOW PROCESSLIST command.
+Examples
+The following example ends a connection with a thread ID of 4243:
+call mysql.rds_kill(4243);

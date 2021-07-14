@@ -1,0 +1,47 @@
+Set Skybox Angle
+Sets the rotation angle for the skybox. This rotates the skybox around the z-axis.
+For more information, see Creating Static Skyboxes.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Angle
+Number
+Rotation angles in degrees.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

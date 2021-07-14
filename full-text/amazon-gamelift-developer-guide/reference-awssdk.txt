@@ -1,0 +1,103 @@
+Amazon GameLift Service API Reference (AWS SDK)
+The Amazon GameLift Service API is packaged into the AWS SDK. Download the AWS SDK or view the Amazon GameLift API reference documentation. 
+This page lists the available API actions based on functionality and tasks. The GameLift service API includes two main categories: (1) actions for starting game sessions and getting players into games, and (2) actions to manage your GameLift hosting resources.
+Actions to Manage Games and Players
+Call these API actions from your game client service to start new game sessions, request matchmaking, reserve player slots in active games, and work with game and player session data.
+ Start new game sessions for one or more players. Use a game session placement to start a new game and place it with the best hosting resources available. Alternatively, create a new game session on one specific fleet.
+   StartGameSessionPlacement – Request a new game session placement and add one or more players to it.
+   DescribeGameSessionPlacement – Get details on a placement request, including status.
+   StopGameSessionPlacement – Cancel a placement request. 
+   CreateGameSession – Start a new game session on a specific fleet. Available in GameLift Local. 
+ Get players into game sessions with FlexMatch matchmaking. Group players into a match and start a new game session for them. Find new players for an existing game using match backfill.
+   StartMatchmaking – Request matchmaking for one players or a group who want to play together. 
+   DescribeMatchmaking – Get details on a matchmaking request, including status.
+   AcceptMatch – For a match that requires player acceptance, register when a player accepts a proposed match. 
+   StopMatchmaking – Cancel a matchmaking request. 
+   StartMatchBackfill - Request additional player matches to fill empty slots in an existing game session.
+ Get players into existing games. Find existing games with available player slots and reserve them for new players. 
+   SearchGameSessions – Retrieve all available game sessions or search for game sessions that match a set of criteria. 
+   CreatePlayerSession – Reserve an open slot for a player to join a game session. Available in GameLift Local.
+   CreatePlayerSessions – Reserve open slots for multiple players to join a game session. Available in GameLift Local.
+ Work with game session and player session data. Retrieve current data on existing game sessions and player sessions, and update as needed.
+   DescribeGameSessions – Retrieve metadata for one or more game sessions, including length of time active and current player count. Available in GameLift Local.
+   DescribeGameSessionDetails – Retrieve metadata and the game session protection setting for one or more game sessions.
+   GetGameSessionLogUrl – Get the location of saved logs for a game session.
+   DescribePlayerSessions – Get details on player activity, including status, playing time, and player data. Available in GameLift Local.
+   UpdateGameSession – Change game session settings, such as maximum player count and join policy.
+Actions to Manage Game Hosting Resources
+Use these API actions to configure hosting resources for your game, scale capacity to meet player demand, access performance and utilization metrics, and more. Most resource management functionality is available in the GameLift Console, but you can also make direct calls to the service using the AWS Command Line Interface (AWS CLI) tool or the AWS SDK.
+ Manage game builds. Work with builds of your custom game server, which are uploaded to the GameLift service and deployed on fleets.
+   CreateBuild – Create a new build using files stored in an Amazon S3 bucket. To create a build and upload files from a local path, use the AWS CLI-only command upload-build.
+   ListBuilds – Get a list of all builds uploaded to a GameLift region.
+   DescribeBuild – Retrieve information associated with a build.
+   UpdateBuild – Change build metadata, including build name and version.
+   DeleteBuild – Remove a build from GameLift.
+ Manage Realtime scripts. Work with configuration scripts for use with Realtime Servers. Unlike custom game builds, scripts can be updated after they are uploaded to the GameLift service.
+   CreateScript – Create a new server script to run on Realtime Servers.
+   ListScripts – Get a list of all Realtime scripts uploaded to an GameLift region. 
+   DescribeScript – Retrieve information associated with a Realtime script. 
+   UpdateScript – Change script metadata and upload revised script content. 
+   DeleteScript – Remove a Realtime script from GameLift. 
+ Manage fleets for game hosting. Configure a fleet of hosting resources and deploy your game server or Realtime script to the fleet.
+   CreateFleet – Configure and activate a new fleet to run your custom game server build or Realtime script.
+   ListFleets – Get a list of all fleets in a GameLift region.
+   DeleteFleet – Terminate a fleet that is no longer running game servers or hosting players.
+   View / update fleet configurations.
+     DescribeFleetAttributes / UpdateFleetAttributes – View or change a fleet's metadata and settings for game session protection and resource creation limits.
+     DescribeFleetPortSettings / UpdateFleetPortSettings – View or change the inbound permissions (IP address and port setting ranges) allowed for a fleet.
+     DescribeRuntimeConfiguration / UpdateRuntimeConfiguration – View or change what server processes (and how many) to run on each instance in a fleet.
+ Scale fleet capacity. Set up fleet automatic scaling or set fleet capacity manually.
+   DescribeEC2InstanceLimits – Retrieve maximum number of instances allowed for the current AWS account and the current usage level.
+   DescribeFleetCapacity – Retrieve the fleets current capacity settings.
+   UpdateFleetCapacity – Manually adjust fleet capacity settings.
+   Manage auto-scaling.
+     PutScalingPolicy – Turn on target-based auto-scaling or create a custom auto-scaling policy, or update an existing policy.
+     DescribeScalingPolicies – Retrieve an existing auto-scaling policy.
+     DeleteScalingPolicy – Delete an auto-scaling policy and stop it from affecting a fleet's capacity.
+     StartFleetActions – Restart a fleet's auto-scaling policies.
+     StopFleetActions – Suspend a fleet's auto-scaling policies.
+ Manage game session queues. Set up multi-fleet, multi-region Queues to place game sessions with the best available hosting resources. Queues are required with FlexMatch matchmaking. 
+   CreateGameSessionQueue – Create a queue for use when processing requests for game session placements. 
+   DescribeGameSessionQueues – Retrieve game session queues defined in a GameLift region.
+   UpdateGameSessionQueue – Change the configuration of a game session queue.
+   DeleteGameSessionQueue – Remove a game session queue from the region.
+ Manage FlexMatch resources. Configure matchmakers for your game and specify match rules to create teams of players to meet your custom specifications.
+   CreateMatchmakingConfiguration – Create a matchmaking configuration with instructions for building a player group and placing in a new game session. 
+   DescribeMatchmakingConfigurations – Retrieve matchmaking configurations defined a GameLift region.
+   UpdateMatchmakingConfiguration – Change settings for matchmaking configuration. queue.
+   DeleteMatchmakingConfiguration – Remove a matchmaking configuration from the region.
+   CreateMatchmakingRuleSet – Create a set of rules to use when searching for player matches. 
+   DescribeMatchmakingRuleSets – Retrieve matchmaking rule sets defined in a GameLift region.
+   ValidateMatchmakingRuleSet – Verify syntax for a set of matchmaking rules. 
+   DeleteMatchmakingRuleSet – Remove a matchmaking rule set from the region.
+ Monitor fleet activity. Get up-to-the-minute information on server process and game session activity on a fleet.
+   DescribeFleetUtilization – Retrieve statistics on the number of server processes, game sessions, and players that are currently active on a fleet.
+   DescribeFleetEvents – View logged events for a fleet during a specified time span.
+   DescribeGameSessions – Retrieve game session metadata, including a game's running time and current player count.
+ Remotely access an instance. Monitor or troubleshoot activity on a specified fleet instance.
+   DescribeInstances – Get information on each instance in a fleet, including instance ID, IP address, and status.
+   GetInstanceAccess – Request access credentials needed to remotely connect to a specified instance in a fleet.
+ Manage fleet aliases. Use aliases to represent your fleets or specify an alternative destination.
+   CreateAlias – Define a new alias and optionally assign it to a fleet.
+   ListAliases – Get all fleet aliases defined in a GameLift region.
+   DescribeAlias – Retrieve information on an existing alias.
+   UpdateAlias – Change settings for an alias, such as redirecting it from one fleet to another.
+   DeleteAlias – Remove an alias from the region.
+   ResolveAlias – Get the fleet ID that a specified alias points to.
+ Manage VPC peering connections for fleets. Use VPC peering to establish secure access between your GameLift and other AWS resources.
+   CreateVpcPeeringAuthorization – Authorize a peering connection to one of your VPCs.
+   DescribeVpcPeeringAuthorizations – Retrieve valid peering connection authorizations. 
+   DeleteVpcPeeringAuthorization – Delete a peering connection authorization.
+   CreateVpcPeeringConnection – Establish a peering connection between the VPC for a GameLift fleet and one of your VPCs.
+   DescribeVpcPeeringConnections – Retrieve information on active or pending VPC peering connections with a GameLift fleet.
+   DeleteVpcPeeringConnection – Delete a VPC peering connection with a GameLift fleet.
+Available Programming Languages
+The AWS SDK with Amazon GameLift is available in the following languages. See documentation for each language for details on support for development environments.
+ C (SDK docs) (Amazon GameLift)
+ Java (SDK docs) (Amazon GameLift)
+ .NET (SDK docs) (Amazon GameLift)
+ Go (SDK docs) (Amazon GameLift)
+ Python (SDK docs) (Amazon GameLift)
+ Ruby (SDK docs) (Amazon GameLift)
+ PHP (SDK docs) (Amazon GameLift)
+ JavaScript/Node.js ((SDK docs) (Amazon GameLift)

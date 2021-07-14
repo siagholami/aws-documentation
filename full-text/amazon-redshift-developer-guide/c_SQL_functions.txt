@@ -1,0 +1,20 @@
+SQL functions reference
+Topics
+ Leader node–only functions
+ Compute node–only functions
+ Aggregate functions
+ Bit-wise aggregate functions
+ Window functions
+ Conditional expressions
+ Date and time functions
+ Spatial functions
+ Math functions
+ String functions
+ Hash functions
+ JSON functions
+ Data type formatting functions
+ System administration functions
+ System information functions
+Amazon Redshift supports a number of functions that are extensions to the SQL standard, as well as standard aggregate functions, scalar functions, and window functions.
+Note
+Amazon Redshift is based on PostgreSQL 8.0.2. Amazon Redshift and PostgreSQL have a number of very important differences that you must be aware of as you design and develop your data warehouse applications. For more information about how Amazon Redshift SQL differs from PostgreSQL, see Amazon Redshift and PostgreSQL.

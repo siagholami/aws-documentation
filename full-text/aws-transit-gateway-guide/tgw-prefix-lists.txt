@@ -1,0 +1,107 @@
+Prefix list references
+You can reference a prefix list in your transit gateway route table. A prefix list is a set of one or more CIDR block entries. You can use a prefix list to simplify the management of the IP addresses that you reference in your resources to route network traffic. For example, if you frequently specify the same destination CIDRs across multiple transit gateway route tables, you can manage those CIDRs in a single prefix list.
+When you create a prefix list reference in your transit gateway route table, each entry in the prefix list is represented as a route in your transit gateway route table.
+For more information about prefix lists, see Prefix lists in the Amazon VPC User Guide.
+Create a prefix list reference
+You can create a reference to a prefix list in your transit gateway route table.
+To create a prefix list reference using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Transit Gateway Route tables.
+
+
+Select the transit gateway route table.
+
+
+Choose Actions, Create prefix list reference.
+
+
+For Prefix list ID, choose the ID of the prefix list.
+
+
+For Attachment ID, choose the ID of the attachment to which to route traffic.
+
+
+Alternatively, to drop the traffic that matches the route, choose Blackhole.
+
+Choose Create prefix list reference.
+
+To create a prefix list reference using the AWS CLI
+Use the create-transit-gateway-prefix-list-reference command.
+View prefix list references
+You can view the prefix list references in your transit gateway route table. You can also view each entry in the prefix list as an individual route in your transit gateway route table. The route type for a prefix list route is propagated.
+To view a prefix list reference using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Transit Gateway Route tables.
+
+
+Select the transit gateway route table.
+
+
+In the lower pane, choose Prefix list references. The prefix list references are listed.
+
+
+Choose Routes. Each prefix list entry is listed as a route in the route table.
+
+
+To view a prefix list reference using the AWS CLI
+Use the get-transit-gateway-prefix-list-references command.
+Modify a prefix list reference
+You can modify a prefix list reference by changing the attachment that the traffic is routed to, or indicating whether to drop traffic that matches the route.
+You cannot modify the individual routes for a prefix list in the Routes tab. To modify the entries in the prefix list, use the Managed Prefix Lists screen. For more information, see Modifying a prefix list in the Amazon VPC User Guide.
+To modify a prefix list reference using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Transit Gateway Route tables.
+
+
+Select the transit gateway route table.
+
+
+In the lower pane, choose Prefix list references.
+
+
+Choose the prefix list reference, and choose Modify reference.
+
+
+For Attachment ID, choose the ID of the attachment to which to route traffic.
+
+
+Alternatively, to drop the traffic that matches the route, choose Blackhole.
+
+Choose Modify prefix list reference.
+
+To modify a prefix list reference using the AWS CLI
+Use the modify-transit-gateway-prefix-list-reference command.
+Delete a prefix list reference
+If you no longer need a prefix list reference, you can delete it from your transit gateway route table. Deleting the reference does not delete the prefix list.
+To delete a prefix list reference using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Transit Gateway Route tables.
+
+
+Select the transit gateway route table.
+
+
+Choose the prefix list reference, and choose Delete reference.
+
+
+Choose Delete reference.
+
+
+To delete a prefix list reference using the AWS CLI
+Use the delete-transit-gateway-prefix-list-reference command.

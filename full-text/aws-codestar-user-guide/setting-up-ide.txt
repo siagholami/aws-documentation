@@ -1,0 +1,7 @@
+Use an IDE with AWS CodeStar
+When you integrate an IDE with AWS CodeStar, you can continue to write and develop code in your preferred environment. The changes you make are included in the AWS CodeStar project each time you commit and push your code.
+
+Topics
+ Use AWS Cloud9 with AWS CodeStar
+ Use Eclipse with AWS CodeStar
+ Use Visual Studio with AWS CodeStar

@@ -1,0 +1,48 @@
+Kinesis Video Streams Amazon Kinesis Video Streams WebRTC Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Kinesis Video Streams with WebRTC
+Kinesis Video Streams with WebRTC: How It Works
+WebRTC Websocket APIs
+ConnectAsViewer
+ConnectAsMaster
+SendSdpOffer
+SendSdpAnswer
+SendIceCandidate
+Disconnect
+Asynchronous Message Reception
+
+
+Amazon Kinesis Video Streams with WebRTC Service Quotas
+Getting Started
+Set Up an AWS Account and Create an Administrator
+Create a Signaling Channel
+Stream Live Media
+WebRTC SDK in C for Embedded Devices
+WebRTC SDK in JavaScript for Web Applications
+WebRTC SDK for Android
+WebRTC SDK for iOS
+
+
+Security
+Controlling Access to Kinesis Video Streams with WebRTC Resources Using IAM
+Compliance Validation for Kinesis Video Streams with WebRTC
+Resilience in Kinesis Video Streams with WebRTC
+Infrastructure Security in Kinesis Video Streams with WebRTC
+Security Best Practices for Kinesis Video Streams with WebRTC
+Monitoring
+Monitoring Kinesis Video Streams with WebRTC Metrics with CloudWatch
+Logging Kinesis Video Streams with WebRTC API Calls with AWS CloudTrail
+Document History for the Amazon Kinesis Video Streams with WebRTC Developer Guide
+AWS glossary

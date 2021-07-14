@@ -1,0 +1,11 @@
+Cookbooks and Recipes
+AWS OpsWorks Stacks uses Chef cookbooks to handle tasks such as installing and configuring packages and deploying apps. This section describes how to use cookbooks with AWS OpsWorks Stacks. For more information, see Chef.
+Note
+AWS OpsWorks Stacks currently supports Chef versions 12, 11.10.4, 11.4.4, and 0.9.15.5. However, Chef 0.9.15.5 is deprecated and we do not recommend that you use it for new stacks. For convenience, they are usually referred to by just their major and minor version numbers. Stacks running Chef 0.9 or 11.4 use Chef Solo and stacks running Chef 12 or 11.10 use Chef Client in local mode. For Linux stacks, you can use the Configuration Manager to specify which Chef version to use when you create a stack. Windows stacks must use Chef 12.2. For more information, including guidelines for migrating stacks to more recent Chef versions, see Chef Versions.
+Topics
+ Cookbook Repositories
+ Chef Versions
+ Ruby Versions
+ Installing Custom Cookbooks
+ Updating Custom Cookbooks
+ Executing Recipes

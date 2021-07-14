@@ -1,0 +1,26 @@
+Android and iOS
+The following procedure shows how to establish a VPN connection using the OpenVPN client application on an Android or iOS mobile device. The steps for Android and iOS are the same.
+Note
+For more information about the OpenVPN client application for Android, see the FAQ regarding OpenVPN Connect Android on the OpenVPN website.
+Before you begin, ensure that your Client VPN administrator has created a Client VPN endpoint and provided you with the Client VPN endpoint configuration file.
+To establish a VPN connection
+
+
+Start the OpenVPN client application and choose OVPN Profile.
+
+
+
+Select the configuration file you received from your Client VPN administrator and choose Import. If you received the configuration file as a .ovpn attachment in a mail, you can open the file using OpenVPN. 
+
+
+
+Choose Add.
+
+
+
+Choose the toggle next to the OpenVPN profile.
+
+
+
+To view the connection log file, choose Log File (top-right corner). 
+

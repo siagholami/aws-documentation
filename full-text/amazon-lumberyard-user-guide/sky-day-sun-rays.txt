@@ -1,0 +1,13 @@
+Adding Sun Rays
+You can create a sun rays effect, which simulates the shafts of light that the sun produces under certain atmospheric conditions.
+To add sun rays
+
+
+In Lumberyard Editor, choose Tools, Other, Time Of Day.
+
+
+In the Parameters pane, for Sun Rays Effect, adjust the Sun Ray Effects Parameters as needed. 
+
+
+Close the Time of Day editor.
+

@@ -1,0 +1,211 @@
+AWS::ApiGateway::DocumentationVersion
+The AWS::ApiGateway::DocumentationVersion resource creates a snapshot of the documentation for an API. For more information, see Representation of API Documentation in API Gateway in the API Gateway Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGateway::DocumentationVersion",
+  "Properties" : {
+      "[Description](#cfn-apigateway-documentationversion-description)" : String,
+      "[DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion)" : String,
+      "[RestApiId](#cfn-apigateway-documentationversion-restapiid)" : String
+    }
+}
+YAML
+Type: AWS::ApiGateway::DocumentationVersion
+Properties: 
+  [Description](#cfn-apigateway-documentationversion-description): String
+  [DocumentationVersion](#cfn-apigateway-documentationversion-documentationversion): String
+  [RestApiId](#cfn-apigateway-documentationversion-restapiid): String
+Properties
+Description 
+The description of the API documentation snapshot.
+Required: No
+Type: String
+Update requires: No interruption
+DocumentationVersion 
+The version identifier of the API documentation snapshot.
+Required: Yes
+Type: String
+Update requires: Replacement
+RestApiId 
+The identifier of the API.
+Required: Yes
+Type: String
+Update requires: Replacement
+Examples
+Associate documentation version with stage
+The following example associates a documentation version with an API stage.
+JSON
+{
+    "Parameters": {
+        "apiName": {
+            "Type": "String"
+        },
+        "description": {
+            "Type": "String"
+        },
+        "property": {
+            "Type": "String"
+        },
+        "stageName": {
+            "Type": "String"
+        },
+        "type": {
+            "Type": "String"
+        },
+        "version": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "Deployment": {
+            "Type": "AWS::ApiGateway::Deployment",
+            "Properties": {
+                "RestApiId": {
+                    "Ref": "RestApi"
+                }
+            },
+            "DependsOn": [
+                "Method"
+            ]
+        },
+        "DocumentationPart": {
+            "Type": "AWS::ApiGateway::DocumentationPart",
+            "Properties": {
+                "Location": {
+                    "Type": {
+                        "Ref": "type"
+                    }
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "Property": {
+                    "Ref": "property"
+                }
+            }
+        },
+        "DocumentationVersion": {
+            "Type": "AWS::ApiGateway::DocumentationVersion",
+            "Properties": {
+                "Description": {
+                    "Ref": "description"
+                },
+                "DocumentationVersion": {
+                    "Ref": "version"
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                }
+            },
+            "DependsOn": "DocumentationPart"
+        },
+        "Method": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+                "AuthorizationType": "NONE",
+                "HttpMethod": "POST",
+                "ResourceId": {
+                    "Fn::GetAtt": [
+                        "RestApi",
+                        "RootResourceId"
+                    ]
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "Integration": {
+                    "Type": "MOCK"
+                }
+            }
+        },
+        "RestApi": {
+            "Type": "AWS::ApiGateway::RestApi",
+            "Properties": {
+                "Name": {
+                    "Ref": "apiName"
+                }
+            }
+        },
+        "Stage": {
+            "Type": "AWS::ApiGateway::Stage",
+            "Properties": {
+                "DeploymentId": {
+                    "Ref": "Deployment"
+                },
+                "DocumentationVersion": {
+                    "Ref": "version"
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "StageName": {
+                    "Ref": "stageName"
+                }
+            },
+            "DependsOn": "DocumentationVersion"
+        }
+    }
+}
+YAML
+Parameters:
+  apiName:
+    Type: String
+  description:
+    Type: String
+  property:
+    Type: String
+  stageName:
+    Type: String
+  type:
+    Type: String
+  version:
+    Type: String
+Resources:
+  Deployment:
+    Type: AWS::ApiGateway::Deployment
+    Properties:
+      RestApiId: !Ref RestApi
+    DependsOn:
+      - Method
+  DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: !Ref type
+      RestApiId: !Ref RestApi
+      Property: !Ref property
+  DocumentationVersion:
+    Type: AWS::ApiGateway::DocumentationVersion
+    Properties:
+      Description: !Ref description
+      DocumentationVersion: !Ref version
+      RestApiId: !Ref RestApi
+    DependsOn: DocumentationPart
+  Method:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: POST
+      ResourceId: !GetAtt 
+        - RestApi
+        - RootResourceId
+      RestApiId: !Ref RestApi
+      Integration:
+        Type: MOCK
+  RestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Ref apiName
+  Stage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      DeploymentId: !Ref Deployment
+      DocumentationVersion: !Ref version
+      RestApiId: !Ref RestApi
+      StageName: !Ref stageName
+    DependsOn: DocumentationVersion
+See also
+
+documentationpart:create in the Amazon API Gateway REST API Reference

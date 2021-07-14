@@ -1,0 +1,9 @@
+Data Protection in AWS Glue
+AWS Glue offers several features that are designed to help protect your data.
+Topics
+ Encryption at Rest
+ Encryption in Transit
+ Key Management
+ Internetwork Traffic Privacy
+ AWS Glue Dependency on Other AWS Services
+ Development Endpoints

@@ -1,0 +1,11 @@
+Configuration API Reference for Amazon CloudSearch
+You use the Amazon CloudSearch Configuration API to create, configure, and manage search domains. For more information configuring search domains, see Creating and Managing Search Domains.
+The other APIs you use to interact with Amazon CloudSearch are: 
+ Document Service API Reference—Submit the data you want to search.
+ Search API Reference—Search your domain.
+Topics
+ Submitting Configuration Requests in Amazon CloudSearch
+ Actions
+ Data Types
+ Common Parameters
+ Common Errors

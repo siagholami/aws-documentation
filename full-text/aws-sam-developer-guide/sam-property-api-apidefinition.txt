@@ -1,0 +1,32 @@
+ApiDefinition
+An OpenAPI document defining the API.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[Bucket](#sam-api-apidefinition-bucket): String
+  [Key](#sam-api-apidefinition-key): String
+  [Version](#sam-api-apidefinition-version): String
+Properties
+Bucket 
+The name of the Amazon S3 bucket where the OpenAPI file is stored.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is passed directly to the [Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket) property of the AWS::ApiGateway::RestApi S3Location data type.
+Key 
+The Amazon S3 key of the OpenAPI file.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is passed directly to the [Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key) property of the AWS::ApiGateway::RestApi S3Location data type.
+Version 
+For versioned objects, the version of the OpenAPI file.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [Version](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version) property of the AWS::ApiGateway::RestApi S3Location data type.
+Examples
+Definition Uri example
+API Definition example
+YAML
+DefinitionUri:
+  Bucket: mybucket-name
+  Key: mykey-name
+  Version: 121212

@@ -1,0 +1,131 @@
+Tutorial: Publishing a message to an Amazon SNS topic
+After you create a topic and subscribe an endpoint to it, you can publish messages to a topic. When the message is published, Amazon SNS attempts to deliver the message to every endpoint (such as AWS Lambda, Amazon SQS, HTTP/S, or an email address) subscribed to the topic.
+The following tutorial shows how you can use the AWS Management Console, the AWS SDK for Java, and the AWS SDK for .NET to publish a message to a topic.
+Important
+You can publish messages only to topics and endpoints in the same AWS Region.
+Topics
+ AWS Management Console
+ AWS SDK for Java
+ AWS SDK for .NET
+To publish a message to an Amazon SNS topic using the AWS Management Console
+
+
+Sign in to the Amazon SNS console.
+
+
+On the navigation panel, choose Topics.
+
+
+On the Topics page, choose the topic you created earlier and then choose Publish message.
+
+
+On the Publish message to topic page, do the following:
+
+
+(Optional) In the Message details section, enter the Subject, for example:
+Hello from Amazon SNS!
+
+
+In the Message body section, do one of the following:
+
+
+Choose Identical payload for all delivery protocols and then enter the message, for example:
+Publishing a message to an Amazon SNS topic.
+       Choose Custom payload for each delivery protocol and then use a JSON object to define the message to send to each protocol, for example:
+{
+  "default": "Sample fallback message",
+  "email": "Sample message for email endpoints",
+  "sqs": "Sample message for Amazon SQS endpoints",
+  "lambda": "Sample message for AWS Lambda endpoints",
+  "http": "Sample message for HTTP endpoints",
+  "https": "Sample message for HTTPS endpoints",
+  "sms": "Sample message for SMS endpoints",
+  "APNS": "{\"aps\":{\"alert\": \"Sample message for iOS endpoints\"} }",
+  "APNS_SANDBOX": "{\"aps\":{\"alert\":\"Sample message for iOS development endpoints\"}}",
+  "APNS_VOIP": "{\"aps\":{\"alert\":\"Sample message for Apple VoIP endpoints\"}}",
+  "APNS_VOIP_SANDBOX": "{\"aps\":{\"alert\": \"Sample message for Apple VoIP development endpoints\"} }",
+  "MACOS": "{\"aps\":{\"alert\":\"Sample message for MacOS endpoints\"}}",
+  "MACOS_SANDBOX": "{\"aps\":{\"alert\": \"Sample message for MacOS development endpoints\"} }",
+  "GCM": "{ \"data\": { \"message\": \"Sample message for Android endpoints\" } }",
+  "ADM": "{ \"data\": { \"message\": \"Sample message for FireOS endpoints\" } }",
+  "BAIDU": "{\"title\":\"Sample message title\",\"description\":\"Sample message for Baidu endpoints\"}",
+  "MPNS": "<?xml version=\"1.0\" encoding=\"utf-8\"?><wp:Notification xmlns:wp=\"WPNotification\"><wp:Tile><wp:Count>ENTER COUNT</wp:Count><wp:Title>Sample message for Windows Phone 7 endpoints</wp:Title></wp:Tile></wp:Notification>",
+  "WNS": "<badge version=\"1\" value=\"42\"/>"
+}
+For more information, see Send custom platform-specific payloads to mobile devices.
+
+
+
+
+In the Message attributes section, add any attributes that you want Amazon SNS to match with the subscription attribute FilterPolicy to decide whether the subscribed endpoint is interested in the published message.
+
+
+Select an attribute Type, for example String.Array.
+Note
+If the attribute type is String.Array, enclose the array in square brackets ([]). Within the array, enclose string values in double quotation marks. You don't need quotation marks for numbers or for the keywords true, false, and null.
+
+
+Enter a Name for the attribute, for example customer_interests.
+
+
+Enter a Value for the attribute, for example ["soccer", "rugby", "hockey"].
+
+
+If the attribute type is String, String.Array, or Number, Amazon SNS evaluates the message attribute against a subscription's filter policy (if present) before sending the message to the subscription.
+For more information, see Amazon SNS message attributes.
+
+
+Choose Publish message.
+The message is published to the topic and the MyTopic page is displayed.
+The topic's Name, ARN, (optional) Display name, and Topic owner's AWS account ID are displayed in the Details section.
+
+
+In your email client, check the email address that you specified earlier and read the email from Amazon SNS.
+
+
+To publish a message to an Amazon SNS topic using the AWS SDK for Java
+
+
+Specify your AWS credentials. For more information, see Set up AWS Credentials and Region for Development in the AWS SDK for Java 2.x Developer Guide.
+
+
+Write your code. For more information, see Using the SDK for Java 2.x.
+
+
+The following code excerpt publishes a message to a topic and then prints the MessageId.
+```
+   // Publish a message to an Amazon SNS topic.
+   final String msg = "If you receive this message, publishing a message to an Amazon SNS topic works.";
+   final PublishRequest publishRequest = new PublishRequest(topicArn, msg);
+   final PublishResult publishResponse = snsClient.publish(publishRequest);
+// Print the MessageId of the message.
+   System.out.println("MessageId: "  publishResponse.getMessageId());
+   ```
+
+Compile and run your code.
+
+The message is published and the MessageId is printed, for example:
+MessageId: 1234a567-bc89-012d-3e45-6fg7h890123i
+To publish a message to an Amazon SNS topic using the AWS SDK for .NET
+
+
+Specify your AWS credentials. For more information, see Configuring AWS Credentials in the AWS SDK for .NET Developer Guide.
+
+
+Write your code. For more information, see Programming with the AWS SDK for .NET.
+
+
+The following code excerpt publishes a message to a topic and then prints the MessageId.
+```
+   // Publish a message to an Amazon SNS topic.
+   String msg = "If you receive this message, publishing a message to an Amazon SNS topic works.";
+   PublishRequest publishRequest = new PublishRequest(topicArn, msg);
+   PublishResponse publishResponse = snsClient.Publish(publishRequest);
+// Print the MessageId of the published message.
+   Console.WriteLine("MessageId: "  publishResponse.MessageId);
+   ```
+
+Compile and run your code.
+
+The message is published and the MessageId is printed, for example:
+MessageId: 1234a567-bc89-012d-3e45-6fg7h890123i

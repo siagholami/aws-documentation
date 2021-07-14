@@ -1,0 +1,17 @@
+AWS::Glue::MLTransform InputRecordTables
+A list of AWS Glue table definitions used by the transform.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[GlueTables](#cfn-glue-mltransform-inputrecordtables-gluetables)" : [ GlueTables, ... ]
+}
+YAML
+[GlueTables](#cfn-glue-mltransform-inputrecordtables-gluetables): 
+    - GlueTables
+Properties
+GlueTables 
+The database and table in the AWS Glue Data Catalog that is used for input or output data.
+Required: No
+Type: List of GlueTables
+Update requires: No interruption

@@ -1,0 +1,5 @@
+Advanced Topics for Kinesis Data Streams Producers
+This section discusses how to optimize your Amazon Kinesis Data Streams producers.
+Topics
+ KPL Retries and Rate Limiting
+ Considerations When Using KPL Aggregation

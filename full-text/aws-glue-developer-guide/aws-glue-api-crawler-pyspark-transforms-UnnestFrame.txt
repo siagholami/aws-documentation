@@ -1,0 +1,35 @@
+UnnestFrame Class
+Unnests a DynamicFrame, flattens nested objects to top-level elements, and generates joinkeys for array objects.
+Methods
+
+__call__
+apply
+name
+describeArgs
+describeReturn
+describeTransform
+describeErrors
+describe
+
+__call__(frame, transformation_ctx = "", info="", stageThreshold=0, totalThreshold=0)
+Unnests a DynamicFrame. Flattens nested objects to top-level elements, and generates joinkeys for array objects.
+ frame – The DynamicFrame to unnest (required).
+ transformation_ctx – A unique string that is used to identify state information (optional).
+ info – A string associated with errors in the transformation (optional).
+ stageThreshold – The maximum number of errors that can occur in the transformation before it errors out (optional; the default is zero).
+ totalThreshold – The maximum number of errors that can occur overall before processing errors out (optional; the default is zero).
+Returns the unnested DynamicFrame.
+apply(cls, *args, **kwargs)
+Inherited from GlueTransform apply.
+name(cls)
+Inherited from GlueTransform name.
+describeArgs(cls)
+Inherited from GlueTransform describeArgs.
+describeReturn(cls)
+Inherited from GlueTransform describeReturn.
+describeTransform(cls)
+Inherited from GlueTransform describeTransform.
+describeErrors(cls)
+Inherited from GlueTransform describeErrors.
+describe(cls)
+Inherited from GlueTransform describe.

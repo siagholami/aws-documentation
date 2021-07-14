@@ -1,0 +1,6 @@
+AWS services integrated with App Mesh
+App Mesh works with other AWS services to provide additional solutions for your business challenges. This topic identifies services that either use App Mesh to add functionality, or services that App Mesh uses to perform tasks.
+Topics
+ Creating App Mesh resources with AWS CloudFormation
+ Tutorial: Configure App Mesh integration with Kubernetes
+ App Mesh on AWS Outposts

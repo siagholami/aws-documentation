@@ -1,0 +1,20 @@
+Step 6: Run the build
+(Previous step: Step 5: Create the build project)
+In this step, you instruct AWS CodeBuild to run the build with the settings in the build project.
+To run the build
+
+
+Open the AWS CodeBuild console at https://console.aws.amazon.com/codesuite/codebuild/home.
+
+
+In the navigation pane, choose Build projects.
+
+
+In the list of build projects, choose codebuild-demo-project, and then choose Start build. 
+
+
+On the Start build page, choose Start build.
+
+
+Next step
+Step 7: View summarized build information

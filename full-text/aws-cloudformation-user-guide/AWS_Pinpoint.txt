@@ -1,0 +1,20 @@
+Pinpoint resource type reference
+Resource types
+ AWS::Pinpoint::ADMChannel
+ AWS::Pinpoint::APNSChannel
+ AWS::Pinpoint::APNSSandboxChannel
+ AWS::Pinpoint::APNSVoipChannel
+ AWS::Pinpoint::APNSVoipSandboxChannel
+ AWS::Pinpoint::App
+ AWS::Pinpoint::ApplicationSettings
+ AWS::Pinpoint::BaiduChannel
+ AWS::Pinpoint::Campaign
+ AWS::Pinpoint::EmailChannel
+ AWS::Pinpoint::EmailTemplate
+ AWS::Pinpoint::EventStream
+ AWS::Pinpoint::GCMChannel
+ AWS::Pinpoint::PushTemplate
+ AWS::Pinpoint::Segment
+ AWS::Pinpoint::SMSChannel
+ AWS::Pinpoint::SmsTemplate
+ AWS::Pinpoint::VoiceChannel

@@ -1,0 +1,23 @@
+Managing Products
+You create products by packaging an AWS CloudFormation template with metadata, update products by creating a new version based on an updated template, and group products together into portfolios to distribute them to users.
+New versions of products are propagated to all users who have access to the product through a portfolio. When you distribute an update, end users can update existing provisioned products with just a few clicks.
+Topics
+ Viewing the Products Page
+ Creating Products
+ Adding Products to Portfolios
+ Updating Products
+ Deleting Products
+ Managing Versions
+Viewing the Products Page
+You manage products from the Products page in the AWS Service Catalog administrator console.
+To view the Products page
+
+
+Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/.
+
+
+Choose Service Catalog in the navigation bar.
+
+
+Choose Products.
+

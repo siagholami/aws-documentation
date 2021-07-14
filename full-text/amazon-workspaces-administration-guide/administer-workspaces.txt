@@ -1,0 +1,14 @@
+Administer Your WorkSpaces
+You can administer your WorkSpaces using the Amazon WorkSpaces console.
+Topics
+ Manage the WorkSpace Running Mode
+ Modify a WorkSpace
+ Tag WorkSpaces Resources
+ WorkSpace Maintenance
+ Encrypted WorkSpaces
+ Restart a WorkSpace
+ Rebuild a WorkSpace
+ Restore a WorkSpace
+ Upgrade Windows 10 BYOL WorkSpaces
+ Migrate a WorkSpace
+ Delete a WorkSpace

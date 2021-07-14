@@ -1,0 +1,139 @@
+AWS Snowball Edge Developer Guide AWS Snowball Edge
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is an AWS Snowball Edge?
+AWS Snowball Device Differences
+How AWS Snowball Works with the Snowball Edge
+Setting Up Your AWS Access for AWS Snowball Edge
+Understanding AWS Snowball Edge Jobs
+Job Statuses
+Import Jobs into Amazon S3
+Export Jobs from Amazon S3
+Local Compute and Storage Only Jobs
+Cloning a Job in the Console
+Getting Started with an AWS Snowball Edge Device
+Getting Started with AWS Snowball Edge: Your First Job
+Create Your First Job
+Receive the Snowball Edge
+Connect to Your Local Network
+Get Your Credentials and Tools
+Download and Install the Snowball Client
+Unlock the Snowball Edge
+Set Up Local Users
+Use the Snowball Edge
+Stop the Snowball Client, and Power Off the Snowball Edge
+Disconnect the Snowball Edge
+Return the Snowball Edge
+Monitor the Import Status
+Get Your Job Completion Report and Logs in the Console
+
+
+Where Do I Go from Here?
+Best Practices for the AWS Snowball Edge Device
+How to Transfer Petabytes of Data Efficiently
+Using an AWS Snowball Edge Device
+Using the Snowball Client
+Commands for the Snowball Client
+
+
+Transferring Files Using the Amazon S3 Adapter
+Batching Small Files
+Supported AWS CLI Commands
+Supported REST API Actions
+
+
+Transferring Files to AWS Snowball Edge Using the File Interface
+Using AWS Lambda with an AWS Snowball Edge
+Getting Started with Lambda Powered by AWS IoT Greengrass
+
+
+Using Amazon EC2 Compute Instances
+Using the AWS CLI and API Operations on Snowball Edge
+Quotas for Compute Instances on a Snowball Edge
+Creating a Job with Compute Instances
+Network Configuration for Compute Instances
+Connecting to Your Compute Instance on a Snowball Edge Using SSH
+Transferring Data from Amazon EC2 Compute Instances to Amazon S3 Buckets on the Same Snowball Edge
+Snowball Client Commands for Compute Instances
+Using the Amazon EC2 Endpoint
+Autostarting Amazon EC2 Instances with Launch Templates
+Using Block Storage With Your Amazon EC2 Instances
+Security Groups in Snowball Edge Devices
+Supported Instance Metadata and User Data
+Troubleshooting Compute Instances on Snowball Edge Devices
+
+
+Using IAM Locally
+Using AWS Security Token Service
+Ports Required to Use AWS Services on an AWS Snowball Edge Device
+Using an AWS Snowball Edge Cluster
+Administrating a Cluster
+Updating software on a AWS Snowball Edge
+Shipping Considerations for AWS Snowball
+Shipping an AWS Snowball Edge
+Using AWS OpsHub for Snow Family to Manage Devices
+Unlocking a Device
+Managing AWS Services on Your Device
+Using Amazon EC2 Compute Instances Locally
+Managing an Amazon EC2 Cluster
+Managing Amazon S3 Storage
+
+
+Managing Your Devices
+Automating Your Management Tasks
+Security for AWS Snowball Edge
+Data Protection in Snowball Edge
+Protecting Data in the Cloud
+Encryption for AWS Snowball Edge
+AWS Key Management Service in AWS Snowball Edge
+
+
+Protecting Data On Your Device
+
+
+Identity and Access Management in Snowball
+Access Control for Snow Family Console and Creating Jobs
+Access Control in the AWS Cloud
+Using Identity-Based Policies (IAM Policies) for AWS Snowball
+Customer Managed Policy Examples
+
+
+
+
+
+
+Logging and Monitoring in Snowball
+Compliance Validation for Snowball
+Resilience
+Infrastructure Security in Snowball
+Data Validation with Snowball Edge Jobs
+Notifications for the AWS Snowball Edge
+Logging AWS Snowball Edge API Calls with AWS CloudTrail
+AWS Snowball Edge Specifications
+AWS Snowball Edge Quotas
+Troubleshooting for an AWS Snowball Edge
+Additional Information for Snowball Edge
+Using the Snowball Client
+Clustering Overview
+Administrating a Cluster
+
+
+Using the File Interface for the AWS Snowball Edge
+Using AWS Lambda with an AWS Snowball Edge
+Getting Started with Lambda Powered by AWS IoT Greengrass
+
+
+API Reference
+Document History
+AWS glossary

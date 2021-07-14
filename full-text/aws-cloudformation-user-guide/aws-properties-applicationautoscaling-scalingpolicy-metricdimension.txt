@@ -1,0 +1,26 @@
+AWS::ApplicationAutoScaling::ScalingPolicy MetricDimension
+MetricDimension is a subproperty of CustomizedMetricSpecification that specifies the dimensions of a metric for a target tracking scaling policy. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric. Duplicate dimensions are not allowed. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-applicationautoscaling-scalingpolicy-metricdimension-name)" : String,
+  "[Value](#cfn-applicationautoscaling-scalingpolicy-metricdimension-value)" : String
+}
+YAML
+[Name](#cfn-applicationautoscaling-scalingpolicy-metricdimension-name): String
+  [Value](#cfn-applicationautoscaling-scalingpolicy-metricdimension-value): String
+Properties
+Name 
+The name of the dimension.
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+The value of the dimension.
+Required: Yes
+Type: String
+Update requires: No interruption
+See also
+
+Target tracking scaling policies in the Application Auto Scaling User Guide

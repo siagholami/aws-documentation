@@ -1,0 +1,24 @@
+AWS::IoTAnalytics::Dataset DatasetContentDeliveryRule
+When dataset contents are created, they are delivered to destination specified here.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)" : DatasetContentDeliveryRuleDestination,
+  "[EntryName](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)" : String
+}
+YAML
+[Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination): 
+    DatasetContentDeliveryRuleDestination
+  [EntryName](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname): String
+Properties
+Destination 
+The destination to which dataset contents are delivered.
+Required: Yes
+Type: DatasetContentDeliveryRuleDestination
+Update requires: No interruption
+EntryName 
+The name of the dataset content delivery rules entry.
+Required: No
+Type: String
+Update requires: No interruption

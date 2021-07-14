@@ -1,0 +1,11 @@
+Motion Sets Interface
+Use the Motion Set pane to create motion set files and add motion files to it.
+
+In the Motion Sets pane, you can do the following:
+
+
+Motion Sets Management – Add, open, save, or delete motion sets.
+
+
+Motion Sets – Add, open, or delete the motion files in the selected motion set.
+

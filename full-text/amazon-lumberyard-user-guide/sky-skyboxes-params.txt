@@ -1,0 +1,13 @@
+Changing Skybox Parameters
+Do the following to modify the parameters of the dynamic sky in your level.
+To change dynamic sky parameters
+
+
+In Lumberyard Editor, choose Tools, Other, Time of Day.
+
+
+In the Parameters pane, specify changes to the Advanced Parameters. 
+
+
+Close the Time of Day editor.
+

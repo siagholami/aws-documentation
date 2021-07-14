@@ -1,0 +1,4 @@
+AWS Directory Service resource type reference
+Resource types
+ AWS::DirectoryService::MicrosoftAD
+ AWS::DirectoryService::SimpleAD

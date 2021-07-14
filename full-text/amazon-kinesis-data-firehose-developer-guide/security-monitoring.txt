@@ -1,0 +1,2 @@
+Monitoring Amazon Kinesis Data Firehose
+Kinesis Data Firehose provides monitoring functionality for your delivery streams. For more information, see Monitoring Amazon Kinesis Data Firehose.

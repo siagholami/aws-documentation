@@ -1,0 +1,50 @@
+Tags in Amazon Lightsail
+Note
+Amazon Lightsail allows you to assign labels to your resources as tags. Each tag is a label consisting of a key and an optional value that can make it more efficient to manage, search for, and filter resources.
+Last updated: November 28, 2018 
+Amazon Lightsail allows you to assign labels to your resources as tags. Each tag is a label consisting of a key and an optional value that can make it efficient to manage, search for, and filter resources. Although there are no inherent types of tags, they let you categorize Lightsail resources by purpose, owner, environment, or other criteria. This is useful when you have many resources of the same type. You can quickly identify a specific resource based on the tags you've assigned to it. For example, define a set of tags for your resources that helps you track each resource’s project, or priority.
+A key without a value is referred to as a key-only tag in Lightsail. A key with a value is referred to as a key-value tag. The following diagram illustrates how tagging works. In this example, each resource has a set of key-value and key-only tags. The key-value tags identify projects and priorities, and key-only tags identify customers and application versions.
+
+Organize billing and control access using tags
+You can also use tags to organize your billing, control access to resources and requests in Lightsail, and control access to tag keys. For more information, see one the following guides:
+ Using tags to organize costs for your Amazon Lightsail resources
+ Using tags to control access to your Amazon Lightsail resources
+Lightsail resources that support tagging
+You can tag most Lightsail resources when you create them, or after they are created. If tags cannot be applied during resource creation, Lightsail rolls back the resource creation process. This helps to ensure that resources are either created with tags or not created at all, and that no resources that should be tagged are left untagged at any time.
+The following Lightsail resources can be tagged in the Lightsail console:
+ Instances
+ Databases
+ Disks
+ DNS zones
+ Load balancers
+Important
+Snapshots created using the Lightsail console automatically inherit tags from the source resource. A Lightsail resource created from that snapshot will have the same tags that were present on the source resource when the snapshot was created.
+The following resources can be tagged using the Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs:
+ Database snapshots
+ Databases
+ Disk snapshots
+ Disks
+ Domains (DNS zones)
+ Instance snapshots
+ Instances
+ Key pairs
+ Load balancer TLS certificates (TLS certificates created using Lightsail)
+ Load balancers
+Important
+Snapshots created using the Lightsail API, AWS CLI, or SDKs do not automatically inherit tags from the source resource. Instead, you must manually specify the tags from the source resource using the tags parameter.
+Tag restrictions
+The following basic restrictions apply to tags:
+ Maximum number of tags per resource – 50.
+ For each resource, each tag key must be unique. Each tag key can have only one value.
+ Maximum key length – 128 Unicode characters in UTF-8.
+ Maximum value length – 256 Unicode characters in UTF-8.
+ If your tagging schema is used across multiple services and resources, remember that other services may have restrictions on allowed characters. Generally allowed characters are: letters, numbers, and spaces, and the following characters:  - = . _ : / @
+ Tag keys and values are case-sensitive.
+ Don't use the aws: prefix for either keys or values. That prefix is reserved for AWS use.
+Working with tags in Lightsail
+To get started with tags in Lightsail, see the following guides:
+ Adding tags to a resource in Amazon Lightsail
+ Organizing your Amazon Lightsail resources using tags
+ Using tags to organize costs for your Amazon Lightsail resources
+ Using tags to control access to your Amazon Lightsail resources
+ Deleting tags in Amazon Lightsail

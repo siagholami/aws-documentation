@@ -1,0 +1,7 @@
+Using SQL
+Topics
+ SQL reference conventions
+ Basic elements
+ Expressions
+ Conditions
+The SQL language consists of commands and functions that you use to work with databases and database objects. The language also enforces rules regarding the use of data types, expressions, and literals.

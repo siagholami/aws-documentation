@@ -1,0 +1,9 @@
+Amazon SQS access control process workflow
+The following diagram describes the general workflow of access control with the Amazon SQS access policy language.
+
+ You write an Amazon SQS policy for your queue.
+ You upload your policy to AWS. The AWS service provides an API that you use to upload your policies. For example, you use the Amazon SQS SetQueueAttributes action to upload a policy for a particular Amazon SQS queue.
+ Someone sends a request to use your Amazon SQS queue.
+ Amazon SQS examines all available Amazon SQS policies and determines which ones are applicable.
+ Amazon SQS evaluates the policies and determines whether the requester is allowed to use your queue.
+ Based on the policy evaluation result, Amazon SQS either returns an Access denied error to the requester or continues to process the request.

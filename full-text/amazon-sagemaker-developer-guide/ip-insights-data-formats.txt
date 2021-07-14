@@ -1,0 +1,5 @@
+IP Insights Data Formats
+This section provides examples of the available input and output data formats used by the IP Insights algorithm during training and inference.
+Topics
+ IP Insights Training Data Formats
+ IP Insights Inference Data Formats

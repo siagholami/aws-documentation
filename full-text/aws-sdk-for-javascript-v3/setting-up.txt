@@ -1,0 +1,9 @@
+Setting Up the SDK for JavaScript
+The topics in this section explain how to install and load the SDK for JavaScript so you can access the web services supported by the SDK.
+Note
+React Native developers should use AWS Amplify to create new projects on AWS. See the aws-sdk-react-native archive for details.
+Topics
+ Prerequisites
+ Installing the SDK for JavaScript
+ Loading the SDK for JavaScript
+ Migrating Your Code to SDK for JavaScript V3

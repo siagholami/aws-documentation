@@ -1,0 +1,48 @@
+AWS::AppMesh::Route RouteSpec
+An object that represents a route specification. Specify one route type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute)" : GrpcRoute,
+  "[Http2Route](#cfn-appmesh-route-routespec-http2route)" : HttpRoute,
+  "[HttpRoute](#cfn-appmesh-route-routespec-httproute)" : HttpRoute,
+  "[Priority](#cfn-appmesh-route-routespec-priority)" : Integer,
+  "[TcpRoute](#cfn-appmesh-route-routespec-tcproute)" : TcpRoute
+}
+YAML
+[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute): 
+    GrpcRoute
+  [Http2Route](#cfn-appmesh-route-routespec-http2route): 
+    HttpRoute
+  [HttpRoute](#cfn-appmesh-route-routespec-httproute): 
+    HttpRoute
+  [Priority](#cfn-appmesh-route-routespec-priority): Integer
+  [TcpRoute](#cfn-appmesh-route-routespec-tcproute): 
+    TcpRoute
+Properties
+GrpcRoute 
+An object that represents the specification of a gRPC route.
+Required: No
+Type: GrpcRoute
+Update requires: No interruption
+Http2Route 
+An object that represents the specification of an HTTP/2 route.
+Required: No
+Type: HttpRoute
+Update requires: No interruption
+HttpRoute 
+An object that represents the specification of an HTTP route.
+Required: No
+Type: HttpRoute
+Update requires: No interruption
+Priority 
+The priority for the route. Routes are matched based on the specified value, where 0 is the highest priority.
+Required: No
+Type: Integer
+Update requires: No interruption
+TcpRoute 
+An object that represents the specification of a TCP route.
+Required: No
+Type: TcpRoute
+Update requires: No interruption

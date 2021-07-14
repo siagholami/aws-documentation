@@ -1,0 +1,26 @@
+FailedCreateSimulationJobRequest
+Information about a failed create simulation job request.
+Contents
+failedAt 
+The time, in milliseconds since the epoch, when the simulation job batch failed.
+Type: Timestamp
+Required: No
+failureCode 
+The failure code.
+Type: String
+Valid Values:InternalServiceError | RobotApplicationCrash | SimulationApplicationCrash | BadPermissionsRobotApplication | BadPermissionsSimulationApplication | BadPermissionsS3Object | BadPermissionsS3Output | BadPermissionsCloudwatchLogs | SubnetIpLimitExceeded | ENILimitExceeded | BadPermissionsUserCredentials | InvalidBundleRobotApplication | InvalidBundleSimulationApplication | InvalidS3Resource | LimitExceeded | MismatchedEtag | RobotApplicationVersionMismatchedEtag | SimulationApplicationVersionMismatchedEtag | ResourceNotFound | RequestThrottled | BatchTimedOut | BatchCanceled | InvalidInput | WrongRegionS3Bucket | WrongRegionS3Output | WrongRegionRobotApplication | WrongRegionSimulationApplication 
+Required: No
+failureReason 
+The failure reason of the simulation job request.
+Type: String
+Required: No
+request 
+The simulation job request.
+Type: SimulationJobRequest object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

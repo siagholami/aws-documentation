@@ -1,0 +1,30 @@
+AWS::IoT::TopicRule S3Action
+Describes an action to write data to an Amazon S3 bucket.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BucketName](#cfn-iot-topicrule-s3action-bucketname)" : String,
+  "[Key](#cfn-iot-topicrule-s3action-key)" : String,
+  "[RoleArn](#cfn-iot-topicrule-s3action-rolearn)" : String
+}
+YAML
+[BucketName](#cfn-iot-topicrule-s3action-bucketname): String
+  [Key](#cfn-iot-topicrule-s3action-key): String
+  [RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
+Properties
+BucketName 
+The Amazon S3 bucket.
+Required: Yes
+Type: String
+Update requires: No interruption
+Key 
+The object key.
+Required: Yes
+Type: String
+Update requires: No interruption
+RoleArn 
+The ARN of the IAM role that grants access.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,27 @@
+IoTRule
+The object describing an IoTRule event source type.
+Creates an AWS::IoT::TopicRule resource to declare an AWS IoT rule. For more information see AWS CloudFormation documentation
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[AwsIotSqlVersion](#sam-function-iotrule-awsiotsqlversion): String
+  [Sql](#sam-function-iotrule-sql): String
+Properties
+AwsIotSqlVersion 
+The version of the SQL rules engine to use when evaluating the rule.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [AwsIotSqlVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion) property of an AWS::IoT::TopicRule TopicRulePayload resource.
+Sql 
+The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference in the AWS IoT Developer Guide.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is passed directly to the [Sql](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-sql) property of an AWS::IoT::TopicRule TopicRulePayload resource.
+Examples
+IOT Rule
+IOT Rule Example
+YAML
+IoTRule:
+  Type: IoTRule
+  Properties:
+    Sql: SELECT * FROM 'topic/test'

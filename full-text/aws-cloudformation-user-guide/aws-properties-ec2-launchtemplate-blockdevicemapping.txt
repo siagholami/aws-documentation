@@ -1,0 +1,42 @@
+AWS::EC2::LaunchTemplate BlockDeviceMapping
+Information about a block device mapping for an Amazon EC2 launch template.
+BlockDeviceMapping is a property of  AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename)" : String,
+  "[Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs)" : Ebs,
+  "[NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)" : String,
+  "[VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)" : String
+}
+YAML
+[DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename): String
+  [Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs): 
+    Ebs
+  [NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice): String
+  [VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname): String
+Properties
+DeviceName 
+The device name (for example, /dev/sdh or xvdh).
+Required: No
+Type: String
+Update requires: No interruption
+Ebs 
+Parameters used to automatically set up EBS volumes when the instance is launched.
+Required: No
+Type: Ebs
+Update requires: No interruption
+NoDevice 
+Suppresses the specified device included in the block device mapping of the AMI.
+Required: No
+Type: String
+Update requires: No interruption
+VirtualName 
+The virtual device name (ephemeralN). Instance store volumes are numbered starting from 0. An instance type with 2 available instance store volumes can specify mappings for ephemeral0 and ephemeral1. The number of available instance store volumes depends on the instance type. After you connect to the instance, you must mount the volume.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ LaunchTemplateBlockDeviceMappingRequest in the Amazon Elastic Compute Cloud API Reference 

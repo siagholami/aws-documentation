@@ -1,0 +1,16 @@
+AWS Service Catalog resource type reference
+Resource types
+ AWS::ServiceCatalog::AcceptedPortfolioShare
+ AWS::ServiceCatalog::CloudFormationProduct
+ AWS::ServiceCatalog::CloudFormationProvisionedProduct
+ AWS::ServiceCatalog::LaunchNotificationConstraint
+ AWS::ServiceCatalog::LaunchRoleConstraint
+ AWS::ServiceCatalog::LaunchTemplateConstraint
+ AWS::ServiceCatalog::Portfolio
+ AWS::ServiceCatalog::PortfolioPrincipalAssociation
+ AWS::ServiceCatalog::PortfolioProductAssociation
+ AWS::ServiceCatalog::PortfolioShare
+ AWS::ServiceCatalog::ResourceUpdateConstraint
+ AWS::ServiceCatalog::StackSetConstraint
+ AWS::ServiceCatalog::TagOption
+ AWS::ServiceCatalog::TagOptionAssociation

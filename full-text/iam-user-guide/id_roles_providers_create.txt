@@ -1,0 +1,5 @@
+Creating IAM identity providers
+When you want to configure federation with an external identity provider (IdP) service, you create an IAM identity provider to inform AWS about the IdP and its configuration. This establishes "trust" between your AWS account and the IdP. The following topics include details about how to create an IAM identity provider for each of the IdP types.
+Topics
+ Creating OpenID Connect (OIDC) identity providers
+ Creating IAM SAML identity providers

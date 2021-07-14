@@ -1,0 +1,10 @@
+AWS Serverless Application Model (AWS SAM) Specification
+You use the AWS SAM specification to define your serverless application. This section provides details for the AWS SAM template sections, resources types, resource properties, data types, resource attributes, intrinsic functions, and API Gateway extensions that you can use in AWS SAM templates.
+AWS SAM templates are an extension of AWS CloudFormation templates, with some additional components that make them easier to work with. For the full reference for AWS CloudFormation templates, see AWS CloudFormation Template Reference in the AWS CloudFormation User Guide.
+Topics
+ AWS SAM Template Anatomy
+ AWS SAM Resource and Property Reference
+ Resource Attributes
+ Intrinsic Functions
+ Generated AWS CloudFormation Resources
+ API Gateway Extensions

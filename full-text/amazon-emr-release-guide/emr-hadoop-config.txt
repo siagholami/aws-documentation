@@ -1,0 +1,6 @@
+Configure Hadoop
+The following sections give default configuration settings for Hadoop daemons, tasks, and HDFS.
+Topics
+ Hadoop Daemon Configuration Settings
+ Task Configuration
+ HDFS Configuration

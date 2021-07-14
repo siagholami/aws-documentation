@@ -1,0 +1,9 @@
+Setting Up Amazon Rekognition Custom Labels
+In this section, you sign up for an AWS account and then create an IAM user, a security group, and optionally set up access to external Amazon S3 buckets used by the Amazon Rekognition Custom Labels console and SDK. 
+For information about the AWS Regions that support Amazon Rekognition Custom Labels, see Amazon Rekognition Endpoints and Quotas.
+Topics
+ Step 1: Create an AWS Account
+ Step 2: Create an IAM Administrator User and Group
+ Step 2: Set Up the AWS CLI and AWS SDKs
+ Step 4: Set Up Amazon S3 Bucket Permissions for SDK Use
+ Step 5: Set Up Amazon Rekognition Custom Labels Console Permissions

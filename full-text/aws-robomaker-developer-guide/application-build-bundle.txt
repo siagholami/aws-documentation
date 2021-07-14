@@ -1,0 +1,19 @@
+Building and Bundling Robotic Applications with Colcon
+AWS RoboMaker works with robotics applications built and bundled with colcon. colcon is a command line tool built by the Open Source Robotics Foundation (OSRF). It automates the building and bundling of ROS and ROS2 applications. It should be a drop-in replacement for catkin_make. 
+For more information about colcon, see Colcon. If you experience issues while building with colcon, see colcon-ros. For problems bundling with colcon, see colcon-bundle. 
+Topics
+ Installing Colcon
+ Using Colcon to Build and Bundle
+Installing Colcon
+Use the following commands to install colcon:
+apt-get update
+apt-get install python3-pip python3-apt
+pip3 install -U setuptools
+pip3 install -U colcon-common-extensions colcon-ros-bundle
+If you already have colcon installed, you can install bundling support with the following command:
+pip3 install -U colcon-ros-bundle
+Using Colcon to Build and Bundle
+Use the following commands to build and then bundle your robotics application:
+cd robotic-application-workspace
+colcon build
+colcon bundle

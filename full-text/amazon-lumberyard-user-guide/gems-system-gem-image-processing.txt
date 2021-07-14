@@ -1,0 +1,4 @@
+Image Processing
+The Image Processing gem enables the Texture Settings Editor, which you can use to customize and process image files and textures.
+
+For more information, see Texture Settings Editor.

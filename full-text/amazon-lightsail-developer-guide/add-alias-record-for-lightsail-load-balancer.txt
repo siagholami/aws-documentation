@@ -1,0 +1,70 @@
+Point your domain to your Lightsail load balancer
+Last updated: May 28, 2020 
+After you verify that you control the domain where you want to have encrypted (HTTPS) traffic, you need to add an address (A) record to your domain's DNS hosting provider that points your domain to your Lightsail load balancer. In this guide, we show you how to add the A record to a Lightsail DNS zone, and a Amazon Route 53 hosted zone.
+Add an A record in Lightsail
+
+
+On the Lightsail home page, choose Networking.
+
+
+Choose the DNS zone you want to manage.
+
+
+If you haven't created any records yet, choose Add record.
+
+
+If you already have CNAME or other DNS records, choose Add another.
+
+
+For Type, choose the default record type (A).
+
+
+For Sub-domain, type www in front of example.com or don't use a prefix if using an apex domain.
+
+
+For destination IP, choose your load balancer from the list of available load balancers.
+
+
+
+Choose Save.
+
+
+Add an A record in Route 53
+
+
+Open the Amazon Route 53 console.
+
+
+In the navigation pane, choose Hosted Zones.
+
+
+Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your load balancer.
+
+
+Choose Create Record Set.
+
+
+For Name, type www in front of example.com, or don't use a prefix if using an apex domain.
+
+
+Accept the default record (A - IPv4 address).
+
+
+For Alias, choose Yes.
+
+
+Go to the Lightsail console and copy the DNS name from your load balancer management page.
+
+
+
+Go back to the Amazon Route 53 console and paste the DNS name into the Alias Target field.
+
+
+Accept the default value of Simple for Routing Policy, and leave No selected for Evaluate Target Health.
+
+
+Lightsail already performs health checks on your load balancer. Learn more about health checking
+Your record set should look something like this.
+
+
+Choose Create.

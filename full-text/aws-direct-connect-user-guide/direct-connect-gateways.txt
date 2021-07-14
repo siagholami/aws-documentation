@@ -1,0 +1,7 @@
+Working with Direct Connect gateways
+You can work with AWS Direct Connect gateways using the Amazon VPC console or the AWS CLI.
+Topics
+ Direct Connect gateways
+ Virtual private gateway associations
+ Transit gateway associations
+ Allowed prefixes interactions

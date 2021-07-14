@@ -1,0 +1,2 @@
+Input Settings—Network Input Settings
+Complete this section only if the input is HLS. 

@@ -1,0 +1,50 @@
+Canceling an AWS Elemental MediaConvert job
+The following procedure explains how to cancel a job using the AWS Elemental MediaConvert console. 
+To cancel a job
+
+
+Open the MediaConvert console at https://console.aws.amazon.com/mediaconvert.
+
+
+On the navigation bar at the top of the page, choose the Region where you created the job that you want to cancel.
+
+
+
+(Optional but recommended) If your job has not yet started, pause the queue that contains the job so that the service doesn't start to process it.
+
+
+Choose the three-bar icon on the left to access the left navigation pane.
+
+
+Choose Queues.
+
+
+Choose the name of the queue that you want to pause.
+
+
+Choose Edit queue.
+
+
+Under the Status dropdown list, choose Pause.
+
+
+In the left navigation pane of the console, choose Jobs.
+
+
+From the Jobs page, choose the job that you want to cancel by choosing the option () next to it.
+
+
+Choose the Cancel job button.
+
+
+If you paused the queue, make it active again so that it resumes processing jobs:
+
+
+In the left navigation pane, choose Queues.
+
+
+Choose the name of the queue that you paused.
+
+
+Under the Status dropdown list, choose Active.
+

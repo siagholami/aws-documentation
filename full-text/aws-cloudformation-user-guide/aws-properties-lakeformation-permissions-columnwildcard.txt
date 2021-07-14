@@ -1,0 +1,17 @@
+AWS::LakeFormation::Permissions ColumnWildcard
+A wildcard object, consisting of an optional list of excluded column names or indexes.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ExcludedColumnNames](#cfn-lakeformation-permissions-columnwildcard-excludedcolumnnames)" : [ String, ... ]
+}
+YAML
+[ExcludedColumnNames](#cfn-lakeformation-permissions-columnwildcard-excludedcolumnnames): 
+    - String
+Properties
+ExcludedColumnNames 
+Excludes column names. Any column with this name will be excluded.
+Required: No
+Type: List of String
+Update requires: No interruption

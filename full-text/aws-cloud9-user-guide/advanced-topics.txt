@@ -1,0 +1,14 @@
+Advanced Topics for AWS Cloud9
+These topics contain the following types of information:
+ Information that is used for advanced configuration and decision making.
+ Information that is related to a particular task and can provide a better understand but is not critical to accomplishing that task.
+Topics
+ EC2 Environments versus SSH Environments
+ Amazon VPC settings
+ SSH Environment Host Requirements
+ AWS Cloud9 Installer
+ Inbound SSH IP address ranges
+ AMI Contents
+ Using Service-Linked Roles
+ Logging API Calls with CloudTrail
+ Tags

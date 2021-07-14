@@ -1,0 +1,223 @@
+AWS::SNS::Subscription
+The AWS::SNS::Subscription resource subscribes an endpoint to an Amazon Simple Notification Service (Amazon SNS) topic. For a subscription to be created, the owner of the endpoint must confirm the subscription.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::SNS::Subscription",
+  "Properties" : {
+      "[DeliveryPolicy](#cfn-sns-subscription-deliverypolicy)" : Json,
+      "[Endpoint](#cfn-sns-endpoint)" : String,
+      "[FilterPolicy](#cfn-sns-subscription-filterpolicy)" : Json,
+      "[Protocol](#cfn-sns-protocol)" : String,
+      "[RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery)" : Boolean,
+      "[RedrivePolicy](#cfn-sns-subscription-redrivepolicy)" : Json,
+      "[Region](#cfn-sns-subscription-region)" : String,
+      "[TopicArn](#topicarn)" : String
+    }
+}
+YAML
+Type: AWS::SNS::Subscription
+Properties: 
+  [DeliveryPolicy](#cfn-sns-subscription-deliverypolicy): Json
+  [Endpoint](#cfn-sns-endpoint): String
+  [FilterPolicy](#cfn-sns-subscription-filterpolicy): Json
+  [Protocol](#cfn-sns-protocol): String
+  [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery): Boolean
+  [RedrivePolicy](#cfn-sns-subscription-redrivepolicy): Json
+  [Region](#cfn-sns-subscription-region): String
+  [TopicArn](#topicarn): String
+Properties
+DeliveryPolicy 
+The delivery policy JSON assigned to the subscription. Enables the subscriber to define the message delivery retry strategy in the case of an HTTP/S endpoint subscribed to the topic. For more information, see [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) in the Amazon Simple Notification Service API Reference and Message Delivery Retries in the Amazon SNS Developer Guide.
+Required: No
+Type: Json
+Update requires: No interruption
+Endpoint 
+The subscription's endpoint. The endpoint value depends on the protocol that you specify. For more information, see the Endpoint parameter of the [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) action in the Amazon Simple Notification Service API Reference.
+Required: No
+Type: String
+Update requires: Replacement
+FilterPolicy 
+The filter policy JSON assigned to the subscription. Enables the subscriber to filter out unwanted messages. For more information, see [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) in the Amazon Simple Notification Service API Reference and Message Filtering in the Amazon SNS Developer Guide.
+Required: No
+Type: Json
+Update requires: No interruption
+Protocol 
+The subscription's protocol. For more information, see the Protocol parameter of the [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) action in the Amazon Simple Notification Service API Reference.
+Required: Yes
+Type: String
+Update requires: Replacement
+RawMessageDelivery 
+When set to true, enables raw message delivery. Raw messages don't contain any JSON formatting and can be sent to Amazon SQS and HTTP/S endpoints. For more information, see [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) in the Amazon Simple Notification Service API Reference.
+Required: No
+Type: Boolean
+Update requires: No interruption
+RedrivePolicy 
+When specified, sends undeliverable messages to the specified Amazon SQS dead-letter queue. Messages that can't be delivered due to client errors (for example, when the subscribed endpoint is unreachable) or server errors (for example, when the service that powers the subscribed endpoint becomes unavailable) are held in the dead-letter queue for further analysis or reprocessing.
+Required: No
+Type: Json
+Update requires: No interruption
+Region 
+For cross-region subscriptions, the region in which the topic resides.
+If no region is specified, CloudFormation uses the region of the caller as the default.
+If you perform an update operation that only updates the Region property of a AWS::SNS::Subscription resource, that operation will fail unless you are either:
+ Updating the Region from NULL to the caller region.
+ Updating the Region from the caller region to NULL.
+Required: No
+Type: String
+Update requires: No interruption
+TopicArn 
+The ARN of the topic to subscribe to.
+Required: Yes
+Type: String
+Update requires: Replacement
+Examples
+Create a subscription with mandatory attributes
+The following example creates a subscription with only an endpoint, protocol, and topic ARN.
+JSON
+"MySubscription" : {
+  "Type" : "AWS::SNS::Subscription",
+  "Properties" : {
+    "Endpoint" : "test@example.com",
+    "Protocol" : "email",
+    "TopicArn" : { "Ref" : "MySNSTopic" }
+  }
+}
+YAML
+MySubscription:
+  Type: AWS::SNS::Subscription
+  Properties:
+    Endpoint: test@example.com
+    Protocol: email
+    TopicArn: !Ref 'MySNSTopic'
+Create a subscription with optional attributes
+The following example creates a subscription with a filter policy, delivery policy, and raw message delivery enabled.
+Note
+You can set subscription attributes only on standalone Amazon SNS subscriptions (not on subscriptions nested in topics).
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  CarSalesTopic:
+    Type: 'AWS::SNS::Topic'
+  ERPSubscription:
+    Type: 'AWS::SNS::Subscription'
+    Properties:
+      TopicArn: !Ref CarSalesTopic
+      Endpoint: !GetAtt 
+        - ERPIntegrationQueue
+        - Arn
+      Protocol: sqs
+      RawMessageDelivery: 'true'
+  CRMSubscription:
+    Type: 'AWS::SNS::Subscription'
+    Properties:
+      TopicArn: !Ref CarSalesTopic
+      Endpoint: !GetAtt 
+        - CRMIntegrationQueue
+        - Arn
+      Protocol: sqs
+      RawMessageDelivery: 'true'
+      FilterPolicy:
+        buyer-class:
+          - vip
+  SCMSubscription:
+    Type: 'AWS::SNS::Subscription'
+    Properties:
+      TopicArn: !Ref CarSalesTopic
+      Endpoint: !Ref myHttpEndpoint
+      Protocol: https
+      DeliveryPolicy:
+        healthyRetryPolicy:
+          numRetries: 20
+          minDelayTarget: 10
+          maxDelayTarget: 30
+          numMinDelayRetries: 3
+          numMaxDelayRetries: 17
+          numNoDelayRetries: 0
+          backoffFunction: exponential
+  ERPIntegrationQueue:
+    Type: 'AWS::SQS::Queue'
+    Properties: {}
+  CRMIntegrationQueue:
+    Type: 'AWS::SQS::Queue'
+    Properties: {}
+Parameters:
+  myHttpEndpoint:
+    Type: String
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "CarSalesTopic": {
+            "Type": "AWS::SNS::Topic"
+        },
+        "ERPSubscription": {
+            "Type": "AWS::SNS::Subscription",
+            "Properties": {
+                "TopicArn": {
+                    "Ref": "CarSalesTopic"
+                },
+                "Endpoint": {
+                    "Fn::GetAtt": ["ERPIntegrationQueue", "Arn"]
+                },
+                "Protocol": "sqs",
+                "RawMessageDelivery": "true"
+            }
+        },
+        "CRMSubscription": {
+            "Type": "AWS::SNS::Subscription",
+            "Properties": {
+                "TopicArn": {
+                    "Ref": "CarSalesTopic"
+                },
+                "Endpoint": {
+                    "Fn::GetAtt": ["CRMIntegrationQueue", "Arn"]
+                },
+                "Protocol": "sqs",
+                "RawMessageDelivery": "true",
+                "FilterPolicy": {
+                    "buyer-class": [
+                        "vip"
+                    ]
+                }
+            }
+        },
+        "SCMSubscription": {
+            "Type": "AWS::SNS::Subscription",
+            "Properties": {
+                "TopicArn": {
+                    "Ref": "CarSalesTopic"
+                },
+                "Endpoint": {
+                    "Ref": "myHttpEndpoint"
+                },
+                "Protocol": "https",
+                "DeliveryPolicy": {
+                    "healthyRetryPolicy": {
+                        "numRetries": 20,
+                        "minDelayTarget": 10,
+                        "maxDelayTarget": 30,
+                        "numMinDelayRetries": 3,
+                        "numMaxDelayRetries": 17,
+                        "numNoDelayRetries": 0,
+                        "backoffFunction": "exponential"
+                    }
+                }
+            }
+        },
+        "ERPIntegrationQueue": {
+            "Type": "AWS::SQS::Queue",
+            "Properties": {}
+        },
+        "CRMIntegrationQueue": {
+            "Type": "AWS::SQS::Queue",
+            "Properties": {}
+        }
+    },
+    "Parameters": {
+        "myHttpEndpoint": {
+            "Type": "String"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+
+
+Document
+A document in an index.
+Contents
+AccessControlList 
+Information to use for user context filtering.
+Type: Array of Principal objects
+Required: No
+Attributes 
+Custom attributes to apply to the document. Use the custom attributes to provide additional information for searching, to provide facets for refining searches, and to provide additional information in the query response.
+Type: Array of DocumentAttribute objects
+Required: No
+Blob 
+The contents of the document. 
+Documents passed to the Blob parameter must be base64 encoded. Your code might not need to encode the document file bytes if you're using an AWS SDK to call Amazon Kendra operations. If you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
+Type: Base64-encoded binary data object
+Required: No
+ContentType 
+The file type of the document in the Blob field.
+Type: String
+Valid Values:PDF | HTML | MS_WORD | PLAIN_TEXT | PPT 
+Required: No
+Id 
+A unique identifier of the document in the index.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 2048.
+Required: Yes
+S3Path 
+Information required to find a specific file in an Amazon S3 bucket.
+Type: S3Path object
+Required: No
+Title 
+The title of the document.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

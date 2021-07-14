@@ -1,0 +1,127 @@
+AWS::NetworkManager::Link
+Specifies a link for a site.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::NetworkManager::Link",
+  "Properties" : {
+      "[Bandwidth](#cfn-networkmanager-link-bandwidth)" : Bandwidth,
+      "[Description](#cfn-networkmanager-link-description)" : String,
+      "[GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid)" : String,
+      "[Provider](#cfn-networkmanager-link-provider)" : String,
+      "[SiteId](#cfn-networkmanager-link-siteid)" : String,
+      "[Tags](#cfn-networkmanager-link-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-networkmanager-link-type)" : String
+    }
+}
+YAML
+Type: AWS::NetworkManager::Link
+Properties: 
+  [Bandwidth](#cfn-networkmanager-link-bandwidth): 
+    Bandwidth
+  [Description](#cfn-networkmanager-link-description): String
+  [GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid): String
+  [Provider](#cfn-networkmanager-link-provider): String
+  [SiteId](#cfn-networkmanager-link-siteid): String
+  [Tags](#cfn-networkmanager-link-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Type](#cfn-networkmanager-link-type): String
+Properties
+Bandwidth 
+The bandwidth for the link.
+Required: Yes
+Type: Bandwidth
+Update requires: No interruption
+Description 
+A description of the link.
+Length Constraints: Maximum length of 256 characters.
+Required: No
+Type: String
+Update requires: No interruption
+GlobalNetworkId 
+The ID of the global network.
+Required: Yes
+Type: String
+Update requires: Replacement
+Provider 
+The provider of the link.
+Constraints: Cannot include the following characters: | \ ^
+Length Constraints: Maximum length of 128 characters.
+Required: No
+Type: String
+Update requires: No interruption
+SiteId 
+The ID of the site.
+Required: Yes
+Type: String
+Update requires: Replacement
+Tags 
+The tags for the link.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Type 
+The type of the link.
+Constraints: Cannot include the following characters: | \ ^
+Length Constraints: Maximum length of 128 characters.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the IDs of the global network and link. For example: global-network-01231231231231231|link-11112222aaaabbbb1.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+LinkArn 
+The ARN of the link. For example, arn:aws:networkmanager::123456789012:link/global-network-01231231231231231/link-11112222aaaabbbb1.
+LinkId 
+The ID of the link. For example, link-11112222aaaabbbb1.
+Examples
+Link
+The following example creates a link in a global network.
+JSON
+{
+    "Type": "AWS::NetworkManager::Link",
+    "Properties": {
+        "Description": "Broadband link",
+        "GlobalNetworkId": {
+            "Ref": "GlobalNetwork"
+        },
+        "SiteId": {
+            "Fn::GetAtt": [
+                "Site",
+                "SiteId"
+            ]
+        },
+        "Bandwidth": {
+            "DownloadSpeed": 20,
+            "UploadSpeed": 20
+        },
+        "Provider": "AnyCompany",
+        "Type": "Broadband",
+        "Tags": [
+            {
+                "Key": "Name",
+                "Value": "broadband-link-1"
+            }
+        ]
+    }
+}
+YAML
+Type: AWS::NetworkManager::Link
+Properties:
+  Description: "Broadband link"
+  GlobalNetworkId: !Ref GlobalNetwork
+  SiteId: !GetAtt Site.SiteId
+  Bandwidth:
+    DownloadSpeed: 20
+    UploadSpeed: 20
+  Provider: "AnyCompany"
+  Type: "Broadband"
+  Tags:
+    - Key: Name
+      Value: broadband-link-1

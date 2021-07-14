@@ -1,0 +1,10 @@
+Configuring a bucket as a static website using the AWS Management Console
+Using the AWS Management Console, you can configure your Amazon S3 bucket as a static website without writing any code. Depending on your website requirements, you can also use some optional configurations, including redirects, web traffic logging, and custom error documents. 
+Required configurations:
+ Enabling website hosting
+ Configuring an index document
+ Setting permissions for website access
+Optional configurations:
+ (Optional) configuring a custom error document
+ (Optional) configuring a webpage redirect
+ (Optional) Logging web traffic

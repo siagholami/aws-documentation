@@ -1,0 +1,15 @@
+DisconnectParticipant
+Disconnects the participant from the contact and stops this flow from running. 
+Parameter object
+```
+{
+}
+```
+Results and conditions
+None. Conditions are not supported.
+Errors
+None.
+Restrictions
+None. This action can be used everywhere. If there is no participant on the contact, this functions as an EndFlowExecution action, and halts the flow from running. 
+Corresponding block in the UI
+Disconnect / hang up

@@ -1,0 +1,51 @@
+Step 1: Create user groups
+You can create a user group for each AWS Elemental MediaStore policy and assign users to a group rather than attaching individual policies to each user. Using the following procedure, create two user groups: one for the AWSElementalMediaStoreFullAccess policy and one for the AWSElementalMediaStoreReadOnly policy.
+Note
+AWSElementalMediaStoreFullAccess and AWSElementalMediaStoreReadOnly are AWS managed policies.
+To create user groups
+
+
+In the navigation pane of the IAM console, choose Groups, and then choose Create New Group. 
+
+
+On the Groups page, choose Create New Group, and then create an administrator group using the AWSElementalMediaStoreFullAccess policy.
+
+
+On the Set Group Name page, enter a name for the group such as MediaStoreAdmins.
+
+
+Choose Next Step.
+
+
+On the Attach Policy page, for Filter, choose AWS Managed, and then enter mediastore.
+
+
+In the policy list, choose the AWSElementalMediaStoreFullAccess policy.
+
+
+Choose Next Step.
+
+
+On the Review page, choose Create Group.
+
+
+On the Groups page, choose Create New Group, and then create a read-only group using the AWSElementalMediaStoreReadOnly policy.
+
+
+On the Set Group Name page, enter a name for the group such as MediaStoreReaders.
+
+
+Choose Next Step.
+
+
+On the Attach Policy page, for Filter, choose AWS Managed, and then enter mediastore.
+
+
+In the policy list, choose the AWSElementalMediaStoreReadOnly policy.
+
+
+Choose Next Step.
+
+
+On the Review page, choose Create Group.
+

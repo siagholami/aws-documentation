@@ -1,0 +1,21 @@
+Step 5: Deploy Your Bot as a Web Application
+To deploy your bot as a web application
+
+
+Download the repository at https://github.com/awsdocs/amazon-lex-developer-guide/blob/master/example_apps/agent_assistance_bot/  to your computer.
+
+
+Navigate to the downloaded repository and open the index.html file in an editor,
+
+
+Make the following changes.
+
+
+In the AWS.config.credentials section, enter your Region name and your identity pool ID.
+
+
+In theAmazon Lex runtime parameters section, enter the bot name.
+
+
+Save the file.
+

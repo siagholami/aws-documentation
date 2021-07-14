@@ -1,0 +1,6 @@
+Setting Up
+Before using Application Auto Scaling to configure automatic scaling, create an AWS account, configure access permissions, and set up the AWS Command Line Interface (AWS CLI).
+Topics
+ Sign Up for AWS
+ Set Up the AWS CLI
+ Getting Started Using the AWS CLI

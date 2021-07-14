@@ -1,0 +1,18 @@
+ResourceEndpointListItem
+An object that describes the endpoint of the signaling channel returned by the GetSignalingChannelEndpoint API.
+Contents
+Protocol 
+The protocol of the signaling channel returned by the GetSignalingChannelEndpoint API.
+Type: String
+Valid Values:WSS | HTTPS 
+Required: No
+ResourceEndpoint 
+The endpoint of the signaling channel returned by the GetSignalingChannelEndpoint API.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

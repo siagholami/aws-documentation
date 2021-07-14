@@ -1,0 +1,7 @@
+SQL Reference for Amazon Athena
+Amazon Athena supports a subset of Data Definition Language (DDL) and Data Manipulation Language (DML) statements, functions, operators, and data types. With some exceptions, Athena DDL is based on HiveQL DDL and Athena DML is based on Presto 0.172.
+Topics
+ Data Types in Athena
+ DML Queries, Functions, and Operators
+ DDL Statements
+ Considerations and Limitations

@@ -1,0 +1,8 @@
+ServiceEndpoint
+Description
+The endpoint to which service requests can be submitted.
+Contents
+Endpoint 
+The endpoint to which service requests can be submitted. For example, search-imdb-movies-oopcnjfn6ugofer3zx5iadxxca.eu-west-1.cloudsearch.amazonaws.com or doc-imdb-movies-oopcnjfn6ugofer3zx5iadxxca.eu-west-1.cloudsearch.amazonaws.com.
+Type: String
+ Required: No 

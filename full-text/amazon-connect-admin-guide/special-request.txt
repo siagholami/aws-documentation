@@ -1,0 +1,42 @@
+Request international numbers, special numbers, or termination points
+Important
+Country regulations often require a local office address and specific identification documents to purchase and own a phone number, and may take additional processing time. See Region requirements for phone numbers.
+It can take 2-6 weeks for us to fulfill your request.
+To request international phone numbers, special numbers, or termination points, create a support case. 
+
+
+Go to Create case.
+
+
+Choose Service limit increase.
+
+
+In Limit type select Amazon Connect.
+
+
+In Use case description, enter the number you want to request. 
+
+
+In Contact options, choose whether we should contact you by email or phone. 
+
+
+Choose Submit. 
+
+
+We'll contact you to help with your request. 
+Requirements for Custom Termination Points
+In the Asia Pacific (Sydney) Region, you can request Custom Termination Points.
+The term "Custom Termination Points" means custom Tier 1 telephony destinations for customer calls to Amazon Connect configured as local phone numbers. In using Custom Termination Points, you understand and agree that you: 
+
+
+Have a current toll-free national service that allows you to set Custom Termination Points as a destination for customer phone calls.
+
+
+Cannot port or move Custom Termination Points to a different telephony provider once assigned by Amazon Connect.
+
+
+Will be billed at the standard daily rate for claimed Australian phone numbers and DID inbound usage fees.
+
+
+You are responsible for adding the Custom Termination Points in your existing toll-free national service.
+

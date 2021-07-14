@@ -1,0 +1,12 @@
+Using data repositories with Amazon FSx for Lustre
+Amazon FSx for Lustre provides high-performance file systems optimized for fast workload processing. It can support workloads such as machine learning, high performance computing (HPC), video processing, financial modeling, and electronic design automation (EDA). These workloads commonly require data to be presented using a scalable, high-speed file system interface for data access, and typically have datasets stored on long-term durable data repositories like Amazon S3, or on-premises storage. Amazon FSx for Lustre is natively integrated with data repositories such as Amazon S3, making it easy to process data sets with the Lustre file system.
+Topics
+ Overview of data repositories
+ Linking your file system to an S3 bucket
+ Importing files from your S3 bucket
+ Data repository tasks
+ Exporting changes to the data repository
+ Releasing data from your file system
+ Using Amazon FSx with Your On-Premises Data Repository
+Note
+File system backups are not supported on file systems that are linked to a data repository. For more information, see Working with Backups.

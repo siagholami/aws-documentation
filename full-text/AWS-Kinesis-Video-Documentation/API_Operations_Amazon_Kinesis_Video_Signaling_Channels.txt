@@ -1,0 +1,4 @@
+Amazon Kinesis Video Signaling Channels
+The following actions are supported by Amazon Kinesis Video Signaling Channels:
+  GetIceServerConfig 
+  SendAlexaOfferToMaster 

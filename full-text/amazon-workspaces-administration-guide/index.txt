@@ -1,0 +1,83 @@
+Amazon WorkSpaces Administration Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon WorkSpaces?
+Get Started with Amazon WorkSpaces Quick Setup
+Networking and Access for Amazon WorkSpaces
+Configure a VPC for Amazon WorkSpaces
+Availability Zones for Amazon WorkSpaces
+IP Address and Port Requirements for Amazon WorkSpaces
+Amazon WorkSpaces Client Network Requirements
+Restrict WorkSpaces Access to Trusted Devices
+Provide Internet Access from Your WorkSpace
+Security Groups for Your WorkSpaces
+IP Access Control Groups for Your WorkSpaces
+Set Up PCoIP Zero Client for WorkSpaces
+Set Up Android for Chromebooks
+Enable and Configure Amazon WorkSpaces Web Access
+Set Up Amazon WorkSpaces for FedRAMP Authorization or DoD SRG Compliance
+Enable SSH Connections for Your Linux WorkSpaces
+Required Configuration and Service Components for WorkSpaces
+Manage Directories for Amazon WorkSpaces
+Register a Directory with Amazon WorkSpaces
+Update Directory Details for Your WorkSpaces
+Update DNS Servers for Amazon WorkSpaces
+Delete the Directory for Your WorkSpaces
+Enable Amazon WorkDocs for Microsoft Active Directory
+Set Up Active Directory Administration Tools for Amazon WorkSpaces
+Manage Your Windows WorkSpaces Using Group Policy
+Manage Your Amazon Linux WorkSpaces
+Launch a Virtual Desktop Using Amazon WorkSpaces
+Launch a WorkSpace Using AWS Managed Microsoft AD
+Launch a WorkSpace Using Simple AD
+Launch a WorkSpace Using AD Connector
+Launch a WorkSpace Using a Trusted Domain
+Administer WorkSpace Users
+Manage WorkSpaces Users
+Create Multiple WorkSpaces for a User
+Customize How Users Log In to Their WorkSpaces
+Enable Self-Service WorkSpace Management Capabilities for Your Users
+Administer Your WorkSpaces
+Manage the WorkSpace Running Mode
+Modify a WorkSpace
+Tag WorkSpaces Resources
+WorkSpace Maintenance
+Encrypted WorkSpaces
+Restart a WorkSpace
+Rebuild a WorkSpace
+Restore a WorkSpace
+Upgrade Windows 10 BYOL WorkSpaces
+Migrate a WorkSpace
+Delete a WorkSpace
+WorkSpace Bundles and Images
+Create a Custom WorkSpaces Image and Bundle
+Update a Custom WorkSpaces Bundle
+Copy a Custom WorkSpaces Image
+Delete a Custom WorkSpaces Bundle or Image
+Bring Your Own Windows Desktop Licenses
+Monitor Your WorkSpaces
+Monitor Your WorkSpaces Using CloudWatch Metrics
+Monitor Your WorkSpaces Using CloudWatch Events
+Business Continuity for Amazon WorkSpaces
+Cross-Region Redirection for Amazon WorkSpaces
+Security in Amazon WorkSpaces
+Data Protection in Amazon WorkSpaces
+Identity and Access Management for Amazon WorkSpaces
+Compliance Validation for Amazon WorkSpaces
+Resilience in Amazon WorkSpaces
+Infrastructure Security in Amazon WorkSpaces
+Update Management in Amazon WorkSpaces
+Troubleshooting Amazon WorkSpaces Issues
+Amazon WorkSpaces Quotas
+Document History

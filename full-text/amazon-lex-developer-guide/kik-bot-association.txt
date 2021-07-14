@@ -1,0 +1,21 @@
+Integrating an Amazon Lex Bot with Kik
+This exercise provides instructions for integrating an Amazon Lex bot with the Kik messaging application. You perform the following steps:
+
+
+Create an Amazon Lex bot.
+
+
+Create a Kik bot using the Kik app and website. 
+
+
+Integrate the your Amazon Lex bot with the Kik bot using the Amazon Lex console.
+
+
+Engage in a conversation with your Amazon Lex bot using Kik to test the association between your Amazon Lex bot and Kik.
+
+
+Topics
+ Step 1: Create an Amazon Lex Bot
+ Step 2: Create a Kik Bot
+ Step 3: Integrate the Kik Bot with the Amazon Lex Bot
+ Step 4: Test the Integration

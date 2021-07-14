@@ -1,0 +1,11 @@
+AWS Glue Scala GlueArgParser APIs
+Package: com.amazonaws.services.glue.util
+GlueArgParser Object
+GlueArgParser
+object GlueArgParser
+This is strictly consistent with the Python version of utils.getResolvedOptions in the AWSGlueDataplanePython package.
+GlueArgParser def Methods
+def getResolvedOptions( args : Array[String],
+                        options : Array[String]
+                      ) : Map[String, String]
+def initParser( userOptionsSet : mutable.Set[String] ) : ArgumentParser

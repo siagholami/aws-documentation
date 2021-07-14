@@ -1,0 +1,33 @@
+AWS::IoT::TopicRule StepFunctionsAction
+Starts execution of a Step Functions state machine.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ExecutionNamePrefix](#cfn-iot-topicrule-stepfunctionsaction-executionnameprefix)" : String,
+  "[RoleArn](#cfn-iot-topicrule-stepfunctionsaction-rolearn)" : String,
+  "[StateMachineName](#cfn-iot-topicrule-stepfunctionsaction-statemachinename)" : String
+}
+YAML
+[ExecutionNamePrefix](#cfn-iot-topicrule-stepfunctionsaction-executionnameprefix): String
+  [RoleArn](#cfn-iot-topicrule-stepfunctionsaction-rolearn): String
+  [StateMachineName](#cfn-iot-topicrule-stepfunctionsaction-statemachinename): String
+Properties
+ExecutionNamePrefix 
+(Optional) A name will be given to the state machine execution consisting of this prefix followed by a UUID. Step Functions automatically creates a unique name for each state machine execution if one is not provided.
+Required: No
+Type: String
+Update requires: No interruption
+RoleArn 
+The ARN of the role that grants IoT permission to start execution of a state machine ("Action":"states:StartExecution").
+Required: Yes
+Type: String
+Update requires: No interruption
+StateMachineName 
+The name of the Step Functions state machine whose execution will be started.
+Required: Yes
+Type: String
+Update requires: No interruption
+See also
+
+StepFunctionsAction in the AWS IoT API Reference.

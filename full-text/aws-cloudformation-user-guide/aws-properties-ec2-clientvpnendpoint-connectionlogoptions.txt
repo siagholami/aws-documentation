@@ -1,0 +1,30 @@
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions
+Describes the client connection logging options for the Client VPN endpoint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CloudwatchLogGroup](#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchloggroup)" : String,
+  "[CloudwatchLogStream](#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchlogstream)" : String,
+  "[Enabled](#cfn-ec2-clientvpnendpoint-connectionlogoptions-enabled)" : Boolean
+}
+YAML
+[CloudwatchLogGroup](#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchloggroup): String
+  [CloudwatchLogStream](#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchlogstream): String
+  [Enabled](#cfn-ec2-clientvpnendpoint-connectionlogoptions-enabled): Boolean
+Properties
+CloudwatchLogGroup 
+The name of the CloudWatch Logs log group. Required if connection logging is enabled.
+Required: No
+Type: String
+Update requires: No interruption
+CloudwatchLogStream 
+The name of the CloudWatch Logs log stream to which the connection data is published.
+Required: No
+Type: String
+Update requires: No interruption
+Enabled 
+Indicates whether connection logging is enabled.
+Required: Yes
+Type: Boolean
+Update requires: No interruption

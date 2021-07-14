@@ -1,0 +1,575 @@
+Amazon Route 53 Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon Route 53?
+How domain registration works
+How internet traffic is routed to your website or web application
+How Amazon Route 53 checks the health of your resources
+Amazon Route 53 concepts
+How to get started with Amazon Route 53
+Related services
+Accessing Amazon Route 53
+AWS Identity and Access Management
+Amazon Route 53 pricing and billing
+Setting up Amazon Route 53
+Getting started with Amazon Route 53
+Integration with other services
+DNS domain name format
+Registering domain names using Amazon Route 53
+Registering domains
+Registering a new domain
+Values that you specify when you register or transfer a domain
+Values that Amazon Route 53 returns when you register a domain
+Viewing the status of a domain registration
+
+
+Updating settings for a domain
+Updating contact information and ownership for a domain
+Enabling or disabling privacy protection for contact information for a domain
+Enabling or disabling automatic renewal for a domain
+Locking a domain to prevent unauthorized transfer to another registrar
+Extending the registration period for a domain
+Adding or changing name servers and glue records for a domain
+
+
+Renewing registration for a domain
+Restoring an expired or deleted domain
+Replacing the hosted zone for a domain that is registered with Route 53
+Transferring domains
+Transferring registration for a domain to Amazon Route 53
+Viewing the status of a domain transfer
+How transferring a domain to Amazon Route 53 affects the expiration date for your domain registration
+Transferring a domain to a different AWS account
+Transferring a domain from Amazon Route 53 to another registrar
+
+
+Resending authorization and confirmation emails
+Configuring DNSSEC for a domain
+Viewing information about domains that are registered with Amazon Registrar
+Deleting a domain name registration
+Contacting AWS Support about domain registration issues
+Downloading a domain billing report
+Domains that you can register with Amazon Route 53
+Generic top-level domains
+.ac
+.academy
+.accountants
+.adult
+.agency
+.apartments
+.associates
+.auction
+.audio
+.band
+.bargains
+.bike
+.bingo
+.biz
+.black
+.blue
+.boutique
+.builders
+.business
+.buzz
+.cab
+.cafe
+.camera
+.camp
+.capital
+.cards
+.care
+.careers
+.cash
+.casino
+.catering
+.cc
+.center
+.ceo
+.chat
+.cheap
+.church
+.city
+.claims
+.cleaning
+.click
+.clinic
+.clothing
+.cloud
+.club
+.coach
+.codes
+.coffee
+.college
+.com
+.community
+.company
+.computer
+.condos
+.construction
+.consulting
+.contractors
+.cool
+.coupons
+.credit
+.creditcard
+.cruises
+.dance
+.dating
+.deals
+.delivery
+.democrat
+.dental
+.diamonds
+.diet
+.digital
+.direct
+.directory
+.discount
+.dog
+.domains
+.education
+.email
+.energy
+.engineering
+.enterprises
+.equipment
+.estate
+.events
+.exchange
+.expert
+.exposed
+.express
+.fail
+.farm
+.finance
+.financial
+.fish
+.fitness
+.flights
+.florist
+.flowers
+.fm
+.football
+.forsale
+.foundation
+.fund
+.furniture
+.futbol
+.fyi
+.gallery
+.gift
+.gifts
+.glass
+.global
+.gold
+.golf
+.graphics
+.gratis
+.green
+.gripe
+.guide
+.guitars
+.guru
+.haus
+.healthcare
+.help
+.hiv
+.hockey
+.holdings
+.holiday
+.host
+.hosting
+.house
+.im
+.immo
+.immobilien
+.industries
+.info
+.ink
+.institute
+.insure
+.international
+.investments
+.io
+.irish
+.jewelry
+.juegos
+.kaufen
+.kim
+.kitchen
+.kiwi
+.land
+.lease
+.legal
+.lgbt
+.life
+.lighting
+.limited
+.limo
+.link
+.live
+.loan
+.loans
+.lol
+.maison
+.management
+.marketing
+.mba
+.media
+.memorial
+.mobi
+.moda
+.money
+.mortgage
+.movie
+.name
+.net
+.network
+.news
+.ninja
+.onl
+.online
+.org
+.partners
+.parts
+.photo
+.photography
+.photos
+.pics
+.pictures
+.pink
+.pizza
+.place
+.plumbing
+.plus
+.poker
+.porn
+.pro
+.productions
+.properties
+.property
+.pub
+.qpon
+.recipes
+.red
+.reise
+.reisen
+.rentals
+.repair
+.report
+.republican
+.restaurant
+.reviews
+.rip
+.rocks
+.run
+.sale
+.sarl
+.school
+.schule
+.services
+.sex
+.sexy
+.shiksha
+.shoes
+.show
+.singles
+.soccer
+.social
+.solar
+.solutions
+.studio
+.style
+.sucks
+.supplies
+.supply
+.support
+.surgery
+.systems
+.tattoo
+.tax
+.taxi
+.team
+.technology
+.tennis
+.theater
+.tienda
+.tips
+.tires
+.today
+.tools
+.tours
+.town
+.toys
+.trade
+.training
+.tv
+.university
+.uno
+.vacations
+.vegas
+.ventures
+.vg
+.viajes
+.video
+.villas
+.vision
+.voyage
+.watch
+.website
+.wiki
+.works
+.world
+.wtf
+.xyz
+.zone
+
+
+Geographic top-level domains
+Africa
+.ac (Ascension Island)
+.co.za (South Africa)
+.sh (Saint Helena)
+
+
+Americas
+.ca (Canada)
+.cl (Chile)
+.co (Colombia)
+.com.ar (Argentina)
+.com.br (Brazil)
+.com.mx (Mexico)
+.mx (Mexico)
+.us (United States)
+.vc (Saint Vincent and the Grenadines)
+.vg (British Virgin Islands)
+
+
+Asia/Oceania
+.cc (Cocos (Keeling) Islands)
+.co.nz (New Zealand)
+.com.au (Australia)
+.com.sg (Republic of Singapore)
+.fm (Federated States of Micronesia)
+.in (India)
+.jp (Japan)
+.io (British Indian Ocean Territory)
+.net.au (Australia)
+.net.nz (New Zealand)
+.org.nz (New Zealand)
+.qa (Qatar)
+.ru (Russian Federation)
+.sg (Republic of Singapore)
+
+
+Europe
+.be (Belgium)
+.berlin (city of Berlin in Germany)
+.ch (Switzerland)
+.co.uk (United Kingdom)
+.cz (Czech Republic)
+.de (Germany)
+.es (Spain)
+.eu (European Union)
+.fi (Finland)
+.fr (France)
+.gg (Guernsey)
+.im (Isle of Man)
+.it (Italy)
+.me (Montenegro)
+.me.uk (United Kingdom)
+.nl (the Netherlands)
+.org.uk (United Kingdom)
+.ruhr (Ruhr region, western part of Germany)
+.se (Sweden)
+.uk (United Kingdom)
+.wien (city of Vienna in Austria)
+
+
+
+
+
+
+Configuring Amazon Route 53 as your DNS service
+Making Amazon Route 53 the DNS service for an existing domain
+Making Route 53 the DNS service for a domain that's in use
+Making Route 53 the DNS service for an inactive domain
+
+
+Configuring DNS routing for a new domain
+Routing traffic to your resources
+Routing traffic for subdomains
+
+
+Working with hosted zones
+Working with public hosted zones
+Considerations when working with public hosted zones
+Creating a public hosted zone
+Getting the name servers for a public hosted zone
+Listing public hosted zones
+Viewing DNS query metrics for a public hosted zone
+Deleting a public hosted zone
+Checking DNS responses from Route 53
+Configuring white-label name servers
+NS and SOA records that Amazon Route 53 creates for a public hosted zone
+
+
+Working with private hosted zones
+Considerations when working with a private hosted zone
+Creating a private hosted zone
+Listing private hosted zones
+Associating more VPCs with a private hosted zone
+Associating an Amazon VPC and a private hosted zone that you created with different AWS accounts
+Disassociating VPCs from a private hosted zone
+Deleting a private hosted zone
+
+
+Migrating a hosted zone to a different AWS account
+
+
+Working with records
+Choosing a routing policy
+Choosing between alias and non-alias records
+Supported DNS record types
+Creating records by using the Amazon Route 53 console
+Values that you specify when you create or edit Amazon Route 53 records
+Values for basic records
+Values for alias records
+Values for failover records
+Values for failover alias records
+Values for geolocation records
+Values for geolocation alias records
+Values for latency records
+Values for latency alias records
+Values for multivalue answer records
+Values for weighted records
+Values for weighted alias records
+
+
+Creating records by importing a zone file
+Editing records
+Deleting records
+Listing records
+
+
+Using traffic flow to route DNS traffic
+Creating and managing traffic policies
+Creating and managing policy records
+
+
+Using AWS Cloud Map to create records and health checks
+DNS constraints and behaviors
+Resolving DNS queries between VPCs and your network
+Getting started with Route 53 Resolver
+Forwarding inbound DNS queries to your VPCs
+Forwarding outbound DNS queries to your network
+Managing inbound endpoints
+Managing outbound endpoints
+Managing forwarding rules
+Routing internet traffic to your AWS resources
+Routing traffic to an Amazon API Gateway API by using your domain name
+Routing traffic to an Amazon CloudFront web distribution by using your domain name
+Routing traffic to an Amazon EC2 instance
+Routing traffic to an AWS Elastic Beanstalk environment
+Routing traffic to an ELB load balancer
+Opening connections to an Amazon RDS database instance using your domain name
+Routing traffic to a website that is hosted in an Amazon S3 bucket
+Routing traffic to an Amazon Virtual Private Cloud interface endpoint by using your domain name
+Routing traffic to Amazon WorkMail
+Creating Amazon Route 53 health checks and configuring DNS failover
+Types of Amazon Route 53 health checks
+How Amazon Route 53 determines whether a health check is healthy
+Creating, updating, and deleting health checks
+Creating and updating health checks
+Values that you specify when you create or update health checks
+Values that Amazon Route 53 displays when you create a health check
+Updating health checks when you change CloudWatch alarm settings (health checks that monitor a CloudWatch alarm only)
+Deleting health checks
+Updating or deleting health checks when DNS failover is configured
+Configuring router and firewall rules for Amazon Route 53 health checks
+
+
+Monitoring health check status and getting notifications
+Viewing health check status and the reason for health check failures
+Monitoring the latency between health checkers and your endpoint
+Monitoring health checks using CloudWatch
+
+
+Configuring DNS failover
+Task list for configuring DNS failover
+How health checks work in simple Amazon Route 53 configurations
+How health checks work in complex Amazon Route 53 configurations
+How Amazon Route 53 chooses records when health checking is configured
+Active-active and active-passive failover
+Configuring failover in a private hosted zone
+How Amazon Route 53 averts failover problems
+
+
+Naming and tagging health checks
+Using health checks with Amazon Route 53 API versions earlier than 2012-12-12
+Security in Amazon Route 53
+Identity and access management in Amazon Route 53
+Overview of managing access permissions to your Amazon Route 53 resources
+Using identity-based policies (IAM policies) for Amazon Route 53
+Amazon Route 53 API permissions: Actions, resources, and conditions reference
+
+
+Logging and monitoring in Amazon Route 53
+Compliance validation for Amazon Route 53
+Resilience in Amazon Route 53
+Infrastructure security in Amazon Route 53
+Monitoring Amazon Route 53
+Public DNS query logging
+Resolver query logging
+AWS resources that you can send Resolver query logs to
+Managing Resolver query logging configurations
+Values that appear in Resolver query logs
+Resolver query log example
+Sharing Resolver query logging configurations with other AWS accounts
+
+
+
+
+Monitoring domain registrations
+Monitoring your resources with Amazon Route 53 health checks and Amazon CloudWatch
+Monitoring hosted zones using Amazon CloudWatch
+Monitoring Route 53 Resolver endpoints with Amazon CloudWatch
+Logging Amazon Route 53 API calls with AWS CloudTrail
+Troubleshooting Amazon Route 53
+My domain is unavailable on the internet
+My domain is suspended (status is ClientHold)
+Transferring my domain to Amazon Route 53 failed
+I changed DNS settings, but they haven't taken effect
+DNS resolution fails intermittently
+My browser displays a "Server not found" error
+I can't route traffic to an Amazon S3 bucket that's configured for website hosting
+I was billed twice for the same hosted zone
+My AWS account is closed, suspended, or terminated, and my domain is registered with Route 53
+IP address ranges of Amazon Route 53 servers
+Tagging Amazon Route 53 resources
+Tutorials
+Using Amazon Route 53 as the DNS service for subdomains without migrating the parent domain
+Creating a subdomain that uses Amazon Route 53 as the DNS service without migrating the parent domain
+Migrating DNS service for a subdomain to Amazon Route 53 without migrating the parent domain
+
+
+Transitioning to latency-based routing in Amazon Route 53
+Adding another Region to your latency-based routing in Amazon Route 53
+Using latency and weighted records in Amazon Route 53 to route traffic to multiple Amazon EC2 instances in a Region
+Managing over 100 weighted records in Amazon Route 53
+Weighting fault-tolerant multi-record answers in Amazon Route 53
+Quotas
+Related information
+Document history
+AWS glossary

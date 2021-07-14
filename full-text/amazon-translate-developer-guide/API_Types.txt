@@ -1,0 +1,13 @@
+Data Types
+The following data types are supported:
+  AppliedTerminology 
+  EncryptionKey 
+  InputDataConfig 
+  JobDetails 
+  OutputDataConfig 
+  Term 
+  TerminologyData 
+  TerminologyDataLocation 
+  TerminologyProperties 
+  TextTranslationJobFilter 
+  TextTranslationJobProperties 

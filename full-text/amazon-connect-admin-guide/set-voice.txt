@@ -1,0 +1,23 @@
+Contact block: Set voice
+Contact flow types
+You can use this block in the following contact flow types:
+ All flows
+Description
+
+Sets the text-to-speech (TTS) language and voice to use for the contact flow.
+The default voice is configured to Joanna (Conversational speaking style), an Amazon Polly Neural Text-to-Speech (NTTS) voice. Neural voices make automated conversations sound more lifelike by improving the pitch, inflection, intonation, and tempo.
+After this block is run, any TTS invocation resolves to the neural or standard voice selected.
+If this block is triggered during a chat conversation, the contact goes down the Success branch. It has no effect on the chat experience. 
+
+Properties
+
+Configuration tips
+
+For the Joanna and Matthew neural voices, in American English (en-US), you can also specify a Conversational speaking style or a Newscaster speaking style.
+
+Configured block
+When this block is configured, it looks similar to the following image:
+
+Scenarios
+See these topics for scenarios that use this block:
+ Add text-to-speech to prompts

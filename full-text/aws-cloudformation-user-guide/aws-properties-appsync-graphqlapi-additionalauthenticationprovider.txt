@@ -1,0 +1,32 @@
+AWS::AppSync::GraphQLApi AdditionalAuthenticationProvider
+Describes an additional authentication provider.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype)" : String,
+  "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : OpenIDConnectConfig,
+  "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : CognitoUserPoolConfig
+}
+YAML
+[AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype): String
+  [OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig): 
+    OpenIDConnectConfig
+  [UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig): 
+    CognitoUserPoolConfig
+Properties
+AuthenticationType 
+The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+Required: Yes
+Type: String
+Update requires: No interruption
+OpenIDConnectConfig 
+The OpenID Connect configuration.
+Required: No
+Type: OpenIDConnectConfig
+Update requires: No interruption
+UserPoolConfig 
+The Amazon Cognito user pool configuration.
+Required: No
+Type: CognitoUserPoolConfig
+Update requires: No interruption

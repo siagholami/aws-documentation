@@ -1,0 +1,24 @@
+Data Types
+The following data types are supported by Amazon Kinesis Video Streams:
+  ChannelInfo 
+  ChannelNameCondition 
+  ResourceEndpointListItem 
+  SingleMasterChannelEndpointConfiguration 
+  SingleMasterConfiguration 
+  StreamInfo 
+  StreamNameCondition 
+  Tag 
+The following data types are supported by Amazon Kinesis Video Streams Media:
+  StartSelector 
+The following data types are supported by Amazon Kinesis Video Streams Archived Media:
+  ClipFragmentSelector 
+  ClipTimestampRange 
+  DASHFragmentSelector 
+  DASHTimestampRange 
+  Fragment 
+  FragmentSelector 
+  HLSFragmentSelector 
+  HLSTimestampRange 
+  TimestampRange 
+The following data types are supported by Amazon Kinesis Video Signaling Channels:
+  IceServer 

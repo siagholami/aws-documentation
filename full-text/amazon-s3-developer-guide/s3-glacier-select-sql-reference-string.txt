@@ -1,0 +1,76 @@
+String Functions
+Amazon S3 Select and S3 Glacier Select support the following string functions.
+Topics
+ CHAR_LENGTH, CHARACTER_LENGTH
+ LOWER
+ SUBSTRING
+ TRIM
+ UPPER
+CHAR_LENGTH, CHARACTER_LENGTH
+Counts the number of characters in the specified string.
+Note
+CHAR_LENGTH and CHARACTER_LENGTH are synonyms.
+Syntax
+CHAR_LENGTH ( string )
+Parameters
+string 
+The target string that the function operates on.
+Examples
+CHAR_LENGTH('')          -- 0
+CHAR_LENGTH('abcdefg')   -- 7
+LOWER
+Given a string, converts all uppercase characters to lowercase characters. Any non-uppercased characters remain unchanged.
+Syntax
+LOWER ( string )
+Parameters
+string 
+The target string that the function operates on.
+Examples
+LOWER('AbCdEfG!@#$') -- 'abcdefg!@#$'
+SUBSTRING
+Given a string, a start index, and optionally a length, returns the substring from the start index up to the end of the string, or up to the length provided.
+Note
+The first character of the input string has index 1. If start is < 1, it is set to 1.
+Syntax
+SUBSTRING( string FROM start [ FOR length ] )
+Parameters
+string 
+The target string that the function operates on.
+start 
+The start position of the string.
+length 
+The length of the substring to return. If not present, proceed to the end of the string.
+Examples
+SUBSTRING("123456789", 0)      -- "123456789"
+SUBSTRING("123456789", 1)      -- "123456789"
+SUBSTRING("123456789", 2)      -- "23456789"
+SUBSTRING("123456789", -4)     -- "123456789"
+SUBSTRING("123456789", 0, 999) -- "123456789" 
+SUBSTRING("123456789", 1, 5)   -- "12345"
+TRIM
+Trims leading or trailing characters from a string. The default character to remove is ' '.
+Syntax
+TRIM ( [[LEADING | TRAILING | BOTH remove_chars] FROM] string )
+Parameters
+string 
+The target string that the function operates on.
+LEADING | TRAILING | BOTH 
+Whether to trim leading or trailing characters, or both leading and trailing characters.
+remove_chars 
+The set of characters to remove. Note that remove_chars can be a string with length > 1. This function returns the string with any character from remove_chars found at the beginning or end of the string that was removed.
+Examples
+TRIM('       foobar         ')               -- 'foobar'
+TRIM('      \tfoobar\t         ')            -- '\tfoobar\t'
+TRIM(LEADING FROM '       foobar         ')  -- 'foobar         '
+TRIM(TRAILING FROM '       foobar         ') -- '       foobar'
+TRIM(BOTH FROM '       foobar         ')     -- 'foobar'
+TRIM(BOTH '12' FROM '1112211foobar22211122') -- 'foobar'
+UPPER
+Given a string, converts all lowercase characters to uppercase characters. Any non-lowercased characters remain unchanged.
+Syntax
+UPPER ( string )
+Parameters
+string 
+The target string that the function operates on.
+Examples
+UPPER('AbCdEfG!@#$') -- 'ABCDEFG!@#$'

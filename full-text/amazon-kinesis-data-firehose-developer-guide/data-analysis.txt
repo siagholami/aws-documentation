@@ -1,0 +1,45 @@
+Using Amazon Kinesis Data Analytics
+Create a Kinesis Data Analytics Application That Reads from a Delivery Stream
+
+
+Sign in to the AWS Management Console and open the Kinesis Data Analytics console at  https://console.aws.amazon.com/kinesisanalytics.
+
+
+Choose Create application
+
+
+Specify a name for the application and an optional description. Then choose Create application.
+
+
+Choose Connect streaming data.
+
+
+For Source, choose Kinesis Firehose delivery stream.
+
+
+In the list labeled Kinesis Firehose delivery stream, choose the delivery stream that you want your Kinesis Data Analytics to process. Alternatively, choose Create new to set up a new delivery stream.
+
+
+To finish setting up your Kinesis Data Analytics application, see Getting Started with Amazon Kinesis Data Analytics for SQL Applications.
+
+
+Write Data from a Kinesis Data Analytics Application to a Delivery Stream
+
+
+To create a Kinesis Data Analytics application, follow the instructions under Getting Started with Amazon Kinesis Data Analytics for SQL Applications. 
+
+
+Open the Kinesis Data Analytics console at  https://console.aws.amazon.com/kinesisanalytics.
+
+
+In the list of application, choose the application that you want to configure to write to a delivery stream.
+
+
+Choose Application details.
+
+
+At the bottom of the page, choose Connect to a destination.
+
+
+Choose Kinesis Firehose delivery stream, and then choose an existing delivery stream in the list or choose Create new to create a new delivery stream.
+

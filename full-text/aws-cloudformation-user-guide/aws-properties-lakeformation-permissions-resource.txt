@@ -1,0 +1,41 @@
+AWS::LakeFormation::Permissions Resource
+A structure for the resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DatabaseResource](#cfn-lakeformation-permissions-resource-databaseresource)" : DatabaseResource,
+  "[DataLocationResource](#cfn-lakeformation-permissions-resource-datalocationresource)" : DataLocationResource,
+  "[TableResource](#cfn-lakeformation-permissions-resource-tableresource)" : TableResource,
+  "[TableWithColumnsResource](#cfn-lakeformation-permissions-resource-tablewithcolumnsresource)" : TableWithColumnsResource
+}
+YAML
+[DatabaseResource](#cfn-lakeformation-permissions-resource-databaseresource): 
+    DatabaseResource
+  [DataLocationResource](#cfn-lakeformation-permissions-resource-datalocationresource): 
+    DataLocationResource
+  [TableResource](#cfn-lakeformation-permissions-resource-tableresource): 
+    TableResource
+  [TableWithColumnsResource](#cfn-lakeformation-permissions-resource-tablewithcolumnsresource): 
+    TableWithColumnsResource
+Properties
+DatabaseResource 
+A structure for the database object.
+Required: No
+Type: DatabaseResource
+Update requires: No interruption
+DataLocationResource 
+Currently not supported by AWS CloudFormation.
+Required: No
+Type: DataLocationResource
+Update requires: No interruption
+TableResource 
+A structure for the table object. A table is a metadata definition that represents your data. You can Grant and Revoke table privileges to a principal.
+Required: No
+Type: TableResource
+Update requires: No interruption
+TableWithColumnsResource 
+Currently not supported by AWS CloudFormation.
+Required: No
+Type: TableWithColumnsResource
+Update requires: No interruption

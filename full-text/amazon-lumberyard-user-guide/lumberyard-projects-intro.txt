@@ -1,0 +1,29 @@
+Working with Lumberyard projects
+Working with projects in Lumberyard
+Learn about the details of creating, configuring, managing, and building your Lumberyard game projects, along with the sample projects provided in your installation.
+In this section: 
+
+
+
+Topic Area
+Description
+
+
+
+
+Create a project
+Learn how to create and configure a new Lumberyard game project with Waf.
+
+
+Manage a project with lmbr.exe
+Learn how to manage the configuration and details of your Lumberyard game project.
+
+
+Build a project
+Learn how to build your Lumberyard game project with Waf.
+
+
+Sample projects and levels
+Learn about the sample game projects provided in the Lumberyard installation, and discover examples that can accelerate your understanding of Lumberyard and your game's development.
+
+

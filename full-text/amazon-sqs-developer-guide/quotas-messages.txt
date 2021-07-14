@@ -1,0 +1,3 @@
+Quotas related to messages
+The following table lists quotas related to messages.
+[See the AWS documentation website for more details]

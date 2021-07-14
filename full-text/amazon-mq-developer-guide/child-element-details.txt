@@ -1,0 +1,120 @@
+Amazon MQ Child Element Attributes
+The following is a detailed explanation of child element attributes. For more information, see XML Configuration in the Apache ActiveMQ documentation.
+Topics
+ authorizationEntry
+ networkConnector
+ kahaDB
+ systemUsage
+authorizationEntry
+authorizationEntry is a child of the authorizationEntries child collection element. 
+Attributes
+admin|read|write
+The permissions granted to a group of users. For more information, see Always Configure an Authorization Map.
+Default: null
+Example Configuration
+<authorizationPlugin>
+   <map>
+      <authorizationMap>
+         <authorizationEntries>
+            <authorizationEntry admin="admins,activemq-webconsole" read="admins,users,activemq-webconsole" write="admins,activemq-webconsole" queue=">"/>
+            <authorizationEntry admin="admins,activemq-webconsole" read="admins,users,activemq-webconsole" write="admins,activemq-webconsole" topic=">"/>
+         </authorizationEntries>
+      </authorizationMap>
+   </map>
+</authorizationPlugin>
+networkConnector
+networkConnector is a child of the networkConnectors child collection element.
+Topics
+ Attributes
+ Example Configurations
+Attributes
+conduitSubscriptions
+Specifies whether a network connection in a network of brokers treats multiple consumers subscribed to the same destination as one consumer. For example, if conduitSubscriptions is set to true and two consumers connect to broker B and consume from a destination, broker B combines the subscriptions into a single logical subscription over the network connection to broker A, so that only a single copy of a message is forwarded from broker A to broker B. 
+Note
+Setting conduitSubscriptions to true can reduce redundant network traffic. However, using this attribute can have implications for the load-balancing of messages across consumers and might cause incorrect behavior in certain scenarios (for example, with JMS message selectors or with durable topics).
+Default: true
+duplex
+Specifies whether the connection in the network of brokers is used to produce and consume messages. For example, if broker A creates a connection to broker B in non-duplex mode, messages can be forwarded only from broker A to broker B. However, if broker A creates a duplex connection to broker B, then broker B can forward messages to broker A without having to configure a <networkConnector>.
+Default: false
+name
+The name of the bridge in the network of brokers.
+Default: bridge
+uri
+The wire-level protocol endpoint for one of two brokers (or for multiple brokers) in a network of brokers.
+Default: null
+username
+The username common to the brokers in a network of brokers.
+Default: null
+Example Configurations
+
+Note
+When using a networkConnector to define a network of brokers, don't include the password for the user common to your brokers.
+A Network of Brokers with Two Brokers
+In this configuration, two brokers are connected in a network of brokers. The name of the network connector is connector_1_to_2, the username common to the brokers is myCommonUser, the connection is duplex, and the OpenWire endpoint URI is prefixed by static:, indicating a one-to-one connection between the brokers.
+<networkConnectors>
+  <networkConnector name="connector_1_to_2" userName="myCommonUser" duplex="true"
+    uri="static:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)"/>
+</networkConnectors>
+For more information, see Step 2: Configure Network Connectors for Your Broker.
+A Network of Brokers with Multiple Brokers
+In this configuration, multiple brokers are connected in a network of brokers. The name of the network connector is connector_1_to_2, the username common to the brokers is myCommonUser, the connection is duplex, and the comma-separated list of OpenWire endpoint URIs is prefixed by masterslave:, indicating a failover connection between the brokers. The failover from broker to broker isn't randomized and reconnection attempts continue indefinitely.
+<networkConnectors>
+  <networkConnector name="connector_1_to_2" userName="myCommonUser" duplex="true"
+    uri="masterslave:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617,
+    ssl://b-9876l5k4-32ji-109h-8gfe-7d65c4b132a1-2.mq.us-east-2.amazonaws.com:61617)"/>
+</networkConnectors>
+Note
+We recommend using the masterslave: prefix for networks of brokers. The prefix is identical to the more explicit static:failover:()?randomize=false&maxReconnectAttempts=0 syntax.
+kahaDB
+kahaDB is a child of the persistenceAdapter child collection element.
+Attributes
+concurrentStoreAndDispatchQueues
+Specifies whether to use concurrent store and dispatch for queues. For more information, see Disable Concurrent Store and Dispatch for Queues with Slow Consumers.
+Default: true
+journalDiskSyncInterval
+Interval (ms) for when to perform a disk sync if journalDiskSyncStrategy=periodic. For more information, see the Apache ActiveMQ kahaDB documentation.
+Default: 1000
+journalDiskSyncStrategy
+From ActiveMQ 5.14.0: this setting configures the disk sync policy. For more information, see the Apache ActiveMQ kahaDB documentation.
+Default: always
+Note
+The ActiveMQ documentation states that the data loss is limited to the duration of journalDiskSyncInterval, which has a default of 1s. The data loss can be longer than the interval, but it is difficult to be precise. Use caution. 
+preallocationStrategy
+Configures how the broker will try to preallocate the journal files when a new journal file is needed. For more information, see the Apache ActiveMQ kahaDB documentation.
+Default: sparse_file
+Example Configuration
+Example 
+<broker xmlns="http://activemq.apache.org/schema/core">
+    <persistenceAdapter>
+       <kahaDB preallocationStrategy="zeros" concurrentStoreAndDispatchQueues="false" journalDiskSyncInterval="10000" journalDiskSyncStrategy="periodic"/>
+   </persistenceAdapter>
+</broker>
+systemUsage
+systemUsage is a child of the systemUsage child collection element. It controls the maximum amount of space the broker will use before slowing down producers. For more information, see Producer Flow Control in the Apache ActiveMQ documentation. 
+Child Element
+memoryUsage
+memoryUsage is a child of the systemUsage child element. It manages memory usage. Use memoryUsage to keep track of how much of something is being used so that you can control working set usage productively. For more information, see the schema in the Apache ActiveMQ documentation.
+Child Element
+memoryUsage is a child of the memoryUsage child element. 
+Attribute
+percentOfJvmHeap
+Integer between 0 (inclusive) and 70 (inclusive).
+Default: 70 
+Attributes
+sendFailIfNoSpace
+Sets whether a send() method should fail if there is no space free. The default value is false, which blocks the send() method until space becomes available. For more information, see the schema in the Apache Active MQ documentation.
+Default: false
+sendFailIfNoSpaceAfterTimeout
+Default: null
+Example Configuration
+Example 
+<broker xmlns="http://activemq.apache.org/schema/core">
+    <systemUsage>
+      <systemUsage sendFailIfNoSpace="true" sendFailIfNoSpaceAfterTimeout="2000">
+          <memoryUsage>
+              <memoryUsage  percentOfJvmHeap="60" />
+          </memoryUsage>>
+      </systemUsage>
+    </systemUsage>
+</broker>
+</persistenceAdapter>

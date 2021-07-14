@@ -1,0 +1,35 @@
+Deploy cloud configurations to a Greengrass core device
+
+
+Make sure that your Greengrass core device is connected to the internet. For example, try successfully navigating to a webpage.
+
+
+Make sure that the Greengrass daemon is running on your core device. Run the following commands in your core device terminal.
+
+
+To check whether the daemon is running:
+ps aux | grep -E 'greengrass.*daemon'
+If the output contains a root entry for /greengrass/ggc/packages/1.11.0/bin/daemon, then the daemon is running.
+
+
+To start the daemon:
+cd /greengrass/ggc/core/
+  sudo ./greengrassd start
+
+
+Now you're ready to deploy the Lambda function and subscription configurations to your Greengrass core device.
+
+
+In the AWS IoT console, on the group configuration page, from Actions, choose Deploy.
+
+
+
+On the Configure how devices discover your core page, choose Automatic detection. This enables devices to automatically acquire connectivity information for the core, such as IP address, DNS, and port number. Automatic detection is recommended, but AWS IoT Greengrass also supports manually specified endpoints. You're only prompted for the discovery method the first time that the group is deployed.
+
+
+
+The first deployment might take a few minutes. When the deployment is complete, you should see Successfully completed in the Status column on the Deployments page:
+Note
+The deployment status is also displayed below the group's name on the page header.
+
+For troubleshooting help, see Troubleshooting AWS IoT Greengrass.

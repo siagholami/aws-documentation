@@ -1,0 +1,236 @@
+CreateEventSourceMapping
+Creates a mapping between an event source and an AWS Lambda function. Lambda reads items from the event source and triggers the function.
+For details about each event source type, see the following topics.
+  Using AWS Lambda with Amazon DynamoDB 
+  Using AWS Lambda with Amazon Kinesis 
+  Using AWS Lambda with Amazon SQS 
+  Using AWS Lambda with Amazon MSK 
+The following error handling options are only available for stream sources (DynamoDB and Kinesis):
+  BisectBatchOnFunctionError - If the function returns an error, split the batch in two and retry.
+  DestinationConfig - Send discarded records to an Amazon SQS queue or Amazon SNS topic.
+  MaximumRecordAgeInSeconds - Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires
+  MaximumRetryAttempts - Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.
+  ParallelizationFactor - Process multiple batches from each shard concurrently.
+Request Syntax
+```
+POST /2015-03-31/event-source-mappings/ HTTP/1.1
+Content-type: application/json
+{
+   "BatchSize": number,
+   "BisectBatchOnFunctionError": boolean,
+   "DestinationConfig": { 
+      "OnFailure": { 
+         "Destination": "string"
+      },
+      "OnSuccess": { 
+         "Destination": "string"
+      }
+   },
+   "Enabled": boolean,
+   "EventSourceArn": "string",
+   "FunctionName": "string",
+   "MaximumBatchingWindowInSeconds": number,
+   "MaximumRecordAgeInSeconds": number,
+   "MaximumRetryAttempts": number,
+   "ParallelizationFactor": number,
+   "StartingPosition": "string",
+   "StartingPositionTimestamp": number,
+   "Topics": [ "string" ]
+}
+```
+URI Request Parameters
+The request does not use any URI parameters.
+Request Body
+The request accepts the following data in JSON format.
+ BatchSize  
+The maximum number of items to retrieve in a single batch.
+  Amazon Kinesis - Default 100. Max 10,000.
+  Amazon DynamoDB Streams - Default 100. Max 1,000.
+  Amazon Simple Queue Service - Default 10. Max 10.
+  Amazon Managed Streaming for Apache Kafka - Default 100. Max 10,000.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 10000.
+Required: No
+ BisectBatchOnFunctionError  
+(Streams) If the function returns an error, split the batch in two and retry.
+Type: Boolean
+Required: No
+ DestinationConfig  
+(Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+Type: DestinationConfig object
+Required: No
+ Enabled  
+If true, the event source mapping is active. Set to false to pause polling and invocation.
+Type: Boolean
+Required: No
+ EventSourceArn  
+The Amazon Resource Name (ARN) of the event source.
+  Amazon Kinesis - The ARN of the data stream or a stream consumer.
+  Amazon DynamoDB Streams - The ARN of the stream.
+  Amazon Simple Queue Service - The ARN of the queue.
+  Amazon Managed Streaming for Apache Kafka - The ARN of the cluster.
+Type: String
+Pattern: arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-]):([a-z]{2}(-gov)?-[a-z]-\d{1})?:(\d{12})?:(.*) 
+Required: Yes
+ FunctionName  
+The name of the Lambda function.  
+Name formats
+  Function name - MyFunction.
+  Function ARN - arn:aws:lambda:us-west-2:123456789012:function:MyFunction.
+  Version or Alias ARN - arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD.
+  Partial ARN - 123456789012:function:MyFunction.
+The length constraint applies only to the full ARN. If you specify only the function name, it's limited to 64 characters in length.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 140.
+Pattern: (arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_])(:(\$LATEST|[a-zA-Z0-9-_]))? 
+Required: Yes
+ MaximumBatchingWindowInSeconds  
+(Streams) The maximum amount of time to gather records before invoking the function, in seconds.
+Type: Integer
+Valid Range: Minimum value of 0. Maximum value of 300.
+Required: No
+ MaximumRecordAgeInSeconds  
+(Streams) Discard records older than the specified age. The default value is infinite (-1).
+Type: Integer
+Valid Range: Minimum value of 60. Maximum value of 604800.
+Required: No
+ MaximumRetryAttempts  
+(Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records will be retried until the record expires.
+Type: Integer
+Valid Range: Minimum value of 0. Maximum value of 10000.
+Required: No
+ ParallelizationFactor  
+(Streams) The number of batches to process from each shard concurrently.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 10.
+Required: No
+ StartingPosition  
+The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. AT_TIMESTAMP is only supported for Amazon Kinesis streams.
+Type: String
+Valid Values:TRIM_HORIZON | LATEST | AT_TIMESTAMP 
+Required: No
+ StartingPositionTimestamp  
+With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
+Type: Timestamp
+Required: No
+ Topics  
+ (MSK) The name of the Kafka topic. 
+Type: Array of strings
+Array Members: Fixed number of 1 item.
+Length Constraints: Minimum length of 1. Maximum length of 249.
+Pattern: ^[^.]([a-zA-Z0-9\-_.]) 
+Required: No
+Response Syntax
+```
+HTTP/1.1 202
+Content-type: application/json
+{
+   "BatchSize": number,
+   "BisectBatchOnFunctionError": boolean,
+   "DestinationConfig": { 
+      "OnFailure": { 
+         "Destination": "string"
+      },
+      "OnSuccess": { 
+         "Destination": "string"
+      }
+   },
+   "EventSourceArn": "string",
+   "FunctionArn": "string",
+   "LastModified": number,
+   "LastProcessingResult": "string",
+   "MaximumBatchingWindowInSeconds": number,
+   "MaximumRecordAgeInSeconds": number,
+   "MaximumRetryAttempts": number,
+   "ParallelizationFactor": number,
+   "State": "string",
+   "StateTransitionReason": "string",
+   "Topics": [ "string" ],
+   "UUID": "string"
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 202 response.
+The following data is returned in JSON format by the service.
+ BatchSize  
+The maximum number of items to retrieve in a single batch.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 10000.
+ BisectBatchOnFunctionError  
+(Streams) If the function returns an error, split the batch in two and retry. The default value is false.
+Type: Boolean
+ DestinationConfig  
+(Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+Type: DestinationConfig object
+ EventSourceArn  
+The Amazon Resource Name (ARN) of the event source.
+Type: String
+Pattern: arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-]):([a-z]{2}(-gov)?-[a-z]-\d{1})?:(\d{12})?:(.*) 
+ FunctionArn  
+The ARN of the Lambda function.
+Type: String
+Pattern: arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}(-gov)?-[a-z]-\d{1}:\d{12}:function:[a-zA-Z0-9-_](:(\$LATEST|[a-zA-Z0-9-_]))? 
+ LastModified  
+The date that the event source mapping was last updated, or its state changed, in Unix time seconds.
+Type: Timestamp
+ LastProcessingResult  
+The result of the last AWS Lambda invocation of your Lambda function.
+Type: String
+ MaximumBatchingWindowInSeconds  
+(Streams) The maximum amount of time to gather records before invoking the function, in seconds. The default value is zero.
+Type: Integer
+Valid Range: Minimum value of 0. Maximum value of 300.
+ MaximumRecordAgeInSeconds  
+(Streams) Discard records older than the specified age. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.
+Type: Integer
+Valid Range: Minimum value of 60. Maximum value of 604800.
+ MaximumRetryAttempts  
+(Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.
+Type: Integer
+Valid Range: Minimum value of 0. Maximum value of 10000.
+ ParallelizationFactor  
+(Streams) The number of batches to process from each shard concurrently. The default value is 1.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 10.
+ State  
+The state of the event source mapping. It can be one of the following: Creating, Enabling, Enabled, Disabling, Disabled, Updating, or Deleting.
+Type: String
+ StateTransitionReason  
+Indicates whether the last change to the event source mapping was made by a user, or by the Lambda service.
+Type: String
+ Topics  
+ (MSK) The name of the Kafka topic. 
+Type: Array of strings
+Array Members: Fixed number of 1 item.
+Length Constraints: Minimum length of 1. Maximum length of 249.
+Pattern: ^[^.]([a-zA-Z0-9\-_.]) 
+ UUID  
+The identifier of the event source mapping.
+Type: String
+Errors
+InvalidParameterValueException 
+One of the parameters in the request is invalid.
+HTTP Status Code: 400
+ResourceConflictException 
+The resource already exists, or another operation is in progress.
+HTTP Status Code: 409
+ResourceNotFoundException 
+The resource specified in the request does not exist.
+HTTP Status Code: 404
+ServiceException 
+The AWS Lambda service encountered an internal error.
+HTTP Status Code: 500
+TooManyRequestsException 
+The request throughput limit was exceeded.
+HTTP Status Code: 429
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

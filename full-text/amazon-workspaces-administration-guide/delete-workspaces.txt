@@ -1,0 +1,27 @@
+Delete a WorkSpace
+When you are finished with a WorkSpace, you can delete it. You can also delete related resources.
+Warning
+This is a permanent action and cannot be undone. The WorkSpace user's data does not persist and is destroyed. For help with backing up user data, contact AWS Support.
+To delete a WorkSpace
+
+
+Open the Amazon WorkSpaces console at https://console.aws.amazon.com/workspaces/.
+
+
+In the navigation pane, choose WorkSpaces.
+
+
+Select your WorkSpace and choose Actions, Remove WorkSpaces.
+
+
+When prompted for confirmation, choose Remove WorkSpaces. The status of the WorkSpace is set to TERMINATING. When the termination is complete, the status is set to TERMINATED.
+
+
+(Optional) To delete any custom bundles and images that you are finished with, see Delete a Custom WorkSpaces Bundle or Image.
+
+
+(Optional) After you delete all WorkSpaces in a directory, you can delete the directory. For more information, see Delete the Directory for Your WorkSpaces.
+
+
+(Optional) After you delete all resources in the virtual private cloud (VPC) for your directory, you can delete the VPC and release the Elastic IP address used for the NAT gateway. For more information, see  Deleting your VPC and  Working with Elastic IP addresses in the Amazon VPC User Guide.
+

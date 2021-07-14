@@ -1,0 +1,34 @@
+Set up an integration request in API Gateway
+To set up an integration request, you perform the following required and optional tasks:
+
+
+Choose an integration type that determines how method request data is passed to the backend.
+
+
+For non-mock integrations, specify an HTTP method and the URI of the targeted integration endpoint, except for the MOCK integration.
+
+
+For integrations with Lambda functions and other AWS service actions, set an IAM role with required permissions for API Gateway to call the backend on your behalf.
+
+
+For non-proxy integrations, set necessary parameter mappings to map predefined method request parameters to appropriate integration request parameters.
+
+
+For non-proxy integrations, set necessary body mappings to map the incoming method request body of a given content type according to the specified mapping template.
+
+
+For non-proxy integrations, specify the condition under which the incoming method request data is passed through to the backend as-is. 
+
+
+Optionally, specify how to handle type conversion for a binary payload.
+
+
+Optionally, declare a cache namespace name and cache key parameters to enable API caching. 
+
+
+Performing these tasks involves creating an Integration resource of API Gateway and setting appropriate property values. You can do so using the API Gateway console, AWS CLI commands, an AWS SDK, or the API Gateway REST API. 
+Topics
+ Basic tasks of an API integration request
+ Choose an API Gateway API integration type
+ Set up a proxy integration with a proxy resource
+ Set up an API integration request using the API Gateway console

@@ -1,0 +1,17 @@
+FlowerTypes.json
+The following code is the JSON data required to create the FlowerTypes custom slot type:
+{
+    "enumerationValues": [
+        {
+            "value": "tulips"
+        },
+        {
+            "value": "lilies"
+        },
+        {
+            "value": "roses"
+        }
+    ],
+    "name": "FlowerTypes",
+    "description": "Types of flowers to pick up"
+}

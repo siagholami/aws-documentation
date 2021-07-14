@@ -1,0 +1,12 @@
+Security best practices for your VPC
+The following best practices are general guidelines and don’t represent a complete security solution. Because these best practices might not be appropriate or sufficient for your environment, treat them as helpful considerations rather than prescriptions.
+The following are general best practices:
+ Use multiple Availability Zone deployments so you have high availability.
+ Use security groups and network ACLs. For more information, see Security groups for your VPC and Network ACLs.
+ Use IAM policies to control access.
+ Use Amazon CloudWatch to monitor your VPC components and VPN connections.
+ Use flow logs to capture information about IP traffic going to and from network interfaces in your VPC. For more information, see VPC Flow Logs.
+Additional resources
+
+Manage access to AWS resources and APIs using identity federation, IAM users, and IAM roles. Establish credential management policies and procedures for creating, distributing, rotating, and revoking AWS access credentials. For more information, see IAM best practices in the IAM User Guide.
+For answers to frequently asked questions for VPC security, see Amazon VPC FAQs.

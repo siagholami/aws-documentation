@@ -1,0 +1,17 @@
+Setting up the Windows 10 Mail app for Amazon WorkMail
+If you have the Mail app on Windows 10, you can add your Amazon WorkMail account.
+To connect your Amazon WorkMail account to your Mail app
+
+
+In Windows 10, open Mail, and choose Accounts.
+
+
+Choose Add Account, Advanced Setup.
+
+
+Choose Exchange ActiveSync, and provide the following information.  
+[See the AWS documentation website for more details]
+
+
+Choose Sign in.
+

@@ -1,0 +1,51 @@
+Set Enabled
+Indicates whether the entity's High Quality Shadow component is enabled.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Source
+EntityID
+References a specific entity from which events are generated. By default, it references Self, the entity to which the Script Canvas component attaches the current script.  You can also select another entity. For more information, see Setting Entity Targets.
+
+
+Enabled
+Boolean
+Indicates whether the Script Canvas component is enabled.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

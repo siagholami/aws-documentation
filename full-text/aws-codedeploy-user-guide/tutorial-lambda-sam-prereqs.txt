@@ -1,0 +1,5 @@
+Prerequisites
+To complete this tutorial, you must first:
+  Complete the steps in Getting started with CodeDeploy. 
+  Install the AWS Serverless Application Model CLI. For information, see Install the AWS SAM CLI. 
+  Create an S3 bucket. AWS SAM uploads the artifacts that are referenced in your AWS SAM template into this bucket. 

@@ -1,0 +1,15 @@
+How Initial delay affects Scheduled and In queue metrics
+In the Transfer to queue block, the Initial delay property affects when a callback is put in queue. For example, assume Initial delay is set to 30 seconds. Here's what appears in your real-time metrics report:
+
+
+After 20 seconds, the callback has already been created, but it is not yet in queue because of the Initial delay setting.
+
+
+
+After 35 seconds, the callback contact has been placed in queue.
+
+
+
+Assume that after 40 seconds, an agent accepts the callback.
+
+

@@ -1,0 +1,17 @@
+AWS::S3::Bucket ObjectLockRule
+The Object Lock rule in place for the specified object.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DefaultRetention](#cfn-s3-bucket-objectlockrule-defaultretention)" : DefaultRetention
+}
+YAML
+[DefaultRetention](#cfn-s3-bucket-objectlockrule-defaultretention): 
+    DefaultRetention
+Properties
+DefaultRetention 
+The default retention period that you want to apply to new objects placed in the specified bucket.
+Required: No
+Type: DefaultRetention
+Update requires: No interruption

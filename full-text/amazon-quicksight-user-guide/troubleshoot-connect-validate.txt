@@ -1,0 +1,24 @@
+I Need to Validate the Connection to My Data Source, or Change Data Source Settings
+If you need to update your data source, or you got a connection error and need to check your settings, follow these steps and validate your connection to the data source.
+
+
+From the QuickSight home screen, choose Manage data.
+
+
+Choose New data set.
+
+
+Scroll to FROM EXISTING DATA SOURCES.
+
+
+Choose the data source you want to test or change.
+
+
+If the option is offered, choose Edit/Preview data.
+
+
+Choose Validate connection.
+
+
+Make any changes you want to make, then choose Update data source.
+

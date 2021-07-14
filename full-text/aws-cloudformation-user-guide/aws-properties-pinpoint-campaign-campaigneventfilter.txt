@@ -1,0 +1,24 @@
+AWS::Pinpoint::Campaign CampaignEventFilter
+Specifies the settings for events that cause a campaign to be sent.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions)" : EventDimensions,
+  "[FilterType](#cfn-pinpoint-campaign-campaigneventfilter-filtertype)" : String
+}
+YAML
+[Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions): 
+    EventDimensions
+  [FilterType](#cfn-pinpoint-campaign-campaigneventfilter-filtertype): String
+Properties
+Dimensions 
+The dimension settings of the event filter for the campaign.
+Required: No
+Type: EventDimensions
+Update requires: No interruption
+FilterType 
+The type of event that causes the campaign to be sent. Valid values are: SYSTEM, sends the campaign when a system event occurs; and, ENDPOINT, sends the campaign when an endpoint event occurs.
+Required: No
+Type: String
+Update requires: No interruption

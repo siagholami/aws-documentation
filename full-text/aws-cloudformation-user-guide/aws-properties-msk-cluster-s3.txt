@@ -1,0 +1,30 @@
+AWS::MSK::Cluster S3
+The details of the Amazon S3 destination for broker logs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Bucket](#cfn-msk-cluster-s3-bucket)" : String,
+  "[Enabled](#cfn-msk-cluster-s3-enabled)" : Boolean,
+  "[Prefix](#cfn-msk-cluster-s3-prefix)" : String
+}
+YAML
+[Bucket](#cfn-msk-cluster-s3-bucket): String
+  [Enabled](#cfn-msk-cluster-s3-enabled): Boolean
+  [Prefix](#cfn-msk-cluster-s3-prefix): String
+Properties
+Bucket 
+The name of the S3 bucket that is the destination for broker logs.
+Required: No
+Type: String
+Update requires: No interruption
+Enabled 
+Specifies whether broker logs get sent to the specified Amazon S3 destination.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+Prefix 
+The S3 prefix that is the destination for broker logs.
+Required: No
+Type: String
+Update requires: No interruption

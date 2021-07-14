@@ -1,0 +1,20 @@
+Tutorial: Ruby in AWS Cloud9
+This tutorial shows you how to run Ruby scripts in an AWS Cloud9 development environment.
+Note
+Following this tutorial might result in charges to your AWS account. These include possible charges for services such as Amazon EC2 and Amazon S3. For more information, see Amazon EC2 Pricing and Amazon S3 Pricing.
+Prerequisites
+Before you use this tutorial, be sure to meet the following requirements.
+ You have an AWS Cloud9 EC2 development environment
+This tutorial assumes that you have an EC2 environment, and that the environment is connected to an Amazon EC2 instance running Amazon Linux or Ubuntu Server. See Creating an EC2 Environment for details.
+If you have a different type of environment or operating system, you might need to adapt this tutorial's instructions.
+ You have opened the AWS Cloud9 IDE for that environment
+When you open an environment, AWS Cloud9 opens the IDE for that environment in your web browser. See Opening an environment in AWS Cloud9 for details.
+Steps
+
+Step 1: Install Required Tools
+Step 2: Add Code
+Step 3: Run the Code
+Step 4: Install and Configure the AWS SDK for Ruby
+Step 5: Add AWS SDK Code
+Step 6: Run the AWS SDK Code
+Step 7: Clean Up

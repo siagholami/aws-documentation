@@ -1,0 +1,36 @@
+DropFields Class
+Drops fields within a DynamicFrame.
+Methods
+
+__call__
+apply
+name
+describeArgs
+describeReturn
+describeTransform
+describeErrors
+describe
+
+__call__(frame, paths, transformation_ctx = "", info = "", stageThreshold = 0, totalThreshold = 0)
+Drops nodes within a DynamicFrame.
+ frame – The DynamicFrame in which to drop the nodes (required).
+ paths – A list of full paths to the nodes to drop (required).
+ transformation_ctx – A unique string that is used to identify state information (optional).
+ info – A string associated with errors in the transformation (optional).
+ stageThreshold – The maximum number of errors that can occur in the transformation before it errors out (optional; the default is zero).
+ totalThreshold – The maximum number of errors that can occur overall before processing errors out (optional; the default is zero).
+Returns a new DynamicFrame without the specified fields.
+apply(cls, *args, **kwargs)
+Inherited from GlueTransform apply.
+name(cls)
+Inherited from GlueTransform name.
+describeArgs(cls)
+Inherited from GlueTransform describeArgs.
+describeReturn(cls)
+Inherited from GlueTransform describeReturn.
+describeTransform(cls)
+Inherited from GlueTransform describeTransform.
+describeErrors(cls)
+Inherited from GlueTransform describeErrors.
+describe(cls)
+Inherited from GlueTransform describe.

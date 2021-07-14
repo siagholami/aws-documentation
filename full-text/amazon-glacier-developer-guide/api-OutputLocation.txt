@@ -1,0 +1,10 @@
+OutputLocation
+Contains information about the location where the job results and errors are stored.
+Contents
+S3
+An object that describes an Amazon S3 location to receive the results of the restore request.
+Type: S3Location 
+Required: yes
+More Info
+
+Initiate Job (POST jobs)

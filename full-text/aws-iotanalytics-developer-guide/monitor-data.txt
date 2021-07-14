@@ -1,0 +1,22 @@
+Monitoring the ingested data
+You can check that the messages you sent are being ingested into your channel by using the AWS IoT Analytics console. 
+
+
+In the AWS IoT Analytics console, in the left navigation pane, choose Prepare and (if necessary) choose Channel, then choose the name of the channel you created earlier.
+
+
+
+On the channel detail page, scroll down to the Monitoring section. Adjust the displayed time frame as necessary by choosing one of the time frame indicators (1h 3h 12h 1d 3d 1w). You should see a graph line indicating the number of messages ingested into this channel during the specified time frame.
+
+
+
+A similar monitoring capability exists for checking pipeline activity executions. You can monitor activity execution errors on the pipeline's detail page. If you haven't specified activities as part of your pipeline, then 0 execution errors should be displayed.
+
+
+In the AWS IoT Analytics console, in the left navigation pane, choose Prepare and then choose Pipelines, then choose the name of a pipeline you created earlier.
+
+
+
+On the pipeline detail page, scroll down to the Monitoring section. Adjust the displayed time frame as necessary by choosing one of the time frame indicators (1h 3h 12h 1d 3d 1w). You should see a graph line indicating the number of pipeline activity execution errors during the specified time frame.
+
+

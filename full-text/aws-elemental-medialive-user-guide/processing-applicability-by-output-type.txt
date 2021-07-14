@@ -1,0 +1,9 @@
+Supported Features by Output Type
+This section describes which SCTE-35 features apply to the various types of output. 
+Topics
+ Archive Output with MPEG-2 Container
+ Frame Capture Output
+ HLS Output
+ MediaPackage Output
+ Microsoft Smooth Output
+ UDP Output

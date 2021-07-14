@@ -1,0 +1,13 @@
+AWS Encryption SDK command line interface
+The AWS Encryption SDK Command Line Interface (AWS Encryption CLI) enables you to use the AWS Encryption SDK to encrypt and decrypt data interactively at the command line and in scripts. You don't need cryptography or programming expertise. 
+Like all implementations of the AWS Encryption SDK, the AWS Encryption CLI offers advanced data protection features. These include envelope encryption, additional authenticated data (AAD), and secure, authenticated, symmetric key algorithm suites, such as 256-bit AES-GCM with key derivation and signing. 
+The AWS Encryption CLI is built on the AWS Encryption SDK for Python and is supported on Linux, macOS, and Windows. You can run commands and scripts to encrypt and decrypt your data in your preferred shell on Linux or macOS, in a Command Prompt window (cmd.exe) on Windows, and in a PowerShell console on any system. 
+All language-specific implementations of the AWS Encryption SDK, including the AWS Encryption CLI, are interoperable. For example, you can encrypt data with the AWS Encryption SDK for Java and decrypt it with the AWS Encryption CLI. 
+This topic introduces the AWS Encryption CLI, explains how to install and use it, and provides several examples to help you get started. For a quick start, see How to Encrypt and Decrypt Your Data with the AWS Encryption CLI in the AWS Security Blog. For more detailed information, see Read The Docs, and join us in developing the AWS Encryption CLI in the aws-encryption-sdk-cli repository on GitHub.
+Performance
+The AWS Encryption CLI is built on the AWS Encryption SDK for Python. Each time you run the CLI, you start a new instance of the Python runtime. To improve performance, whenever possible, use a single command instead of a series of independent commands. For example, run one command that processes the files in a directory recursively instead of running separate commands for each file.
+Topics
+ Installing the CLI
+ How to use the CLI
+ Examples
+ Syntax and parameter reference

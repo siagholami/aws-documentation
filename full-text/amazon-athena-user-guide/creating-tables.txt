@@ -1,0 +1,92 @@
+Creating Tables in Athena
+You can run DDL statements in the Athena console, using a JDBC or an ODBC driver, or using the Athena Add table wizard.
+When you create a new table schema in Athena, Athena stores the schema in a data catalog and uses it when you run queries.
+Athena uses an approach known as schema-on-read, which means a schema is projected on to your data at the time you run a query. This eliminates the need for data loading or transformation.
+Athena does not modify your data in Amazon S3.
+Athena uses Apache Hive to define tables and create databases, which are essentially a logical namespace of tables. 
+When you create a database and table in Athena, you are simply describing the schema and the location where the table data are located in Amazon S3 for read-time querying. Database and table, therefore, have a slightly different meaning than they do for traditional relational database systems because the data isn't stored along with the schema definition for the database and table. 
+When you query, you query the table using standard SQL and the data is read at that time. You can find guidance for how to create databases and tables using Apache Hive documentation, but the following provides guidance specifically for Athena.
+The maximum query string length is 256 KB.
+Hive supports multiple data formats through the use of serializer-deserializer (SerDe) libraries. You can also define complex schemas using regular expressions. For a list of supported SerDe libraries, see Supported SerDes and Data Formats.
+Considerations and Limitations
+Following are some important limitations and considerations for tables in Athena.
+Requirements for Tables in Athena and Data in Amazon S3
+When you create a table, you specify an Amazon S3 bucket location for the underlying data using the LOCATION clause. Consider the following:
+ Athena can only query the latest version of data on a versioned Amazon S3 bucket, and cannot query previous versions of the data.
+ You must have the appropriate permissions to work with data in the Amazon S3 location. For more information, see Access to Amazon S3.
+ Athena supports querying objects that are stored with multiple storage classes in the same bucket specified by the LOCATION clause. For example, you can query data in objects that are stored in different Storage classes (Standard, Standard-IA and Intelligent-Tiering) in Amazon S3.
+  Athena supports Requester Pays Buckets. For information how to enable Requester Pays for buckets with source data you intend to query in Athena, see Creating a Workgroup.
+ Athena does not support querying the data in the GLACIER storage class. It ignores objects transitioned to the GLACIER storage class based on an Amazon S3 lifecycle policy. 
+For more information, see Storage Classes, Changing the Storage Class of an Object in Amazon S3, Transitioning to the GLACIER Storage Class (Object Archival) , and Requester Pays Buckets in the Amazon Simple Storage Service Developer Guide.
+ If you issue queries against Amazon S3 buckets with a large number of objects and the data is not partitioned, such queries may affect the Get request rate limits in Amazon S3 and lead to Amazon S3 exceptions. To prevent errors, partition your data. Additionally, consider tuning your Amazon S3 request rates. For more information, see Request Rate and Performance Considerations.
+Functions Supported
+The functions supported in Athena queries are those found within Presto. For more information, see Presto 0.172 Functions and Operators in the Presto documentation.
+Transactional Data Transformations Are Not Supported
+Athena does not support transaction-based operations (such as the ones found in Hive or Presto) on table data. For a full list of keywords not supported, see Unsupported DDL.
+Operations That Change Table States Are ACID
+When you create, update, or delete tables, those operations are guaranteed ACID-compliant. For example, if multiple users or clients attempt to create or alter an existing table at the same time, only one will be successful.
+All Tables Are EXTERNAL
+If you use CREATE TABLE without the EXTERNAL keyword, Athena issues an error; only tables with the EXTERNAL keyword can be created. We recommend that you always use the EXTERNAL keyword. When you drop a table in Athena, only the table metadata is removed; the data remains in Amazon S3.
+Creating Tables Using AWS Glue or the Athena Console
+You can create tables in Athena by using AWS Glue, the add table wizard, or by running a DDL statement in the Athena Query Editor.
+To create a table using the AWS Glue Data Catalog
+
+
+Open the Athena console at https://console.aws.amazon.com/athena/.
+
+
+In the Query Editor, under Database, choose Create table, and then choose from AWS Glue crawler. 
+
+
+
+In the Go to AWS Glue to set up a crawler dialog box, choose Continue.
+
+
+
+Follow the steps in the AWS Glue console to add a crawler. 
+
+
+For more information, see Using AWS Glue Crawlers.
+To create a table using the Athena add table wizard
+
+
+Open the Athena console at https://console.aws.amazon.com/athena/.
+
+
+Under the database display in the Query Editor, choose Create table, and then choose from S3 bucket data.
+
+
+
+in the Add table wizard, follow the steps to create your table.
+
+
+
+To create a table using Hive DDL
+
+
+From the Database menu, choose the database for which you want to create a table. If you don't specify a database in your CREATE TABLE statement, the table is created in the database that is currently selected in the Query Editor.
+
+
+
+Enter a statement like the following, and then choose Run Query, or press CtrlENTER.
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS cloudfront_logs (
+       `Date` Date,
+       Time STRING,
+       Location STRING,
+       Bytes INT,
+       RequestIP STRING,
+       Method STRING,
+       Host STRING,
+       Uri STRING,
+       Status INT,
+       Referrer STRING,
+       OS String,
+       Browser String,
+       BrowserVersion String
+   ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+   WITH SERDEPROPERTIES (
+   "input.regex" = "^(?!#)([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s([^ ])\\s[^\(][\(]([^\;]).*\%20([^\/])[\/](.*)$"
+   ) LOCATION 's3://athena-examples-MyRegion/cloudfront/plaintext/';
+After the table is created, you can run queries against your data.

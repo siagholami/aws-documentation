@@ -1,0 +1,5 @@
+max_cursor_result_set_size
+Values (default in bold)
+0 (defaults to maximum) - 14400000 MB 
+Description
+The max_cursor_result_set_size  parameter is deprecated. For more information about cursor result set size, see Cursor constraints.

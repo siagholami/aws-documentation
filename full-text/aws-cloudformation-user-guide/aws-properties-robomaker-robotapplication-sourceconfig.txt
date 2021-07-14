@@ -1,0 +1,37 @@
+AWS::RoboMaker::RobotApplication SourceConfig
+Information about a source configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Architecture](#cfn-robomaker-robotapplication-sourceconfig-architecture)" : String,
+  "[S3Bucket](#cfn-robomaker-robotapplication-sourceconfig-s3bucket)" : String,
+  "[S3Key](#cfn-robomaker-robotapplication-sourceconfig-s3key)" : String
+}
+YAML
+[Architecture](#cfn-robomaker-robotapplication-sourceconfig-architecture): String
+  [S3Bucket](#cfn-robomaker-robotapplication-sourceconfig-s3bucket): String
+  [S3Key](#cfn-robomaker-robotapplication-sourceconfig-s3key): String
+Properties
+Architecture 
+The target processor architecture for the application.
+Required: Yes
+Type: String
+Allowed values: ARM64 | ARMHF | X86_64
+Update requires: No interruption
+S3Bucket 
+The Amazon S3 bucket name.
+Required: Yes
+Type: String
+Minimum: 3
+Maximum: 63
+Pattern: [a-z0-9][a-z0-9.\-]*[a-z0-9]
+Update requires: No interruption
+S3Key 
+The s3 object key.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1024
+Pattern: .*
+Update requires: No interruption

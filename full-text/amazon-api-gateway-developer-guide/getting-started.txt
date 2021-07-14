@@ -1,0 +1,8 @@
+Getting started with Amazon API Gateway
+To help you get started using Amazon API Gateway, go through the following hands-on walkthroughs and other resources:
+ Prerequisites: Get Ready to Build an API in API Gateway discusses how to create an AWS account and set up an IAM administrator user.
+ Create a REST API with Lambda Integrations shows how to create REST APIs with Lambda functions on the backend. Both proxy and non-proxy integration techniques are included.
+ Create a REST API with a Mock Integration shows how to create a REST API without an actual backend.
+ Tutorial: Create a REST API by Importing an Example shows how to create an example API by importing an OpenAPI 2.0 file.
+ Create a WebSocket API shows how to create a WebSocket API in API Gateway.
+ Amazon API Gateway Videos provides links to videos that discuss getting started with API Gateway.

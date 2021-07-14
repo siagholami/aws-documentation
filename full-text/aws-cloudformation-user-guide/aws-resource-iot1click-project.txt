@@ -1,0 +1,114 @@
+AWS::IoT1Click::Project
+The AWS::IoT1Click::Project resource creates an empty project with a placement template. A project contains zero or more placements that adhere to the placement template defined in the project. For more information, see CreateProject in the AWS IoT 1-Click Projects API Reference.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoT1Click::Project",
+  "Properties" : {
+      "[Description](#cfn-iot1click-project-description)" : String,
+      "[PlacementTemplate](#cfn-iot1click-project-placementtemplate)" : PlacementTemplate,
+      "[ProjectName](#cfn-iot1click-project-projectname)" : String
+    }
+}
+YAML
+Type: AWS::IoT1Click::Project
+Properties: 
+  [Description](#cfn-iot1click-project-description): String
+  [PlacementTemplate](#cfn-iot1click-project-placementtemplate): 
+    PlacementTemplate
+  [ProjectName](#cfn-iot1click-project-projectname): String
+Properties
+Description 
+The description of the project.
+Required: No
+Type: String
+Update requires: No interruption
+PlacementTemplate 
+An object describing the project's placement specifications.
+Required: Yes
+Type: PlacementTemplate
+Update requires: No interruption
+ProjectName 
+The name of the project from which to obtain information.
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the project ARN, such as arn:aws:iot1click:us-west-2:0123456789012:projects/test-project.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the project, such as arn:aws:iot1click:us-east-1:123456789012:projects/project-a1bzhi.
+ProjectName 
+The name of the project, such as project-a1bzhi.
+Examples
+Declare an AWS IoT 1-Click project
+JSON
+```
+{
+    "Description": "AWS IoT1Click Project test",
+    "Resources": {
+        "BasicProject": {
+            "Type": "AWS::IoT1Click::Project",
+            "Properties": {
+                "ProjectName": "project",
+                "Description": "description",
+                "PlacementTemplate": {
+                    "DefaultAttributes": {
+                        "Attribute": "Value",
+                        "Foo": "Bar"
+                    },
+                    "DeviceTemplates": {
+                        "testButton": {
+                            "DeviceType": "button",
+                            "CallbackOverrides": {
+                                "onClickCallback": ""
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+"Outputs": {
+    "ProjectId": {
+        "Value": {
+            "Ref": "BasicProject"
+        }
+    }
+}
+
+}
+```
+YAML
+```
+Description: "AWS IoT1Click Project test"
+Resources:
+  BasicProject:
+    Type: "AWS::IoT1Click::Project"
+    Properties:
+      ProjectName: "project"
+      Description: "description"
+      PlacementTemplate:
+        DefaultAttributes:
+          Attribute: Value
+          Foo: Bar
+        DeviceTemplates:
+          testButton:
+            DeviceType: "button"
+            CallbackOverrides:
+              onClickCallback: ""
+Outputs:
+  ProjectId:
+    Value: !Ref BasicProject
+```
+See also
+
+CreateProject
+Projects, Templates, and Placements
+AWS IoT 1-Click Programming Model

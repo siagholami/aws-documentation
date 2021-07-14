@@ -1,0 +1,7 @@
+Handling Service Client Responses
+After a service client method has been called, it returns a response object instance of an interface with the name associated with the client method. For example, if you use the AbcCommand client method, the response object is of AbcResponse (interface) type.
+Accessing Data Returned in the Response
+The response object contains the data, as properties, returned by the service request.
+In Creating Service Client Requests, the ListTablesCommand command returned the table names in the TableNames property of the response.
+Accessing Error Information
+If a command fails, it throws an exception. You can handle the exception as you need.

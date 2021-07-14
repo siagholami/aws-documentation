@@ -1,0 +1,181 @@
+AWS CodePipeline User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS CodePipeline?
+Continuous delivery and continuous integration
+What can I do with CodePipeline?
+A quick look at CodePipeline
+How do I get started with CodePipeline?
+We want to hear from you
+CodePipeline concepts
+DevOps pipeline example
+How pipeline executions work
+Input and output artifacts
+Getting started with CodePipeline
+Product and service integrations with CodePipeline
+Integrations with CodePipeline action types
+General integrations with CodePipeline
+Examples from the community
+Integration examples: Blog posts
+Integration examples: Videos
+
+
+CodePipeline tutorials
+Tutorial: Create a simple pipeline (S3 bucket)
+Tutorial: Create a simple pipeline (CodeCommit repository)
+Tutorial: Create a four-stage pipeline
+Tutorial: Set up a CloudWatch Events rule to receive email notifications for pipeline state changes
+Tutorial: Create a pipeline that builds and tests your Android app when a commit is pushed to your GitHub repository
+Tutorial: Create a pipeline that tests your iOS app after a change in your S3 bucket
+Tutorial: Create a pipeline that deploys to AWS Service Catalog
+Tutorial: Create a pipeline with AWS CloudFormation
+Example 1: Create an AWS CodeCommit pipeline with AWS CloudFormation
+Example 2: Create an Amazon S3 pipeline with AWS CloudFormation
+Example 3: Create a GitHub pipeline with AWS CloudFormation
+
+
+Tutorial: Create a pipeline that uses variables from AWS CloudFormation deployment actions
+Tutorial: Amazon ECS Standard Deployment with CodePipeline
+Tutorial: Create a pipeline with an Amazon ECR source and ECS-to-CodeDeploy deployment
+Tutorial: Create a pipeline that deploys an Amazon Alexa skill
+Tutorial: Create a pipeline that uses Amazon S3 as a deployment provider
+Tutorial: Create a pipeline that publishes your serverless application to the AWS Serverless Application Repository
+Tutorial: Using variables with Lambda invoke actions
+Tutorial: Use an AWS Step Functions invoke action in a pipeline
+Tutorial: Create a pipeline that uses AWS AppConfig as a deployment provider
+CodePipeline best practices and use cases
+Tagging resources
+Use CodePipeline with Amazon Virtual Private Cloud
+Working with pipelines in CodePipeline
+Start a pipeline execution in CodePipeline
+Use CloudWatch Events to start a pipeline (CodeCommit source)
+Create a CloudWatch Events rule for a CodeCommit source (console)
+Create a CloudWatch Events rule for a CodeCommit source (CLI)
+Create a CloudWatch Events rule for a CodeCommit source (AWS CloudFormation template)
+
+
+Use CloudWatch Events to start a pipeline (Amazon S3 source)
+Create a CloudWatch Events rule for an Amazon S3 source (console)
+Create a CloudWatch Events rule for an Amazon S3 source (CLI)
+Create a CloudWatch Events rule for an Amazon S3 source (AWS CloudFormation template)
+
+
+Use webhooks to start a pipeline (GitHub source)
+Create a webhook for a GitHub source
+List webhooks in your account
+Edit the webhook for your GitHub source
+Delete the webhook for your GitHub source
+Tag a webhook in CodePipeline
+Create a webhook for a GitHub source (AWS CloudFormation template)
+
+
+Use CloudWatch Events to start a pipeline (Amazon ECR source)
+Create a CloudWatch Events rule for an Amazon ECR source (console)
+Create a CloudWatch Events rule for an Amazon ECR source (CLI)
+Create a CloudWatch Events rule for an Amazon ECR source (AWS CloudFormation template)
+
+
+Use periodic checks to start a pipeline
+Start a pipeline manually in AWS CodePipeline
+Use Amazon CloudWatch Events to start a pipeline on a schedule
+
+
+Stop a pipeline execution in CodePipeline
+Create a pipeline in CodePipeline
+Edit a pipeline in CodePipeline
+View pipeline details and history in CodePipeline
+View pipeline details and history (console)
+View pipeline details and history (CLI)
+
+
+Delete a pipeline in CodePipeline
+Create a pipeline in CodePipeline that uses resources from another AWS account
+Edit pipelines to use push events
+Create the CodePipeline service role
+Create the CodePipeline service role (console)
+Create the CodePipeline service role (CLI)
+
+
+Tag a pipeline in CodePipeline
+Create a connection to Bitbucket
+Create a notification rule
+Working with actions in CodePipeline
+Create and add a custom action in CodePipeline
+Tag a custom action in CodePipeline
+Invoke an AWS Lambda function in a pipeline in CodePipeline
+Retry a failed action in CodePipeline
+Manage approval actions in CodePipeline
+Grant approval permissions to an IAM user in CodePipeline
+Grant Amazon SNS permissions to a CodePipeline service role
+Add a manual approval action to a pipeline in CodePipeline
+Approve or reject an approval action in CodePipeline
+JSON data format for manual approval notifications in CodePipeline
+
+
+Add a cross-Region action in CodePipeline
+Working with variables
+Working with stage transitions in CodePipeline
+Monitoring pipelines with CodePipeline
+Detect and react to changes in pipeline state with Amazon CloudWatch Events
+Events placeholder bucket reference
+Logging CodePipeline API calls with AWS CloudTrail
+Troubleshooting CodePipeline
+Security in AWS CodePipeline
+Data protection in AWS CodePipeline
+Identity and access management for AWS CodePipeline
+How AWS CodePipeline works with IAM
+AWS CodePipeline identity-based policy examples
+Policy best practices
+Viewing resources in the console
+Allow users to view their own permissions
+Identity-based policies (IAM) examples
+Using tags to control access to CodePipeline resources
+Permissions required to use the CodePipeline console
+AWS managed (predefined) policies for CodePipeline
+Customer managed policy examples
+
+
+AWS CodePipeline resource-based policy examples
+Troubleshooting AWS CodePipeline identity and access
+CodePipeline permissions reference
+
+
+Logging and monitoring in CodePipeline
+Compliance validation for AWS CodePipeline
+Resilience in AWS CodePipeline
+Infrastructure security in AWS CodePipeline
+Security best practices
+AWS CodePipeline command line reference
+CodePipeline pipeline structure reference
+Action structure reference
+Amazon ECR
+Amazon Elastic Container Service and CodeDeploy Blue-Green
+Amazon Elastic Container Service
+Amazon S3
+AWS AppConfig
+AWS CloudFormation
+AWS CodeBuild
+CodeCommit
+AWS CodeDeploy
+AWS Device Farm
+AWS Lambda
+AWS Step Functions
+CodeStarSourceConnection
+GitHub
+Image definitions file reference
+Variables
+Update polling pipelines to the recommended change detection method
+Quotas in AWS CodePipeline
+AWS CodePipeline User Guide document history
+AWS glossary

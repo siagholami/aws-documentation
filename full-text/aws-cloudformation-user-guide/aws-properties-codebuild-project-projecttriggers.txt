@@ -1,0 +1,24 @@
+AWS::CodeBuild::Project ProjectTriggers
+ProjectTriggers is a property of the AWS CodeBuild Project resource that specifies webhooks that trigger an AWS CodeBuild build. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups)" : [ FilterGroup, ... ],
+  "[Webhook](#cfn-codebuild-project-projecttriggers-webhook)" : Boolean
+}
+YAML
+[FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups): 
+    - FilterGroup
+  [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
+Properties
+FilterGroups 
+ A list of lists of WebhookFilter objects used to determine which webhook events are triggered. At least one WebhookFilter in the array must specify EVENT as its type. 
+Required: No
+Type: List of FilterGroup
+Update requires: No interruption
+Webhook 
+ Specifies whether or not to begin automatically rebuilding the source code every time a code change is pushed to the repository. 
+Required: No
+Type: Boolean
+Update requires: No interruption

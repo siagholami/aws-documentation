@@ -1,0 +1,110 @@
+AWS Glue Scala DynamicRecord Class
+Topics
+ def addField
+ def dropField
+ def setError
+ def isError
+ def getError
+ def clearError
+ def write
+ def readFields
+ def clone
+ def schema
+ def getRoot
+ def toJson
+ def getFieldNode
+ def getField
+ def hashCode
+ def equals
+ DynamicRecord Object
+ RecordTraverser Trait
+Package: com.amazonaws.services.glue
+class DynamicRecord extends Serializable with Writable with Cloneable
+A DynamicRecord is a self-describing data structure that represents a row of data in the dataset that is being processed. It is self-describing in the sense that you can get the schema of the row that is represented by the DynamicRecord by inspecting the record itself. A DynamicRecord is similar to a Row in Apache Spark.
+def addField
+def addField( path : String,
+              dynamicNode : DynamicNode
+            ) : Unit
+Adds a DynamicNode to the specified path.
+ path — The path for the field to be added.
+ dynamicNode — The DynamicNode to be added at the specified path.
+def dropField
+def dropField(path: String, underRename: Boolean = false): Option[DynamicNode]
+Drops a DynamicNode from the specified path and returns the dropped node if there is not an array in the specified path.
+ path — The path to the field to drop.
+ underRename — True if dropField is called as part of a rename transform, or false otherwise (false by default).
+Returns a scala.Option Option (DynamicNode).
+def setError
+def setError( error : Error )
+Sets this record as an error record, as specified by the error parameter.
+Returns a DynamicRecord.
+def isError
+def isError
+Checks whether this record is an error record.
+def getError
+def getError
+Gets the Error if the record is an error record. Returns scala.Some Some (Error) if this record is an error record, or otherwise scala.None .
+def clearError
+def clearError
+Set the Error to scala.None.None .
+def write
+override def write( out : DataOutput ) : Unit
+def readFields
+override def readFields( in : DataInput ) : Unit
+def clone
+override def clone : DynamicRecord
+Clones this record to a new DynamicRecord and returns it.
+def schema
+def schema
+Gets the Schema by inspecting the record.
+def getRoot
+def getRoot : ObjectNode
+Gets the root ObjectNode for the record.
+def toJson
+def toJson : String
+Gets the JSON string for the record.
+def getFieldNode
+def getFieldNode( path : String ) : Option[DynamicNode]
+Gets the field's value at the specified path as an option of DynamicNode.
+Returns scala.Some Some (DynamicNode) if the field exists, or otherwise scala.None.None .
+def getField
+def getField( path : String ) : Option[Any]
+Gets the field's value at the specified path as an option of DynamicNode.
+Returns scala.Some Some (value).
+def hashCode
+override def hashCode : Int
+def equals
+override def equals( other : Any )
+DynamicRecord Object
+object DynamicRecord
+def apply
+def apply( row : Row,
+           schema : SparkStructType )
+Apply method to convert an Apache Spark SQL Row to a DynamicRecord.
+ row — A Spark SQL Row.
+ schema — The Schema of that row.
+Returns a DynamicRecord.
+RecordTraverser Trait
+trait RecordTraverser {
+  def nullValue(): Unit
+  def byteValue(value: Byte): Unit
+  def binaryValue(value: Array[Byte]): Unit
+  def booleanValue(value: Boolean): Unit
+  def shortValue(value: Short) : Unit
+  def intValue(value: Int) : Unit
+  def longValue(value: Long) : Unit
+  def floatValue(value: Float): Unit
+  def doubleValue(value: Double): Unit
+  def decimalValue(value: BigDecimal): Unit
+  def stringValue(value: String): Unit
+  def dateValue(value: Date): Unit
+  def timestampValue(value: Timestamp): Unit
+  def objectStart(length: Int): Unit
+  def objectKey(key: String): Unit
+  def objectEnd(): Unit
+  def mapStart(length: Int): Unit
+  def mapKey(key: String): Unit
+  def mapEnd(): Unit
+  def arrayStart(length: Int): Unit
+  def arrayEnd(): Unit
+}

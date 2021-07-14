@@ -1,0 +1,3 @@
+Section 5: Cleaning up your resources
+Your cluster continues to accrue charges as long as it is running. When you have completed this tutorial, return your environment to the previous state by following the steps in Find Additional Resources and Reset Your Environment in Amazon Redshift Getting Started.
+For more information about WLM, see Implementing workload management.

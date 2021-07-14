@@ -1,0 +1,6 @@
+Databases
+The following are the AWS Data Pipeline database objects:
+Topics
+ JdbcDatabase
+ RdsDatabase
+ RedshiftDatabase

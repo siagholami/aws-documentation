@@ -1,0 +1,34 @@
+AWS::Synthetics::Canary VPCConfig
+If this canary is to test an endpoint in a VPC, this structure contains information about the subnet and security groups of the VPC endpoint. For more information, see  Running a Canary in a VPC.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SecurityGroupIds](#cfn-synthetics-canary-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[SubnetIds](#cfn-synthetics-canary-vpcconfig-subnetids)" : [ String, ... ],
+  "[VpcId](#cfn-synthetics-canary-vpcconfig-vpcid)" : String
+}
+YAML
+[SecurityGroupIds](#cfn-synthetics-canary-vpcconfig-securitygroupids): 
+    - String
+  [SubnetIds](#cfn-synthetics-canary-vpcconfig-subnetids): 
+    - String
+  [VpcId](#cfn-synthetics-canary-vpcconfig-vpcid): String
+Properties
+SecurityGroupIds 
+The IDs of the security groups for this canary.
+Required: Yes
+Type: List of String
+Maximum: 5
+Update requires: No interruption
+SubnetIds 
+The IDs of the subnets where this canary is to run.
+Required: Yes
+Type: List of String
+Maximum: 16
+Update requires: No interruption
+VpcId 
+The ID of the VPC where this canary is to run.
+Required: No
+Type: String
+Update requires: No interruption

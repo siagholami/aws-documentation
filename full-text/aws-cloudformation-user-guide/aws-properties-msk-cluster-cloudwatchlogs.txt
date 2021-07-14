@@ -1,0 +1,23 @@
+AWS::MSK::Cluster CloudWatchLogs
+Details of the CloudWatch Logs destination for broker logs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Enabled](#cfn-msk-cluster-cloudwatchlogs-enabled)" : Boolean,
+  "[LogGroup](#cfn-msk-cluster-cloudwatchlogs-loggroup)" : String
+}
+YAML
+[Enabled](#cfn-msk-cluster-cloudwatchlogs-enabled): Boolean
+  [LogGroup](#cfn-msk-cluster-cloudwatchlogs-loggroup): String
+Properties
+Enabled 
+Specifies whether broker logs get sent to the specified CloudWatch Logs destination.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+LogGroup 
+The CloudWatch log group that is the destination for broker logs.
+Required: No
+Type: String
+Update requires: No interruption

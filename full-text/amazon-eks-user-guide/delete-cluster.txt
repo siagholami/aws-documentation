@@ -1,0 +1,150 @@
+Deleting a cluster
+When you're done using an Amazon EKS cluster, you should delete the resources associated with it so that you don't incur any unnecessary costs.
+Important
+If you have active services in your cluster that are associated with a load balancer, you must delete those services before deleting the cluster so that the load balancers are deleted properly. Otherwise, you can have orphaned resources in your VPC that prevent you from being able to delete the VPC.
+You can delete a cluster with eksctl, the AWS Management Console, or the AWS CLI.
+[ To delete an Amazon EKS cluster and nodes with eksctl ]
+This procedure requires eksctl version 0.28.0 or later. You can check your version with the following command:
+eksctl version
+For more information on installing or upgrading eksctl, see Installing or upgrading eksctl.
+Note
+This procedure only works for clusters that were created with eksctl.
+
+List all services running in your cluster.
+
+kubectl get svc --all-namespaces
+
+Delete any services that have an associated EXTERNAL-IP value. These services are fronted by an Elastic Load Balancing load balancer, and you must delete them in Kubernetes to allow the load balancer and associated resources to be properly released.
+
+kubectl delete svc service-name
+
+Delete the cluster and its associated nodes with the following command, replacing prod with your cluster name.
+
+eksctl delete cluster --name prod
+Output:
+[ℹ]  using region region-code
+   [ℹ]  deleting EKS cluster "prod"
+   [ℹ]  will delete stack "eksctl-prod-nodegroup-standard-nodes"
+   [ℹ]  waiting for stack "eksctl-prod-nodegroup-standard-nodes" to get deleted
+   [ℹ]  will delete stack "eksctl-prod-cluster"
+   [✔]  the following EKS cluster resource(s) for "prod" will be deleted: cluster. If in doubt, check CloudFormation console
+[ To delete an Amazon EKS cluster with the AWS Management Console ]
+
+List all services running in your cluster.
+
+kubectl get svc --all-namespaces
+
+Delete any services that have an associated EXTERNAL-IP value. These services are fronted by an Elastic Load Balancing load balancer, and you must delete them in Kubernetes to allow the load balancer and associated resources to be properly released.
+
+kubectl delete svc service-name
+
+
+Delete all node groups and Fargate profiles.
+
+
+Open the Amazon EKS console at https://console.aws.amazon.com/eks/home#/clusters.
+
+
+In the left navigation, select Clusters, and then in the tabbed list of clusters, select the name of the cluster that you want to delete.
+
+
+Select the Compute tab, select a node group to delete, select Delete, enter the name of the node group, and then select Delete. Delete all node groups in the cluster.
+Note
+The node groups listed are managed node groups only.
+
+
+Select a Fargate Profile to delete, select Delete, enter the name of the profile, and then select Delete. Delete all Fargate profiles in the cluster.
+
+
+Delete all self-managed node AWS CloudFormation stacks.
+
+
+Open the AWS CloudFormation console at https://console.aws.amazon.com/cloudformation.
+
+
+Select the node stack to delete and then choose Actions, Delete Stack.
+
+
+On the Delete Stack confirmation screen, choose Yes, Delete. Delete all self-managed node stacks in the cluster.
+
+
+Delete the cluster.
+
+
+Open the Amazon EKS console at https://console.aws.amazon.com/eks/home#/clusters.
+
+
+Select the cluster to delete and choose Delete.
+
+
+On the delete cluster confirmation screen, choose Delete.
+
+
+(Optional) Delete the VPC AWS CloudFormation stack.
+
+
+Select the VPC stack to delete and choose Actions and then Delete Stack.
+
+
+On the Delete Stack confirmation screen, choose Yes, Delete.
+
+
+[ To delete an Amazon EKS cluster with the AWS CLI ]
+
+List all services running in your cluster.
+
+kubectl get svc --all-namespaces
+
+Delete any services that have an associated EXTERNAL-IP value. These services are fronted by an Elastic Load Balancing load balancer, and you must delete them in Kubernetes to allow the load balancer and associated resources to be properly released.
+
+kubectl delete svc service-name
+
+
+Delete all node groups and Fargate profiles.
+
+
+List the node groups in your cluster with the following command.
+aws eks list-nodegroups --cluster-name my-cluster
+Note
+The node groups listed are managed node groups only.
+
+
+Delete each node group with the following command. Delete all node groups in the cluster.
+aws eks delete-nodegroup --nodegroup-name my-nodegroup --cluster-name my-cluster
+
+
+List the Fargate profiles in your cluster with the following command.
+aws eks list-fargate-profiles --cluster-name my-cluster
+
+
+Delete each Fargate profile with the following command. Delete all Fargate profiles in the cluster.
+aws eks delete-fargate-profile --fargate-profile-name my-fargate-profile --cluster-name my-cluster
+
+
+Delete all self-managed node AWS CloudFormation stacks.
+
+
+List your available AWS CloudFormation stacks with the following command. Find the node template name in the resulting output.
+aws cloudformation list-stacks --query "StackSummaries[].StackName"
+
+
+Delete each node stack with the following command, replacing node-stack with your node stack name. Delete all self-managed node stacks in the cluster.
+aws cloudformation delete-stack --stack-name node-stack
+
+
+Delete the cluster with the following command, replacing my-cluster with your cluster name.
+
+
+aws eks delete-cluster --name my-cluster
+
+
+(Optional) Delete the VPC AWS CloudFormation stack.
+
+
+List your available AWS CloudFormation stacks with the following command. Find the VPC template name in the resulting output.
+aws cloudformation list-stacks --query "StackSummaries[].StackName"
+
+
+Delete the VPC stack with the following command, replacing my-vpc-stack with your VPC stack name.
+aws cloudformation delete-stack --stack-name my-vpc-stack
+

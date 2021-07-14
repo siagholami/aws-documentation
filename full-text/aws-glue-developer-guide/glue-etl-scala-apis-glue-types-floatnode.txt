@@ -1,0 +1,12 @@
+AWS Glue Scala FloatNode APIs
+Package: com.amazonaws.services.glue.types
+FloatNode Case Class
+FloatNode
+case class FloatNode extends ScalarNode(value, TypeCode.FLOAT)  (
+           value : Float )
+FloatNode val Fields
+
+ordering
+
+FloatNode def Methods
+def equals( other : Any )

@@ -1,0 +1,9 @@
+Creating a Dynamic Daytime Sky
+To add a dynamic daytime sky, you adjust various sun parameters, atmospheric properties, sun ray effect, and sun shadows. Dynamic skies use the SkyHDR Shader.
+All properties and parameters in the following topics are ignored when you use a static sky (SkyBox), which uses the Sky Shader.
+Topics
+ Setting Daytime Atmospheric Effects
+ Setting Sun Parameters and Console Variables
+ Adding Sun Rays
+ Setting Sun Shadow Settings
+ Adding Cascaded Sun Shadows

@@ -1,0 +1,29 @@
+AWS::KinesisFirehose::DeliveryStream KinesisStreamSourceConfiguration
+The KinesisStreamSourceConfiguration property type specifies the stream and role Amazon Resource Names (ARNs) for a Kinesis stream used as the source for a delivery stream. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[KinesisStreamARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn)" : String,
+  "[RoleARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn)" : String
+}
+YAML
+[KinesisStreamARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn): String
+  [RoleARN](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn): String
+Properties
+KinesisStreamARN 
+The ARN of the source Kinesis data stream.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 512
+Pattern: arn:.*
+Update requires: No interruption
+RoleARN 
+The ARN of the role that provides access to the source Kinesis data stream.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 512
+Pattern: arn:.*
+Update requires: No interruption

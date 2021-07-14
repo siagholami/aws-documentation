@@ -1,0 +1,61 @@
+Add users to Amazon Connect
+You can add users and configure them with permissions that are appropriate to their roles (for example, agents or managers). For more information, see Security profiles. Contacts can be routed based on the skills required of the agents. For more information, see Create a routing profile.
+Required permissions for adding users
+Before you can add users to Amazon Connect, you need the following permissions assigned to your security profile: Users - Create.
+
+By default, the Amazon Connect Admin security profile has these permissions.
+For information about how add more permissions to an existing security profile, see Update security profiles.
+Add a user individually
+
+
+Log in to the Amazon Connect console with an Admin account, or an account assigned to a security profile that has permissions to create users.
+
+
+Choose Users, User management.
+
+
+Choose Add new users.
+
+
+Choose Create and set up a new user and then choose Next.
+
+
+Enter the name, email address, and password for the user.
+
+
+Choose a routing profile and a security profile.
+
+
+Choose Save. If the Save button isn't active, it means you're logged in with an Amazon Connect account that doesn't have the required security profile permissions. 
+
+
+To fix this issue, log in with an account that is assigned to the Amazon Connect Admin security profile. Or, ask another Admin to help. 
+
+For information about adding agents, see Configure agent settings: routing profile, phone type, and auto-accept calls. 
+
+Add users in bulk from a csv file
+Use these steps to add several users from a csv file such as an Excel spreadsheet"
+
+
+Log in to the Amazon Connect console with an Admin account, or an account assigned to a security profile that has permissions to create users.
+
+
+Choose Users, User management.
+
+
+Choose Add new users.
+
+
+Choose Upload my users from a template (csv) and then choose Next.
+
+
+Choose Download template. 
+
+
+Add your users to the template and upload it to Amazon Connect.
+
+
+If you get an error message, it usually indicates that one of the required columns is missing information, or there's a typo in one of the cells. 
+ We recommend checking the format of the phone number as a starting point in your investigation.
+ If you get an error message that Security profile is not found, check whether there's a typo in one of the cells in the security_profile_name_1 column.
+ Update the .csv file and try uploading it again.

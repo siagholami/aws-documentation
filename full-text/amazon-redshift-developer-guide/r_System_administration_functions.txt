@@ -1,0 +1,10 @@
+System administration functions
+Topics
+ CHANGE_QUERY_PRIORITY
+ CHANGE_SESSION_PRIORITY
+ CHANGE_USER_PRIORITY
+ CURRENT_SETTING
+ PG_CANCEL_BACKEND
+ PG_TERMINATE_BACKEND
+ SET_CONFIG
+Amazon Redshift supports several system administration functions.

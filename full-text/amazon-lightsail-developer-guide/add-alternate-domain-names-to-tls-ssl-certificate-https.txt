@@ -1,0 +1,54 @@
+Add alternate domains and subdomains to your SSL/TLS certificate in Amazon Lightsail
+Last updated: November 29, 2017 
+When you create your SSL/TLS certificate for your Lightsail load balancer, you can add alternate domains and subdomains to it. These alternate names help ensure that all traffic to your load balancer is encrypted.
+When you specify a primary domain, you can use a fully qualified domain name such as www.example.com or an apex domain name such as example.com.
+The total number of domains and subdomains must not exceed 10, so you can add up to 9 alternate domains and subdomains to your certificate. You might want to add entries similar to the following list.
+ example.com
+ example.net
+ blog.example.com
+ myexamples.com
+To create a certificate with alternate domains and subdomains
+
+
+If you don't have one yet, create a Lightsail load balancer.
+
+
+On the Lightsail home page, choose the Networking tab.
+
+
+Choose your Lightsail load balancer to manage it.
+
+
+Choose Inbound traffic.
+
+
+Choose Create certificate.
+
+
+Enter your primary domain (e.g., www.example.com).
+
+
+Enter a name for your certificate or accept the default.
+
+
+Resource names:
+    Must be unique within each AWS Region in your Lightsail account.
+    Must contain 2 to 255 characters.
+    Must start and end with an alphanumeric character or number.
+    Can include alphanumeric characters, numbers, periods, dashes, and underscores.
+
+
+Enter your domains and subdomains in the list. Choose the plus icon to add a new line.
+
+
+
+Choose Create.
+
+
+Once created, you have 72 hours to verify that you own your domain.
+Next steps
+
+Verify domain ownership using DNS 
+
+Once verified, you can select your validated certificate to associate it with your Lightsail load balancer.
+  Enable session persistence 

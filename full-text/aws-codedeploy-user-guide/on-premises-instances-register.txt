@@ -1,0 +1,11 @@
+Register an on-premises instance with CodeDeploy
+To register an on-premises instance, you must use an IAM identity to authenticate your requests. You can choose from the following options for the IAM identity and registration method you use:
+ Use an IAM user ARN to authenticate requests.
+   Use the register command for the most automated registration process. Best for registering a single on-premises instance. For information, see Use the register command (IAM user ARN) to register an on-premises instance. 
+   Use the register-on-premises-instance command to manually configure most registration options. Suitable for registering a small number of on-premises instances. For information, see Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance. 
+ Use an IAM role ARN to authenticate requests. 
+   Use the register-on-premises-instance command and periodically refreshed temporary credentials generated with the AWS Security Token Service (AWS STS) to manually configure most registration options. Best for registering a large number of on-premises instances. For information, see Use the register-on-premises-instance command (IAM Session ARN) to register an on-premises instance .
+Topics
+ Use the register command (IAM user ARN) to register an on-premises instance
+ Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance
+ Use the register-on-premises-instance command (IAM Session ARN) to register an on-premises instance

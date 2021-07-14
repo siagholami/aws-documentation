@@ -1,0 +1,67 @@
+AWS Application Discovery Service User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Application Discovery Service?
+Setting Up AWS Application Discovery Service
+Step 1: Sign Up for AWS
+Step 2: Create IAM Users
+AWS Application Discovery Agent
+Data Collected by the Discovery Agent
+Prerequisites for Agent Installation
+Agent Installation on Linux
+Agent Installation on Windows
+Start Discovery Agent Data Collection
+AWS Agentless Discovery Connector
+Data Collected by the Discovery Connector
+Download the Discovery Connector
+Deploy the Discovery Connector
+Configure the AWS Discovery Connector
+Start Discovery Connector data collection
+Troubleshooting the Discovery Connector
+Migration Hub Import
+View, Export, and Explore Discovered Data
+View Collected Data Using the Console
+Export Collected Data
+Data Exploration in Amazon Athena
+Enabling Data Exploration in Amazon Athena
+Working with Data Exploration in Amazon Athena
+
+
+AWS Application Discovery Service Console Walkthroughs
+Main Dashboard
+Data Collection Tools
+View, Export, and Explore Server Data
+Querying Discovered Configuration Items
+Security in AWS Application Discovery Service
+Identity and Access Management for AWS Application Discovery Service
+How AWS Application Discovery Service Works with IAM
+AWS Managed (Predefined) Policies for Application Discovery Service
+AWS Application Discovery Service Identity-Based Policy Examples
+Using Service-Linked Roles for Application Discovery Service
+Service-Linked Role Permissions for Application Discovery Service
+Creating a Service-Linked Role for Application Discovery Service
+Deleting a Service-Linked Role for Application Discovery Service
+
+
+Troubleshooting AWS Application Discovery Service Identity and Access
+
+
+Logging and monitoring in AWS Application Discovery Service
+Logging Application Discovery Service API Calls with AWS CloudTrail
+
+
+AWS Application Discovery Service Limits
+Troubleshooting Data Exploration in Amazon Athena
+Document History for AWS Application Discovery Service
+AWS glossary

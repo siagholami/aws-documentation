@@ -1,0 +1,167 @@
+Working with AWS Step Functions
+You can use the AWS Toolkit for Visual Studio Code (VS Code) to perform various operations with state machines.
+Topics
+ Prerequisites
+ Work with state machines in VS Code
+ State machine templates
+ State machine graph visualization
+ Code snippets
+ Code completion and validation
+Prerequisites
+
+Be sure your system meets the prerequisites specified in Installing the Toolkit for VS Code, then install the toolkit.
+Ensure that you have configured your credentials before opening the AWS Explorer.
+
+Work with state machines in VS Code
+You can use VS Code to interact with remote state machines, and develop state machines locally. You can create or update state machines, list existing state machines, execute them, and download them. VS Code also lets you create new state machines from templates, see a visualization of your state machine, and provides code snippets, code completion, and code validation.
+List existing state machines
+If you've already created state machines, you can view a list of them:
+
+
+Open the AWS Explorer.
+
+
+Select Step Functions
+
+
+Verify that it lists all the state machines in your account.
+
+
+
+Download a state machine
+To download a state machine:
+
+
+In the AWS Explorer, right click the state machine that you want to download.
+
+
+Select Download, then select the location where you want to download the state machine.
+
+
+Verify that it downloaded correctly.
+
+
+
+Create a state machine
+You can create a new state machine yourself, or you can use a template. For more information on creating a state machine from a template, see the State Machine Templates section. To create a new state machine:
+
+
+Create a new Amazon States Language (ASL) file with your state machine definition. Use the menu at the bottom right to set it as Amazon States Language.
+
+
+Select Publish to Step Functions.
+
+
+
+Select Quick Create, choose a role, and name your state machine.
+
+
+
+
+
+Update a state machine
+To update a state machine:
+
+
+Edit the ASL file with your state machine definition.
+
+
+Select Publish to Step Functions.
+
+
+
+Select Quick Update, then select the state machine you want to update.
+
+
+
+
+Execute a state machine
+To execute a state machine:
+
+
+In the AWS Explorer, right click the state machine that you want to execute.
+
+
+Provide input for the execution. You can try both input from a file, and input in a text box.
+
+
+Start the execution and verify that it runs successfully.
+
+
+
+
+State machine templates
+When you create a state machine, you have the option to create it from a template. The template contains a sample state machine definition with several commonly used states, and provides you with a starting point. To use state machine templates:
+
+
+Open the Command Palette in VS Code .
+
+
+Select AWS: Create a new Step Functions state machine.
+
+
+Choose the template you want to use.
+
+
+
+State machine graph visualization
+Graph visualizations let you see what your state machine looks like in graphical format. When you create a graph visualization, another tab will open and display a visualizion of the state machine JSON. You can then compare the state machine definition you are writing concurrently with its visualization. As you change your state machine definition, the visualization will be updated.
+Note
+To create a visualizion of a state machine definition, the definition must be open in the active editor. If you close or rename the definition file, the visualization will close.
+To create a state machine graph visualization:
+
+
+Define your state machine.
+
+
+Open the Command Palette in VS Code.
+
+
+To create a visualization, use the visualization button in the upper right corner, or choose AWS Preview state machine graph.
+
+
+
+Code snippets
+Code snippets let you insert short sections of code. To use code snippets:
+
+
+Open a file and save it with the extension .asl.json. 
+
+
+Create a new state machine with the States property.
+
+
+Place the cursor within States.
+
+
+Use the key combinationControl  Space, and select your preferred code snippet.
+
+
+Use Tab to traverse the variable and parameters in the code snippet.
+
+
+Test Retry and Catch snippets by placing the cursor within the related state.
+
+
+
+Code completion and validation
+To see how code completion works:
+
+
+Create several states.
+
+
+Place the cursor after a Next, StartAt, or Default property.
+
+
+Use the key combinationControl  Space to list available completions. Additional properties can be accessed using Control  Space again, and will be based on the Type of the State.
+
+
+As you work, code validation will happen for:
+    Missing properties
+    Incorrect values
+    No terminal state
+    Nonexistent states that are pointed to
+
+
+

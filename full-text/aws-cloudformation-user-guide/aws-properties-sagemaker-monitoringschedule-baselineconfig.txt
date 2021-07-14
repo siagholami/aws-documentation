@@ -1,0 +1,25 @@
+AWS::SageMaker::MonitoringSchedule BaselineConfig
+Baseline configuration used to validate that the data conforms to the specified constraints and statistics.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ConstraintsResource](#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource)" : ConstraintsResource,
+  "[StatisticsResource](#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource)" : StatisticsResource
+}
+YAML
+[ConstraintsResource](#cfn-sagemaker-monitoringschedule-baselineconfig-constraintsresource): 
+    ConstraintsResource
+  [StatisticsResource](#cfn-sagemaker-monitoringschedule-baselineconfig-statisticsresource): 
+    StatisticsResource
+Properties
+ConstraintsResource 
+The Amazon S3 URI for the constraints resource.
+Required: No
+Type: ConstraintsResource
+Update requires: No interruption
+StatisticsResource 
+The baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
+Required: No
+Type: StatisticsResource
+Update requires: No interruption

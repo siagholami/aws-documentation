@@ -1,0 +1,36 @@
+Step 2: Create the Kinesis Data Analytics Application
+In this section of the Hotspots example, you create an Amazon Kinesis data analytics application as follows:
+ Configure the application input to use the Kinesis data stream you created as the streaming source in Step 1.
+ Use the provided application code in the AWS Management Console.
+To create an application
+
+Create a Kinesis data analytics application by following steps 1, 2, and 3 in the Getting Started exercise (see Step 3.1: Create an Application).
+
+In the source configuration, do the following:
+    Specify the streaming source you created in Step 1: Create the Input and Output Streams.
+    After the console infers the schema, edit the schema. Ensure that the x and y column types are set to DOUBLE and that the IS_HOT column type is set to VARCHAR. 
+
+Use the following application code (you can paste this code into the SQL editor):
+
+CREATE OR REPLACE STREAM "DESTINATION_SQL_STREAM" (
+       "x" DOUBLE, 
+       "y" DOUBLE, 
+       "is_hot" VARCHAR(4),
+       HOTSPOTS_RESULT VARCHAR(10000)
+   ); 
+   CREATE OR REPLACE PUMP "STREAM_PUMP" AS 
+       INSERT INTO "DESTINATION_SQL_STREAM" 
+       SELECT "x", "y", "is_hot", "HOTSPOTS_RESULT" 
+       FROM TABLE (
+           HOTSPOTS(   
+               CURSOR(SELECT STREAM "x", "y", "is_hot" FROM "SOURCE_SQL_STREAM_001"), 
+               1000, 
+               0.2, 
+               17)
+       );
+
+Run the SQL code and review the results.
+
+
+Next Step
+Step 3: Configure the Application Output

@@ -1,0 +1,33 @@
+Shield required permissions for API actions
+When you set up Access control and writing permissions policies that you can attach to an IAM identity (identity-based policies), use the information in this section as a guide. For each AWS Shield API operation, you need to know the actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions. You specify the actions in the policy's Action field, and you specify the resource value in the policy's Resource field.
+Note
+To specify an action, use the shield: prefix followed by the API operation name (for example, shield:CreateProtection).
+The following list only includes actions that require explicit resource permissions.
+You can use AWS-wide condition keys in your AWS Shield policies to express conditions. For a complete list of AWS-wide keys, see Available Keys for Conditions in the IAM User Guide. 
+For each action, we list the actions and the associated policy resource specifications. 
+AssociateDRTLogBucket
+API Actions – shield:AssociateDRTLogBucket, s3:GetBucketPolicy, s3:PutBucketPolicy
+Resource – arn:aws:s3:::bucket_name/optional_object_key
+AssociateDrtRole
+API Actions – shield:AssociateDrtRole, iam:GetRole, iam:ListAttachedRolePolicies, iam:PassRole
+Resource – arn:aws:iam::account-id:role/role-id
+CreateProtection
+API Actions – shield:CreateProtection
+Resource – arn:aws:shield::account:protection/ID
+DeleteProtection
+API Actions – shield:DeleteProtection
+Resource – arn:aws:shield::account:protection/ID
+DescribeAttack
+API Actions – shield:DescribeAttack
+Resource – arn:aws:shield::account:attack/ID
+DescribeDrtAccess
+API Actions – shield:DescribeDrtAccess, s3:GetBucketPolicy
+Resource – arn:aws:s3:::bucket_name/optional_object_key
+DescribeProtection
+API Actions – shield:DescribeProtection
+Resource – arn:aws:shield::account:protection/ID
+DisassociateDRTLogBucket
+API Actions – shield:DisassociateDRTLogBucket, s3:DeleteBucketPolicy, s3:GetBucketPolicy, s3:PutBucketPolicy
+Resource – arn:aws:s3:::bucket_name/optional_object_key
+For more information about Shield actions and resources, see the AWS Identity and Access Management guide topic Actions Defined by AWS Shield. 
+For a full list of the API actions available for Shield, see AWS Shield Advanced API Reference.

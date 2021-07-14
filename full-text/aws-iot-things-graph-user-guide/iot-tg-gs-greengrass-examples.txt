@@ -1,0 +1,11 @@
+
+
+AWS IoT Greengrass Flow Examples
+The examples in this section walk you through the steps to create and deploy workflows (flows) to an AWS IoT Greengrass group.
+Topics
+ Creating a Flow in an AWS IoT Greengrass Group with Devices
+ Creating a Flow with Lambda Functions
+ Creating a Flow with Devices and a Service
+ Creating a Flow with Devices by Using the AWS CLI
+ Creating a Flow with Lambda Functions by Using the AWS CLI
+ Creating a Flow with Devices and a Service by Using the CLI

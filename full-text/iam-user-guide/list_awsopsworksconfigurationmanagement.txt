@@ -1,0 +1,153 @@
+Actions, resources, and condition keys for AWS OpsWorks Configuration Management
+AWS OpsWorks Configuration Management (service prefix: opsworks-cm) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by AWS OpsWorks Configuration Management
+ Resource types defined by AWS OpsWorks Configuration Management
+ Condition keys for AWS OpsWorks Configuration Management
+Actions defined by AWS OpsWorks Configuration Management
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AssociateNode 
+Associate a node to a configuration management server.
+Write
+
+
+
+
+
+ CreateBackup 
+Create a backup for the specified server.
+Write
+
+
+
+
+
+ CreateServer 
+Create a new server.
+Write
+
+
+
+
+
+ DeleteBackup 
+Delete the specified backup and possibly its S3 bucket.
+Write
+
+
+
+
+
+ DeleteServer 
+Deletes the specified server with his corresponding CF stack and possibly the S3 bucket.
+Write
+
+
+
+
+
+ DescribeAccountAttributes 
+Describe the service limits for the user's account.
+List
+
+
+
+
+
+ DescribeBackups 
+Describe a single backup, all backups of a specified server or all backups of the user's account.
+List
+
+
+
+
+
+ DescribeEvents 
+Describe all events of the specified server.
+List
+
+
+
+
+
+ DescribeNodeAssociationStatus 
+Describe the association status for the specified node token and the specified server.
+List
+
+
+
+
+
+ DescribeServers 
+Describes the specified server or all servers of the user's account.
+List
+
+
+
+
+
+ DisassociateNode 
+Disassociates a specified node from a server.
+Write
+
+
+
+
+
+ RestoreServer 
+Applies a backup to specified server. Possibly swaps out the ec2-instance if specified.
+Write
+
+
+
+
+
+ StartMaintenance 
+Start the server maintenance immediately.
+Write
+
+
+
+
+
+ UpdateServer 
+Update general server settings.
+Write
+
+
+
+
+
+ UpdateServerEngineAttributes 
+Update server settings specific to the configuration management type.
+Write
+
+
+
+
+
+
+Resource types defined by AWS OpsWorks Configuration Management
+AWS OpsWorks Configuration Management does not support specifying a resource ARN in the Resource element of an IAM policy statement. To allow access to AWS OpsWorks Configuration Management, specify “Resource”: “*” in your policy.
+Condition keys for AWS OpsWorks Configuration Management
+OpsworksCM has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

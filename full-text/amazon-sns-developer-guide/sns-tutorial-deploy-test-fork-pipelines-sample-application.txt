@@ -1,0 +1,11 @@
+Tutorial: Deploying and testing the AWS Event Fork Pipelines sample application
+To accelerate the development of your event-driven applications, you can subscribe event-handling pipelines—powered by AWS Event Fork Pipelines—to Amazon SNS topics. AWS Event Fork Pipelines is a suite of open-source nested applications, based on the AWS Serverless Application Model (AWS SAM), which you can deploy directly from the AWS Event Fork Pipelines suite (choose Show apps that create custom IAM roles or resource policies) into your AWS account. For more information, see How AWS Event Fork Pipelines works.
+The following tutorial shows how you can use the AWS Management Console to deploy and test the AWS Event Fork Pipelines sample application.
+Important
+To avoid incurring unwanted costs after you finish deploying the AWS Event Fork Pipelines sample application, delete its AWS CloudFormation stack. For more information, see Deleting a Stack on the AWS CloudFormation Console in the AWS CloudFormation User Guide.
+Topics
+ Example AWS Event Fork Pipelines use case
+ Step 1: To deploy the sample application
+ Step 2: To execute the sample application
+ Step 3: To verify the execution of the sample application and its pipelines
+ Step 4: To simulate an issue and replay events for recovery

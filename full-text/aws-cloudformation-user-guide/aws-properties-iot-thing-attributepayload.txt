@@ -1,0 +1,43 @@
+AWS::IoT::Thing AttributePayload
+The AttributePayload property specifies up to three attributes for an AWS IoT as key value pairs. AttributePayload is a property of the AWS::IoT::Thing resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Attributes](#cfn-iot-thing-attributepayload-attributes)" : {Key : Value, ...}
+}
+YAML
+[Attributes](#cfn-iot-thing-attributepayload-attributes): 
+    Key : Value
+Properties
+Attributes 
+A JSON string containing up to three key-value pair in JSON format. For example:
+{\"attributes\":{\"string1\":\"string2\"}} 
+Required: No
+Type: Map of String
+Update requires: No interruption
+Examples
+
+The following example declares an attribute payload with three attributes.
+JSON
+{
+    "AttributePayload": {
+        "Attributes": {
+            "myAttributeA": {
+                "Ref": "MyAttributeValueA"
+            },
+            "myAttributeB": {
+                "Ref": "MyAttributeValueB"
+            },
+            "myAttributeC": {
+                "Ref": "MyAttributeValueC"
+            }
+        }
+    }
+}
+YAML
+AttributePayload:
+  Attributes:
+    myAttributeA: !Ref MyAttributeValueA
+    myAttributeB: !Ref MyAttributeValueB
+    myAttributeC: !Ref MyAttributeValueC

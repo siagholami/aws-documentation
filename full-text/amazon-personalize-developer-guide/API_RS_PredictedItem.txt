@@ -1,0 +1,19 @@
+PredictedItem
+An object that identifies an item.
+The GetRecommendations and GetPersonalizedRanking APIs return a list of PredictedItems.
+Contents
+itemId 
+The recommended item ID.
+Type: String
+Length Constraints: Maximum length of 256.
+Required: No
+score 
+A numeric representation of the model's certainty that the item will be the next user selection. For more information on scoring logic, see How Recommendation Scoring Works.
+Type: Double
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

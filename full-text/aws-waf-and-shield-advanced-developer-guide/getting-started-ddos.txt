@@ -1,0 +1,10 @@
+Getting started with AWS Shield Advanced
+This tutorial shows you how to get started with AWS Shield Advanced. For best results, perform the following steps in sequence. 
+Topics
+ Step 1: Subscribe to AWS Shield Advanced
+ Step 2: Add resources to protect
+ Step 3: Configure layer 7 DDoS mitigation
+ Step 4: Review and configure your settings
+ Step 5: Configure AWS DRT support
+ Step 6: Create a DDoS Dashboard in CloudWatch and Set CloudWatch Alarms
+ Step 7: Monitor the global threat dashboard

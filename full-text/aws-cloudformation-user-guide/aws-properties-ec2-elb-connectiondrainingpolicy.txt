@@ -1,0 +1,27 @@
+AWS::ElasticLoadBalancing::LoadBalancer ConnectionDrainingPolicy
+Specifies the connection draining settings for your Classic Load Balancer.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Enabled](#cfn-elb-connectiondrainingpolicy-enabled)" : Boolean,
+  "[Timeout](#cfn-elb-connectiondrainingpolicy-timeout)" : Integer
+}
+YAML
+[Enabled](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
+  [Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
+Properties
+Enabled 
+Specifies whether connection draining is enabled for the load balancer.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+Timeout 
+The maximum time, in seconds, to keep the existing connections open before deregistering the instances.
+Required: No
+Type: Integer
+Update requires: No interruption
+See also
+
+ModifyLoadBalancerAttributes in the Elastic Load Balancing API Reference (version 2012-06-01) 
+Connection Draining in the User Guide for Classic Load Balancers 

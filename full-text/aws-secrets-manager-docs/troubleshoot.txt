@@ -1,0 +1,5 @@
+Troubleshooting AWS Secrets Manager
+If you encounter issues when working with AWS Secrets Manager, consult the topics in this section.
+Topics
+ Troubleshooting General Issues
+ Troubleshooting AWS Secrets Manager Rotation of Secrets

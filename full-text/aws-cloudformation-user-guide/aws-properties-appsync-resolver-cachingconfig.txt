@@ -1,0 +1,26 @@
+AWS::AppSync::Resolver CachingConfig
+The caching configuration for a resolver that has caching enabled.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CachingKeys](#cfn-appsync-resolver-cachingconfig-cachingkeys)" : [ String, ... ],
+  "[Ttl](#cfn-appsync-resolver-cachingconfig-ttl)" : Double
+}
+YAML
+[CachingKeys](#cfn-appsync-resolver-cachingconfig-cachingkeys): 
+    - String
+  [Ttl](#cfn-appsync-resolver-cachingconfig-ttl): Double
+Properties
+CachingKeys 
+The caching keys for a resolver that has caching enabled.
+Valid values are entries from the $context.arguments, $context.source, and $context.identity maps.
+Required: No
+Type: List of String
+Update requires: No interruption
+Ttl 
+The TTL in seconds for a resolver that has caching enabled.
+Valid values are between 1 and 3600 seconds.
+Required: No
+Type: Double
+Update requires: No interruption

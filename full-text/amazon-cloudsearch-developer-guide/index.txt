@@ -1,0 +1,194 @@
+Amazon CloudSearch Developer Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon CloudSearch?
+How Search Works
+Automatic Scaling in Amazon CloudSearch
+Getting Started with Amazon CloudSearch
+Before You Begin with Amazon CloudSearch
+Step 1: Create an Amazon CloudSearch Domain
+Step 2: Upload Data to Amazon CloudSearch for Indexing
+Step 3: Search Your Amazon CloudSearch Domain
+Step 4: Delete Your Amazon CloudSearch Movies Domain
+Migrating to the Amazon CloudSearch 2013-01-01 API
+Creating and Managing Amazon CloudSearch Domains
+Creating an Amazon CloudSearch Domain
+Configuring Access for Amazon CloudSearch
+Configuring Scaling Options in Amazon CloudSearch
+Configuring Availability Options in Amazon CloudSearch
+Configuring Domain Endpoint Options in Amazon CloudSearch
+Monitoring Amazon CloudSearch Domains
+Getting Information About an Amazon CloudSearch Domain
+Monitoring an Amazon CloudSearch Domain with Amazon CloudWatch
+Logging Amazon CloudSearch Configuration API Calls with AWS CloudTrail
+Tracking your Amazon CloudSearch Usage and Charges
+
+
+Deleting an Amazon CloudSearch Domain
+Tagging Amazon CloudSearch Domains
+Controlling How Data is Indexed in Amazon CloudSearch
+Preparing Your Data for Amazon CloudSearch
+Configuring Index Fields for an Amazon CloudSearch Domain
+Using Dynamic Fields in Amazon CloudSearch
+Configuring Text Analysis Schemes for Amazon CloudSearch
+Text Processing in Amazon CloudSearch
+Supported Languages in Amazon CloudSearch
+
+
+Uploading and Indexing Data in Amazon CloudSearch
+Uploading Data to an Amazon CloudSearch Domain
+Submitting Document Upload Requests to an Amazon CloudSearch Domain
+
+
+Indexing Document Data with Amazon CloudSearch
+Searching Your Data with Amazon CloudSearch
+Submitting Search Requests to an Amazon CloudSearch Domain
+Searching with the Search Tester
+
+
+Constructing Compound Queries in Amazon CloudSearch
+Searching for Text in Amazon CloudSearch
+Searching for Numbers in Amazon CloudSearch
+Searching for Dates and Times in Amazon CloudSearch
+Searching for a Range of Values in Amazon CloudSearch
+Searching and Ranking Results by Geographic Location in Amazon CloudSearch
+Searching DynamoDB Data with Amazon CloudSearch
+Filtering Matching Documents in Amazon CloudSearch
+Tuning Search Request Performance in Amazon CloudSearch
+Querying Your Search Domain for More Information in Amazon CloudSearch
+Retrieving Data from Index Fields in Amazon CloudSearch
+Getting Statistics for Numeric Fields in Amazon CloudSearch
+Getting and Using Facet Information in Amazon CloudSearch
+Highlighting Search Hits in Amazon CloudSearch
+Getting Autocomplete Suggestions in Amazon CloudSearch
+Controlling How Search Results are Returned in Amazon CloudSearch
+Sorting Results in Amazon CloudSearch
+Using Relative Field Weighting to Customize Relevance Ranking in Amazon CloudSearch
+Configuring Expressions in Amazon CloudSearch
+Defining Amazon CloudSearch Expressions in Search Requests
+Configuring Reusable Expressions for a Search Domain in Amazon CloudSearch
+Comparing Expressions in Amazon CloudSearch
+
+
+Getting Results as XML in Amazon CloudSearch
+Paginating Results in Amazon CloudSearch
+Integrating Amazon CloudSearch with API Gateway
+Handling Errors in Amazon CloudSearch
+Amazon CloudSearch API Reference
+Configuration API Reference for Amazon CloudSearch
+Submitting Configuration Requests in Amazon CloudSearch
+Actions
+BuildSuggesters
+CreateDomain
+DefineAnalysisScheme
+DefineExpression
+DefineIndexField
+DefineSuggester
+DeleteAnalysisScheme
+DeleteDomain
+DeleteExpression
+DeleteIndexField
+DeleteSuggester
+DescribeAnalysisSchemes
+DescribeAvailabilityOptions
+DescribeDomains
+DescribeExpressions
+DescribeIndexFields
+DescribeScalingParameters
+DescribeDomainEndpointOptions
+DescribeServiceAccessPolicies
+DescribeSuggesters
+IndexDocuments
+ListDomainNames
+UpdateAvailabilityOptions
+UpdateScalingParameters
+UpdateDomainEndpointOptions
+UpdateServiceAccessPolicies
+
+
+Data Types
+AccessPoliciesStatus
+AnalysisOptions
+AnalysisScheme
+AnalysisSchemeStatus
+AvailabilityOptionsStatus
+BuildSuggestersResult
+CreateDomainResult
+DateArrayOptions
+DateOptions
+DefineAnalysisSchemeResult
+DefineExpressionResult
+DefineIndexFieldResult
+DefineSuggesterResult
+DeleteAnalysisSchemeResult
+DeleteDomainResult
+DeleteExpressionResult
+DeleteIndexFieldResult
+DeleteSuggesterResult
+DescribeAnalysisSchemesResult
+DescribeAvailabilityOptionsResult
+DescribeDomainsResult
+DescribeExpressionsResult
+DescribeIndexFieldsResult
+DescribeScalingParametersResult
+DescribeServiceAccessPoliciesResult
+DescribeSuggestersResult
+DocumentSuggesterOptions
+DomainEndpointOptions
+DomainEndpointOptionsStatus
+DomainStatus
+DoubleArrayOptions
+DoubleOptions
+Expression
+ExpressionStatus
+IndexDocumentsResult
+IndexField
+IndexFieldStatus
+IntArrayOptions
+IntOptions
+LatLonOptions
+Limits
+ListDomainNamesResult
+LiteralArrayOptions
+LiteralOptions
+OptionStatus
+ScalingParameters
+ScalingParametersStatus
+ServiceEndpoint
+Suggester
+SuggesterStatus
+TextArrayOptions
+TextOptions
+UpdateAvailabilityOptionsResult
+UpdateScalingParametersResult
+UpdateServiceAccessPoliciesResult
+
+
+Common Parameters
+Common Errors
+
+
+Document Service API Reference for Amazon CloudSearch
+documents/batch
+documents/batch XML API
+
+
+
+
+Search API Reference for Amazon CloudSearch
+Troubleshooting Amazon CloudSearch
+Understanding Amazon CloudSearch Limits
+Amazon CloudSearch Resources
+Document History for Amazon CloudSearch
+

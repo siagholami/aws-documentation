@@ -1,0 +1,29 @@
+VPCConfigResponse
+VPC configuration associated with your simulation job.
+Contents
+assignPublicIp 
+A boolean indicating if a public IP was assigned.
+Type: Boolean
+Required: No
+securityGroups 
+A list of security group IDs associated with the simulation job.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 5 items.
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Required: No
+subnets 
+A list of subnet IDs associated with the simulation job.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 16 items.
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Required: No
+vpcId 
+The VPC ID associated with your simulation job.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

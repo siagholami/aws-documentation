@@ -1,0 +1,330 @@
+AWS WAF, AWS Firewall Manager, and AWS Shield Advanced Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What are AWS WAF, AWS Shield, and AWS Firewall Manager?
+Which should I choose?
+Setting up
+AWS WAF
+How AWS WAF works
+Getting started with AWS WAF
+Migrating your AWS WAF Classic resources to AWS WAF
+Why migrate to AWS WAF?
+How the migration works
+Migration caveats and limitations
+Migrating a web ACL from AWS WAF Classic to AWS WAF
+Migrating a web ACL: automated migration
+Migrating a web ACL: manual follow-up
+Migrating a web ACL: additional considerations
+Migrating a web ACL: switchover
+
+
+
+
+Managing and using a Web Access Control List (Web ACL)
+How AWS WAF processes a web ACL
+Working with web ACLs
+Creating a web ACL
+Associating or disassociating a Web ACL with an AWS resource
+Editing a Web ACL
+Deleting a Web ACL
+Testing web ACLs
+
+
+
+
+Rule groups
+Managed rule groups
+Working with managed rule groups
+AWS Managed Rules for AWS WAF
+AWS Managed Rules rule groups list
+AWS Managed Rules disclaimer
+AWS Managed Rules changelog
+
+
+AWS Marketplace managed rule groups
+
+
+Managing your own rule groups
+Creating a rule group
+Using your rule group in a Web ACL
+Deleting a rule group
+
+
+Managing rule group behavior in a web ACL
+
+
+AWS WAF rules
+AWS WAF rule name
+AWS WAF rule action
+AWS WAF rule statements
+Rule statements list
+AND rule statement
+Geographic match rule statement
+IP set match rule statement
+Managed rule group statement
+NOT rule statement
+OR rule statement
+Rate-based rule statement
+Regex pattern set match rule statement
+Rule group statement
+Size constraint rule statement
+SQL injection attack rule statement
+String match rule statement
+Cross-site scripting attack rule statement
+
+
+Request component settings
+Forwarded IP address
+Rule statements that reference a set or a rule group
+
+
+
+
+IP sets and regex pattern sets
+Creating and managing an IP set
+Creating an IP set
+Using an IP set in a rule group or Web ACL
+Editing an IP set
+Deleting an IP set
+
+
+Creating and managing a regex pattern set
+Creating a regex pattern set
+Using a regex pattern set in a rule group or Web ACL
+Deleting a regex pattern set
+
+
+
+
+Logging Web ACL traffic information
+Listing IP addresses blocked by rate-based rules
+How AWS WAF works with Amazon CloudFront features
+Security in AWS WAF
+Data protection in AWS WAF
+Identity and access management in AWS WAF
+AWS Identity and Access Management
+Overview of managing access permissions to your AWS WAF resources
+Using identity-based policies (IAM policies) for AWS WAF
+AWS WAF API permissions: Actions, resources, and conditions reference
+Using service-linked roles for AWS WAF
+
+
+Logging and monitoring in AWS WAF
+Compliance validation for AWS WAF
+Resilience in AWS WAF
+Infrastructure security in AWS WAF
+
+
+AWS WAF quotas
+AWS WAF Classic
+Setting up AWS WAF Classic
+How AWS WAF Classic works
+AWS WAF Classic pricing
+Getting started with AWS WAF Classic
+Tutorials for AWS WAF Classic
+Tutorial: Quickly setting up AWS WAF Classic protection against common attacks
+Tutorial: Implementing a DDoS-resistant website using AWS services
+Prerequisites
+Step 1: Launch a virtual server using Amazon EC2
+Step 2: Scale your traffic using Elastic Load Balancing
+Step 3: Improve performance and absorb attacks using Amazon CloudFront
+Step 4: Register your Domain name and implement DNS service using Route 53
+Step 5: Detect and filter malicious web requests using AWS WAF Classic
+Additional best practices
+
+
+Blog tutorials
+
+
+Creating and configuring a Web Access Control List (Web ACL)
+Working with conditions
+Working with cross-site scripting match conditions
+Working with IP match conditions
+Working with geographic match conditions
+Working with size constraint conditions
+Working with SQL injection match conditions
+Working with string match conditions
+Working with regex match conditions
+
+
+Working with rules
+Creating a rule and adding conditions
+Adding and removing conditions in a rule
+Deleting a rule
+AWS marketplace rule groups
+
+
+Working with web ACLs
+Deciding on the default action for a Web ACL
+Creating a Web ACL
+Associating or disassociating a Web ACL with an Amazon API Gateway API, a CloudFront distribution or an Application Load Balancer
+Editing a Web ACL
+Deleting a Web ACL
+Testing web ACLs
+
+
+
+
+Working with AWS WAF Classic rule groups for use with AWS Firewall Manager
+Creating an AWS WAF Classic rule group
+Adding and deleting rules from an AWS WAF Classic rule group
+
+
+Getting started with AWS Firewall Manager to enable AWS WAF Classic rules
+Step 1: Complete the prerequisites
+Step 2: Create rules
+Step 3: Create a rule group
+Step 4: Create and apply an AWS Firewall Manager AWS WAF Classic policy
+
+
+Tutorial: Creating a AWS Firewall Manager policy with hierarchical rules
+Logging Web ACL traffic information
+Listing IP addresses blocked by rate-based rules
+How AWS WAF Classic works with Amazon CloudFront features
+Security in AWS WAF Classic
+Data protection in AWS WAF Classic
+Identity and access management in AWS WAF Classic
+AWS Identity and Access Management
+Overview of managing access permissions to your AWS WAF Classic resources
+Using identity-based policies (IAM policies) for AWS WAF Classic
+AWS WAF Classic API permissions: Actions, resources, and conditions reference
+Using service-linked roles for AWS WAF Classic
+
+
+Logging and monitoring in AWS WAF Classic
+Compliance validation for AWS WAF Classic
+Resilience in AWS WAF Classic
+Infrastructure security in AWS WAF Classic
+
+
+AWS WAF Classic quotas
+AWS Firewall Manager
+AWS Firewall Manager pricing
+AWS Firewall Manager prerequisites
+Step 1: Join AWS Organizations
+Step 2: Set the AWS Firewall Manager administrator account
+Step 3: Enable AWS Config
+
+
+Getting started with AWS Firewall Manager AWS WAF policies
+Step 1: Complete the prerequisites
+Step 2: Create and apply an AWS Firewall Manager AWS WAF policy
+Step 3: Clean Up
+
+
+Getting started with AWS Firewall Manager AWS Shield Advanced policies
+Step 1: Complete the prerequisites
+Step 2: Create and apply an AWS Firewall Manager Shield Advanced policy
+Step 3: (Optional) authorize the DDoS Response Team (DRT)
+Step 4: Configure Amazon SNS notifications and Amazon CloudWatch alarms
+Configure Amazon CloudWatch alarms
+
+
+Step 5: Monitor the global threat dashboard
+
+
+Getting started with AWS Firewall Manager Amazon VPC security group policies
+Step 1: Complete the prerequisites
+Step 2: Create a security group to use in your policy
+Step 3: Create and apply an AWS Firewall Manager common security group policy
+
+
+Working with AWS Firewall Manager policies
+Creating an AWS Firewall Manager policy
+Deleting an AWS Firewall Manager policy
+Managed lists
+AWS WAF policies
+AWS Shield Advanced policies
+Security group policies
+
+
+Viewing resource compliance for a policy
+AWS Firewall Manager findings
+AWS WAF policy findings
+AWS Shield Advanced policy findings
+Security group common policy findings
+Security group content audit policy findings
+Security group usage audit policy findings
+
+
+Designating a different account as the AWS Firewall Manager administrator account
+Security in AWS Firewall Manager
+Data protection in Firewall Manager
+Identity and access management in AWS Firewall Manager
+AWS Identity and Access Management
+Overview of managing access permissions to your AWS Firewall Manager resources
+Using identity-based policies (IAM policies) for AWS Firewall Manager
+Firewall Manager required permissions for API actions
+Using service-linked roles for Firewall Manager
+
+
+Logging and monitoring in Firewall Manager
+Compliance validation for Firewall Manager
+Resilience in Firewall Manager
+Infrastructure security in AWS Firewall Manager
+
+
+AWS Firewall Manager quotas
+AWS Shield
+How AWS Shield works
+Example AWS Shield Advanced use cases
+AWS Shield pricing
+Getting started with AWS Shield Advanced
+Step 1: Subscribe to AWS Shield Advanced
+Step 2: Add resources to protect
+Step 3: Configure layer 7 DDoS mitigation
+Step 4: Review and configure your settings
+Step 5: Configure AWS DRT support
+Step 6: Create a DDoS Dashboard in CloudWatch and Set CloudWatch Alarms
+Step 7: Monitor the global threat dashboard
+
+
+Adding AWS Shield Advanced protection to AWS resources
+Managing AWS Shield Advanced protections
+Removing AWS Shield Advanced protection from an AWS resource
+Configuring AWS Shield Advanced setup
+AWS Shield Advanced: Requesting a credit
+Security in AWS Shield
+Data protection in Shield
+Identity and access management in AWS Shield
+AWS Identity and Access Management
+Overview of managing access permissions to your AWS Shield resources
+Using identity-based policies (IAM policies) for AWS Shield
+Shield required permissions for API actions
+
+
+Logging and monitoring in Shield
+Compliance validation for Shield
+Resilience in Shield
+Infrastructure security in AWS Shield
+
+
+AWS Shield Advanced quotas
+Monitoring AWS WAF, AWS Firewall Manager, and AWS Shield Advanced
+Monitoring tools
+View protection changes of your resources using AWS Config
+Monitoring with Amazon CloudWatch
+
+
+Logging API calls with AWS CloudTrail
+Responding to DDoS attacks
+Reviewing DDoS events
+Using the AWS WAF and AWS Shield Advanced API
+Using the AWS SDKs
+Making HTTPS requests to AWS WAF or Shield Advanced
+HTTP responses
+Authenticating requests
+Related information
+Document history
+AWS glossary

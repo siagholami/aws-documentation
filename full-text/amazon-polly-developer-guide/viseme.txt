@@ -1,0 +1,319 @@
+Visemes and Amazon Polly
+A viseme represents the position of the face and mouth when saying a word. It is the visual equivalent of a phoneme, which is the basic acoustic unit from which a word is formed. Visemes are the basic visual building blocks of speech.
+Each language has a set of viseme that correspond to their specific phonemes.. In a language, each phoneme has a corresponding viseme that represents the shape that the mouth makes when forming the sound. However, not all visemes can be mapped to a particular phoneme because numerous phonemes appear the same when spoken, even though they sound different. For example, in English, the words "pet" and "bet" are acoustically different. However, when observed visually (without sound), they look exactly the same.
+The following chart lists the full set of International Phonetic Alphabet (IPA) phonemes and the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols as well as their corresponding visemes for American English language voices.
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+b
+b
+Voiced bilabial plosive
+bed
+p
+
+
+d
+d
+Voiced alveolar plosive
+dig
+t
+
+
+d͡ʒ
+dZ
+Voiced postalveolar affricate
+jump
+S
+
+
+ð
+D
+Voiced dental fricative
+then
+T
+
+
+f
+f
+Voiceless labiodental fricative
+five
+f
+
+
+g
+g
+Voiced velar plosive
+game
+k
+
+
+h
+h
+Voiceless glottal fricative
+house
+k
+
+
+j
+j
+Palatal approximant
+yes
+i
+
+
+k
+k
+Voiceless velar plosive
+cat
+k
+
+
+l
+l
+Alveolar lateral approximant
+lay
+t
+
+
+m
+m
+Bilabial nasal
+mouse
+p
+
+
+n
+n
+Alveolar nasal
+nap
+t
+
+
+ŋ
+N
+Velar nasal
+thing
+k
+
+
+p
+p
+Voiceless bilabial plosive
+speak
+p
+
+
+ɹ
+r\
+Alveolar approximant
+red
+r
+
+
+s
+s
+Voiceless alveolar fricative
+seem
+s
+
+
+ʃ
+S
+Voiceless postalveolar fricative
+ship
+S
+
+
+t
+t
+Voiceless alveolar plosive
+trap
+t
+
+
+t͡ʃ
+tS
+Voiceless postalveolar affricate
+chart
+S
+
+
+Θ
+T
+Voiceless dental fricative
+thin
+T
+
+
+v
+v
+Voiced labiodental fricative
+vest
+f
+
+
+w
+w
+Labial-velar approximant
+west
+u
+
+
+z
+z
+Voiced alveolar fricative
+zero
+s
+
+
+ʒ
+Z
+Voiced postalveolar fricative
+vision
+S
+
+
+Vowels
+
+
+
+
+
+
+ə
+@
+Mid central vowel
+arena
+@
+
+
+ɚ
+@'
+Mid central r-colored vowel
+reader
+@
+
+
+æ
+{
+Near open-front unrounded vowel
+trap
+a
+
+
+aɪ
+aI
+Diphthong
+price
+a
+
+
+aʊ
+aU
+Diphthong
+mouth
+a
+
+
+ɑ
+A
+Long open-back unrounded vowel
+father
+a
+
+
+eɪ
+eI
+Diphthong
+face
+e
+
+
+ɝ
+3'
+Open mid-central unrounded r-colored vowel
+nurse
+E
+
+
+ɛ
+E
+Open mid-front unrounded vowel
+dress
+E
+
+
+i:
+i
+Long close front unrounded vowel
+fleece
+i
+
+
+ɪ
+I
+Near-close near-front unrounded vowel
+kit
+i
+
+
+oʊ
+oU
+Diphthong
+goat
+o
+
+
+ɔ
+O
+Long open mid-back rounded vowel
+thought
+O
+
+
+ɔɪ
+OI
+Diphthong
+choice
+O
+
+
+u
+u
+Long close-back rounded vowel
+goose
+u
+
+
+ʊ
+U
+Near-close near-back rounded vowel
+foot
+u
+
+
+ʌ
+V
+Open-mid-back unrounded vowel
+strut
+E
+
+
+
+For all available languages, see Phoneme/Viseme Tables for Supported Languages.

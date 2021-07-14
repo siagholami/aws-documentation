@@ -1,0 +1,117 @@
+AWS::ImageBuilder::Image
+An image build version. An image is a customized, secure, and up-to-date “golden” server image that is pre-installed and pre-configured with software and settings to meet specific IT standards.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ImageBuilder::Image",
+  "Properties" : {
+      "[DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled)" : Boolean,
+      "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
+      "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : ImageTestsConfiguration,
+      "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
+      "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
+    }
+}
+YAML
+Type: AWS::ImageBuilder::Image
+Properties: 
+  [DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled): Boolean
+  [ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn): String
+  [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
+    ImageTestsConfiguration
+  [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
+  [Tags](#cfn-imagebuilder-image-tags): 
+    Key : Value
+Properties
+DistributionConfigurationArn 
+The Amazon Resource Name (ARN) of the distribution configuration.
+Required: No
+Type: String
+Pattern: ^arn:aws[^:]*:imagebuilder:[^:]:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_](?:/(?:(?:x|\d)\.(?:x|\d)\.(?:x|\d))(?:/\d)?)?$
+Update requires: Replacement
+EnhancedImageMetadataEnabled 
+ Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default. 
+Required: No
+Type: Boolean
+Update requires: Replacement
+ImageRecipeArn 
+The Amazon Resource Name (ARN) of the image recipe.
+Required: Yes
+Type: String
+Pattern: ^arn:aws[^:]*:imagebuilder:[^:]:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_](?:/(?:(?:x|\d)\.(?:x|\d)\.(?:x|\d))(?:/\d)?)?$
+Update requires: Replacement
+ImageTestsConfiguration 
+The configuration of the image tests used when creating this image.
+Required: No
+Type: ImageTestsConfiguration
+Update requires: Replacement
+InfrastructureConfigurationArn 
+The Amazon Resource Name (ARN) of the infrastructure configuration used to create this image.
+Required: Yes
+Type: String
+Pattern: ^arn:aws[^:]*:imagebuilder:[^:]:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_](?:/(?:(?:x|\d)\.(?:x|\d)\.(?:x|\d))(?:/\d)?)?$
+Update requires: Replacement
+Tags 
+The tags of the image.
+Required: No
+Type: Map of String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource ARN, such as arn:aws:imagebuilder:us-west-2:123456789012:image/my-example-image.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+Returns the Amazon Resource Name (ARN) of the image. For example, arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1.
+ImageId 
+Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder.
+Examples
+Create an image
+The following example shows the schema for all of the parameters of the Image resource document in both YAML and JSON format .
+YAML
+Resources:
+  ImageAllParameters:
+    Type: 'AWS::ImageBuilder::Image'
+    Properties:
+      ImageRecipeArn: !Ref ImageRecipeArn
+      InfrastructureConfigurationArn: !Ref InfrastructureConfigurationArn
+      DistributionConfigurationArn: !Ref DistributionConfigurationArn
+      ImageTestsConfiguration:
+        ImageTestsEnabled: false
+        TimeoutMinutes: 60
+      Tags:
+        CustomerImageTagKey1: 'CustomerImageTagValue1'
+        CustomerImageTagKey2: 'CustomerImageTagValue2'
+JSON
+{
+    "Resources": {
+        "ImageAllParameters": {
+            "Type": "AWS::ImageBuilder::Image",
+            "Properties": {
+                "ImageRecipeArn": {
+                    "Ref": "ImageRecipeArn"
+                },
+                "InfrastructureConfigurationArn": {
+                    "Ref": "InfrastructureConfigurationArn"
+                },
+                "DistributionConfigurationArn": {
+                    "Ref": "DistributionConfigurationArn"
+                },
+                "ImageTestsConfiguration": {
+                    "ImageTestsEnabled": false,
+                    "TimeoutMinutes": 60
+                },
+                "Tags": {
+                    "CustomerImageTagKey1": "CustomerImageTagValue1",
+                    "CustomerImageTagKey2": "CustomerImageTagValue2"
+                }
+            }
+        }
+    }
+}

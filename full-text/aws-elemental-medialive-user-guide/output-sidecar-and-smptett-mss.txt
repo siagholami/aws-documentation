@@ -1,0 +1,38 @@
+Sidecar Captions and SMPTE-TT in Microsoft Smooth
+Follow this procedure if the format of the captions asset that you want to add is a sidecar, or if the format is SMPTE-TT for a Microsoft Smooth output group. See  Step 3: Match Formats to Categories.
+You set up each captions asset in its own output within the output group.
+To set up the captions
+
+
+In the channel that you are creating, in the navigation pane, find the output group (which you have already created). For example, find the HLS output group.
+
+
+Create an output in the usual way: in the HLS outputs pane, choose Add output. 
+
+
+Choose the output to show the Stream settings pane. The output is set up by default with one undefined video encode and one undefined audio encode.
+
+
+For Stream settings, remove the video and audio encodes from this output by choosing the encode and selecting Remove video or Remove audio. The output is now empty.
+
+
+Choose Add captions. You now have an undefined captions encode inside this output.
+
+
+For Captions description name, enter a name for this captions asset that is unique in the channel, for example, Web-VTT Czech. Or accept the default (which is automatically generated). 
+
+
+For Captions selector name, enter the name of the captions selector that you created in step 1. Specify the selector that identifies the captions asset that is the source for the captions in this output.
+
+
+For Captions settings, choose the appropriate format for the output captions.
+
+
+Complete the fields that appear for the selected format. For details about a field, choose the Info link beside the field. 
+
+
+You now have one output that contains one captions encode that is fully defined.
+
+
+Repeat these steps to create sidecar captions in this or another output group, as applicable.
+

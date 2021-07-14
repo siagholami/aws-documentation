@@ -1,0 +1,59 @@
+AWS::EC2::ClientVpnTargetNetworkAssociation
+Specifies a target network to associate with a Client VPN endpoint. A target network is a subnet in a VPC. You can associate multiple subnets from the same VPC with a Client VPN endpoint. You can associate only one subnet in each Availability Zone. We recommend that you associate at least two subnets to provide Availability Zone redundancy.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::ClientVpnTargetNetworkAssociation",
+  "Properties" : {
+      "[ClientVpnEndpointId](#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid)" : String,
+      "[SubnetId](#cfn-ec2-clientvpntargetnetworkassociation-subnetid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::ClientVpnTargetNetworkAssociation
+Properties: 
+  [ClientVpnEndpointId](#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid): String
+  [SubnetId](#cfn-ec2-clientvpntargetnetworkassociation-subnetid): String
+Properties
+ClientVpnEndpointId 
+The ID of the Client VPN endpoint.
+Required: Yes
+Type: String
+Update requires: Replacement
+SubnetId 
+The ID of the subnet to associate with the Client VPN endpoint.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the association ID. For example: cvpn-assoc-1234567890abcdef0.
+For more information about using the Ref function, see Ref.
+Examples
+Associating a target subnet with a Client VPN endpoint
+The following example associates a target network with a Client VPN endpoint.
+YAML
+myNetworkAssociation:
+  Type: "AWS::EC2::ClientVpnTargetNetworkAssociation"
+  Properties:
+    ClientVpnEndpointId: 
+      Ref: myClientVpnEndpoint
+    SubnetId: 
+      Ref: mySubnet
+JSON
+"myNetworkAssociation": {
+    "Type": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+    "Properties": {
+        "ClientVpnEndpointId": {
+            "Ref": "myClientVpnEndpoint"
+        },
+        "SubnetId": {
+            "Ref": "mySubnet"
+        }
+    }
+}
+See also
+
+ Getting Started with Client VPN in the AWS Client VPN Administrator Guide
+Target Networks in the AWS Client VPN Administrator Guide

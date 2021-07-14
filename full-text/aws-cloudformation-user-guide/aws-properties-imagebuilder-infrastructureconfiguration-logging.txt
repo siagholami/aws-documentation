@@ -1,0 +1,17 @@
+AWS::ImageBuilder::InfrastructureConfiguration Logging
+The logging configuration defines where Image Builder uploads your logs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3Logs](#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)" : S3Logs
+}
+YAML
+[S3Logs](#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs): 
+    S3Logs
+Properties
+S3Logs 
+The Amazon S3 logging configuration.
+Required: No
+Type: S3Logs
+Update requires: No interruption

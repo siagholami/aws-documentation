@@ -1,0 +1,50 @@
+AWS::EC2::LocalGatewayRoute
+Creates a static route for the specified local gateway route table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::LocalGatewayRoute",
+  "Properties" : {
+      "[DestinationCidrBlock](#cfn-ec2-localgatewayroute-destinationcidrblock)" : String,
+      "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroute-localgatewayroutetableid)" : String,
+      "[LocalGatewayVirtualInterfaceGroupId](#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::LocalGatewayRoute
+Properties: 
+  [DestinationCidrBlock](#cfn-ec2-localgatewayroute-destinationcidrblock): String
+  [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroute-localgatewayroutetableid): String
+  [LocalGatewayVirtualInterfaceGroupId](#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid): String
+Properties
+DestinationCidrBlock 
+The CIDR block used for destination matches.
+Required: Yes
+Type: String
+Update requires: Replacement
+LocalGatewayRouteTableId 
+The ID of the local gateway route table.
+Required: Yes
+Type: String
+Update requires: Replacement
+LocalGatewayVirtualInterfaceGroupId 
+The ID of the virtual interface group.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the local gateway.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+State 
+The state of the local gateway route table.
+Type 
+The type of local gateway route.
+See also
+
+Local Gateways in AWS Outposts User Guide
+CreateLocalGatewayRouteTable in the Amazon EC2 API Reference

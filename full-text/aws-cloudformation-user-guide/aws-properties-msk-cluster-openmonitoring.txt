@@ -1,0 +1,17 @@
+AWS::MSK::Cluster OpenMonitoring
+JMX and Node monitoring for the MSK cluster.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Prometheus](#cfn-msk-cluster-openmonitoring-prometheus)" : Prometheus
+}
+YAML
+[Prometheus](#cfn-msk-cluster-openmonitoring-prometheus): 
+    Prometheus
+Properties
+Prometheus 
+Prometheus exporter settings.
+Required: Yes
+Type: Prometheus
+Update requires: No interruption

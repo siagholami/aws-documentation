@@ -1,0 +1,41 @@
+AWS::Glue::Crawler Targets
+Specifies data stores to crawl.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ CatalogTarget, ... ],
+  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ DynamoDBTarget, ... ],
+  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ JdbcTarget, ... ],
+  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ S3Target, ... ]
+}
+YAML
+[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets): 
+    - CatalogTarget
+  [DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets): 
+    - DynamoDBTarget
+  [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
+    - JdbcTarget
+  [S3Targets](#cfn-glue-crawler-targets-s3targets): 
+    - S3Target
+Properties
+CatalogTargets 
+Specifies AWS Glue Data Catalog targets.
+Required: No
+Type: List of CatalogTarget
+Update requires: No interruption
+DynamoDBTargets 
+Specifies Amazon DynamoDB targets.
+Required: No
+Type: List of DynamoDBTarget
+Update requires: No interruption
+JdbcTargets 
+Specifies JDBC targets.
+Required: No
+Type: List of JdbcTarget
+Update requires: No interruption
+S3Targets 
+Specifies Amazon Simple Storage Service (Amazon S3) targets.
+Required: No
+Type: List of S3Target
+Update requires: No interruption

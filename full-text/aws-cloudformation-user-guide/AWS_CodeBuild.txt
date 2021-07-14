@@ -1,0 +1,5 @@
+CodeBuild resource type reference
+Resource types
+ AWS::CodeBuild::Project
+ AWS::CodeBuild::ReportGroup
+ AWS::CodeBuild::SourceCredential

@@ -1,0 +1,7 @@
+November 20, 2018
+Published on 2018-11-20
+Released the new versions of the JDBC and ODBC driver with support for federated access to Athena API with the AD FS and SAML 2.0 (Security Assertion Markup Language 2.0). For details, see the JDBC Driver Release Notes and ODBC Driver Release Notes.
+With this release, federated access to Athena is supported for the Active Directory Federation Service (AD FS 3.0). Access is established through the versions of JDBC or ODBC drivers that support SAML 2.0. For information about configuring federated access to the Athena API, see Enabling Federated Access to the Athena API.
+To download the JDBC driver version 2.0.6 and its documentation, see Using Athena with the JDBC Driver. For information about this version, see JDBC Driver Release Notes.
+To download the ODBC driver version 1.0.4 and its documentation, see Connecting to Amazon Athena with ODBC. For information about this version, ODBC Driver Release Notes. 
+For more information about SAML 2.0 support in AWS, see About SAML 2.0 Federation in the IAM User Guide. 

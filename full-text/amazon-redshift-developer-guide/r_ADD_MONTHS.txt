@@ -1,0 +1,37 @@
+ADD_MONTHS function
+ADD_MONTHS adds the specified number of months to a date or time stamp value or expression. The DATEADD function provides similar functionality. 
+Syntax
+ADD_MONTHS( {date | timestamp}, integer)
+Arguments
+date | timestamp 
+A date or timestamp column or an expression that implicitly converts to a date or time stamp. If the date is the last day of the month, or if the resulting month is shorter, the function returns the last day of the month in the result. For other dates, the result contains the same day number as the date expression. 
+integer 
+A positive or negative integer. Use a negative number to subtract months from dates. 
+Return type
+TIMESTAMP
+Example
+The following query uses the ADD_MONTHS function inside a TRUNC function. The TRUNC function removes the time of day from the result of ADD_MONTHS. The ADD_MONTHS function adds 12 months to each value from the CALDATE column. 
+```
+select distinct trunc(add_months(caldate, 12)) as calplus12,
+trunc(caldate) as cal
+from date
+order by 1 asc;
+calplus12  |    cal
+------------------------
+ 2009-01-01 | 2008-01-01
+ 2009-01-02 | 2008-01-02
+ 2009-01-03 | 2008-01-03
+...
+(365 rows)
+```
+The following examples demonstrate the behavior when the ADD_MONTHS function operates on dates with months that have different numbers of days. 
+```
+select add_months('2008-03-31',1);
+add_months
+2008-04-30 00:00:00
+(1 row)
+select add_months('2008-04-30',1);
+add_months
+2008-05-31 00:00:00
+(1 row)
+```

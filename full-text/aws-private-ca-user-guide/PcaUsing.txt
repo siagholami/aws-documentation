@@ -1,0 +1,6 @@
+Issuing and Revoking End-Entity Certificates
+After you have created and activated a private certificate authority (CA) and configured access to it, you or your authorized users can perform the tasks discussed in this section. If you have not yet set up AWS Identity and Access Management (IAM) policies for the CA, you can learn more about configuring them in the Identity and Access Management section of this guide. For information about configuring CA access in single-account and cross-account scenarios, see Enabling Access to a Private CA.
+Topics
+ Issuing a Private End-Entity Certificate
+ Revoking a Private Certificate
+ Understanding Certificate Templates

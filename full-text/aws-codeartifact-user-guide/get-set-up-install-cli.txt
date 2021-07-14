@@ -1,0 +1,20 @@
+Install or upgrade and then configure the AWS CLI
+To call CodeArtifact commands from the AWS Command Line Interface (AWS CLI) on a local development machine, you must install the AWS CLI. 
+If you have an older version of the AWS CLI installed, you must upgrade it so the CodeArtifact commands are available. CodeArtifact commands are available in AWS CLI version 2.0.21 and newer. To check the version, use the aws --version command.
+To install and configure the AWS CLI
+
+
+Follow the instructions in Installing the AWS Command Line Interface to install or upgrade the AWS CLI.
+
+
+To configure the AWS CLI, see Configuring the AWS Command Line Interface and Managing Access Keys for IAM Users. 
+Important
+When you configure the AWS CLI, you are prompted to specify an AWS Region. Choose one of the supported regions listed in Region and Endpoints in the AWS General Reference.
+
+
+To verify the installation or upgrade, call the following command from the AWS CLI.
+
+
+aws codeartifact help
+If successful, this command displays a list of available CodeArtifact commands.
+Next, you can create an IAM user and grant that user access to CodeArtifact. For more information, see Provision an IAM User.

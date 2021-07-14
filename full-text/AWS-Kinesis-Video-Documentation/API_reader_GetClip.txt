@@ -1,0 +1,105 @@
+GetClip
+Downloads an MP4 file (clip) containing the archived, on-demand media from the specified video stream over the specified time range. 
+Both the StreamName and the StreamARN parameters are optional, but you must specify either the StreamName or the StreamARN when invoking this API operation. 
+As a prerequsite to using GetCLip API, you must obtain an endpoint using GetDataEndpoint, specifying GET_CLIP for` theAPIName` parameter. 
+An Amazon Kinesis video stream has the following requirements for providing data through MP4:
+ The media must contain h.264 or h.265 encoded video and, optionally, AAC or G.711 encoded audio. Specifically, the codec ID of track 1 should be V_MPEG/ISO/AVC (for h.264) or V_MPEGH/ISO/HEVC (for H.265). Optionally, the codec ID of track 2 should be A_AAC (for AAC) or A_MS/ACM (for G.711).
+ Data retention must be greater than 0.
+ The video track of each fragment must contain codec private data in the Advanced Video Coding (AVC) for H.264 format and HEVC for H.265 format. For more information, see MPEG-4 specification ISO/IEC 14496-15. For information about adapting stream data to a given format, see NAL Adaptation Flags.
+ The audio track (if present) of each fragment must contain codec private data in the AAC format (AAC specification ISO/IEC 13818-7) or the MS Wave format.
+You can monitor the amount of outgoing data by monitoring the GetClip.OutgoingBytes Amazon CloudWatch metric. For information about using CloudWatch to monitor Kinesis Video Streams, see Monitoring Kinesis Video Streams. For pricing information, see Amazon Kinesis Video Streams Pricing and AWS Pricing. Charges for outgoing AWS data apply.
+Request Syntax
+```
+POST /getClip HTTP/1.1
+Content-type: application/json
+{
+   "ClipFragmentSelector": { 
+      "FragmentSelectorType": "string",
+      "TimestampRange": { 
+         "EndTimestamp": number,
+         "StartTimestamp": number
+      }
+   },
+   "StreamARN": "string",
+   "StreamName": "string"
+}
+```
+URI Request Parameters
+The request does not use any URI parameters.
+Request Body
+The request accepts the following data in JSON format.
+ ClipFragmentSelector  
+The time range of the requested clip and the source of the timestamps.
+Type: ClipFragmentSelector object
+Required: Yes
+ StreamARN  
+The Amazon Resource Name (ARN) of the stream for which to retrieve the media clip. 
+You must specify either the StreamName or the StreamARN. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1024.
+Pattern: arn:aws:kinesisvideo:[a-z0-9-]:[0-9]:[a-z]/[a-zA-Z0-9_.-]/[0-9] 
+Required: No
+ StreamName  
+The name of the stream for which to retrieve the media clip. 
+You must specify either the StreamName or the StreamARN. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 256.
+Pattern: [a-zA-Z0-9_.-] 
+Required: No
+Response Syntax
+```
+HTTP/1.1 200
+Content-Type: ContentType
+Payload
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The response returns the following HTTP headers.
+ ContentType  
+The content type of the media in the requested clip.
+Length Constraints: Minimum length of 1. Maximum length of 128.
+Pattern: ^[a-zA-Z0-9_\.\-]$ 
+The response returns the following as the HTTP body.
+ Payload  
+Traditional MP4 file that contains the media clip from the specified video stream. The output will contain the first 100 MB or the first 200 fragments from the specified start timestamp. For more information, see Kinesis Video Streams Limits. 
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+ClientLimitExceededException 
+Kinesis Video Streams has throttled the request because you have exceeded the limit of allowed client calls. Try making the call later.
+HTTP Status Code: 400
+InvalidArgumentException 
+A specified parameter exceeds its restrictions, is not supported, or can't be used.
+HTTP Status Code: 400
+InvalidCodecPrivateDataException 
+The codec private data in at least one of the tracks of the video stream is not valid for this operation.
+HTTP Status Code: 400
+InvalidMediaFrameException 
+One or more frames in the requested clip could not be parsed based on the specified codec.
+HTTP Status Code: 400
+MissingCodecPrivateDataException 
+No codec private data was found in at least one of tracks of the video stream.
+HTTP Status Code: 400
+NoDataRetentionException 
+A streaming session was requested for a stream that does not retain data (that is, has a DataRetentionInHours of 0). 
+HTTP Status Code: 400
+NotAuthorizedException 
+Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token has expired.
+HTTP Status Code: 401
+ResourceNotFoundException 
+GetMedia throws this error when Kinesis Video Streams can't find the stream that you specified.
+GetHLSStreamingSessionURL and GetDASHStreamingSessionURL throw this error if a session with a PlaybackMode of ON_DEMAND or LIVE_REPLAYis requested for a stream that has no fragments within the requested time range, or if a session with a PlaybackMode of LIVE is requested for a stream that has no fragments within the last 30 seconds.
+HTTP Status Code: 404
+UnsupportedStreamMediaTypeException 
+The type of the media (for example, h.264 or h.265 video or ACC or G.711 audio) could not be determined from the codec IDs of the tracks in the first fragment for a playback session. The codec ID for track 1 should be V_MPEG/ISO/AVC and, optionally, the codec ID for track 2 should be A_AAC.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

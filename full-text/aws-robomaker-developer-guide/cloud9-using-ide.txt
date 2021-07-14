@@ -1,0 +1,7 @@
+Working with the development environment
+This section provides more information about AWS RoboMaker functionality in the AWS Cloud9 development environment.
+Topics
+ Manually Switching Gazebo Versions
+ Environment Settings
+ Creating a Workflow
+ Menu Commands Reference

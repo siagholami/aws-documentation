@@ -1,0 +1,5 @@
+Amazon Simple Storage Service resource type reference
+Resource types
+ AWS::S3::AccessPoint
+ AWS::S3::Bucket
+ AWS::S3::BucketPolicy

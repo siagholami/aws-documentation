@@ -1,0 +1,32 @@
+AWS::CloudFront::Distribution OriginGroup
+An origin group includes two origins (a primary origin and a second origin to failover to) and a failover criteria that you specify. You create an origin group to support origin failover in CloudFront. When you create or update a distribution, you can specifiy the origin group instead of a single origin, and CloudFront will failover from the primary origin to the second origin under the failover conditions that you've chosen.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FailoverCriteria](#cfn-cloudfront-distribution-origingroup-failovercriteria)" : OriginGroupFailoverCriteria,
+  "[Id](#cfn-cloudfront-distribution-origingroup-id)" : String,
+  "[Members](#cfn-cloudfront-distribution-origingroup-members)" : OriginGroupMembers
+}
+YAML
+[FailoverCriteria](#cfn-cloudfront-distribution-origingroup-failovercriteria): 
+    OriginGroupFailoverCriteria
+  [Id](#cfn-cloudfront-distribution-origingroup-id): String
+  [Members](#cfn-cloudfront-distribution-origingroup-members): 
+    OriginGroupMembers
+Properties
+FailoverCriteria 
+A complex type that contains information about the failover criteria for an origin group.
+Required: Yes
+Type: OriginGroupFailoverCriteria
+Update requires: No interruption
+Id 
+The origin group's ID.
+Required: Yes
+Type: String
+Update requires: No interruption
+Members 
+A complex type that contains information about the origins in an origin group.
+Required: Yes
+Type: OriginGroupMembers
+Update requires: No interruption

@@ -1,0 +1,100 @@
+AWS::ECS::TaskSet
+Create a task set in the specified cluster and service. This is used when a service uses the EXTERNAL deployment controller type. For more information, see Amazon ECS Deployment Types in the Amazon Elastic Container Service Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ECS::TaskSet",
+  "Properties" : {
+      "[Cluster](#cfn-ecs-taskset-cluster)" : String,
+      "[ExternalId](#cfn-ecs-taskset-externalid)" : String,
+      "[LaunchType](#cfn-ecs-taskset-launchtype)" : String,
+      "[LoadBalancers](#cfn-ecs-taskset-loadbalancers)" : [ LoadBalancer, ... ],
+      "[NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration)" : NetworkConfiguration,
+      "[PlatformVersion](#cfn-ecs-taskset-platformversion)" : String,
+      "[Scale](#cfn-ecs-taskset-scale)" : Scale,
+      "[Service](#cfn-ecs-taskset-service)" : String,
+      "[ServiceRegistries](#cfn-ecs-taskset-serviceregistries)" : [ ServiceRegistry, ... ],
+      "[TaskDefinition](#cfn-ecs-taskset-taskdefinition)" : String
+    }
+}
+YAML
+Type: AWS::ECS::TaskSet
+Properties: 
+  [Cluster](#cfn-ecs-taskset-cluster): String
+  [ExternalId](#cfn-ecs-taskset-externalid): String
+  [LaunchType](#cfn-ecs-taskset-launchtype): String
+  [LoadBalancers](#cfn-ecs-taskset-loadbalancers): 
+    - LoadBalancer
+  [NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration): 
+    NetworkConfiguration
+  [PlatformVersion](#cfn-ecs-taskset-platformversion): String
+  [Scale](#cfn-ecs-taskset-scale): 
+    Scale
+  [Service](#cfn-ecs-taskset-service): String
+  [ServiceRegistries](#cfn-ecs-taskset-serviceregistries): 
+    - ServiceRegistry
+  [TaskDefinition](#cfn-ecs-taskset-taskdefinition): String
+Properties
+Cluster 
+The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
+Required: Yes
+Type: String
+Update requires: Replacement
+ExternalId 
+An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
+Required: No
+Type: String
+Update requires: Replacement
+LaunchType 
+The launch type that new tasks in the task set will use. For more information, see Amazon ECS Launch Types in the Amazon Elastic Container Service Developer Guide.
+If a launchType is specified, the capacityProviderStrategy parameter must be omitted.
+Required: No
+Type: String
+Allowed values: EC2 | FARGATE
+Update requires: Replacement
+LoadBalancers 
+A load balancer object representing the load balancer to use with the task set. The supported load balancer types are either an Application Load Balancer or a Network Load Balancer.
+Required: No
+Type: List of LoadBalancer
+Update requires: Replacement
+NetworkConfiguration 
+The network configuration for the task set.
+Required: No
+Type: NetworkConfiguration
+Update requires: Replacement
+PlatformVersion 
+The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+Required: No
+Type: String
+Update requires: Replacement
+Scale 
+A floating-point percentage of the desired number of tasks to place and keep running in the task set.
+Required: No
+Type: Scale
+Update requires: No interruption
+Service 
+The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
+Required: Yes
+Type: String
+Update requires: Replacement
+ServiceRegistries 
+The details of the service discovery registries to assign to this task set. For more information, see Service Discovery.
+Required: No
+Type: List of ServiceRegistry
+Update requires: Replacement
+TaskDefinition 
+The task definition for the tasks in the task set to use.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Id 
+The ID of the task set.

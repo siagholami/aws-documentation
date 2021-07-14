@@ -1,0 +1,9 @@
+Tutorial: Setting up email notifications for failed jobs
+In this tutorial, you configure a CloudWatch Events event rule that captures events when a job status changes to ERROR and then notifies you about the event. To do this, you first create a topic in Amazon SNS that will send you an email notification about the failed job. Next, you create a rule in CloudWatch Events by defining an event source and referencing the Amazon SNS topic (the "target"), as shown in the following illustration.
+
+Topics
+ Prerequisites
+ Step 1: Create a topic in Amazon SNS
+ Step 2: Specify an event source in a CloudWatch Events rule
+ Step 3: Add the Amazon SNS topic and finish your rule
+ Step 4: Test your rule

@@ -1,0 +1,8 @@
+rds-snapshot-encrypted
+Checks whether Amazon Relational Database Service (Amazon RDS) DB snapshots are encrypted. The rule is NON_COMPLIANT, if Amazon RDS DB snapshots are not encrypted.
+Identifier: RDS_SNAPSHOT_ENCRYPTED
+Trigger type: Configuration changes
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

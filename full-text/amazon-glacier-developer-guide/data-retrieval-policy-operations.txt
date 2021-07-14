@@ -1,0 +1,7 @@
+Data Retrieval Operations
+The following are the data retrieval–related operations available in S3 Glacier.
+Topics
+ Get Data Retrieval Policy (GET policy)
+ List Provisioned Capacity (GET provisioned-capacity)
+ Purchase Provisioned Capacity (POST provisioned-capacity)
+ Set Data Retrieval Policy (PUT policy)

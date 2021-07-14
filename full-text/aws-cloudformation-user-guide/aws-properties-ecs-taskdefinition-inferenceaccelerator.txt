@@ -1,0 +1,23 @@
+AWS::ECS::TaskDefinition InferenceAccelerator
+Details on an Elastic Inference accelerator. For more information, see Working with Amazon Elastic Inference on Amazon ECS in the Amazon Elastic Container Service Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeviceName](#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)" : String,
+  "[DeviceType](#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)" : String
+}
+YAML
+[DeviceName](#cfn-ecs-taskdefinition-inferenceaccelerator-devicename): String
+  [DeviceType](#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype): String
+Properties
+DeviceName 
+The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
+Required: No
+Type: String
+Update requires: Replacement
+DeviceType 
+The Elastic Inference accelerator type to use.
+Required: No
+Type: String
+Update requires: Replacement

@@ -1,0 +1,22 @@
+Contact Block: Set Logging Behavior
+
+
+
+Item
+Description
+
+
+
+
+In contact flow type:
+All contact flows.
+
+
+Description:
+Enables contact flow logs.
+
+
+Scenarios:
+See these topics for more information about contact flow logs: [See the AWS documentation website for more details]
+
+

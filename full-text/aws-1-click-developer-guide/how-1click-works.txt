@@ -1,0 +1,15 @@
+How AWS IoT 1-Click Works
+Here is the AWS IoT 1-Click workflow:
+
+
+Choose from a set of supported devices.
+
+
+Associate AWS Lambda functions with devices to trigger actions. You can use one of your own Lambda functions or one of the predefined functions provided by the service.
+
+
+Physically deploy your devices and use the AWS IoT 1-Click console, AWS IoT 1-Click mobile app, or AWS IoT 1-Click API to enable them.
+
+
+Get information about device status and usage by using ready-made AWS IoT 1-Click reports or building your own.
+

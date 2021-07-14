@@ -1,0 +1,3 @@
+CloudTrail resource type reference
+Resource types
+ AWS::CloudTrail::Trail

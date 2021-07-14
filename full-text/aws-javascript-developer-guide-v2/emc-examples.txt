@@ -1,0 +1,8 @@
+AWS Elemental MediaConvert Examples
+AWS Elemental MediaConvert is a file-based video transcoding service with broadcast-grade features. You can use it to create assets for broadcast and for video-on-demand (VOD) delivery across the internet. For more information, see the https://docs.aws.amazon.com/mediaconvert/latest/ug/.
+
+The JavaScript API for MediaConvert is exposed through the AWS.MediaConvert client class. For more information, see Class: AWS.MediaConvert in the API reference.
+Topics
+ Getting Your Account-Specific Endpoint for MediaConvert
+ Creating and Managing Transcoding Jobs in MediaConvert
+ Using Job Templates in MediaConvert

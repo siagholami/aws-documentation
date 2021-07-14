@@ -1,0 +1,46 @@
+SNS
+The object describing an SNS event source type.
+SAM generates AWS::SNS::Subscription resource when this event type is set
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[FilterPolicy](#sam-function-sns-filterpolicy): [SnsFilterPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicy)
+  [Region](#sam-function-sns-region): String
+  [SqsSubscription](#sam-function-sns-sqssubscription): Boolean | SqsSubscriptionObject
+  [Topic](#sam-function-sns-topic): String
+Properties
+FilterPolicy 
+The filter policy JSON assigned to the subscription. For more information, see GetSubscriptionAttributes in the Amazon Simple Notification Service API Reference.
+Type: SnsFilterPolicy
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [FilterPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicy) property of an AWS::SNS::Subscription resource.
+Region 
+For cross-region subscriptions, the region in which the topic resides.
+If no region is specified, CloudFormation uses the region of the caller as the default.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [Region](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region) property of an AWS::SNS::Subscription resource.
+SqsSubscription 
+Set this property to true, or specify SqsSubscriptionObject to enable batching SNS topic notifications in an SQS queue. Setting this property to true creates a new SQS queue, whereas specifying a SqsSubscriptionObject uses an existing SQS queue.
+Type: Boolean | SqsSubscriptionObject
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Topic 
+The ARN of the topic to subscribe to.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is passed directly to the [TopicArn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#topicarn) property of an AWS::SNS::Topic resource.
+Examples
+SNS Event Source Example
+SNS Event Source Example
+YAML
+Properties:
+  Topic: arn:aws:sns:us-east-1:123456789012:my_topic
+  SqsSubscription: True
+  FilterPolicy:
+    store: 
+      - example_corp
+    price_usd: 
+      - numeric: 
+          - ">="
+          - 100

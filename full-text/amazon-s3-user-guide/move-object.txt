@@ -1,0 +1,26 @@
+Moving an object
+In the Amazon S3 console, you can move an object to a bucket or a folder. 
+To move an object
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Buckets list, choose your bucket name.
+
+
+Select the check box beside the object that you want to move.
+
+
+Choose Actions, and choose Move.
+
+
+Choose the move destination:
+    If you want to move your object to a bucket, select the bucket.
+    If you want to move your object to a folder in a bucket, choose the bucket name, and then choose the folder.
+
+
+Under Review, confirm the move details, and choose Move.
+
+
+Amazon S3 moves your object to the destination.

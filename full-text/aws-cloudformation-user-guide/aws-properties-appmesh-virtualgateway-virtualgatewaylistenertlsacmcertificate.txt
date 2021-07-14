@@ -1,0 +1,16 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTlsAcmCertificate
+An object that represents an AWS Certicate Manager (ACM) certificate.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CertificateArn](#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn)" : String
+}
+YAML
+[CertificateArn](#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn): String
+Properties
+CertificateArn 
+The Amazon Resource Name (ARN) for the certificate. The certificate must meet specific requirements and you must have proxy authorization enabled. For more information, see Transport Layer Security (TLS).
+Required: Yes
+Type: String
+Update requires: No interruption

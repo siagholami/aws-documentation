@@ -1,0 +1,25 @@
+RequestModel
+Configure Request Model for a specific ApiPathMethod.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[Model](#sam-function-requestmodel-model): String
+  [Required](#sam-function-requestmodel-required): Boolean
+Properties
+Model 
+Name of a model defined in the Models property of the AWS::Serverless::Api.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Required 
+adds a required property in the parameters section of OpenApi definition for given API endpoint
+Type: Boolean
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Examples
+Request Model
+Request Model Example
+YAML
+RequestModel:
+  Model: User
+  Required: true

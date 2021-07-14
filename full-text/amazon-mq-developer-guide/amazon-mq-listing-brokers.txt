@@ -1,0 +1,23 @@
+Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details
+When you request that Amazon MQ create a broker, the creation process can take about 15 minutes..
+The following example shows how you can confirm your broker's existence by listing your brokers in the current region using the AWS Management Console.
+To List Brokers and View Broker Details
+
+Sign in to the Amazon MQ console.
+
+Your brokers in the current region are listed.
+
+The following information is displayed for each broker:
+    Name
+    Creation date
+    Status
+    Deployment mode
+    Instance type
+
+Choose your broker's name (for example, MyBroker).
+
+On the MyBroker page, the configured Details are displayed for your broker:
+
+Below the Details section, the following information is displayed:
+    In the Connections section, the ActiveMQ Web Console URL and the wire-level protocol endpoints
+    In the Users section, the users associated with the broker

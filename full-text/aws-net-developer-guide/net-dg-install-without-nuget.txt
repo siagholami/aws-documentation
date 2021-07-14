@@ -1,0 +1,61 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Install AWSSDK assemblies without NuGet
+This topic describes how you can use the AWSSDK assemblies that you obtained and stored locally (or on premises) as described in Obtaining AWSSDK assemblies. This is not the recommended method for handling SDK references, but is required in some environments.
+Note
+The recommended method for handling SDK references is to download and install just the NuGet packages that each project needs. That method is described in Install AWSSDK packages with NuGet.
+To install AWSSDK assemblies
+
+
+Create a folder in your project area for the required AWSSDK assemblies. As an example, you might call this folder AwsAssemblies.
+
+
+If you haven't already done so, obtain the AWSSDK assemblies, which places the assemblies in some local download or installation folder. Copy the DLL files for the required assemblies from that download folder into your project (into the AwsAssemblies folder, in our example).
+
+
+Be sure to also copy any dependencies. You can find information about dependencies on the GitHub website.
+
+Make reference to the required assemblies as follows.
+
+
+[ Cross-platform development ]
+
+
+Open your project's .csproj file and add an <ItemGroup> element.
+
+
+In the <ItemGroup> element, add a <Reference> element with an Include attribute for each required assembly.
+For Amazon S3, for example, you would add the following lines to your project's .csproj file.
+On Linux and macOS:
+<ItemGroup>
+    <Reference Include="./AwsAssemblies/AWSSDK.Core.dll" />
+    <Reference Include="./AwsAssemblies/AWSSDK.S3.dll" />
+  </ItemGroup>
+On Windows:
+<ItemGroup>
+    <Reference Include="AwsAssemblies\AWSSDK.Core.dll" />
+    <Reference Include="AwsAssemblies\AWSSDK.S3.dll" />
+  </ItemGroup>
+
+
+Save you project's .csproj file.
+
+
+
+[ Windows with Visual Studio and .NET Core ]
+
+
+In Visual Studio, load your project and open Project, Add Reference.
+
+
+Choose the Browse button on the bottom of the dialog box. Navigate to your project's folder and the subfolder that you copied the required DLL files to (AwsAssemblies, for example).
+
+
+Select all the DLL files, choose Add, and choose OK.
+
+
+Save your project.
+
+

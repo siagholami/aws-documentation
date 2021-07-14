@@ -1,0 +1,7 @@
+Understanding Your Reservations
+You can use the AWS Cost and Usage Reports (AWS CUR) to track your Reserved Instance (RI) utilization, charges, and allocations. This section is an in-depth description to understand your reservations.
+Topics
+ Understanding Your Reservation Line Items
+ Understanding Your Amortized Reservation Data
+ Monitoring Your Size Flexible Reservations
+ Monitoring Your On-Demand Capacity Reservations

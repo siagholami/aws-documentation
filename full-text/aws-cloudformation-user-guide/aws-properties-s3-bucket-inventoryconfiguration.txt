@@ -1,0 +1,61 @@
+AWS::S3::Bucket InventoryConfiguration
+Specifies the inventory configuration for an Amazon S3 bucket. For more information, see GET Bucket inventory in the Amazon Simple Storage Service API Reference. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Destination](#cfn-s3-bucket-inventoryconfiguration-destination)" : Destination,
+  "[Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled)" : Boolean,
+  "[Id](#cfn-s3-bucket-inventoryconfiguration-id)" : String,
+  "[IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions)" : String,
+  "[OptionalFields](#cfn-s3-bucket-inventoryconfiguration-optionalfields)" : [ String, ... ],
+  "[Prefix](#cfn-s3-bucket-inventoryconfiguration-prefix)" : String,
+  "[ScheduleFrequency](#cfn-s3-bucket-inventoryconfiguration-schedulefrequency)" : String
+}
+YAML
+[Destination](#cfn-s3-bucket-inventoryconfiguration-destination): 
+    Destination
+  [Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled): Boolean
+  [Id](#cfn-s3-bucket-inventoryconfiguration-id): String
+  [IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions): String
+  [OptionalFields](#cfn-s3-bucket-inventoryconfiguration-optionalfields): 
+    - String
+  [Prefix](#cfn-s3-bucket-inventoryconfiguration-prefix): String
+  [ScheduleFrequency](#cfn-s3-bucket-inventoryconfiguration-schedulefrequency): String
+Properties
+Destination 
+Contains information about where to publish the inventory results.
+Required: Yes
+Type: Destination
+Update requires: No interruption
+Enabled 
+Specifies whether the inventory is enabled or disabled. If set to True, an inventory list is generated. If set to False, no inventory list is generated.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+Id 
+The ID used to identify the inventory configuration.
+Required: Yes
+Type: String
+Update requires: No interruption
+IncludedObjectVersions 
+Object versions to include in the inventory list. If set to All, the list includes all the object versions, which adds the version-related fields VersionId, IsLatest, and DeleteMarker to the list. If set to Current, the list does not contain these version-related fields.
+Required: Yes
+Type: String
+Allowed values: All | Current
+Update requires: No interruption
+OptionalFields 
+Contains the optional fields that are included in the inventory results.
+Required: No
+Type: List of String
+Update requires: No interruption
+Prefix 
+The prefix that is prepended to all inventory results.
+Required: No
+Type: String
+Update requires: No interruption
+ScheduleFrequency 
+Specifies the schedule for generating inventory results. Valid Values: Daily | Weekly. 
+Required: Yes
+Type: String
+Update requires: No interruption

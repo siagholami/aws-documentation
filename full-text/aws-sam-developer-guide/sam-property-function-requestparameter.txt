@@ -1,0 +1,27 @@
+RequestParameter
+Configure Request Parameter for a specific ApiPathMethod.
+Either Required or Caching property needs to be specified for request parameter
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[Caching](#sam-function-requestparameter-caching): Boolean
+  [Required](#sam-function-requestparameter-required): Boolean
+Properties
+Caching 
+Adds cacheKeyParameters section to the API Gateway OpenApi definition
+Type: Boolean
+Required: Conditional
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Required 
+This field specifies whether a parameter is required
+Type: Boolean
+Required: Conditional
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Examples
+Request Parameter
+Example of setting Request Parameters
+YAML
+RequestParameters:
+  - method.request.header.Authorization:
+      Required: true
+      Caching: true

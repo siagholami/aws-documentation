@@ -1,0 +1,40 @@
+Conditional Functions
+Amazon S3 Select and S3 Glacier Select support the following conditional functions.
+Topics
+ COALESCE
+ NULLIF
+COALESCE
+Evaluates the arguments in order and returns the first non-unknown, that is, the first non-null or non-missing. This function does not propagate null and missing.
+Syntax
+COALESCE ( expression, expression, ... )
+Parameters
+expression 
+The target expression that the function operates on.
+Examples
+COALESCE(1)                -- 1
+COALESCE(null)             -- null
+COALESCE(null, null)       -- null
+COALESCE(missing)          -- null
+COALESCE(missing, missing) -- null
+COALESCE(1, null)          -- 1
+COALESCE(null, null, 1)    -- 1
+COALESCE(null, 'string')   -- 'string'
+COALESCE(missing, 1)       -- 1
+NULLIF
+Given two expressions, returns NULL if the two expressions evaluate to the same value; otherwise, returns the result of evaluating the first expression.
+Syntax
+NULLIF ( expression1, expression2 )
+Parameters
+expression1, expression2 
+The target expressions that the function operates on.
+Examples
+NULLIF(1, 1)             -- null
+NULLIF(1, 2)             -- 1
+NULLIF(1.0, 1)           -- null
+NULLIF(1, '1')           -- 1
+NULLIF([1], [1])         -- null
+NULLIF(1, NULL)          -- 1
+NULLIF(NULL, 1)          -- null
+NULLIF(null, null)       -- null
+NULLIF(missing, null)    -- null
+NULLIF(missing, missing) -- null

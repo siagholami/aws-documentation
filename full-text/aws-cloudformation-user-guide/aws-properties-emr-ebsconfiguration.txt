@@ -1,0 +1,24 @@
+AWS::EMR::InstanceGroupConfig EbsConfiguration
+The Amazon EBS configuration of a cluster instance.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[EbsBlockDeviceConfigs](#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs)" : [ EbsBlockDeviceConfig, ... ],
+  "[EbsOptimized](#cfn-emr-ebsconfiguration-ebsoptimized)" : Boolean
+}
+YAML
+[EbsBlockDeviceConfigs](#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs): 
+    - EbsBlockDeviceConfig
+  [EbsOptimized](#cfn-emr-ebsconfiguration-ebsoptimized): Boolean
+Properties
+EbsBlockDeviceConfigs 
+An array of Amazon EBS volume specifications attached to a cluster instance.
+Required: No
+Type: List of EbsBlockDeviceConfig
+Update requires: No interruption
+EbsOptimized 
+Indicates whether an Amazon EBS volume is EBS-optimized.
+Required: No
+Type: Boolean
+Update requires: No interruption

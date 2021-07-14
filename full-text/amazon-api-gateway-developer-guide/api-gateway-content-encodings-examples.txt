@@ -1,0 +1,6 @@
+Examples of binary support
+The following examples demonstrate how to access a binary file in Amazon S3 or AWS Lambda through an API Gateway API.
+Topics
+ Return binary media from a Lambda proxy integration
+ Access binary files in Amazon S3 through an API Gateway API
+ Access binary files in Lambda using an API Gateway API

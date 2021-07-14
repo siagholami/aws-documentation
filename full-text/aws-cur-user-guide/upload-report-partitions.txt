@@ -1,0 +1,15 @@
+Uploading Your Report Partitions
+To query your Cost and Usage Reports data, you need to upload the data into your Athena table. You must do this for each new AWS CUR report that AWS delivers to you.
+To upload your latest partitions
+
+
+Open the Athena console at https://console.aws.amazon.com/athena/.
+
+
+Choose the ... next to your table.
+
+
+Choose Load Partitions.
+
+
+If you don't upload your partitions, Athena returns either no results or an error message that indicates missing data.

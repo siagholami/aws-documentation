@@ -1,0 +1,8 @@
+Databases
+AWS Data Pipeline supports the following types of databases:
+JdbcDatabase
+A JDBC database.
+RdsDatabase
+An Amazon RDS database.
+RedshiftDatabase
+An Amazon Redshift database.

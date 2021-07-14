@@ -1,0 +1,107 @@
+Requesting modifications to your EBS Volumes
+With Elastic Volumes, you can dynamically modify the size, performance, and volume type of your Amazon EBS volumes without detaching them.
+Use the following process when modifying a volume:
+
+
+(Optional) Before modifying a volume that contains valuable data, it is a best practice to create a snapshot of the volume in case you need to roll back your changes. For more information, see Creating Amazon EBS snapshots.
+
+
+Request the volume modification.
+
+
+Monitor the progress of the volume modification. For more information, see Monitoring the progress of volume modifications.
+
+
+If the size of the volume was modified, extend the volume's file system to take advantage of the increased storage capacity. For more information, see Extending a Linux file system after resizing a volume.
+
+
+Topics
+ Modifying an EBS volume using Elastic Volumes (console)
+ Modifying an EBS volume using Elastic Volumes (AWS CLI)
+ Initializing Elastic Volumes support (if needed)
+ Modifying an EBS volume if Elastic Volumes is not supported
+Modifying an EBS volume using Elastic Volumes (console)
+Use the following procedure to modify an EBS volume.
+To modify an EBS volume using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+Choose Volumes, select the volume to modify, and then choose Actions, Modify Volume.
+
+
+The Modify Volume window displays the volume ID and the volume's current configuration, including type, size, and IOPS. You can change any or all of these settings in a single action. Set new configuration values as follows:
+    To modify the type, choose a value for Volume Type.
+    To modify the size, enter an allowed integer value for Size.
+    If you chose Provisioned IOPS SSD (io1) or Provisioned IOPS SSD (io2) as the volume type, enter an allowed integer value for IOPS.
+
+
+After you have finished changing the volume settings, choose Modify. When prompted for confirmation, choose Yes.
+
+
+Modifying volume size has no practical effect until you also extend the volume's file system to make use of the new storage capacity. For more information, see Extending a Linux file system after resizing a volume.
+
+
+Modifying an EBS volume using Elastic Volumes (AWS CLI)
+Use the modify-volume command to modify one or more configuration settings for a volume. For example, if you have a volume of type gp2 with a size of 100 GiB, the following command changes its configuration to a volume of type io1 with 10,000 IOPS and a size of 200 GiB.
+aws ec2 modify-volume --volume-type io1 --iops 10000 --size 200 --volume-id vol-11111111111111111
+The following is example output:
+{
+    "VolumeModification": {
+        "TargetSize": 200,
+        "TargetVolumeType": "io1",
+        "ModificationState": "modifying",
+        "VolumeId": "vol-11111111111111111",
+        "TargetIops": 10000,
+        "StartTime": "2017-01-19T22:21:02.959Z",
+        "Progress": 0,
+        "OriginalVolumeType": "gp2",
+        "OriginalIops": 300,
+        "OriginalSize": 100
+    }
+}
+Modifying volume size has no practical effect until you also extend the volume's file system to make use of the new storage capacity. For more information, see Extending a Linux file system after resizing a volume.
+Initializing Elastic Volumes support (if needed)
+Before you can modify a volume that was attached to an instance before November 3, 2016 23:40 UTC, you must initialize volume modification support using one of the following actions:
+ Detach and attach the volume
+ Stop and start the instance
+Use one of the following procedures to determine whether your instances are ready for volume modification.
+To determine whether your instances are ready using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+On the navigation pane, choose Instances.
+
+
+Choose the Show/Hide Columns icon (the gear). Select the Launch Time and Block Devices attributes and then choose Close.
+
+
+Sort the list of instances by the Launch Time column. For instances that were started before the cutoff date, check when the devices were attached. In the following example, you must initialize volume modification for the first instance because it was started before the cutoff date and its root volume was attached before the cutoff date. The other instances are ready because they were started after the cutoff date.
+
+
+
+To determine whether your instances are ready using the CLI
+Use the following describe-instances command to determine whether the volume was attached before November 3, 2016 23:40 UTC.
+aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,LaunchTime<='2016-11-01',BlockDeviceMappings[*][Ebs.AttachTime<='2016-11-01']]" --output text
+The first line of the output for each instance shows its ID and whether it was started before the cutoff date (True or False). The first line is followed by one or more lines that show whether each EBS volume was attached before the cutoff date (True or False). In the following example output, you must initialize volume modification for the first instance because it was started before the cutoff date and its root volume was attached before the cutoff date. The other instances are ready because they were started after the cutoff date.
+i-e905622e              True
+True
+i-719f99a8              False
+True
+i-006b02c1b78381e57     False
+False
+False
+i-e3d172ed              False
+True
+Modifying an EBS volume if Elastic Volumes is not supported
+If you are using a supported instance type, you can use Elastic Volumes to dynamically modify the size, performance, and volume type of your Amazon EBS volumes without detaching them.
+If you cannot use Elastic Volumes but you need to modify the root (boot) volume, you must stop the instance, modify the volume, and then restart the instance.
+After the instance has started, you can check the file system size to see if your instance recognizes the larger volume space. On Linux, use the df -h command to check the file system size.
+[ec2-user ~]$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/xvda1            7.9G  943M  6.9G  12% /
+tmpfs                 1.9G     0  1.9G   0% /dev/shm
+If the size does not reflect your newly expanded volume, you must extend the file system of your device so that your instance can use the new space. For more information, see Extending a Linux file system after resizing a volume.

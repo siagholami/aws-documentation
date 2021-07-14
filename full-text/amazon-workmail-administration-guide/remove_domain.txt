@@ -1,0 +1,21 @@
+Removing a domain
+When you no longer need a domain, you can delete it.
+Note
+You can't delete a domain when there are users or groups using the domain as their email address.
+To remove a domain
+
+
+Sign in to the AWS Management Console and open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+If necessary, change the AWS Region. From the navigation bar, select the Region that meets your needs. For more information, see Regions and endpoints in the Amazon Web Services General Reference.
+
+
+For Organizations, choose the name of the organization from which to remove the domain.
+
+
+In the list of domains, select the check box next to the domain name and choose Remove.
+
+
+In the Remove domain dialog box, type the name of the domain to remove and choose Remove.
+

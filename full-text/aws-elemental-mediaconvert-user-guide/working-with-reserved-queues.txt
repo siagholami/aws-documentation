@@ -1,0 +1,10 @@
+Working with reserved queues in AWS Elemental MediaConvert
+You can send your AWS Elemental MediaConvert transcoding job to either an on-demand or reserved queue. For high-level information about the difference between the two types, see How queues work.
+Topics
+ Feature limitations with reserved queues
+ Creating a reserved queue
+ Purchasing additional capacity for a reserved queue
+ Editing reserved queues
+ Listing and viewing reserved queues
+ Purchasing transcoding capacity for an existing reserved queue
+ Deleting a reserved queue

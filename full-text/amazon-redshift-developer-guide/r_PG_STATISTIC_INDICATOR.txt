@@ -1,0 +1,19 @@
+PG_STATISTIC_INDICATOR
+Stores information about the number of rows inserted or deleted since the last ANALYZE. The PG_STATISTIC_INDICATOR table is updated frequently following DML operations, so statistics are approximate.
+PG_STATISTIC_INDICATOR is visible only to superusers. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Example
+The following example returns information for table changes since the last ANALYZE. 
+```
+select * from pg_statistic_indicator;
+stairelid | stairows | staiins | staidels
+--------------------------------------
+   108271 |       11 |       0 |        0
+   108275 |      365 |       0 |        0
+   108278 |     8798 |       0 |        0
+   108280 |    91865 |       0 |   100632
+   108267 |    89981 |   49990 |     9999
+   108269 |      808 |     606 |      374
+   108282 |   152220 |   76110 |   248566
+```

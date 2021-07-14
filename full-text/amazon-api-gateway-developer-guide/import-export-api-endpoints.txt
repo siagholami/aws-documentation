@@ -1,0 +1,32 @@
+Import a regional API into API Gateway
+When importing an API, you can choose the regional endpoint configuration for the API. You can use the API Gateway console, the AWS CLI, or an AWS SDK.
+When you export an API, the API endpoint configuration is not included in the exported API definitions.
+For a tutorial on using the Import API feature from the API Gateway console, see Tutorial: Create a REST API by importing an example.
+Topics
+ Import a regional API using the API Gateway console
+ Import a regional API using the AWS CLI
+Import a regional API using the API Gateway console
+To import an API of a regional endpoint using the API Gateway console, do the following:
+
+
+Sign in to the API Gateway console and choose Create API. 
+
+
+Select the Import from OpenAPI option under Create new API.
+
+
+Copy an API's OpenAPI definition and paste it into the code editor, or choose Select OpenAPI File to load an OpenAPI file from a local drive.
+
+
+Under Settings, for Endpoint Type, choose Regional.
+
+
+Choose Import to start importing the OpenAPI definitions.
+
+
+Import a regional API using the AWS CLI
+To import an API from an OpenAPI definition file using the AWS CLI, use the import-rest-api command:
+aws apigateway import-rest-api \
+    --endpointConfigurationTypes 'REGIONAL' \
+    --fail-on-warnings \
+    --body 'file://path/to/API_OpenAPI_template.json'

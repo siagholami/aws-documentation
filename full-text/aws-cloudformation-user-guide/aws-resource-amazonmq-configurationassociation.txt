@@ -1,0 +1,65 @@
+AWS::AmazonMQ::ConfigurationAssociation
+Use the AWS CloudFormation AWS::AmazonMQ::ConfigurationAssociation resource to associate a configuration with a broker, or return information about the specified ConfigurationAssociation. Only use one per broker, and don't use a configuration on the broker resource if you have associated a configuration with that broker.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AmazonMQ::ConfigurationAssociation",
+  "Properties" : {
+      "[Broker](#cfn-amazonmq-configurationassociation-broker)" : String,
+      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : ConfigurationId
+    }
+}
+YAML
+Type: AWS::AmazonMQ::ConfigurationAssociation
+Properties: 
+  [Broker](#cfn-amazonmq-configurationassociation-broker): String
+  [Configuration](#cfn-amazonmq-configurationassociation-configuration): 
+    ConfigurationId
+Properties
+Broker 
+The broker to associate with a configuration.
+Required: Yes
+Type: String
+Update requires: Replacement
+Configuration 
+The configuration to associate with a broker.
+Required: Yes
+Type: ConfigurationId
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the Amazon MQ configurationassociation ID. For example: 
+c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9 
+For more information about using the Ref function, see Ref.
+Examples
+ConfigurationAssociation
+The following example creates an Amazon MQ ConfigurationAssociation.
+JSON
+"ConfigurationAssociation1": {
+        "Type": "AWS::AmazonMQ::ConfigurationAssociation",
+        "Properties": {
+            "Broker": {
+                "Ref": "Broker1"
+            },
+            "Configuration": {
+                "Id": {
+                    "Ref": "Configuration1"
+                },
+                "Revision": {
+                    "Fn::GetAtt": [
+                        "Configuration1",
+                        "Revision"
+                    ]
+                }
+            }
+        }
+    }
+YAML
+ConfigurationAssociation1:
+    Type: AWS::AmazonMQ::ConfigurationAssociation
+    Properties:
+      Broker: {Ref: Broker1}
+      Configuration:
+        Id: {Ref: Configuration1}
+        Revision: {'Fn::GetAtt': [Configuration1, Revision]}

@@ -1,0 +1,1933 @@
+Lumberyard User Guide Lumberyard User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Lumberyard?
+Lumberyard Systems
+Setting up Lumberyard
+System requirements
+Downloading Lumberyard
+Upgrading Lumberyard
+Files to Exclude When Upgrading Lumberyard
+
+
+Using Lumberyard Setup Assistant to Set Up Your Development Environment
+Running Lumberyard Setup Assistant
+Using Lumberyard Setup Assistant Batch
+Customizing Lumberyard Setup Assistant
+
+
+Enabling a Firewall
+Using the Perforce Plugin with Lumberyard
+Uninstalling Amazon Lumberyard
+
+
+Lumberyard Programming Concepts and Resources
+C Best Practices for Amazon Lumberyard
+Memory Management
+Use AzCore Standard Containers
+Tracing
+
+
+
+
+Lumberyard Editors and Tools
+Lumberyard Asset File Types
+Lumberyard Blog, Forums, and Feedback
+Key Lumberyard Terminology
+Working with Lumberyard projects
+Creating Lumberyard projects
+Creating and Switching Game Projects
+Configuring Advanced Settings
+Understanding the Project Configurator
+Troubleshooting
+Managing Game Projects with Lmbr.exe
+Projects Commands
+Gems Commands
+Capabilities Commands
+ThirdPartySDKs Commands
+Packages Commands
+
+
+
+
+Building Lumberyard projects
+Game Build Types in Amazon Lumberyard
+Using the Waf Build System
+Waf File System
+Waf File Lists (*.waf_files)
+Waf Branch Spec (waf_branch_spec.py)
+Waf Projects File (project.json)
+Waf Spec Files (*.json)
+Waf Module Files (wscript)
+Waf User Options and Settings
+
+
+Waf Commands and Options
+Waf Supported Operating Systems and Compilers
+Waf Project Settings
+Using the Waf Artifacts Cache
+Adding Third-Party Libraries
+Creating Third-Party Library Configuration Files for Waf
+Waf Extensions
+Using Waf
+Adding a Game Project
+Adding a Spec
+Adding a Build Module
+Launching the Game Project
+
+
+Adding User Settings to Waf
+Adding Qt 5 Content to Waf
+Using Uber Files
+Debugging Waf
+
+
+Adding Custom Game Icons
+
+
+Using Lumberyard sample projects and levels
+Samples Project
+Starter Game Sample
+Script Canvas Basic Sample
+Advanced_RinLocomotion Sample
+Simple_JackLocomotion Sample
+Multiplayer Sample
+Multiplayer Sample Gameplay Architecture
+Multiplayer Sample Network Features
+
+
+Virtual Reality Samples Project
+VR Islands Level
+VR TV Room Level
+VR Xylophone Level
+VR Box Garden Level
+
+
+In-App Purchases Sample
+Woodland Asset Package – Legacy
+Beach City Sample Project – Legacy
+Legacy Sample Project (GameSDK)
+
+
+Using Lumberyard Editor
+Lumberyard Editor Interface
+Using the Menu Bar
+Using the Top Toolbar
+Using the Bottom Toolbar
+Using Keyboard Shortcuts
+Using the Viewport
+Using the Console Window
+Console in Depth
+Console Variable Tutorial
+
+
+Automating the Lumberyard Editor with the Python Editor Bindings gem
+Python Editor Bindings gem examples
+
+
+Demo and Video Capture
+Capturing Video and Audio
+Recording Time Demos
+
+
+Customizing Lumberyard Editor
+Restoring the Default Layout for Lumberyard Editor
+Working with assets in Lumberyard
+Working with the Asset Pipeline and asset files
+Using Asset Processor
+Asset Processor Interface
+Enabling Asset Processor's Faster Scanning Mode
+Importing Assets into Lumberyard
+Working with the FBX Settings Tool
+Editing the FBX Settings
+Best Practices for Creating and Exporting Meshes
+Using Custom Normals for DCC Assets
+Exporting Static Meshes
+Creating Physics Proxies for Static Meshes
+Tutorial: Importing FBX Files as Static Meshes
+Using Multiple UV Channels
+FBX Soft Naming Conventions
+
+
+Using Resource Compiler
+Debugging Asset Processor
+
+
+Configuring the Asset Pipeline
+Configuring Image Processing
+Creating Image Processing Presets
+Using Image Naming Conventions
+Using the Resource Compiler Image Tool
+Generating Mip Maps
+
+
+Live Reloading and VFS
+Compiling Shaders for Release Builds
+Shader Compiler Proxy
+Shader Cache and Generation
+Game Startup Sequence
+Asset Browser
+Programming the Lumberyard AZCore Runtime Asset System
+Adding an Asset Type to Lumberyard
+Creating a Custom Asset Builder
+Asset IDs and File Paths
+Job Dependency for Asset Pipeline
+Raw File Access in Lumberyard
+
+
+
+
+Bundle game assets in Amazon Lumberyard
+What is the Amazon Lumberyard Asset Bundler?
+Build and bundle assets for release in Lumberyard
+Creating Multiple Asset Bundles
+Create content patches with Lumberyard
+Migrating a Game Project to the Asset Bundler
+Resolving Missing Assets
+Verifying that Bundles Contain Required Assets
+Using the Missing Dependency Scanner
+Using the Asset Validation Gem to Verify Seeds
+Using Bundle Mode to Test Bundles
+
+
+Using the File Tagging System to Include or Exclude Assets
+Amazon Lumberyard Asset List Comparison Operations
+Default dependencies for Lumberyard projects
+Asset Bundler Concepts and Terms
+Lumberyard Asset Bundler Command-Line Tool Reference
+
+
+Working with component entities
+Entity Outliner
+Working with Entities
+Creating an Entity
+
+
+Working with Layers
+
+
+Entity Inspector
+Setting an Entity Status
+Customizing the Entity Icon
+Pinning an Entity's Inspector
+
+
+Working with Components
+Adding Components to an Entity
+Managing Components
+Editing Component Properties
+Disabling and Enabling Components on Entities
+Editing Components in the Viewport
+Using Manipulators
+Working with the Viewport Interaction Model
+Enabling Viewport Interaction Model
+Modifying the Transform
+Reference Space Model
+Using Group Selections and Reference Spaces
+Resetting the Transform
+Matching the Transform
+Using Pivot Mode
+Using the Camera Space
+
+
+
+
+Working with Slices
+Anatomy of a Slice
+Creating a Slice
+Instantiating a Slice
+Creating Nested Slices
+Modifying a Slice and Saving Changes
+Detaching Entities and Slice Instances
+Reverting and Forcing Overrides
+Slice Reloading
+Working with Dynamic Slices
+Slice Favorites
+Converting Slices with the Slice Upgrade Pipeline
+
+
+Component Reference
+Actor
+Using Multiple Skin Attachments for an Actor
+Setting Up Actor Entities
+
+
+AnimGraph
+Anim Graph Net Sync
+Area Light
+Attachment
+Audio Area Environment
+Audio Environment
+Audio Listener
+Audio Preload
+Audio Proxy
+Audio Rtpc
+Audio Switch
+Audio Trigger
+Behavior Tree
+Camera
+Camera Rig
+Comment
+Decal
+Environment Probe
+Fog Volume
+Geom Cache
+High Quality Shadow
+Infinite Ocean
+Understanding Water Properties
+Infinite Ocean Component Properties
+Water Shader Material for the Infinite Ocean Component
+Best Practices Working with the Infinite Ocean Component
+Additional Workflow
+Console Variables for the Infinite Ocean Component
+Infinite Ocean Component with the Track View Editor
+Infinite Ocean Component Request Bus Interface
+Using the Infinite Ocean Component with Script Canvas
+
+
+Input
+Working with the Input Component
+Input Component EBus Interface
+
+
+Legacy Terrain level component
+Lens Flare
+Lightning
+Lighting Arc
+Lua Script
+Mesh
+Navigation
+Navigation Area
+Navigation Seed
+Network Binding
+OccluderArea
+Particle
+Point Light
+Polygon Prism Shape
+Portal
+Projector Light
+Cloth
+Cloth Simulation
+Create Cloth for Environments
+Create Cloth for Characters
+
+
+PhysX Character Controller
+PhysX Collider
+Export PhysX collider mesh assets
+
+
+PhysX Force Region
+PhysX Ragdoll
+PhysX Rigid Body
+PhysX Shape Collider
+PhysX Terrain
+Rain
+Random Timed Spawner
+Render to Texture
+River
+Working with the River Component
+River Request Bus Interface
+
+
+Road
+Script Canvas
+Shapes: Cylinder, Capsule, Disk, Box, Sphere, Compound
+Simple Motion
+Simple State
+Sky Cloud
+Sky Highlight
+Snow
+Spawner
+Spline
+Tag
+Transform
+Trigger Area
+Tube Shape
+UI Canvas Asset Ref
+UI Canvas on Mesh
+UI Canvas Proxy Ref
+Vegetation Layer Spawner
+Vegetation Layer Spawner Properties
+Ebus Request Bus Interface
+
+
+Vertex Containers
+Video Playback
+Video Playback Bink
+VisArea
+VR Preview
+Water Volume
+White Box component
+White Box Collider component
+
+
+Converting Entities with the Legacy Converter
+Programmer's Guide to Entities and Components
+Creating a Component
+Registering Your Component
+Reflecting a Component for Serialization and Editing
+Defining and Using Component Services
+Editor Components
+Creating System Components
+Programmer's Guide to Component Mode
+Step 1: Choose a Component
+Step 2: Add a ComponentModeDelegate
+Step 3: Write a New Component Mode
+Step 4: Add Shortcuts for Component Mode
+Step 5: Handle Selection in the Viewport
+Step 6: Building Component Mode
+Tips for Working with Component Mode
+
+
+Components and EBuses
+Tick Bus and Components
+Exposing Custom Components to Track View for Animation
+Components and EBuses: Best Practices
+Components and EBuses: Questions and Answers
+
+
+
+
+Gameplay Bus
+Reflecting Lumberyard Classes, Methods, and EBus Interfaces
+Serialization Context
+Versioning your Component Serialization
+Avoiding Data Loss when Serializing Component Data
+
+
+Edit Context
+Behavior Context
+Behavior Context in Depth
+
+
+
+
+Add modular features and assets with Gems
+Enabling Gems
+Creating a Gem
+Creating a New Empty Gem
+Creating a Gem with the Project Configurator
+Creating a Gem from the Command Line
+
+
+Packaging Your Assets
+Testing Your Gem
+Compressing Your Gem
+
+
+Programming with Gems
+Gem Structure
+Gem Configuration Examples
+
+
+Adding C Code to a Lumberyard Game with Gems
+Using AZ Modules to Initialize Gems
+Parts of an AZ Module, Explained
+System Components
+Gems and AZ Modules
+Creating an AZ Module That Is Not a Gem
+Configuring System Entities
+The AZ Bootstrapping Process
+
+
+
+
+Gems Available in Lumberyard
+Asset Memory Analyzer Gem
+Camera Framework Gem
+ChatPlay Gem
+Cloud Canvas Cloud Gems
+Cloud Canvas Gem
+CryEntity Removal Gem
+EMotion FX Animation Gem
+EMotion FX transition guide version 1.25
+
+
+GameEffect Gem
+GameLift Gem
+GameState Gem
+GameState Samples Gem
+Gestures Gem
+Graphics Scripting
+HMD Framework Gem
+HttpRequestor Gem
+Image Processing
+In-App Purchases Gem
+Input Management Framework Gem
+Landscape Canvas Gem
+Lightning Arc Gem
+Using the LightingArc Sample
+Enabling the Lightning Gem
+Placing Lightning Arc
+Configuring the Lightning Arc
+Customizing a Lightning Arc Preset
+
+
+
+
+Legacy Terrain Gem
+TerrainDataRequestBus API
+
+
+LmbrCentral Gem
+LyShine
+Maestro Gem
+Metastream Gem
+Microphone Gem
+Multiplayer Gem
+The Multiplayer Lobby Component
+Multiplayer Gem CVars
+
+
+NullVR Gem
+NVIDIA Cloth Gem
+GPU cloth simulation with NVIDIA CUDA
+
+
+Physically Based Shaders (PBS) Gem
+PhysX
+PhysX Characters
+PhysX Debug
+Physics Entities Gem
+Primitive Assets Gem
+Process Life Management Gem
+RAD Telemetry Gem
+Rain Gem
+Render to Texture
+SaveData Gem
+Scene Processing Gem
+Script Canvas Gem
+Scripted Entity Tweener Gem
+Sky Clouds Gem
+Slice Favorites
+Snow Gem
+Starting Point Input Gem
+Twitch Gem
+UiBasics Gem
+User Login Default Gem
+Video Playback Gem
+Video Playback Bink Gem
+Virtual Gamepad Gem
+Virtual Reality Gems
+Visibility
+White Box Gem
+
+
+Create levels in Lumberyard
+Creating levels and adding environment effects
+Creating a New Level
+Creating Terrain
+Creating High Quality Terrain
+Importing and Exporting Terrain Data
+Importing a Megaterrain Texture
+Importing and Exporting Terrain Blocks
+Importing Splat Maps
+Terrain FAQs
+
+
+Using the Terrain Heightmap
+Creating a Terrain Heightmap
+Setting Heightmap Properties
+Importing a Terrain Heightmap
+Exporting a Terrain Heightmap
+Resizing a Terrain Heightmap
+Rotating a Terrain Heightmap
+
+
+Using Terrain Texture Layers
+Adding a Terrain Texture Layer
+Applying a Texture Layer Material
+Importing Terrain Texture Layers
+Exporting Terrain Texture Layers
+Painting Terrain Texture Layers
+Changing Terrain Tile Resolution
+
+
+Creating Landforms and Topography
+Using the Rise/Lower Brush
+Using the Smooth Brush
+Using the Flatten Brush
+Using the Holes Brush
+Terrain Brush Parameters
+Creating Roads
+Creating the Road Entity
+Applying a Road Material
+Adjusting Road Spline Geometry
+Splitting and Merging Roads
+
+
+Creating Bodies of water
+Preparing the Terrain
+Setting Ocean Parameters
+Creating Rivers
+Preparing the River Terrain
+Creating the River Entity
+Applying a River Material
+Adjusting River Spline Geometry
+Splitting and Merging Rivers
+Adding Waterfalls
+Adding Water Puddles
+Adding Fog Beneath Water
+Advanced Water Volume Parameters
+
+
+Copying and Moving Terrain Areas
+
+
+Blending Environment Probes
+Working with Database Libraries
+Adding Sky Effects
+Creating a Dynamic Daytime Sky
+Setting Daytime Atmospheric Effects
+Setting Sun Parameters and Console Variables
+Adding Sun Rays
+Setting Sun Shadow Settings
+Adding Cascaded Sun Shadows
+
+
+Creating a Dynamic Night Sky
+Setting Nighttime Atmospheric Effects
+Setting Moon Parameters
+
+
+Creating Time of Day Sky Effects
+Setting Dawn and Dusk Effects
+Setting a Day-Night Cycle
+
+
+Creating Static Skyboxes
+Creating Skybox Materials
+Applying Skybox Materials to a Skybox
+Changing Skybox Parameters
+Switching Skyboxes with the Script Canvas Editor
+
+
+Time of Day Parameters
+
+
+Adding Weather Effects
+Adding Wind Effects
+Adding Global Wind
+Adding Ocean Wind
+Creating Wind Areas
+Adding Localized Wind
+
+
+Adding Clouds
+Placing Distance Clouds
+Adding 3D Cloud Shadows
+Setting Cloud Shading Parameters
+
+
+
+
+Adding Vegetation
+Vegetation Texture Mapping
+Adding Trees and Bushes
+Adding Grass
+Adding Grass Manually
+Painting to Add Grass
+
+
+Adding Vegetation Bending Effects
+Adding Touch (Collision) Bending Effects
+Adding Detail Bending Effects
+Using AutoMerged Wind Bending Effects
+
+
+Vegetation Parameters
+Vegetation Debugging
+Using SpeedTree 8 for Lumberyard
+
+
+
+
+Dynamic vegetation
+Dynamic Vegetation Concepts
+Dynamic Vegetation Procedures
+Creating a Vegetation Layer
+Using Gradients to Create Random Distribution
+Creating Weight-Based Random Selection
+Random Placement Using the Vegetation Distribution Filter
+
+
+Adding Scale, Rotation, and Position Modifiers
+Saving the Vegetation Area as a Slice
+Expanding Vegetation Coverage
+Reusing Vegetation in Multiple Areas
+
+
+Blocking Vegetation in Select Areas
+
+
+
+
+Actor and effects animation in Lumberyard
+Create and animate characters
+Animation Editor Concepts and Terms
+Animation Editor User Interface
+Anim Graph Interface
+Motion Sets Interface
+Motions Interface
+
+
+Animation Editor File Types
+Getting Started with the Animation Editor
+Referencing External Anim Graphs
+Synchronizing Animation Graphs: Example
+Animation Editor Components
+Using Morph Targets to Deform Characters
+Customizing State Machine Routing with Sparse Motion Sets
+Animation Editor Nodes
+Creating Blend Trees
+Creating and Visualizing Blend Spaces
+Blending Poses with Blend Nodes
+Blend N Node
+Blend Two Additive Node
+Pose Subtract Node
+Blend Two Node
+Blend Two (Legacy) Node
+
+
+Controller Nodes
+Simplify Node Groups with Hub Nodes
+Using Math Nodes
+Actions
+
+
+Using Tags with Animation Graphs
+Customizing EMotion FX Objects
+Creating Custom Motion Events and Parameters Using C
+Creating Motion Events
+MotionEvent Public Member Functions
+
+
+Creating EventData Types
+
+
+Creating and Simulating a PhysX Ragdoll
+Creating Additive Animations
+Retargeting Motions
+Creating Simulated Objects
+Setting Up a Simulated Object
+Setting Up the Simulated Object Anim Graph Node
+Setting Up Simulated Object Colliders
+Using Debug Mode to Refine the Simulation
+Using Parameters to Adjust the Animation During Runtime
+
+
+Add Cloth Colliders to Characters
+Best Practices for Working with Skinned Meshes for Animation
+Creating Skinned Meshes for Actors
+Exporting Actors and Motions
+Tutorials: Importing FBX Files as Actors and Motions
+Troubleshooting Skinned Meshes
+Using Actor LODs to Optimize Game Performance
+
+
+
+
+Adding particle effects
+Using the Particle Editor
+Customizing the Particle Editor UI
+Managing Particle Libraries
+Adding Particle Libraries
+Importing Particle Libraries
+Saving Particle Libraries
+Using Particle Libraries
+
+
+Using the Preview Panel
+Particles Attributes Reference
+Using the Curve Editor in the Particle Editor
+Advanced Attribute
+Audio Attribute
+Collision Attribute
+Comment Attribute
+Configuration Attribute
+Emitter Attribute
+Lighting Attribute
+Movement Attribute
+Particles Attribute
+Rotation Attribute
+Size Attribute
+Visibility Attribute
+
+
+Creating and Managing Particle Emitters
+Creating Child Emitters
+Organizing Emitters in a Library
+Reverting Changes to Emitter Attributes
+
+
+Working with Emitter Shape Types
+Angle Emitter (CPU and GPU)
+Beam Emitter (CPU)
+Box Emitter (CPU and GPU)
+Circle Emitter (CPU and GPU)
+Point Emitter (CPU and GPU)
+Sphere Emitter (CPU and GPU)
+Trail Emitter (CPU)
+
+
+Creating Custom Attribute Panels
+Using the Color Picker
+Using the Gradient Editor
+Managing Particle Level of Detail (LOD)
+Using Particle Editor Keyboard Shortcuts
+
+
+Particle Effects Best Practices
+Advanced Particle Techniques
+Particle Debugging with Console Variables
+
+
+Create cinematic sequences
+Using the Track View Editor
+Track View Editor Toolbars
+Track View Editor Nodes
+Component Entities and Component Nodes
+Comment Node
+Console Variable Node
+Director (Scene) Node
+Environment Node
+Event Node
+Material Node
+Shadows Setup Node
+Full Screen Effect Nodes
+Radial Blur Node
+Color Correction Node
+Adding a Depth of Field Node
+Screen Fader Node
+
+
+Adding and Removing Animation Keys on Tracks
+Controlling the Playhead
+Using Record Mode
+Using Animation Curves
+
+
+Populating a Scene
+Setting Sequence Properties
+Working with Slices and Sequences
+Adding Component Entities
+Adding Lighting
+Adding a Camera
+Adding a Director (Scene) Node
+Positioning a Camera
+Animating Depth of Field
+
+
+Moving a Component Entity in a Sequence
+
+
+Animating Characters in Scenes
+Creating Character Animations with the Simple Motion Component
+Moving an Entity in a Scene
+
+
+Capturing Image Frames
+Debugging Cinematic Scenes with Console Variables
+
+
+Graphics and Rendering in Lumberyard
+Working with shaders and materials
+Concepts
+Shader Rendering System
+Image-Based Lighting
+Environment Probes and Cubemaps
+Height Map Ambient Occlusion
+Developing a Custom Shader
+Shader Development Best Practices
+Shader Rendering Pipeline
+Hot Reloading of Shaders
+Remote Shader Compiler
+Generating Shader Combinations
+
+
+
+
+Shader Reference
+Common.Cloud Shader
+DistanceClouds Shader
+Eye Shader
+Fur Shader
+Fur Combing
+Fur Features
+Bending
+Wind Bending
+
+
+Motion Bending
+Level of Detail
+Material Settings
+Fur Console Variables
+Maya – Fur Previsualization
+3DSMax – Fur Previsualization
+
+
+GeometryBeam Shader
+Glass Shader
+Hair Shader
+HumanSkin Shader
+Illum Shader
+LightBeam Shader
+ParticleImposter Shader
+Particles Shader
+Scopes Shader
+Sky Shader
+SkyHDR Shader
+TemplBeamProc Shader
+Terrain.Layer Shader
+Vegetation Shader
+VolumeObject Shader
+Water Shader
+Waterfall Shader
+WaterVolume Shader
+
+
+Selecting Material Surface Type
+Setting Material Opacity
+Setting Material Lighting and Color Settings
+Material ID Mapping in Autodesk 3ds Max
+Working with Textures
+Texture Map Types
+Texture Settings Editor
+Texture Best Practices
+Working with Diffuse Maps
+Working with Normal Maps
+Normal Mapping Best Practices
+Using Normals with Gloss Maps
+
+
+Working with Gloss Maps
+Working with Detail Maps
+Working with Decals
+Decal Projection Types
+Placing a Decal
+Setting Decal Parameters
+Debugging Decal Mapping Issues
+
+
+Displacement Maps and Tessellation
+Displacement Mapping Best Practices
+Setting Displacement Mapping Parameters
+Tessellation
+Setting Tessellation Parameters
+Fixing Tessellation Seams
+
+
+
+
+Working with Substances
+Working with Blend Layers
+Parallax Mapping
+Parallax Mapping Best Practices
+Applying Parallax Occlusion Mapping (POM)
+Applying Silhouette Parallax Occlusion Mapping (SPOM)
+Using Blend Layers for Parallax Mapping
+
+
+Using Vertex Colors
+Customizing Post-Processing Effects
+Post Effect Group XML Files
+Enabling and Disabling Effect Groups
+Specifying a Blend Curve for Smooth Effect Transitions
+Setting Effect Strength Based on Camera Distance
+Using the Screen Fader Effect
+
+
+Toon Shading (Experimental Feature)
+Order-Independent Transparency
+
+
+Adding lighting and shadows
+Environment Lighting
+Illuminance and Auto Exposure Key
+HDR Settings
+Global Environment Lighting
+Local Environment Lighting
+
+
+Environment Shadows
+Cached Shadows
+Object Shadows
+Shadow Proxies
+Using CVARs to Configure Terrain and Cascade Shadow Maps
+Tutorial: Using Console Variables to Tune Cascade Shadows
+
+
+
+
+
+
+Create screen effects
+Working with camera screen effects
+Temporal Antialiasing and Supersampling
+Voxel-based Global Illumination (SVOGI)
+Fog Systems
+Standard Fog
+Setting Global (Time of Day) Fog
+Using Fog Volumes
+Console Variables for Fog
+
+
+Volumetric Fog
+Best Practices for Volumetric Fog
+Setting Global (Time of Day) Volumetric Fog
+Console Variables for Volumetric Fog
+
+
+
+
+Render Nodes
+Generating Stars .dat File
+Building DirectX 12 Supported Applications
+
+
+Programming in Lumberyard
+Working with Amazon Lumberyard systems APIs
+AZ::Console
+AZ::Event<...>
+AZ::Interface
+
+
+Working with the Event Bus (EBus) system
+Usage and Examples
+Event Buses in Depth
+Common Tasks, EBuses, and Handlers
+Direct Access to EBus Handlers
+
+
+Automating boilerplate with AZ Code Generator
+AZ Code Generator Integration with Waf
+AZ Code Generator Parameters
+Code Generation Templates
+Template Drivers
+Custom Code Generator Annotations
+Waf Debugging with AZ Code Generator
+Setting Up PyCharm for Debugging Waf
+
+
+Template Driver Debugging
+Debugging the AZ Code Generator Utility
+Intermediate JSON Data Format
+
+
+Input in Amazon Lumberyard
+Employing artificial intelligence
+AI System Concepts
+AI System Overview
+Pathfinding Costs
+Sensory Models
+AI C Class Hierarchy
+AI System Concept Examples
+AI Multi-Layered Navigation
+Individual AI: Dynamic Covers
+Individual AI: Tactical Points
+Group and Global AI: Factions
+
+
+
+
+AI Navigation
+Multi-Layer Navigation Mesh (MNM)
+Creating Navigation Areas
+Selecting an AI Navigation Type
+Setting Navigation Exclusion Areas
+Adding Navigation Seed Points
+Regenerating the Navigation Mesh
+Off-Mesh AI Navigation
+Using AI Paths for Navigation
+Using Smart Objects for AI Navigation
+
+
+Debugging AI Navigation
+Navigation Q & A
+
+
+AI Modular Behavior Tree
+Standard MBT Nodes
+Common AI MBT Nodes
+Game AI Modular Behavior Tree (MBT) Nodes
+Helicopter AI MBT Nodes
+
+
+AI Bubbles System
+AI Tactical Point System
+Tactical Point System Overview
+TPS Query Execution Flow
+TPS Querying with C
+TPS Querying with Lua
+TPS Query Language Reference
+Point Generation and Evaluation
+Integration with the Modular Behavior Tree System
+Future Plans and Possibilities
+
+
+Path Following
+Movement System
+Auto-Disable
+AI Scripting
+Factions
+Modular Behavior Tree
+Modular Behavior Tree Node Reference
+Generic Nodes
+AI Nodes
+CryAction Nodes
+Game Nodes
+Flying Nodes
+
+
+Refpoints
+Signals
+Signals Reference
+
+
+
+
+
+
+Using Memory Allocators in Lumberyard
+Code Example: Automatic Unreflection of Module Classes
+HPHA Memory Debugging
+Overrun Detection
+
+
+Profiling, Testing, and Debugging Game Projects
+Profiler
+Profiler Tutorial
+Creating and Using Annotations
+Using Profiler for Networking
+Using the Profiler for CPU Usage
+Using Profiler for VRAM
+Using GridHub
+
+
+Using AZ Test Scanner
+Writing Tests for AzTest
+Debugging Issues
+Using the sys_asserts Console Variable (CVAR)
+
+
+Tracking File Access
+
+
+Lumberyard UI 2.0 Developer Documentation
+Object serialization
+Register objects for serialization
+Object serialization to JSON format
+Serialize and deserialize JSON objects
+Data types in serialized JSON
+
+
+
+
+Using Lumberyard Networking
+Tutorial: Getting Started with Multiplayer
+Configuring the Multiplayer Sample for Amazon GameLift
+
+
+Overview
+Networking Architecture
+Carrier
+Carrier Message Structure
+The TCP Stream Driver
+Using Windows Registered I/O with GridMate
+
+
+Marshalling
+Sessions
+Starting and Stopping the Session Service
+Hosting a Session
+Searching for a Session
+Joining a Session
+Reacting to Session Events
+Network Session Service Event Descriptions
+
+
+Replicas
+Replica
+Replica Chunks
+Datasets
+Using Delta Compression in Lumberyard Networking
+Remote Procedure Calls (RPCs)
+
+
+Replica Manager
+Task Manager
+
+
+
+
+Synchronizing Game State Using Components
+Synchronizing Animations Across a Network
+Creating a NetBindable Component
+Transform Component Interpolation
+Providing Your Own Interpolation Logic for the Transform Component
+
+
+
+
+Synchronizing Game State Using Scripts
+Using Encryption
+Building with Encryption
+Enabling Encryption
+
+
+Controlling Bandwidth Usage
+Using Bit Packing in Lumberyard Networking
+Setting up a Lobby
+Creating Dedicated Servers
+Using the TCP Stream Driver
+Using GridMate for Large-Scale Worlds
+Writing Your Own Interest Manager Attributes, Rules and Rule Handlers in C
+
+
+Using Amazon GameLift
+Useful Console Commands
+
+
+Engaging Broadcasters and Viewers on Twitch
+Twitch ChatPlay System
+Twitch ChatPlay Console Variables, Classes, and Connection Methods
+Generating and Setting a Twitch Client ID
+
+
+Twitch JoinIn
+Twitch API
+Twitch C API Reference for Lumberyard
+General
+User
+Friends
+Rich Presence
+Channels
+Data Types
+
+
+Twitch ChatPlay Lua Reference
+
+
+Implementing Connected Features with Cloud Canvas
+Cloud Canvas Overview
+Understanding Cloud Canvas Resource Manager
+Cloud Gems Overview
+Pricing
+Tutorial: Getting Started with Cloud Canvas
+Inspect Your Resources in AWS
+Create IAM Users and Groups to Administer Cloud Canvas Teams
+
+
+
+
+Cloud Gems
+Cloud Gem Portal
+User Management in the Cloud Gem Portal
+Using the Cloud Gem Portal REST Explorer
+Using the Cloud Gem Portal to View Logs
+
+
+Using the AWS Script Behaviors Cloud Gem
+Decoding a URL with Script Canvas
+Performing HTTP GET with Script Canvas
+Uploading a File to Amazon S3 with Script Canvas
+Downloading a File from Amazon S3 with Script Canvas
+Generating an Amazon S3 Presigned URL With Script Canvas
+Invoking an AWS Lambda Function from Script Canvas
+Making a Custom Lambda Function Available to Script Canvas
+
+
+Compute Farm Cloud Gem
+Compute Farm Cloud Gem: Walkthrough
+
+
+Defect Reporter Cloud Gem
+Using the Defect Reporter Cloud Gem Sample Level
+Using the Defect Reporter Cloud Gem Portal
+Using Defect Reporter to Create Jira Tickets
+Automatic and Manual Submit Modes
+Writing Data Gathering Handlers
+Defect Reporter EBus Interfaces
+Defect Reporter Implementation Details
+
+
+Using Dynamic Content Manager
+Managing Dynamic Content Packages
+Using lmbr_aws for Dynamic Content
+Testing the Dynamic Content System
+Dynamic Content Engineering Details
+
+
+Game Metrics Cloud Gem
+Sending Test Metrics with the Metrics Sample Level
+Sending Test Metrics with the Command Line
+Using the Game Metrics Cloud Gem Portal
+Using Heatmap Analytics
+
+
+In-Game Survey Cloud Gem Portal
+In-Game Survey Cloud Gem Service API Reference
+Survey Operations
+Question Operations
+Answer Submission Operations
+Metadata Operations
+
+
+Leaderboard Cloud Gem Portal
+Testing the Leaderboard Sample Level
+Leaderboard Sample Level Implementation Details
+Leaderboard Cloud Gem Resources
+Leaderboard Cloud Gem Service API
+
+
+Message Of The Day Cloud Gem Portal
+Testing the Message of the Day Sample Level
+Cloud Gem Message of the Day Implementation Details
+Cloud Gem Message of the Day API Calls
+
+
+Player Account Cloud Gem Portal
+The Player Account Sample Level
+Testing the Player Account Cloud Gem
+Integrating the Player Account Cloud Gem into an Existing Project
+Building the Menus for the Player Account Cloud Gem
+Storing Data Associated with a Player Account
+Player Account Cloud Gem Implementation Details
+
+
+Speech Recognition Cloud Gem
+Using the Speech Recognition Sample Level
+Speech Recognition Cloud Gem Portal (Preview)
+Managing Bots
+Editing Bots
+Managing Intents
+Managing Slot Types
+Linking to the Amazon Lex Console
+Speech Recognition Cloud Gem API
+Speech Recognition Player API
+Speech Recognition Cloud Gem Portal API
+Bots
+Intents
+Slot Types
+
+
+
+
+Text to Speech Cloud Gem (Using Amazon Polly)
+Text-to-Speech Cloud Gem Portal
+Using the Text-to-Speech Sample Level
+Creating a Wwise Project for Runtime Text-to-Speech
+Configuring Runtime Capabilities and Caching
+Text-to-Speech Gem Implementation Details
+Lip Synchronization with EMotion FX
+Text-to-Speech Cloud Gem Service API Reference
+
+
+Web Communicator Cloud Gem
+Web Communicator Cloud Gem Portal
+Testing the Web Communicator Cloud Gem
+Communicating to Clients from a Cloud Gem
+Web Communicator Cloud Gem Authentication and AWS Policies
+Web Communicator Cloud Gem Service API
+
+
+
+
+Cloud Canvas Gameplay Design and Engineering Guide
+Cloud Canvas Tools in Lumberyard Editor
+Managing Cloud Canvas Profiles
+Using Resource Manager in Game Design
+
+
+Cloud Canvas Software Engineering Guide
+Resource Manager in Depth
+Understanding Resource Status Descriptions
+Editing Resource Manager Files
+Working with JSON Files
+Viewing the Cloud Canvas Progress Log
+Working with Resource Groups
+Resource Definitions
+Permissions Metadata for Resource Definitions
+Importing Resource Definitions into Cloud Canvas
+Resource Deployments
+Resource Mappings
+Resource Manager Resource Group Parameters
+Custom Resources
+
+
+Cloud Gem Framework
+Getting Started with the Cloud Gem Framework
+Creating a Cloud Gem
+Getting Started With Game Development on the Cloud Gem Portal
+Lambda Language Support in the Cloud Gem Framework
+Making HTTP Requests Using the Cloud Gem Framework
+Cloud Gem Framework Resource Manager Hooks
+Running AWS API Jobs Using the Cloud Gem Framework
+AWS Behavior Context Reflections
+Adding AWS Resources to a Cloud Gem
+Resource Type Specification
+Adding Support for New AWS:: and Custom:: Types
+Versioning of Custom Resources
+Cloud Gem Framework Service API
+Resources
+Operations
+Security
+Cloud Gem Framework Extension Object
+Cross-Gem Communication
+Game Clients
+Generated Game Client Code Example
+Calling a Game API
+Publishing Your API
+Using the Cloud Gem Framework Command Line
+Using Shared Code
+Cloud Gem Framework and Resource Manager Versioning
+Updating Projects and Cloud Gems to Version 1.0.0 of the Cloud Gem Framework
+
+
+
+
+Administering Cloud Canvas
+Setting Up a Project to Use Resource Manager
+Initializing Cloud Canvas Resource Manager
+Working with Project Stacks
+
+
+Working with Deployments
+Making a Cloud Canvas Deployment Active
+Testing Different Mappings
+Using Protected Deployments
+Deleting Cloud Canvas Deployments and Their Resources
+
+
+Freeing Up AWS Resources
+Understanding the Resource Manager Security System
+Controlling Access to Resources
+Cloud Canvas Built-In Roles and Policies
+Player Identity
+Using the Cloud Canvas Command Line to Manage Roles and Permissions
+
+
+
+
+Using the Cloud Canvas Command Line
+Command Reorganization
+
+
+
+
+Localizing Game Projects
+Localization Checklist
+UI System Localization Features
+Font Features
+Localization Initialization
+
+
+Scripting in Amazon Lumberyard
+Creating Gameplay with Script Canvas
+Learning Guide
+Script Canvas Editor Interface
+Script Canvas Concepts and Terms
+Script Canvas Tutorials
+Script Canvas Tutorial: Creating a Controllable Entity
+Script Canvas Tutorial: Opening and Closing a Door with Trigger Areas and Variables
+Script Canvas Tutorial: Shooting a Target by Spawning Entities and Detecting Collisions
+
+
+More Learning Opportunities with Script Canvas
+Installing the Project N.E.M.O. Sample
+
+
+
+
+Common Tasks
+Adding Scripts to Entities
+Script Canvas Best Practices
+Script Canvas Errors and Troubleshooting
+Script Canvas Debugging
+
+
+Editor Reference
+Script Canvas Editor Shortcuts
+Managing Script Canvas Variables
+Using Container Types (Arrays and Maps)
+
+
+Working with Nodes
+Understanding Script Canvas Nodes
+Adding and Connecting Nodes
+Adding Variable References in Script Canvas Nodes
+Setting Entity Targets
+Deleting Nodes
+Disconnecting Nodes
+Organizing Nodes
+Aligning Nodes
+Commenting Nodes
+Grouping Nodes
+Creating Comment and Group Presets
+Adding Bookmarks for Script Canvas
+Navigating Graphs
+Selecting Nodes Using Hot Keys
+
+
+Script Canvas Functions
+
+
+Programmer Guide
+Script Canvas and the Behavior Context
+Creating Custom Nodes in Script Canvas
+Script Canvas Tags for AZ Code Generator
+Dynamic Data Slots
+Extendable Nodes
+Implementing Node Behavior
+Creating Custom Script Canvas Nodes in a Gem
+Node Libraries
+Node Contracts
+
+
+
+
+Script Canvas Node Reference
+Rendering Nodes
+Environment Nodes
+Get Moon Latitude
+Get Moon Longitude
+Get Sun Latitude
+Get Sun Longitude
+Get Wind Direction
+Set Moon Latitude
+Set Moon Longitude
+Set Skybox Angle
+Set Skybox Material
+Set Skybox Stretch
+Set Sun Latitude
+Set Sun Longitude
+Set Wind Direction
+Material Nodes
+Clone
+Find by Name
+Find Sub-Material
+Get Param Color
+Get Param Number
+Get Param Vector3
+Get Param Vector4
+Load by Name
+Set Param Color
+Set Param Number
+Set Param Vector3
+Set Param Vector4
+Material Owner Nodes
+Get Material
+Get Param Color
+Get Param Number
+Get Param Vector3
+Get Param Vector4
+Is Ready
+On Ready
+Set Material
+Set Param Color
+Set Param Number
+Set Param Vector3
+Set Param Vector4
+Post Effects Nodes
+Apply Effect Group At Position
+Disable Blur
+Disable Color Correction
+Disable Depth of Field
+Disable Directional Blur
+Disable Effect Group
+Disable Frost
+Disable Ghosting
+Disable Radial Blur
+Disable Rain Drops
+Disable Sharpen
+Disable Visual Artifacts
+Disable Volumetric Scattering
+Disable Water Droplets
+Disable Water Flow
+Enable Blur
+Enable Color Correction
+Enable Depth of Field
+Enable Directional Blur
+Enable Effect Group
+Enable Frost
+Enable Ghosting
+Enable Radial Blur
+Enable Rain Drops
+Enable Sharpen
+Enable Visual Artifacts
+Enable Volumetric Scattering
+Enable Water Droplets
+Enable Water Flow
+Screen Fader
+ScreenFader EBuses
+
+
+Set Color Chart
+Creating a Color Chart
+Console Variables for Color Charts
+
+
+Procedural Material Nodes
+Find by Name
+Find by Name and Index
+Get Input Color
+Get Input Number
+Get Input String
+Get Input Vector2
+Get Input Vector3
+Get Input Vector4
+On Render Finished
+Render Asynchronous
+Render Synchronous
+Set Input Color
+Set Input Number
+Set Input String
+Set Input Vector2
+Set Input Vector3
+Set Input Vector4
+Shadow Nodes
+High Quality Shadow
+Get Enabled
+Set Enabled
+
+
+Recompute Static Shadows
+Time of Day Nodes
+Get Speed
+Get Time
+Load Definition File
+Set Speed
+Set Time
+Material Variables
+Finding the Material Name
+Finding the Material Parameter Name
+Finding the Texture Name
+
+
+
+
+
+
+Writing Lua Scripts
+Adding Lua Scripts to Component Entities
+Basic Structure of a Component Entity Lua Script
+Properties Table
+Network Binding Properties
+Using EBuses in Lua
+Lua Editor
+Debugging Lua Scripts
+The Lua Environment (Advanced)
+Component Entity Lua API Reference
+
+
+Using Script Events
+Creating Script Events in Script Canvas
+Using Script Events in Script Canvas
+Using Script Events in Lua
+Script Events Best Practices
+
+
+Simulating physics behavior with the PhysX system
+Configuring the PhysX System
+Global Configuration
+Collision Layers
+Collision Groups
+Creating Collision Layers and Groups Programmatically
+
+
+Debugger Configuration
+PhysX World Programming Notes
+
+
+Physics materials
+PhysX Scene Queries
+Debugging PhysX
+PhysX Best Practices
+Creating and Customizing Project User Interfaces
+Using the UI Editor
+Toolbar
+Rulers and Guides
+Asset Drag and Drop
+Sprite Editor
+Sliced Image Type
+Sprite Sheets
+
+
+
+
+Working with UI Canvases
+Navigating the Viewport
+Changing the Canvas Size
+Previewing Canvases
+Setting Canvas Size in Preview
+Previewing Canvas Behavior
+
+
+Configuring Canvas Properties
+Loading Canvases in Lua
+Placing UI Canvases in the 3D World
+Using Texture Atlases
+Creating a Texture Atlas
+Adding Texture Atlases to a UI Canvas
+Using Texture Atlases to Reduce UI Draw Calls
+
+
+Debugging UI Canvases
+
+
+Defining Game and Level Load Screens
+Working with UI Slices
+Creating a UI Slice
+Instantiating a UI Slice
+Creating a Cascaded UI Slice
+Creating a Detached UI Slice
+Modifying a UI Slice and Pushing Changes
+Editing Slices in a New Tab
+Flagging Dynamic Slices
+
+
+UI Elements
+Configuring UI Anchors and Offsets
+Scaling to Device Resolutions
+Using and Creating UI Prefabs
+Searching for UI Elements
+
+
+UI Components
+Working with UI Components
+Transform2D Component
+Managing UI Anchors and Offsets
+Scale to Device
+
+
+Visual Components
+Image
+Particle Emitter
+Text
+
+
+Interactive Components
+Properties for Interactive Components
+Input Enabled
+Multi-Touch Input Enabled
+States
+Navigation
+First Focus Element
+Interactive Element Controls
+Auto Activate
+Actions
+
+
+Button
+Checkbox
+RadioButton
+RadioButtonGroup
+Slider
+TextInput
+ScrollBar
+ScrollBox
+Draggable
+DropTarget
+Dropdown
+DropdownOption
+
+
+Layout Components
+LayoutColumn
+LayoutRow
+LayoutGrid
+LayoutCell
+LayoutFitter
+Nesting Layout Components
+
+
+Tooltip Components
+Dynamic Components
+UISpawner Component
+Other Components
+Mask
+Flipbook Animation
+
+
+
+
+Implementing New Fonts
+Adding New Fonts
+Creating Font Families
+Configuring Font Rendering Quality
+Configuring Font Properties
+
+
+TrueType Fonts
+Animating the UI
+Scripted Tweener Entity System
+Understanding Tweeners
+Supported Tweener Easing Types
+
+
+Tweener Sample Level
+Tweener Supported Components
+Tweener Lua Script
+Tweener Parameters
+Tweener Timeline
+
+
+UI Animation Editor
+Recording Animation Data
+Playing Animation Sequences
+Editing Animation Data
+Using the Node Pane
+Using the Track Editor
+Using the Curve Editor in the UI Animation Editor.
+
+
+
+
+
+
+UI Lua Reference
+LyShineLua.ShowMouseCursor
+UIButtonComponent
+UICanvasComponent
+UICanvasManager
+UICheckboxComponent
+UiCursorBus
+UIDraggableComponent
+UiDropdownComponent
+UiDropdownOptionComponent
+UIDropTargetComponent
+UIDynamicLayoutComponent
+UIDynamicScrollBoxComponent
+UIElementComponent
+UIFaderComponent
+UIFlipbookAnimationComponent
+UIImageComponent
+UIInteractableComponent
+UiLayout
+UiLayoutCellComponent
+UILayoutColumnComponent
+UILayoutFitterComponent
+UILayoutGridComponent
+UILayoutRowComponent
+UIMaskComponent
+UIParticleEmitterComponent
+UiRadioButtonComponent
+UIScrollBarComponent
+UIScrollBoxComponent
+UISliderComponent
+UITextComponent
+UITextInputComponent
+UITooltipComponent
+UITooltipDisplayComponent
+UITransform2dComponent
+UI World Components
+
+
+Adding Audio and Sound Effects
+Audio System Overview
+Audio Translation Layer
+Using the Audio Controls Editor
+ATL Controls Pane
+Inspector Pane
+Wwise Controls Pane
+
+
+ATL Controls
+
+
+Audiokinetic Wwise
+Setting up Wwise LTX
+Setting up a Wwise Project
+Connecting Wwise to the Editor and Game
+Comparing Wwise Full to Wwise LTX
+Upgrading Wwise LTX to the Full Version
+Using a Different Wwise Version
+
+
+Audio Components
+Audio Console Variables
+Platform development in Lumberyard
+Create Android and iOS projects in Lumberyard
+Android Support
+Quick Start: Running the Samples Project on Android Devices
+Anatomy of an Android Application
+Setting Up Your Environment
+Building Your Android Game
+Using the Virtual File System
+Running the Deployment Tool
+Additional Details for Android
+PAK Files
+Troubleshooting for Android
+Using a Samsung Device with Lumberyard
+Using the AWS Device Farm for Android Builds
+
+
+iOS Support
+Quick Start: Running the Samples Project on iOS Devices
+Building Your iOS App
+Creating a Release App
+Using Virtual File System with iOS
+Universal Remote Console
+Sharing Assets Between Windows and macOS
+iOS Debugging and Troubleshooting
+
+
+Design Considerations for Creating Mobile Games Using Lumberyard
+Lumberyard Performance Tuning Guidelines for Mobile Devices
+Modifying Project Settings for Mobile Device Games
+Updating Graphics Settings for Android and iOS
+Adding IP Addresses to Allow Access to the Asset Processor and Remote Console
+Running the Shader Compiler on Amazon EC2
+Using AWS Device Farm in Lumberyard Editor
+
+
+Create virtual reality projects in Lumberyard
+Configuring your Project for Virtual Reality
+Configuring Required Console Variables
+Using the InstantVR Slice
+InstantVR Lua Script Properties
+
+
+Previewing your Virtual Reality Project
+Debugging your Virtual Reality Project
+Using EBus Request Bus Interface for Virtual Reality
+VR Lua Functions
+
+
+Create macOS projects in Lumberyard
+Building macOS Games
+Building Game Assets for macOS Games
+Building Shaders for macOS Games
+Running macOS Games
+macOS Debugging and Troubleshooting
+Creating a Project for Your macOS Games
+
+
+Creating Lumberyard dedicated servers for Linux
+Compiling Assets on a Windows Computer
+Building the Lumberyard Executable for Linux
+Setting up the Windows Subsystem for Linux to Deploy Your Amazon Lumberyard Linux Executable
+
+
+Testing the Windows Client to Linux Server Connection
+Preparing the GameLift Package
+Setting up Ubuntu on Amazon EC2
+
+
+Legal
+Lumberyard Redistributables
+Alternate Web Services
+Documentation Archive
+

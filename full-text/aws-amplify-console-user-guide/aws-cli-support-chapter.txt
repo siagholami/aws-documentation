@@ -1,0 +1,2 @@
+AWS CLI support
+Use the AWS Command Line Interface to create Amplify Console apps programmatically from the command line. For information, see the  AWS CLI documentation.

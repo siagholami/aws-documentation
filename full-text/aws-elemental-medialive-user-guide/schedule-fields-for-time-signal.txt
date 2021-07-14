@@ -1,0 +1,31 @@
+Fields for a Time_Signal Message
+This table shows the fields that apply for an action to insert a time_signal SCTE-35 message.
+
+
+
+Field
+Description
+
+
+
+
+Action type
+SCTE-35 Time Signal.
+
+
+Action name
+A name for this time_signal action. For example, you might name time_signal actions with a sequential number, restarting every day or every month.
+
+
+Start type
+Fixed.
+
+
+Date and time
+The UTC start time for the time_signal. The time should be at least 15 seconds later than the time that you submit the action. Note that the time is the wall clock time, not the timecode in the input.
+
+
+Add Scte35 descriptors
+Choose this button and complete the fields that appear. The descriptors are a standard component of a time_signal message.
+
+

@@ -1,0 +1,244 @@
+Actions, resources, and condition keys for Amazon RDS
+Amazon RDS (service prefix: rds) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Amazon RDS
+ Resource types defined by Amazon RDS
+ Condition keys for Amazon RDS
+Actions defined by Amazon RDS
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+[See the AWS documentation website for more details]
+Resource types defined by Amazon RDS
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ cluster 
+arn:${Partition}:rds:${Region}:${Account}:cluster:${DbClusterInstanceName}
+ aws:ResourceTag/${TagKey}   rds:cluster-tag/${TagKey} 
+
+
+ cluster-endpoint 
+arn:${Partition}:rds:${Region}:${Account}:cluster-endpoint:${DbClusterEndpoint}
+ aws:ResourceTag/${TagKey} 
+
+
+ cluster-pg 
+arn:${Partition}:rds:${Region}:${Account}:cluster-pg:${ClusterParameterGroupName}
+ aws:ResourceTag/${TagKey}   rds:cluster-pg-tag/${TagKey} 
+
+
+ cluster-snapshot 
+arn:${Partition}:rds:${Region}:${Account}:cluster-snapshot:${ClusterSnapshotName}
+ aws:ResourceTag/${TagKey}   rds:cluster-snapshot-tag/${TagKey} 
+
+
+ db 
+arn:${Partition}:rds:${Region}:${Account}:db:${DbInstanceName}
+ aws:ResourceTag/${TagKey}   rds:DatabaseClass   rds:DatabaseEngine   rds:DatabaseName   rds:MultiAz   rds:Piops   rds:StorageEncrypted   rds:StorageSize   rds:Vpc   rds:db-tag/${TagKey} 
+
+
+ es 
+arn:${Partition}:rds:${Region}:${Account}:es:${SubscriptionName}
+ aws:ResourceTag/${TagKey}   rds:es-tag/${TagKey} 
+
+
+ global-cluster 
+arn:${Partition}:rds:${Account}:global-cluster:${GlobalCluster}
+
+
+
+ og 
+arn:${Partition}:rds:${Region}:${Account}:og:${OptionGroupName}
+ aws:ResourceTag/${TagKey}   rds:og-tag/${TagKey} 
+
+
+ pg 
+arn:${Partition}:rds:${Region}:${Account}:pg:${ParameterGroupName}
+ aws:ResourceTag/${TagKey}   rds:pg-tag/${TagKey} 
+
+
+ proxy 
+arn:${Partition}:rds:${Region}:${Account}:db-proxy:${DbProxyId}
+ aws:ResourceTag/${TagKey} 
+
+
+ ri 
+arn:${Partition}:rds:${Region}:${Account}:ri:${ReservedDbInstanceName}
+ aws:ResourceTag/${TagKey}   rds:ri-tag/${TagKey} 
+
+
+ secgrp 
+arn:${Partition}:rds:${Region}:${Account}:secgrp:${SecurityGroupName}
+ aws:ResourceTag/${TagKey}   rds:secgrp-tag/${TagKey} 
+
+
+ snapshot 
+arn:${Partition}:rds:${Region}:${Account}:snapshot:${SnapshotName}
+ aws:ResourceTag/${TagKey}   rds:snapshot-tag/${TagKey} 
+
+
+ subgrp 
+arn:${Partition}:rds:${Region}:${Account}:subgrp:${SubnetGroupName}
+ aws:ResourceTag/${TagKey}   rds:subgrp-tag/${TagKey} 
+
+
+ target 
+arn:${Partition}:rds:${Region}:${Account}:target:${TargetId}
+
+
+
+ target-group 
+arn:${Partition}:rds:${Region}:${Account}:target-group:${TargetGroupId}
+ aws:ResourceTag/${TagKey} 
+
+
+
+Condition keys for Amazon RDS
+Amazon RDS defines the following condition keys that can be used in the Condition element of an IAM policy. You can use these keys to further refine the conditions under which the policy statement applies. For details about the columns in the following table, see The condition keys table.
+To view the global condition keys that are available to all services, see Available global condition keys.
+
+
+
+
+Condition keys
+Description
+Type
+
+
+
+
+ aws:RequestTag/${TagKey} 
+Filters access based on the presence of tag key-value pairs in the request
+String
+
+
+ aws:ResourceTag/${TagKey} 
+Filters access based on tag key-value pairs attached to the resource
+String
+
+
+ aws:TagKeys 
+Filters access based on the presence of tag keys in the request
+String
+
+
+ rds:DatabaseClass 
+Filters access by the type of DB instance class
+String
+
+
+ rds:DatabaseEngine 
+Filters access by the database engine. For possible values refer to the engine parameter in CreateDBInstance API
+String
+
+
+ rds:DatabaseName 
+Filters access by the user-defined name of the database on the DB instance
+String
+
+
+ rds:EndpointType 
+Filters access by the type of the endpoint. One of: READER, WRITER, CUSTOM
+String
+
+
+ rds:MultiAz 
+Filters access by the value that specifies whether the DB instance runs in multiple Availability Zones. To indicate that the DB instance is using Multi-AZ, specify true
+Boolean
+
+
+ rds:Piops 
+Filters access by the value that contains the number of Provisioned IOPS (PIOPS) that the instance supports. To indicate a DB instance that does not have PIOPS enabled, specify 0
+Numeric
+
+
+ rds:StorageEncrypted 
+Filters access by the value that specifies whether the DB instance storage should be encrypted. To enforce storage encryption, specify true
+Boolean
+
+
+ rds:StorageSize 
+Filters access by the storage volume size (in GB)
+Numeric
+
+
+ rds:Vpc 
+Filters access by the value that specifies whether the DB instance runs in an Amazon Virtual Private Cloud (Amazon VPC). To indicate that the DB instance runs in an Amazon VPC, specify true
+Boolean
+
+
+ rds:cluster-pg-tag/${TagKey} 
+Filters access by the tag attached to a DB cluster parameter group
+String
+
+
+ rds:cluster-snapshot-tag/${TagKey} 
+Filters access by the tag attached to a DB cluster snapshot
+String
+
+
+ rds:cluster-tag/${TagKey} 
+Filters access by the tag attached to a DB cluster
+String
+
+
+ rds:db-tag/${TagKey} 
+Filters access by the tag attached to a DB instance
+String
+
+
+ rds:es-tag/${TagKey} 
+Filters access by the tag attached to an event subscription
+String
+
+
+ rds:og-tag/${TagKey} 
+Filters access by the tag attached to a DB option group
+String
+
+
+ rds:pg-tag/${TagKey} 
+Filters access by the tag attached to a DB parameter group
+String
+
+
+ rds:req-tag/${TagKey} 
+Filters access by the set of tag keys and values that can be used to tag a resource
+String
+
+
+ rds:ri-tag/${TagKey} 
+Filters access by the tag attached to a reserved DB instance
+String
+
+
+ rds:secgrp-tag/${TagKey} 
+Filters access by the tag attached to a DB security group
+String
+
+
+ rds:snapshot-tag/${TagKey} 
+Filters access by the tag attached to a DB snapshot
+String
+
+
+ rds:subgrp-tag/${TagKey} 
+Filters access by the tag attached to a DB subnet group
+String
+
+

@@ -1,0 +1,19 @@
+Viewing Users and Groups Assigned to a Role
+To view the users and groups assigned to a role, perform the following steps.
+To view users and group assigned to a role
+
+
+In the AWS Directory Service console navigation pane, choose Directories.
+
+
+On the Directories page, choose your directory ID.
+
+
+On the Directory details page, select the Application management tab.
+
+
+Under the AWS Management Console section, choose the role you want to view. 
+
+
+On the Selected role page, under Manage users and groups for this role, you can view the users and groups assigned to the role.
+

@@ -1,0 +1,70 @@
+AWS::ElasticLoadBalancingV2::Listener ForwardConfig
+Information for creating an action that distributes requests among one or more target groups. For Network Load Balancers, you can specify a single target group. Specify only when Type is forward. If you specify both ForwardConfig and TargetGroupArn, you can specify only one target group using ForwardConfig and it must be the same target group specified in TargetGroupArn.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[TargetGroups](#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups)" : [ TargetGroupTuple, ... ],
+  "[TargetGroupStickinessConfig](#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig)" : TargetGroupStickinessConfig
+}
+YAML
+[TargetGroups](#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups): 
+    - TargetGroupTuple
+  [TargetGroupStickinessConfig](#cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroupstickinessconfig): 
+    TargetGroupStickinessConfig
+Properties
+TargetGroups 
+Information about how traffic will be distributed between multiple target groups in a forward rule.
+Required: No
+Type: List of TargetGroupTuple
+Update requires: No interruption
+TargetGroupStickinessConfig 
+Information about the target group stickiness for a rule.
+Required: No
+Type: TargetGroupStickinessConfig
+Update requires: No interruption
+Examples
+Weighted Target Groups Example
+The following example sets the relative weight of traffic between two traffic groups. Since the weight property of each group is set to the same value, 1, traffic is split 50/50 between the two groups.
+JSON
+"ListenerRule1": {
+      "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "Properties": {
+        "Actions": [{
+          "Type": "forward",
+          "ForwardConfig": {
+            "TargetGroups": [{
+              "TargetGroupArn": { "Ref": "TargetGroup1" },
+              "Weight": 1
+            }, {
+              "TargetGroupArn": { "Ref": "TargetGroup2" },
+              "Weight": 1
+            }]
+          }
+        }],
+        "Conditions": [{
+          "Field": "path-pattern",
+          "Values": ["foo"]
+        }],
+        "ListenerArn": { "Ref": "Listener" },
+        "Priority": 1
+      }
+    }
+YAML
+ListenerRule1:
+  Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
+  Properties:
+    Actions:
+      - Type: forward
+        ForwardConfig:
+          TargetGroups:
+            - TargetGroupArn: !Ref TargetGroup1
+              Weight: 1
+            - TargetGroupArn: !Ref TargetGroup2
+              Weight: 1
+    Conditions:
+      - Field: path-pattern
+        Values:
+          - foo
+    ListenerArn: !Ref Listener
+    Priority: 1

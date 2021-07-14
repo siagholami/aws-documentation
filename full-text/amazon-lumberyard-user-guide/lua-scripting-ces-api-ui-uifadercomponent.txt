@@ -1,0 +1,53 @@
+UIFaderComponent
+You can use a fader component to simultaneously adjust the transparency of an element and its children.
+UiFaderBus
+Services messages for the UiFaderComponent.
+Fade
+Triggers a fade animation.
+Syntax
+void Fade(float targetValue, float speed)
+
+
+
+
+Parameter
+Description
+
+
+
+
+targetValue
+The value at which to end the fade [0,1].
+
+
+speed
+The speed of the fade animation in full fade amount per second; 0 means instant.
+
+
+
+GetFadeValue
+Returns the fade value. The fade value is a float between zero and one. One means no fade; zero means complete fade to invisible.
+Syntax
+float GetFadeValue()
+IsFading
+Returns whether a fade animation is taking place.
+Syntax
+bool IsFading()
+SetFadeValue
+Sets the fade value.
+Syntax
+void SetFadeValue(float fade)
+UiFaderNotificationBus
+Services notifications for the UiFaderComponent.
+OnDestroyed
+The fader component has been destroyed.
+Syntax
+void OnFaderDestroyed()
+OnFadeComplete
+The fade animation is done.
+Syntax
+void OnFadeComplete()
+OnFadeInterrupted
+The fade animation has been interrupted.
+Syntax
+void OnFadeInterrupted()

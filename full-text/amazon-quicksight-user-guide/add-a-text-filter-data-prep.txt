@@ -1,0 +1,75 @@
+Adding a Text Filter
+You have two options for creating text field filters. You can specify multiple field values to include or exclude using the Custom filter list filter type, or specify a single value that the field value must equal or not equal using the Custom filter filter type.
+Adding a Text Filter by Specifying Multiple Field Values
+With the Custom filter list filter type, you specify one or more field values to filter on, and whether you want to include or exclude records that contain those values. The specified value and actual field value must match exactly for the filter to be applied to a given record.
+Use the following procedure to create a text field filter by specifying multiple field values.
+
+
+On the data preparation page, expand the Filters pane.
+
+
+Choose New filter, and then choose a text field to filter on. 
+
+
+Doing this creates a new filter with no criteria.
+
+
+Choose the new filter to expand it.
+
+
+
+Change the filter type to Custom filter list.
+
+
+
+Type a field value in Enter a value to add, and then choose the add icon.
+
+
+
+
+To remove a field value from the criteria, choose its delete icon.
+
+
+
+(Optional) Repeat Step 5 until you have added all of the field values that you want to filter on.
+
+
+Choose whether to include or exclude records that contain the field values you selected.
+
+
+
+Choose Apply.
+
+
+Adding a Text Filter by Specifying a Single Field Value
+With the Custom filter filter type, you specify a single value that the field value must equal or not equal. If you choose an equal comparison, the specified value and actual field value must match exactly in order for the filter to be applied to a given record.
+Use the following procedure to create a text field filter by specifying one field value.
+
+
+On the data preparation page, expand the Filters pane.
+
+
+Choose New filter, and then choose a text field to filter on. 
+
+
+Doing this creates a new filter with no criteria.
+
+
+Choose the new filter to expand it.
+
+
+
+Change the filter type to Custom filter.
+
+
+
+Choose a comparison type.
+
+
+
+Type a field value in the value box.
+
+
+
+Choose Apply.
+

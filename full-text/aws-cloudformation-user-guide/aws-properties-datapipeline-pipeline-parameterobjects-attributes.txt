@@ -1,0 +1,30 @@
+AWS::DataPipeline::Pipeline ParameterAttribute
+Attribute is a property of ParameterObject that defines the attributes of a parameter object as key-value pairs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key)" : String,
+  "[StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue)" : String
+}
+YAML
+[Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key): String
+  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue): 
+    String
+Properties
+Key 
+The field identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 256
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*
+Update requires: No interruption
+StringValue 
+The field value, expressed as a String.
+Required: Yes
+Type: String
+Minimum: 0
+Maximum: 10240
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*
+Update requires: No interruption

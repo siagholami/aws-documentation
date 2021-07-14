@@ -1,0 +1,17 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayAccessLog
+The access log configuration for a virtual gateway.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[File](#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file)" : VirtualGatewayFileAccessLog
+}
+YAML
+[File](#cfn-appmesh-virtualgateway-virtualgatewayaccesslog-file): 
+    VirtualGatewayFileAccessLog
+Properties
+File 
+The file object to send virtual gateway access logs to.
+Required: No
+Type: VirtualGatewayFileAccessLog
+Update requires: No interruption

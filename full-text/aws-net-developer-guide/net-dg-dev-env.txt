@@ -1,0 +1,24 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Install and configure your toolchain
+To use the AWS SDK for .NET, you must have certain development tools installed.
+Note
+If you performed the quick start for the SDK, you might already have some of these tools installed. If you didn't do the quick start and are new to .NET development on AWS, consider doing that first for an introduction to the AWS SDK for .NET.
+Cross-platform development
+The following are required for cross-platform .NET development on Windows, Linux, or macOS:
+ Microsoft .NET Core SDK, version 2.1, 3.1, or later, which includes the .NET command line interface (CLI) (dotnet) and the .NET Core runtime.
+ A code editor or integrated development environment (IDE) that is appropriate for your operating system and requirements. This is typically one that provides some support for .NET Core.
+Examples include Microsoft Visual Studio Code (VS Code), JetBrains Rider, and Microsoft Visual Studio.
+ (Optional) An AWS toolkit if one is available for the editor you chose and your operating system.
+Examples include the AWS Toolkit for Visual Studio Code, AWS Toolkit for JetBrains, and AWS Toolkit for Visual Studio.
+Windows with Visual Studio and .NET Core
+The following are required for development on Windows with Visual Studio and .NET Core:
+ Microsoft Visual Studio
+ Microsoft .NET Core 2.1, 3.1 or later
+This is typically included by default when installing a recent version of Visual Studio.
+ (Optional) The AWS Toolkit for Visual Studio, which is a plugin that provides a user interface for managing your AWS resources and local profiles from Visual Studio. To install the toolkit, see Setting up the AWS Toolkit for Visual Studio.
+For more information, see the AWS Toolkit for Visual Studio User Guide.
+Next step
+Setting up your project

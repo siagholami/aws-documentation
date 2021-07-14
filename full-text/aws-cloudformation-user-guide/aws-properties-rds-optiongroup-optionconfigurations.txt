@@ -1,0 +1,116 @@
+AWS::RDS::OptionGroup OptionConfiguration
+The OptionConfiguration property type specifies an individual option, and its settings, within an AWS::RDS::OptionGroup resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)" : [ String, ... ],
+  "[OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname)" : String,
+  "[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings)" : [ OptionSetting, ... ],
+  "[OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion)" : String,
+  "[Port](#cfn-rds-optiongroup-optionconfigurations-port)" : Integer,
+  "[VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)" : [ String, ... ]
+}
+YAML
+[DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships): 
+    - String
+  [OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname): String
+  [OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings): 
+    - OptionSetting
+  [OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion): String
+  [Port](#cfn-rds-optiongroup-optionconfigurations-port): Integer
+  [VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships): 
+    - String
+Properties
+DBSecurityGroupMemberships 
+A list of DBSecurityGroupMemebrship name strings used for this option.
+Required: No
+Type: List of String
+Update requires: No interruption
+OptionName 
+The configuration of options to include in a group.
+Required: Yes
+Type: String
+Update requires: No interruption
+OptionSettings 
+The option settings to include in an option group.
+Required: No
+Type: List of OptionSetting
+Update requires: No interruption
+OptionVersion 
+The version for the option.
+Required: No
+Type: String
+Update requires: No interruption
+Port 
+The optional port for the option.
+Required: No
+Type: Integer
+Update requires: No interruption
+VpcSecurityGroupMemberships 
+A list of VpcSecurityGroupMembership name strings used for this option.
+Required: No
+Type: List of String
+Update requires: No interruption
+Examples
+
+The following example template uses OptionName and OptionVersion parameters when creating an AWS::RDS::OptionGroup resource. 
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX",
+    "Parameters": {
+        "OptionName": {
+            "Type": "String"
+        },
+        "OptionVersion": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "myOptionGroup": {
+            "Type": "AWS::RDS::OptionGroup",
+            "Properties": {
+                "EngineName": "oracle-ee",
+                "MajorEngineVersion": "11.2",
+                "OptionGroupDescription": "testing creating optionGroup with APEX version",
+                "OptionConfigurations": [
+                    {
+                        "OptionName": "XMLDB"
+                    },
+                    {
+                        "OptionName": {
+                            "Ref": "OptionName"
+                        },
+                        "OptionVersion": {
+                            "Ref": "OptionVersion"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+YAML
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: "APEX has a dependency on XMLDB, so, there must be at least one XMLDB when there is an APEX"
+Parameters: 
+  OptionName: 
+    Type: String
+  OptionVersion: 
+    Type: String
+Resources: 
+  myOptionGroup: 
+    Properties: 
+      EngineName: oracle-ee
+      MajorEngineVersion: "11.2"
+      OptionConfigurations: 
+        - 
+          OptionName: XMLDB
+        - 
+          OptionName: OptionName
+          OptionVersion: OptionVersion
+      OptionGroupDescription: "testing creating optionGroup with APEX version"
+    Type: "AWS::RDS::OptionGroup"
+```

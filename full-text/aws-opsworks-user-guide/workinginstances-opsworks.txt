@@ -1,0 +1,8 @@
+Using AWS OpsWorks Stacks Instances
+You can use AWS OpsWorks Stacks to create instances and add them to the stack.
+Topics
+ AWS OpsWorks Stacks Operating Systems
+ Adding an Instance to a Layer
+ Using Custom AMIs
+ Manually Starting, Stopping, and Rebooting 24/7 Instances
+ Managing Load with Time-based and Load-based Instances

@@ -1,0 +1,17 @@
+AWS::AppMesh::VirtualNode Backend
+An object that represents the backends that a virtual node is expected to send outbound traffic to.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VirtualService](#cfn-appmesh-virtualnode-backend-virtualservice)" : VirtualServiceBackend
+}
+YAML
+[VirtualService](#cfn-appmesh-virtualnode-backend-virtualservice): 
+    VirtualServiceBackend
+Properties
+VirtualService 
+Specifies a virtual service to use as a backend. 
+Required: No
+Type: VirtualServiceBackend
+Update requires: No interruption

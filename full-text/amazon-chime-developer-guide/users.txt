@@ -1,0 +1,7 @@
+User management
+The following code snippets can help developers manage Amazon Chime users. All of the examples in this topic use Java.
+Topics
+ Invite multiple users
+ Download user list
+ Log out multiple users
+ Update user personal PINs

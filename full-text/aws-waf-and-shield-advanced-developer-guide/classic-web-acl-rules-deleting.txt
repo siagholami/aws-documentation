@@ -1,0 +1,37 @@
+Deleting a rule
+Note
+This is AWS WAF Classic documentation. You should only use this version if you created AWS WAF resources, like rules and web ACLs, in AWS WAF prior to November 2019, and you have not migrated them over to the latest version yet. To migrate your resources, see Migrating your AWS WAF Classic resources to AWS WAF .
+For the latest version of AWS WAF, see AWS WAF. 
+If you want to delete a rule, you need to first remove the rule from the web ACLs that are using it and remove the conditions that are included in the rule.
+To delete a rule
+
+
+Sign in to the AWS Management Console and open the AWS WAF console at https://console.aws.amazon.com/wafv2/. 
+
+
+To remove the rule from the web ACLs that are using it, perform the following steps:
+
+
+In the navigation pane, choose Web ACLs.
+
+
+Choose the name of a web ACL that is using the rule that you want to delete.
+
+
+Choose Edit web ACL.
+
+
+Choose the X to the right of the rule that you want to remove from the web ACL, and then choose Update.
+
+
+Repeat for all of the remaining web ACLs that are using the rule that you want to delete.
+
+
+In the navigation pane, choose Rules.
+
+
+Select the name of the rule you want to delete.
+
+
+Choose Delete.
+

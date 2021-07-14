@@ -1,0 +1,26 @@
+AWS::AppStream::Fleet VpcConfig
+The VPC configuration information for the fleet.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SecurityGroupIds](#cfn-appstream-fleet-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[SubnetIds](#cfn-appstream-fleet-vpcconfig-subnetids)" : [ String, ... ]
+}
+YAML
+[SecurityGroupIds](#cfn-appstream-fleet-vpcconfig-securitygroupids): 
+    - String
+  [SubnetIds](#cfn-appstream-fleet-vpcconfig-subnetids): 
+    - String
+Properties
+SecurityGroupIds 
+The identifiers of the security groups for the fleet.
+Required: No
+Type: List of String
+Maximum: 5
+Update requires: No interruption
+SubnetIds 
+The identifiers of the subnets to which a network interface is attached from the fleet instance. Fleet instances can use one or two subnets.
+Required: No
+Type: List of String
+Update requires: No interruption

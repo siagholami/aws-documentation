@@ -1,0 +1,9 @@
+Before You Begin
+Before you launch an Amazon EMR cluster with AWS Lake Formation, complete the following prerequisites: 
+ Configure AWS IAM roles and your IdP provider to enable SAML 2.0-based federation.
+ Configure Amazon EMR security features.
+Topics
+ Overview of the IAM Roles for Lake Formation
+ Configure Trust Relationship Between your IdP and Lake Formation
+ Supported Third-Party Providers for SAML
+ Configure EMR Security Features

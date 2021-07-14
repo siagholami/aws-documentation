@@ -1,0 +1,7 @@
+Amazon Lex Runtime Service
+The following actions are supported by Amazon Lex Runtime Service:
+  DeleteSession 
+  GetSession 
+  PostContent 
+  PostText 
+  PutSession 

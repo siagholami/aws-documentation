@@ -1,0 +1,54 @@
+AWS::SSM::ResourceDataSync S3Destination
+Information about the target S3 bucket for the Resource Data Sync.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BucketName](#cfn-ssm-resourcedatasync-s3destination-bucketname)" : String,
+  "[BucketPrefix](#cfn-ssm-resourcedatasync-s3destination-bucketprefix)" : String,
+  "[BucketRegion](#cfn-ssm-resourcedatasync-s3destination-bucketregion)" : String,
+  "[KMSKeyArn](#cfn-ssm-resourcedatasync-s3destination-kmskeyarn)" : String,
+  "[SyncFormat](#cfn-ssm-resourcedatasync-s3destination-syncformat)" : String
+}
+YAML
+[BucketName](#cfn-ssm-resourcedatasync-s3destination-bucketname): String
+  [BucketPrefix](#cfn-ssm-resourcedatasync-s3destination-bucketprefix): String
+  [BucketRegion](#cfn-ssm-resourcedatasync-s3destination-bucketregion): String
+  [KMSKeyArn](#cfn-ssm-resourcedatasync-s3destination-kmskeyarn): String
+  [SyncFormat](#cfn-ssm-resourcedatasync-s3destination-syncformat): String
+Properties
+BucketName 
+The name of the S3 bucket where the aggregated data is stored.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Update requires: Replacement
+BucketPrefix 
+An Amazon S3 prefix for the bucket.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Update requires: Replacement
+BucketRegion 
+The AWS Region with the S3 bucket targeted by the Resource Data Sync.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Update requires: Replacement
+KMSKeyArn 
+The ARN of an encryption key for a destination in Amazon S3. Must belong to the same Region as the destination S3 bucket.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 512
+Pattern: arn:.*
+Update requires: Replacement
+SyncFormat 
+A supported sync format. The following format is currently supported: JsonSerDe
+Required: Yes
+Type: String
+Allowed values: JsonSerDe
+Update requires: Replacement

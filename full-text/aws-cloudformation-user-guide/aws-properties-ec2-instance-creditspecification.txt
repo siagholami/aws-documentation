@@ -1,0 +1,17 @@
+AWS::EC2::Instance CreditSpecification
+Specifies the credit option for CPU usage of a T2, T3, or T3a instance.
+CreditSpecification is a property of the AWS::EC2::Instance resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CPUCredits](#cfn-ec2-instance-creditspecification-cpucredits)" : String
+}
+YAML
+[CPUCredits](#cfn-ec2-instance-creditspecification-cpucredits): String
+Properties
+CPUCredits 
+The credit option for CPU usage of the instance. Valid values are standard and unlimited. T3 instances launch as unlimited by default. T2 instances launch as standard by default.
+Required: No
+Type: String
+Update requires: No interruption

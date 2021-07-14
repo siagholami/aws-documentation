@@ -1,0 +1,10 @@
+InputSerialization
+Describes how the archive is serialized.
+Contents
+CSV
+An object that describes the serialization of a CSV-encoded object.
+Type: CSVInput object
+Required: no
+More Info
+
+Initiate Job (POST jobs)

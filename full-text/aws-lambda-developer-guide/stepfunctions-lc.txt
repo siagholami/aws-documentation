@@ -1,0 +1,60 @@
+Managing state machines in the Lambda console
+You can use the Lambda console to view details about your Step Functions state machines and the Lambda functions that they use.
+Topics
+ Viewing state machine details
+ Editing a state machine
+ Running a state machine
+Viewing state machine details
+The Lambda console displays a list of your state machines in the current AWS Region that contain at least one workflow step that invokes a Lambda function.
+Choose a state machine to view a graphical representation of the workflow. Steps highlighted in blue represent Lambda functions. Use the graph controls to zoom in, zoom out, and center the graph.
+Note
+When a Lambda function is dynamically referenced with JsonPath in the state machine definition, the function details cannot be shown in the Lambda console. Instead, the function name is listed as a Dynamic reference, and the corresponding steps in the graph are grayed out.
+To view state machine details
+
+
+Open the Lambda console Step Functions state machines page.
+
+
+Choose a state machine.
+
+
+The Lambda console opens the Details page.
+For more information, see Step Functions in the AWS Step Functions Developer Guide.
+Editing a state machine
+When you want to edit a state machine, Lambda opens the Edit definition page of the Step Functions console.
+To edit a state machine
+
+
+Open the Lambda console Step Functions state machine page.
+
+
+Choose a state machine.
+
+
+Choose Edit.
+
+
+The Step Functions console opens the Edit definition page.
+
+Edit the state machine and choose Save.
+
+For more information about editing state machines, see Step Functions state machine language in the AWS Step Functions Developer Guide.
+Running a state machine
+When you want to run a state machine, Lambda opens the New execution page of the Step Functions console.
+To run a state machine
+
+
+Open the Lambda console Step Functions state machines page.
+
+
+Choose a state machine.
+
+
+Choose Execute.
+
+
+The Step Functions console opens the New execution page.
+
+(Optional) Edit the state machine and choose Start execution.
+
+For more information about running state machines, see Step Functions state machine execution concepts in the AWS Step Functions Developer Guide.

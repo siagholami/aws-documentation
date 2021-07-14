@@ -1,0 +1,7 @@
+Managing Lexicons Using the AWS CLI
+The following topics cover the AWS CLI commands needed to manage your pronunciation lexicons.
+
+Using the PutLexicon Operation
+Using the GetLexicon Operation
+Using the ListLexicons Operations
+Using the DeleteLexicon Operation

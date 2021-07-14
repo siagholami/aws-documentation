@@ -1,0 +1,85 @@
+Related projects
+These open source projects extend the functionality of Kubernetes clusters running on AWS, including clusters managed by Amazon EKS.
+Management tools
+Related management tools for Amazon EKS and Kubernetes clusters.
+eksctl
+eksctl is a simple CLI tool for creating clusters on Amazon EKS.
+ Project URL: https://eksctl.io/
+ Project documentation: https://eksctl.io/
+ AWS open source blog: eksctl: Amazon EKS cluster with one command
+AWS service operator
+AWS Service Operator allows you to create AWS resources using kubectl.
+ Project URL: https://github.com/aws/aws-service-operator-k8s
+ Project documentation: https://github.com/aws/aws-service-operator-k8s/blob/master/README.md
+ AWS open source blog: AWS service operator for Kubernetes now available
+AWS controllers for Kubernetes
+AWS Controllers for Kubernetes allow you to create and manage AWS resources directly from your Kubernetes cluster.
+ Project URL: https://aws.github.io/aws-controllers-k8s/
+ AWS open source blog: AWS service operator for Kubernetes now available
+Flux CD
+Flux is a tool that allows you to manage your cluster configuration using Git. It uses an operator in the cluster to trigger deployments inside of Kubernetes. For more information about operators, see Awesome Operators in the Wild on GitHub.
+ Project URL: https://fluxcd.io/
+ Project documentation: https://docs.fluxcd.io/
+CDK for Kubernetes
+The CDK for Kubernetes (cdk8s) lets you define Kubernetes apps and components using familiar programming languages. cdk8s apps synthesize into standard Kubernetes manifests which can be applied to any Kubernetes cluster.
+ Project URL:  https://cdk8s.io/
+ Project documentation: https://github.com/awslabs/cdk8s/tree/master/docs/getting-started
+ AWS containers blog: Introducing cdk8s: Intent-driven APIs for Kubernetes objects
+Networking
+Related networking projects for Amazon EKS and Kubernetes clusters.
+Amazon VPC CNI plugin for Kubernetes
+Amazon EKS supports native VPC networking via the Amazon VPC CNI plugin for Kubernetes. Using this CNI plugin allows Kubernetes pods to have the same IP address inside the pod as they do on the VPC network. For more information, see Pod networking (CNI) and CNI configuration variables.
+ Project URL: https://github.com/aws/amazon-vpc-cni-k8s
+ Project documentation: https://github.com/aws/amazon-vpc-cni-k8s/blob/master/README.md
+AWS Application Load Balancer (ALB) ingress controller for Kubernetes
+The AWS ALB Ingress Controller satisfies Kubernetes ingress resources by provisioning Application Load Balancers.
+ Project URL: https://github.com/kubernetes-sigs/aws-alb-ingress-controller
+ Project documentation: https://github.com/kubernetes-sigs/aws-alb-ingress-controller/tree/master/docs
+ AWS open source blog: Kubernetes ingress with AWS ALB ingress controller
+ExternalDNS
+ExternalDNS synchronizes exposed Kubernetes services and ingresses with DNS providers including Amazon Route 53 and AWS Service Discovery.
+ Project URL: https://github.com/kubernetes-incubator/external-dns
+ Project documentation: https://github.com/kubernetes-incubator/external-dns/blob/master/docs/tutorials/aws.md
+App Mesh Controller
+The App Mesh Controller for Kubernetes helps to manage App Mesh for your cluster. The controller allows you to manage the service mesh using custom resources within your cluster and manages the injection of networking proxy sidecars to pods to enable the mesh.
+ Project URL: https://github.com/aws/aws-app-mesh-controller-for-k8s
+ Project documentation: https://docs.aws.amazon.com/app-mesh/latest/userguide/mesh-k8s-integration.html
+ AWS blog: Getting started with App Mesh and Amazon EKS
+Security
+Related security projects for Amazon EKS and Kubernetes clusters.
+AWS IAM authenticator
+A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster if you're not using the AWS CLI version 1.16.156 or higher. For more information, see Installing aws-iam-authenticator.
+ Project URL: https://github.com/kubernetes-sigs/aws-iam-authenticator
+ Project documentation: https://github.com/kubernetes-sigs/aws-iam-authenticator/blob/master/README.md
+ AWS open source blog: Deploying the AWS IAM authenticator to kops
+Machine learning
+Related machine learning projects for Amazon EKS and Kubernetes clusters.
+Kubeflow
+A machine learning toolkit for Kubernetes.
+ Project URL: https://www.kubeflow.org/
+ Project documentation: https://www.kubeflow.org/docs/
+ AWS open source blog: Kubeflow on Amazon EKS
+Auto Scaling
+Related auto scaling projects for Amazon EKS and Kubernetes clusters.
+Cluster autoscaler
+Cluster Autoscaler is a tool that automatically adjusts the size of the Kubernetes cluster based on CPU and memory pressure.
+ Project URL: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
+ Project documentation: https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md
+ Amazon EKS workshop: https://eksworkshop.com/scaling/deploy_ca/
+Escalator
+Escalator is a batch or job optimized horizontal autoscaler for Kubernetes.
+ Project URL: https://github.com/atlassian/escalator
+ Project documentation: https://github.com/atlassian/escalator/blob/master/docs/README.md
+Monitoring
+Related monitoring projects for Amazon EKS and Kubernetes clusters.
+Prometheus
+Prometheus is an open-source systems monitoring and alerting toolkit.
+ Project URL: https://prometheus.io/
+ Project documentation: https://prometheus.io/docs/introduction/overview/
+ Amazon EKS workshop: https://eksworkshop.com/intermediate/240_monitoring/
+Continuous integration / continuous deployment
+Related CI/CD projects for Amazon EKS and Kubernetes clusters.
+Jenkins X
+CI/CD solution for modern cloud applications on Amazon EKS and Kubernetes clusters.
+ Project URL: https://jenkins-x.io/
+ Project documentation: https://jenkins-x.io/docs/

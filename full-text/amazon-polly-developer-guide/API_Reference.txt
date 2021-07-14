@@ -1,0 +1,12 @@
+Amazon Polly API Reference
+This section contains the Amazon Polly API reference. 
+Note
+Authenticated API calls must be signed using the Signature Version 4 Signing Process. For more information, see Signing AWS API Requests in the Amazon Web Services General Reference.
+Topics
+
+
+Actions
+
+
+Data Types
+

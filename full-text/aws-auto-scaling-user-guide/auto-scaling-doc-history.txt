@@ -1,0 +1,47 @@
+Document History
+The following table describes important additions to the AWS Auto Scaling documentation. For notification about updates to this documentation, you can subscribe to the RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+New "Security" chapter
+A new Security chapter in the AWS Auto Scaling User Guide helps you understand how to apply the shared responsibility model when using AWS Auto Scaling. As part of this update, the user guide chapter "Authentication and Access Control" has been replaced by a new, more useful section, Identity and Access Management for AWS Auto Scaling.
+March 12, 2020
+
+
+Support for Amazon VPC endpoints
+You can now establish a private connection between your VPC and AWS Auto Scaling. For migration considerations and instructions, see AWS Auto Scaling and Interface VPC Endpoints.
+November 22, 2019
+
+
+Support for increasing maximum capacity above forecast capacity, plus guide changes
+Adds console support for allowing the scaling plan to increase maximum capacity above forecast capacity by a specified buffer value. For more information, see Predictive Scaling Settings in the AWS Auto Scaling User Guide. This release also includes several rewritten sections in the Getting Started with AWS Auto Scaling tutorial.
+March 9, 2019
+
+
+Predictive scaling and enhancements 
+You can now use predictive scaling to proactively scale your Amazon EC2 Auto Scaling groups. This release also adds support for replacing scaling policies created outside of the scaling plan (such as from other consoles) and controlling whether you enable your plan's dynamic scaling feature. For more information, see Getting Started with AWS Auto Scaling.
+November 20, 2018
+
+
+Support for custom resource settings
+Added support for customizing various settings for each individual resource or multiple resources at the same time. For more information, see Getting Started with AWS Auto Scaling.
+October 9, 2018
+
+
+Tags as an application source
+This release adds support for specifying a set of tags as an application source.
+April 23, 2018
+
+
+New service
+Initial release of AWS Auto Scaling.
+January 16, 2018
+
+

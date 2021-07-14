@@ -1,0 +1,317 @@
+Sizing Policy and Aspect Ratios
+The Sizing Policy that you choose affects the scaling that Elastic Transcoder applies to your output image, as shown in the following table.
+
+
+
+Sizing Policy
+Output Image Might Be Scaled Up
+Output Image Might Be Padded When Padding Policy Is "Pad"
+Output Image Might Have a Different Pixel Aspect Ratio than Input Image
+Output Image Might Be Cropped
+
+
+
+
+Fit
+Yes
+Yes
+ 
+ 
+
+
+Fill
+Yes
+ 
+ 
+Yes
+
+
+Stretch
+Yes
+ 
+Yes
+ 
+
+
+Keep
+ 
+Yes
+ 
+Yes
+
+
+ShrinkToFit
+ 
+Yes
+ 
+ 
+
+
+ShrinkToFill
+ 
+Yes
+ 
+Yes
+
+
+
+Aspect Ratio Thumbnails
+The following tables show how the Sizing Policy, Padding Policy, Max Height, and Max Width interact to change the output image.
+Topics
+ Fit
+ Fill
+ Stretch
+ Keep
+ Shrink to Fit
+ Shrink to Fill
+Fit
+If you choose Fit for your Sizing Policy, Elastic Transcoder scales your input file until it fits inside the dimensions of your output image, without exceeding the dimensions of your output image. 
+For example, if your input file is 200 pixels by 200 pixels and you want an output image that is 300 pixels by 400 pixels, Elastic Transcoder increases the size of your file to 300 pixels by 300 pixels, and applies your padding policy to the sides of your file. If you choose Unpadded for your Padding Policy, Elastic Transcoder returns the 300 pixel by 300 pixel file as your output. If you choose Padded, Elastic Transcoder adds 50 pixels of padding on either side of your output, and returns a 300 pixel by 400 pixel file.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+
+
+Fill
+If you choose Fill for your Sizing Policy, Elastic Transcoder scales your input file until it fills the dimensions of your output image, and crops anything that exceeds the dimensions of your output image.
+For example, if your input file is 200 pixels by 200 pixels and you want an output image that is 300 pixels by 400 pixels, Elastic Transcoder increases the size of your input to 400 pixels by 400 pixels, crops off the top and bottom 50 pixels, and returns a 300 pixel by 400 pixel file. Elastic Transcoder does not use padding for the Fill policy.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+
+
+Stretch
+If you choose Stretch for your Sizing Policy, Elastic Transcoder stretches or shrinks your input file until it matches the dimensions of your output file.
+For example, if your input file is 200 pixels by 200 pixels and you want an output image that is 300 pixels by 400 pixels, Elastic Transcoder increases the size of your input to 300 pixels by 400 pixels, distorting the proportions of your output image. Elastic Transcoder does not use padding or cropping for the Stretch policy.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+
+
+Keep
+If you choose Keep for your Sizing Policy, Elastic Transcoder does not scale your input file. Elastic Transcoder crops or pads your input file until it matches the dimensions of your output image.
+For example, if your input file is 400 pixels by 200 pixels and you want an output image that is 300 pixels by 300 pixels, Elastic Transcoder crops 100 pixels off of the top and bottom, and applies your padding policy to the sides. If you choose Unpadded for your Padding Policy, Elastic Transcoder returns a 300 pixel by 200 pixel output file. If you choose Padded, Elastic Transcoder returns a 300 pixel by 300 pixel file.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+
+
+Shrink to Fit
+If you choose Shrink to Fit for your Sizing Policy, Elastic Transcoder decreases the size of your input file until it fits inside the dimensions of your output file, without going over any of the dimensions of your output image. If your input file is smaller than your output image, Elastic Transcoder does not increase the size of your file.
+For example, if your input file is 400 pixels by 400 pixels and you want an output image that is 200 pixels by 300 pixels, Elastic Transcoder shrinks your input to 200 pixels by 200 pixels, and applies your padding policy. If you choose Unpadded for your Padding Policy, Elastic Transcoder returns the 200 by 200 pixel file as your output. If you choose Padded, Elastic Transcoder adds 50 pixels of padding on either side of your output, and returns a 300 pixel by 300 pixel file.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+
+
+Shrink to Fill
+If you choose Shrink to Fill for your Sizing Policy, Elastic Transcoder decreases the size of your input file until it fills the dimensions of your output image, crops anything that does not fit inside your output image, and applies your padding policy. If your output image is larger than your input file, Elastic Transcoder does not increase the size of your file.
+For example, if your input file is 400 pixels by 200 pixels and you want an output image that is 200 pixels by 300 pixels, Elastic Transcoder  crops 100 pixels from the sides, and applies your padding policy to the top and bottom of your file. If you choose Unpadded for your Padding Policy, Elastic Transcoder returns a 200 pixel by 200 pixel output file. If you choose Padded, Elastic Transcoder returns a 200 pixel by 300 pixel file.
+You can download larger versions of the pictures here.
+Key
+
+
+
+
+Condition
+Input
+Output: NoPad
+Output: Pad
+
+
+
+
+Input width < Max output width Input height < Max output height
+
+
+
+
+
+Input width < Max output width Input height > Max output height
+
+
+
+
+
+Input width > Max output width Input height < Max output height
+
+
+
+
+
+Input width > Max output width Input height > Max output height
+
+
+
+
+

@@ -1,0 +1,175 @@
+Amazon GameLift Developer Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon GameLift?
+How Amazon GameLift Works
+How Realtime Servers Work
+How Players Connect to Games
+How Amazon GameLift FlexMatch Works
+Game Architecture with Amazon GameLift
+Game Architecture with Realtime Servers
+Setting Up
+Set Up an AWS Account
+IAM Policy Examples for Amazon GameLift
+
+
+Set Up a Role for Amazon GameLift Access
+Amazon GameLift SDKs
+Tools and Resources
+Billing Alerts
+Using Amazon GameLift in AWS Regions
+Getting Started with Amazon GameLift
+Explore Amazon GameLift
+Get Started with Custom Servers
+Get Started with Realtime Servers
+Preparing Games for Amazon GameLift
+Integrating Games with Custom Game Servers
+Game Engines and Amazon GameLift
+Prepare Your Game Client in Amazon Lumberyard
+Add Amazon GameLift to an Unreal Engine Game Server Project
+Add Amazon GameLift to a Unity Game Server Project
+
+
+Integrating your Game Server for Amazon GameLift
+Add Amazon GameLift to Your Game Server
+Access AWS Resources From Your Fleets
+
+
+Integrating your Game Client for Amazon GameLift
+Add Amazon GameLift to Your Game Client
+Create Game Sessions with Queues
+Generate Player IDs
+
+
+Amazon GameLift and Game Client/Server Interactions
+Amazon GameLift–Game Server/Client Interactions
+
+
+Testing Your Integration
+
+
+Integrating Games with Amazon GameLift Realtime Servers
+Integrating a Game Client for Realtime Servers
+Creating a Realtime Script
+
+
+Adding FlexMatch Matchmaking
+FlexMatch Integration Roadmap
+Add FlexMatch to a Game Client
+Add FlexMatch to a Game Server
+Backfill Existing Games with FlexMatch
+
+
+Managing GameLift Hosting Resources
+Uploading Amazon GameLift Game Servers for Deployment
+Upload a Custom Game Server Build to Amazon GameLift
+Upload a Realtime Servers Script to Amazon GameLift
+
+
+Setting Up Amazon GameLift Fleets
+Design a Amazon GameLift Fleet for Your Game
+Choose Computing Resources
+Run Multiple Processes on a Fleet
+Spot Fleet Integration Guide
+
+
+Deploy a GameLift Fleet for a Custom Game Build
+Deploy a Realtime Servers Fleet
+Manage Fleet Records
+Add an Alias to a Amazon GameLift Fleet
+Debug Fleet Issues
+Remotely Access Fleet Instances
+
+
+Scaling Amazon GameLift Fleet Capacity
+Set Fleet Capacity Limits
+Manually Set Fleet Capacity
+Auto-Scale Fleet Capacity
+Auto-Scale with Target Tracking
+Auto-Scale with Rule-Based Policies
+
+
+
+
+Using Multi-Region Queues
+Design a Game Session Queue
+Create a Queue
+View Your Queues
+
+
+Setting Up Amazon GameLift FlexMatch Matchmakers
+Design a FlexMatch Matchmaker
+Create a Matchmaking Configuration
+Build a FlexMatch Rule Set
+Design a FlexMatch Rule Set
+Create Matchmaking Rule Sets
+FlexMatch Rule Set Examples
+
+
+Set up FlexMatch Event Notification
+
+
+VPC Peering for Amazon GameLift
+Viewing Your Game Data in the Console
+View Your Current Amazon GameLift Status
+View Your Builds
+View Your Fleets
+View Fleet Details
+View Data on Game and Player Sessions
+View Your Aliases
+Monitoring Amazon GameLift
+Monitor Amazon GameLift with Amazon CloudWatch
+Logging Amazon GameLift API Calls with AWS CloudTrail
+Amazon GameLift Reference Guides
+Amazon GameLift Service API Reference (AWS SDK)
+Amazon GameLift Realtime Servers Reference
+Realtime Servers Client API (C#) Reference
+Realtime Servers Client API (C#) Reference: Actions
+Realtime Servers Client API (C#) Reference: Asynchronous Callbacks
+Realtime Servers Client API (C#) Reference: Data Types
+
+
+Amazon GameLift Realtime Servers Script Reference
+Script Callbacks for Realtime Servers
+Realtime Servers Interface
+
+
+
+
+Amazon GameLift Server SDK Reference
+Amazon GameLift Server API (C) Reference
+Amazon GameLift Server API (C) Reference: Actions
+Amazon GameLift Server API (C) Reference: Data Types
+
+
+Amazon GameLift Server API (C#) Reference
+Amazon GameLift Server API (C#) Reference: Actions
+Amazon GameLift Server API (C#) Reference: Data Types
+
+
+Amazon GameLift Server API Reference for Unreal Engine
+Amazon GameLift Server API Reference for Unreal Engine: Actions
+Amazon GameLift Server API Reference for Unreal Engine: Data Types
+
+
+
+
+Amazon GameLift FlexMatch Reference
+FlexMatch Rule Set Schema
+FlexMatch Rules Language
+FlexMatch Matchmaking Events
+
+
+Document History for Amazon GameLift
+AWS Glossary

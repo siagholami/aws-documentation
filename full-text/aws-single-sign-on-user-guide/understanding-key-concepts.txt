@@ -1,0 +1,8 @@
+Understanding Key AWS Single Sign-On Concepts
+You'll get more out of AWS Single Sign-On if you become familiar with key concepts relating to SAML federation, user authentication, and IAM permissions.
+Topics
+ Users, Groups, and Provisioning
+ AWS SSO-Integrated Application Enablement
+ SAML Federation
+ User Authentications
+ Permission Sets

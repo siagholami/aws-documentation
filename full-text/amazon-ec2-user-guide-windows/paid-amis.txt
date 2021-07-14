@@ -1,0 +1,148 @@
+Paid AMIs
+A paid AMI is an AMI that you can purchase from a developer.
+Amazon EC2 integrates with AWS Marketplace, enabling developers to charge other Amazon EC2 users for the use of their AMIs or to provide support for instances. 
+The AWS Marketplace is an online store where you can buy software that runs on AWS, including AMIs that you can use to launch your EC2 instance. The AWS Marketplace AMIs are organized into categories, such as Developer Tools, to enable you to find products to suit your requirements. For more information about AWS Marketplace, see the AWS Marketplace site.
+Launching an instance from a paid AMI is the same as launching an instance from any other AMI. No additional parameters are required. The instance is charged according to the rates set by the owner of the AMI, as well as the standard usage fees for the related web services, for example, the hourly rate for running an m1.small instance type in Amazon EC2. Additional taxes might also apply. The owner of the paid AMI can confirm whether a specific instance was launched using that paid AMI. 
+Important
+Amazon DevPay is no longer accepting new sellers or products. AWS Marketplace is now the single, unified e-commerce platform for selling software and services through AWS. For information about how to deploy and sell software from AWS Marketplace, see Selling on AWS Marketplace. AWS Marketplace supports AMIs backed by Amazon EBS.
+Topics
+ Selling your AMI
+ Finding a paid AMI
+ Purchasing a paid AMI
+ Getting the product code for your instance
+ Using paid support
+ Bills for paid and supported AMIs
+ Managing your AWS Marketplace subscriptions
+Selling your AMI
+You can sell your AMI using AWS Marketplace. AWS Marketplace offers an organized shopping experience. Additionally, AWS Marketplace also supports AWS features such as Amazon EBS-backed AMIs, Reserved Instances, and Spot Instances.
+For information about how to sell your AMI on AWS Marketplace, see Selling on AWS Marketplace. 
+Finding a paid AMI
+There are several ways that you can find AMIs that are available for you to purchase. For example, you can use AWS Marketplace, the Amazon EC2 console, or the command line. Alternatively, a developer might let you know about a paid AMI themselves.
+Finding a paid AMI using the console
+To find a paid AMI using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose AMIs. 
+
+
+Choose Public images for the first filter.
+
+
+In the Search bar, choose Owner, then AWS Marketplace.
+
+
+If you know the product code, choose Product Code, then type the product code.
+
+
+Finding a paid AMI using AWS Marketplace
+To find a paid AMI using AWS Marketplace
+
+
+Open AWS Marketplace.
+
+
+Enter the name of the operating system in the search box, and click Go.
+
+
+To scope the results further, use one of the categories or filters.
+
+
+Each product is labeled with its product type: either AMI or Software as a Service.
+
+
+Finding a paid AMI using the Tools for Windows PowerShell
+You can find a paid AMI using the following Get-EC2Image command.
+PS C:\> Get-EC2Image -Owner aws-marketplace
+The output for a paid AMI includes the product code.
+ProductCodeId           ProductCodeType
+-------------           ---------------
+product_code            marketplace
+If you know the product code, you can filter the results by product code. This example returns the most recent AMI with the specified product code.
+PS C:\> (Get-EC2Image -Owner aws-marketplace -Filter @{"Name"="product-code";"Value"="product_code"} | sort CreationDate -Descending | Select-Object -First 1).ImageId
+Finding a paid AMI using the AWS CLI
+You can find a paid AMI using the following describe-images command (AWS CLI).
+aws ec2 describe-images 
+    --owners aws-marketplace
+This command returns numerous details that describe each AMI, including the product code for a paid AMI. The output from describe-images includes an entry for the product code like the following:
+"ProductCodes": [
+    {
+        "ProductCodeId": "product_code",
+        "ProductCodeType": "marketplace"
+    }
+],
+If you know the product code, you can filter the results by product code. This example returns the most recent AMI with the specified product code.
+aws ec2 describe-images 
+    --owners aws-marketplace \
+    --filters "Name=product-code,Values=product_code" \
+    --query "sort_by(Images, &CreationDate)[-1].[ImageId]"
+Purchasing a paid AMI
+You must sign up for (purchase) a paid AMI before you can launch an instance using the AMI.
+Typically a seller of a paid AMI presents you with information about the AMI, including its price and a link where you can buy it. When you click the link, you're first asked to log into AWS, and then you can purchase the AMI.
+Purchasing a paid AMI using the console
+You can purchase a paid AMI by using the Amazon EC2 launch wizard. For more information, see Launching an AWS Marketplace instance.
+Subscribing to a product using AWS Marketplace
+To use the AWS Marketplace, you must have an AWS account. To launch instances from AWS Marketplace products, you must be signed up to use the Amazon EC2 service, and you must be subscribed to the product from which to launch the instance. There are two ways to subscribe to products in the AWS Marketplace:
+ AWS Marketplace website: You can launch preconfigured software quickly with the 1-Click deployment feature.
+ Amazon EC2 launch wizard: You can search for an AMI and launch an instance directly from the wizard. For more information, see Launching an AWS Marketplace instance.
+Getting the product code for your instance
+You can retrieve the AWS Marketplace product code for your instance using its instance metadata. For more information about retrieving metadata, see Instance metadata and user data.
+To retrieve a product code, use the following command:
+PS C:\> Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/product-codes
+If the instance has a product code, Amazon EC2 returns it.
+Using paid support
+Amazon EC2 also enables developers to offer support for software (or derived AMIs). Developers can create support products that you can sign up to use. During sign-up for the support product, the developer gives you a product code, which you must then associate with your own AMI. This enables the developer to confirm that your instance is eligible for support. It also ensures that when you run instances of the product, you are charged according to the terms for the product specified by the developer. 
+Important
+You can't use a support product with Reserved Instances. You always pay the price that's specified by the seller of the support product.
+To associate a product code with your AMI, use one of the following commands, where ami_id is the ID of the AMI and product_code is the product code:
+ modify-image-attribute (AWS CLI)
+aws ec2 modify-image-attribute --image-id ami_id --product-codes "product_code"
+ Edit-EC2ImageAttribute (AWS Tools for Windows PowerShell)
+PS C:\> Edit-EC2ImageAttribute -ImageId ami_id -ProductCode product_code
+After you set the product code attribute, it cannot be changed or removed.
+Bills for paid and supported AMIs
+At the end of each month, you receive an email with the amount your credit card has been charged for using any paid or supported AMIs during the month. This bill is separate from your regular Amazon EC2 bill. For more information, see Paying For AWS Marketplace Products. 
+Managing your AWS Marketplace subscriptions
+On the AWS Marketplace website, you can check your subscription details, view the vendor's usage instructions, manage your subscriptions, and more.
+To check your subscription details
+
+
+Log in to the AWS Marketplace.
+
+
+Choose Your Marketplace Account.
+
+
+Choose Manage your software subscriptions. 
+
+
+All your current subscriptions are listed. Choose  Usage Instructions to view specific instructions for using the product, for example, a user name for connecting to your running instance. 
+
+
+To cancel an AWS Marketplace subscription
+
+
+Ensure that you have terminated any instances running from the subscription.
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Instances.
+
+
+Select the instance, and choose Actions, Instance State, Terminate.
+
+
+Choose Yes, Terminate when prompted for confirmation.
+
+
+Log in to the AWS Marketplace, and choose Your Marketplace Account, then Manage your software subscriptions.
+
+
+Choose Cancel subscription. You are prompted to confirm your cancellation. 
+Note
+After you've canceled your subscription, you are no longer able to launch any instances from that AMI. To use that AMI again, you need to resubscribe to it, either on the AWS Marketplace website, or through the launch wizard in the Amazon EC2 console.
+

@@ -1,0 +1,14 @@
+Setting Up the Downstream System for a MediaPackage Output
+A MediaPackage output is an HLS output where the destination is always a channel in AWS Elemental MediaPackage. AWS Elemental MediaPackage is typically serving as an origin server that a CDN such as Amazon CloudFront can pull from.
+For information on the differences between HLS and MediaPackage outputs, see Choosing between HLS and MediaPackage Output Groups.
+To set up AWS Elemental MediaPackage
+
+
+Make sure that the AWS Elemental MediaPackage channel and the AWS Elemental MediaLive channel are in the same AWS Region. 
+
+
+In AWS Elemental MediaPackage create one channel. See Creating a Channel in the AWS Elemental MediaPackage User Guide. 
+
+
+View the details of the MediaPackage channel. See Viewing Channel Details in the AWS Elemental MediaPackage User Guide. Make a note of the channel ID. The channel ID is case sensitive. 
+

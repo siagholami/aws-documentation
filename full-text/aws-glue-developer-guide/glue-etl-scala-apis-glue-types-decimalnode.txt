@@ -1,0 +1,13 @@
+AWS Glue Scala DecimalNode APIs
+Package: com.amazonaws.services.glue.types
+DecimalNode Case Class
+DecimalNode
+case class DecimalNode extends ScalarNode(value, TypeCode.DECIMAL)  (
+           value : BigDecimal )
+DecimalNode val Fields
+
+ordering
+
+DecimalNode def Methods
+def equals( other : Any )
+def this( value : Decimal )

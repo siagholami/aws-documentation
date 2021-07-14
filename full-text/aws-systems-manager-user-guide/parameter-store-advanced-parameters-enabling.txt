@@ -1,0 +1,25 @@
+Changing a standard parameter to an advanced parameter
+Use the following procedure to change an existing standard parameter to an advanced parameter. For information about how to create a new advanced parameter, see Creating Systems Manager parameters.
+To change a standard parameter to an advanced parameter
+
+
+Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Parameter Store.
+
+
+Choose a parameter, and then choose Edit.
+
+
+For Description, enter information about this parameter.
+
+
+Choose Advanced.
+
+
+For Value, enter the value of this parameter. Advanced parameters have a maximum value limit of 8 KB.
+
+
+Choose Save changes.
+

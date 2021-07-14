@@ -1,0 +1,49 @@
+Enable Directional Blur
+Applies a directional blur filter. To enable this node, you must enable the r_MotionBlur console variable. For more information, see Using the Console Window.
+To disable the effect, see Disable Directional Blur.
+Contents
+ Inputs
+ Outputs
+
+Example 
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Direction
+Vector2
+Indicates the direction and strength of the blur, in the screen space.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

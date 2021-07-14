@@ -1,0 +1,114 @@
+AWS SDK for .NET Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is the AWS SDK for .NET
+AWS tools related to the AWS SDK for .NET
+Additional resources
+Get started quickly with the AWS SDK for .NET
+Simple cross-platform application using the AWS SDK for .NET
+Simple Windows-based application using the AWS SDK for .NET
+Next steps
+Setting up your AWS SDK for .NET environment
+Create an AWS account
+Install and configure your toolchain
+Setting up your AWS SDK for .NET project
+Start a new project
+Create users and roles
+Configure AWS credentials
+Important warnings and guidance for credentials
+Using the shared AWS credentials file
+Using the SDK Store (Windows only)
+Credential and profile resolution
+
+
+Configure the AWS Region
+Install AWSSDK packages with NuGet
+Install AWSSDK assemblies without NuGet
+Advanced configuration for your AWS SDK for .NET project
+Using AWSSDK.Extensions.NETCore.Setup and the IConfiguration interface
+
+
+Features of the AWS SDK for .NET
+AWS asynchronous APIs for .NET
+Retries and timeouts
+Paginators
+Enabling SDK Metrics
+Migrating your project for the AWS SDK for .NET
+What's new in the AWS SDK for .NET
+Platforms supported by the AWS SDK for .NET
+Migrating to version 3.5 of the AWS SDK for .NET
+Migrating from .NET Standard 1.3
+Working with AWS services in the AWS SDK for .NET
+Accessing AWS CloudFormation with the AWS SDK for .NET
+Listing AWS resources using AWS CloudFormation
+
+
+Working with Amazon EC2
+Working with security groups in Amazon EC2
+Enumerating security groups
+Creating security groups
+Updating security groups
+
+
+Working with Amazon EC2 key pairs
+Creating and displaying key pairs
+Deleting key pairs
+
+
+Seeing your Amazon EC2 Regions and Availability Zones
+Working with Amazon EC2 instances
+Launching an Amazon EC2 instance
+Terminating an Amazon EC2 instance
+
+
+Amazon EC2 Spot Instance tutorial
+
+
+Accessing IAM with the AWS SDK for .NET
+Creating and listing users for your AWS account
+Deleting IAM users
+Creating IAM managed policies from JSON
+Creating IAM managed policies programmatically
+Display the policy document of an IAM managed policy
+Granting access by using an AWS IAM role
+
+
+Using Amazon Simple Storage Service Internet storage
+Using AWS KMS keys for Amazon S3 encryption in the AWS SDK for .NET
+
+
+Messaging using Amazon SQS
+Creating Amazon SQS queues
+Updating Amazon SQS queues
+Deleting Amazon SQS queues
+Sending Amazon SQS messages
+Receiving Amazon SQS messages
+
+
+Programming AWS OpsWorks to Work with stacks and applications
+Support for other AWS services and configuration
+Security for this AWS Product or Service
+Data Protection in this AWS Product or Service
+Identity and Access Management for this AWS Product or Service
+Compliance Validation for this AWS Product or Service
+Resilience for this AWS Product or Service
+Infrastructure Security for this AWS Product or Service
+Enforcing TLS 1.2 in this AWS Product or Service
+Amazon S3 Encryption Client Migration
+Special considerations for the AWS SDK for .NET
+Obtaining assemblies for the AWS SDK for .NET
+Accessing credentials and profiles in an application
+Special considerations for Unity support
+Special considerations for Xamarin support
+Document history

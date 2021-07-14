@@ -1,0 +1,51 @@
+AWS::ElasticLoadBalancing::LoadBalancer Policies
+Specifies policies for your Classic Load Balancer.
+To associate policies with a listener, use the PolicyNames property for the listener.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Attributes](#cfn-ec2-elb-policy-attributes)" : [ Json, ... ],
+  "[InstancePorts](#cfn-ec2-elb-policy-instanceports)" : [ String, ... ],
+  "[LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports)" : [ String, ... ],
+  "[PolicyName](#cfn-ec2-elb-policy-policyname)" : String,
+  "[PolicyType](#cfn-ec2-elb-policy-policytype)" : String
+}
+YAML
+[Attributes](#cfn-ec2-elb-policy-attributes): 
+    - Json
+  [InstancePorts](#cfn-ec2-elb-policy-instanceports): 
+    - String
+  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports): 
+    - String
+  [PolicyName](#cfn-ec2-elb-policy-policyname): String
+  [PolicyType](#cfn-ec2-elb-policy-policytype): String
+Properties
+Attributes 
+The policy attributes.
+Required: Yes
+Type: List of Json
+Update requires: No interruption
+InstancePorts 
+The instance ports for the policy. Required only for some policy types.
+Required: No
+Type: List of String
+Update requires: No interruption
+LoadBalancerPorts 
+The load balancer ports for the policy. Required only for some policy types.
+Required: No
+Type: List of String
+Update requires: No interruption
+PolicyName 
+The name of the policy.
+Required: Yes
+Type: String
+Update requires: No interruption
+PolicyType 
+The name of the policy type.
+Required: Yes
+Type: String
+Update requires: No interruption
+See also
+
+CreateLoadBalancerPolicy in the Elastic Load Balancing API Reference (version 2012-06-01) 

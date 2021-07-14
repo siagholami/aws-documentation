@@ -1,0 +1,46 @@
+11: Setting Up the UI
+In this tutorial, you'll set up your game's UI. To do this, you'll use a prebuilt slice to set up a title screen and a "mission complete" screen.
+To set up the game UI
+
+In the Asset Browser, navigate to StarterGame\Slices\GSG.
+
+Drag maze_ui.slice into the viewport.
+
+Align the slice for this level's purposes. To do this, make sure either the maze_wall_exterior or maze_wall_interior parent entity is visible.
+
+In the viewport or the Entity Outliner, select UI_Maze_Slice.
+Click the Align to Object icon , and then click either maze_wall_exterior or maze_wall_interior.
+
+Set the CameraManager's starting camera to the UI slice's camera. To do this:
+    A – In the Entity Outliner, select CameraManager.
+    B – In Entity Inspector, under Lua Script - CameraManager, next to the InitialCamera box, click the picker icon .
+    C – In Entity Outliner, under UI_Maze_Slice, choose MazeCameraStartScreen (C).
+    D – In Entity Inspector, under Lua Script - CameraManager, in the InitialCameraTag box, enter MazeCameraStartScreen (D).
+
+
+To see the title screen and test your camera, press CtrlG to play the game.
+Press Esc to quit.
+
+Move the title screen camera to a position that you like for the start of the game. To do this, in the Entity Outliner, expand the UI_Maze_Slice parent entity.
+
+Select the MazeCameraStartScreen entity.
+In the upper left of the viewport, right-click the Perspective title bar. Choose Camera, MazeCameraStartScreen.
+
+Notice that your view changes when you click this option. That's because you are now viewing the level through this particular entity.
+Using viewport navigation tools, position the camera with the view that you want the player to see when starting the game.
+
+
+
+When you have the view that you want, switch back to the default camera. To do this, right-click the viewport (Perspective) title bar and choose Camera, Default Camera.
+
+
+Press CtrlS to save your level.
+
+
+Press CtrlG to play your level. Notice that the start screen camera view starts where you positioned it, and then switches to the third person player camera when you press a key to start.
+
+
+Press Esc to quit.
+
+
+Next: 12: Exporting Your Game

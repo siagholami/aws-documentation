@@ -1,0 +1,2 @@
+Create a build project (AWS CloudFormation)
+For information about using AWS CodeBuild with AWS CloudFormation, see the AWS CloudFormation template for CodeBuild in the AWS CloudFormation User Guide.

@@ -1,0 +1,25 @@
+Part 4: Build and test the Amazon Lex bot
+Build and test your bot to make sure that it works as intended before you publish it.
+
+
+In the Amazon Lex console, choose Build. The build may take a minute or two.
+
+
+
+When it's finished building, choose Test Chatbot.
+
+
+
+Test the PasswordReset intent. In the Test Chatbot pane, type I forgot my password, and press Enter. 
+
+
+
+The verification looks like what's shown in the following image. 
+
+
+
+To confirm that the NetworkIssue intent is working, type my email is down. The verification looks like what's shown in the following image. 
+
+
+
+Go to Part 5: Publish the Amazon Lex bot and create an alias.

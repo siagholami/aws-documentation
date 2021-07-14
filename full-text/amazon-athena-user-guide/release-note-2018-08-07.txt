@@ -1,0 +1,3 @@
+August 7, 2018
+Published on 2018-08-07
+You can now store Amazon Virtual Private Cloud flow logs directly in Amazon S3 in a GZIP format, where you can query them in Athena. For information, see Querying Amazon VPC Flow Logs and  Amazon VPC Flow Logs can now be delivered to S3.

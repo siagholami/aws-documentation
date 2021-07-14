@@ -1,0 +1,12 @@
+ScalingParametersStatus
+Description
+The status and configuration of a search domain's scaling parameters. 
+Contents
+Options 
+The desired instance type and desired number of replicas of each index partition.
+Type: ScalingParameters 
+ Required: Yes 
+Status 
+The status of domain configuration option.
+Type: OptionStatus 
+ Required: Yes 

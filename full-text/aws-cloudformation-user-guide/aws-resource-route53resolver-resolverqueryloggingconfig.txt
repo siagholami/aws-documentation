@@ -1,0 +1,64 @@
+AWS::Route53Resolver::ResolverQueryLoggingConfig
+The AWS::Route53Resolver::ResolverQueryLoggingConfig resource is a complex type that contains settings for one query logging configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Route53Resolver::ResolverQueryLoggingConfig",
+  "Properties" : {
+      "[DestinationArn](#cfn-route53resolver-resolverqueryloggingconfig-destinationarn)" : String,
+      "[Name](#cfn-route53resolver-resolverqueryloggingconfig-name)" : String
+    }
+}
+YAML
+Type: AWS::Route53Resolver::ResolverQueryLoggingConfig
+Properties: 
+  [DestinationArn](#cfn-route53resolver-resolverqueryloggingconfig-destinationarn): String
+  [Name](#cfn-route53resolver-resolverqueryloggingconfig-name): String
+Properties
+DestinationArn 
+The ARN of the resource that you want Resolver to send query logs: an Amazon S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 600
+Update requires: Replacement
+Name 
+The name of the query logging configuration. 
+Required: No
+Type: String
+Minimum: 1
+Maximum: 64
+Pattern: (?!^[0-9]$)([a-zA-Z0-9\-_' '])
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the resource that contains settings for one query logging configuration.
+For example: { "Ref": "rqlc-1111222233334444" }
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) for the query logging configuration.
+AssociationCount 
+The number of VPCs that are associated with the query logging configuration.
+CreationTime 
+The date and time that the query logging configuration was created, in Unix time format and Coordinated Universal Time (UTC).
+CreatorRequestId 
+A unique string that identifies the request that created the query logging configuration. The CreatorRequestId allows failed requests to be retried without the risk of running the operation twice.
+Id 
+The ID for the query logging configuration.
+OwnerId 
+The AWS account ID for the account that created the query logging configuration. 
+ShareStatus 
+An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+Status 
+The status of the specified query logging configuration. Valid values include the following:
+ CREATING: Resolver is creating the query logging configuration.
+ CREATED: The query logging configuration was successfully created. Resolver is logging queries that originate in the specified VPC.
+ DELETING: Resolver is deleting this query logging configuration.
+ FAILED: Resolver can't deliver logs to the location that is specified in the query logging configuration. Here are two common causes:
+   The specified destination (for example, an Amazon S3 bucket) was deleted.
+   Permissions don't allow sending logs to the destination.

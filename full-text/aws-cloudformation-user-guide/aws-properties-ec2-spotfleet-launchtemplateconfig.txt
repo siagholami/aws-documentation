@@ -1,0 +1,25 @@
+AWS::EC2::SpotFleet LaunchTemplateConfig
+Specifies a launch template and overrides.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)" : FleetLaunchTemplateSpecification,
+  "[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides)" : [ LaunchTemplateOverrides, ... ]
+}
+YAML
+[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification): 
+    FleetLaunchTemplateSpecification
+  [Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides): 
+    - LaunchTemplateOverrides
+Properties
+LaunchTemplateSpecification 
+The launch template.
+Required: No
+Type: FleetLaunchTemplateSpecification
+Update requires: No interruption
+Overrides 
+Any parameters that you specify override the same parameters in the launch template.
+Required: No
+Type: List of LaunchTemplateOverrides
+Update requires: No interruption

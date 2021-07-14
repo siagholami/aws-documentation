@@ -1,0 +1,170 @@
+Creating external schemas for Amazon Redshift Spectrum
+All external tables must be created in an external schema, which you create using a CREATE EXTERNAL SCHEMA statement. 
+Note
+Some applications use the term database and schema interchangeably. In Amazon Redshift, we use the term schema. 
+An Amazon Redshift external schema references an external database in an external data catalog. You can create the external database in Amazon Redshift, in Amazon Athena, in AWS Glue Data Catalog, or in an Apache Hive metastore, such as Amazon EMR. If you create an external database in Amazon Redshift, the database resides in the Athena Data Catalog. To create a database in a Hive metastore, you need to create the database in your Hive application.
+Amazon Redshift needs authorization to access the Data Catalog in Athena and the data files in Amazon S3 on your behalf. To provide that authorization, you first create an AWS Identity and Access Management (IAM) role. Then you attach the role to your cluster and provide Amazon Resource Name (ARN) for the role in the Amazon Redshift CREATE EXTERNAL SCHEMA statement. For more information about authorization, see IAM policies for Amazon Redshift Spectrum.
+Note
+If you currently have Redshift Spectrum external tables in the Athena Data Catalog, you can migrate your Athena Data Catalog to an AWS Glue Data Catalog. To use an AWS Glue Data Catalog with Redshift Spectrum, you might need to change your IAM policies. For more information, see Upgrading to the AWS Glue Data Catalog in the Amazon Athena User Guide.
+To create an external database at the same time you create an external schema, specify FROM DATA CATALOG and include the CREATE EXTERNAL DATABASE clause in your CREATE EXTERNAL SCHEMA statement. 
+The following example creates an external schema named spectrum_schema using the external database spectrum_db.
+create external schema spectrum_schema from data catalog 
+database 'spectrum_db' 
+iam_role 'arn:aws:iam::123456789012:role/MySpectrumRole'
+create external database if not exists;
+If you manage your data catalog using Athena, specify the Athena database name and the AWS Region in which the Athena Data Catalog is located. 
+The following example creates an external schema using the default sampledb database in the Athena Data Catalog.
+create external schema athena_schema from data catalog 
+database 'sampledb' 
+iam_role 'arn:aws:iam::123456789012:role/MySpectrumRole' 
+region 'us-east-2';
+Note
+The region parameter references the AWS Region in which the Athena Data Catalog is located, not the location of the data files in Amazon S3.
+If you manage your data catalog using a Hive metastore, such as Amazon EMR, your security groups must be configured to allow traffic between the clusters. 
+In the CREATE EXTERNAL SCHEMA statement, specify FROM HIVE METASTORE and include the metastore's URI and port number. The following example creates an external schema using a Hive metastore database named hive_db.
+create external schema hive_schema
+from hive metastore
+database 'hive_db'
+uri '172.10.10.10' port 99
+iam_role 'arn:aws:iam::123456789012:role/MySpectrumRole'
+To view external schemas for your cluster, query the PG_EXTERNAL_SCHEMA catalog table or the SVV_EXTERNAL_SCHEMAS view. The following example queries SVV_EXTERNAL_SCHEMAS, which joins PG_EXTERNAL_SCHEMA and PG_NAMESPACE.
+select * from svv_external_schemas
+For the full command syntax and examples, see CREATE EXTERNAL SCHEMA.
+Working with external catalogs in Amazon Redshift Spectrum
+The metadata for Amazon Redshift Spectrum external databases and external tables is stored in an external data catalog. By default, Redshift Spectrum metadata is stored in an Athena Data Catalog. You can view and manage Redshift Spectrum databases and tables in your Athena console. 
+You can also create and manage external databases and external tables using Hive data definition language (DDL) using Athena or a Hive metastore, such as Amazon EMR. 
+Note
+We recommend using Amazon Redshift to create and manage external databases and external tables in Redshift Spectrum.
+Viewing Redshift Spectrum databases in Athena
+You can create an external database by including the CREATE EXTERNAL DATABASE IF NOT EXISTS clause as part of your CREATE EXTERNAL SCHEMA statement. In such cases, the external database metadata is stored in your Athena data catalog. The metadata for external tables that you create qualified by the external schema is also stored in your Athena Data Catalog. 
+Athena maintains a Data Catalog for each supported AWS Region. To view table metadata, log on to the Athena console and choose Catalog Manager. The following example shows the Athena Catalog Manager for the US West (Oregon) Region. 
+
+If you create and manage your external tables using Athena, register the database using CREATE EXTERNAL SCHEMA. For example, the following command registers the Athena database named sampledb.
+create external schema athena_sample
+from data catalog
+database 'sampledb'
+iam_role 'arn:aws:iam::123456789012:role/mySpectrumRole'
+region 'us-east-1';
+When you query the SVV_EXTERNAL_TABLES system view, you see tables in the Athena sampledb database and also tables that you created in Amazon Redshift.
+select * from svv_external_tables;
+schemaname    | tablename        | location                                               
+----------------------------------------------------------------------------------------
+athena_sample | elb_logs         | s3://athena-examples/elb/plaintext           
+athena_sample | lineitem_1t_csv  | s3://myspectrum/tpch/1000/lineitem_csv                
+athena_sample | lineitem_1t_part | s3://myspectrum/tpch/1000/lineitem_partition          
+spectrum      | sales            | s3://awssampledbuswest2/tickit/spectrum/sales          
+spectrum      | sales_part       | s3://awssampledbuswest2/tickit/spectrum/sales_part
+Registering an Apache Hive metastore database
+If you create external tables in an Apache Hive metastore, you can use CREATE EXTERNAL SCHEMA to register those tables in Redshift Spectrum. 
+In the CREATE EXTERNAL SCHEMA statement, specify the FROM HIVE METASTORE clause and provide the Hive metastore URI and port number. The IAM role must include permission to access Amazon S3 but doesn't need any Athena permissions. The following example registers a Hive metastore. 
+create external schema if not exists hive_schema
+from hive metastore
+database 'hive_database'
+uri 'ip-10-0-111-111.us-west-2.compute.internal' port 9083 
+iam_role 'arn:aws:iam::123456789012:role/mySpectrumRole';
+Enabling your Amazon Redshift cluster to access your Amazon EMR cluster
+If your Hive metastore is in Amazon EMR, you must give your Amazon Redshift cluster access to your Amazon EMR cluster. To do so, you create an Amazon EC2 security group. You then allow all inbound traffic to the EC2 security group from your Amazon Redshift cluster's security group and your Amazon EMR cluster's security group. Then you add the EC2 security to both your Amazon Redshift cluster and your Amazon EMR cluster.
+To enable your Amazon Redshift cluster to access your Amazon EMR cluster
+
+In Amazon Redshift, make a note of your cluster's security group name. 
+Note
+A new console is available for Amazon Redshift. Choose either the New console or the Original console instructions based on the console that you are using. The New console instructions are open by default.
+
+New console
+To display the security group, do the following:
+
+
+Sign in to the AWS Management Console and open the Amazon Redshift console at https://console.aws.amazon.com/redshift/.
+
+
+On the navigation menu, choose CLUSTERS, then choose the cluster from the list to open its details. Choose Properties and view the Network and security section. 
+
+
+Find your security group in VPC security group. 
+
+
+Original console
+In the Amazon Redshift console, choose your cluster. Find your cluster security groups in the Cluster Properties group.
+
+
+
+In Amazon EMR, make a note of the EMR master node security group name.
+
+
+
+Create or modify an Amazon EC2 security group to allow connection between Amazon Redshift and Amazon EMR:
+
+
+In the Amazon EC2 dashboard, choose Security Groups. 
+
+
+Choose Create Security Group. 
+
+
+If using VPC, choose the VPC that both your Amazon Redshift and Amazon EMR clusters are in. 
+
+
+Add an inbound rule. 
+
+
+For Type, choose TCP. 
+
+
+For Source, choose Custom. 
+
+
+Enter the name of your Amazon Redshift security group. 
+
+
+Add another inbound rule. 
+
+
+For Type, choose TCP. 
+
+
+For Port Range, enter 9083.
+Note
+The default port for an EMR HMS is 9083. If your HMS uses a different port, specify that port in the inbound rule and in the external schema definition. 
+
+
+For Source, choose Custom. 
+
+
+Enter the name of your Amazon EMR security group. 
+
+
+Choose Create. 
+
+
+
+Add the Amazon EC2 security group you created in the previous step to your Amazon Redshift cluster and to your Amazon EMR cluster:
+
+
+In Amazon Redshift, choose your cluster. 
+
+
+Choose Cluster, Modify. 
+
+
+In VPC Security Groups, add the new security group by pressing CRTL and choosing the new security group name. 
+
+
+In Amazon EMR, choose your cluster. 
+
+
+Under Hardware, choose the link for the Master node. 
+
+
+Choose the link in the EC2 Instance ID column. 
+
+
+
+For Actions, choose Networking, Change Security Groups. 
+
+
+Choose the new security group. 
+
+
+Choose Assign Security Groups. 
+
+

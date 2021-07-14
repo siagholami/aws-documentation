@@ -1,0 +1,23 @@
+AWS::Glue::DataCatalogEncryptionSettings EncryptionAtRest
+Specifies the encryption-at-rest configuration for the Data Catalog.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CatalogEncryptionMode](#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode)" : String,
+  "[SseAwsKmsKeyId](#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid)" : String
+}
+YAML
+[CatalogEncryptionMode](#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode): String
+  [SseAwsKmsKeyId](#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid): String
+Properties
+CatalogEncryptionMode 
+The encryption-at-rest mode for encrypting Data Catalog data.
+Required: No
+Type: String
+Update requires: No interruption
+SseAwsKmsKeyId 
+The ID of the AWS KMS key to use for encryption at rest.
+Required: No
+Type: String
+Update requires: No interruption

@@ -1,0 +1,17 @@
+STL_WINDOW
+Analyzes query steps that execute window functions.
+This view is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+The following example returns window function results for slice 0 and segment 3. 
+select query, tasknum, rows, is_diskbased, workmem
+from stl_window
+where slice=0 and segment=3;
+query | tasknum | rows | is_diskbased | workmem
+----------------------------------------------
+ 86326 |      36 | 1857 | f            | 95256616
+   705 |      15 | 1857 | f            | 95256616
+ 86399 |      27 | 1857 | f            | 95256616
+   649 |      10 |    0 | f            | 95256616
+(4 rows)

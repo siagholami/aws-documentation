@@ -1,0 +1,21 @@
+Contact block: Set contact attributes
+Contact flow types
+You can use this block in the following contact flow types:
+ All flows
+Description
+
+Stores key-value pairs as contact attributes.
+Contact attributes are accessible by other areas of Amazon Connect, such as the CTRs. 
+
+For more information about how to use contact attributes, see Use Amazon Connect contact attributes. 
+Properties
+
+Configured block
+When this block is configured, it looks similar to the following image:
+
+Sample flows
+See these sample flows for scenarios that use this block:
+ Sample inbound flow (first contact experience)
+Scenarios
+See these topics for scenarios that use this block:
+ How to use contact attributes to personalize the customer experience

@@ -1,0 +1,33 @@
+AWS::AppMesh::VirtualGateway VirtualGatewaySpec
+An object that represents the specification of a service mesh resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BackendDefaults](#cfn-appmesh-virtualgateway-virtualgatewayspec-backenddefaults)" : VirtualGatewayBackendDefaults,
+  "[Listeners](#cfn-appmesh-virtualgateway-virtualgatewayspec-listeners)" : [ VirtualGatewayListener, ... ],
+  "[Logging](#cfn-appmesh-virtualgateway-virtualgatewayspec-logging)" : VirtualGatewayLogging
+}
+YAML
+[BackendDefaults](#cfn-appmesh-virtualgateway-virtualgatewayspec-backenddefaults): 
+    VirtualGatewayBackendDefaults
+  [Listeners](#cfn-appmesh-virtualgateway-virtualgatewayspec-listeners): 
+    - VirtualGatewayListener
+  [Logging](#cfn-appmesh-virtualgateway-virtualgatewayspec-logging): 
+    VirtualGatewayLogging
+Properties
+BackendDefaults 
+A reference to an object that represents the defaults for backends.
+Required: No
+Type: VirtualGatewayBackendDefaults
+Update requires: No interruption
+Listeners 
+The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
+Required: Yes
+Type: List of VirtualGatewayListener
+Update requires: No interruption
+Logging 
+An object that represents logging information.
+Required: No
+Type: VirtualGatewayLogging
+Update requires: No interruption

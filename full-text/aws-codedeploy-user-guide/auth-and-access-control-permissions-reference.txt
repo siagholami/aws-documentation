@@ -1,0 +1,237 @@
+CodeDeploy permissions reference
+Use the following table when you are setting up access and writing permissions policies that you can attach to an IAM identity (identity-based policies). The table lists each CodeDeploy API operation, the actions for which you can grant permissions to perform the action, and the format of the resource ARN to use for granting permissions. You specify the actions in the policy's Action field. You specify an ARN, with or without a wildcard character (*), as the resource value in the policy's Resource field.
+You can use AWS-wide condition keys in your CodeDeploy policies to express conditions. For a complete list of AWS-wide keys, see Available keys in the IAM User Guide.
+To specify an action, use the codedeploy: prefix followed by the API operation name (for example, codedeploy:GetApplication and codedeploy:CreateApplication). To specify multiple actions in a single statement, separate them with commas (for example, "Action": ["codedeploy:action1", "codedeploy:action2"]).
+Using Wildcard Characters
+You can use a wildcard character (*) in your ARN to specify multiple actions or resources. For example, codedeploy:* specifies all CodeDeploy actions and codedeploy:Get* specifies all CodeDeploy actions that begin with the word Get. The following example grants access to all deployment groups with names that begin with West and are associated with applications that have names beginning with Test. 
+arn:aws:codedeploy:us-west-2:80398EXAMPLE:deploymentgroup:Test*/West*
+You can use wildcards with the following resources listed in the table:
+ application-name
+ deployment-group-name
+ deployment-configuration-name
+ instance-ID
+Wildcards can't be used with region or account-id. For more information about wildcards, see IAM identifiers in IAM User Guide. 
+Note
+ In the ARN for each action, a colon (:) follows the resource. You can also follow the resource with a forward slash (/). For more information, see CodeDeploy example ARNs. 
+Use the scroll bars to see the rest of the table.
+CodeDeploy API operations and required permissions for actions 
+
+
+
+CodeDeploy API operations
+Required permissions (API actions)
+Resources
+
+
+
+
+AddTagsToOnPremisesInstances
+codedeploy:AddTagsToOnPremisesInstances Required to add tags to one or more on-premises instances.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+BatchGetApplicationRevisions
+codedeploy:BatchGetApplicationRevisions Required to get information about multiple application revisions associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+BatchGetApplications
+codedeploy:BatchGetApplications Required to get information about multiple applications associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:*
+
+
+BatchGetDeploymentGroups
+codedeploy:BatchGetDeploymentGroups Required to get information about multiple deployment groups associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+BatchGetDeploymentInstances
+codedeploy:BatchGetDeploymentInstancesRequired to get information about one or more instance in a deployment group.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+BatchGetDeployments
+codedeploy:BatchGetDeployments Required to get information about multiple deployments associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+BatchGetOnPremisesInstances
+codedeploy:BatchGetOnPremisesInstances Required to get information about one or more on-premises instances.
+arn:aws:codedeploy:region:account-id:*
+
+
+ContinueDeployment
+codedeploy:ContinueDeployment Required during a blue/green deployment to start the process of registering instances in a replacement environment with an Elastic Load Balancing load balancer.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+CreateApplication
+codedeploy:CreateApplication Required to create an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+CreateDeployment ¹
+codedeploy:CreateDeployment Required to create a deployment for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+CreateDeploymentConfig
+codedeploy:CreateDeploymentConfig Required to create a custom deployment configuration associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentconfig:deployment-configuration-name
+
+
+CreateDeploymentGroup
+codedeploy:CreateDeploymentGroup Required to create a deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+DeleteApplication
+codedeploy:DeleteApplication Required to delete an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+DeleteDeploymentConfig
+codedeploy:DeleteDeploymentConfig Required to delete a custom deployment configuration associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentconfig:deployment-configuration-name
+
+
+DeleteDeploymentGroup
+codedeploy:DeleteDeploymentGroup Required to delete a deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+DeregisterOnPremisesInstance
+codedeploy:DeregisterOnPremisesInstance Required to deregister an on-premises instance.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+GetApplication
+codedeploy:GetApplication Required to get information about a single application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+GetApplicationRevision
+codedeploy:GetApplicationRevision Required to get information about a single application revision for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+GetDeployment
+codedeploy:GetDeployment Required to get information about a single deployment to a deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+GetDeploymentConfig
+codedeploy:GetDeploymentConfig Required to get information about a single deployment configuration associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentconfig:deployment-configuration-name
+
+
+GetDeploymentGroup
+codedeploy:GetDeploymentGroup Required to get information about a single deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+GetDeploymentInstance
+codedeploy:GetDeploymentInstance Required to get information about a single instance in a deployment associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+GetDeploymentTarget
+codedeploy:GetDeploymentTarget Required to get information about a target in a deployment associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+GetOnPremisesInstance
+codedeploy:GetOnPremisesInstance Required to get information about a single on-premises instance.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+ListApplicationRevisions
+codedeploy:ListApplicationRevisions Required to get information about all application revisions for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:*
+
+
+ListApplications
+codedeploy:ListApplications Required to get information about all applications associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:*
+
+
+ListDeploymentConfigs
+codedeploy:ListDeploymentConfigs Required to get information about all deployment configurations associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentconfig:*
+
+
+ListDeploymentGroups
+codedeploy:ListDeploymentGroups Required to get information about all deployment groups for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/*
+
+
+ListDeploymentInstances
+codedeploy:ListDeploymentInstances Required to get information about all instances in a deployment associated with the IAM user or AWS account.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+ListDeployments
+codedeploy:ListDeployments Required to get information about all deployments to a deployment group associated with the IAM user, or to get all deployments associated with the IAM user or AWS account.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+ListDeploymentTargets
+codedeploy:ListDeploymentTargets Required to get information about all targets in a deployment associated with the IAM user or AWS account.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+ListGitHubAccountTokenNames
+codedeploy:ListGitHubAccountTokenNames Required to get a list of the names of stored connections to GitHub accounts.
+arn:aws:codedeploy:region:account-id:*
+
+
+ListOnPremisesInstances
+codedeploy:ListOnPremisesInstances Required to get a list of one or more on-premises instance names.
+arn:aws:codedeploy:region:account-id:*
+
+
+PutLifecycleEventHookExecutionStatus
+codedeploy:PutLifecycleEventHookExecutionStatus Required to provide notification of the status of the execution of a lifecycle hook event.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+RegisterApplicationRevision
+codedeploy:RegisterApplicationRevision Required to register information about an application revision for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+RegisterOnPremisesInstance
+codedeploy:RegisterOnPremisesInstance Required to register an on-premises instance with CodeDeploy.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+RemoveTagsFromOnPremisesInstances
+codedeploy:RemoveTagsFromOnPremisesInstances Required to remove tags from one or more on-premises instances.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+SkipWaitTimeForInstanceTermination
+codedeploy:SkipWaitTimeForInstanceTermination Required in a blue/green deployment to override a specified wait time and start terminating instances in the original environment immediately.
+arn:aws:codedeploy:region:account-id:instance:instance-ID
+
+
+StopDeployment
+codedeploy:StopDeployment Required to stop an in-progress deployment to a deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+UpdateApplication ³
+codedeploy:UpdateApplication Required to change information about an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:application:application-name
+
+
+UpdateDeploymentGroup ³
+codedeploy:UpdateDeploymentGroup Required to change information about a single deployment group for an application associated with the IAM user.
+arn:aws:codedeploy:region:account-id:deploymentgroup:application-name/deployment-group-name
+
+
+¹ When you specify CreateDeployment permissions, you must also specify GetDeploymentConfig permissions for the deployment configuration and GetApplicationRevision or RegisterApplicationRevision permissions for the application revision.  ² Valid for ListDeployments when providing a specific deployment group, but not when listing all of the deployments associated with the IAM user. ³ For UpdateApplication, you must have UpdateApplication permissions for both the old and new application names. For UpdateDeploymentGroup actions that involve changing a deployment group's name, you must have UpdateDeploymentGroup permissions for both the old and new deployment group names.
+
+
+
+

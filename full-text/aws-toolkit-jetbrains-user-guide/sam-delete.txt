@@ -1,0 +1,16 @@
+Deleting an AWS serverless application by using the AWS Toolkit for JetBrains
+Before deleting an AWS serverless application, you must first deploy it.
+
+
+Open AWS Explorer, if it isn't already open. If you need to switch to a different AWS Region that contains the serverless application, do that now.
+
+
+Expand CloudFormation.
+
+
+Right-click the name of the AWS CloudFormation stack that contains the serverless application you want to delete, and then choose Delete CloudFormation Stack.
+
+
+
+Enter the stack's name to confirm the deletion, and then choose OK. If the stack deletion succeeds, the AWS Toolkit for JetBrains removes the stack name from the CloudFormation list in AWS Explorer. If the stack deletion fails, you can try to figure out why by viewing event logs for the stack.
+

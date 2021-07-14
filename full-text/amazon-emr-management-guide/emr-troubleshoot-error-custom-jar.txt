@@ -1,0 +1,9 @@
+Custom JAR Cluster Errors
+The following errors are common to custom JAR clusters.
+Topics
+ Is your JAR throwing an exception before creating a job?
+ Is your JAR throwing an error inside a map task?
+Is your JAR throwing an exception before creating a job?
+If the main program of your custom JAR throws an exception while creating the Hadoop job, the best place to look is the syslog file of the step logs. For more information, see View Log Files. 
+Is your JAR throwing an error inside a map task?
+If your custom JAR and mapper throw an exception while processing input data, the best place to look is the syslog file of the task attempt logs. For more information, see View Log Files. 

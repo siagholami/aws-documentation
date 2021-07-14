@@ -1,0 +1,23 @@
+AWS::MSK::Cluster Firehose
+Details of the Kinesis Data Firehose delivery stream that is the destination for broker logs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeliveryStream](#cfn-msk-cluster-firehose-deliverystream)" : String,
+  "[Enabled](#cfn-msk-cluster-firehose-enabled)" : Boolean
+}
+YAML
+[DeliveryStream](#cfn-msk-cluster-firehose-deliverystream): String
+  [Enabled](#cfn-msk-cluster-firehose-enabled): Boolean
+Properties
+DeliveryStream 
+The Kinesis Data Firehose delivery stream that is the destination for broker logs.
+Required: No
+Type: String
+Update requires: No interruption
+Enabled 
+Specifies whether broker logs get sent to the specified Kinesis Data Firehose delivery stream.
+Required: Yes
+Type: Boolean
+Update requires: No interruption

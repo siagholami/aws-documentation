@@ -1,0 +1,19 @@
+AWS::EFS::FileSystem BackupPolicy
+The backup policy turns automatic backups for the file system on or off.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Status](#cfn-efs-filesystem-backuppolicy-status)" : String
+}
+YAML
+[Status](#cfn-efs-filesystem-backuppolicy-status): String
+Properties
+Status 
+Set the backup policy status for the file system.
+   ENABLED - Turns automatic backups on for the file system. 
+   DISABLED - Turns automatic backups off for the file system. 
+Required: Yes
+Type: String
+Allowed values: DISABLED | DISABLING | ENABLED | ENABLING
+Update requires: No interruption

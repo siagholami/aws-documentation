@@ -1,0 +1,54 @@
+AWS::GroundStation::Config
+Creates a Config with the specified parameters. 
+Config objects provide Ground Station with the details necessary in order to schedule and execute satellite contacts. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::GroundStation::Config",
+  "Properties" : {
+      "[ConfigData](#cfn-groundstation-config-configdata)" : ConfigData,
+      "[Name](#cfn-groundstation-config-name)" : String,
+      "[Tags](#cfn-groundstation-config-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::GroundStation::Config
+Properties: 
+  [ConfigData](#cfn-groundstation-config-configdata): 
+    ConfigData
+  [Name](#cfn-groundstation-config-name): String
+  [Tags](#cfn-groundstation-config-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+ConfigData 
+ Object containing the parameters of a config. Only one subtype may be specified per config. See the subtype definitions for a description of each config subtype. 
+Required: Yes
+Type: ConfigData
+Update requires: No interruption
+Name 
+ The name of the config object. 
+Required: Yes
+Type: String
+Update requires: No interruption
+Tags 
+ Tags assigned to a resource. 
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ARN of the config. For example: 
+{ "Ref": "Config" } 
+For the Ground Station config, Ref returns the ARN of the config. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The ARN of the config, such as arn:aws:groundstation:us-east-2:1234567890:config/tracking/9940bf3b-d2ba-427e-9906-842b5e5d2296. 
+Id 
+The ID of the config, such as 9940bf3b-d2ba-427e-9906-842b5e5d2296. 
+Type 
+The type of the config, such as tracking. 

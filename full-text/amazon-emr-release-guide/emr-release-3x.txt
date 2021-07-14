@@ -1,0 +1,16 @@
+Amazon EMR 2.x and 3.x AMI Versions
+Note
+This topic replaces the Amazon EMR Developer Guide, which has been retired.
+Amazon EMR 2.x and 3.x releases, called AMI versions, are made available for pre-existing solutions that require them for compatibility reasons. We do not recommend creating new clusters or new solutions with these release versions. They lack features of newer releases and include outdated application packages.
+We recommend that you build solutions using the most recent Amazon EMR release version.
+The scope of differences between the 2.x and 3.x series release versions and recent Amazon EMR release versions is significant. Those differences range from how you create and configure a cluster to the ports and directory structure of applications on the cluster.
+This section attempts to cover the most significant differences for Amazon EMR, as well as specific application configuration and management differences. It is not comprehensive. If you create and use clusters in the 2.x or 3.x series, you may encounter differences not covered in this section.
+Topics
+ Creating a Cluster With Earlier AMI Versions of Amazon EMR
+ Installing Applications with Earlier AMI Versions of Amazon EMR
+ Customizing Cluster and Application Configuration With Earlier AMI Versions of Amazon EMR
+ Hive Application Specifics for Earlier AMI Versions of Amazon EMR
+ HBase Application Specifics for Earlier AMI Versions of Amazon EMR
+ Pig Application Specifics for Earlier AMI Versions of Amazon EMR
+ Spark Application Specifics With Earlier AMI Versions of Amazon EMR
+ S3DistCp Utility Differences With Earlier AMI Versions of Amazon EMR

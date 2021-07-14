@@ -1,0 +1,9 @@
+Troubleshooting your Client VPN connection
+Use the following topics to troubleshoot problems that you might have when using a client application to connect to a Client VPN endpoint. 
+ Windows troubleshooting
+ MacOS troubleshooting
+ Ubuntu troubleshooting
+ Common problems
+Client VPN endpoint troubleshooting for administrators
+Some of the steps in this guide can be performed by you. Other steps must be performed by your Client VPN administrator on the Client VPN endpoint itself. The following sections let you know when you need to contact your administrator. 
+For additional information about troubleshooting Client VPN endpoint issues, see Troubleshooting Client VPN in the AWS Client VPN Administrator Guide.

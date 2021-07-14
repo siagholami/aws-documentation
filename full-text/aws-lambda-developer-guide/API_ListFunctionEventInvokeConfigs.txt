@@ -1,0 +1,81 @@
+ListFunctionEventInvokeConfigs
+Retrieves a list of configurations for asynchronous invocation for a function.
+To configure options for asynchronous invocation, use PutFunctionEventInvokeConfig.
+Request Syntax
+GET /2019-09-25/functions/FunctionName/event-invoke-config/list?Marker=Marker&MaxItems=MaxItems HTTP/1.1
+URI Request Parameters
+The request uses the following URI parameters.
+ FunctionName  
+The name of the Lambda function.  
+Name formats
+  Function name - my-function.
+  Function ARN - arn:aws:lambda:us-west-2:123456789012:function:my-function.
+  Partial ARN - 123456789012:function:my-function.
+The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.
+Length Constraints: Minimum length of 1. Maximum length of 140.
+Pattern: (arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_])(:(\$LATEST|[a-zA-Z0-9-_]))? 
+Required: Yes
+ Marker  
+Specify the pagination token that's returned by a previous request to retrieve the next page of results.
+ MaxItems  
+The maximum number of configurations to return.
+Valid Range: Minimum value of 1. Maximum value of 50.
+Request Body
+The request does not have a request body.
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "FunctionEventInvokeConfigs": [ 
+      { 
+         "DestinationConfig": { 
+            "OnFailure": { 
+               "Destination": "string"
+            },
+            "OnSuccess": { 
+               "Destination": "string"
+            }
+         },
+         "FunctionArn": "string",
+         "LastModified": number,
+         "MaximumEventAgeInSeconds": number,
+         "MaximumRetryAttempts": number
+      }
+   ],
+   "NextMarker": "string"
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ FunctionEventInvokeConfigs  
+A list of configurations.
+Type: Array of FunctionEventInvokeConfig objects
+ NextMarker  
+The pagination token that's included if more results are available.
+Type: String
+Errors
+InvalidParameterValueException 
+One of the parameters in the request is invalid.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The resource specified in the request does not exist.
+HTTP Status Code: 404
+ServiceException 
+The AWS Lambda service encountered an internal error.
+HTTP Status Code: 500
+TooManyRequestsException 
+The request throughput limit was exceeded.
+HTTP Status Code: 429
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

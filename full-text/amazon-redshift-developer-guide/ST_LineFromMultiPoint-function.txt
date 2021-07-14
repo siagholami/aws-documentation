@@ -1,0 +1,19 @@
+ST_LineFromMultiPoint
+ST_LineFromMultiPoint returns a linestring from an input multipoint geometry. The order of the points is preserved. The spatial reference system identifier (SRID) of the returned geometry is the same as that of the input geometry. 
+Syntax
+ST_LineFromMultiPoint(geom)
+Arguments
+geom 
+A value of data type GEOMETRY or an expression that evaluates to a GEOMETRY type. The subtype must be MULTIPOINT. 
+Return type
+GEOMETRY
+If geom is null, then null is returned. 
+If geom isn't a MULTIPOINT, then error is returned. 
+Examples
+The following SQL creates a linestring from a multipoint. 
+SELECT ST_AsEWKT(ST_LineFromMultiPoint(ST_GeomFromText('MULTIPOINT(0 0,10 0,10 10,5 5,0 5)',4326)));
+```
+ st_asewkt
+
+SRID=4326;LINESTRING(0 0,10 0,10 10,5 5,0 5)
+```

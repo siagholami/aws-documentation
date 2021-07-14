@@ -1,0 +1,23 @@
+Changing project details
+As a portal administrator, you can change your project name or project owner. If you add a project owner, the new owner receives an email that invites them to the project. If you remove an owner, no email is sent, so you should notify them of the ownership change.
+Note
+You must be a portal administrator to change project details.
+
+
+In the navigation bar, choose the Projects icon.
+
+
+
+On the Projects page, choose the project to update.
+
+
+
+In the Project details section of the project details page, choose Edit.
+
+
+
+In the Project details dialog box, update the Project name and Project description.
+
+
+Choose Update project to save your changes.
+

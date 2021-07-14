@@ -1,0 +1,24 @@
+Installing the Active Directory Administration Tools
+To manage your directory from an EC2 Windows instance, you need to install the Active Directory Domain Services and Active Directory Lightweight Directory Services Tools on the instance. Use the following procedure to install these tools on either Windows Server 2012, Windows Server 2016, or Windows Server 2019.
+You can optionally choose to install the Active Directory administration tools using Windows PowerShell. For example, you can install the Active Directory remote administration tools from a PowerShell prompt using Install-WindowsFeature RSAT-ADDS. For more information, see Install-WindowsFeature on the Microsoft Website.
+Install the Active Directory Administration Tools on Windows Server 2012 through Windows Server 2019
+To install the Active Directory administration tools on Windows Server 2012 through Windows Server 2019
+
+
+Open Server Manager from the Start screen by choosing Server Manager.
+
+
+In the Server Manager Dashboard, choose Add roles and features, 
+
+
+In the Add Roles and Features Wizard choose Installation Type, select Role-based or feature-based installation, and choose Next.
+
+
+Under Server Selection, make sure the local server is selected, and choose Features in the left navigation pane.
+
+
+In the Features tree, open Remote Server Administration Tools, Role Administration Tools, select AD DS and AD LDS Tools, scroll down and select DNS Server Tools, and then choose Next.
+
+
+Review the information and choose Install. When the feature installation is finished, the Active Directory Domain Services and Active Directory Lightweight Directory Services Tools are available on the Start screen in the Administrative Tools folder.
+

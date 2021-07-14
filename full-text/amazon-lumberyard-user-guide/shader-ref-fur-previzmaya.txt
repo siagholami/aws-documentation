@@ -1,0 +1,82 @@
+Maya – Fur Previsualization
+
+To visualize fur on a mesh
+
+Verify that the Cgfx Shader is enabled.
+
+In Maya, navigate to Windows, Settings/Preferences, Plug-in Manager.
+Find cgfxShader.mll in the list, and then verify that both Loaded and Auto load are selected.
+If you made any changes, restart Maya.
+
+
+
+Open the Hypershade editor by navigating to Rendering Editors, Hypershade.
+
+
+
+Create a new material. To do this, in the Hypershade window, navigate to Create, Materials, Cgfx Shader.
+
+
+
+In the Property Editor, click the folder icon next to the CgFX File text box.
+Note
+If the Property Editor is not visible, navigate to Windows, Property Editor.
+
+
+
+Navigate to your Lumberyard install folder, and then select dev\Tools\Maya\fx\Fur.cgfx.
+
+
+In the Fur.cgfx Parameters section, specify the following, at a minimum:
+    Enable Fur Combing (disabled/unselected if you haven’t prepared your mesh with vertex colors for fur combing)
+    Use Base Fur Diffuse Map (selected/enabled)
+    ColorSampler
+    FurHeightmapSampler
+
+
+
+Select the mesh or sub-mesh on which you want to visualize fur, and then right-click hold on the CgFX shader material in Hypershade. Select Assign Material to Selection.
+
+
+In the main viewport, press 6 to ensure that Shaded Display (with texture maps) is enabled.
+
+
+Adjust fur settings on the material as preferred.
+
+
+To apply vertex colors on a mesh
+
+
+Enable fur combing on the material. To do this, on the Fur.cgfx Parameters, select Enable Fur Combing.
+
+
+
+Open the Paint Vertex Color Tool. To do this, click the square box next to Color, Paint Vertex Color Tool.
+
+
+Since Maya does not permit painting alpha only on a RGBA color set, begin by painting RGBA to specify fur length scaling:
+
+
+In the Color section of the tool, select RGBA for the Channels.
+
+
+Click the color swatch next to Color value. Specify 0.5, 0.5, 0.5 as the color using the mode RGB, 0.0 to 1.0.
+
+
+Set the alpha value to your desired fur scaling setting.
+
+
+Set other tool settings as needed, and apply fur scaling to your mesh.
+
+
+Now paint RGB only to apply combing:
+
+
+In the Color section of the tool, select RGB as the Channels.
+
+
+Click the color swatch next to Color value. Select the preferred direction. 
+
+
+Set other tool settings as needed, and apply fur scaling to your mesh.
+

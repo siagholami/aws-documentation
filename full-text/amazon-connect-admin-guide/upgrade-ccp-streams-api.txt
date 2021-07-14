@@ -1,0 +1,36 @@
+I use the Amazon Connect Streams API
+Note
+The Amazon Connect Streams API remains the same between the earlier and latest versions of the CCP. We recommend validating custom implementations built using the Amazon Connect Streams API when upgrading versions to ensure consistency in behavior.
+Use the following steps to upgrade to the latest CCP. 
+
+
+We recommend using the latest Amazon Connect Streams API. 
+
+
+Update the URL associated with initCCP() from /ccp# to /ccp-v2. For information about initCCP(), see connect.core.initCCP() in the Amazon Connect Streams API documentation on GitHub.
+
+
+Add your domain URL to the Approved origin list: 
+
+
+Log in to the AWS Management Console (https://console.aws.amazon.com/console) using your AWS account. 
+
+
+Navigate to the Amazon Connect console.
+
+
+Check that you're in the correct Region for your Amazon Connect instance. Choose your instance.
+
+
+
+Choose Application integration, and then choose Add origin.
+
+
+
+Enter your domain URL. All domains that embed the CCP for a particular instance to be explicitly added. For more information, see this article on GitHub. 
+If you use Salesforce, you need to add the Salesforce domains to your allow list to prevent any issues with the CTI Adapter CCP functionality. For detailed instructions, see the Amazon Connect CTI Adapter v5 for Salesforce installation guide or the Amazon Connect CTI Adapter v4 for Salesforce Classic Setup Guide. 
+
+
+Verify your network settings
+We highly recommend setting up your network to use Option 1 (recommended): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list. 
+Using this option helps Amazon Connect Support to quickly troubleshoot any issues you have. Specifically, using *.execute-api.{region}.amazonaws.com passes more metrics to our Support team to help with troubleshooting. 

@@ -1,0 +1,67 @@
+Test long-lived Lambda functions
+A long-lived Lambda function starts automatically when the AWS IoT Greengrass core starts and runs in a single container (or sandbox). Any variables and preprocessing logic defined outside of the function handler are retained for every invocation of the function handler. Multiple invocations of the function handler are queued until earlier invocations have been executed.
+The greengrassHelloWorldCounter.py code used in this module defines a my_counter variable outside of the function handler.
+Note
+You can view the code in the AWS Lambda console or in the AWS IoT Greengrass Core SDK for Python on GitHub.
+In this step, you create subscriptions that allow the Lambda function and AWS IoT to exchange MQTT messages. Then you deploy the group and test the function.
+
+
+On the group configuration page, choose Subscriptions, and then choose Add Subscription.
+
+
+Under Select a source, choose Lambdas, and then choose Greengrass_HelloWorld_Counter.
+
+
+Under Select a target, choose Services, choose IoT Cloud, and then choose Next.
+
+
+
+For Topic filter, enter hello/world/counter. Choose Next, and then choose Finish.
+
+
+
+This single subscription goes in one direction only: from the Greengrass_HelloWorld_Counter Lambda function to AWS IoT. To invoke (or trigger) this Lambda function from the cloud, you must create a subscription in the opposite direction.
+
+Follow steps 1 - 4 to add another subscription that uses the following values. This subscription allows the Lambda function to receive messages from AWS IoT. You use this subscription when you send a message from the AWS IoT console that invokes the function.
+    For the source, choose Services, and then choose IoT Cloud.
+    For the target, choose Lambdas, and then choose Greengrass_HelloWorld_Counter.
+    For the topic filter, enter hello/world/counter/trigger.
+
+
+The /trigger extension is used in this topic filter because you created two subscriptions and don't want them to interfere with each other.
+
+
+Make sure that the Greengrass daemon is running, as described in Deploy cloud configurations to a core device.
+
+
+On the group configuration page, from Actions, choose Deploy.
+
+
+
+This deploys the group configuration to your AWS IoT Greengrass core device. For troubleshooting help, see Troubleshooting AWS IoT Greengrass.
+
+
+After your deployment is complete, return to the AWS IoT console home page and choose Test.
+
+
+Configure the following fields:
+    For Subscription topic, enter hello/world/counter.
+    For Quality of Service, choose 0.
+    For MQTT payload display, choose Display payloads as strings.
+
+
+
+
+Choose Subscribe to topic.
+
+Unlike Part 1 of this module, you shouldn't see any messages after you subscribe to hello/world/counter. This is because the greengrassHelloWorldCounter.py code that publishes to the hello/world/counter topic is inside the function handler, which runs only when the function is invoked.
+In this module, you configured the Greengrass_HelloWorld_Counter Lambda function to be invoked when it receives an MQTT message on the hello/world/counter/trigger topic. You can see this by examining the related subscriptions:
+
+The Greengrass_HelloWorld_Counter to IoT Cloud subscription allows the function to send messages to AWS IoT on the hello/world/counter topic. The IoT Cloud to Greengrass_HelloWorld_Counter subscription allows AWS IoT to send messages to the function on the hello/world/counter/trigger topic.
+
+To test the long-lived lifecycle, invoke the Lambda function by publishing a message to the hello/world/counter/trigger topic. You can use the default message.
+
+Note
+ The Greengrass_HelloWorld_Counter function ignores the content of received messages. It just runs the code in function_handler, which sends a message to the hello/world/counter topic. You can review this code from the AWS IoT Greengrass Core SDK for Python on GitHub.
+
+Every time a message is published to the hello/world/counter/trigger topic, the my_counter variable is incremented. This invocation count is shown in the messages sent from the Lambda function. Because the function handler includes a 20-second sleep cycle (time.sleep(20)), repeatedly triggering the handler queues up responses from the AWS IoT Greengrass core.

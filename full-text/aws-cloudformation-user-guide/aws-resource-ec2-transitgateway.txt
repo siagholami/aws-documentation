@@ -1,0 +1,132 @@
+AWS::EC2::TransitGateway
+Specifies a transit gateway.
+You can use a transit gateway to interconnect your virtual private clouds (VPC) and on-premises networks. After the transit gateway enters the available state, you can attach your VPCs and VPN connections to the transit gateway.
+To attach your VPCs, use AWS::EC2::TransitGatewayAttachment.
+To attach a VPN connection, use AWS::EC2::CustomerGateway to create a customer gateway and specify the ID of the customer gateway and the ID of the transit gateway in a call to AWS::EC2::VPNConnection.
+When you create a transit gateway, we create a default transit gateway route table and use it as the default association route table and the default propagation route table. You can use AWS::EC2::TransitGatewayRouteTable to create additional transit gateway route tables. If you disable automatic route propagation, we do not create a default transit gateway route table. You can use AWS::EC2::TransitGatewayRouteTablePropagation to propagate routes from a resource attachment to a transit gateway route table. If you disable automatic associations, you can use AWS::EC2::TransitGatewayRouteTableAssociation to associate a resource attachment with a transit gateway route table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::TransitGateway",
+  "Properties" : {
+      "[AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn)" : Integer,
+      "[AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments)" : String,
+      "[DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation)" : String,
+      "[DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation)" : String,
+      "[Description](#cfn-ec2-transitgateway-description)" : String,
+      "[DnsSupport](#cfn-ec2-transitgateway-dnssupport)" : String,
+      "[MulticastSupport](#cfn-ec2-transitgateway-multicastsupport)" : String,
+      "[Tags](#cfn-ec2-transitgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport)" : String
+    }
+}
+YAML
+Type: AWS::EC2::TransitGateway
+Properties: 
+  [AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn): Integer
+  [AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments): String
+  [DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation): String
+  [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation): String
+  [Description](#cfn-ec2-transitgateway-description): String
+  [DnsSupport](#cfn-ec2-transitgateway-dnssupport): String
+  [MulticastSupport](#cfn-ec2-transitgateway-multicastsupport): String
+  [Tags](#cfn-ec2-transitgateway-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport): String
+Properties
+AmazonSideAsn 
+A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for 16-bit ASNs. The default is 64512.
+Required: No
+Type: Integer
+Update requires: Replacement
+AutoAcceptSharedAttachments 
+Enable or disable automatic acceptance of attachment requests. Disabled by default.
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+DefaultRouteTableAssociation 
+Enable or disable automatic association with the default association route table. Enabled by default.
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+DefaultRouteTablePropagation 
+Enable or disable automatic propagation of routes to the default propagation route table. Enabled by default.
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+Description 
+The description of the transit gateway.
+Required: No
+Type: String
+Update requires: Replacement
+DnsSupport 
+Enable or disable DNS support. Enabled by default.
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+MulticastSupport 
+Indicates whether multicast is enabled on the transit gateway
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+Tags 
+The tags for the transit gateway.
+Required: No
+Type: List of Tag
+Update requires: Replacement
+VpnEcmpSupport 
+Enable or disable Equal Cost Multipath Protocol support. Enabled by default.
+Required: No
+Type: String
+Allowed values: disable | enable
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the transit gateway.
+For more information about using the Ref function, see Ref.
+Examples
+Transit Gateway
+The following example declares a transit gateway.
+JSON
+"myTransitGateway": {
+   "Type": "AWS::EC2::TransitGateway",
+   "Properties": {
+      "AmazonSideAsn": 65000,
+      "Description": "TGW Route Integration Test",
+      "AutoAcceptSharedAttachments": "disable",
+      "DefaultRouteTableAssociation": "enable",
+      "DnsSupport": "enable",
+      "VpnEcmpSupport": "enable",
+      "Tags": [
+         {
+            "Key": "Application",
+            "Value": {
+               "Ref": "AWS::StackId"
+            }
+         }
+      ]
+   }
+}
+YAML
+myTransitGateway:
+    Type: "AWS::EC2::TransitGateway"
+    Properties:
+      AmazonSideAsn: 65000
+      Description: "TGW Route Integration Test"
+      AutoAcceptSharedAttachments: "disable"
+      DefaultRouteTableAssociation: "enable"
+      DnsSupport: "enable"
+      VpnEcmpSupport: "enable"
+      Tags:
+      - Key: Application
+        Value: !Ref 'AWS::StackId'
+See also
+
+CreateTransitGateway in the Amazon EC2 API Reference
+AWS::RAM::ResourceShare

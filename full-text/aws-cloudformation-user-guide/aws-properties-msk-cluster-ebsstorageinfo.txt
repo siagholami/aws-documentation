@@ -1,0 +1,16 @@
+AWS::MSK::Cluster EBSStorageInfo
+Contains information about the EBS storage volumes attached to brokers.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VolumeSize](#cfn-msk-cluster-ebsstorageinfo-volumesize)" : Integer
+}
+YAML
+[VolumeSize](#cfn-msk-cluster-ebsstorageinfo-volumesize): Integer
+Properties
+VolumeSize 
+The size in GiB of the EBS volume for the data drive on each broker node.
+Required: No
+Type: Integer
+Update requires: Replacement

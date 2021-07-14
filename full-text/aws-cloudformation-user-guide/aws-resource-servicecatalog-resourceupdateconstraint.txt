@@ -1,0 +1,87 @@
+AWS::ServiceCatalog::ResourceUpdateConstraint
+Specifies a RESOURCE_UPDATE constraint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ServiceCatalog::ResourceUpdateConstraint",
+  "Properties" : {
+      "[AcceptLanguage](#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage)" : String,
+      "[Description](#cfn-servicecatalog-resourceupdateconstraint-description)" : String,
+      "[PortfolioId](#cfn-servicecatalog-resourceupdateconstraint-portfolioid)" : String,
+      "[ProductId](#cfn-servicecatalog-resourceupdateconstraint-productid)" : String,
+      "[TagUpdateOnProvisionedProduct](#cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct)" : String
+    }
+}
+YAML
+Type: AWS::ServiceCatalog::ResourceUpdateConstraint
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-resourceupdateconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-resourceupdateconstraint-description): String
+  [PortfolioId](#cfn-servicecatalog-resourceupdateconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-resourceupdateconstraint-productid): String
+  [TagUpdateOnProvisionedProduct](#cfn-servicecatalog-resourceupdateconstraint-tagupdateonprovisionedproduct): String
+Properties
+AcceptLanguage 
+The language code.
+  en - English (default)
+  jp - Japanese
+  zh - Chinese
+Required: No
+Type: String
+Maximum: 100
+Update requires: No interruption
+Description 
+The description of the constraint.
+Required: No
+Type: String
+Maximum: 2000
+Update requires: No interruption
+PortfolioId 
+The portfolio identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+ProductId 
+The product identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+TagUpdateOnProvisionedProduct 
+If set to ALLOWED, lets users change tags in a CloudFormationProvisionedProduct resource.
+If set to NOT_ALLOWED, prevents users from changing tags in a CloudFormationProvisionedProduct resource.
+Required: Yes
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the identifier of the constraint.
+For more information about using the Ref function, see Ref.
+Examples
+Create a RESOURCE_UPDATE constraint
+JSON
+{
+    "Type" : "AWS::ServiceCatalog::ResourceUpdateConstraint",
+    "Properties" : {
+        "AcceptLanguage" : "en",
+        "Description" : "Sample description",
+        "PortfolioId" : "port-xxx",
+        "ProductId" : "prod-xxx",
+        "TagUpdateOnProvisionedProduct" : "ALLOWED"
+  }
+YAML
+Type: 'AWS::ServiceCatalog::ResourceUpdateConstraint'
+Properties:
+  Description: Sample description
+  TagUpdateOnProvisionedProduct: 'ALLOWED'
+  PortfolioId: port-xxx
+  ProductId: prod-xxx`
+See also
+
+CreateConstraint in the AWS Service Catalog API Reference

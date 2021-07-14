@@ -1,0 +1,38 @@
+Physically Based Shaders (PBS) Gem
+The Physically Based Shader (PBS) Reference Gem is a simple collection of 32 example materials that you can apply to a Mesh component. They demonstrate a wide range of surface material types that make use of the Illum Shader. These materials range from matte to shiny and metallic or reflective. For more information about rendering physically based materials, see Shader Rendering System.
+The PBS Reference Gem is enabled by default in new projects and is also enabled in the default Samples Project. You use the Material Editor to preview, modify, and apply a material to a mesh.
+The following procedure describes a very simple example work flow for applying a PBS Reference Gem material to an object. This procedure assumes your project is Samples Project (the default project for Lumberyard).
+To apply materials contained in PBS Reference Gem
+
+
+Open a level in Lumberyard.
+
+
+Create a new entity.
+
+
+Add a Mesh component to your entity.
+
+
+In the Entity Inspector, in the Mesh component, next to the Mesh Asset property, click '…' to specify an asset. 
+
+
+In the Pick Static Mesh dialog, browse to \SamplesProject\Objects\Primitives. Pick one of the .cgf files in that directory. Click OK.
+
+The object that you picked now appears in your Viewport.
+
+
+Make sure your object is still selected.
+
+Open the Material Editor by pressing M or by navigating to Tools, Material Editor.
+
+In the Material Editor's navigation pane, browse to \Gems\PBSreferenceMaterials\Assets\materials\pbs_reference.
+
+Select one of the .mtl files listed.
+
+
+In the Material Editor's toolbar, click the Assign Item to Selected Object icon.
+
+
+Close or move the Material Editor to see your Viewport.
+The assigned material is now applied to your object.

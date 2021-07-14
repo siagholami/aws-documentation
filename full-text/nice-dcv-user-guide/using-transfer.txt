@@ -1,0 +1,47 @@
+Transferring Files
+NICE DCV enables you to upload files to and download files from NICE DCV session storage. For more information about enabling and configuring session storage, see Enabling Session Storage in the NICE DCV Administrator Guide.
+You must be authorized to use this feature. If you are not authorized, the functionality is not available in the client.
+This functionality is available on the Windows, web browser, Linux and macOS clients. The steps for uploading, downloading, and renaming files are similar on all clients.
+Topics
+ Downloading a File
+ Uploading a File
+ Renaming a File
+Downloading a File
+If you are using the Windows client, the file is downloaded to your desktop. If you are using the Linux, macOS, or web browser client, the file is downloaded to your default Downloads folder.
+To download a file from the session storage to your computer
+
+
+In the client, choose Storage.
+
+
+
+In the File Storage window, either select the file to download, or choose the down arrow next to the file and then choose Download.
+
+
+Uploading a File
+Files that you upload to a session are saved to a path that is specified by the NICE DCV server administrator. 
+To upload a file from your computer to the session storage
+
+
+In the client, choose Storage.
+
+
+(Optional) To upload the file to a new folder, choose Create Folder, enter a folder name, and then open the folder. 
+
+
+In the File Storage window, choose Upload File, browse to and select the file to upload, and then choose Open.
+
+
+Renaming a File
+You can change the name of the file in session storage.
+To change the name of a file in session storage
+
+
+In the client, choose Storage.
+
+
+Choose the down arrow next to the file to rename and choose Rename.
+
+
+Enter the new file name and press Enter.
+

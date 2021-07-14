@@ -1,0 +1,11 @@
+Setting Up
+The topics in this section provide help with setting up your AWS account the Amazon GameLift service and getting the necessary tools needed to use GameLift to host your multiplayer games. 
+Tip
+Learn more about ways to explore Amazon GameLift features, including Realtime Servers, using sample games.
+Topics
+ Set Up an AWS Account
+ Set Up a Role for Amazon GameLift Access
+ Amazon GameLift SDKs
+ Tools and Resources
+ Billing Alerts
+ Using Amazon GameLift in AWS Regions

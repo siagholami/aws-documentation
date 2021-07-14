@@ -1,0 +1,9 @@
+Managing Your Shared Devices
+After you set up Alexa for Business, you can add, edit, or delete rooms, room profiles, shared devices, skills, and skill groups.
+Topics
+ Managing Rooms
+ Managing Room Profiles
+ Managing Devices
+ Managing Skills
+ Managing Skill Groups
+ Sending Announcements

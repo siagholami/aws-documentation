@@ -1,0 +1,10 @@
+Working with Simulation Applications
+An AWS RoboMaker simulation application includes information about its dependencies. It includes the Amazon Simple Storage Service (Amazon S3) location of a simulation application bundle for the X86_64 architecture. It also includes the name and version of the Robot Operating System (ROS) distribution and the rendering engine used. 
+Join the simulation with an AWS RoboMaker robot application in a simulation job to interact with your robot. Interact with tools like Gazebo and develop simulation and test data.
+Topics
+ Creating a Simulation Application
+ Creating a Simulation Application Version
+ Viewing a Simulation Application
+ Updating a Simulation Application
+ Deleting a Simulation Application
+ Deleting a Simulation Application Version

@@ -1,0 +1,14 @@
+AWS CloudFormation interface label
+Label is a property of the ParameterGroup and ParameterLabel properties that defines name for a parameter group or parameter.
+Syntax
+JSON
+{
+  "default" : String
+}
+YAML
+default: String
+Properties
+default 
+The default label that the AWS CloudFormation console uses to name a parameter group or parameter.
+Required: No
+Type: String

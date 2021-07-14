@@ -1,0 +1,39 @@
+AWS::CodeBuild::Project ProjectBuildBatchConfig
+Contains configuration information about a batch build project.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CombineArtifacts](#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)" : Boolean,
+  "[Restrictions](#cfn-codebuild-project-projectbuildbatchconfig-restrictions)" : BatchRestrictions,
+  "[ServiceRole](#cfn-codebuild-project-projectbuildbatchconfig-servicerole)" : String,
+  "[TimeoutInMins](#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins)" : Integer
+}
+YAML
+[CombineArtifacts](#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts): Boolean
+  [Restrictions](#cfn-codebuild-project-projectbuildbatchconfig-restrictions): 
+    BatchRestrictions
+  [ServiceRole](#cfn-codebuild-project-projectbuildbatchconfig-servicerole): String
+  [TimeoutInMins](#cfn-codebuild-project-projectbuildbatchconfig-timeoutinmins): Integer
+Properties
+CombineArtifacts 
+Specifies if the build artifacts for the batch build should be combined into a single artifact location.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Restrictions 
+A BatchRestrictions object that specifies the restrictions for the batch build.
+Required: No
+Type: BatchRestrictions
+Update requires: No interruption
+ServiceRole 
+Specifies the service role ARN for the batch build project.
+Required: No
+Type: String
+Minimum: 1
+Update requires: No interruption
+TimeoutInMins 
+Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
+Required: No
+Type: Integer
+Update requires: No interruption

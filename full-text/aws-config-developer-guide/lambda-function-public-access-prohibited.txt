@@ -1,0 +1,9 @@
+lambda-function-public-access-prohibited
+Checks whether the AWS Lambda function policy attached to the Lambda resource prohibits public access. If the Lambda function policy allows public access it is NON_COMPLIANT. 
+Identifier: LAMBDA_FUNCTION_PUBLIC_ACCESS_PROHIBITED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions except China (Ningxia)
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

@@ -1,0 +1,7 @@
+max
+The max function returns the maximum value of the specified measure, grouped by the chosen dimension or dimensions. For example, max(sales goal) returns the maximum sales goals grouped by the (optional) chosen dimension.
+Syntax
+max(measure)
+Arguments
+measure 
+The argument must be a measure. Null values are omitted from the results. Literal values don't work. The argument must be a field.

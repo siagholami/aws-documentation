@@ -1,0 +1,5 @@
+Setting Up Container Insights
+The Container Insights setup process is different for Amazon ECS and Amazon EKS and Kubernetes. 
+Topics
+ Setting Up Container Insights on Amazon ECS
+ Setting Up Container Insights on Amazon EKS and Kubernetes

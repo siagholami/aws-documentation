@@ -1,0 +1,8 @@
+Input Management Framework Gem
+
+The Input Management Framework Gem is in preview release and is subject to change. 
+The Input Management Framework gem provides a framework for managing cross-platform game input such as keyboard, controller, and touch in Lumberyard with the component entity system. 
+
+The gem works with the Starting Point Input gem, which supplies the processed raw input. The Input Management Framework gem then takes that input and converts it to user-defined gameplay events with the Input component. 
+For an example, see Working with the Input Component.
+For more information, see Input in Amazon Lumberyard.

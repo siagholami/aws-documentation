@@ -1,0 +1,27 @@
+LexiconDescription
+Describes the content of the lexicon.
+Contents
+Attributes 
+Provides lexicon metadata.
+Type: LexiconAttributes object
+Required: No
+Name 
+Name of the lexicon.
+Type: String
+Pattern: [0-9A-Za-z]{1,20} 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+
+
+AWS SDK for C 
+
+
+AWS SDK for Go 
+
+
+AWS SDK for Java 
+
+
+AWS SDK for Ruby V2 
+

@@ -1,0 +1,116 @@
+Creating a patch group
+To help you organize your patching efforts, we recommend that you add instances to patch groups by using tags. Patch groups require use of the tag key Patch Group. You can specify any tag value, but the tag key must be Patch Group. For more information about patch groups, see About patch groups.
+After you group your instances using tags, you add the patch group value to a patch baseline. By registering the patch group with a patch baseline, you ensure that the correct patches are installed during the patching operation. 
+Topics
+ Task 1: Add EC2 instances to a patch group using tags
+ Task 2: Add managed instances to a patch group using tags
+ Task 3: Add a patch group to a patch baseline
+Task 1: Add EC2 instances to a patch group using tags
+For EC2 instances, you can add tags by using the AWS Systems Manager console, the Amazon EC2 console, the AWS CLI command create-tags, or the API action CreateTags.
+Note
+When using the Amazon EC2 console and AWS CLI, it's possible to apply Key = Patch Group tags to instances that aren't yet configured for use with Systems Manager. Ensure that SSM Agent is installed and running on instances that you want to manage using Systems Manager. For more information, see Working with SSM Agent.
+To add EC2 instances to a patch group (AWS Systems Manager console)
+
+
+Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Managed Instances.
+
+
+In the Managed instances list, choose a the ID of a managed EC2 instance that you want to configure for patching.
+
+
+Select the Tags tab, then choose Edit.
+
+
+In the left column, type Patch Group.
+
+
+In the right column, enter a value that helps you understand which instances will be patched.
+
+
+Choose Save.
+
+
+Repeat this procedure to add other managed instances to the same patch group.
+
+
+To add EC2 instances to a patch group (Amazon EC2 console)
+
+
+Open the Amazon EC2 console, and then choose Instances in the navigation pane. 
+
+
+In the list of instances, choose an instance that you want to configure for patching.
+
+
+In the Actions menu, choose Instance Settings, Add/Edit Tags.
+
+
+If the instance already has one or more tags applied, choose Create Tag.
+
+
+For Key, type Patch Group.
+
+
+For Value, enter a value that helps you understand which instances will be patched.
+
+
+Choose Save.
+
+
+Repeat this procedure to add other instances to the same patch group.
+
+
+Task 2: Add managed instances to a patch group using tags
+For hybrid managed instances (mi-*), you can add tags by using the AWS Systems Manager console, the AWS CLI command add-tags-to-resource, or the API action AddTagsToResource. You cannot add tags for hybrid managed instances using the Amazon EC2 console.
+To add managed instances to a patch group (AWS Systems Manager console)
+
+
+Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Managed Instances.
+
+
+In the Managed instances list, choose a managed instance that you want to configure for patching.
+
+
+Choose View details.
+
+
+Select the Tags tab, then choose Edit.
+
+
+In the left column, type Patch Group.
+
+
+In the right column, enter a value that helps you understand which instances will be patched.
+
+
+Choose Save.
+
+
+Repeat this procedure to add other managed instances to the same patch group.
+
+
+Task 3: Add a patch group to a patch baseline
+To associate a specific patch baseline with your instances, you must add the patch group value to the patch baseline. By registering the patch group with a patch baseline, you can ensure that the correct patches are installed during a patching operation. For more information about patch groups, see About patch groups.
+To add a patch group to a patch baseline (console)
+
+
+Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Patch Manager.
+
+
+In the Patch Baselines list, choose the patch baseline you want to configure for your patch group.
+
+
+Choose Actions, then Modify patch groups.
+
+
+Enter the tag value you added to your managed instances in the previous section, then choose Add.
+

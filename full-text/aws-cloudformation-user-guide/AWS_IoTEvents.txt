@@ -1,0 +1,4 @@
+IoTEvents resource type reference
+Resource types
+ AWS::IoTEvents::DetectorModel
+ AWS::IoTEvents::Input

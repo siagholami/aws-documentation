@@ -1,0 +1,14 @@
+ALTER TABLE DROP PARTITION
+Drops one or more specified partitions for the named table.
+Synopsis
+ALTER TABLE table_name DROP [IF EXISTS] PARTITION (partition_spec) [, PARTITION (partition_spec)]
+Parameters
+[IF EXISTS]
+Suppresses the error message if the partition specified does not exist.
+PARTITION (partition_spec)
+Each partition_spec specifies a column name/value combination in the form partition_col_name = partition_col_value [,...].
+Examples
+ALTER TABLE orders 
+DROP PARTITION (dt = '2014-05-14', country = 'IN');
+ALTER TABLE orders 
+DROP PARTITION (dt = '2014-05-14', country = 'IN'), PARTITION (dt = '2014-05-15', country = 'IN');

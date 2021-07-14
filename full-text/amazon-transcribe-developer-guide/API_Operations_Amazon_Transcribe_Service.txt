@@ -1,0 +1,29 @@
+Amazon Transcribe Service
+The following actions are supported by Amazon Transcribe Service:
+  CreateLanguageModel 
+  CreateMedicalVocabulary 
+  CreateVocabulary 
+  CreateVocabularyFilter 
+  DeleteLanguageModel 
+  DeleteMedicalTranscriptionJob 
+  DeleteMedicalVocabulary 
+  DeleteTranscriptionJob 
+  DeleteVocabulary 
+  DeleteVocabularyFilter 
+  DescribeLanguageModel 
+  GetMedicalTranscriptionJob 
+  GetMedicalVocabulary 
+  GetTranscriptionJob 
+  GetVocabulary 
+  GetVocabularyFilter 
+  ListLanguageModels 
+  ListMedicalTranscriptionJobs 
+  ListMedicalVocabularies 
+  ListTranscriptionJobs 
+  ListVocabularies 
+  ListVocabularyFilters 
+  StartMedicalTranscriptionJob 
+  StartTranscriptionJob 
+  UpdateMedicalVocabulary 
+  UpdateVocabulary 
+  UpdateVocabularyFilter 

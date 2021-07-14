@@ -1,0 +1,29 @@
+Navigating the AWS Toolkit for Visual Studio Code
+This topic describes how to navigate in the AWS Toolkit for Visual Studio Code. Be sure to first install the toolkit before reading this topic.
+For general information about the Visual Studio Code user interface (UI), see the UI documentation for VS Code.
+Fundamental UI Components
+The following are the basic UI components of the AWS Toolkit for VS Code.
+The AWS Explorer
+
+The following image shows the basic UI components of the AWS Explorer. See Working with AWS Services in the AWS Explorer for details about what you can do with it.
+
+
+The AWS Explorer is more formally known as the AWS: Explorer Side Bar.
+The AWS CDK Explorer
+
+The following image shows the basic UI components of the AWS CDK Explorer. See Working with the AWS CDK Explorer for details about what you can do with it.  
+
+
+[See the AWS documentation website for more details]
+
+Command Locations
+You can find the commands for the Toolkit for VS Code in various locations.
+Visual Studio Code Command Palette
+The VS Code Command Palette contains all the commands you can use for working with AWS services. To see these commands, open the VS Code Command Palette from the View menu. Or use the following shortcuts:
+ Windows and Linux – Press CtrlShiftP.
+ macOS – Press ShiftCommandP.
+
+Then you can filter for "AWS".
+
+AWS Explorer Menu
+The AWS Explorer has a More Actions menu that contains the most common commands for working with AWS services.

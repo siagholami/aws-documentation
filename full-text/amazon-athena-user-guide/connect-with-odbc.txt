@@ -1,0 +1,219 @@
+Connecting to Amazon Athena with ODBC
+Download the Amazon Athena ODBC driver License Agreement, ODBC drivers, and ODBC documentation using the following links.
+Amazon Athena ODBC Driver License Agreement
+License Agreement 
+ODBC Driver Download Links
+Windows
+
+
+
+Driver Version
+Download Link
+
+
+
+
+ODBC 1.1.2 for Windows 32-bit
+Windows 32 bit ODBC Driver 1.1.2
+
+
+ODBC 1.1.2 for Windows 64-bit
+Windows 64 bit ODBC Driver 1.1.2
+
+
+
+Linux
+
+
+
+Driver Version
+Download Link
+
+
+
+
+ODBC 1.1.2 for Linux 32-bit
+Linux 32 bit ODBC Driver 1.1.2
+
+
+ODBC 1.1.2 for Linux 64-bit
+Linux 64 bit ODBC Driver 1.1.2
+
+
+
+OSX
+
+
+
+Driver Version
+Download Link
+
+
+
+
+ODBC 1.1.2 for OSX
+OSX ODBC Driver 1.1.2
+
+
+
+Documentation
+
+
+
+Driver Version
+Download Link
+
+
+
+
+Documentation for ODBC 1.1.2
+ODBC Driver Installation and Configuration Guide version 1.1.2
+
+
+Release Notes for ODBC 1.1.2
+ODBC Driver Release Notes version 1.1.2
+
+
+
+Migration from the Previous Version of the ODBC Driver
+The current ODBC driver version 1.1.2 is a drop-in replacement of the previous version of the ODBC driver version 1.0.5. It is also backward compatible with the ODBC driver version 1.0.3, if you use the following required steps to make sure that the driver runs. 
+Important
+To use the ODBC driver versions 1.0.3 and greater, follow these requirements: 
+Keep port 444, which Athena uses to stream query results, open to outbound traffic. When you use a PrivateLink endpoint to connect to Athena, ensure that the security group attached to the PrivateLink endpoint is open to inbound traffic on port 444. 
+Add the athena:GetQueryResultsStream policy action to the list of policies for Athena. This policy action is not exposed directly with the API operation, and is used only with the ODBC and JDBC drivers, as part of streaming results support. For an example policy, see AWSQuicksightAthenaAccess Managed Policy. 
+Previous Versions of the ODBC Driver
+
+
+
+Driver Version 1.0.5
+Download Link
+
+
+
+
+ODBC 1.0.5 for Windows 32-bit
+Windows 32 bit ODBC Driver 1.0.5
+
+
+ODBC 1.0.5 for Windows 64-bit
+Windows 64 bit ODBC Driver 1.0.5
+
+
+ODBC 1.0.5 for Linux 32-bit
+Linux 32 bit ODBC Driver 1.0.5
+
+
+ODBC 1.0.5 for Linux 64-bit
+Linux 64 bit ODBC Driver 1.0.5
+
+
+ODBC 1.0.5 for OSX
+OSX ODBC Driver 1.0.5
+
+
+Documentation for ODBC 1.0.5
+ODBC Driver Installation and Configuration Guide version 1.0.5
+
+
+
+
+
+
+Driver Version 1.0.4
+Download Link
+
+
+
+
+ODBC 1.0.4 for Windows 32-bit
+Windows 32 bit ODBC Driver 1.0.4
+
+
+ODBC 1.0.4 for Windows 64-bit
+Windows 64 bit ODBC Driver 1.0.4
+
+
+ODBC 1.0.4 for Linux 32-bit
+Linux 32 bit ODBC Driver 1.0.4
+
+
+ODBC 1.0.4 for Linux 64-bit
+Linux 64 bit ODBC Driver 1.0.4
+
+
+ODBC 1.0.4 for OSX
+OSX ODBC Driver 1.0.4
+
+
+Documentation for ODBC 1.0.4
+ODBC Driver Installation and Configuration Guide version 1.0.4
+
+
+
+
+
+
+Driver Version 1.0.3
+Download Link
+
+
+
+
+ODBC 1.0.3 for Windows 32-bit
+Windows 32-bit ODBC Driver 1.0.3
+
+
+ODBC 1.0.3 for Windows 64-bit
+Windows 64-bit ODBC Driver 1.0.3
+
+
+ODBC 1.0.3 for Linux 32-bit
+Linux 32-bit ODBC Driver 1.0.3
+
+
+ODBC 1.0.3 for Linux 64-bit
+Linux 64-bit ODBC Driver 1.0.3
+
+
+ODBC 1.0.3 for OSX
+OSX ODBC Driver 1.0
+
+
+Documentation for ODBC 1.0.3
+ODBC Driver Installation and Configuration Guide version 1.0.3
+
+
+
+
+
+
+Driver Version 1.0.2
+Download Link
+
+
+
+
+ODBC 1.0.2 for Windows 32-bit
+Windows 32-bit ODBC Driver 1.0.2
+
+
+ODBC 1.0.2 for Windows 64-bit
+Windows 64-bit ODBC Driver 1.0.2
+
+
+ODBC 1.0.2 for Linux 32-bit
+Linux 32-bit ODBC Driver 1.0.2
+
+
+ODBC 1.0.2 for Linux 64-bit
+Linux 64-bit ODBC Driver 1.0.2
+
+
+ODBC 1.0 for OSX
+OSX ODBC Driver 1.0
+
+
+Documentation for ODBC 1.0.2
+ODBC Driver Installation and Configuration Guide version 1.0.2
+
+

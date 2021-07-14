@@ -1,0 +1,49 @@
+Enable Sharpen
+Applies a sharpen filter. You can specify a negative value to blur the screen.
+To disable the effect, see Disable Sharpen.
+Contents
+ Inputs
+ Outputs
+
+Example 
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Amount
+Number
+Amount of sharpening. Default value: 1
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

@@ -1,0 +1,93 @@
+AWS::AppConfig::Application
+The AWS::AppConfig::Application resource creates an application, which is a logical unit of code that provides capabilities for your customers. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others.
+AppConfig requires that you create resources and deploy a configuration in the following order:
+
+
+Create an application
+
+
+Create an environment
+
+
+Create a configuration profile
+
+
+Create a deployment strategy
+
+
+Deploy the configuration
+
+
+For more information, see AWS AppConfig in the AWS Systems Manager User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppConfig::Application",
+  "Properties" : {
+      "[Description](#cfn-appconfig-application-description)" : String,
+      "[Name](#cfn-appconfig-application-name)" : String,
+      "[Tags](#cfn-appconfig-application-tags)" : [ Tags, ... ]
+    }
+}
+YAML
+Type: AWS::AppConfig::Application
+Properties: 
+  [Description](#cfn-appconfig-application-description): String
+  [Name](#cfn-appconfig-application-name): String
+  [Tags](#cfn-appconfig-application-tags): 
+    - Tags
+Properties
+Description 
+A description of the application.
+Required: No
+Type: String
+Minimum: 0
+Maximum: 1024
+Update requires: No interruption
+Name 
+A name for the application.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Update requires: No interruption
+Tags 
+Metadata to assign to the application. Tags help organize and categorize your AWS AppConfig resources. Each tag consists of a key and an optional value, both of which you define.
+Required: No
+Type: List of Tags
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the application ID.
+Examples
+AWS AppConfig Application Example
+The following example creates a simple AWS AppConfig application named MyTestApplication. An application in AWS AppConfig is a logical unit of code that provides capabilities for your customers. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others. 
+JSON
+BasicApplication": {
+    "Type": "AWS::AppConfig::Application",
+    "Properties": {
+      "Name": "MyTestApplication",
+      "Description": "A sample test application.",
+      "Tags": [
+        {
+          "Key": "Env",
+          "Value": "test"
+        }
+      ]
+    }
+  }
+}
+YAML
+BasicApplication:
+    Type: AWS::AppConfig::Application
+    Properties:
+      Name: "MyTestApplication"
+      Description: "A sample test application."
+      Tags:
+        - Key: Env
+          Value: test
+See also
+
+AWS AppConfig 
+Creating an Application

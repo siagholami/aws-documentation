@@ -1,0 +1,34 @@
+12: Exporting Your Game
+Exporting an executable file for your game is a critical steps in game creation. 
+You'll export your game and then play it as an executable file. Exporting your game packages up the data files so that you can run the level file as a standalone level.
+To export and run your game
+
+From the Lumberyard Editor main menu, choose Game, Export to Engine.
+
+This creates a launcher file for your level. When the process is finished, a success message is displayed.
+
+
+Open a file manager such as Windows Explorer to find your game launcher, StarterGameLauncher.exe. The launcher is saved in the same directory as the Lumberyard editor executable.
+
+For example:
+    For Visual Studio 2017, this might be C:\Amazon\Lumberyard\1.x.x.x\dev\Bin64vc141.
+    For Visual Studio 2015, this might be C:\Amazon\Lumberyard\1.x.x.x\dev\Bin64vc140.
+
+
+Run StarterGameLauncher.exe.
+
+The game opens in a game window to the default level for the project.
+
+
+Press the tilde ( \~ ) key on your keyboard to open the console for your game.
+
+Enter map . For example, map MyFirstLevel. Press Enter.
+
+
+
+Play and enjoy the game that you just created.
+
+To quit, press ( ` ) again to open the console.
+Enter quit.
+Any changes that you make to your game in Lumberyard Editor require you to export your level again in order to see those changes when you use the game launcher.
+For more information about releasing game builds, see Creating Game Builds in the Amazon Lumberyard User Guide.

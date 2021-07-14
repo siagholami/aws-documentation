@@ -1,0 +1,111 @@
+Saving and Re-running CloudWatch Logs Insights Queries
+After you have created a query, you can save it so that you can run it again later. Your saved queries are kept in a folder structure to help you keep them organized. You can save as many as 1000 CloudWatch Logs Insights queries, per Region per account.
+To save a query, you must be logged in to a role that has the logs:PutQueryDefinition permission. To see a list of saved queries, you must be logged in to a role that has the logs:DescribeQueryDefinitions permission.
+To save a query
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+In the query editor, create a query.
+
+
+Choose Save.
+
+
+If you don't see a Save button, you need to change to the new design for the CloudWatch Logs console. To do so:
+
+
+In the navigation pane, choose Log groups.
+
+
+Choose Try the new design.
+
+
+In the navigation pane, choose Insights and return to step 3 of this procedure.
+
+
+Enter a name for the query.
+
+
+(Optional) Choose a folder where you want to save the query. Select Create new to create a folder. If you create a new folder, you can use slash (/) characters in the folder name to define a folder structure. For example, naming a new folder folder-level-1/folder-level-2 creates a top-level folder called folder-level-1, with another folder called folder-level-2 inside that folder. The query is saved in folder-level-2.
+
+
+(Optional) Change the query's log groups or query text.
+
+
+Choose Save.
+
+
+To run a saved query
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+On the right, choose Queries.
+
+
+Select your query from Saved queries list. It appears in the query editor.
+
+
+Choose Run.
+
+
+To save a new version of a saved query
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+On the right, choose Queries.
+
+
+Select your query from Saved queries list. It appears in the query editor.
+
+
+Modify the query. If you need to run it to check your work, choose Run query.
+
+
+When you are ready to save the new version, choose Actions, Save as.
+
+
+Enter a name for the query.
+
+
+(Optional) Choose a folder where you want to save the query. Select Create new to create a folder. If you create a new folder, you can use slash (/) characters in the folder name to define a folder structure. For example, naming a new folder folder-level-1/folder-level-2 creates a top-level folder called folder-level-1, with another folder called folder-level-2 inside that folder. The query is saved in folder-level-2.
+
+
+(Optional) Change the query's log groups or query text.
+
+
+Choose Save.
+
+
+To delete a query, you must be logged in to a role that has the logs:DeleteQueryDefinition permission.
+To edit or delete a saved query
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+On the right, choose Queries.
+
+
+Select your query from Saved queries list. It appears in the query editor.
+
+
+Choose Actions, Edit or Actions, Delete.
+

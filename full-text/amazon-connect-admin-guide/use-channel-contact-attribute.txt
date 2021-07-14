@@ -1,0 +1,17 @@
+How to use the Channel contact attribute
+You can personalize the customer's experience based on the channel that they use to contact you. Here's what you do: 
+
+
+Add a Check contact attributes block to the beginning of your contact flow.
+
+
+Configure the block as shown in the following image:
+
+
+
+If the customer is contacting you through chat, specify what should happen next.
+
+
+
+If the customer is contacting you through a call (No Match), specify the next step in the flow. 
+

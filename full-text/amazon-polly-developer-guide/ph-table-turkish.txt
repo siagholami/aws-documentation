@@ -1,0 +1,330 @@
+Turkish (tr-TR)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Turkish voice supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ɾ
+4
+alveolar flap
+durum
+t
+
+
+ɾ̝̊
+4_0_r
+voiceless fricated alveolar flap
+bir
+t
+
+
+ɾ̝
+4_r
+fricated alveolar flap
+raf
+t
+
+
+b
+b
+voiced bilabial plosive
+raf
+p
+
+
+c
+c
+voiceless palatal plosive
+kedi
+k
+
+
+d
+d
+voiced alveolar plosive
+dede
+t
+
+
+d͡ʒ
+dZ
+voiced postalveolar affricate
+cam
+S
+
+
+f
+f
+voiceless labiodental fricative
+fare
+f
+
+
+g
+g
+voiced velar plosiv
+galibi
+k
+
+
+h
+h
+voiceless glottal fricative
+hasta
+k
+
+
+j
+j
+palatal approximant
+yat
+i
+
+
+ɟ
+J\
+voiced palatal plosive
+genç
+J
+
+
+k
+k
+voiceless velar plosive
+akıl
+k
+
+
+l
+l
+alveolar lateral approximant
+lale
+t
+
+
+ɫ
+5
+velarized alveolar lateral approximant
+labirent
+t
+
+
+m
+m
+bilabial nasal
+maaş
+p
+
+
+n
+n
+alveolar nasal
+anı
+t
+
+
+p
+p
+voiceless bilabial plosive
+ip
+p
+
+
+s
+s
+voiceless alveolar fricative
+ses
+s
+
+
+ʃ
+S
+voiceless postalveolar fricative
+aşı
+S
+
+
+t
+t
+voiceless alveolar plosive
+ütü
+t
+
+
+t͡ʃ
+tS
+voiceless postalveolar affricate
+çaba
+S
+
+
+v
+v
+voiced labiodental fricative
+ekvator, kahveci, akvaryum, isveçli, teşviki, cetvel
+f
+
+
+z
+z
+voiced alveolar fricative
+ver
+s
+
+
+ʒ
+Z
+voiced postalveolar fricative
+azık
+S
+
+
+Vowels
+
+
+
+
+
+
+ø
+2
+close-mid front rounded vowel
+göl
+0
+
+
+œ
+9
+open-mid front rounded vowel
+banliyö
+O
+
+
+a
+a
+open front unrounded vowel
+kal
+a
+
+
+a:
+a:
+long open front unrounded vowel
+davacı
+a
+
+
+æ
+{
+near-open front unrounded vowel
+özlem, güvenlik, gürel, somersault
+a
+
+
+e
+e
+close-mid front unrounded vowel
+keçi
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+dede
+E
+
+
+i
+i
+close front unrounded vowel
+bir
+i
+
+
+i:
+i:
+long close front unrounded vowel
+izah
+i
+
+
+ɪ
+I
+near-close near-front unrounded vowel
+keçi
+i
+
+
+ɯ
+M
+close back unrounded vowel
+kıl
+i
+
+
+o
+o
+close-mid back rounded vowel
+kol
+o
+
+
+o:
+o:
+long close-mid back rounded vowel
+dolar
+o
+
+
+u
+u
+close back rounded vowel
+durum
+u
+
+
+u:
+u:
+long close back rounded vowel
+ruhum
+u
+
+
+ʊ
+U
+near-close near-back rounded vowel
+dolu
+u
+
+
+y
+y
+close front rounded vowel
+güvenlik
+u
+
+
+ʏ
+Y
+near-close near-front rounded vowel
+aşı
+u
+
+

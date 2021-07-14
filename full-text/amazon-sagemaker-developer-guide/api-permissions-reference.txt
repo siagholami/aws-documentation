@@ -1,0 +1,352 @@
+Amazon SageMaker API Permissions: Actions, Permissions, and Resources Reference
+When you are setting up access control and writing a permissions policy that you can attach to an IAM identity (an identity-based policy), use the following table as a reference. The table lists each Amazon SageMaker API operation, the corresponding actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions. You specify the actions in the policy's Action field, and you specify the resource value in the policy's Resource field. 
+Note
+Except for the ListTags API, resource-level restrictions are not available on List- calls . Any user calling a List- API will see all resources of that type in the account.
+To express conditions in your Amazon SageMaker policies, you can use AWS-wide condition keys. For a complete list of AWS-wide keys, see Available Keys in the IAM User Guide. 
+Use the scroll bars to see the rest of the table.
+Amazon SageMaker API Operations and Required Permissions for Actions 
+
+
+
+Amazon SageMaker API Operations
+Required Permissions (API Actions)
+Resources
+
+
+
+
+ AddTags
+sagemaker:AddTags
+arn:aws:sagemaker:region:account-id:*
+
+
+ CreateEndpoint
+sagemaker:CreateEndpoint kms:CreateGrant (required only if the associated EndPointConfig has a KmsKeyId specified)
+arn:aws:sagemaker:region:account-id:endpoint/endpointName arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName
+
+
+ CreateEndpointConfig
+sagemaker:CreateEndpointConfig
+arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName
+
+
+ CreateFlowDefinition
+sagemaker:CreateFlowDefinition iam:PassRole
+arn:aws:sagemaker:region:account-id:flow-definition/flowDefinitionName
+
+
+ CreateHumanTaskUi
+sagemaker:CreateHumanTaskUi
+arn:aws:sagemaker:region:account-id:human-task-ui/humanTaskUiName
+
+
+ CreateHyperParameterTuningJob
+sagemaker:CreateHyperParameterTuningJob iam:PassRole
+arn:aws:sagemaker:region:account-id:hyper-parameter-tuning-job/hyperParameterTuningJobName
+
+
+  CreatePresignedNotebookInstanceUrl
+sagemaker:CreatePresignedNotebookInstanceUrl
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ CreateLabelingJob
+sagemaker:CreateLabelingJob iam:PassRole
+arn:aws:sagemaker:region:account-id:labeling-job/labelingJobName
+
+
+ CreateModel
+sagemaker:CreateModel iam:PassRole
+arn:aws:sagemaker:region:account-id:model/modelName
+
+
+  CreateNotebookInstance
+sagemaker:CreateNotebookInstance iam:PassRole The following permissions are required only if you specify a VPC for your notebook instance: ec2:CreateNetworkInterface ec2:DescribeSecurityGroups ec2:DescribeSubnets ec2:DescribeVpcs The following permission is required only if you specify a VPC and an elastic inference accelerator for your notebook instance: ec2:DescribeVpcEndpoints The following permissions are required only if you specify an encryption key: kms:DescribeKey kms:CreateGrant The following permission is required only if you specify an AWS Secrets Manager secret to access a private Git repository: secretsmanager:GetSecretValue
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ CreateProcessingJob
+sagemaker:CreateProcessingJob iam:PassRole kms:CreateGrant (required only if the associated ProcessingResources has a specified VolumeKmsKeyId and the associated role does not have a policy that permits this action)
+arn:aws:sagemaker:region:account-id:processing-job/processingJobName
+
+
+ CreateTrainingJob
+sagemaker:CreateTrainingJob iam:PassRole kms:CreateGrant (required only if the associated ResourceConfig has a specified VolumeKmsKeyId and the associated role does not have a policy that permits this action)
+arn:aws:sagemaker:region:account-id:training-job/trainingJobName
+
+
+ CreateTransformJob
+sagemaker:CreateTransformJob kms:CreateGrant (required only if the associated TransformResources has a specified VolumeKmsKeyId and the associated role does not have a policy that permits this action)
+arn:aws:sagemaker:region:account-id:transform-job/transformJobName
+
+
+ CreateWorkteam
+sagemaker:CreateWorkteam cognito-idp:DescribeUserPoolClient cognito-idp:UpdateUserPool cognito-idp:DescribeUserPool cognito-idp:UpdateUserPoolClient
+arn:aws:sagemaker:region:account-id:workteam/private-crowd/work team name arn:aws:sagemaker:region:account-id:workteam/vendor-crowd/work team name arn:aws:sagemaker:region:account-id:workteam/public-crowd/work team name
+
+
+ DeleteEndpoint
+sagemaker:DeleteEndpoint
+arn:aws:sagemaker:region:account-id:endpoint/endpointName
+
+
+ DeleteEndpointConfig
+sagemaker:DeleteEndpointConfig
+arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName
+
+
+ DeleteFlowDefinition
+sagemaker:DeleteFlowDefinition
+arn:aws:sagemaker:region:account-id:flow-definition/flowDefinitionName
+
+
+DeleteHumanLoop
+sagemaker:DeleteHumanLoop
+arn:aws:sagemaker:region:account-id:human-loop/humanLoopName
+
+
+ DeleteModel
+sagemaker:DeleteModel
+arn:aws:sagemaker:region:account-id:model/modelName
+
+
+ DeleteNotebookInstance
+sagemaker:DeleteNotebookInstance The following permission is required only if you specified a VPC for your notebook instance: ec2:DeleteNetworkInterface The following permissions are required only if you specified an encryption key when you created the notebook instance: kms:DescribeKey
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ DeleteTags
+sagemaker:DeleteTags
+arn:aws:sagemaker:region:account-id:*
+
+
+ DeleteWorkteam
+sagemaker:DeleteWorkteam
+arn:aws:sagemaker:region:account-id:workteam/*
+
+
+ DescribeEndpoint
+sagemaker:DescribeEndpoint
+arn:aws:sagemaker:region:account-id:endpoint/endpointName
+
+
+ DescribeEndpointConfig
+sagemaker:DescribeEndpointConfig
+arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName
+
+
+ DescribeFlowDefinition
+sagemaker:DescribeFlowDefinition
+arn:aws:sagemaker:region:account-id:flow-definition/flowDefinitionName
+
+
+DescribeHumanLoop
+sagemaker:DescribeHumanLoop
+arn:aws:sagemaker:region:account-id:human-loop/humanLoopName
+
+
+ DescribeHumanTaskUi
+sagemaker:DescribeHumanTaskUi
+arn:aws:sagemaker:region:account-id:human-task-ui/humanTaskUiName
+
+
+ DescribeHyperParameterTuningJob
+sagemaker:DescribeHyperParameterTuningJob
+arn:aws:sagemaker:region:account-id:hyper-parameter-tuning-job/hyperParameterTuningJob
+
+
+ DescribeLabelingJob
+sagemaker:DescribeLabelingJob
+arn:aws:sagemaker:region:account-id:labeling-job/labelingJobName
+
+
+ DescribeModel
+sagemaker:DescribeModel
+arn:aws:sagemaker:region:account-id:model/modelName
+
+
+ DescribeNotebookInstance
+sagemaker:DescribeNotebookInstance
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ DescribeProcessingJob
+sagemaker:DescribeProcessingJob
+arn:aws:sagemaker:region:account-id:processing-job/processingjobname
+
+
+ DescribeSubscribedWorkteam
+sagemaker:DescribeSubscribedWorkteam aws-marketplace:ViewSubscriptions
+arn:aws:sagemaker:region:account-id:workteam/*
+
+
+ DescribeTrainingJob
+sagemaker:DescribeTrainingJob
+arn:aws:sagemaker:region:account-id:training-job/trainingjobname
+
+
+ DescribeTransformJob
+sagemaker:DescribeTransformJob
+arn:aws:sagemaker:region:account-id:transform-job/transformjobname
+
+
+ DescribeWorkteam
+sagemaker:DescribeWorkteam
+arn:aws:sagemaker:region:account-id:workteam/*
+
+
+ runtime_InvokeEndpoint
+sagemaker:InvokeEndpoint
+arn:aws:sagemaker:region:account-id:endpoint/endpointName
+
+
+ ListEndpointConfigs
+sagemaker:ListEndpointConfigs
+*
+
+
+ ListEndpoints
+sagemaker:ListEndpoints
+*
+
+
+ ListFlowDefinitions
+sagemaker:ListFlowDefinitions
+*
+
+
+ListHumanLoops
+sagemaker:ListHumanLoops
+*
+
+
+ ListHumanTaskUis
+sagemaker:ListHumanTaskUis
+*
+
+
+ ListHyperParameterTuningJobs
+sagemaker:ListHyperParameterTuningJobs
+arn:aws:sagemaker:region:account-id:hyper-parameter-tuning-job/hyperParameterTuningJob
+
+
+ ListLabelingJobs
+sagemaker:ListLabelingJobs
+*
+
+
+ ListLabelingJobsForWorkteam
+sagemaker:ListLabelingJobForWorkteam
+*
+
+
+ ListModels
+sagemaker:ListModels
+*
+
+
+ ListNotebookInstances
+sagemaker:ListNotebookInstances
+*
+
+
+ ListProcessingJobs
+sagemaker:ListProcessingJobs
+*
+
+
+ ListSubscribedWorkteams
+sagemaker:ListSubscribedWorkteams aws-marketplace:ViewSubscriptions
+arn:aws:sagemaker:region:account-id:workteam/*
+
+
+ ListTags
+sagemaker:ListTags
+arn:aws:sagemaker:region:account-id:*
+
+
+ ListTrainingJobs
+sagemaker:ListTrainingJobs
+*
+
+
+ ListTrainingJobsForHyperParameterTuningJob
+sagemaker:ListTrainingJobsForHyperParameterTuningJob
+arn:aws:sagemaker:region:account-id:hyper-parameter-tuning-job/hyperParameterTuningJob
+
+
+ ListTransformJobs
+sagemaker:ListTransformJobs
+*
+
+
+ ListWorkteams
+sagemaker:ListWorkteams
+arn:aws:sagemaker:region:account-id:workteam/*
+
+
+StartHumanLoop
+sagemaker:StartHumanLoop
+arn:aws:sagemaker:region:account-id:human-loop/humanLoopName
+
+
+  StartNotebookInstance
+sagemaker:StartNotebookInstance iam:PassRole The following permissions are required only if you specified a VPC when you created your notebook instance: ec2:CreateNetworkInterface ec2:DescribeNetworkInterfaces ec2:DescribeSecurityGroups ec2:DescribeSubnets ec2:DescribeVpcs The following permission is required only if you specify a VPC and an elastic inference accelerator for your notebook instance: ec2:DescribeVpcEndpoints The following permissions are required only if you specified an encryption key when you created the notebook instance: kms:DescribeKey kms:CreateGrant The following permission is required only if you specified an AWS Secrets Manager secret to access a private Git repository when you created the notebook instance: secretsmanager:GetSecretValue
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+StopHumanLoop
+sagemaker:StopHumanLoop
+arn:aws:sagemaker:region:account-id:human-loop/humanLoopName
+
+
+ StopHyperParameterTuningJob
+sagemaker:StopHyperParameterTuningJob
+arn:aws:sagemaker:region:account-id:hyper-parameter-tuning-job/hyperParameterTuningJob
+
+
+ StopLabelingJob
+sagemaker:StopLabelingJob
+arn:aws:sagemaker:region:account-id:labeling-job/labelingJobName
+
+
+ StopNotebookInstance
+sagemaker:StopNotebookInstance
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ StopProcessingJob
+sagemaker:StopProcessingJob
+arn:aws:sagemaker:region:account-id:processing-job/processingJobName
+
+
+ StopTrainingJob
+sagemaker:StopTrainingJob
+arn:aws:sagemaker:region:account-id:training-job/trainingJobName
+
+
+ StopTransformJob
+sagemaker:StopTransformJob
+arn:aws:sagemaker:region:account-id:transform-job/transformJobName
+
+
+ UpdateEndpoint
+sagemaker:UpdateEndpoint
+arn:aws:sagemaker:region:account-id:endpoint/endpointName
+
+
+ UpdateEndpointWeightsAndCapacities
+sagemaker:UpdateEndpointWeightsAndCapacities
+arn:aws:sagemaker:region:account-id:endpoint/endpointName
+
+
+  UpdateNotebookInstance
+sagemaker:UpdateNotebookInstance iam:PassRole
+arn:aws:sagemaker:region:account-id:notebook-instance/notebookInstanceName
+
+
+ UpdateWorkteam
+sagemaker:UpdateWorkteam
+arn:aws:sagemaker:region:account-id:workteam/*
+
+

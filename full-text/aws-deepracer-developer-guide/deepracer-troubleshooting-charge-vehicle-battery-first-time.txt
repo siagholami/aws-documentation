@@ -1,0 +1,13 @@
+How to Charge the AWS DeepRacer Drive Module Battery
+Follow the steps below to charge your AWS DeepRacer drive module battery:
+
+
+Optionally remove from the vehicle the drive module battery.
+
+
+Attach the battery charger to the battery, as depicted as follows:
+
+
+
+Plug the power cord of battery charger into a power outlet.
+

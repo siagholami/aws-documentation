@@ -1,0 +1,317 @@
+AWS Glue Developer Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Glue?
+AWS Glue: How It Works
+AWS Glue Concepts
+AWS Glue Components
+Converting Semi-Structured Schemas to Relational Schemas
+Getting Started Using AWS Glue
+Setting up IAM Permissions for AWS Glue
+Step 1: Create an IAM Policy for the AWS Glue Service
+Step 2: Create an IAM Role for AWS Glue
+Step 3: Attach a Policy to IAM Users That Access AWS Glue
+Step 4: Create an IAM Policy for Notebook Servers
+Step 5: Create an IAM Role for Notebook Servers
+Step 6: Create an IAM Policy for Amazon SageMaker Notebooks
+Step 7: Create an IAM Role for Amazon SageMaker Notebooks
+
+
+Setting Up DNS in Your VPC
+Setting Up Your Environment to Access Data Stores
+Amazon VPC Endpoints for Amazon S3
+Setting Up a VPC to Connect to JDBC Data Stores
+
+
+Setting Up Your Environment for Development Endpoints
+Setting Up Encryption in AWS Glue
+AWS Glue Console Workflow Overview
+Security in AWS Glue
+Data Protection in AWS Glue
+Encryption at Rest
+Encrypting Your Data Catalog
+Encrypting Connection Passwords
+Encrypting Data Written by Crawlers, Jobs, and Development Endpoints
+Working with Security Configurations on the AWS Glue Console
+
+
+
+
+Encryption in Transit
+Key Management
+Internetwork Traffic Privacy
+AWS Glue Dependency on Other AWS Services
+Development Endpoints
+
+
+Identity and Access Management in AWS Glue
+Managing Access Permissions for AWS Glue Resources
+Identity-Based Policies (IAM Policies) for Access Control
+AWS Glue Resource Policies for Access Control
+
+
+Granting Cross-Account Access
+Specifying AWS Glue Resource ARNs
+AWS Glue Access Control Policy Examples
+AWS Glue Identity-Based (IAM) Access Control Policy Examples
+AWS Glue Identity-Based (IAM) Access Control Policy with Tags Examples
+AWS Glue Resource-Based Access Control Policy Examples
+
+
+AWS Glue API Permissions: Actions and Resources Reference
+
+
+Logging and Monitoring in AWS Glue
+Compliance Validation for AWS Glue
+Resilience in AWS Glue
+Infrastructure Security in AWS Glue
+Using AWS Glue with VPC Endpoints
+Shared Amazon VPCs
+
+
+Populating the AWS Glue Data Catalog
+Defining a Database in Your Data Catalog
+Working with Databases on the AWS Glue Console
+
+
+Defining Tables in the AWS Glue Data Catalog
+Working with Tables on the AWS Glue Console
+
+
+Adding a Connection to Your Data Store
+Working with Connections on the AWS Glue Console
+
+
+Defining Crawlers
+Crawler Properties
+Configuring a Crawler
+Scheduling an AWS Glue Crawler
+Working with Crawlers on the AWS Glue Console
+
+
+Adding Classifiers to a Crawler
+Writing Custom Classifiers
+Working with Classifiers on the AWS Glue Console
+
+
+Working with Data Catalog Settings on the AWS Glue Console
+Populating the Data Catalog Using AWS CloudFormation Templates
+Authoring Jobs in AWS Glue
+Adding Jobs in AWS Glue
+Adding Python Shell Jobs in AWS Glue
+Built-In Transforms
+Working with Jobs on the AWS Glue Console
+
+
+Editing Scripts in AWS Glue
+Working with Scripts on the AWS Glue Console
+Providing Your Own Custom Scripts
+
+
+Triggering Jobs in AWS Glue
+Working with Triggers on the AWS Glue Console
+
+
+Developing Scripts Using Development Endpoints
+Development Endpoint Workflow
+Adding a Development Endpoint
+Viewing Development Endpoint Properties
+Accessing Your Development Endpoint
+Creating a Notebook Server Hosted on Amazon EC2
+Tutorial Setup: Prerequisites for the Development Endpoint Tutorials
+Tutorial: Set Up a Local Apache Zeppelin Notebook to Test and Debug ETL Scripts
+Tutorial: Set Up an Apache Zeppelin Notebook Server on Amazon EC2
+Tutorial: Use a REPL Shell with Your Development Endpoint
+Tutorial: Set Up PyCharm Professional with a Development Endpoint
+
+
+Managing Notebooks
+Creating a Notebook Server Associated with a Development Endpoint
+Working with Notebooks on the AWS Glue Console
+
+
+Running and Monitoring AWS Glue
+Time-Based Schedules for Jobs and Crawlers
+Tracking Processed Data Using Job Bookmarks
+AWS Tags in AWS Glue
+Automating AWS Glue with CloudWatch Events
+Monitoring Jobs Using the Apache Spark Web UI
+Enabling the Apache Spark Web UI for AWS Glue Jobs
+Enabling the Apache Spark Web UI for Development Endpoints
+Launching the Spark History Server
+
+
+Monitoring with Amazon CloudWatch
+Monitoring AWS Glue Using Amazon CloudWatch Metrics
+Setting Up Amazon CloudWatch Alarms on AWS Glue Job Profiles
+Continuous Logging for AWS Glue Jobs
+Enabling Continuous Logging for AWS Glue Jobs
+Viewing Continuous Logging for AWS Glue Jobs
+
+
+
+
+Job Monitoring and Debugging
+Debugging OOM Exceptions and Job Abnormalities
+Debugging Demanding Stages and Straggler Tasks
+Monitoring the Progress of Multiple Jobs
+Monitoring for DPU Capacity Planning
+
+
+Logging AWS Glue API Calls with AWS CloudTrail
+Performing Complex ETL Activities Using Workflows in AWS Glue
+Overview of Workflows
+Creating and Running Workflows
+Getting and Setting Workflow Run Properties
+Querying Workflows Using the AWS Glue API
+AWS Glue Troubleshooting
+Gathering AWS Glue Troubleshooting Information
+Troubleshooting Connection Issues in AWS Glue
+Troubleshooting Errors in AWS Glue
+AWS Glue Limits
+Programming ETL Scripts
+General Information about Programming AWS Glue ETL Scripts
+Special Parameters Used by AWS Glue
+Connection Types and Options for ETL in AWS Glue
+Format Options for ETL Inputs and Outputs in AWS Glue
+Managing Partitions for ETL Output in AWS Glue
+Reading Input Files in Larger Groups
+Reading from JDBC Tables in Parallel
+Moving Data to and from Amazon Redshift
+AWS Glue Data Catalog Support for Spark SQL Jobs
+Excluding Amazon S3 Storage Classes
+Developing and Testing ETL Scripts Locally Using the AWS Glue ETL Library
+
+
+Program AWS Glue ETL Scripts in Python
+Setting Up to Use Python with AWS Glue
+Calling AWS Glue APIs in Python
+Using Python Libraries with AWS Glue
+AWS Glue Python Code Samples
+Code Example: Joining and Relationalizing Data
+Code Example: Data Preparation Using ResolveChoice, Lambda, and ApplyMapping
+
+
+AWS Glue PySpark Extensions Reference
+Accessing Parameters Using getResolvedOptions
+PySpark Extension Types
+DynamicFrame Class
+DynamicFrameCollection Class
+DynamicFrameWriter Class
+DynamicFrameReader Class
+GlueContext Class
+
+
+AWS Glue PySpark Transforms Reference
+GlueTransform Base Class
+ApplyMapping Class
+DropFields Class
+DropNullFields Class
+ErrorsAsDynamicFrame Class
+Filter Class
+FlatMap Class
+Join Class
+Map Class
+MapToCollection Class
+Relationalize Class
+RenameField Class
+ResolveChoice Class
+SelectFields Class
+SelectFromCollection Class
+Spigot Class
+SplitFields Class
+SplitRows Class
+Unbox Class
+UnnestFrame Class
+
+
+
+
+Programming AWS Glue ETL Scripts in Scala
+Using Scala to Program AWS Glue ETL Scripts
+APIs in the AWS Glue Scala Library
+AWS Glue Scala ChoiceOption APIs
+Abstract DataSink Class
+AWS Glue Scala DataSource Trait
+AWS Glue Scala DynamicFrame APIs
+AWS Glue Scala DynamicFrame Class
+The DynamicFrame Object
+
+
+AWS Glue Scala DynamicRecord Class
+AWS Glue Scala GlueContext APIs
+AWS Glue Scala ResolveSpec APIs
+AWS Glue Scala ArrayNode APIs
+AWS Glue Scala BinaryNode APIs
+AWS Glue Scala BooleanNode APIs
+AWS Glue Scala ByteNode APIs
+AWS Glue Scala DateNode APIs
+AWS Glue Scala DecimalNode APIs
+AWS Glue Scala DoubleNode APIs
+AWS Glue Scala DynamicNode APIs
+AWS Glue Scala FloatNode APIs
+AWS Glue Scala IntegerNode APIs
+AWS Glue Scala LongNode APIs
+AWS Glue Scala MapLikeNode APIs
+AWS Glue Scala MapNode APIs
+AWS Glue Scala NullNode APIs
+AWS Glue Scala ObjectNode APIs
+AWS Glue Scala ScalarNode APIs
+AWS Glue Scala ShortNode APIs
+AWS Glue Scala StringNode APIs
+AWS Glue Scala TimestampNode APIs
+AWS Glue Scala GlueArgParser APIs
+AWS Glue Scala Job APIs
+
+
+
+
+Matching Records with AWS Lake Formation FindMatches
+Tuning Machine Learning Transforms in AWS Glue
+Working with Machine Learning Transforms on the AWS Glue Console
+Tutorial: Creating a Machine Learning Transform with AWS Glue
+AWS Glue API
+Security APIs in AWS Glue
+Catalog API
+Database API
+Table API
+Partition API
+Connection API
+User-Defined Function API
+Importing an Athena Catalog to AWS Glue
+
+
+Crawlers and Classifiers API
+Classifier API
+Crawler API
+Crawler Scheduler API
+
+
+Autogenerating ETL Scripts API
+Jobs API
+Jobs
+Job Runs
+Triggers
+
+
+Workflows
+Development Endpoints API
+AWS Glue Machine Learning API
+Tagging APIs in AWS Glue
+Common Data Types
+Exceptions
+Known Issues for AWS Glue
+AWS Glue Release Notes
+Document History for AWS Glue
+AWS Glossary

@@ -1,0 +1,12 @@
+
+
+Searching indexes
+To search an Amazon Kendra index, you use the Query operation. The Query operation returns information about the indexed documents that you use in your application. This section shows you how to make a query, perform filters, and interpret the response that you get from the Query operation. This section also shows how to submit feedback about the quality of a search result.
+Topics
+ Querying an index
+ Filtering queries
+ Filtering on user context
+ Query responses
+ Sorting responses
+ Response types
+ Submitting feedback

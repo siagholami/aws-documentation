@@ -1,0 +1,24 @@
+Running (invoking) the remote version of an AWS Lambda function by using the AWS Toolkit for JetBrains
+A remote version of an AWS Lambda function is a function whose source code already exists inside of the Lambda service for an AWS account.
+To complete this procedure, you must first install the AWS Toolkit for JetBrains and, if you haven't yet, connect to an AWS account for the first time. Then with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider running, do the following.
+
+
+Open AWS Explorer, if it isn't already open. If you need to switch to a different AWS Region that contains the function, do that now.
+
+
+Expand Lambda, and confirm that the name of the function is listed. If it is, skip ahead to step 3 in this procedure.
+
+
+If the name of the function isn't listed, create the Lambda function that you want to run (invoke). 
+If you created the function as part of an AWS serverless application, you must also deploy that application.
+If you created the function by creating a code file that implements a function handler for Java, Python, Node.js, or C#, then in the code file, choose the Lambda icon next to the function handler. Then choose Create new AWS Lambda. Complete the Create Function dialog box, and then choose Create Function.
+
+
+With Lambda open in AWS Explorer, right-click the name of the function, and then choose Run '[Remote]'.
+
+
+
+Complete the Edit configuration dialog box if it's displayed, and then choose Run or Debug. Results are displayed in the Run or Debug tool window.
+    If the Edit configuration dialog box doesn't appear and you want to change the existing configuration, first change its configuration, and then repeat this procedure from the beginning. 
+    If the configuration details are missing, expand Templates, AWS Lambda, and then choose Local. Choose OK, and then repeat this procedure from the beginning. 
+

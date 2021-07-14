@@ -1,0 +1,7 @@
+Getting started with CodeGuru Reviewer
+In this section you learn what you need to do to get started with Amazon CodeGuru Reviewer so it can start to analyze your source code and provide code reviews. To use CodeGuru Reviewer to create code reviews with example source code in a real repository, see Tutorial: monitor source code in a GitHub repository. 
+Topics
+ Step 1: Get set up
+ Step 2: Associate a repository
+ Step 3: Get recommendations
+ Step 4: Provide feedback

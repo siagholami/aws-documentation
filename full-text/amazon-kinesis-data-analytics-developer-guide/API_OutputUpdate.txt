@@ -1,0 +1,36 @@
+OutputUpdate
+Describes updates to the output configuration identified by the OutputId. 
+Contents
+DestinationSchemaUpdate 
+Describes the data format when records are written to the destination. For more information, see Configuring Application Output.
+Type: DestinationSchema object
+Required: No
+KinesisFirehoseOutputUpdate 
+Describes an Amazon Kinesis Firehose delivery stream as the destination for the output.
+Type: KinesisFirehoseOutputUpdate object
+Required: No
+KinesisStreamsOutputUpdate 
+Describes an Amazon Kinesis stream as the destination for the output.
+Type: KinesisStreamsOutputUpdate object
+Required: No
+LambdaOutputUpdate 
+Describes an AWS Lambda function as the destination for the output.
+Type: LambdaOutputUpdate object
+Required: No
+NameUpdate 
+If you want to specify a different in-application stream for this output configuration, use this field to specify the new in-application stream name.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 32.
+Required: No
+OutputId 
+Identifies the specific output configuration that you want to update.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 50.
+Pattern: [a-zA-Z0-9_.-] 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

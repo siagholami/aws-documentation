@@ -1,0 +1,52 @@
+memached Attributes
+Note
+These attributes are available only on Linux stacks.
+The memached attributes specify the Memcached server configuration. For more information on how to override built-in attributes to specify custom values, see Overriding Attributes.
+
+
+
+
+
+
+
+
+
+
+
+memory 
+max_connections 
+pid_file 
+
+
+port 
+start_command 
+stop_command 
+
+
+user 
+
+
+
+
+
+memory  
+The maximum memory to use, in MB (number). The default value is 512.  
+node[:memcached][:memory]
+max_connections  
+The maximum number of connections (string). The default value is '4096'.  
+node[:memcached][:max_connections]
+pid_file  
+The file that contains the daemon's process ID (string). The default value is 'var/run/memcached.pid'.  
+node[:memcached][:pid_file]
+port  
+The port to listen on (number). The default value is 11211.  
+node[:memcached][:port]
+start_command  
+The start command (string). The default value is '/etc/init.d/memcached start'.  
+node[:memcached][:start_command]
+stop_command  
+The stop command (string). The default value is '/etc/init.d/memcached stop'.  
+node[:memcached][:stop_command]
+user  
+The user (string). The default value is 'nobody'.  
+node[:memcached][:user]

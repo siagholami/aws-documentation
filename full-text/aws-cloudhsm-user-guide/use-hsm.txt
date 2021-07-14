@@ -1,0 +1,8 @@
+Using the AWS CloudHSM Software Libraries
+The AWS CloudHSM software libraries integrate your applications with the HSMs in your cluster. The libraries enable your application to perform cryptographic operations on the HSMs. 
+For detailed information about supported platforms and a full version history, see AWS CloudHSM Client and Software Information.
+Topics
+ PKCS #11 Library
+ OpenSSL Dynamic Engine
+ Java Library
+ KSP and CNG Providers

@@ -1,0 +1,36 @@
+Connect a CodeDeploy application to a GitHub repository
+Before you can deploy an application from a GitHub repository for the first time using the AWS CLI, you must first give CodeDeploy permission to interact with GitHub on behalf of your GitHub account. This step must be completed once for each application using the CodeDeploy console.
+
+
+Sign in to the AWS Management Console and open the CodeDeploy console at https://console.aws.amazon.com/codedeploy.
+Note
+Sign in with the same account or IAM user information that you used in Getting started with CodeDeploy.
+
+
+Choose Applications.
+
+
+From Applications, choose the application you want to link to your GitHub user account and choose Deploy application.
+Note
+You are not creating a deployment. This is currently the only way to give CodeDeploy permission to interact with GitHub on behalf of your GitHub user account.
+
+
+Next to Repository type, choose My application revision is stored in GitHub.
+
+
+Choose Connect to GitHub.
+Note
+If you see a Connect to a different GitHub account link:
+You might have already authorized CodeDeploy to interact with GitHub on behalf of a different GitHub account for the application.
+You might have revoked authorization for CodeDeploy to interact with GitHub on behalf of the signed-in GitHub account for all applications linked to in CodeDeploy.
+For more information, see GitHub authentication with applications in CodeDeploy.
+
+
+If you are not already signed in to GitHub, follow the instructions on the Sign in page.
+
+
+On the Authorize application page, choose Authorize application. 
+
+
+Now that CodeDeploy has permission, choose Cancel, and continue with the steps in Create an EC2/On-Premises Compute Platform deployment (CLI).
+

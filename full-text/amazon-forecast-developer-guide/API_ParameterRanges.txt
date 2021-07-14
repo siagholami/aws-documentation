@@ -1,0 +1,24 @@
+ParameterRanges
+Specifies the categorical, continuous, and integer hyperparameters, and their ranges of tunable values. The range of tunable values determines which values that a hyperparameter tuning job can choose for the specified hyperparameter. This object is part of the HyperParameterTuningJobConfig object.
+Contents
+CategoricalParameterRanges 
+Specifies the tunable range for each categorical hyperparameter.
+Type: Array of CategoricalParameterRange objects
+Array Members: Minimum number of 1 item. Maximum number of 20 items.
+Required: No
+ContinuousParameterRanges 
+Specifies the tunable range for each continuous hyperparameter.
+Type: Array of ContinuousParameterRange objects
+Array Members: Minimum number of 1 item. Maximum number of 20 items.
+Required: No
+IntegerParameterRanges 
+Specifies the tunable range for each integer hyperparameter.
+Type: Array of IntegerParameterRange objects
+Array Members: Minimum number of 1 item. Maximum number of 20 items.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

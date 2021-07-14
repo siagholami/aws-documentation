@@ -1,0 +1,7 @@
+Managing Running NICE DCV Sessions
+The following section provides information about managing running NICE DCV sessions.
+Topics
+ Managing Session Storage
+ Managing Session Authorization
+ Managing the Session Display Layout
+ Managing the Session Name

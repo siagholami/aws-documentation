@@ -1,0 +1,30 @@
+On Render Finished
+This node is triggered when an update for a procedural material finishes rendering.
+You can use the node to detect when texture updates scheduled by the Render Asynchronous node are complete.
+Contents
+ Outputs
+
+To verify that the render update is the event that you want, compare the Render ID values that the Render Asynchronous and On Render Finished nodes return. You can use the Equal To (==) node, such as in the following example.
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when a procedural material render update is complete.
+
+
+Render ID
+Number
+Unique ID for the scheduled render process.
+
+

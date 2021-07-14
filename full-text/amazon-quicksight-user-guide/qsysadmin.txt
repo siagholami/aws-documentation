@@ -1,0 +1,11 @@
+Administration
+Use the following section to learn about Amazon QuickSight administrative tasks. This section contains information about controlling access, managing accounts, and choosing AWS Regions. 
+Topics
+ Different Editions of Amazon QuickSight
+ AWS Regions and IP Address Ranges
+ Supported Browsers
+ Signing Up for Amazon QuickSight
+ Access and Authentication in Amazon QuickSight
+ Managing User Access Inside Amazon QuickSight
+ Managing Amazon QuickSight Usage
+ Working with AWS Services

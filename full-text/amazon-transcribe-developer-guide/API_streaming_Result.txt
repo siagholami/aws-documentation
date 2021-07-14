@@ -1,0 +1,30 @@
+Result
+The result of transcribing a portion of the input audio stream. 
+Contents
+Alternatives 
+A list of possible transcriptions for the audio. Each alternative typically contains one item that contains the result of the transcription.
+Type: Array of Alternative objects
+Required: No
+EndTime 
+The offset in seconds from the beginning of the audio stream to the end of the result.
+Type: Double
+Required: No
+IsPartial 
+Amazon Transcribe divides the incoming audio stream into segments at natural points in the audio. Transcription results are returned based on these segments. 
+The IsPartial field is true to indicate that Amazon Transcribe has additional transcription data to send, false to indicate that this is the last transcription result for the segment.
+Type: Boolean
+Required: No
+ResultId 
+A unique identifier for the result. 
+Type: String
+Required: No
+StartTime 
+The offset in seconds from the beginning of the audio stream to the beginning of the result.
+Type: Double
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

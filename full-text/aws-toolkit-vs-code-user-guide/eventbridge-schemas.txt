@@ -1,0 +1,44 @@
+Working with Amazon EventBridge Schemas
+You can use the AWS Toolkit for Visual Studio Code (VS Code) to perform various operations on Amazon EventBridge schemas.
+Prerequisites
+
+Be sure your system meets the prerequisites specified in Installing the Toolkit for VS Code.
+The EventBridge schema you want to work with must be available in your AWS account. If it isn't, create or upload it. See Amazon EventBridge Schemas in the Amazon EventBridge User Guide.
+Open the AWS Explorer side bar.
+
+View an Available Schema
+
+
+In the AWS Explorer, expand Schemas.
+
+
+Expand the name of the registry that contains the schema you want to view. For example, many of the schemas that AWS supplies are in the aws.events registry.
+
+
+To view a schema in the editor, open the context menu of the schema, and then choose View Schema.
+
+
+
+Find an Available Schema
+In the AWS Explorer, do one or more of the following:
+ Begin typing the title of the schema you want to find. The AWS Explorer highlights the schema titles that contain a match. (A registry must be expanded for you to see the highlighted titles.)
+ Open the context menu for Schemas, and then choose Search Schemas. Or expand Schemas, open the context menu for the registry that contains the schema you want to find, and then choose Search Schemas in Registry. In the EventBridge Schemas Search dialog box, begin typing the title of the schema you want to find. The dialog box displays the schema titles that contain a match.
+To display the schema in the dialog box, select the title of the schema.
+
+Generate Code for an Available Schema
+
+
+In the AWS Explorer, expand Schemas.
+
+
+Expand the name of the registry that contains the schema you want to generate code for.
+
+
+Right-click the title of the schema, and then choose Download code bindings.
+
+
+In the resulting wizard pages, choose the following:
+    The Version of the schema
+    The code binding language
+    The workspace folder where you want to store the generated code on your local development machine
+

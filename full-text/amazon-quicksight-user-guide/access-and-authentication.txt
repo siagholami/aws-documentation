@@ -1,0 +1,7 @@
+Access and Authentication in Amazon QuickSight
+Use the following topics to manage access and authentication to Amazon QuickSight. This topic is for AWS administrators.
+Topics
+ Managing User Accounts in Amazon QuickSight Enterprise Edition
+ Adding Domains for Embedded Dashboard Users
+ Upgrading Your Amazon QuickSight Subscription from Standard Edition to Enterprise Edition
+ Canceling Your Amazon QuickSight Subscription and Closing the Account

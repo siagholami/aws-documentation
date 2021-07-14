@@ -1,0 +1,28 @@
+
+
+Actions
+The following actions are supported:
+  BatchDeleteDocument 
+  BatchPutDocument 
+  CreateDataSource 
+  CreateFaq 
+  CreateIndex 
+  DeleteDataSource 
+  DeleteFaq 
+  DeleteIndex 
+  DescribeDataSource 
+  DescribeFaq 
+  DescribeIndex 
+  ListDataSources 
+  ListDataSourceSyncJobs 
+  ListFaqs 
+  ListIndices 
+  ListTagsForResource 
+  Query 
+  StartDataSourceSyncJob 
+  StopDataSourceSyncJob 
+  SubmitFeedback 
+  TagResource 
+  UntagResource 
+  UpdateDataSource 
+  UpdateIndex 

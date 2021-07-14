@@ -1,0 +1,20 @@
+Locking Wall and Doorway Slices
+For now, you are done adjusting the maze walls and doorways. You can prevent these slices from interfering with your future work by locking them. This prevents you from selecting them accidentally.
+To lock the wall and doorway slices
+
+
+In the Entity Outliner, locate maze_wall_exterior and maze_wall_interior.
+
+
+To the right of maze_wall_exterior and maze_wall_interior, click the lock icon. 
+
+
+
+Repeat the preceding step for the Doorway_parent slices.
+
+
+Press CtrlS to save your level.
+
+
+The maze and doorway slices are now locked and cannot be moved by accident. To modify them at any time, click the lock icons again to unlock the slices.
+Next: Placing Lamp Post Slices

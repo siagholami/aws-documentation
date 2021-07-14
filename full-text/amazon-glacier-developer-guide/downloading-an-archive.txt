@@ -1,0 +1,3 @@
+Downloading an Archive in Amazon S3 Glacier
+Amazon S3 Glacier (S3 Glacier) provides a management console, which you can use to create and delete vaults. However, you cannot download archives from S3 Glacier by using the management console. To download data, such as photos, videos, and other documents, you must either use the AWS CLI or write code to make requests, by using either the REST API directly or by using the AWS SDKs. 
+For information about using S3 Glacier with the AWS CLI, see AWS CLI Reference for S3 Glacier. To install the AWS CLI, see AWS Command Line Interface. The following Downloading an Archive topics describe how to download archives to S3 Glacier by using the AWS SDK for Java, the AWS SDK for .NET, and the REST API.

@@ -1,0 +1,23 @@
+AWS::Redshift::ClusterParameterGroup Parameter
+Describes a parameter in a cluster parameter group.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ParameterName](#cfn-redshift-clusterparametergroup-parameter-parametername)" : String,
+  "[ParameterValue](#cfn-redshift-clusterparametergroup-parameter-parametervalue)" : String
+}
+YAML
+[ParameterName](#cfn-redshift-clusterparametergroup-parameter-parametername): String
+  [ParameterValue](#cfn-redshift-clusterparametergroup-parameter-parametervalue): String
+Properties
+ParameterName 
+The name of the parameter.
+Required: Yes
+Type: String
+Update requires: No interruption
+ParameterValue 
+The value of the parameter.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,45 @@
+About the AWS Support API
+The AWS Support API provides access to some of the features of the AWS Service Catalog. AWS provides this access for AWS Support customers who have a Business or Enterprise support plan.
+The service currently provides two different groups of operations:
+ Support case management operations to manage the entire life cycle of your AWS support cases, from creating a case to resolving it.
+ Trusted Advisor operations to access the checks provided by AWS Trusted Advisor.
+For information about the operations and data types provided by AWS Support, see the AWS Support API Reference.
+Topics
+ Support case management
+ Trusted Advisor
+ Endpoint
+ Support in AWS SDKs
+Support case management
+Using the operations for support case management, you can perform these tasks:
+ Open a support case.
+ Get a list and detailed information about recent support cases.
+ Narrow your search for support cases by dates and case identifiers, including cases that are resolved.
+ Add communications and file attachments to your cases, and add the email recipients for case correspondence.
+ Resolve your cases.
+The AWS Support API supports CloudTrail logging for support case management operations. For more information, see Logging AWS Support API calls with AWS CloudTrail.
+For example Java code that demonstrates how to manage the entire life cycle of an AWS Support case, see Programming an AWS Support case. 
+Trusted Advisor
+Using the Trusted Advisor operations, you can perform these tasks:
+ Get names and identifiers for the checks that Trusted Advisor offers.
+ Request that a Trusted Advisor check be run against your account and resources. 
+ Obtain summaries and detailed information for your Trusted Advisor checks.
+ Request that Trusted Advisor checks be refreshed.
+ Obtain the status of each Trusted Advisor check you have requested.
+The AWS Support API supports CloudWatch Events for Trusted Advisor operations. For more information, see Monitoring Trusted Advisor check results with Amazon CloudWatch Events.
+For an example that uses the Trusted Advisor operations, see Using Trusted Advisor as a web service.
+Endpoint
+Use this endpoint to access AWS Support:
+ https://support.us-east-1.amazonaws.com
+Warning
+The AWS Support endpoint creates cases in the production database. Be sure that you include a subject line, such as TEST CASE--Please ignore, when you call [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) for testing, and close the test cases you create by calling [ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html).
+For additional information about using AWS endpoints, see Regions and endpoints in the Amazon Web Services General Reference.
+Support in AWS SDKs
+The AWS Command Line Interface, the AWS Tools for Windows PowerShell, and the AWS Software Development Kits (SDKs) include support for the AWS Support API:
+ AWS CLI
+ AWS Tools for Windows PowerShell
+ AWS SDK for Java
+ AWS SDK for JavaScript
+ AWS SDK for .NET
+ AWS SDK for PHP
+ AWS SDK for Python (Boto)
+ AWS SDK for Ruby

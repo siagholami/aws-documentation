@@ -1,0 +1,3 @@
+Amazon Personalize Events
+The following actions are supported by Amazon Personalize Events:
+  PutEvents 

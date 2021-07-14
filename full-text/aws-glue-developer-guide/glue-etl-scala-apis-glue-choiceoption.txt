@@ -1,0 +1,24 @@
+AWS Glue Scala ChoiceOption APIs
+Topics
+ ChoiceOption Trait
+ ChoiceOption Object
+ case class ChoiceOptionWithResolver
+ case class MatchCatalogSchemaChoiceOption
+Package: com.amazonaws.services.glue
+ChoiceOption Trait
+trait ChoiceOption extends Serializable
+ChoiceOption Object
+ChoiceOption
+object ChoiceOption
+A general strategy to resolve choice applicable to all ChoiceType nodes in a DynamicFrame.
+ val CAST
+ val MAKE_COLS
+ val MAKE_STRUCT
+ val MATCH_CATALOG
+ val PROJECT
+def apply
+def apply(choice: String): ChoiceOption
+case class ChoiceOptionWithResolver
+case class ChoiceOptionWithResolver(name: String, choiceResolver: ChoiceResolver) extends ChoiceOption {}
+case class MatchCatalogSchemaChoiceOption
+case class MatchCatalogSchemaChoiceOption() extends ChoiceOption {}

@@ -1,0 +1,24 @@
+Modifying an email flow rule
+You can modify the rule action or pattern for an email flow rule. When you modify an email flow rule, the changes are applied immediately.
+To modify email flow rule
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+For Organizations, choose the name of your organization.
+
+
+In the navigation pane, choose Organization settings, Inbound/Outbound rules.
+
+
+Select the rule and choose Edit.
+
+
+Change the patterns or action as required.
+
+
+Choose Save.
+
+
+You can test the new email flow rule that you created. For more information, see Testing an email flow rule.

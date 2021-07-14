@@ -1,0 +1,10 @@
+Hash functions
+Topics
+ CHECKSUM function
+ FUNC_SHA1 function
+ FNV_HASH function
+ MD5 function
+ SHA function
+ SHA1 function
+ SHA2 function
+A hash function is a mathematical function that converts a numerical input value into another value.

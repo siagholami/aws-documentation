@@ -1,0 +1,50 @@
+Systems Manager prerequisites
+The prerequisites for using AWS Systems Manager to manage your EC2 instances, on-premises servers, and virtual machines (VMs) are covered step by step in the Setting Up chapters of this user guide:
+ Setting up AWS Systems Manager
+ Setting up AWS Systems Manager for hybrid environments
+This topic provides an overview of these prerequisites. 
+To complete prerequisites for using Systems Manager
+
+
+Create an AWS account and configure the required IAM roles.
+
+
+Verify that Systems Manager is supported in the AWS Regions where you want to use the service.
+
+
+Verify that your instances run a supported operating system.
+
+
+For EC2 instances, create an IAM instance profile and attach it to your machines.
+
+
+For on-premises servers and VMs, create an IAM service role for a hybrid environment.
+
+
+Verify that you are allowing HTTPS (port 443) outbound traffic to the Systems Manager endpoints.
+
+
+(Recommended) Create a VPC endpoint in Amazon Virtual Private Cloud to use with Systems Manager. 
+
+
+On on-premises servers, VMs, and EC2 instances created from AMIs that are not supplied by AWS, install a Transport Layer Security (TLS) certificate.
+
+
+For on-premises servers and VMs, register the machines with Systems Manager through the managed instance activation process.
+
+
+Install or verify installation of SSM Agent on each of your managed instances.
+
+
+Integration with IAM and Amazon EC2
+User access to Systems Manager, its capabilities, and its resources are controlled through policies that you use or create in AWS Identity and Access Management (IAM). If you plan to use computing resources provided by AWS, and not only on-premises servers and virtual machines (VMs), you also need to understand Amazon Elastic Compute Cloud (Amazon EC2) before you set up Systems Manager for your organization. Understanding how these services work is essential to successfully set up Systems Manager.
+For more information about Amazon EC2, see the following:
+ Amazon Elastic Compute Cloud (Amazon EC2)
+ Getting Started with Amazon EC2 Linux Instances
+ Getting Started with Amazon EC2 Windows Instances
+  What is Amazon EC2? (Linux)
+ What is Amazon EC2? (Windows)
+For more information about IAM, see the following:
+ AWS Identity and Access Management (IAM)
+ Getting Started with IAM
+ What is IAM?

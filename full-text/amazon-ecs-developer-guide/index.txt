@@ -1,0 +1,319 @@
+Amazon Elastic Container Service Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon Elastic Container Service?
+Setting up with Amazon ECS
+Getting started with Amazon ECS
+Docker basics for Amazon ECS
+Getting started with Amazon ECS using Amazon EC2
+Getting started with Amazon ECS using Fargate
+Amazon ECS on AWS Fargate
+AWS Fargate platform versions
+AWS Fargate platform versions scheduled for deprecation
+
+
+Amazon ECS clusters
+Creating a cluster
+Amazon ECS capacity providers
+Auto Scaling group capacity providers
+AWS Fargate capacity providers
+
+
+Amazon ECS cluster auto scaling
+Amazon ECS clusters in Local Zones, Wavelength Zones, and AWS Outposts
+Updating cluster settings
+Deleting a cluster
+Amazon ECS Task definitions
+Application architecture
+Creating a task definition
+Task definition parameters
+Amazon ECS launch types
+Working with GPUs on Amazon ECS
+Working with inference workloads on Amazon ECS
+Using data volumes in tasks
+Fargate Task Storage
+Docker volumes
+Bind mounts
+Amazon EFS volumes
+
+
+Managing container swap space
+Task Networking with the awsvpc Network Mode
+Using the awslogs Log Driver
+Custom log routing
+Private registry authentication for tasks
+Specifying sensitive data
+Specifying sensitive data using Secrets Manager
+Specifying sensitive data using Systems Manager Parameter Store
+
+
+Specifying environment variables
+Example task definitions
+Updating a task definition
+Deregistering task definition revisions
+Account settings
+Viewing account settings
+Modifying account settings
+Amazon ECS container instances
+Amazon ECS-optimized AMIs
+Retrieving Amazon ECS-Optimized AMI metadata
+Subscribing to Amazon ECS-optimized AMI update notifications
+Amazon ECS-optimized AMI versions
+AMI storage configuration
+
+
+Using Bottlerocket with Amazon ECS
+Launching an Amazon ECS Container Instance
+Using Spot Instances
+
+
+Bootstrapping Container Instances with Amazon EC2 User Data
+Example Container Instance User Data Configuration Scripts
+
+
+Elastic network interface trunking
+Container Instance Memory Management
+Connect to your container instance
+Using CloudWatch Logs with container instances
+Container instance draining
+Manage container instances remotely using AWS Systems Manager
+Starting a task at container instance launch time
+Deregister a container instance
+Amazon ECS Container Agent
+Installing the Amazon ECS Container Agent
+Amazon ECS Container Agent Versions
+Updating the Amazon ECS Container Agent
+Updating the Amazon ECS Container Agent on an Amazon ECS-optimized AMI
+Manually Updating the Amazon ECS Container Agent (for Non-Amazon ECS-Optimized AMIs)
+
+
+Amazon ECS Container Agent Configuration
+Private Registry Authentication for Container Instances
+Automated Task and Image Cleanup
+Amazon ECS Container Metadata File
+Amazon ECS Task metadata endpoint
+Task metadata endpoint version 4
+Task Metadata Endpoint version 3
+Task Metadata Endpoint version 2
+
+
+Amazon ECS Container Agent Introspection
+HTTP Proxy Configuration
+Scheduling Amazon ECS tasks
+Running tasks
+Running a task using the Fargate launch type
+Running a task using the EC2 launch type
+
+
+Amazon ECS task placement
+Amazon ECS task placement strategies
+Amazon ECS task placement constraints
+Cluster query language
+
+
+Scheduled tasks (cron)
+Task lifecycle
+Task retirement
+Fargate task recycling
+Creating a scheduled task using the AWS CLI
+Amazon ECS services
+Service definition parameters
+Creating a service
+Step 1: Configuring Basic Service Parameters
+Step 2: Configure a Network
+Step 3: Configuring Your Service to Use a Load Balancer
+Configuring a Load Balancer for the Rolling Update Deployment Type
+Configuring a Load Balancer for the Blue/Green Deployment Type
+
+
+Step 4: Configuring Your Service to Use Service Discovery
+Step 5: Configuring your service to use Service Auto Scaling
+Step 6: Review and create your service
+
+
+Updating a service
+Deleting a service
+Amazon ECS Deployment types
+Rolling update
+Blue/Green deployment with CodeDeploy
+External Deployment
+
+
+Service load balancing
+Load balancer types
+Creating a load balancer
+Creating the service role for your account
+Creating an Application Load Balancer
+Creating a Network Load Balancer
+Creating a Classic Load Balancer
+
+
+Registering multiple target groups with a service
+
+
+Service Auto Scaling
+Target Tracking Scaling Policies
+Step Scaling Policies
+
+
+Service Discovery
+Service throttle logic
+Resources and tags
+Tagging your Amazon ECS resources
+Amazon ECS service quotas
+Amazon ECS usage reports
+Monitoring Amazon ECS
+Monitoring tools
+Amazon ECS CloudWatch metrics
+Viewing Amazon ECS metrics
+Tutorial: Scaling container instances with CloudWatch alarms
+
+
+Amazon ECS events and EventBridge
+Amazon ECS events
+Handling events
+
+
+Amazon ECS CloudWatch Container Insights
+Logging Amazon ECS API calls with AWS CloudTrail
+Security in Amazon Elastic Container Service
+Identity and access management for Amazon Elastic Container Service
+How Amazon Elastic Container Service Works with IAM
+Amazon Elastic Container Service Identity-Based Policy Examples
+Supported Resource-Level Permissions for Amazon ECS API Actions
+Managed Policies and Trust Relationships
+Amazon ECS Managed Policies and Trust Relationships
+Amazon ECR Managed Policies
+
+
+Service-Linked Role for Amazon ECS
+Legacy IAM Roles for Amazon ECS
+
+
+Amazon ECS task execution IAM role
+Amazon ECS Container Instance IAM Role
+IAM Roles for Tasks
+Amazon ECS CodeDeploy IAM Role
+Amazon ECS CloudWatch Events IAM Role
+Troubleshooting Amazon Elastic Container Service Identity and Access
+
+
+Logging and Monitoring in Amazon Elastic Container Service
+Compliance Validation for Amazon Elastic Container Service
+Infrastructure Security in Amazon Elastic Container Service
+Amazon ECS interface VPC endpoints (AWS PrivateLink)
+
+
+Using the AWS Copilot command line interface
+Getting started with AWS Copilot by deploying an Amazon ECS application
+Using the Amazon ECS Command Line Interface
+Installing the Amazon ECS CLI
+Configuring the Amazon ECS CLI
+Migrating Configuration Files
+Tutorial: Creating a Cluster with a Fargate Task Using the Amazon ECS CLI
+Tutorial: Creating a Cluster with an EC2 Task Using the Amazon ECS CLI
+Tutorial: Creating an Amazon ECS Service That Uses Service Discovery Using the Amazon ECS CLI
+Amazon ECS Command Line Reference
+ecs-cli
+ecs-cli configure
+ecs-cli configure default
+ecs-cli configure profile
+ecs-cli configure profile default
+ecs-cli configure migrate
+
+
+ecs-cli up
+ecs-cli down
+ecs-cli scale
+ecs-cli ps
+ecs-cli push
+ecs-cli pull
+ecs-cli images
+ecs-cli license
+ecs-cli compose
+ecs-cli compose create
+ecs-cli compose start
+ecs-cli compose up
+
+
+ecs-cli compose service
+ecs-cli compose service create
+ecs-cli compose service start
+ecs-cli compose service up
+ecs-cli compose service ps, list
+ecs-cli compose service scale
+ecs-cli compose service stop
+ecs-cli compose service rm, delete, down
+
+
+ecs-cli logs
+ecs-cli check-attributes
+ecs-cli registry-creds
+ecs-cli registry-creds up
+
+
+ecs-cli local
+ecs-cli local create
+ecs-cli local up
+ecs-cli local down
+ecs-cli local ps
+
+
+Using Docker Compose File Syntax
+Using Amazon ECS Parameters
+
+
+Common Use Cases in Amazon ECS
+AWS services integrated with Amazon ECS
+Using Amazon ECR with Amazon ECS
+Creating Amazon ECS resources with AWS CloudFormation
+Amazon Elastic Container Service on AWS Outposts
+Getting started with AWS App Mesh and Amazon ECS
+AWS Deep Learning Containers on Amazon ECS
+Tutorials for Amazon ECS
+Tutorial: Creating a VPC with Public and Private Subnets for Your Clusters
+Tutorial: Creating a Cluster with a Fargate Task Using the AWS CLI
+Tutorial: Creating a cluster with an EC2 task using the AWS CLI
+Tutorial: Using cluster auto scaling with the AWS Management Console
+Tutorial: Using cluster auto scaling with the AWS CLI
+Tutorial: Specifying sensitive data using Secrets Manager secrets
+Tutorial: Creating a service using Service Discovery
+Tutorial: Creating a service using a blue/green deployment
+Tutorial: Listening for Amazon ECS CloudWatch Events
+Tutorial: Sending Amazon Simple Notification Service alerts for task stopped events
+Tutorial: Using Amazon EFS file systems with Amazon ECS
+Amazon ECS troubleshooting
+Checking stopped tasks for errors
+CannotPullContainer task errors
+Service event messages
+Invalid CPU or memory value specified
+CannotCreateContainerError: API error (500): devmapper
+Troubleshooting service load balancers
+Troubleshooting service auto scaling
+Enabling Docker debug output
+Amazon ECS Log File Locations
+Amazon ECS logs collector
+Agent introspection diagnostics
+Docker diagnostics
+AWS Fargate throttling limits
+API failure reasons
+Troubleshooting IAM Roles for Tasks
+Windows containers
+Getting started with Windows containers
+Windows task definitions
+Windows IAM roles for tasks
+Pushing Windows images to Amazon ECR
+Using gMSAs for Windows Containers
+Document history
+AWS glossary

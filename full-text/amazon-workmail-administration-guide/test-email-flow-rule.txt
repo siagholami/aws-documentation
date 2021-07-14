@@ -1,0 +1,19 @@
+Testing an email flow rule
+To check your current rule configuration, you can test how the configuration behaves against specific email addresses. 
+To test an email flow rule
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+For Organizations, choose the name of your organization.
+
+
+In the navigation pane, choose Organization settings, Inbound/Outbound rules.
+
+
+Next to Test configuration, enter the full email addresses of both the sender and recipient that you want to test.
+
+
+Choose Test. The action to be taken for the provided email address is displayed.
+

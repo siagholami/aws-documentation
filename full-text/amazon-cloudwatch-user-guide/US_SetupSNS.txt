@@ -1,0 +1,116 @@
+Setting Up Amazon SNS Notifications
+Amazon CloudWatch uses Amazon SNS to send email. First, create and subscribe to an SNS topic. When you create a CloudWatch alarm, you can add this SNS topic to send an email notification when the alarm changes state. For more information, see the Amazon Simple Notification Service Getting Started Guide.
+Note
+Alternatively, if you plan to create your CloudWatch alarm using the AWS Management Console, you can skip this procedure because you can create the topic when you create the alarm.
+Setting Up an Amazon SNS Topic Using the AWS Management Console
+First, create a topic, then subscribe to it. You can optionally publish a test message to the topic.
+To create an SNS topic
+
+
+Open the Amazon SNS console at https://console.aws.amazon.com/sns/v3/home.
+
+
+On the Amazon SNS dashboard, under Common actions, choose Create Topic. 
+
+
+In the Create new topic dialog box, for Topic name, enter a name for the topic (for example, my-topic).
+
+
+Choose Create topic.
+
+
+Copy the Topic ARN for the next task (for example, arn:aws:sns:us-east-1:111122223333:my-topic).
+
+
+To subscribe to an SNS topic
+
+
+Open the Amazon SNS console at https://console.aws.amazon.com/sns/v3/home.
+
+
+In the navigation pane, choose Subscriptions, Create subscription.
+
+
+In the Create subscription dialog box, for Topic ARN, paste the topic ARN that you created in the previous task.
+
+
+For Protocol, choose Email.
+
+
+For Endpoint, enter an email address that you can use to receive the notification, and then choose Create subscription.
+
+
+From your email application, open the message from AWS Notifications and confirm your subscription.
+
+
+Your web browser displays a confirmation response from Amazon SNS.
+To publish a test message to an SNS topic
+
+
+Open the Amazon SNS console at https://console.aws.amazon.com/sns/v3/home.
+
+
+In the navigation pane, choose Topics.
+
+
+On the Topics page, select a topic and choose Publish to topic.
+
+
+In the Publish a message page, for Subject, enter a subject line for your message, and for Message, enter a brief message.
+
+
+Choose Publish Message.
+
+
+Check your email to confirm that you received the message.
+
+
+Setting Up an SNS Topic Using the AWS CLI
+First, you create an SNS topic, and then you publish a message directly to the topic to test that you have properly configured it.
+To set up an SNS topic
+
+Create the topic using the create-topic command as follows.
+
+1. aws sns create-topic --name my-topic
+Amazon SNS returns a topic ARN with the following format:
+1. {
+   2.     "TopicArn": "arn:aws:sns:us-east-1:111122223333:my-topic"
+   3. }
+
+Subscribe your email address to the topic using the subscribe command. If the subscription request succeeds, you receive a confirmation email message.
+
+1. aws sns subscribe --topic-arn arn:aws:sns:us-east-1:111122223333:my-topic --protocol email --notification-endpoint my-email-address
+Amazon SNS returns the following:
+1. {
+   2.     "SubscriptionArn": "pending confirmation"
+   3. }
+
+From your email application, open the message from AWS Notifications and confirm your subscription.
+
+Your web browser displays a confirmation response from Amazon Simple Notification Service.
+
+Check the subscription using the list-subscriptions-by-topic command.
+
+1. aws sns list-subscriptions-by-topic --topic-arn arn:aws:sns:us-east-1:111122223333:my-topic
+Amazon SNS returns the following:
+1. {
+    2.   "Subscriptions": [
+    3.     {
+    4.         "Owner": "111122223333",
+    5.         "Endpoint": "me@mycompany.com",
+    6.         "Protocol": "email",
+    7.         "TopicArn": "arn:aws:sns:us-east-1:111122223333:my-topic",
+    8.         "SubscriptionArn": "arn:aws:sns:us-east-1:111122223333:my-topic:64886986-bf10-48fb-a2f1-dab033aa67a3"
+    9.     }
+   10.   ]
+   11. }
+
+(Optional) Publish a test message to the topic using the publish command.
+
+1. aws sns publish --message "Verification" --topic arn:aws:sns:us-east-1:111122223333:my-topic
+Amazon SNS returns the following.
+1. {
+   2.     "MessageId": "42f189a0-3094-5cf6-8fd7-c2dde61a4d7d"
+   3. }
+
+Check your email to confirm that you received the message.

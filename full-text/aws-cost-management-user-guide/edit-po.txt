@@ -1,0 +1,126 @@
+Editing your purchase orders
+
+
+
+
+
+
+
+
+Purchase order is in public preview for AWS Billing and Cost Management and is subject to change. Your use of purchase orders is subject to the Preview Service Participation terms of the AWS Service Terms (Section 1.10).
+
+
+
+You can edit your purchase order, line item information, and status using the Billing and Cost Management console. You can't change your purchase order ID in this process.
+To edit a purchase order
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Purchase orders.
+
+
+Select the purchase order that you want to edit.
+
+
+Choose Edit purchase order.
+
+
+Change any parameter of your choice. Purchase order IDs cannot be changed.
+
+
+Choose Configure line items.
+
+
+Choose Submit purchase order.
+
+
+To add a line item
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Purchase orders.
+
+
+Choose the purchase order you want to edit.
+
+
+In the Line items section, choose Add line item.
+
+
+Change the information as needed.
+
+
+Choose Save line item.
+
+
+To edit a line item
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Purchase orders.
+
+
+Choose the purchase order you want to edit.
+
+
+In the Line items section, choose Edit.
+
+
+Change the line item information as needed.
+
+
+Choose Save line item.
+
+
+To delete a line item
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Purchase orders.
+
+
+Choose the purchase order you want to edit.
+
+
+Select all of the line items to delete in the Line items section.
+
+
+Choose Delete.
+
+
+Choose Confirm.
+
+
+To change the status of your purchase order
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Purchase orders.
+
+
+Choose the purchase order you want to edit.
+
+
+Choose Change status.
+
+
+Choose a status:
+    Suspended –Your purchase order will no longer be used for invoice association.
+    Active – Your purchase order will be used for invoice association.
+
+
+Choose Change status.
+
+
+Note
+To use a suspended purchase order for invoice association when it is past its expiration date and set to Suspended-Expired status, you must change the status to Expired and update the expiration month to make it Active. Be sure to update your line item end months accordingly.

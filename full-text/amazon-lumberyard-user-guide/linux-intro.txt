@@ -1,0 +1,24 @@
+Creating Lumberyard dedicated servers for Linux
+
+This feature is in preview release and is subject to change. 
+Lumberyard supports compiling a Windows client for a multiplayer project and connecting to a Linux dedicated server. You must do the following for the Windows client to work properly on a Linux dedicated server:
+ Compile the assets on a Windows computer
+ Compile the server executable for use on a Linux computer
+ Compile a Windows client to use to connect to the Linux server
+Once compiled, you can deploy assets to either a Linux server or Windows client.
+Topics
+ Prerequisites
+ Compiling Assets on a Windows Computer
+ Building the Lumberyard Executable for Linux
+ Testing the Windows Client to Linux Server Connection
+ Preparing the GameLift Package
+ Setting up Ubuntu on Amazon EC2
+Prerequisites
+You must have the following:
+ Lumberyard source code
+ Windows computer with a Lumberyard development environment and the ability to generate a Windows build
+ Linux computer with Ubuntu on Amazon Elastic Compute Cloud (Amazon EC2)
+For information, see Setting up Ubuntu on Amazon EC2.
+ Familiarity with the following:
+   Amazon Elastic Compute Cloud (Amazon EC2)
+   Connect to your Linux instance

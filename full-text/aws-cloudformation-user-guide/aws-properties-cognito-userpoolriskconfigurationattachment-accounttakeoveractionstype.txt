@@ -1,0 +1,33 @@
+AWS::Cognito::UserPoolRiskConfigurationAttachment AccountTakeoverActionsType
+Account takeover actions type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[HighAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)" : AccountTakeoverActionType,
+  "[LowAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)" : AccountTakeoverActionType,
+  "[MediumAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)" : AccountTakeoverActionType
+}
+YAML
+[HighAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction): 
+    AccountTakeoverActionType
+  [LowAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction): 
+    AccountTakeoverActionType
+  [MediumAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction): 
+    AccountTakeoverActionType
+Properties
+HighAction 
+Action to take for a high risk.
+Required: No
+Type: AccountTakeoverActionType
+Update requires: No interruption
+LowAction 
+Action to take for a low risk.
+Required: No
+Type: AccountTakeoverActionType
+Update requires: No interruption
+MediumAction 
+Action to take for a medium risk.
+Required: No
+Type: AccountTakeoverActionType
+Update requires: No interruption

@@ -1,0 +1,30 @@
+AWS::IoT::TopicRule SqsAction
+Describes an action to publish data to an Amazon SQS queue.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl)" : String,
+  "[RoleArn](#cfn-iot-topicrule-sqsaction-rolearn)" : String,
+  "[UseBase64](#cfn-iot-topicrule-sqsaction-usebase64)" : Boolean
+}
+YAML
+[QueueUrl](#cfn-iot-topicrule-sqsaction-queueurl): String
+  [RoleArn](#cfn-iot-topicrule-sqsaction-rolearn): String
+  [UseBase64](#cfn-iot-topicrule-sqsaction-usebase64): Boolean
+Properties
+QueueUrl 
+The URL of the Amazon SQS queue.
+Required: Yes
+Type: String
+Update requires: No interruption
+RoleArn 
+The ARN of the IAM role that grants access.
+Required: Yes
+Type: String
+Update requires: No interruption
+UseBase64 
+Specifies whether to use Base64 encoding.
+Required: No
+Type: Boolean
+Update requires: No interruption

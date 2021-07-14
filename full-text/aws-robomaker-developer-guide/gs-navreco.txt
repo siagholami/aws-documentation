@@ -1,0 +1,50 @@
+Navigation and Person Recognition
+In this section, explore a robot that moves between places and recognizes faces in photos. 
+Before you use AWS RoboMaker for the first time, complete the tasks in Create an Account. Then, in the AWS RoboMaker console, launch the Navigation and Person Recognition sample application.
+Topics
+ View Simulated Camera Images
+ View Recognized People
+View Simulated Camera Images
+Use rqt to view images from the robot's camera.
+To view simulated camera images
+
+
+Sign in to the AWS RoboMaker console at https://console.aws.amazon.com/robomaker/.
+
+
+In the AWS RoboMaker console, choose Simulation jobs on the left and then select the Navigation and Person Recognition simulation job.
+
+
+In the Simulation details page, in the Simulation tools section, select rqt.
+
+
+In rqt, choose Plugins, Visualization, Image View. 
+
+
+Select /camera/rgb/image_raw. 
+
+
+View Recognized People
+Use the terminal and rostopic to view people as the robot explores the virtual space. 
+To view the logs
+
+
+Sign in to the AWS RoboMaker console at https://console.aws.amazon.com/robomaker/.
+
+
+In the AWS RoboMaker console, choose Simulation jobs on the left and then select the Navigation and Person Recognition simulation job.
+
+
+In the Simulation details page, in the Simulation tools section, select terminal.
+
+
+In terminal, type in the following to set up the ROS environment and run the text command tool.
+
+
+eval $AWS_ROBOMAKER_ROBOT_APPLICATION_SETUP
+
+Type in the following command.
+
+rostopic echo /rekognized_people
+When a person is recognized, you see output similar to this:
+Data: "I see brandon"

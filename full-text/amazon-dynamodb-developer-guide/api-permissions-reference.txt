@@ -1,0 +1,233 @@
+DynamoDB API Permissions: Actions, Resources, and Conditions Reference
+When you are setting up Access Control and writing a permissions policy that you can attach to an IAM identity (identity-based policies), you can use the following table as a reference. The table lists each DynamoDB API operation, the corresponding actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions. You specify the actions in the policy's Action field, and you specify the resource value in the policy's Resource field. 
+You can use AWS-wide condition keys in your DynamoDB policies to express conditions. For a complete list of AWS-wide keys, see Available Keys in the IAM User Guide. 
+In addition to the AWS-wide condition keys, DynamoDB has its own specific keys that you can use in conditions. For more information, see Using IAM Policy Conditions for Fine-Grained Access Control.
+Note
+To specify an action, use the dynamodb: prefix followed by the API operation name (for example, dynamodb:CreateTable).
+Use the scroll bars to see the rest of the table.
+Amazon DynamoDB API and Required Permissions for Actions 
+
+
+
+DynamoDB API Operations
+Required Permissions (API Actions)
+Resources
+
+
+
+
+BatchGetItem
+dynamodb:BatchGetItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+BatchWriteItem
+dynamodb:BatchWriteItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+ConditionCheckItem
+dynamodb:ConditionCheckItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+CreateBackup
+dynamodb:CreateBackup
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+CreateGlobalTable
+dynamodb:CreateGlobalTable
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/* and arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+CreateTable
+dynamodb:CreateTable
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+DeleteBackup
+dynamodb:DeleteBackup
+arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name or arn:aws:dynamodb:region:account-id:table/table-name/backup/*
+
+
+DeleteItem
+dynamodb:DeleteItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+DeleteTable
+dynamodb:DeleteTable
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+DescribeBackup
+dynamodb:DescribeBackup
+arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name or arn:aws:dynamodb:region:account-id:table/table-name/backup/*
+
+
+DescribeContinuousBackups
+dynamodb:DescribeContinuousBackups
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+DescribeGlobalTable
+dynamodb:DescribeGlobalTable
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/*
+
+
+DescribeGlobalTableSettings
+dynamodb:DescribeGlobalTableSettings
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/*
+
+
+DescribeLimits
+dynamodb:DescribeLimits
+arn:aws:dynamodb:region:account-id:*
+
+
+DescribeReservedCapacity
+dynamodb:DescribeReservedCapacity
+arn:aws:dynamodb:region:account-id:*
+
+
+DescribeReservedCapacityOfferings
+dynamodb:DescribeReservedCapacityOfferings
+arn:aws:dynamodb:region:account-id:*
+
+
+DescribeStream
+dynamodb:DescribeStream
+arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label or arn:aws:dynamodb:region:account-id:table/table-name/stream/*
+
+
+DescribeTable
+dynamodb:DescribeTable
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+DescribeTimeToLive
+dynamodb:DescribeTimeToLive
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+EnclosingOperation
+dynamodb:EnclosingOperation
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+GetItem
+dynamodb:GetItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+GetRecords
+dynamodb:GetRecords
+arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label or arn:aws:dynamodb:region:account-id:table/table-name/stream/*
+
+
+GetShardIterator
+dynamodb:GetShardIterator
+arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label orarn:aws:dynamodb:region:account-id:table/table-name/stream/*
+
+
+ListBackups
+dynamodb:ListBackups
+arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name or arn:aws:dynamodb:region:account-id:table/table-name/backup/*
+
+
+ListGlobalTables
+dynamodb:ListGlobalTables
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/*
+
+
+ListStreams
+dynamodb:ListStreams
+arn:aws:dynamodb:region:account-id:table/table-name/stream/* or arn:aws:dynamodb:region:account-id:table/*/stream/*
+
+
+ListTables
+dynamodb:ListTables
+*
+
+
+ListTagsOfResource
+dynamodb:ListTagsOfResource
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+PurchaseReservedCapacityOfferings
+dynamodb:PurchaseReservedCapacityOfferings
+arn:aws:dynamodb:region:account-id:*
+
+
+PutItem
+dynamodb:PutItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+Query
+dynamodb:Query
+To query a table:arn:aws:dynamodb:region:account-id:table/table-nameor:arn:aws:dynamodb:region:account-id:table/*To query an index:arn:aws:dynamodb:region:account-id:table/table-name/index/index-nameor:arn:aws:dynamodb:region:account-id:table/table-name/index/*
+
+
+RestoreTableFromBackup
+dynamodb:RestoreTableFromBackup
+arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name or arn:aws:dynamodb:region:account-id:table/table-name/backup/* and arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+RestoreTableToPointInTime
+dynamodb:RestoreTableToPointInTime
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+Scan
+dynamodb:Scan
+To scan a table:arn:aws:dynamodb:region:account-id:table/table-nameor:arn:aws:dynamodb:region:account-id:table/*To scan an index (must also have scan access to base table):arn:aws:dynamodb:region:account-id:table/table-name/index/index-nameor:arn:aws:dynamodb:region:account-id:table/table-name/index/*
+
+
+TagResource
+dynamodb:TagResource
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UntagResource
+dynamodb:UntagResource
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateContinuousBackups
+dynamodb:UpdateContinuousBackups
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateGlobalTable
+dynamodb:UpdateGlobalTable
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/* and arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateGlobalTableSettings
+dynamodb:UpdateGlobalTableSettings
+arn:aws:dynamodb::account-id:global-table/global-table-name or arn:aws:dynamodb::account-id:global-table/* and arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateItem
+dynamodb:UpdateItem
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateTable
+dynamodb:UpdateTable
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+UpdateTimeToLive
+dynamodb:UpdateTimeToLive
+arn:aws:dynamodb:region:account-id:table/table-name or arn:aws:dynamodb:region:account-id:table/*
+
+
+
+Related Topics
+
+Access Control
+Using IAM Policy Conditions for Fine-Grained Access Control

@@ -1,0 +1,16 @@
+Managing event notifications using the Amazon Redshift CLI and API
+You can use the following Amazon Redshift CLI operations to manage event notifications.
+ create-event-subscription
+ delete-event-subscription
+ describe-event-categories
+ describe-event-subscriptions
+ describe-events
+ modify-event-subscription
+You can use the following Amazon Redshift API actions to manage event notifications.
+ CreateEventSubscription
+ DeleteEventSubscription
+ DescribeEventCategories
+ DescribeEventSubscriptions
+ DescribeEvents
+ ModifyEventSubscription
+For more information about Amazon Redshift event notifications, see Amazon Redshift event notifications.

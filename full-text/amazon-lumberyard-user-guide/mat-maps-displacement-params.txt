@@ -1,0 +1,21 @@
+Setting Displacement Mapping Parameters
+To apply displacement mapping to an object
+
+
+In Lumberyard Editor, click Tools, Material Editor.
+
+
+In the left tree, select the desired asset.
+
+
+In the right pane, under Shader Generation Params, select Displacement mapping.
+
+
+Under Shader Params, adjust the values of the following parameters for the desired effect.
+
+
+Displacement bias – Moves the plane where the displacement is applied. This reduces gaps in meshes, and prevents objects from displacing other objects that are placed above them.
+
+
+Displacement height scale – Changes the overall height of the displacement.
+

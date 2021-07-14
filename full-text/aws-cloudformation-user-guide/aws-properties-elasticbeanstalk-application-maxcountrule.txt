@@ -1,0 +1,31 @@
+AWS::ElasticBeanstalk::Application MaxCountRule
+A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.
+MaxCountRule is a property of the ApplicationVersionLifecycleConfig property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3)" : Boolean,
+  "[Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled)" : Boolean,
+  "[MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount)" : Integer
+}
+YAML
+[DeleteSourceFromS3](#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3): Boolean
+  [Enabled](#cfn-elasticbeanstalk-application-maxcountrule-enabled): Boolean
+  [MaxCount](#cfn-elasticbeanstalk-application-maxcountrule-maxcount): Integer
+Properties
+DeleteSourceFromS3 
+Set to true to delete a version's source bundle from Amazon S3 when Elastic Beanstalk deletes the application version.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Enabled 
+Specify true to apply the rule, or false to disable it.
+Required: No
+Type: Boolean
+Update requires: No interruption
+MaxCount 
+Specify the maximum number of application versions to retain.
+Required: No
+Type: Integer
+Update requires: No interruption

@@ -1,0 +1,12 @@
+Sign up for AWS
+If you have an AWS account already, skip to the next section, Configure IAM permissions. 
+If you don't have an AWS account, you can use the following procedure to create one. If you are a new Amazon CodeGuru Reviewer customer, you can sign up for a 90-day free trial. 
+
+
+Open https://portal.aws.amazon.com/billing/signup.
+
+
+Follow the online instructions.
+
+
+Part of the sign-up procedure involves receiving a phone call and entering a verification code on the phone keypad.

@@ -1,0 +1,31 @@
+Amazon Forecast Service
+The following actions are supported by Amazon Forecast Service:
+  CreateDataset 
+  CreateDatasetGroup 
+  CreateDatasetImportJob 
+  CreateForecast 
+  CreateForecastExportJob 
+  CreatePredictor 
+  DeleteDataset 
+  DeleteDatasetGroup 
+  DeleteDatasetImportJob 
+  DeleteForecast 
+  DeleteForecastExportJob 
+  DeletePredictor 
+  DescribeDataset 
+  DescribeDatasetGroup 
+  DescribeDatasetImportJob 
+  DescribeForecast 
+  DescribeForecastExportJob 
+  DescribePredictor 
+  GetAccuracyMetrics 
+  ListDatasetGroups 
+  ListDatasetImportJobs 
+  ListDatasets 
+  ListForecastExportJobs 
+  ListForecasts 
+  ListPredictors 
+  ListTagsForResource 
+  TagResource 
+  UntagResource 
+  UpdateDatasetGroup 

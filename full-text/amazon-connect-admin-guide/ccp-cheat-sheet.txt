@@ -1,0 +1,4 @@
+Quick start cheat sheet for training agents
+The following image shows a one-page cheat sheet to help agents learn the most common tasks in the CCP.
+Click here to download a Microsoft PowerPoint slide of this image.
+Your manager or IT administrator provides you with the name of your instance, agent ID, and password.

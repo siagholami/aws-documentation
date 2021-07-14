@@ -1,0 +1,4 @@
+Set up an API using the API Gateway console
+To set up an API Gateway API using the API Gateway console, see Tutorial: Build a REST API with HTTP non-proxy integration. 
+You can learn how to set up an API by following an example. For more information, see Tutorial: Create a REST API by importing an example. 
+Alternatively, you can set up an API by using the API Gateway Import API feature to upload an external API definition, such as one expressed in OpenAPI 2.0 with the Working with API Gateway extensions to OpenAPI. The example provided in Tutorial: Create a REST API by importing an example uses the Import API feature. 

@@ -1,0 +1,59 @@
+AWS::EC2::NetworkInterfacePermission
+Specifies a permission for an Amazon EC2 network interface. For example, you can grant an AWS authorized partner account permission to attach the specified network interface to an instance in their account.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::NetworkInterfacePermission",
+  "Properties" : {
+      "[AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid)" : String,
+      "[NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid)" : String,
+      "[Permission](#cfn-ec2-networkinterfacepermission-permission)" : String
+    }
+}
+YAML
+Type: AWS::EC2::NetworkInterfacePermission
+Properties: 
+  [AwsAccountId](#cfn-ec2-networkinterfacepermission-awsaccountid): String
+  [NetworkInterfaceId](#cfn-ec2-networkinterfacepermission-networkinterfaceid): String
+  [Permission](#cfn-ec2-networkinterfacepermission-permission): String
+Properties
+AwsAccountId 
+The AWS account ID.
+Required: Yes
+Type: String
+Update requires: Replacement
+NetworkInterfaceId 
+The ID of the network interface.
+Required: Yes
+Type: String
+Update requires: Replacement
+Permission 
+The type of permission to grant: INSTANCE-ATTACH or EIP-ASSOCIATE.
+Required: Yes
+Type: String
+Allowed values: EIP-ASSOCIATE | INSTANCE-ATTACH
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name. For example: eni-perm-055663b682ea24b48.
+For more information about using the Ref function, see Ref.
+Examples
+Grant INSTANCE-ATTACH Permission
+The following example creates a permission (INSTANCE-ATTACH) for a specified network interface and AWS account.
+JSON
+"MyNetworkInterfacePermission": {
+   "Type": "AWS::EC2::NetworkInterfacePermission",
+   "Properties": {
+      "NetworkInterfaceId": "eni-030e3xxx",
+      "AwsAccountId": "11111111111",
+      "Permission": "INSTANCE-ATTACH"
+   }
+}
+YAML
+MyNetworkInterfacePermission:
+      Type: AWS::EC2::NetworkInterfacePermission
+      Properties:
+         NetworkInterfaceId: eni-030e3xxx
+         AwsAccountId: '11111111111'
+         Permission: INSTANCE-ATTACH

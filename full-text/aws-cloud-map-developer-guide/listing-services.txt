@@ -1,0 +1,13 @@
+Viewing a List of Services That You Created in a Namespace
+To view a list of the services that you created in a namespace, perform the following procedure.
+To view a list of the services that you created in a namespace
+
+
+Sign in to the AWS Management Console and open the AWS Cloud Map console at https://console.aws.amazon.com/cloudmap/.
+
+
+In the navigation pane, choose Namespaces.
+
+
+Choose the name of the namespace that contains the services that you want to list.
+

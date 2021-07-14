@@ -1,0 +1,54 @@
+Updating a Trail
+To change trail settings, use the following procedure.
+To update a trail with the AWS Management Console
+
+
+Sign in to the AWS Management Console and open the CloudTrail console at https://console.aws.amazon.com/cloudtrail/.
+
+
+Choose Trails and then choose a trail.
+
+
+To make updates for Trail settings, choose the pencil icon, specify if you want your trail to apply to a single region or all regions, and then choose Save.
+
+
+For Management events, do the following.
+
+
+For Read/Write events, choose if you want your trail to log All, Read-only, Write-only, or None, and then choose Save. By default, trails log all management events. For more information, see Management Events.
+
+
+For Log AWS KMS events, choose Yes to log AWS Key Management Service (AWS KMS) events in your trail. Choose No to filter AWS KMS events out of your trail. The default setting is Yes.
+
+
+In Insights events, for Log Insights events, choose Yes if you want your trail to log Insights events. By default, trails don't log Insights events. For more information about Insights events, see Logging Insights Events for Trails. Additional charges apply for logging Insights events. For CloudTrail pricing, see AWS CloudTrail Pricing.
+
+
+Insights events are delivered to a different folder named /CloudTrail-Insight of the same S3 bucket that is specified in the Storage location area of the trail details page. CloudTrail creates the new prefix for you. For example, if your current destination S3 bucket is named S3bucketName/AWSLogs/CloudTrail/, the S3 bucket name with a new prefix is named S3bucketName/AWSLogs/CloudTrail-Insight/.
+
+
+For Data events, choose the pencil icon or Configure, make your changes, and then choose Save. By default, trails don't log data events. For more information, see Data Events.
+
+
+For Storage location, choose the pencil icon to update the settings for the following: 
+    The S3 bucket (with optional prefix) that is receiving your log files.
+    Log file encryption with AWS KMS.
+    Log file validation for logs.
+    The Amazon SNS topic to notify you when log files are delivered.
+
+
+For more information, see Configuring Advanced Settings for Your Trail.
+
+Choose Save.
+
+To configure CloudWatch Logs and tags for your trail
+
+
+To configure CloudTrail to deliver events to CloudWatch Logs for monitoring, for CloudWatch Logs , choose Configure. For more information about these settings, see Sending Events to CloudWatch Logs. 
+
+
+To configure tags (custom key-value pairs) for your trail, for Tags, click the pencil icon. You can add up to 50 key-value pairs per trail. Trail tags must be configured from the region in which the trail was created. 
+
+
+When finished, choose Apply.
+

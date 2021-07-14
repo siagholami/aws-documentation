@@ -1,0 +1,4 @@
+Editing a Packaging Group
+You can't edit a packaging group. To make changes, create a new group and delete the original.
+ To create a group, see Creating a Packaging Group.
+ To delete a group, see Deleting a Packaging Group.

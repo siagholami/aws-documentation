@@ -1,0 +1,113 @@
+Quick Start: Running the Samples Project on Android Devices
+You can use this quick start to run the Samples Project on your Android device from a Windows computer.
+Prerequisites
+This topic assumes that you meet the following requirements:
+ Lumberyard installed on a Windows computer.
+ An Android device configured and connected to your computer with a USB cable
+ Familiarity with Lumberyard Editor
+Topics
+ Prerequisites
+ Downloading Required Software
+ Configuring Android Studio
+ Configuring Lumberyard Setup Assistant
+ Configuring Asset Processor
+ Running the Deployment Tool
+Downloading Required Software
+Download the following software:
+ Android Studio 3.3 or later
+ Android NDK r20 or later
+ Java SE Development Kit (JDK) 1.8 or later
+Configuring Android Studio
+After you install Android Studio, you must configure it.
+To configure Android Studio
+
+
+Open Android Studio, choose Tools, Android and choose SDK Manager.
+Note
+You can also open the SDK Manager from the Welcome to Android Studio dialog. 
+
+
+Choose SDK Tools and select the following options:
+    Google Play APK Expansion Library
+    Google Play Licensing Library
+    Android SDK Platform-Tools
+    Android SDK Tools
+
+
+Choose OK.
+
+
+Configuring Lumberyard Setup Assistant
+Use Lumberyard Setup Assistant to install the required third-party software and SDKs for Android.
+To run the Samples Project on an Android device
+
+
+Navigate to the lumberyard_version\dev\Tools\LmbrSetup\Win\ directory and double-click SetupAssistant.exe.
+
+
+If you see a Custom Install box, click Customize and verify that the engine root path is correct.
+
+
+On the Get Started page, select the following:
+    Compile the game code
+    Compile the engine and asset pipeline
+    Compile the Lumberyard Editor and tools
+    Compile for Android devices
+
+
+On the Required Software page, click Browse and specify the paths for the following:
+    Android Native Development (NDK)
+    Android Software Development Kit (SDK) Tools
+    Java SE Development Kit (JDK)
+See the following example,
+Example 
+
+
+
+Click Next until you reach the final page, and close Lumberyard Setup Assistant.
+
+
+Configuring Asset Processor
+Next, you must configure Asset Processor so that it can process your game assets for Android.
+
+
+Navigate to the lumberyard_version\dev\ directory.
+
+
+In a text editor, open the AssetProcessorPlatformConfig.ini file. 
+
+
+Remove the semicolon to uncomment es3=enabled, as shown in the following example.
+
+
+[Platforms]
+   ;pc=enabled
+   es3=enabled
+   ;ios=enabled
+   ;osx_gl=enabled
+
+Save the file.
+
+Running the Deployment Tool
+Next, you must run Lumberyard Editor and the Deployment Tool so that the Samples Project runs on your device.
+To run the deployment tool
+
+
+Start Lumberyard Editor.
+
+
+Choose File, Open, and select the Advanced_RinLocomotion level.
+
+
+Choose File, Project Settings, and choose Deploy to device.
+
+
+In the Deployment Tool window, select the following.
+    For Target Platform, select Android ARMv8.
+    For Build Options, select Build Game.
+
+
+Click Deploy to local device. The code builds and deploys to your device, as shown in the following example.
+Example 
+
+

@@ -1,0 +1,28 @@
+AWS Managed Policies Available for Use with Service Quotas
+This section identifies the AWS managed policies that you can use to help manage access to service quotas. You can't modify or delete an AWS managed policy, but you can attach or detach a policy to IAM entities in your account, as needed. For more information, see AWS Managed Policies.
+
+
+
+
+Policy Name
+Description
+ARN
+
+
+
+
+ServiceQuotasServiceRolePolicy
+This policy allows Service Quotas to create support cases on your behalf.
+arn:aws:iam::aws:policy/aws-service-role/ServiceQuotasServiceRolePolicy
+
+
+ServiceQuotasFullAccess
+Provides full access to Service Quotas operations.
+arn:aws:iam::aws:policy/ServiceQuotasFullAccess
+
+
+ServiceQuotasReadOnlyAccess
+Grants read-only access to Service Quotas.
+arn:aws:iam::aws:policy/ServiceQuotasReadOnlyAccess
+
+

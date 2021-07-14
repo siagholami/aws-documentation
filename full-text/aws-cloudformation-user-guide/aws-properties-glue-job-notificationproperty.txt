@@ -1,0 +1,16 @@
+AWS::Glue::Job NotificationProperty
+Specifies configuration properties of a notification.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[NotifyDelayAfter](#cfn-glue-job-notificationproperty-notifydelayafter)" : Integer
+}
+YAML
+[NotifyDelayAfter](#cfn-glue-job-notificationproperty-notifydelayafter): Integer
+Properties
+NotifyDelayAfter 
+After a job run starts, the number of minutes to wait before sending a job run delay notification.
+Required: No
+Type: Integer
+Update requires: No interruption

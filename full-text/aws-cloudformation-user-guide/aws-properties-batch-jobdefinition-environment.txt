@@ -1,0 +1,23 @@
+AWS::Batch::JobDefinition Environment
+The Environment property type specifies environment variables to use in a job definition.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-batch-jobdefinition-environment-name)" : String,
+  "[Value](#cfn-batch-jobdefinition-environment-value)" : String
+}
+YAML
+[Name](#cfn-batch-jobdefinition-environment-name): String
+  [Value](#cfn-batch-jobdefinition-environment-value): String
+Properties
+Name 
+The name of the environment variable.
+Required: No
+Type: String
+Update requires: No interruption
+Value 
+The value of the environment variable.
+Required: No
+Type: String
+Update requires: No interruption

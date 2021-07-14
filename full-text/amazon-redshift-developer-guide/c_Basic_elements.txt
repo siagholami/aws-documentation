@@ -1,0 +1,8 @@
+Basic elements
+Topics
+ Names and identifiers
+ Literals
+ Nulls
+ Data types
+ Collation sequences
+This section covers the rules for working with database object names, literals, nulls, and data types. 

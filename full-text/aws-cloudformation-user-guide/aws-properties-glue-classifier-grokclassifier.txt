@@ -1,0 +1,37 @@
+AWS::Glue::Classifier GrokClassifier
+A classifier that uses grok patterns.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Classification](#cfn-glue-classifier-grokclassifier-classification)" : String,
+  "[CustomPatterns](#cfn-glue-classifier-grokclassifier-custompatterns)" : String,
+  "[GrokPattern](#cfn-glue-classifier-grokclassifier-grokpattern)" : String,
+  "[Name](#cfn-glue-classifier-grokclassifier-name)" : String
+}
+YAML
+[Classification](#cfn-glue-classifier-grokclassifier-classification): String
+  [CustomPatterns](#cfn-glue-classifier-grokclassifier-custompatterns): String
+  [GrokPattern](#cfn-glue-classifier-grokclassifier-grokpattern): String
+  [Name](#cfn-glue-classifier-grokclassifier-name): String
+Properties
+Classification 
+An identifier of the data format that the classifier matches, such as Twitter, JSON, Omniture logs, and so on.
+Required: Yes
+Type: String
+Update requires: No interruption
+CustomPatterns 
+Optional custom grok patterns defined by this classifier. For more information, see custom patterns in Writing Custom Classifiers.
+Required: No
+Type: String
+Update requires: No interruption
+GrokPattern 
+The grok pattern applied to a data store by this classifier. For more information, see built-in patterns in Writing Custom Classifiers.
+Required: Yes
+Type: String
+Update requires: No interruption
+Name 
+The name of the classifier.
+Required: No
+Type: String
+Update requires: Replacement

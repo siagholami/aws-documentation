@@ -1,0 +1,200 @@
+Programming AWS Glue ETL Scripts in Scala
+You can find Scala code examples and utilities for AWS Glue in the AWS Glue samples repository on the GitHub website.
+AWS Glue supports an extension of the PySpark Scala dialect for scripting extract, transform, and load (ETL) jobs. The following sections describe how to use the AWS Glue Scala library and the AWS Glue API in ETL scripts, and provide reference documentation for the library.
+Contents
+ Using Scala
+   Testing on a DevEndpoint Notebook
+   Testing on a DevEndpoint REPL
+ Scala API List
+   com.amazonaws.services.glue
+   com.amazonaws.services.glue.types
+   com.amazonaws.services.glue.util
+   ChoiceOption
+     ChoiceOption Trait
+     ChoiceOption Object
+       apply
+     ChoiceOptionWithResolver
+     MatchCatalogSchemaChoiceOption
+   DataSink
+     writeDynamicFrame
+     pyWriteDynamicFrame
+     supportsFormat
+     setFormat
+     withFormat
+     setAccumulableSize
+     getOutputErrorRecordsAccumulable
+     errorsAsDynamicFrame
+     DataSink Object
+       recordMetrics
+   DataSource trait
+   DynamicFrame
+     DynamicFrame Class
+       errorsCount
+       applyMapping
+       assertErrorThreshold
+       count
+       dropField
+       dropFields
+       dropNulls
+       errorsAsDynamicFrame
+       filter
+       getName
+       getNumPartitions
+       getSchemaIfComputed
+       isSchemaComputed
+       javaToPython
+       join
+       map
+       printSchema
+       recomputeSchema
+       relationalize
+       renameField
+       repartition
+       resolveChoice
+       schema
+       selectField
+       selectFields
+       show
+       spigot
+       splitFields
+       def splitRows
+       stageErrorsCount
+       toDF
+       unbox
+       unnest
+       withFrameSchema
+       def withName
+       withTransformationContext
+     DynamicFrame Object
+       def apply
+       def emptyDynamicFrame
+       def fromPythonRDD
+       def ignoreErrors
+       def inlineErrors
+       def newFrameWithErrors
+   DynamicRecord
+     addField
+     dropField
+     setError
+     isError
+     getError
+     clearError
+     write
+     readFields
+     clone
+     schema
+     getRoot
+     toJson
+     getFieldNode
+     getField
+     hashCode
+     equals
+     DynamicRecord object
+       apply
+     RecordTraverser trait
+   GlueContext
+     getCatalogSink
+     getCatalogSource
+     getJDBCSink
+     getSink
+     getSinkWithFormat
+     getSource
+     getSourceWithFormat
+     getSparkSession
+     this
+     this
+     this
+   MappingSpec
+     MappingSpec Case Class
+     MappingSpec Object
+     orderingByTarget
+     apply
+     apply
+     apply
+   ResolveSpec
+     ResolveSpec Object
+       def 
+       def 
+     ResolveSpec Case Class
+       def Methods
+   ArrayNode
+     ArrayNode Case Class
+       def Methods
+   BinaryNode
+     BinaryNode Case Class
+       val Fields
+       def Methods
+   BooleanNode
+     BooleanNode Case Class
+       val Fields
+       def Methods
+   ByteNode
+     ByteNode Case Class
+       val Fields
+       def Methods
+   DateNode
+     DateNode Case Class
+       val Fields
+       def Methods
+   DecimalNode
+     DecimalNode Case Class
+       val Fields
+       def Methods
+   DoubleNode
+     DoubleNode Case Class
+       val Fields
+       def Methods
+   DynamicNode
+     DynamicNode Class
+       def Methods
+     DynamicNode Object
+       def Methods
+   FloatNode
+     FloatNode Case Class
+       val Fields
+       def Methods
+   IntegerNode
+     IntegerNode Case Class
+       val Fields
+       def Methods
+   LongNode
+     LongNode Case Class
+       val Fields
+       def Methods
+   MapLikeNode
+     MapLikeNode Class
+       def Methods
+   MapNode
+     MapNode Case Class
+       def Methods
+   NullNode
+     NullNode Class
+     NullNode Case Object
+   ObjectNode
+     ObjectNode Object
+       def Methods
+     ObjectNode Case Class
+       def Methods
+   ScalarNode
+     ScalarNode Class
+       def Methods
+     ScalarNode Object
+       def Methods
+   ShortNode
+     ShortNode Case Class
+       val Fields
+       def Methods
+   StringNode
+     StringNode Case Class
+       val Fields
+       def Methods
+   TimestampNode
+     TimestampNode Case Class
+       val Fields
+       def Methods
+   GlueArgParser
+     GlueArgParser Object
+       def Methods
+   Job
+     Job Object
+       def Methods

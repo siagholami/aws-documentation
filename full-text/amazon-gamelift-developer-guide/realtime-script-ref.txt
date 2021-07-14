@@ -1,0 +1,5 @@
+Amazon GameLift Realtime Servers Script Reference
+Use these resources to build out custom logic in your Realtime scripts. 
+Topics
+ Script Callbacks for Realtime Servers
+ Realtime Servers Interface

@@ -1,0 +1,64 @@
+Related Resources
+Amazon MQ Resources
+The following table lists useful resources for working with Amazon MQ.
+
+
+
+Resource
+Description
+
+
+
+
+Amazon MQ REST API Reference
+Descriptions of REST resources, example requests, HTTP methods, schemas, parameters, and the errors that the service returns.
+
+
+Amazon MQ in the AWS CLI Command Reference
+Descriptions of the AWS CLI commands that you can use to work with message brokers.
+
+
+Amazon MQ in the AWS CloudFormation User Guide
+The https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html resource lets you create Amazon MQ brokers, add configuration changes or modify users for the specified broker, return information about the specified broker, and delete the specified broker.The https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html resource lets you create Amazon MQ configurations, add configuration changes or modify users, and return information about the specified configuration.
+
+
+Regions and Endpoints
+Information about Amazon MQ regions and endpoints
+
+
+Product Page
+The primary web page for information about Amazon MQ.
+
+
+Discussion Forum
+A community-based forum for developers to discuss technical questions related to Amazon MQ.
+
+
+AWS Premium Support Information
+The primary web page for information about AWS Premium Support, a one-on-one, fast-response support channel to help you build and run applications on AWS infrastructure services
+
+
+
+Apache ActiveMQ Resources
+The following table lists useful resources for working with Apache ActiveMQ.
+
+
+
+Resource
+Description
+
+
+
+
+Apache ActiveMQ Getting Started Guide
+The official documentation of Apache ActiveMQ.
+
+
+ActiveMQ in Action
+A guide to Apache ActiveMQ that covers the anatomy of JMS messages, connectors, message persistence, authentication, and authorization.
+
+
+Cross-Language Clients
+A list of programming languages and corresponding Apache ActiveMQ libraries. See also ActiveMQ Client and QpidJMS Client.
+
+

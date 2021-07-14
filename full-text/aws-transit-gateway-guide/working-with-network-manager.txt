@@ -1,0 +1,6 @@
+Working with Network Manager resources
+You can work with Network Manager using the Network Manager console or the AWS CLI.
+Topics
+ Global networks
+ Transit gateway registrations
+ On-premises network

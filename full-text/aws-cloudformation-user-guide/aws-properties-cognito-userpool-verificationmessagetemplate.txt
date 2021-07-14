@@ -1,0 +1,67 @@
+AWS::Cognito::UserPool VerificationMessageTemplate
+The template for verification messages.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DefaultEmailOption](#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption)" : String,
+  "[EmailMessage](#cfn-cognito-userpool-verificationmessagetemplate-emailmessage)" : String,
+  "[EmailMessageByLink](#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink)" : String,
+  "[EmailSubject](#cfn-cognito-userpool-verificationmessagetemplate-emailsubject)" : String,
+  "[EmailSubjectByLink](#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink)" : String,
+  "[SmsMessage](#cfn-cognito-userpool-verificationmessagetemplate-smsmessage)" : String
+}
+YAML
+[DefaultEmailOption](#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption): String
+  [EmailMessage](#cfn-cognito-userpool-verificationmessagetemplate-emailmessage): String
+  [EmailMessageByLink](#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink): String
+  [EmailSubject](#cfn-cognito-userpool-verificationmessagetemplate-emailsubject): String
+  [EmailSubjectByLink](#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink): String
+  [SmsMessage](#cfn-cognito-userpool-verificationmessagetemplate-smsmessage): String
+Properties
+DefaultEmailOption 
+The default email option.
+Required: No
+Type: String
+Allowed values: CONFIRM_WITH_CODE | CONFIRM_WITH_LINK
+Update requires: No interruption
+EmailMessage 
+The email message template.
+Required: No
+Type: String
+Minimum: 6
+Maximum: 20000
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*
+Update requires: No interruption
+EmailMessageByLink 
+The email message template for sending a confirmation link to the user.
+Required: No
+Type: String
+Minimum: 6
+Maximum: 20000
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{##[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*##\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*
+Update requires: No interruption
+EmailSubject 
+The subject line for the email message template.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 140
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s]
+Update requires: No interruption
+EmailSubjectByLink 
+The subject line for the email message template for sending a confirmation link to the user.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 140
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s]
+Update requires: No interruption
+SmsMessage 
+The SMS message template.
+Required: No
+Type: String
+Minimum: 6
+Maximum: 140
+Pattern: .*\{####\}.*
+Update requires: No interruption

@@ -1,0 +1,77 @@
+Document history for the AWS Encryption SDK Developer Guide
+This topic describes significant updates to the AWS Encryption SDK Developer Guide.
+Topics
+ Recent updates
+ Earlier updates
+Recent updates
+The following table describes significant changes to this documentation since November 2017. In addition to major changes listed here, we also update the documentation frequently to improve the descriptions and examples, and to address the feedback that you send to us. To be notified about significant changes, use the link in the upper right corner to subscribe to the RSS feed.
+Latest documentation update: February 5, 2019
+
+
+
+Change
+Description
+Date
+
+
+
+
+General availability
+Added and updated documentation for the general availability release of the AWS Encryption SDK for JavaScript.
+October 1, 2019
+
+
+Preview release
+Added and updated documentation of the public beta release of the AWS Encryption SDK for JavaScript.
+June 21, 2019
+
+
+General availability
+Added and updated documentation for the general availability release of the AWS Encryption SDK for C.
+May 16, 2019
+
+
+Preview release
+Added documentation of the preview release of the AWS Encryption SDK for C.
+February 5, 2019
+
+
+New release
+Added documentation of the command line interface for the AWS Encryption SDK.
+November 20, 2017
+
+
+
+Earlier updates
+The following table describes significant changes to the AWS Encryption SDK Developer Guide before November 2017.
+
+
+
+
+Change
+Description
+Date
+
+
+
+
+New release
+Added the Data key caching chapter for the new feature. Added the AWS Encryption SDK initialization vector reference topic that explains that the SDK changed from generating random IVs to constructing deterministic IVs. Added the Concepts in the AWS Encryption SDK topic to explain concepts, including the new cryptographic materials manager.
+July 31, 2017
+
+
+Update
+Expanded the Message format reference documentation into a new AWS Encryption SDK reference section. Added a section about the AWS Encryption SDK Supported algorithm suites.
+March 21, 2017
+
+
+New release
+The AWS Encryption SDK now supports the Python programming language, in addition to Java.
+March 21, 2017
+
+
+Initial release
+Initial release of the AWS Encryption SDK and this documentation.
+March 22, 2016
+
+

@@ -1,0 +1,73 @@
+Review Recorded Conversations
+Managers can review past conversations between agents and customers. To set this up, you need to set up recording behavior, assign managers the appropriate permissions, and then show them how to access the recorded conversations. 
+A conversation is recorded only when the contact is connected to an agent. The contact is not recorded before then, when they are connected to the IVR. 
+Assign Permissions to Review Recordings of Past Conversations
+These permissions enable managers to access recordings of past conversations. 
+To assign a manager permissions to review recordings of past conversations
+
+
+Go to Users, User management, choose the manager, and then choose Edit.
+
+
+In the Security Profiles box, assign the manager to the CallCenterManager security profile. This security profile also includes a setting that makes the icon to download recordings appear in the results of the Contact search page. 
+
+
+If you also want the manager to monitor live conversations, assign the manager to the Agent security profile so they can access the Contact Control Panel. This is so they can monitor the conversation through the Contact Control Panel.
+
+
+Choose Save. 
+
+
+Or, to create a new security profile specific for this purpose
+
+
+Choose Users, User management, Security profiles. 
+
+
+Choose Add new security profile. 
+
+
+Expand Metrics and Quality, then choose Manager monitor and Recorded conversations (choose both Access and Enable download button). 
+
+
+If you also want the manager to monitor live conversations, assign the manager to the Agent security profile so they can access the Contact Control Panel. This is so they can monitor the conversation through the Contact Control Panel.
+
+
+Choose Save. 
+
+
+Review or Download Recordings/Transcripts of Past Conversations
+These are the steps that a manager does to review or download past recordings/transcripts of conversations.
+
+
+Log in to Amazon Connect with a user account that is assigned the CallCenterManager security profile, or that is enabled for the Manager monitor permission.
+
+
+In Amazon Connect choose Metrics and quality, Contact search. 
+
+
+Filter the list of contacts by date, agent login, phone number, or other criteria. Choose Search.
+
+
+Conversations that were recorded will have icons in the Recording column. Click to review the recording, download, or delete it. If you choose to download the recording, it will be saved automatically to your Downloads folder. 
+
+
+Here's what a sample transcript looks like:
+
+Search for Recordings by Contact ID
+To find a recording of a specific contact, you only need the contact ID. You don't need to know the date range, agent, or any other information about the contact. 
+
+
+Log in to Amazon Connect with a user account that is assigned the CallCenterManager security profile, or that is enabled for the Contact search and Manager monitor permissions.
+
+
+In Amazon Connect choose Metrics and quality, Contact search. 
+
+
+In the Contact ID, enter the contact ID, and then choose Search.
+
+
+Conversations that were recorded will have icons in the Recording column. If you don't have Manager monitor permissions, you won't see this icon (or be able to review the recordings). 
+
+
+To learn more about searching, see Contact Search.

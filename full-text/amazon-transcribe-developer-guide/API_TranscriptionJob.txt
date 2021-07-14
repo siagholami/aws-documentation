@@ -1,0 +1,96 @@
+TranscriptionJob
+Describes an asynchronous transcription job that was created with the StartTranscriptionJob operation. 
+Contents
+CompletionTime 
+A timestamp that shows when the job was completed.
+Type: Timestamp
+Required: No
+ContentRedaction 
+An object that describes content redaction settings for the transcription job.
+Type: ContentRedaction object
+Required: No
+CreationTime 
+A timestamp that shows when the job was created.
+Type: Timestamp
+Required: No
+FailureReason 
+If the TranscriptionJobStatus field is FAILED, this field contains information about why the job failed.
+The FailureReason field can contain one of the following values:
+  Unsupported media format - The media format specified in the MediaFormat field of the request isn't valid. See the description of the MediaFormat field for a list of valid values.
+  The media format provided does not match the detected media format - The media format of the audio file doesn't match the format specified in the MediaFormat field in the request. Check the media format of your media file and make sure that the two values match.
+  Invalid sample rate for audio file - The sample rate specified in the MediaSampleRateHertz of the request isn't valid. The sample rate must be between 8000 and 48000 Hertz.
+  The sample rate provided does not match the detected sample rate - The sample rate in the audio file doesn't match the sample rate specified in the MediaSampleRateHertz field in the request. Check the sample rate of your media file and make sure that the two values match.
+  Invalid file size: file size too large - The size of your audio file is larger than Amazon Transcribe can process. For more information, see Limits in the Amazon Transcribe Developer Guide.
+  Invalid number of channels: number of channels too large - Your audio contains more channels than Amazon Transcribe is configured to process. To request additional channels, see Amazon Transcribe Limits in the Amazon Web Services General Reference.
+Type: String
+Required: No
+IdentifiedLanguageScore 
+The score that Amazon Transcribe gives for the predominant language that it identified in your collection of source audio files. This score reflects the confidence that the language that Amazon Transcribe identified is the correct language.
+Type: Float
+Required: No
+IdentifyLanguage 
+A value that shows if automatic language identification was enabled for a transcription job.
+Type: Boolean
+Required: No
+JobExecutionSettings 
+Provides information about how a transcription job is executed.
+Type: JobExecutionSettings object
+Required: No
+LanguageCode 
+The language code for the input speech.
+Type: String
+Valid Values:af-ZA | ar-AE | ar-SA | cy-GB | da-DK | de-CH | de-DE | en-AB | en-AU | en-GB | en-IE | en-IN | en-US | en-WL | es-ES | es-US | fa-IR | fr-CA | fr-FR | ga-IE | gd-GB | he-IL | hi-IN | id-ID | it-IT | ja-JP | ko-KR | ms-MY | nl-NL | pt-BR | pt-PT | ru-RU | ta-IN | te-IN | tr-TR | zh-CN 
+Required: No
+LanguageOptions 
+An object that shows the optional array of languages inputted for transcription jobs with automatic language identification enabled.
+Type: Array of strings
+Array Members: Minimum number of 2 items.
+Valid Values:af-ZA | ar-AE | ar-SA | cy-GB | da-DK | de-CH | de-DE | en-AB | en-AU | en-GB | en-IE | en-IN | en-US | en-WL | es-ES | es-US | fa-IR | fr-CA | fr-FR | ga-IE | gd-GB | he-IL | hi-IN | id-ID | it-IT | ja-JP | ko-KR | ms-MY | nl-NL | pt-BR | pt-PT | ru-RU | ta-IN | te-IN | tr-TR | zh-CN 
+Required: No
+Media 
+An object that describes the input media for the transcription job.
+Type: Media object
+Required: No
+MediaFormat 
+The format of the input media file.
+Type: String
+Valid Values:mp3 | mp4 | wav | flac 
+Required: No
+MediaSampleRateHertz 
+The sample rate, in Hertz, of the audio track in the input media file. 
+Type: Integer
+Valid Range: Minimum value of 8000. Maximum value of 48000.
+Required: No
+ModelSettings 
+An object containing the details of your custom language model.
+Type: ModelSettings object
+Required: No
+Settings 
+Optional settings for the transcription job. Use these settings to turn on speaker recognition, to set the maximum number of speakers that should be identified and to specify a custom vocabulary to use when processing the transcription job.
+Type: Settings object
+Required: No
+StartTime 
+A timestamp that shows with the job was started processing.
+Type: Timestamp
+Required: No
+Transcript 
+An object that describes the output of the transcription job.
+Type: Transcript object
+Required: No
+TranscriptionJobName 
+The name of the transcription job.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: ^[0-9a-zA-Z._-] 
+Required: No
+TranscriptionJobStatus 
+The status of the transcription job.
+Type: String
+Valid Values:QUEUED | IN_PROGRESS | FAILED | COMPLETED 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,62 @@
+Update the callback or single sign-on URL in IdP
+
+
+Locate the public IP address of the master node and the master instance ID in your cluster by using the console or CLI.
+
+
+Set up a callback URL in your IdP account:
+    When using AD FS as your IDP, complete the following steps:
+
+
+From the AD FS Management Console, go to Relying Party Trusts.
+
+
+Right-click the display name of your replying party trust, and choose Properties.
+
+
+In the Properties window, choose the Endpoints tab. 
+
+
+Select the temporary URL that you provided previously, then choose edit. 
+
+
+In the Edit Endpoint window, update the Trusted URL with the correct DNS name for your master node. 
+
+
+In the Add an Endpoint window, fill in the Trusted URL box with your master node public DNS. For example, 
+https://ec2-11-111-11-111.compute-1.amazonaws.com:8442/gateway/knoxsso/api/v1/websso?pac4jCallback=true&client_name=SAML2Client
+
+
+Choose OK.
+    When using Auth0 as your IdP, complete the following steps: 
+
+
+Go to https://auth0.com/ and log in.
+
+
+In the left panel, choose Applications. 
+
+
+Select your previously created application. 
+
+
+On the Settings tab, update Allowed Callback URLs with your master node public DNS. 
+    When using Okta as your IdP, complete the following steps:
+
+
+Go to https://developer.okta.com/ and log in.
+
+
+In the top right corner, choose Admin, then choose the Applications tab. 
+
+
+Select your application name.
+
+
+On the General tab under your application name, choose SAML Settings, then choose Edit. 
+
+
+On the Configure SAML tab, update Single-sign on URL with your master node public DNS.
+
+
+

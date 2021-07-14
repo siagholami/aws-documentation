@@ -1,0 +1,10 @@
+Amazon Lex Runtime Service
+The following data types are supported by Amazon Lex Runtime Service:
+  Button 
+  DialogAction 
+  GenericAttachment 
+  IntentConfidence 
+  IntentSummary 
+  PredictedIntent 
+  ResponseCard 
+  SentimentResponse 

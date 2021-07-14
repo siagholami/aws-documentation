@@ -1,0 +1,6 @@
+Install the Server Migration Connector
+The Server Migration Connector is a FreeBSD VM that you install in your on-premises virtualization environment. The supported platforms are VMware vSphere, Microsoft Hyper-V/SCVMM, and Microsoft Azure.
+Topics
+ Install on VMware
+ Install on Hyper-V
+ Install on Azure

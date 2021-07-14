@@ -1,0 +1,33 @@
+Migrating to Amazon MQ without Service Interruption
+The following diagrams illustrate the scenario of migrating from an on-premises message broker to an Amazon MQ broker in the AWS Cloud without service interruption.
+Important
+This scenario might cause messages to be delivered out of order. If you're concerned about message ordering, follow the steps in Migrating to Amazon MQ with Service Interruption.
+
+
+
+On-Premises Message Broker
+Migration to Amazon MQ with Standard (Unordered) Queues
+
+
+
+
+
+
+
+
+
+To migrate to Amazon MQ without service interruption
+Create and configure an Amazon MQ broker and note your broker's endpoint, for example:
+ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617
+ For either of the following cases, use the Failover Transport to allow your consumers to randomly connect to your on-premises broker's endpoint or your Amazon MQ broker's endpoint. For example:
+failover:(ssl://on-premises-broker.example.com:61617,ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)?randomize=true
+Do one of the following:
+ One by one, point each existing consumer to your Amazon MQ broker's endpoint.
+ Create new consumers and point them to your Amazon MQ broker's endpoint.
+Note
+If you scale up your consumer fleet during the migration process, it is a best practice to scale it down afterward.
+ One by one, stop each existing producer, point the producer to your Amazon MQ broker's endpoint, and then restart the producer.
+ Wait for your consumers to drain the destinations on your on-premises broker.
+ Change your consumers' Failover transport to include only your Amazon MQ broker's endpoint. For example:
+failover:(ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617)
+ Stop your on-premises broker.

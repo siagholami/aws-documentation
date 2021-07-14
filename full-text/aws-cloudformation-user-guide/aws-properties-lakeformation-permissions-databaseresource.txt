@@ -1,0 +1,16 @@
+AWS::LakeFormation::Permissions DatabaseResource
+A structure for the database object.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-lakeformation-permissions-databaseresource-name)" : String
+}
+YAML
+[Name](#cfn-lakeformation-permissions-databaseresource-name): String
+Properties
+Name 
+The name of the database resource. Unique to the Data Catalog.
+Required: No
+Type: String
+Update requires: No interruption

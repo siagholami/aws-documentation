@@ -1,0 +1,2 @@
+Supported AWS Regions
+AWS Storage Gateway Hardware Appliance is only available in the US and Europe. You can connect your appliance to one of the AWS Region endpoints in the US or Europe. For information about supported AWS Regions, see AWS Storage Gateway Hardware Appliance Regions in the AWS General Reference.

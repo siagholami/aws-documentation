@@ -1,0 +1,36 @@
+Troubleshooting identity and access issues for AWS IoT Greengrass
+Use the following information to help you diagnose and fix common issues that you might encounter when working with AWS IoT Greengrass and IAM.
+Topics
+ I'm not authorized to perform an action in AWS IoT Greengrass
+ Error: Greengrass is not authorized to assume the Service Role associated with this account, or the error: Failed: TES service role is not associated with this account.
+ Error: Permission denied when attempting to use role arn:aws:iam:::role/ to access s3 url https://-greengrass-updates.s3..amazonaws.com/core//greengrass-core-.tar.gz.
+ Device shadow does not sync with the cloud.
+ I'm not authorized to perform iam:PassRole
+ I'm an administrator and want to allow others to access AWS IoT Greengrass
+ I want to allow people outside of my AWS account to access my AWS IoT Greengrass resources
+For general troubleshooting help, see Troubleshooting AWS IoT Greengrass.
+I'm not authorized to perform an action in AWS IoT Greengrass
+If you receive an error that states you're not authorized to perform an action, you must contact your administrator for assistance. Your administrator is the person who provided you with your user name and password.
+The following example error occurs when the mateojackson IAM user tries to view details about a core definition version, but does not have greengrass:GetCoreDefinitionVersion permissions.
+User: arn:aws:iam::123456789012:user/mateojackson is not authorized to perform: greengrass:GetCoreDefinitionVersion on resource: resource: arn:aws:greengrass:us-west-2:123456789012:/greengrass/definition/cores/78cd17f3-bc68-ee18-47bd-5bda5EXAMPLE/versions/368e9ffa-4939-6c75-859c-0bd4cEXAMPLE
+In this case, Mateo asks his administrator to update his policies to allow him to access the arn:aws:greengrass:us-west-2:123456789012:/greengrass/definition/cores/78cd17f3-bc68-ee18-47bd-5bda5EXAMPLE/versions/368e9ffa-4939-6c75-859c-0bd4cEXAMPLE resource using the greengrass:GetCoreDefinitionVersion action.
+Error: Greengrass is not authorized to assume the Service Role associated with this account, or the error: Failed: TES service role is not associated with this account.
+Solution: You might see this error when the deployment fails. Check that a Greengrass service role is associated with your AWS account in the current AWS Region. For more information, see Managing the Greengrass service role (CLI) or Managing the Greengrass service role (console).
+Error: Permission denied when attempting to use role arn:aws:iam:::role/ to access s3 url https://-greengrass-updates.s3..amazonaws.com/core//greengrass-core-.tar.gz.
+Solution: You might see this error when an over-the-air (OTA) update fails. In the signer role policy, add the target AWS Region as a Resource. This signer role is used to presign the S3 URL for the AWS IoT Greengrass software update. For more information, see S3 URL signer role.
+Device shadow does not sync with the cloud.
+Solution: Make sure that AWS IoT Greengrass has permissions for iot:UpdateThingShadow and iot:GetThingShadow actions in the Greengrass service role. If the service role uses the AWSGreengrassResourceAccessRolePolicy managed policy, these permissions are included by default.
+See Troubleshooting shadow synchronization timeout issues.
+The following are general IAM issues that you might encounter when working with AWS IoT Greengrass.
+I'm not authorized to perform iam:PassRole
+If you receive an error that you're not authorized to perform the iam:PassRole action, then you must contact your administrator for assistance. Your administrator is the person that provided you with your user name and password. Ask that person to update your policies to allow you to pass a role to AWS IoT Greengrass.
+Some AWS services allow you to pass an existing role to that service, instead of creating a new service role or service-linked role. To do this, you must have permissions to pass the role to the service.
+The following example error occurs when an IAM user named marymajor tries to use the console to perform an action in AWS IoT Greengrass. However, the action requires the service to have permissions granted by a service role. Mary does not have permissions to pass the role to the service.
+User: arn:aws:iam::123456789012:user/marymajor is not authorized to perform: iam:PassRole
+In this case, Mary asks her administrator to update her policies to allow her to perform the iam:PassRole action.
+I'm an administrator and want to allow others to access AWS IoT Greengrass
+To allow others to access AWS IoT Greengrass, you must create an IAM entity (user or role) for the person or application that needs access. They will use the credentials for that entity to access AWS. You must then attach a policy to the entity that grants them the correct permissions in AWS IoT Greengrass.
+To get started right away, see Creating Your First IAM Delegated User and Group in the IAM User Guide.
+I want to allow people outside of my AWS account to access my AWS IoT Greengrass resources
+You can create an IAM role that users in other accounts or people outside of your organization can use to access your AWS resources. You can specify the who is trusted to assume the role. For more information, see Providing access to an IAM user in another AWS account that you own and Providing access to AWS accounts owned by third parties in the IAM User Guide.
+AWS IoT Greengrass doesn't support cross-account access based on resource-based policies or access control lists (ACLs).

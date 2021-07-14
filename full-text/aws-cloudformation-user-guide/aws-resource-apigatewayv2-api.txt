@@ -1,0 +1,180 @@
+AWS::ApiGatewayV2::Api
+The AWS::ApiGatewayV2::Api resource creates an API. WebSocket APIs and HTTP APIs are supported. For more information about WebSocket APIs, see About WebSocket APIs in API Gateway in the API Gateway Developer Guide. For more information about HTTP APIs, see HTTP APIs in the API Gateway Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGatewayV2::Api",
+  "Properties" : {
+      "[ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression)" : String,
+      "[BasePath](#cfn-apigatewayv2-api-basepath)" : String,
+      "[Body](#cfn-apigatewayv2-api-body)" : Json,
+      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : BodyS3Location,
+      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : Cors,
+      "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
+      "[Description](#cfn-apigatewayv2-api-description)" : String,
+      "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
+      "[FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings)" : Boolean,
+      "[Name](#cfn-apigatewayv2-api-name)" : String,
+      "[ProtocolType](#cfn-apigatewayv2-api-protocoltype)" : String,
+      "[RouteKey](#cfn-apigatewayv2-api-routekey)" : String,
+      "[RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression)" : String,
+      "[Tags](#cfn-apigatewayv2-api-tags)" : Json,
+      "[Target](#cfn-apigatewayv2-api-target)" : String,
+      "[Version](#cfn-apigatewayv2-api-version)" : String
+    }
+}
+YAML
+Type: AWS::ApiGatewayV2::Api
+Properties: 
+  [ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression): String
+  [BasePath](#cfn-apigatewayv2-api-basepath): String
+  [Body](#cfn-apigatewayv2-api-body): Json
+  [BodyS3Location](#cfn-apigatewayv2-api-bodys3location): 
+    BodyS3Location
+  [CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration): 
+    Cors
+  [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
+  [Description](#cfn-apigatewayv2-api-description): String
+  [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
+  [FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings): Boolean
+  [Name](#cfn-apigatewayv2-api-name): String
+  [ProtocolType](#cfn-apigatewayv2-api-protocoltype): String
+  [RouteKey](#cfn-apigatewayv2-api-routekey): String
+  [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression): String
+  [Tags](#cfn-apigatewayv2-api-tags): Json
+  [Target](#cfn-apigatewayv2-api-target): String
+  [Version](#cfn-apigatewayv2-api-version): String
+Properties
+ApiKeySelectionExpression 
+An API key selection expression. Supported only for WebSocket APIs. See API Key Selection Expressions.
+Required: No
+Type: String
+Update requires: No interruption
+BasePath 
+Specifies how to interpret the base path of the API during import. Valid values are ignore, prepend, and split. The default value is ignore. To learn more, see Set the OpenAPI basePath Property. Supported only for HTTP APIs.
+Required: No
+Type: String
+Update requires: No interruption
+Body 
+The OpenAPI definition. Supported only for HTTP APIs. To import an HTTP API, you must specify a Body or BodyS3Location.
+Required: Conditional
+Type: Json
+Update requires: No interruption
+BodyS3Location 
+The S3 location of an OpenAPI definition. Supported only for HTTP APIs. To import an HTTP API, you must specify a Body or BodyS3Location.
+Required: Conditional
+Type: BodyS3Location
+Update requires: No interruption
+CorsConfiguration 
+A CORS configuration. Supported only for HTTP APIs. See Configuring CORS for more information.
+Required: No
+Type: Cors
+Update requires: No interruption
+CredentialsArn 
+This property is part of quick create. It specifies the credentials required for the integration, if any. For a Lambda integration, three options are available. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To require that the caller's identity be passed through from the request, specify arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null. Currently, this property is not used for HTTP integrations. Supported only for HTTP APIs.
+Required: No
+Type: String
+Update requires: No interruption
+Description 
+The description of the API.
+Required: No
+Type: String
+Update requires: No interruption
+DisableSchemaValidation 
+Avoid validating models when creating a deployment. Supported only for WebSocket APIs.
+Required: No
+Type: Boolean
+Update requires: No interruption
+FailOnWarnings 
+Specifies whether to rollback the API creation when a warning is encountered. By default, API creation continues if a warning is encountered.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Name 
+The name of the API. Required unless you specify an OpenAPI definition for Body or S3BodyLocation.
+Required: Conditional
+Type: String
+Update requires: No interruption
+ProtocolType 
+The API protocol. Valid values are WEBSOCKET or HTTP. Required unless you specify an OpenAPI definition for Body or S3BodyLocation.
+Required: Conditional
+Type: String
+Update requires: Replacement
+RouteKey 
+This property is part of quick create. If you don't specify a routeKey, a default route of $default is created. The $default route acts as a catch-all for any request made to your API, for a particular stage. The $default route key can't be modified. You can add routes after creating the API, and you can update the route keys of additional routes. Supported only for HTTP APIs.
+Required: No
+Type: String
+Update requires: No interruption
+RouteSelectionExpression 
+The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.
+Required: Conditional
+Type: String
+Update requires: No interruption
+Tags 
+The collection of tags. Each tag element is associated with a given resource.
+Required: No
+Type: Json
+Update requires: No interruption
+Target 
+This property is part of quick create. Quick create produces an API with an integration, a default catch-all route, and a default stage which is configured to automatically deploy changes. For HTTP integrations, specify a fully qualified URL. For Lambda integrations, specify a function ARN. The type of the integration will be HTTP_PROXY or AWS_PROXY, respectively. Supported only for HTTP APIs.
+Required: No
+Type: String
+Update requires: No interruption
+Version 
+A version identifier for the API.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the API ID, such as a1bcdef2gh.
+For more information about using the Ref function, see Ref.
+Examples
+API creation example
+The following example creates a WebSocket Api resource called MyApi.
+JSON
+{
+    "MyApi": {
+      "Type": "AWS::ApiGatewayV2::Api",
+      "Properties": {
+        "Name": "MyApi",
+        "ProtocolType": "WEBSOCKET",
+        "RouteSelectionExpression": "$request.body.action",
+        "ApiKeySelectionExpression": "$request.header.x-api-key"
+      }
+   }
+}
+YAML
+MyApi:
+  Type: 'AWS::ApiGatewayV2::Api'
+  Properties:
+    Name: MyApi
+    ProtocolType: WEBSOCKET
+    RouteSelectionExpression: $request.body.action
+    ApiKeySelectionExpression: $request.header.x-api-key
+Quick create HTTP API
+The following example uses quick create to launch an HTTP API Api resource called HttpApi that's integrated with a Lambda function. Quick create produces an HTTP API with an integration, a default catch-all route, and a default stage which is configured to automatically deploy changes.
+Note
+To invoke a Lambda integration, API Gateway must have the required permissions. You can use a resource-based policy or an IAM role to grant API Gateway permissions to invoke a Lambda function. To learn more, see AWS Lambda Permissions in the * AWS Lambda Developer Guide*.
+JSON
+"HttpApi": {
+    "Type": "AWS::ApiGatewayV2::Api",
+    "Properties": {
+        "Name": "Lambda Proxy",
+        "Description": "Lambda proxy using quick create",
+        "ProtocolType": "HTTP",
+        "Target": "arn:aws:apigateway:{region}:lambda:path/2015-03-31/functions/arn:aws:lambda:{region}:{account-id}:function:{function-name}/invocations"
+     }
+}
+YAML
+HttpApi:
+  Type: AWS::ApiGatewayV2::Api
+  Properties:
+    Name: Lambda Proxy
+    Description: Lambda proxy using quick create
+    ProtocolType: HTTP
+    Target: arn:aws:apigateway:{region}:lambda:path/2015-03-31/functions/arn:aws:lambda:{region}:{account-id}:function:{function-name}/invocations
+See also
+
+CreateApi in the Amazon API Gateway Version 2 API Reference

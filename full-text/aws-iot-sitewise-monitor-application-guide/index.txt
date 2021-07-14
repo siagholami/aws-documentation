@@ -1,0 +1,45 @@
+AWS IoT SiteWise Monitor Application Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS IoT SiteWise Monitor?
+Getting started with AWS IoT SiteWise Monitor
+Getting started as an AWS IoT SiteWise Monitor portal administrator
+Getting started as an AWS IoT SiteWise Monitor project owner
+Getting started as an AWS IoT SiteWise Monitor project viewer
+Exploring assets
+Viewing asset data
+Adding assets to projects
+Adding asset properties to dashboards
+Sharing data with AWS IoT SiteWise Monitor projects
+Creating projects
+Viewing project details
+Adding assets to projects
+Assigning project owners
+Assigning project viewers
+Changing project details
+Deleting projects
+Visualizing data with AWS IoT SiteWise Monitor dashboards
+Viewing dashboards
+Creating dashboards
+Adding visualizations
+Customizing visualizations
+Choosing visualization types
+Configuring thresholds
+Configuring trend lines
+
+
+Adjusting dashboard layout
+Deleting dashboards
+Keyboard and mouse shortcuts
+Document history for the AWS IoT SiteWise Monitor Application Guide

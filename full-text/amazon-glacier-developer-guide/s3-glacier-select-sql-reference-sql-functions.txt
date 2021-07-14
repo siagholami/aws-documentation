@@ -1,0 +1,8 @@
+SQL Functions
+Amazon S3 Select and S3 Glacier Select support several SQL functions.
+Topics
+ Aggregate Functions (Amazon S3 Select only)
+ Conditional Functions
+ Conversion Functions
+ Date Functions
+ String Functions

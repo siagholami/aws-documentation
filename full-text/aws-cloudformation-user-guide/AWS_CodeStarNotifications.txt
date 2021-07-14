@@ -1,0 +1,3 @@
+CodeStarNotifications resource type reference
+Resource types
+ AWS::CodeStarNotifications::NotificationRule

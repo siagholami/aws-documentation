@@ -1,0 +1,19 @@
+AWS Management Console
+To delete the Music table using the console:
+
+
+Open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Tables.
+
+
+Choose the Music table from the table list.
+
+
+Choose the Indexes tab for the Music table.
+
+
+Choose Delete table.
+
+

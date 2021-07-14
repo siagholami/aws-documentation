@@ -1,0 +1,17 @@
+
+
+IoT Domain Constructs
+The AWS IoT Things Graph Data Model (TDM) provides specialized constructs for IoT-specific scenarios. This section describes the constructs and their properties. It also provides GraphQL examples that show how to create these constructs.
+Topics
+ State
+ Mapping
+ Event
+ Action
+ Capability
+ Device Model
+ Device
+ Service
+ Workflow
+ System
+ Trigger
+ Deployments

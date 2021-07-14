@@ -1,0 +1,144 @@
+
+
+DescribeIndex
+Describes an existing Amazon Kendra index
+Request Syntax
+{
+   "Id": "string"
+}
+Request Parameters
+For information about the parameters that are common to all actions, see Common Parameters.
+The request accepts the following data in JSON format.
+ Id  
+The name of the index to describe.
+Type: String
+Length Constraints: Fixed length of 36.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9-]* 
+Required: Yes
+Response Syntax
+{
+   "CapacityUnits": { 
+      "QueryCapacityUnits": number,
+      "StorageCapacityUnits": number
+   },
+   "CreatedAt": number,
+   "Description": "string",
+   "DocumentMetadataConfigurations": [ 
+      { 
+         "Name": "string",
+         "Relevance": { 
+            "Duration": "string",
+            "Freshness": boolean,
+            "Importance": number,
+            "RankOrder": "string",
+            "ValueImportanceMap": { 
+               "string" : number 
+            }
+         },
+         "Search": { 
+            "Displayable": boolean,
+            "Facetable": boolean,
+            "Searchable": boolean,
+            "Sortable": boolean
+         },
+         "Type": "string"
+      }
+   ],
+   "Edition": "string",
+   "ErrorMessage": "string",
+   "Id": "string",
+   "IndexStatistics": { 
+      "FaqStatistics": { 
+         "IndexedQuestionAnswersCount": number
+      },
+      "TextDocumentStatistics": { 
+         "IndexedTextBytes": number,
+         "IndexedTextDocumentsCount": number
+      }
+   },
+   "Name": "string",
+   "RoleArn": "string",
+   "ServerSideEncryptionConfiguration": { 
+      "KmsKeyId": "string"
+   },
+   "Status": "string",
+   "UpdatedAt": number
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ CapacityUnits  
+For enterprise edtion indexes, you can choose to use additional capacity to meet the needs of your application. This contains the capacity units used for the index. A 0 for the query capacity or the storage capacity indicates that the index is using the default capacity for the index.
+Type: CapacityUnitsConfiguration object
+ CreatedAt  
+The Unix datetime that the index was created.
+Type: Timestamp
+ Description  
+The description of the index.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1000.
+Pattern: ^\P{C}*$ 
+ DocumentMetadataConfigurations  
+Configuration settings for any metadata applied to the documents in the index.
+Type: Array of DocumentMetadataConfiguration objects
+Array Members: Minimum number of 0 items. Maximum number of 500 items.
+ Edition  
+The Amazon Kendra edition used for the index. You decide the edition when you create the index.
+Type: String
+Valid Values:DEVELOPER_EDITION | ENTERPRISE_EDITION 
+ ErrorMessage  
+When th eStatus field value is FAILED, the ErrorMessage field contains a message that explains why.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 2048.
+Pattern: ^\P{C}*$ 
+ Id  
+the name of the index.
+Type: String
+Length Constraints: Fixed length of 36.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9-]* 
+ IndexStatistics  
+Provides information about the number of FAQ questions and answers and the number of text documents indexed.
+Type: IndexStatistics object
+ Name  
+The name of the index.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1000.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+ RoleArn  
+The Amazon Resource Name (ARN) of the IAM role that gives Amazon Kendra permission to write to your Amazon Cloudwatch logs.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1284.
+Pattern: arn:[a-z0-9-\.]{1,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[^/].{0,1023} 
+ ServerSideEncryptionConfiguration  
+The identifier of the AWS KMS customer master key (CMK) used to encrypt your data. Amazon Kendra doesn't support asymmetric CMKs.
+Type: ServerSideEncryptionConfiguration object
+ Status  
+The current status of the index. When the value is ACTIVE, the index is ready for use. If the Status field value is FAILED, the ErrorMessage field contains a message that explains why.
+Type: String
+Valid Values:CREATING | ACTIVE | DELETING | FAILED | UPDATING | SYSTEM_UPDATING 
+ UpdatedAt  
+The Unix datetime that the index was last updated.
+Type: Timestamp
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+AccessDeniedException 
+HTTP Status Code: 400
+InternalServerException 
+HTTP Status Code: 500
+ResourceNotFoundException 
+HTTP Status Code: 400
+ThrottlingException 
+HTTP Status Code: 400
+ValidationException 
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,179 @@
+Amazon AppStream 2.0 Administration Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon AppStream 2.0?
+Setting Up for Amazon AppStream 2.0
+Get Started with Amazon AppStream 2.0: Set Up With Sample Applications
+Networking and Access for Amazon AppStream 2.0
+Internet Access
+Configure a VPC for AppStream 2.0
+VPC Setup Recommendations
+Configure a VPC with Private Subnets and a NAT Gateway
+Create and Configure a New VPC
+Add a NAT Gateway to an Existing VPC
+Enable Internet Access for Your Fleet and Image Builder
+
+
+Configure a New or Existing VPC with a Public Subnet
+Use the Default VPC, Public Subnet, and Security Group
+
+
+Using Amazon S3 VPC Endpoints for Home Folders and Application Settings Persistence
+Amazon AppStream 2.0 Connections to Your VPC
+User Connections to Amazon AppStream 2.0
+Bandwidth Recommendations
+IP Address and Port Requirements for AppStream 2.0 User Devices
+Allowed Domains
+
+
+Image Builders
+Launch an Image Builder to Install and Configure Streaming Applications
+Image Builder Actions
+Instance Metadata for AppStream 2.0 Image Builders
+AppStream 2.0 Base Image Version History
+Images
+Default Application and Windows Settings and Application Launch Performance
+Manage AppStream 2.0 Agent Versions
+AppStream 2.0 Agent Version History
+Tutorial: Create a Custom AppStream 2.0 Image by Using the AppStream 2.0 Console
+Administer Your Amazon AppStream 2.0 Images
+Create Your AppStream 2.0 Image Programmatically by Using the Image Assistant CLI Operations
+Use Session Scripts to Manage Your AppStream 2.0 Users' Streaming Experience
+Fleets and Stacks
+AppStream 2.0 Instance Families
+Create an AppStream 2.0 Fleet and Stack
+Customize an AppStream 2.0 Fleet to Optimize Your Users' Application Streaming Experience
+Update an AppStream 2.0 Fleet with a New Image
+Fleet Auto Scaling for Amazon AppStream 2.0
+Using Active Directory with AppStream 2.0
+Overview of Active Directory Domains
+Before You Begin Using Active Directory with AppStream 2.0
+Tutorial: Setting Up Active Directory
+AppStream 2.0 Active Directory Administration
+More Info
+Add Your Custom Branding to Amazon AppStream 2.0
+Embed AppStream 2.0 Streaming Sessions
+Enable and Administer Persistent Storage for Your AppStream 2.0 Users
+Enable and Administer Home Folders for Your AppStream 2.0 Users
+Enable and Administer Google Drive for Your AppStream 2.0 Users
+Enable and Administer OneDrive for Business for Your AppStream 2.0 Users
+Enable Application Settings Persistence for Your AppStream 2.0 Users
+How Application Settings Persistence Works
+Enabling Application Settings Persistence
+Administer the VHDs for Your Users' Application Settings
+Enable Regional Settings for Your AppStream 2.0 Users
+Configure Default Regional Settings for Your AppStream 2.0 Users
+Enable Your AppStream 2.0 Users to Configure Their Regional Settings
+Manage App Entitlement with the Dynamic Application Framework
+Example API Operations Work Flow for the Dynamic Application Framework
+Use the AppStream 2.0 Dynamic Application Framework to Build a Dynamic App Provider
+Enable and Test Dynamic App Providers
+Third-Party Dynamic App Providers
+Provide Your Users with Access to AppStream 2.0
+Provide Access Through a Web Browser
+Provide Access Through the AppStream 2.0 Client for Windows
+System Requirements and Feature Support
+Install and Configure the AppStream 2.0 Client
+Have Your Users Install the AppStream 2.0 Client Themselves
+Install the AppStream 2.0 Client And Customize the Client Experience for Your Users
+Update the AppStream 2.0 Enterprise Deployment Tool, Client, and USB Driver Manually
+Qualify USB Devices for Use with Streaming Applications
+Use the AppStream 2.0 Client to Start a Streaming Session
+Enable Users to Share a USB Device with an AppStream 2.0 Streaming Session
+Redirect a Streaming Session from the Web Browser to the AppStream 2.0 Client
+Enable File System Redirection for Your AppStream 2.0 Users
+Enable Local Printer Redirection
+
+
+AppStream 2.0 Client Version History
+
+
+Tagging Your Amazon AppStream 2.0 Resources
+Monitoring and Reporting
+Monitoring Amazon AppStream 2.0 Resources
+AppStream 2.0 Usage Reports
+Enable AppStream 2.0 Usage Reports
+AppStream 2.0 Usage Reports Fields
+Create Custom Reports and Analyze AppStream 2.0 Usage Data
+
+
+Logging AppStream 2.0 API Calls with AWS CloudTrail
+Security in Amazon AppStream 2.0
+Data Protection in Amazon AppStream 2.0
+Identity and Access Management for Amazon AppStream 2.0
+Network Access to Your Streaming Instance
+Using AWS Managed Policies and Linked Roles to Manage Administrator Access to AppStream 2.0 Resources
+AWS Managed Policies Required to Access AppStream 2.0 Resources
+Roles Required for AppStream 2.0 and Application Auto Scaling
+Checking for the AmazonAppStreamServiceAccess Service Role and Policies
+Checking for the ApplicationAutoScalingForAmazonAppStreamAccess Service Role and Policies
+Checking for the AWSServiceRoleForApplicationAutoScaling_AppStreamFleet Service-Linked Role and Policies
+
+
+Using IAM Policies to Manage Administrator Access to Application Auto Scaling
+Using IAM Policies to Manage Administrator Access to the Amazon S3 Bucket for Home Folders and Application Settings Persistence
+Using an IAM Role to Grant Permissions to Applications and Scripts Running on AppStream 2.0 Streaming Instances
+
+
+Logging and Monitoring in Amazon AppStream 2.0
+Compliance Validation for Amazon AppStream 2.0
+Resilience in Amazon AppStream 2.0
+Infrastructure Security in Amazon AppStream 2.0
+Network Isolation
+Isolation on Physical Hosts
+Controlling Network Traffic
+Authentication of Corporate Users
+AppStream 2.0 User Pools
+User Pool Administration
+
+
+Single Sign-on Access (SAML 2.0)
+Setting Up SAML
+AppStream 2.0 Integration with SAML 2.0
+
+
+
+
+AppStream 2.0 Interface VPC Endpoints
+Creating and Streaming from Interface VPC Endpoints
+Access AppStream 2.0 API Operations and CLI Commands Through an Interface VPC Endpoint
+
+
+Protecting Data in Transit with FIPS Endpoints
+
+
+Security Groups in Amazon AppStream 2.0
+Update Management in Amazon AppStream 2.0
+Troubleshooting
+General Troubleshooting
+Troubleshooting Image Builders
+Troubleshooting Fleets
+Troubleshooting Active Directory Domain Join
+Troubleshooting AppStream 2.0 User Issues
+Troubleshooting Notification Codes
+Amazon AppStream 2.0 Service Quotas
+Guidance for AppStream 2.0 Users
+AppStream 2.0 Access Methods and Clients
+Web Browser Access
+AppStream 2.0 Client Application for Windows
+
+
+File Storage Options
+Use Home Folders
+Use Google Drive
+Use OneDrive for Business
+
+
+Configure Regional Settings
+Document History for Amazon AppStream 2.0

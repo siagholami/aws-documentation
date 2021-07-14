@@ -1,0 +1,22 @@
+Add Users to Groups
+Use the following procedure to add users as members of a group that you previously created in your AWS SSO store.
+To add a user as a member of a group
+
+
+Open the AWS SSO console.
+
+
+Choose Groups.
+
+
+Choose the group from the list.
+
+
+On the group Details page, under Group members, choose Add users.
+
+
+On the Add users to group page, locate the users you want to add as members. Then select the check box next to each of them.
+
+
+Choose Add user.
+

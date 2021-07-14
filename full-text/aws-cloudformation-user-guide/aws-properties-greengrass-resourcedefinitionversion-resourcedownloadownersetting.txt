@@ -1,0 +1,24 @@
+AWS::Greengrass::ResourceDefinitionVersion ResourceDownloadOwnerSetting
+The owner setting for a downloaded machine learning resource. For more information, see Access Machine Learning Resources from Lambda Functions in the AWS IoT Greengrass Developer Guide.
+ In an AWS CloudFormation template, ResourceDownloadOwnerSetting is the property type of the OwnerSetting property for the  S3MachineLearningModelResourceData and  SageMakerMachineLearningModelResourceData property types.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[GroupOwner](#cfn-greengrass-resourcedefinitionversion-resourcedownloadownersetting-groupowner)" : String,
+  "[GroupPermission](#cfn-greengrass-resourcedefinitionversion-resourcedownloadownersetting-grouppermission)" : String
+}
+YAML
+[GroupOwner](#cfn-greengrass-resourcedefinitionversion-resourcedownloadownersetting-groupowner): String
+  [GroupPermission](#cfn-greengrass-resourcedefinitionversion-resourcedownloadownersetting-grouppermission): String
+Properties
+GroupOwner 
+The group owner of the machine learning resource. This is the group ID (GID) of an existing Linux OS group on the system. The group's permissions are added to the Lambda process.
+Required: Yes
+Type: String
+Update requires: Replacement
+GroupPermission 
+The permissions that the group owner has to the machine learning resource. Valid values are rw (read-write) or ro (read-only).
+Required: Yes
+Type: String
+Update requires: Replacement

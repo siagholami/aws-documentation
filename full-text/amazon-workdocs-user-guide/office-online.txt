@@ -1,0 +1,35 @@
+Using Open with Office Online
+Open with Office Online lets you co-author and collaboratively edit Microsoft Office files (.docx, .pptx, and .xlsx) from the Amazon WorkDocs web application. When you edit a document with Office Online, other users with edit permissions can join the live collaborative session to edit the document with you in real time. Files edited with Office Online are saved automatically in Amazon WorkDocs. 
+Prerequisites
+To use Open with Office Online, you need a Microsoft Office 365 Work or School account with a license to edit in Office Online, and your site administrator needs to enable the feature for your Amazon WorkDocs site. For more information, site administrators can see Enabling Open with Office Online.
+For more information about getting a Microsoft Office 365 license, see Microsoft Office Licensing, Get the latest advanced features with Office 365, and Get the most from Office with Office 365.
+Open with Office Online works with the Amazon WorkDocs web application in the most recent versions of Firefox, Chrome, Internet Explorer, and Safari.
+Using Open with Office Online
+After meeting the Prerequisites, you can use Open with Office Online to edit Microsoft Office files and join live collaborative editing sessions from the Amazon WorkDocs web application.
+To edit a file with Office Online
+Follow these steps to edit a Microsoft Office file using Open with Office Online.
+
+
+In the web application, open the file or select it in the file browser view.
+
+
+Choose Edit.
+    If this is your first time using Open with Office Online, or if it’s been a while since you last used it, you are prompted to enter your Microsoft Office credentials.
+
+
+The file opens in the web application for you to edit.
+
+
+To join a live collaborative session
+If another user is editing a Microsoft Office file using Open with Office Online, you can join them in a live collaborative editing session. 
+
+
+In the web application, open the file or select it in the file browser view.
+
+
+Choose Live edit.
+    If this is your first time using Open with Office Online, or if it’s been a while since you last used it, you are prompted to enter your Microsoft Office credentials.
+
+
+The file opens in the web application for you to edit, along with other users.
+

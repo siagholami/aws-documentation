@@ -1,0 +1,19 @@
+SimulationSoftwareSuite
+Information about a simulation software suite.
+Contents
+name 
+The name of the simulation software suite.
+Type: String
+Valid Values:Gazebo | RosbagPlay 
+Required: No
+version 
+The version of the simulation software suite.
+Type: String
+Pattern: 7|9|Kinetic|Melodic|Dashing 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

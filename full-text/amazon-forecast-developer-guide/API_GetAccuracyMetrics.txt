@@ -1,0 +1,70 @@
+GetAccuracyMetrics
+Provides metrics on the accuracy of the models that were trained by the CreatePredictor operation. Use metrics to see how well the model performed and to decide whether to use the predictor to generate a forecast. For more information, see Evaluating Predictor Accuracy.
+This operation generates metrics for each backtest window that was evaluated. The number of backtest windows (NumberOfBacktestWindows) is specified using the EvaluationParameters object, which is optionally included in the CreatePredictor request. If NumberOfBacktestWindows isn't specified, the number defaults to one.
+The parameters of the filling method determine which items contribute to the metrics. If you want all items to contribute, specify zero. If you want only those items that have complete data in the range being evaluated to contribute, specify nan. For more information, see FeaturizationMethod.
+Note
+Before you can get accuracy metrics, the Status of the predictor must be ACTIVE, signifying that training has completed. To get the status, use the DescribePredictor operation.
+Request Syntax
+{
+   "PredictorArn": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ PredictorArn  
+The Amazon Resource Name (ARN) of the predictor to get metrics for.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\-\_\.\/\:]$ 
+Required: Yes
+Response Syntax
+{
+   "PredictorEvaluationResults": [ 
+      { 
+         "AlgorithmArn": "string",
+         "TestWindows": [ 
+            { 
+               "EvaluationType": "string",
+               "ItemCount": number,
+               "Metrics": { 
+                  "RMSE": number,
+                  "WeightedQuantileLosses": [ 
+                     { 
+                        "LossValue": number,
+                        "Quantile": number
+                     }
+                  ]
+               },
+               "TestWindowEnd": number,
+               "TestWindowStart": number
+            }
+         ]
+      }
+   ]
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ PredictorEvaluationResults  
+An array of results from evaluating the predictor.
+Type: Array of EvaluationResult objects
+Errors
+InvalidInputException 
+We can't process the request because it includes an invalid value or a value that exceeds the valid range.
+HTTP Status Code: 400
+ResourceInUseException 
+The specified resource is in use.
+HTTP Status Code: 400
+ResourceNotFoundException 
+We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

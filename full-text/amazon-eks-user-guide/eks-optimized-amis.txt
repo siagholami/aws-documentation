@@ -1,0 +1,7 @@
+Amazon EKS optimized AMIs
+You can deploy nodes with pre-built Amazon EKS optimized Amazon Machine Images (AMI), or your own custom AMIs. For more information about each type of Amazon EKS optimized AMI, see one of the following topics. For more information about creating your own custom AMI, see Amazon EKS optimized Amazon Linux AMI build script.
+Topics
+ Amazon EKS optimized Amazon Linux AMIs
+ Amazon EKS optimized Ubuntu Linux AMIs
+ Amazon EKS optimized Bottlerocket AMIs
+ Amazon EKS optimized Windows AMIs

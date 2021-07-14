@@ -1,0 +1,95 @@
+Global networks
+A global network is a container for your network objects. When you create a global network, it's empty. After you create it, you can register your transit gateways and define your on-premises networks in the global network.
+Topics
+ Creating a global network
+ Viewing a global network
+ Updating a global network
+ Deleting a global network
+Creating a global network
+Create a global network.
+To create a global network
+
+
+Open the Network Manager console at https://console.aws.amazon.com/networkmanager/. 
+
+
+In the navigation pane, choose Global networks.
+
+
+Choose Create global network.
+
+
+Enter a name and description for the global network.
+
+
+(Optional) Expand Additional settings. To add a tag, enter a Key and Value and choose Add tag.
+
+
+Choose Create global network.
+
+
+To create a global network using the AWS CLI
+Use the create-global-network command.
+Viewing a global network
+You can view the details of your global network and information about the network objects in your global network.
+To view your global network information
+
+
+Open the Network Manager console at https://console.aws.amazon.com/networkmanager/. 
+
+
+In the navigation pane, choose Global networks.
+
+
+Choose the ID of your global network.
+
+
+The Overview page contains information about the network objects in your global network. To view details about the global network resource (such as its ARN), choose Details. For more information about the other pages on the dashboard, see Visualizing and monitoring your global network using the Network Manager console.
+
+
+To view global network details using the AWS CLI
+Use the describe-global-networks command.
+Updating a global network
+You can modify the description or tags for a global network.
+To update your global network
+
+
+Open the Network Manager console at https://console.aws.amazon.com/networkmanager/. 
+
+
+In the navigation pane, choose Global networks.
+
+
+Choose your global network and choose Edit.
+
+
+For Description, enter a new description for the global network.
+
+
+For Tags, choose Remove tag to remove an existing tag, or choose Add tag to add a new tag.
+
+
+Choose Edit global network.
+
+
+To update a global network using the AWS CLI
+Use the update-global-network command to update the description. Use the tag-resource and untag-resource commands to update the tags.
+Deleting a global network
+You cannot delete a global network if there are any network objects in the global network, including transit gateways, links, devices, and sites. You must first deregister or delete the network objects.
+To delete your global network
+
+
+Open the Network Manager console at https://console.aws.amazon.com/networkmanager/. 
+
+
+In the navigation pane, choose Global networks.
+
+
+Choose your global network and choose Delete.
+
+
+In the confirmation dialog box, choose Delete.
+
+
+To delete a global network using the AWS CLI
+Use the delete-global-network command.

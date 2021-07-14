@@ -1,0 +1,29 @@
+How do I see an overview of an object?
+This section explains how to use the Amazon S3 console to view the object overview panel. This panel provides an overview of all the essential information for an object in one place.
+To see the overview panel for an object
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Bucket name list, choose the name of the bucket that contains the object.
+
+
+
+In the Name list, select the check box next to the name of the object for which you want an overview.
+
+
+
+To download the object, choose Download in the object overview panel. To copy the path of the object to the clipboard, choose Copy Path.
+
+
+
+If versioning is enabled on the bucket, choose Latest versions to list the versions of the object. You can then choose the download icon to download an object version, or choose the trash can icon to delete an object version. 
+
+Important
+You can undelete an object only if it was deleted as the latest (current) version. You can't undelete a previous version of an object that was deleted. For more information, see Object Versioning and Using Versioning in the Amazon Simple Storage Service Developer Guide.
+
+
+More info
+
+How do I see the versions of an S3 object?

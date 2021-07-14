@@ -1,0 +1,107 @@
+AWS Certificate Manager User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Certificate Manager?
+ACM Certificate Characteristics
+Supported Regions
+Services Integrated with AWS Certificate Manager
+Site Seals and Trust Logos
+Quotas
+Pricing for AWS Certificate Manager
+Security in AWS Certificate Manager
+Data Protection in AWS Certificate Manager
+Identity and Access Management for AWS Certificate Manager
+Overview of Managing Access to Your ACM Resources
+AWS Managed Policies
+Customer Managed Policies
+Inline Policies
+Using a Service Linked Role (SLR) with ACM
+ACM API Permissions: Actions and Resources Reference
+
+
+Logging and Monitoring for AWS Certificate Manager
+Using CloudTrail with AWS Certificate Manager
+ACM API Actions Supported in CloudTrail Logging
+Logging for ACM-Related API Calls
+
+
+
+
+Resilience in AWS Certificate Manager
+Infrastructure Security in AWS Certificate Manager
+Best Practices
+Setting Up
+Set Up AWS and IAM
+Register a Domain Name
+Set Up Your Website or Application
+(Optional) Configure Email for Your Domain
+(Optional) Configure a CAA Record
+Issuing and Managing Certificates
+Requesting a Public Certificate
+Requesting a Private Certificate
+Exporting a Private Certificate
+Using DNS to Validate Domain Ownership
+Using Email to Validate Domain Ownership
+Listing Certificates Managed by ACM
+Describing ACM Certificates
+Deleting Certificates Managed by ACM
+Installing ACM Certificates
+Resending Validation Email (Optional)
+Managed Renewal for ACM's Amazon-Issued Certificates
+How Domain Validation Works
+Check a Certificate's Renewal Status
+Request a Domain Validation Email for Certificate Renewal
+Importing Certificates into AWS Certificate Manager
+Prerequisites for Importing Certificates
+Certificate and Key Format for Importing
+Import a Certificate
+Reimport a Certificate
+Tagging AWS Certificate Manager Certificates
+Tag Restrictions
+Managing Tags
+Using the ACM API
+Adding Tags to a Certificate
+Deleting a Certificate
+Describing a Certificate
+Exporting a Certificate
+Retrieve a Certificate and Certificate Chain
+Importing a Certificate
+Listing Certificates
+Renewing a Certificate
+Listing Certificate Tags
+Removing Tags from a Certificate
+Requesting a Certificate
+Resending Validation Email
+Troubleshooting
+Troubleshooting Certificate Requests
+Certificate Request Times Out
+Certificate Request Fails
+
+
+Troubleshooting Certificate Validation
+Troubleshoot DNS Validation Problems
+Troubleshoot Email Validation Problems
+
+
+Troubleshooting Managed Certificate Renewal
+Troubleshooting Other Problems
+Troubleshoot Certificate Import Problems
+Troubleshoot Certificate Pinning Problems
+Troubleshoot API Gateway Problems
+Problems with the ACM Service-Linked Role (SLR)
+
+
+Handling Exceptions
+Concepts
+Document History

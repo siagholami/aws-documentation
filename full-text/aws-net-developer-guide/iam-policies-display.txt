@@ -1,0 +1,159 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Display the policy document of an IAM managed policy
+This example shows you how to use the AWS SDK for .NET to display a policy document. The application creates an IAM client object, finds the default version of the given IAM managed policy, and then displays the policy document in JSON.
+The following sections provide snippets of this example. The complete code for the example is shown after that, and can be built and run as is.
+Topics
+ Find the default version
+ Display the policy document
+ Complete code
+Find the default version
+The following snippet finds the default version of the given IAM policy.
+The example at the end of this topic shows this snippet in use.
+```
+    //
+    // Method to determine the default version of an IAM policy
+    // Returns a string with the version
+    private static async Task GetDefaultVersion(
+      IAmazonIdentityManagementService iamClient, string policyArn)
+    {
+      // Retrieve all the versions of this policy
+      string defaultVersion = string.Empty;
+      ListPolicyVersionsResponse reponseVersions =
+        await iamClient.ListPolicyVersionsAsync(new ListPolicyVersionsRequest{
+          PolicyArn = policyArn});
+  // Find the default version
+  foreach(PolicyVersion version in reponseVersions.Versions)
+  {
+    if(version.IsDefaultVersion)
+    {
+      defaultVersion = version.VersionId;
+      break;
+    }
+  }
+
+  return defaultVersion;
+}
+
+```
+Display the policy document
+The following snippet displays the policy document in JSON of the given IAM policy.
+The example at the end of this topic shows this snippet in use.
+```
+    //
+    // Method to retrieve and display the policy document of an IAM policy
+    private static async Task ShowPolicyDocument(
+      IAmazonIdentityManagementService iamClient, string policyArn, string defaultVersion)
+    {
+      // Retrieve the policy document of the default version
+      GetPolicyVersionResponse responsePolicy =
+        await iamClient.GetPolicyVersionAsync(new GetPolicyVersionRequest{
+          PolicyArn = policyArn,
+          VersionId = defaultVersion});
+  // Display the policy document (in JSON)
+  Console.WriteLine($"Version {defaultVersion} of the policy (in JSON format):");
+  Console.WriteLine(
+    $"{HttpUtility.UrlDecode(responsePolicy.PolicyVersion.Document)}");
+}
+
+```
+Complete code
+This section shows relevant references and the complete code for this example.
+SDK references
+NuGet packages:
+ AWSSDK.IdentityManagement
+Programming elements:
+ Namespace Amazon.IdentityManagement
+Class AmazonIdentityManagementServiceClient
+ Namespace Amazon.IdentityManagement.Model
+Class GetPolicyVersionRequest
+Class GetPolicyVersionResponse
+Class ListPolicyVersionsRequest
+Class ListPolicyVersionsResponse
+Class PolicyVersion
+The code
+```
+using System;
+using System.Web;
+using System.Threading.Tasks;
+using Amazon.IdentityManagement;
+using Amazon.IdentityManagement.Model;
+namespace IamDisplayPolicyJson
+{
+  class Program
+  {
+    static async Task Main(string[] args)
+    {
+      // Parse the command line and show help if necessary
+      if(args.Length != 1)
+      {
+        Console.WriteLine("\nUsage: IamDisplayPolicyJson policy-arn");
+        Console.WriteLine("   policy-arn: The ARN of the policy to retrieve.");
+        return;
+      }
+      if(!args[0].StartsWith("arn:"))
+      {
+        Console.WriteLine("\nCould not find policy ARN in the command-line arguments:");
+        Console.WriteLine($"{args[0]}");
+        return;
+      }
+  // Create an IAM service client
+  var iamClient = new AmazonIdentityManagementServiceClient();
+
+  // Retrieve and display the policy document of the given policy
+  string defaultVersion = await GetDefaultVersion(iamClient, args[0]);
+  if(string.IsNullOrEmpty(defaultVersion))
+    Console.WriteLine($"Could not find the default version for policy {args[0]}.");
+  else
+    await ShowPolicyDocument(iamClient, args[0], defaultVersion);
+}
+
+
+//
+// Method to determine the default version of an IAM policy
+// Returns a string with the version
+private static async Task<string> GetDefaultVersion(
+  IAmazonIdentityManagementService iamClient, string policyArn)
+{
+  // Retrieve all the versions of this policy
+  string defaultVersion = string.Empty;
+  ListPolicyVersionsResponse reponseVersions =
+    await iamClient.ListPolicyVersionsAsync(new ListPolicyVersionsRequest{
+      PolicyArn = policyArn});
+
+  // Find the default version
+  foreach(PolicyVersion version in reponseVersions.Versions)
+  {
+    if(version.IsDefaultVersion)
+    {
+      defaultVersion = version.VersionId;
+      break;
+    }
+  }
+
+  return defaultVersion;
+}
+
+
+//
+// Method to retrieve and display the policy document of an IAM policy
+private static async Task ShowPolicyDocument(
+  IAmazonIdentityManagementService iamClient, string policyArn, string defaultVersion)
+{
+  // Retrieve the policy document of the default version
+  GetPolicyVersionResponse responsePolicy =
+    await iamClient.GetPolicyVersionAsync(new GetPolicyVersionRequest{
+      PolicyArn = policyArn,
+      VersionId = defaultVersion});
+
+  // Display the policy document (in JSON)
+  Console.WriteLine($"Version {defaultVersion} of the policy (in JSON format):");
+  Console.WriteLine(
+    $"{HttpUtility.UrlDecode(responsePolicy.PolicyVersion.Document)}");
+}
+
+}
+}
+```

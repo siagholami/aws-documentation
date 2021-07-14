@@ -1,0 +1,23 @@
+AWS::AmazonMQ::Broker EncryptionOptions
+Encryption options for the broker.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[KmsKeyId](#cfn-amazonmq-broker-encryptionoptions-kmskeyid)" : String,
+  "[UseAwsOwnedKey](#cfn-amazonmq-broker-encryptionoptions-useawsownedkey)" : Boolean
+}
+YAML
+[KmsKeyId](#cfn-amazonmq-broker-encryptionoptions-kmskeyid): String
+  [UseAwsOwnedKey](#cfn-amazonmq-broker-encryptionoptions-useawsownedkey): Boolean
+Properties
+KmsKeyId 
+The customer master key (CMK) to use for the AWS Key Management Service (KMS). This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a default CMK to encrypt your data.
+Required: No
+Type: String
+Update requires: No interruption
+UseAwsOwnedKey 
+Enables the use of an AWS owned CMK using AWS Key Management Service (KMS).
+Required: Yes
+Type: Boolean
+Update requires: No interruption

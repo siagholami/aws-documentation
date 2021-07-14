@@ -1,0 +1,43 @@
+AWS::DLM::LifecyclePolicy FastRestoreRule
+Specifies a rule for enabling fast snapshot restore. You can enable fast snapshot restore based on either a count or a time interval.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AvailabilityZones](#cfn-dlm-lifecyclepolicy-fastrestorerule-availabilityzones)" : [ String, ... ],
+  "[Count](#cfn-dlm-lifecyclepolicy-fastrestorerule-count)" : Integer,
+  "[Interval](#cfn-dlm-lifecyclepolicy-fastrestorerule-interval)" : Integer,
+  "[IntervalUnit](#cfn-dlm-lifecyclepolicy-fastrestorerule-intervalunit)" : String
+}
+YAML
+[AvailabilityZones](#cfn-dlm-lifecyclepolicy-fastrestorerule-availabilityzones): 
+    - String
+  [Count](#cfn-dlm-lifecyclepolicy-fastrestorerule-count): Integer
+  [Interval](#cfn-dlm-lifecyclepolicy-fastrestorerule-interval): Integer
+  [IntervalUnit](#cfn-dlm-lifecyclepolicy-fastrestorerule-intervalunit): String
+Properties
+AvailabilityZones 
+The Availability Zones in which to enable fast snapshot restore.
+Required: No
+Type: List of String
+Maximum: 10
+Update requires: No interruption
+Count 
+The number of snapshots to be enabled with fast snapshot restore.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 1000
+Update requires: No interruption
+Interval 
+The amount of time to enable fast snapshot restore. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+Required: No
+Type: Integer
+Minimum: 1
+Update requires: No interruption
+IntervalUnit 
+The unit of time for enabling fast snapshot restore.
+Required: No
+Type: String
+Allowed values: DAYS | MONTHS | WEEKS | YEARS
+Update requires: No interruption

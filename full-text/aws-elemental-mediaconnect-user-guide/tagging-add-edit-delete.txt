@@ -1,0 +1,6 @@
+Managing tags
+Tags are made up of the Key and Value properties on a resource. You can use the AWS Elemental MediaConnect console, the AWS CLI, or the AWS Elemental MediaConnect API to add, edit, or delete the values for these properties. For information about working with tags, see the following:
+ Resources in the AWS Elemental MediaConnect API Reference
+ Managing tags on a flow in this guide
+ Managing tags on an entitlement in this guide
+ Managing tags on an output in this guide 

@@ -1,0 +1,19 @@
+Amazon SNS template snippets
+This example shows an Amazon SNS topic resource. It requires a valid email address.
+JSON
+1. "MySNSTopic" : {
+2.     "Type" : "AWS::SNS::Topic",
+3.     "Properties" : {
+4.         "Subscription" : [ {
+5.             "Endpoint" : "add valid email address",
+6.             "Protocol" : "email"
+7.         } ]
+8.     }
+9. }
+YAML
+1. MySNSTopic:
+2.   Type: AWS::SNS::Topic
+3.   Properties:
+4.     Subscription:
+5.     - Endpoint: "add valid email address"
+6.       Protocol: email

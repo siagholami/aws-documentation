@@ -1,0 +1,28 @@
+Register AWS DeepLens 2019 Edition Device
+Registering your AWS DeepLens 2019 Edition device involves performing the following tasks: 
+
+
+Connect the device to your computer.
+
+
+Verify the device serial number.
+
+
+Set up the device's internet connection.
+
+
+Create device representation in the AWS Cloud.
+
+
+Update the device settings.
+
+
+Follow the sections below for detailed instructions for each of the tasks. 
+Note
+These instructions are for only AWS DeepLens 2019 Edition device. You can find out the hardware version on the bottom of your AWS DeepLens device. If you see HW v1.1 printed there, your device is of AWS DeepLens 2019 Edition. You can then proceed as follows. Otherwise, see Register Your AWS DeepLens Device. 
+Topics
+ Connect Your AWS DeepLens 2019 Edition Device to Your Computer
+ Validate Your AWS DeepLens 2019 Edition Device Serial Number
+ Connect Your AWS DeepLens 2019 Edition Device to the Internet
+ Name Your AWS DeepLens 2019 Edition Device and Complete the Registration
+ View or Update Your AWS DeepLens 2019 Edition Device Settings

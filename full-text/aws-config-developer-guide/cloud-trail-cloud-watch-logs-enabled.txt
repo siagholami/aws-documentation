@@ -1,0 +1,9 @@
+cloud-trail-cloud-watch-logs-enabled
+Checks whether AWS CloudTrail trails are configured to send logs to Amazon CloudWatch Logs. The trail is NON_COMPLIANT if the CloudWatchLogsLogGroupArn property of the trail is empty.
+Identifier: CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED
+Trigger type: Periodic
+AWS Region: All supported AWS Regions
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

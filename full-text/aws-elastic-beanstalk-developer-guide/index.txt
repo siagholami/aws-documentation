@@ -1,0 +1,497 @@
+AWS Elastic Beanstalk Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Elastic Beanstalk?
+Getting started using Elastic Beanstalk
+Step 1: Create an example application
+Step 2: Explore your environment
+Step 3: Deploy a new version of your application
+Step 4: Configure your environment
+Step 5: Clean up
+Next steps
+Elastic Beanstalk concepts
+Web server environments
+Worker environments
+Design considerations
+Service roles, instance profiles, and user policies
+Elastic Beanstalk service role
+Elastic Beanstalk instance profile
+Elastic Beanstalk user policy
+Elastic Beanstalk platforms
+Elastic Beanstalk platforms glossary
+Shared responsibility model for Elastic Beanstalk platform maintenance
+Elastic Beanstalk platform support policy
+Elastic Beanstalk supported platforms
+Elastic Beanstalk Linux platforms
+Extending Elastic Beanstalk Linux platforms
+Platform script tools
+
+
+
+
+Deploying Elastic Beanstalk applications from Docker containers
+Using the Docker platform
+Docker configuration
+Deploying a GlassFish application to the Docker platform
+
+
+Multicontainer Docker environments
+Multicontainer Docker configuration
+Multicontainer Docker environments with the Elastic Beanstalk console
+
+
+Preconfigured Docker containers
+Configuring Docker environments
+Running a Docker environment locally with the EB CLI
+
+
+Creating and deploying Go applications on Elastic Beanstalk
+Getting started with Go on Elastic Beanstalk
+Setting up your Go development environment
+Using the Elastic Beanstalk Go platform
+Configuring the application process with a Procfile
+Building executable on-server with a Buildfile
+Configuring the reverse proxy
+
+
+Deploying a Go application to Elastic Beanstalk
+
+
+Creating and deploying Java applications on Elastic Beanstalk
+Getting started with Java on Elastic Beanstalk
+Setting up your Java development environment
+Using the Elastic Beanstalk Tomcat platform
+Bundling multiple WAR files for Tomcat environments
+Structuring your project folder
+Configuring your Tomcat environment's proxy server
+
+
+Using the Elastic Beanstalk Java SE platform
+Building JARs on-server with a Buildfile
+Configuring the application process with a Procfile
+Configuring the reverse proxy
+
+
+Adding an Amazon RDS DB instance to your Java application environment
+Using the AWS Toolkit for Eclipse
+Managing Elastic Beanstalk application environments
+Changing environment type
+Configuring EC2 server instances using AWS Toolkit for Eclipse
+Configuring Elastic Load Balancing using AWS Toolkit for Eclipse
+Configuring Auto Scaling using AWS Toolkit for Eclipse
+Configuring notifications using AWS Toolkit for Eclipse
+Configuring Java containers using AWS Toolkit for Eclipse
+
+
+Managing multiple AWS accounts
+Viewing events
+Listing and connecting to server instances
+Terminating an environment
+
+
+Resources
+
+
+Working with .NET Core on Linux
+Getting started with .NET Core on Linux
+Setting up your .NET Core on Linux development environment
+Using the .NET Core on Linux platform
+Bundling applications for the .NET Core on Linux platform
+Using a Procfile to configure your .NET Core on Linux environment
+Configuring the proxy server for your .NET Core on Linux environment
+
+
+Tutorial: Deploying an ASP.NET core application with Elastic Beanstalk on Linux
+Migrating from .NET on Windows Server platforms to the .NET Core on Linux platform
+
+
+Creating and deploying .NET applications on Elastic Beanstalk
+Getting started with .NET on Elastic Beanstalk
+Setting up your .NET development environment
+Using the Elastic Beanstalk .NET platform
+Migrating across major versions of the Elastic Beanstalk Windows server platform
+Running multiple applications and ASP.NET core applications with a deployment manifest
+
+
+Tutorial: How to deploy a .NET sample application using Elastic Beanstalk
+Tutorial: Deploying an ASP.NET core application with Elastic Beanstalk
+Adding an Amazon RDS DB instance to your .NET application environment
+The AWS Toolkit for Visual Studio
+Deploying to your environment
+Managing your Elastic Beanstalk application environments
+Configuring EC2 server instances using the AWS toolkit for Visual Studio
+Configuring Elastic Load Balancing using the AWS toolkit for Visual Studio
+Configuring Auto Scaling using the AWS toolkit for Visual Studio
+Configuring notifications using AWS toolkit for Visual Studio
+Configuring .NET containers using the AWS toolkit for Visual Studio
+
+
+Managing accounts
+Listing and connecting to server instances
+Monitoring application health
+Deploying Elastic Beanstalk applications in .NET using the deployment tool
+
+
+Migrating your on-premises .NET application to Elastic Beanstalk
+Resources
+
+
+Deploying Node.js applications to Elastic Beanstalk
+Getting started with Node.js on Elastic Beanstalk
+Setting up your Node.js development environment
+Using the Elastic Beanstalk Node.js platform
+Configuring your application's dependencies
+Locking dependencies with npm shrinkwrap
+Configuring the proxy server
+
+
+Deploying an Express application to Elastic Beanstalk
+Deploying an Express application with clustering to Elastic Beanstalk
+Deploying a Node.js application with DynamoDB to Elastic Beanstalk
+Adding an Amazon RDS DB instance to your Node.js application environment
+Resources
+
+
+Creating and deploying PHP applications on Elastic Beanstalk
+Setting up your PHP development environment
+Using the Elastic Beanstalk PHP platform
+Installing your application's dependencies
+Updating Composer
+Extending php.ini
+
+
+Deploying a Laravel application to Elastic Beanstalk
+Deploying a CakePHP application to Elastic Beanstalk
+Deploying a Symfony application to Elastic Beanstalk
+Deploying a high-availability PHP application with an external Amazon RDS database to Elastic Beanstalk
+Deploying a high-availability WordPress website with an external Amazon RDS database to Elastic Beanstalk
+Deploying a high-availability Drupal website with an external Amazon RDS database to Elastic Beanstalk
+Adding an Amazon RDS DB instance to your PHP application environment
+
+
+Working with Python
+Setting up your Python development environment
+Using the Elastic Beanstalk Python platform
+Configuring the WSGI server with a Procfile
+Specifying dependencies using a requirements file
+
+
+Deploying a flask application to Elastic Beanstalk
+Deploying a Django application to Elastic Beanstalk
+Adding an Amazon RDS DB instance to your Python application environment
+Python tools and resources
+
+
+Creating and deploying Ruby applications on Elastic Beanstalk
+Setting up your Ruby development environment
+Using the Elastic Beanstalk Ruby platform
+Installing packages with a Gemfile
+Configuring the application process with a Procfile
+
+
+Deploying a rails application to Elastic Beanstalk
+Deploying a sinatra application to Elastic Beanstalk
+Adding an Amazon RDS DB instance to your Ruby application environment
+
+
+Tutorials and samples
+Managing and configuring Elastic Beanstalk applications
+Elastic Beanstalk application management console
+Managing application versions
+Configuring application version lifecycle settings
+Tagging application versions
+
+
+Create an application source bundle
+Tagging Elastic Beanstalk application resources
+Tagging applications
+
+
+Managing environments
+Using the Elastic Beanstalk environment management console
+Creating an Elastic Beanstalk environment
+The create new environment wizard
+Clone an Elastic Beanstalk environment
+Terminate an Elastic Beanstalk environment
+Creating Elastic Beanstalk environments with the AWS CLI
+Creating Elastic Beanstalk environments with the API
+Constructing a Launch Now URL
+Creating and updating groups of Elastic Beanstalk environments
+
+
+Deploying applications to Elastic Beanstalk environments
+Deployment policies and settings
+Blue/Green deployments with Elastic Beanstalk
+
+
+Configuration changes
+Elastic Beanstalk rolling environment configuration updates
+Immutable environment updates
+
+
+Updating your Elastic Beanstalk environment's platform version
+Managed platform updates
+Migrating your application from a legacy platform version
+Migrating your Elastic Beanstalk Linux application to Amazon Linux 2
+
+
+Canceling environment configuration updates and application deployments
+Rebuilding Elastic Beanstalk environments
+Environment types
+Elastic Beanstalk worker environments
+Creating links between Elastic Beanstalk environments
+Configuring Elastic Beanstalk environments
+Environment configuration using the Elastic Beanstalk console
+Your Elastic Beanstalk environment's Amazon EC2 instances
+Configuring the instance metadata service on your environment's instances
+
+
+Auto Scaling group for your Elastic Beanstalk environment
+Auto Scaling triggers
+Scheduled Auto Scaling actions
+Auto Scaling health check setting
+
+
+Load balancer for your Elastic Beanstalk environment
+Configuring a Classic Load Balancer
+Configuring an Application Load Balancer
+Configuring a shared Application Load Balancer
+Configuring a Network Load Balancer
+Configuring access logs
+
+
+Adding a database to your Elastic Beanstalk environment
+Your AWS Elastic Beanstalk environment security
+Tagging resources in your Elastic Beanstalk environments
+Environment properties and other software settings
+Configuring AWS X-Ray debugging
+Viewing your Elastic Beanstalk environment logs
+
+
+Elastic Beanstalk environment notifications with Amazon SNS
+Configuring Amazon Virtual Private Cloud (Amazon VPC) with Elastic Beanstalk
+Migrating Elastic Beanstalk environments from EC2-Classic to a VPC
+
+
+Your Elastic Beanstalk environment's Domain name
+Configuring Elastic Beanstalk environments (advanced)
+Configuration options
+Setting configuration options before environment creation
+Setting configuration options during environment creation
+Setting configuration options after environment creation
+General options for all environments
+Platform specific options
+Custom options
+
+
+Advanced environment customization with configuration files (.ebextensions)
+Option settings
+Customizing software on Linux servers
+Example: Using custom amazon CloudWatch metrics
+
+
+Customizing software on Windows servers
+Adding and customizing Elastic Beanstalk environment resources
+Modifying the resources that Elastic Beanstalk creates for your environment
+Other AWS CloudFormation template keys
+Functions
+Custom resource examples
+Example: ElastiCache
+Example: SQS, CloudWatch, and SNS
+Example: DynamoDB, CloudWatch, and SNS
+
+
+
+
+
+
+Using Elastic Beanstalk saved configurations
+Tagging saved configurations
+
+
+Environment manifest (env.yaml)
+Using a custom Amazon machine image (AMI)
+Serving static files
+Configuring HTTPS for your Elastic Beanstalk environment
+Create and sign an X509 certificate
+Upload a certificate to IAM
+Configuring your Elastic Beanstalk environment's load balancer to terminate HTTPS
+Configuring your application to terminate HTTPS connections at the instance
+Terminating HTTPS on EC2 instances running Docker
+Terminating HTTPS on EC2 instances running Go
+Terminating HTTPS on EC2 instances running Java SE
+Terminating HTTPS on EC2 instances running Node.js
+Terminating HTTPS on EC2 instances running PHP
+Terminating HTTPS on EC2 instances running Python
+Terminating HTTPS on EC2 instances running Ruby
+Terminating HTTPS on EC2 instances running Tomcat
+Terminating HTTPS on Amazon EC2 instances running .NET Core on Linux
+Terminating HTTPS on Amazon EC2 instances running .NET
+
+
+Configuring end-to-end encryption in a load-balanced Elastic Beanstalk environment
+Configuring your environment's load balancer for TCP Passthrough
+Storing private keys securely in Amazon S3
+Configuring HTTP to HTTPS redirection
+
+
+Monitoring an environment
+Monitoring environment health in the AWS management console
+Basic health reporting
+Enhanced health reporting and monitoring
+Enabling Elastic Beanstalk enhanced health reporting
+Enhanced health monitoring with the environment management console
+Health colors and statuses
+Instance metrics
+Web server metrics capture in IIS on Windows server
+
+
+Configuring enhanced health rules for an environment
+Publishing Amazon CloudWatch custom metrics for an environment
+Using enhanced health reporting with the Elastic Beanstalk API
+Enhanced health log format
+Notifications and troubleshooting
+
+
+Manage alarms
+Viewing an Elastic Beanstalk environment's event stream
+Listing and connecting to server instances
+Viewing logs from Amazon EC2 instances in your Elastic Beanstalk environment
+Using Elastic Beanstalk with other AWS services
+Using Elastic Beanstalk with Amazon CloudFront
+Logging Elastic Beanstalk API calls with AWS CloudTrail
+Using Elastic Beanstalk with Amazon CloudWatch
+Using Elastic Beanstalk with Amazon CloudWatch Logs
+Streaming Elastic Beanstalk environment health information to Amazon CloudWatch Logs
+
+
+Finding and tracking Elastic Beanstalk resources with AWS Config
+Using Elastic Beanstalk with Amazon DynamoDB
+Using Elastic Beanstalk with Amazon ElastiCache
+Using Elastic Beanstalk with Amazon Elastic File System
+Using Elastic Beanstalk with AWS Identity and Access Management
+Managing Elastic Beanstalk instance profiles
+Managing Elastic Beanstalk service roles
+Using service-linked roles for Elastic Beanstalk
+The monitoring service-linked role
+The maintenance service-linked role
+The managed-updates service-linked role
+
+
+Managing Elastic Beanstalk user policies
+Amazon resource name format for Elastic Beanstalk
+Resources and conditions for Elastic Beanstalk actions
+Using tags to control access to Elastic Beanstalk resources
+Example policies based on managed policies
+Example policies based on resource permissions
+
+
+Using Elastic Beanstalk with Amazon RDS
+Launching and connecting to an external Amazon RDS instance in a default VPC
+Launching and connecting to an external Amazon RDS instance in EC2 classic
+Storing the connection string in Amazon S3
+
+
+Using Elastic Beanstalk with Amazon S3
+Using Elastic Beanstalk with Amazon VPC
+Example: Launching an Elastic Beanstalk application in a VPC with bastion hosts
+Example: Launching an Elastic Beanstalk in a VPC with Amazon RDS
+Using Elastic Beanstalk with VPC endpoints
+
+
+Configuring your development machine for use with Elastic Beanstalk
+Using the Elastic Beanstalk command line interface (EB CLI)
+Install the EB CLI
+Manually install the EB CLI
+Install Python, pip, and the EB CLI on Linux
+Install the EB CLI on macOS
+Install Python, pip, and the EB CLI on Windows
+Install the EB CLI in a virtual environment
+
+
+
+
+Configure the EB CLI
+Managing Elastic Beanstalk environments with the EB CLI
+Using the EB CLI with AWS CodeBuild
+Using the EB CLI with Git
+Using the EB CLI with AWS CodeCommit
+Using the EB CLI to monitor environment health
+Managing multiple Elastic Beanstalk environments as a group with the EB CLI
+Troubleshooting issues with the EB CLI
+EB CLI command reference
+eb abort
+eb appversion
+eb clone
+eb codesource
+eb config
+eb console
+eb create
+eb deploy
+eb events
+eb health
+eb init
+eb labs
+eb list
+eb local
+eb logs
+eb open
+eb platform
+eb printenv
+eb restore
+eb scale
+eb setenv
+eb ssh
+eb status
+eb swap
+eb tags
+eb terminate
+eb upgrade
+eb use
+Common options
+
+
+EB CLI 2.6 (retired)
+Elastic Beanstalk API command line interface (retired)
+AWS Elastic Beanstalk security
+Data protection in Elastic Beanstalk
+Protecting data using encryption
+Internetwork traffic privacy
+
+
+Identity and access management for Elastic Beanstalk
+Logging and monitoring in Elastic Beanstalk
+Compliance validation for Elastic Beanstalk
+Resilience in Elastic Beanstalk
+Infrastructure security in Elastic Beanstalk
+Configuration and vulnerability analysis in Elastic Beanstalk
+Security best practices for Elastic Beanstalk
+Troubleshooting
+Connectivity
+Environment creation and instance launches
+Deployments
+Health
+Configuration
+Troubleshooting Docker containers
+FAQ
+Elastic Beanstalk resources
+Platform history
+Elastic Beanstalk custom platforms
+Platform definition archive contents
+Custom platform hooks
+Packer instance cleanup
+Platform.yaml file format
+Tagging custom platform versions
+
+

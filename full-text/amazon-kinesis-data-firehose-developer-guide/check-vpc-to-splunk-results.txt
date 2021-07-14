@@ -1,0 +1,19 @@
+Step 4: Check the Results in Splunk and in Kinesis Data Firehose
+You can monitor the flow of data at several points in this example. In this step of the Kinesis Data Firehose tutorial, you check the data in Splunk, the final destination, and you also monitor its flow through Kinesis Data Firehose.
+To check the results in AWS and in Splunk
+
+
+Open the Kinesis Data Firehose console at https://console.aws.amazon.com/firehose/.
+
+
+In the list of delivery streams, choose VPCtoSplunkStream.
+
+
+Choose the Monitoring tab, and view the graphs. Be sure to adjust the time range and to use the refresh button periodically.
+
+
+If you don't see your data in Splunk, see Data Not Delivered to Splunk.
+
+
+Important
+After you verify your results, delete any AWS resources that you don't need to keep, so as not to incur ongoing charges.

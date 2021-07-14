@@ -1,0 +1,83 @@
+Editing Components in the Viewport
+
+This feature is in preview release and is subject to change. 
+When you're working with components, you can lock a single component for editing. You can't edit any other components that are attached to the entity. This feature prevents you from accidentally editing other components that are attached to the entity. For example, if you have an entity with attached Spline and Mesh components, you can lock the Spline component, make your changes to the spline, and stop editing.
+This feature supports the following components: 
+ Box Shape
+ OccluderArea
+ Portal
+ Polygon Prism Shape
+ Spline
+ Tube Shape
+ VisArea
+Topics
+ Editing a Single Component in the Viewport
+ Editing Multiple Components in the Viewport
+If you want to add this feature to other components, you must make code changes to Lumberyard Editor. For more information, see the Programmer's Guide to Component Mode.
+Editing a Single Component in the Viewport
+For components that support this feature, the component is locked when you edit its properties in the viewport.
+To edit a single component in Component Mode
+
+
+In Lumberyard Editor, create an entity. See Creating an Entity. 
+
+
+In the Entity Inspector, choose Add Component and select the Spline component.
+Example 
+
+
+An entity with the Spline component appears in the viewport.
+
+
+In the viewport, double-click the spline or, in the Entity Inspector, click Edit.
+
+Example 
+
+The manipulator appears in the viewport. The vertices turn red. When you select a vertex, the manipulator appears.
+
+All other components attached to the entity are dimmed in the Entity Inspector, and you can't edit them.
+
+
+
+Select a vertex and make changes such as adding, moving, or deleting vertices.
+
+
+
+When you've finished, press Esc or, in the Entity Inspector, on the component, click Done. 
+
+
+The vertices become yellow again.
+
+Editing Multiple Components in the Viewport
+In some cases, Component Mode supports editing multiple components. This is useful when you want to lock a specific component type for editing. Component Mode supports this feature in the following cases:
+ An entity has dependent components, such as the Tube Shape and Spline components
+ You select multiple entities that all have the same component that supports Component Mode (such as a Box Shape)
+To edit multiple components in Component Mode
+
+
+In Lumberyard Editor, create an entity. See Creating an Entity. 
+
+
+In the Entity Inspector, choose Add Component and then select components that have this feature. See supported components. 
+
+
+In the Entity Inspector, choose Edit. You can't edit the Transform component, but the Spline and Tube Shape components are active.
+
+
+Make your changes to the component. 
+
+
+To switch between components, do one of the following:
+    Select the entity and press Tab. The Entity Inspector highlights the selected component.
+    In the Lumberyard Editor toolbar menu, choose Edit and choose Edit Next or Edit Previous.
+Example 
+
+
+The Transform component is dimmed, but you can edit the Spline and Tube Shape components.
+
+In the following example, a radius for the Tube Shape is selected.
+
+Note
+The Lumberyard Editor Edit menu shows the available actions for the selected component. You can specify different shortcuts except for the Save, Undo, and Redo actions.  
+Example
+For example, if you select a vertex point for a Tube Shape component, the Edit menu shows the available shortcuts.  

@@ -1,0 +1,17 @@
+AWS::EC2::LocalGatewayRouteTableVPCAssociation Tags
+The tags assigned to the association.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags-tags)" : [ Tag, ... ]
+}
+YAML
+[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags-tags): 
+    - Tag
+Properties
+Tags 
+The tags assigned to the association.
+Required: No
+Type: List of Tag
+Update requires: No interruption

@@ -1,0 +1,3 @@
+Amazon Transcribe Streaming Service
+The following actions are supported by Amazon Transcribe Streaming Service:
+  StartStreamTranscription 

@@ -1,0 +1,18 @@
+CURRENT_SETTING
+CURRENT_SETTING returns the current value of the specified configuration parameter.
+This function is equivalent to the SHOW command.
+Syntax
+current_setting('parameter')
+Argument
+parameter 
+Parameter value to display. For a list of configuration parameters, see Configuration reference
+Return type
+Returns a CHAR or VARCHAR string.
+Example
+The following query returns the current setting for the query_group parameter:
+```
+select current_setting('query_group');
+current_setting
+unset
+(1 row)
+```

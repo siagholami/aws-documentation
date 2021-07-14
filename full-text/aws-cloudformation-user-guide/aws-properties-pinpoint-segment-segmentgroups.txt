@@ -1,0 +1,24 @@
+AWS::Pinpoint::Segment SegmentGroups
+Specifies one or more segment groups that apply to a segment. Each segment group consists of zero or more base segments and the dimensions that are applied to those base segments.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Groups](#cfn-pinpoint-segment-segmentgroups-groups)" : [ Groups, ... ],
+  "[Include](#cfn-pinpoint-segment-segmentgroups-include)" : String
+}
+YAML
+[Groups](#cfn-pinpoint-segment-segmentgroups-groups): 
+    - Groups
+  [Include](#cfn-pinpoint-segment-segmentgroups-include): String
+Properties
+Groups 
+An array that defines the set of segment criteria to evaluate when handling segment groups for the segment.
+Required: No
+Type: List of Groups
+Update requires: No interruption
+Include 
+Specifies how to handle multiple segment groups for the segment. For example, if the segment includes three segment groups, whether the resulting segment includes endpoints that match all, any, or none of the segment groups.
+Required: No
+Type: String
+Update requires: No interruption

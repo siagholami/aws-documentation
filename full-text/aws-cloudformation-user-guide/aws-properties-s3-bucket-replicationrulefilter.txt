@@ -1,0 +1,32 @@
+AWS::S3::Bucket ReplicationRuleFilter
+Not currently supported by AWS CloudFormation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[And](#cfn-s3-bucket-replicationrulefilter-and)" : ReplicationRuleAndOperator,
+  "[Prefix](#cfn-s3-bucket-replicationrulefilter-prefix)" : String,
+  "[TagFilter](#cfn-s3-bucket-replicationrulefilter-tagfilter)" : TagFilter
+}
+YAML
+[And](#cfn-s3-bucket-replicationrulefilter-and): 
+    ReplicationRuleAndOperator
+  [Prefix](#cfn-s3-bucket-replicationrulefilter-prefix): String
+  [TagFilter](#cfn-s3-bucket-replicationrulefilter-tagfilter): 
+    TagFilter
+Properties
+And 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: ReplicationRuleAndOperator
+Update requires: No interruption
+Prefix 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Update requires: No interruption
+TagFilter 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: TagFilter
+Update requires: No interruption

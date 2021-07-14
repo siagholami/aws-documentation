@@ -1,0 +1,17 @@
+AWS::ACMPCA::CertificateAuthority RevocationConfiguration
+Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions. Your private certificate authority (CA) can create and maintain a certificate revocation list (CRL). A CRL contains information about certificates revoked by your CA. For more information, see RevokeCertificate.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CrlConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration-crlconfiguration)" : CrlConfiguration
+}
+YAML
+[CrlConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration-crlconfiguration): 
+    CrlConfiguration
+Properties
+CrlConfiguration 
+Configuration of the certificate revocation list (CRL), if any, maintained by your private CA.
+Required: No
+Type: CrlConfiguration
+Update requires: No interruption

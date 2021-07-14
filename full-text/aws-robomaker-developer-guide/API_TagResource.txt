@@ -1,0 +1,59 @@
+TagResource
+Adds or edits tags for a AWS RoboMaker resource.
+Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty strings. 
+For information about the rules that apply to tag keys and tag values, see User-Defined Tag Restrictions in the AWS Billing and Cost Management User Guide. 
+Request Syntax
+```
+POST /tags/resourceArn HTTP/1.1
+Content-type: application/json
+{
+   "tags": { 
+      "string" : "string" 
+   }
+}
+```
+URI Request Parameters
+The request requires the following URI parameters.
+ resourceArn  
+The Amazon Resource Name (ARN) of the AWS RoboMaker resource you are tagging.
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+Request Body
+The request accepts the following data in JSON format.
+ tags  
+A map that contains tag keys and tag values that are attached to the resource.
+Type: String to string map
+Key Length Constraints: Minimum length of 1. Maximum length of 128.
+Key Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Value Length Constraints: Minimum length of 0. Maximum length of 256.
+Value Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Required: Yes
+Response Syntax
+HTTP/1.1 200
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+InternalServerException 
+AWS RoboMaker experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidParameterException 
+A parameter specified in a request is not valid, is unsupported, or cannot be used. The returned message provides an explanation of the error value.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The specified resource does not exist.
+HTTP Status Code: 400
+ThrottlingException 
+AWS RoboMaker is temporarily unable to process the request. Try your call again.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V2 

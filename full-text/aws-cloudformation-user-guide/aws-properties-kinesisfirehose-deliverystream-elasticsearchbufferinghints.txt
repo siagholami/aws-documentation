@@ -1,0 +1,28 @@
+AWS::KinesisFirehose::DeliveryStream ElasticsearchBufferingHints
+The ElasticsearchBufferingHints property type specifies how Amazon Kinesis Data Firehose (Kinesis Data Firehose) buffers incoming data while delivering it to the destination. The first buffer condition that is satisfied triggers Kinesis Data Firehose to deliver the data. 
+ElasticsearchBufferingHints is the property type for the BufferingHints property of the Amazon Kinesis Data Firehose DeliveryStream ElasticsearchDestinationConfiguration property type. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds)" : Integer,
+  "[SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs)" : Integer
+}
+YAML
+[IntervalInSeconds](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds): Integer
+  [SizeInMBs](#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs): Integer
+Properties
+IntervalInSeconds 
+The length of time, in seconds, that Kinesis Data Firehose buffers incoming data before delivering it to the destination. For valid values, see the IntervalInSeconds content for the BufferingHints data type in the Amazon Kinesis Data Firehose API Reference. 
+Required: No
+Type: Integer
+Minimum: 60
+Maximum: 900
+Update requires: No interruption
+SizeInMBs 
+The size of the buffer, in MBs, that Kinesis Data Firehose uses for incoming data before delivering it to the destination. For valid values, see the SizeInMBs content for the BufferingHints data type in the Amazon Kinesis Data Firehose API Reference. 
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 100
+Update requires: No interruption

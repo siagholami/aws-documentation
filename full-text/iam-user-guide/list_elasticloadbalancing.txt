@@ -1,0 +1,311 @@
+Actions, resources, and condition keys for Elastic Load Balancing
+Elastic Load Balancing (service prefix: elasticloadbalancing) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Elastic Load Balancing
+ Resource types defined by Elastic Load Balancing
+ Condition keys for Elastic Load Balancing
+Actions defined by Elastic Load Balancing
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AddTags 
+Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags
+Tagging
+ loadbalancer* 
+
+
+
+
+ ApplySecurityGroupsToLoadBalancer 
+Associates one or more security groups with your load balancer in a virtual private cloud (VPC)
+Write
+ loadbalancer* 
+
+
+
+
+ AttachLoadBalancerToSubnets 
+Adds one or more subnets to the set of configured subnets for the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ ConfigureHealthCheck 
+Specifies the health check settings to use when evaluating the health state of your back-end instances
+Write
+ loadbalancer* 
+
+
+
+
+ CreateAppCookieStickinessPolicy 
+Generates a stickiness policy with sticky session lifetimes that follow that of an application-generated cookie
+Write
+ loadbalancer* 
+
+
+
+
+ CreateLBCookieStickinessPolicy 
+Generates a stickiness policy with sticky session lifetimes controlled by the lifetime of the browser (user-agent) or a specified expiration period
+Write
+ loadbalancer* 
+
+
+
+
+ CreateLoadBalancer 
+Creates a load balancer
+Write
+ loadbalancer 
+
+
+
+
+ CreateLoadBalancerListeners 
+Creates one or more listeners for the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ CreateLoadBalancerPolicy 
+Creates a policy with the specified attributes for the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ DeleteLoadBalancer 
+Deletes the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ DeleteLoadBalancerListeners 
+Deletes the specified listeners from the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ DeleteLoadBalancerPolicy 
+Deletes the specified policy from the specified load balancer. This policy must not be enabled for any listeners
+Write
+ loadbalancer* 
+
+
+
+
+ DeregisterInstancesFromLoadBalancer 
+Deregisters the specified instances from the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ DescribeInstanceHealth 
+Describes the state of the specified instances with respect to the specified load balancer
+Read
+
+
+
+
+
+ DescribeLoadBalancerAttributes 
+Describes the attributes for the specified load balancer
+Read
+
+
+
+
+
+ DescribeLoadBalancerPolicies 
+Describes the specified policies
+Read
+
+
+
+
+
+ DescribeLoadBalancerPolicyTypes 
+Describes the specified load balancer policy types
+Read
+
+
+
+
+
+ DescribeLoadBalancers 
+Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load balancers
+List
+
+
+
+
+
+ DescribeTags 
+Describes the tags associated with the specified load balancers
+Read
+
+
+
+
+
+ DetachLoadBalancerFromSubnets 
+Removes the specified subnets from the set of configured subnets for the load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ DisableAvailabilityZonesForLoadBalancer 
+Removes the specified Availability Zones from the set of Availability Zones for the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ EnableAvailabilityZonesForLoadBalancer 
+Adds the specified Availability Zones to the set of Availability Zones for the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ ModifyLoadBalancerAttributes 
+Modifies the attributes of the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ RegisterInstancesWithLoadBalancer 
+Adds the specified instances to the specified load balancer
+Write
+ loadbalancer* 
+
+
+
+
+ RemoveTags 
+Removes one or more tags from the specified load balancer
+Tagging
+ loadbalancer* 
+
+
+
+
+ SetLoadBalancerListenerSSLCertificate 
+Sets the certificate that terminates the specified listener's SSL connections
+Write
+ loadbalancer* 
+
+
+
+
+ SetLoadBalancerPoliciesForBackendServer 
+Replaces the set of policies associated with the specified port on which the back-end server is listening with a new set of policies
+Write
+ loadbalancer* 
+
+
+
+
+ SetLoadBalancerPoliciesOfListener 
+Replaces the current set of policies for the specified load balancer port with the specified set of policies
+Write
+ loadbalancer* 
+
+
+
+
+
+Resource types defined by Elastic Load Balancing
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ listener 
+arn:${Partition}:elasticloadbalancing:${Region}:${Account}:listener/${LoadBalancerName}/${LoadBalancerId}/${ListenerId}
+
+
+
+ loadbalancer 
+arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}
+ aws:RequestTag/${TagKey}   aws:TagKeys   elasticloadbalancing:ResourceTag/${TagKey} 
+
+
+
+Condition keys for Elastic Load Balancing
+Elastic Load Balancing defines the following condition keys that can be used in the Condition element of an IAM policy. You can use these keys to further refine the conditions under which the policy statement applies. For details about the columns in the following table, see The condition keys table.
+To view the global condition keys that are available to all services, see Available global condition keys.
+
+
+
+
+Condition keys
+Description
+Type
+
+
+
+
+aws:RequestTag/${TagKey}
+A key that is present in the request the user makes to the ELB service
+String
+
+
+aws:TagKeys
+The list of all the tag key names associated with the resource in the request
+String
+
+
+elasticloadbalancing:ResourceTag/
+The preface string for a tag key and value pair attached to a resource
+String
+
+
+elasticloadbalancing:ResourceTag/${TagKey}
+A tag key and value pair
+String
+
+

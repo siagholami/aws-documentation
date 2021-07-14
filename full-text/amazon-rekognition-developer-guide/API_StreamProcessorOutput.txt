@@ -1,0 +1,13 @@
+StreamProcessorOutput
+Information about the Amazon Kinesis Data Streams stream to which a Amazon Rekognition Video stream processor streams the results of a video analysis. For more information, see CreateStreamProcessor.
+Contents
+KinesisDataStream 
+The Amazon Kinesis Data Streams stream to which the Amazon Rekognition stream processor streams the analysis results.
+Type: KinesisDataStream object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

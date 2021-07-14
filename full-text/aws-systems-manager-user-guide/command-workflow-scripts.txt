@@ -1,0 +1,5 @@
+Handling exit codes with scripts
+In some cases, you might need to manage how exit codes are handled in your commands with the use of scripts.
+Topics
+ Rebooting managed instance from scripts
+ Managing exit codes in Run Command commands

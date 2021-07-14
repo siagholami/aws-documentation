@@ -1,0 +1,258 @@
+Actions, resources, and condition keys for AWS Elemental MediaStore
+AWS Elemental MediaStore (service prefix: mediastore) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by AWS Elemental MediaStore
+ Resource types defined by AWS Elemental MediaStore
+ Condition keys for AWS Elemental MediaStore
+Actions defined by AWS Elemental MediaStore
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ CreateContainer 
+Grants permission to create containers.
+Write
+
+
+
+
+
+ DeleteContainer 
+Grants permission to delete any container in the current account.
+Write
+
+
+
+
+
+ DeleteContainerPolicy 
+Grants permission to delete the access policy of any container in the current account.
+Permissions management
+
+
+
+
+
+ DeleteCorsPolicy 
+Grants permission to delete the CORS policy from any container in the current account.
+Write
+
+
+
+
+
+ DeleteLifecyclePolicy 
+Grants permission to delete the lifecycle policy from any container in the current account.
+Write
+
+
+
+
+
+ DeleteMetricPolicy 
+Grants permission to delete the metric policy from any container in the current account.
+Write
+
+
+
+
+
+ DeleteObject 
+Grants permission to delete objects.
+Write
+
+
+
+
+
+ DescribeContainer 
+Grants permission to retrieve details on any container in the current account.
+List
+
+
+
+
+
+ DescribeObject 
+Grants permission to retrieve object metadata.
+List
+
+
+
+
+
+ GetContainerPolicy 
+Grants permission to retrieve the access policy of any container in the current account.
+Read
+
+
+
+
+
+ GetCorsPolicy 
+Grants permission to retrieve the CORS policy of any container in the current account.
+Read
+
+
+
+
+
+ GetLifecyclePolicy 
+Grants permission to retrieve the lifecycle policy that is assigned to any container in the current account.
+Read
+
+
+
+
+
+ GetMetricPolicy 
+Grants permission to retrieve the metric policy that is assigned to any container in the current account.
+Read
+
+
+
+
+
+ GetObject 
+Grants permission to retrieve objects.
+Read
+
+
+
+
+
+ ListContainers 
+Grants permission to retrieve a list of containers in the current account.
+List
+
+
+
+
+
+ ListItems 
+Grants permission to retrieve a list of objects and folders in the current account.
+List
+
+
+
+
+
+ ListTagsForResource 
+Grants permission to list tags on any container in the current account.
+Read
+
+
+
+
+
+ PutContainerPolicy 
+Grants permission to create or replace the access policy of any container in the current account.
+Permissions management
+
+
+
+
+
+ PutCorsPolicy 
+Grants permission to add or modify the CORS policy of any container in the current account.
+Write
+
+
+
+
+
+ PutLifecyclePolicy 
+Grants permission to add or modify the lifecycle policy that is assigned to any container in the current account.
+Write
+
+
+
+
+
+ PutMetricPolicy 
+Grants permission to add or modify the metric policy that is assigned to any container in the current account.
+Write
+
+
+
+
+
+ PutObject 
+Grants permission to upload objects.
+Write
+
+
+
+
+
+ StartAccessLogging 
+Grants permission to enable access logging on any container in the current account.
+Write
+
+
+
+
+
+ StopAccessLogging 
+Grants permission to disable access logging on any container in the current account.
+Write
+
+
+
+
+
+ TagResource 
+Grants permission to add tags to any container in the current account.
+Tagging
+
+
+
+
+
+ UntagResource 
+Grants permission to remove tags from any container in the current account.
+Tagging
+
+
+
+
+
+
+Resource types defined by AWS Elemental MediaStore
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ container 
+arn:${Partition}:mediastore:${Region}:${Account}:container/${ContainerName}
+
+
+
+
+Condition keys for AWS Elemental MediaStore
+MediaStore has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

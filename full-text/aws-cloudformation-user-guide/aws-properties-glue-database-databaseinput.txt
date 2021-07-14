@@ -1,0 +1,37 @@
+AWS::Glue::Database DatabaseInput
+The structure used to create or update a database.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Description](#cfn-glue-database-databaseinput-description)" : String,
+  "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
+  "[Name](#cfn-glue-database-databaseinput-name)" : String,
+  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json
+}
+YAML
+[Description](#cfn-glue-database-databaseinput-description): String
+  [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
+  [Name](#cfn-glue-database-databaseinput-name): String
+  [Parameters](#cfn-glue-database-databaseinput-parameters): Json
+Properties
+Description 
+A description of the database.
+Required: No
+Type: String
+Update requires: No interruption
+LocationUri 
+The location of the database (for example, an HDFS path). 
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of the database. For Hive compatibility, this is folded to lowercase when it is stored.
+Required: No
+Type: String
+Update requires: Replacement
+Parameters 
+These key-value pairs define parameters and properties of the database.
+Required: No
+Type: Json
+Update requires: No interruption

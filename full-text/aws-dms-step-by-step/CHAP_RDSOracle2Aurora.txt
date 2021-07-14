@@ -1,0 +1,21 @@
+Step 4: Test the Connectivity to the Aurora MySQL DB Instance
+Next, test your connection to your Aurora MySQL DB instance.
+To test the connection to your Aurora MySQL DB instance using SQL Workbench/J
+
+
+In SQL Workbench/J, choose File, then choose Connect window. Choose the Create a new connection profile icon. using the following information: Connect to the Aurora MySQL DB instance in SQL Workbench/J by using the information as shown following  
+[See the AWS documentation website for more details]
+
+
+Test the connection by choosing Test. Choose OK to close the dialog box, then choose OK to create the connection profile.
+
+Note
+If your connection is unsuccessful, ensure that the IP address you assigned when creating the CloudFormation template is the one you are attempting to connect from. This is the most common issue when trying to connect to an instance.
+
+
+Log on to the Aurora MySQL instance by using the master admin credentials.
+
+
+Verify your connectivity to the Aurora MySQL DB instance by running a sample SQL command, such as SHOW DATABASES;.
+
+

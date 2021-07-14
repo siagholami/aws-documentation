@@ -1,0 +1,5 @@
+High Quality Shadow
+You use can use the following High Quality Shadow nodes in the Script Canvas editor to configure effects with the High Quality Shadow component.
+Topics
+ Get Enabled
+ Set Enabled

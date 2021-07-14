@@ -1,0 +1,20 @@
+Specifying Server-Side Encryption Using the REST API
+At the time of object creation—that is, when you are uploading a new object or making a copy of an existing object—you can specify if you want Amazon S3 to encrypt your data by adding the x-amz-server-side-encryption header to the request. Set the value of the header to the encryption algorithm AES256 that Amazon S3 supports. Amazon S3 confirms that your object is stored using server-side encryption by returning the response header x-amz-server-side-encryption. 
+The following REST upload APIs accept the x-amz-server-side-encryption request header.
+ PUT Object
+ PUT Object - Copy
+ POST Object
+ Initiate Multipart Upload
+When uploading large objects using the multipart upload API, you can specify server-side encryption by adding the x-amz-server-side-encryption header to the Initiate Multipart Upload request. When you are copying an existing object, regardless of whether the source object is encrypted or not, the destination object is not encrypted unless you explicitly request server-side encryption.
+The response headers of the following REST APIs return the x-amz-server-side-encryption header when an object is stored using server-side encryption. 
+ PUT Object
+ PUT Object - Copy
+ POST Object
+ Initiate Multipart Upload
+ Upload Part
+ Upload Part - Copy
+ Complete Multipart Upload
+ Get Object
+ Head Object
+Note
+Encryption request headers should not be sent for GET requests and HEAD requests if your object uses SSE-S3 or you’ll get an HTTP 400 BadRequest error.

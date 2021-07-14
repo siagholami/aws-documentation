@@ -1,0 +1,46 @@
+EC2 Image Builder User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is EC2 Image Builder?
+How EC2 Image Builder works
+Getting started with EC2 Image Builder
+Prerequisites
+Accessing EC2 Image Builder
+Build and automate an operating system image deployment using the EC2 Image Builder console
+Managing and Running Images Using the EC2 Image Builder Console
+Setting up and managing an EC2 Image Builder image pipeline using the AWS CLI
+EC2 Image Builder Component Manager
+Using Documents in EC2 Image Builder
+Component Manager Supported Action Modules
+EC2 Image Builder STIG Components
+Resource Sharing in EC2 Image Builder
+Security in EC2 Image Builder
+EC2 Image Builder and interface VPC endpoints (AWS PrivateLink)
+Data Protection in EC2 Image Builder
+Identity and Access Management for EC2 Image Builder
+How EC2 Image Builder works with IAM
+EC2 Image Builder identity-based policy examples
+EC2 Image Builder resource-based policy examples
+Using service-linked roles for EC2 Image Builder
+Troubleshooting EC2 Image Builder identity and access
+
+
+Compliance Validation for EC2 Image Builder
+Resilience in EC2 Image Builder
+Infrastructure Security in EC2 Image Builder
+Patch Management in EC2 Image Builder
+Security Best Practices for EC2 Image Builder
+Troubleshooting EC2 Image Builder
+Document History for EC2 Image Builder User Guide
+AWS glossary

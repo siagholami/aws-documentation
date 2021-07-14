@@ -1,0 +1,163 @@
+Common issues with Windows instances
+The following are troubleshooting tips to help you solve common issues with EC2 instance running Windows Server.
+Topics
+ EBS volumes don't initialize on Windows Server 2016 and later
+ Boot an EC2 Windows instance into Directory Services Restore Mode (DSRM)
+ Instance loses network connectivity or scheduled tasks don't run when expected
+ Unable to get console output
+ Windows Server 2012 R2 not available on the network
+EBS volumes don't initialize on Windows Server 2016 and later
+Instances created from Amazon Machine Images (AMIs) for Windows Server 2016 and later use the EC2Launch service for a variety of startup tasks, including initializing EBS volumes. By default, EC2Launch does not initialize secondary volumes. You can configure EC2Launch to initialize these disks automatically.
+To map drive letters to volumes
+
+
+Connect to the instance to configure and open the C:\ProgramData\Amazon\EC2-Windows\Launch\Config\DriveLetterMappingConfig.json file in a text editor.
+
+
+Specify the volume settings using the following format:
+
+
+{
+     "driveLetterMapping": [
+       {
+         "volumeName": "sample volume",
+         "driveLetter": "H"
+       }
+     ]
+   }
+
+
+Save your changes and close the file.
+
+
+Open Windows PowerShell and use the following command to run the EC2Launch script that initializes the disks:
+
+
+PS C:\>  C:\ProgramData\Amazon\EC2-Windows\Launch\Scripts\InitializeDisks.ps1
+To initialize the disks each time the instance boots, add the -Schedule flag as follows:
+PS C:\>  C:\ProgramData\Amazon\EC2-Windows\Launch\Scripts\InitializeDisks.ps1 -Schedule
+Boot an EC2 Windows instance into Directory Services Restore Mode (DSRM)
+If an instance running Microsoft Active Directory experiences a system failure or other critical issues you can troubleshoot the instance by booting into a special version of Safe Mode called Directory Services Restore Mode (DSRM). In DSRM you can repair or recover Active Directory.
+Driver support for DSRM
+How you enable DSRM and boot into the instance depends on the drivers the instance is running. In the EC2 console you can view driver version details for an instance from the System Log. The following table shows which drivers are supported for DSRM.
+
+
+
+Driver Versions
+DSRM Supported?
+Next Steps
+
+
+
+
+Citrix PV 5.9
+No
+Restore the instance from a backup. You cannot enable DSRM.
+
+
+AWS PV 7.2.0
+No
+Though DSRM is not supported for this driver, you can still detach the root volume from the instance, take a snapshot of the volume or create an AMI from it, and attach it to another instance in the same Availability Zone as a secondary volume. You can then enable DSRM (as described in this section).
+
+
+AWS PV 7.2.2 and later
+Yes
+Detach the root volume, attach it to another instance, and enable DSRM (as described in this section).
+
+
+Enhanced Networking
+Yes
+Detach the root volume, attach it to another instance, and enable DSRM (as described in this section).
+
+
+
+For information about how to enable Enhanced Networking, see Enabling Enhanced Networking on Windows Instances in a VPC. For more information about upgrading AWS PV drivers, see Upgrading PV Drivers on Your Windows Instances.
+Configure an instance to boot into DSRM
+EC2 Windows instances do not have network connectivity before the operating system is running. For this reason, you cannot press the F8 button on your keyboard to select a boot option. You must use one of the following procedures to boot an EC2 Windows Server instance into DSRM.
+If you suspect that Active Directory has been corrupted and the instance is still running, you can configure the instance to boot into DSRM using either the System Configuration dialog box or the command prompt.
+To boot an online instance into DSRM using the System Configuration dialog box
+
+
+In the Run dialog box, type msconfig and press Enter.
+
+
+Choose the Boot tab.
+
+
+Under Boot options choose Safe boot.
+
+
+Choose Active Directory repair and then choose OK. The system prompts you to reboot the server.
+
+
+To boot an online instance into DSRM using the command line
+From a Command Prompt window, run the following command:
+bcdedit /set safeboot dsrepair
+If an instance is offline and unreachable, you must detach the root volume and attach it to another instance to enable DSRM mode.
+To boot an offline instance into DSRM
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Instances.
+
+
+Locate the affected instance. Open the context (right-click) menu for the instance, choose Instance State, and then choose Stop.
+
+
+Choose Launch Instance and create a temporary instance in the same Availability Zone as the affected instance. Choose an instance type that uses a different version of Windows. For example, if your instance is Windows Server 2008, then choose a Windows Server 2008 R2 instance.
+Important
+If you do not create the instance in the same Availability Zone as the affected instance you will not be able to attach the root volume of the affected instance to the new instance.
+
+
+In the navigation pane, choose Volumes.
+
+
+Locate the root volume of the affected instance. Detach the volume and attach it to the temporary instance you created earlier. Attach it with the default device name (xvdf).
+
+
+Use Remote Desktop to connect to the temporary instance, and then use the Disk Management utility to make the volume available for use.
+
+
+Open a command prompt and run the following command. Replace D with the actual drive letter of the secondary volume you just attached:
+
+
+bcdedit /store D:\Boot\BCD /set {default} safeboot dsrepair
+
+
+In the Disk Management Utility, choose the drive you attached earlier, open the context (right-click) menu, and choose Offline.
+
+
+In the EC2 console, detach the affected volume from the temporary instance and reattach it to your original instance with the device name /dev/sda1. You must specify this device name to designate the volume as a root volume.
+
+
+Start the instance.
+
+
+After the instance passes the health checks in the EC2 console, connect to the instance using Remote Desktop and verify that it boots into DSRM mode.
+
+
+(Optional) Delete or stop the temporary instance you created in this procedure.
+
+
+Instance loses network connectivity or scheduled tasks don't run when expected
+If you restart your instance and it loses network connectivity, it's possible that the instance has the wrong time.
+By default, Windows instances use Coordinated Universal Time (UTC). If you set the time for your instance to a different time zone and then restart it, the time becomes offset and the instance temporarily loses its IP address. The instance regains network connectivity eventually, but this can take several hours. The amount of time that it takes for the instance to regain network connectivity depends on the difference between UTC and the other time zone.
+This same time issue can also result in scheduled tasks not running when you expect them to. In this case, the scheduled tasks do not run when expected because the instance has the incorrect time.
+To use a time zone other than UTC persistently, you must set the RealTimeIsUniversal registry key. Without this key, an instance uses UTC after you restart it.
+To resolve time issues that cause a loss of network connectivity
+
+
+Ensure that you are running the recommended PV drivers. For more information, see Upgrading PV Drivers on Your Windows Instances.
+
+
+Verify that the following registry key exists and is set to 1: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
+
+
+Unable to get console output
+For Windows instances, the instance console displays the output from tasks performed during the Windows boot process. If Windows boots successfully, the last message logged is Windows is Ready to use. Note that you can also display event log messages in the console, but this feature is not enabled by default. For more information, see EC2 Service Properties.
+To get the console output for your instance using the Amazon EC2 console, select the instance, choose Actions, Instance Settings, and then Get System Log. To get the console output using the command line, use one of the following commands: get-console-output (AWS CLI) or Get-EC2ConsoleOutput (AWS Tools for Windows PowerShell).
+For instances running Windows Server 2012 R2 and earlier, if the console output is empty, it could indicate an issue with the EC2Config service, such as a misconfigured configuration file, or that Windows failed to boot properly. To fix the issue, download and install the latest version of EC2Config. For more information, see Installing the Latest Version of EC2Config.
+Windows Server 2012 R2 not available on the network
+For information about troubleshooting a Windows Server 2012 R2 instance that is not available on the network, see Windows Server 2012 R2 loses network and storage connectivity after an instance reboot.

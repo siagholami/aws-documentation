@@ -1,0 +1,27 @@
+AWS::Cognito::UserPoolUser AttributeType
+Specifies whether the attribute is standard or custom.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-cognito-userpooluser-attributetype-name)" : String,
+  "[Value](#cfn-cognito-userpooluser-attributetype-value)" : String
+}
+YAML
+[Name](#cfn-cognito-userpooluser-attributetype-name): String
+  [Value](#cfn-cognito-userpooluser-attributetype-value): String
+Properties
+Name 
+The name of the attribute.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 32
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}]
+Update requires: No interruption
+Value 
+The value of the attribute.
+Required: No
+Type: String
+Maximum: 2048
+Update requires: No interruption

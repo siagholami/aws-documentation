@@ -1,0 +1,22 @@
+Tutorial: Rebooting an Amazon MQ Broker
+To apply a new configuration to a broker, you can reboot the broker. In addition, if your broker becomes unresponsive, you can reboot it to recover from a faulty state.
+The following example shows how you can reboot an Amazon MQ broker using the AWS Management Console.
+To Reboot an Amazon MQ Broker
+
+
+Sign in to the Amazon MQ console.
+
+
+From the broker list, choose the name of your broker (for example, MyBroker).
+
+
+On the MyBroker page, choose Actions, Reboot broker.
+Important
+Your broker will be offline while it is being rebooted.
+
+
+
+In the Reboot broker dialog box, choose Reboot.
+
+
+Rebooting the broker takes about 5 minutes.

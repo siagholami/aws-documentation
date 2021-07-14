@@ -1,0 +1,74 @@
+Setting up
+This section covers the steps necessary to run the Windows to Linux replatforming script.
+Topics
+ Prerequisites
+ Prerequisites for replatforming to an existing EC2 instance
+Prerequisites
+In order to run the Windows to Linux replatforming assistant for Microsoft SQL Server Databases script, you must do the following:
+
+
+
+Install the AWS PowerShell module
+To install the AWS PowerShell module, follow the steps listed in Setting up the AWS Tools for PowerShell on a Windows-Based Computer. We recommend that you use PowerShell 3.0 or later for the backup script to work properly.
+
+
+
+Install the Windows to Linux replatforming assistant PowerShell backup script
+To run the Windows to Linux replatforming assistant, download the PowerShell backup script: MigrateSQLServerToEC2Linux.ps1.
+
+
+
+Add an AWS user profile to the AWS SDK store
+To add and configure the AWS user profile, see the steps listed in Managing Profiles in the AWS Tools for PowerShell User Guide. Set the following IAM policy for your user profile. You can also add these permissions as an inline policy under your AWS user account using the IAM console.
+{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": [
+           "ec2:RebootInstances",
+           "ec2:DescribeInstanceStatus",
+           "ec2:DescribeInstances",
+           "ec2:CreateTags",
+           "ec2:RunInstances",
+           "ec2:DescribeImages",
+           "iam:PassRole",
+           "ssm:StartAutomationExecution",
+           "ssm:DescribeInstanceInformation",
+           "ssm:ListCommandInvocations",
+           "ssm:ListCommands",
+           "ssm:SendCommand",
+           "ssm:GetAutomationExecution",
+           "ssm:GetCommandInvocation",
+           "s3:PutEncryptionConfiguration",
+           "s3:CreateBucket",
+           "s3:ListBucket",
+           "s3:PutObject",
+           "s3:GetObject",
+           "s3:DeleteObject",
+           "s3:DeleteBucket"
+         ],
+         "Resource": "*"
+       }
+     ]
+   }
+
+
+
+Create an IAM instance profile role
+To create an IAM instance profile role in order to run Systems Manager on EC2 Linux, see the steps listed under Create an Instance Profile for Systems Manager in the AWS Systems Manager User Guide.
+Prerequisites for replatforming to an existing EC2 instance
+To replatform to an existing instance running Microsoft SQL Server 2017 on Linux, you must: 
+
+Configure the EC2 instance with an AWS Identity and Access Management (IAM) instance profile and attach the AmazonSSMManagedInstanceCore managed policy. 
+
+For information about creating an IAM instance profile for Systems Manager and attaching it to an instance, see the following topics in the AWS Systems Manager User Guide:
+    Create an Instance Profile for Systems Manager
+    Attach an IAM Instance Profile to an Amazon EC2 Instance
+
+
+Verify that SSM Agent is installed on your EC2 instance. For more information, see Installing and Configuring SSM Agent on Windows Instances in the AWS Systems Manager User Guide.
+
+
+Verify that the EC2 instance has enough free disk space to download and restore the Microsoft SQL Server backups.
+

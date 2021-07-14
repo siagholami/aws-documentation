@@ -1,0 +1,47 @@
+Create a Schema
+Amazon Cloud Directory supports uploading of a compliant JSON file for schema creation. To create a new schema, you can either create your own JSON file from scratch or download one of the existing schemas listed in the console. Then upload it as a custom schema. For more information, see Custom Schemas.
+You can also create, delete, download, list, publish, update and upgrade schemas using the Cloud Directory APIs. For more information about schema API operations, see the Amazon Cloud Directory API Reference Guide.
+Choose either of the procedures below, depending on your preferred method.
+To create a custom schema
+
+
+In the AWS Directory Service console navigation pane, under Cloud Directory, choose Schemas.
+
+
+Create a JSON file with all of your new schema definitions. For more information about how to format a JSON file, see JSON Schema Format. 
+
+
+In the console, choose Upload new schema.
+
+
+In the Upload new schema dialog, type a name for the schema.
+
+
+Select Choose file, select the new JSON file that you just created, and then choose Open. 
+
+
+Choose Upload. This adds a new schema to your schema library and places it in the Development state. For more information about schema states, see Schema Lifecycle.
+
+
+To create a custom schema based on an existing one in the console
+
+
+In the AWS Directory Service console navigation pane, under Cloud Directory, choose Schemas.
+
+
+In the table listing the schemas, select the option near the schema you want to copy.
+
+
+Choose Actions.
+
+
+Choose Download schema.
+
+
+Rename the JSON file, edit it as needed, and then save the file. For more information about how to format a JSON file, see JSON Schema Format.
+
+
+In the console, choose Upload new schema, select the JSON file that you just edited, and then choose Open.
+
+
+This adds a new schema to your schema library and places it in the Development state. For more information about schema states, see Schema Lifecycle.

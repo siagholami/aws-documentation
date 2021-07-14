@@ -1,0 +1,26 @@
+Getting started with the AWS Health API
+The AWS Health API provides programmatic access to the AWS Health information that is presented in the Personal Health Dashboard. You can use these API operations to get information about events that affect your AWS resources:
+ DescribeEvents: Summary information about events.
+ DescribeEventDetails: Detailed information about one or more events.
+ DescribeAffectedEntities: Information about AWS resources that are affected by one or more events.
+In addition, these operations provide information about event types and summary counts of events or affected entities:
+ DescribeEventTypes: Information about the kinds of events that AWS Health tracks.
+ DescribeEventAggregates: A count of the number of events that meet specified criteria.
+ DescribeEntityAggregates: A count of the number of affected entities that meet specified criteria.
+Organizational View
+When you enable Organizational View in AWS Health, you can use these API operations to get information about events that affect AWS resources in every account across your organization in AWS Organizations.
+ DescribeEventsForOrganization: Provides summary information about events across accounts in your organization.
+ DescribeAffectedAccountsForOrganization: Returns a list of accounts in your organization from AWS Organizations that are affected by the provided event.
+ DescribeEventDetailsForOrganization: Returns detailed information about one or more specified events for one or more accounts in your organization.
+ DescribeAffectedEntitiesForOrganization: Returns a list of entities that have been affected by one or more events for one or more accounts in your organization in AWS Organizations, based on the filter criteria.
+ EnableHealthServiceAccessForOrganization: Calling this operation enables AWS Health to work with AWS Organizations.
+ DisableHealthServiceAccessForOrganization: Calling this operation disables AWS Health from working with AWS Organizations.
+ DescribeHealthServiceStatusForOrganization: This operation provides status information on enabling or disabling AWS Health to work with your organization.
+The Health API requires a Business or Enterprise support plan from AWS Support. Calling the Health API from an account that does not have a Business or Enterprise support plan causes a SubscriptionRequiredException.
+For detailed descriptions of the AWS Health API, see the AWS Health API Reference.
+Service endpoint
+The endpoint for the AWS Health API is:
+ https://health.us-east-1.amazonaws.com
+The AWS Health service has one endpoint, in the US East (N. Virginia) Region, that provides event data for all regions. You can filter query results to get information about events that affect one or more regions, but the query should always be addressed to the health.us-east-1 endpoint.
+Java code examples
+The following topic demonstrates using the AWS Health API with the AWS SDK for Java.

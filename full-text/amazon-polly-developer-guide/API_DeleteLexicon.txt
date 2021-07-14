@@ -1,0 +1,54 @@
+DeleteLexicon
+Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available for speech synthesis, nor is it possible to retrieve it using either the GetLexicon or ListLexicon APIs.
+For more information, see Managing Lexicons.
+Request Syntax
+DELETE /v1/lexicons/LexiconName HTTP/1.1
+URI Request Parameters
+The request requires the following URI parameters.
+ Name  
+The name of the lexicon to delete. Must be an existing lexicon in the region.
+Pattern: [0-9A-Za-z]{1,20} 
+Request Body
+The request does not have a request body.
+Response Syntax
+HTTP/1.1 200
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.
+Errors
+LexiconNotFoundException 
+Amazon Polly can't find the specified lexicon. This could be caused by a lexicon that is missing, its name is misspelled or specifying a lexicon that is in a different region.
+Verify that the lexicon exists, is in the region (see ListLexicons) and that you spelled its name is spelled correctly. Then try again.
+HTTP Status Code: 404
+ServiceFailureException 
+An unknown condition has caused a service failure.
+HTTP Status Code: 500
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+
+
+AWS Command Line Interface 
+
+
+AWS SDK for .NET 
+
+
+AWS SDK for C 
+
+
+AWS SDK for Go 
+
+
+AWS SDK for Java 
+
+
+AWS SDK for JavaScript 
+
+
+AWS SDK for PHP V3 
+
+
+AWS SDK for Python 
+
+
+AWS SDK for Ruby V2 
+

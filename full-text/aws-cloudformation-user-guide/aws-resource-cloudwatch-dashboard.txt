@@ -1,0 +1,37 @@
+AWS::CloudWatch::Dashboard
+The AWS::CloudWatch::Dashboard resource specifies an Amazon CloudWatch dashboard. A dashboard is a customizable home page in the CloudWatch console that you can use to monitor your AWS resources in a single view.
+All dashboards in your account are global, not region-specific.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::CloudWatch::Dashboard",
+  "Properties" : {
+      "[DashboardBody](#cfn-cloudwatch-dashboard-dashboardbody)" : String,
+      "[DashboardName](#cfn-cloudwatch-dashboard-dashboardname)" : String
+    }
+}
+YAML
+Type: AWS::CloudWatch::Dashboard
+Properties: 
+  [DashboardBody](#cfn-cloudwatch-dashboard-dashboardbody): String
+  [DashboardName](#cfn-cloudwatch-dashboard-dashboardname): String
+Properties
+DashboardBody 
+The detailed information about the dashboard in JSON format, including the widgets to include and their location on the dashboard. This parameter is required.
+For more information about the syntax, see Dashboard Body Structure and Syntax.
+Required: Yes
+Type: String
+Update requires: No interruption
+DashboardName 
+The name of the dashboard. The name must be between 1 and 255 characters. If you do not specify a name, one will be generated automatically. 
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the value of DashboardName.
+For more information about using the Ref function, see Ref.
+See also
+
+Amazon CloudWatch Template Snippets 

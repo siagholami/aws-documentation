@@ -1,0 +1,19 @@
+In-Game Survey Cloud Gem Service API Reference
+You can use API operations on the Cloud Canvas in-game survey service to manage survey, question, answer submission, and metadata operations. Requests that succeed return an HTTP 200 response.
+Topics
+ Get Service Status
+ Survey Operations
+ Question Operations
+ Answer Submission Operations
+ Metadata Operations
+Get Service Status
+To get status of the service, use the following syntax.
+GET /service/status
+This API operation returns the service's status and is useful for testing connectivity.
+Request Parameters
+This operation does not have request parameters.
+Response
+Returns a string that reports the service's status.
+{
+  "status": "string"
+}

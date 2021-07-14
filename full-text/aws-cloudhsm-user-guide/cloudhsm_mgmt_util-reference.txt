@@ -1,0 +1,114 @@
+cloudhsm_mgmt_util Command Reference
+The cloudhsm_mgmt_util command line tool helps crypto officers manage users in the HSMs. It also includes commands that allow crypto users (CUs) to share keys, and get and set key attributes. These commands complement the primary key management commands in the key_mgmt_util command line tool. 
+For a quick start, see Getting Started with cloudhsm_mgmt_util. 
+Before you run any cloudhsm_mgmt_util command, you must start cloudhsm_mgmt_util, enable end-to-end encryption, and log in to the HSM. Be sure that you log in with the user account type that can run the commands you plan to use.
+To list all cloudhsm_mgmt_util commands, run the following command:
+aws-cloudhsm> help
+To get the syntax for a cloudhsm_mgmt_util command, run the following command:
+aws-cloudhsm> help <command-name>
+Note
+Use the syntax as per the documentation. While the built-in software help may provide additional options, these should not be considered supported and should not be utilized in production code.
+To run a command, enter the command name, or enough of the name to distinguish it from the names of other cloudhsm_mgmt_util commands. 
+For example, to get a list of users on the HSMs, enter listUsers or listU.
+aws-cloudhsm> listUsers
+To end your cloudhsm_mgmt_util session, run the following command:
+aws-cloudhsm> quit
+For help interpreting the key attributes, see the Key Attribute Reference.
+The following topics describe commands in cloudhsm_mgmt_util. 
+Note
+Some commands in key_mgmt_util and cloudhsm_mgmt_util have the same names. However, the commands typically have different syntax, different output, and slightly different functionality.
+
+
+
+Command
+Description
+User Type
+
+
+
+
+changePswd
+Changes the passwords of users on the HSMs. Any user can change their own password. COs can change anyone's password.
+CO
+
+
+createUser
+Creates users of all types on the HSMs.
+CO
+
+
+deleteUser
+Deletes users of all types from the HSMs.
+CO
+
+
+findAllKeys
+Gets the keys that a user owns or shares. Also gets a hash of the key ownership and sharing data for all keys on each HSM.
+CO, AU
+
+
+getAttribute
+Gets an attribute value for an AWS CloudHSM key and writes it to a file or stdout (standard output).
+CU
+
+
+getCert
+Gets the certificate of a particular HSM and saves it in a desired certificate format.
+All.
+
+
+getHSMInfo
+Gets information about the hardware on which an HSM is running.
+All. Login is not required.
+
+
+getKeyInfo
+Gets owners, shared users, and the quorum authentication status of a key.
+All. Login is not required.
+
+
+info
+Gets information about an HSM, including the IP address, hostname, port, and current user.
+All. Login is not required.
+
+
+listUsers
+Gets the users in each of the HSMs, their user type and ID, and other attributes.
+All. Login is not required.
+
+
+loginHSM and logoutHSM
+Log in and log out of an HSM.
+All.
+
+
+quit
+Quits cloudhsm_mgmt_util.
+All. Login is not required.
+
+
+server
+Enters and exits server mode on an HSM.
+All.
+
+
+setAttribute
+Changes the values of the label, encrypt, decrypt, wrap, and unwrap attributes of an existing key.
+CU
+
+
+shareKey
+Shares an existing key with other users.
+CU
+
+
+syncKey
+Syncs a key across cloned AWS CloudHSM clusters.
+CU, CO
+
+
+syncUser
+Syncs a user across cloned AWS CloudHSM clusters.
+CO
+
+

@@ -1,0 +1,3337 @@
+AWS CloudFormation User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS CloudFormation?
+AWS CloudFormation concepts
+How does AWS CloudFormation work?
+Setting up
+Signing up for an AWS account and pricing
+Controlling access with AWS Identity and Access Management
+AWS CloudFormation service role
+
+
+Logging AWS CloudFormation API calls with AWS CloudTrail
+AWS CloudFormation quotas
+AWS CloudFormation endpoints
+Setting up VPC endpoints for AWS CloudFormation
+Getting started with AWS CloudFormation
+Get started
+Learn template basics
+Walkthrough: Updating a stack
+AWS CloudFormation best practices
+Continuous delivery with CodePipeline
+Walkthrough: Building a pipeline for test and production stacks
+AWS CloudFormation configuration properties reference
+AWS CloudFormation artifacts
+Using parameter override functions with CodePipeline pipelines
+Working with stacks
+Using the AWS CloudFormation console
+Logging in to the AWS CloudFormation console
+Creating a stack on the AWS CloudFormation console
+Selecting a stack template
+Specifying stack name and parameters
+Setting AWS CloudFormation stack options
+Reviewing your stack and estimating stack cost on the AWS CloudFormation console
+Creating stacks using change sets
+
+
+Creating an EC2 key pair
+Estimating the cost of your CloudFormation stack
+Viewing AWS CloudFormation stack data and resources on the AWS Management Console
+Monitor and roll back stack operations
+Creating quick-create links for stacks
+Deleting a stack on the AWS CloudFormation console
+Protecting a stack from being deleted
+Viewing deleted stacks on the AWS CloudFormation console
+
+
+Using the AWS Command Line Interface
+Creating a stack
+Describing and listing your stacks
+Viewing stack event history
+Listing resources
+Retrieving a template
+Validating a template
+Uploading local artifacts to an S3 bucket
+Quickly deploying templates with transforms
+Deleting a stack
+
+
+AWS CloudFormation stack updates
+Update behaviors of stack resources
+Modifying a stack template
+Updating stacks using change sets
+Creating a change set
+Viewing a change set
+Executing a change set
+Deleting a change set
+Example change sets
+
+
+Updating stacks directly
+Monitoring the progress of a stack update
+Canceling a stack update
+Prevent updates to stack resources
+Continue rolling back an update
+
+
+Detecting unmanaged configuration changes to stacks and resources
+Detect drift on an entire CloudFormation stack
+Detect drift on individual stack resources
+Resources that support drift detection
+
+
+Moving resources between stacks
+Exporting stack output values
+Listing stacks that import an exported output value
+Working with nested stacks
+Nesting an existing stack
+
+
+Working with Microsoft Windows stacks on AWS CloudFormation
+Microsoft Windows Amazon Machine Images (AMIs) and AWS CloudFormation templates
+Bootstrapping AWS CloudFormation Windows stacks
+
+
+Bringing existing resources into CloudFormation management
+Creating a stack from existing resources
+Importing existing resources into a stack
+Reverting an import operation
+Resources that support import operations
+Working with AWS CloudFormation templates
+AWS CloudFormation template formats
+Template anatomy
+Format version
+Description
+Metadata
+AWS::CloudFormation::Authentication
+AWS::CloudFormation::Init
+AWS::CloudFormation::Interface
+AWS CloudFormation interface label
+AWS CloudFormation interface ParameterGroup
+AWS CloudFormation interface ParameterLabel
+
+
+
+
+Parameters
+Using dynamic references to specify template values
+
+
+Mappings
+Conditions
+Transform
+AWS::Include transform
+AWS::SecretsManager transform
+AWS::Serverless transform
+
+
+Resources
+Outputs
+
+
+What is AWS CloudFormation Designer?
+Why use AWS CloudFormation Designer?
+AWS CloudFormation Designer interface overview
+Canvas pane
+Integrated JSON and YAML editor
+
+
+How to get started with Designer
+
+
+Walkthroughs
+Walkthrough: Use AWS CloudFormation Designer to create a basic web server
+Walkthrough: Use AWS CloudFormation Designer to modify a stack's template
+Walkthrough: Peer with an Amazon VPC in another AWS account
+Walkthrough: Refer to resource outputs in another AWS CloudFormation stack
+Walkthrough: Create a scalable, load-balancing web server
+Deploying applications on Amazon EC2 with AWS CloudFormation
+Creating wait conditions in a template
+
+
+Template snippets
+General template snippets
+Auto scaling template snippets
+AWS CloudFormation template snippets
+Amazon CloudFront template snippets
+Amazon CloudWatch template snippets
+Amazon CloudWatch Logs template snippets
+Amazon DynamoDB template snippets
+Amazon EC2 template snippets
+Amazon Elastic Container Service template snippets
+Amazon Elastic File System Sample Template
+Elastic Beanstalk template snippets
+Elastic Load Balancing template snippets
+AWS Identity and Access Management template snippets
+AWS Lambda template
+AWS OpsWorks template snippets
+Amazon Redshift template snippets
+Amazon RDS template snippets
+Route 53 template snippets
+Amazon S3 template snippets
+Amazon SNS template snippets
+Amazon SQS template snippets
+
+
+Custom resources
+Amazon Simple Notification Service-backed custom resources
+AWS Lambda-backed custom resources
+Walkthrough: Looking up Amazon Machine Image IDs
+cfn-response module
+
+
+Custom resource reference
+Custom resource request objects
+Custom resource response objects
+Custom resource request types
+Create
+Delete
+Update
+
+
+
+
+
+
+Using AWS CloudFormation macros to perform custom processing on templates
+Macro example: Creating and using a macro
+
+
+Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation
+Using regular expressions in AWS CloudFormation templates
+Using CloudFormer (beta) to create AWS CloudFormation templates from existing AWS resources
+Working with AWS CloudFormation StackSets
+StackSets concepts
+Prerequisites for stack set operations
+Grant self-managed permissions
+Enable trusted access with AWS Organizations
+
+
+Getting started with AWS CloudFormation StackSets
+Create a stack set
+Update your stack set
+Add stacks to a stack set
+Override parameters on stack instances
+Delete stack instances from your stack set
+Delete a stack set
+Manage automatic deployments for a stack set with service-managed permissions
+
+
+Configuring a target account gate in AWS CloudFormation StackSets
+Detecting unmanaged configuration changes in stack sets
+Best practices
+AWS CloudFormation StackSets sample templates
+Troubleshooting AWS CloudFormation StackSets
+Using the AWS CloudFormation registry
+Template reference
+AWS resource and property types reference
+AccessAnalyzer resource type reference
+AWS::AccessAnalyzer::Analyzer
+AWS::AccessAnalyzer::Analyzer ArchiveRule
+AWS::AccessAnalyzer::Analyzer Filter
+
+
+
+
+ACMPCA resource type reference
+AWS::ACMPCA::Certificate
+AWS::ACMPCA::Certificate Validity
+
+
+AWS::ACMPCA::CertificateAuthority
+AWS::ACMPCA::CertificateAuthority CrlConfiguration
+AWS::ACMPCA::CertificateAuthority RevocationConfiguration
+AWS::ACMPCA::CertificateAuthority Subject
+
+
+AWS::ACMPCA::CertificateAuthorityActivation
+
+
+ASK resource type reference
+Alexa::ASK::Skill
+Alexa::ASK::Skill AuthenticationConfiguration
+Alexa::ASK::Skill Overrides
+Alexa::ASK::Skill SkillPackage
+
+
+
+
+AmazonMQ resource type reference
+AWS::AmazonMQ::Broker
+AWS::AmazonMQ::Broker ConfigurationId
+AWS::AmazonMQ::Broker EncryptionOptions
+AWS::AmazonMQ::Broker InterBrokerCred
+AWS::AmazonMQ::Broker LdapMetadata
+AWS::AmazonMQ::Broker LdapServerMetadata
+AWS::AmazonMQ::Broker LogList
+AWS::AmazonMQ::Broker MaintenanceWindow
+AWS::AmazonMQ::Broker ServerMetadata
+AWS::AmazonMQ::Broker TagsEntry
+AWS::AmazonMQ::Broker User
+
+
+AWS::AmazonMQ::Configuration
+AWS::AmazonMQ::Configuration TagsEntry
+
+
+AWS::AmazonMQ::ConfigurationAssociation
+AWS::AmazonMQ::ConfigurationAssociation ConfigurationId
+
+
+
+
+Amplify Console resource type reference
+AWS::Amplify::App
+AWS::Amplify::App AutoBranchCreationConfig
+AWS::Amplify::App BasicAuthConfig
+AWS::Amplify::App CustomRule
+AWS::Amplify::App EnvironmentVariable
+
+
+AWS::Amplify::Branch
+AWS::Amplify::Branch BasicAuthConfig
+AWS::Amplify::Branch EnvironmentVariable
+
+
+AWS::Amplify::Domain
+AWS::Amplify::Domain SubDomainSetting
+
+
+
+
+Amazon API Gateway resource type reference
+AWS::ApiGateway::Account
+AWS::ApiGateway::ApiKey
+AWS::ApiGateway::ApiKey StageKey
+
+
+AWS::ApiGateway::Authorizer
+AWS::ApiGateway::BasePathMapping
+AWS::ApiGateway::ClientCertificate
+AWS::ApiGateway::Deployment
+AWS::ApiGateway::Deployment AccessLogSetting
+AWS::ApiGateway::Deployment CanarySetting
+AWS::ApiGateway::Deployment DeploymentCanarySettings
+AWS::ApiGateway::Deployment MethodSetting
+AWS::ApiGateway::Deployment StageDescription
+
+
+AWS::ApiGateway::DocumentationPart
+AWS::ApiGateway::DocumentationPart Location
+
+
+AWS::ApiGateway::DocumentationVersion
+AWS::ApiGateway::DomainName
+AWS::ApiGateway::DomainName EndpointConfiguration
+
+
+AWS::ApiGateway::GatewayResponse
+AWS::ApiGateway::Method
+AWS::ApiGateway::Method Integration
+AWS::ApiGateway::Method IntegrationResponse
+AWS::ApiGateway::Method MethodResponse
+
+
+AWS::ApiGateway::Model
+AWS::ApiGateway::RequestValidator
+AWS::ApiGateway::Resource
+AWS::ApiGateway::RestApi
+AWS::ApiGateway::RestApi EndpointConfiguration
+AWS::ApiGateway::RestApi S3Location
+
+
+AWS::ApiGateway::Stage
+AWS::ApiGateway::Stage AccessLogSetting
+AWS::ApiGateway::Stage CanarySetting
+AWS::ApiGateway::Stage MethodSetting
+
+
+AWS::ApiGateway::UsagePlan
+AWS::ApiGateway::UsagePlan ApiStage
+AWS::ApiGateway::UsagePlan QuotaSettings
+AWS::ApiGateway::UsagePlan ThrottleSettings
+
+
+AWS::ApiGateway::UsagePlanKey
+AWS::ApiGateway::VpcLink
+
+
+Amazon API Gateway V2 resource type reference
+AWS::ApiGatewayV2::Api
+AWS::ApiGatewayV2::Api BodyS3Location
+AWS::ApiGatewayV2::Api Cors
+
+
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides AccessLogSettings
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides IntegrationOverrides
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides RouteOverrides
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides RouteSettings
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides StageOverrides
+
+
+AWS::ApiGatewayV2::ApiMapping
+AWS::ApiGatewayV2::Authorizer
+AWS::ApiGatewayV2::Authorizer JWTConfiguration
+
+
+AWS::ApiGatewayV2::Deployment
+AWS::ApiGatewayV2::DomainName
+AWS::ApiGatewayV2::DomainName DomainNameConfiguration
+
+
+AWS::ApiGatewayV2::Integration
+AWS::ApiGatewayV2::Integration TlsConfig
+
+
+AWS::ApiGatewayV2::IntegrationResponse
+AWS::ApiGatewayV2::Model
+AWS::ApiGatewayV2::Route
+AWS::ApiGatewayV2::Route ParameterConstraints
+
+
+AWS::ApiGatewayV2::RouteResponse
+AWS::ApiGatewayV2::RouteResponse ParameterConstraints
+
+
+AWS::ApiGatewayV2::Stage
+AWS::ApiGatewayV2::Stage AccessLogSettings
+AWS::ApiGatewayV2::Stage RouteSettings
+
+
+AWS::ApiGatewayV2::VpcLink
+
+
+AppConfig resource type reference
+AWS::AppConfig::Application
+AWS::AppConfig::Application Tags
+
+
+AWS::AppConfig::ConfigurationProfile
+AWS::AppConfig::ConfigurationProfile Tags
+AWS::AppConfig::ConfigurationProfile Validators
+
+
+AWS::AppConfig::Deployment
+AWS::AppConfig::Deployment Tags
+
+
+AWS::AppConfig::DeploymentStrategy
+AWS::AppConfig::DeploymentStrategy Tags
+
+
+AWS::AppConfig::Environment
+AWS::AppConfig::Environment Monitors
+AWS::AppConfig::Environment Tags
+
+
+AWS::AppConfig::HostedConfigurationVersion
+
+
+Application Auto Scaling resource type reference
+AWS::ApplicationAutoScaling::ScalableTarget
+AWS::ApplicationAutoScaling::ScalableTarget ScalableTargetAction
+AWS::ApplicationAutoScaling::ScalableTarget ScheduledAction
+AWS::ApplicationAutoScaling::ScalableTarget SuspendedState
+
+
+AWS::ApplicationAutoScaling::ScalingPolicy
+AWS::ApplicationAutoScaling::ScalingPolicy CustomizedMetricSpecification
+AWS::ApplicationAutoScaling::ScalingPolicy MetricDimension
+AWS::ApplicationAutoScaling::ScalingPolicy PredefinedMetricSpecification
+AWS::ApplicationAutoScaling::ScalingPolicy StepAdjustment
+AWS::ApplicationAutoScaling::ScalingPolicy StepScalingPolicyConfiguration
+AWS::ApplicationAutoScaling::ScalingPolicy TargetTrackingScalingPolicyConfiguration
+
+
+
+
+ApplicationInsights resource type reference
+AWS::ApplicationInsights::Application
+AWS::ApplicationInsights::Application Alarm
+AWS::ApplicationInsights::Application AlarmMetric
+AWS::ApplicationInsights::Application ComponentConfiguration
+AWS::ApplicationInsights::Application ComponentMonitoringSetting
+AWS::ApplicationInsights::Application ConfigurationDetails
+AWS::ApplicationInsights::Application CustomComponent
+AWS::ApplicationInsights::Application Log
+AWS::ApplicationInsights::Application LogPattern
+AWS::ApplicationInsights::Application LogPatternSet
+AWS::ApplicationInsights::Application SubComponentConfigurationDetails
+AWS::ApplicationInsights::Application SubComponentTypeConfiguration
+AWS::ApplicationInsights::Application WindowsEvent
+
+
+
+
+App Mesh resource type reference
+AWS::AppMesh::GatewayRoute
+AWS::AppMesh::GatewayRoute GatewayRouteSpec
+AWS::AppMesh::GatewayRoute GatewayRouteTarget
+AWS::AppMesh::GatewayRoute GatewayRouteVirtualService
+AWS::AppMesh::GatewayRoute GrpcGatewayRoute
+AWS::AppMesh::GatewayRoute GrpcGatewayRouteAction
+AWS::AppMesh::GatewayRoute GrpcGatewayRouteMatch
+AWS::AppMesh::GatewayRoute HttpGatewayRoute
+AWS::AppMesh::GatewayRoute HttpGatewayRouteAction
+AWS::AppMesh::GatewayRoute HttpGatewayRouteMatch
+
+
+AWS::AppMesh::Mesh
+AWS::AppMesh::Mesh EgressFilter
+AWS::AppMesh::Mesh MeshSpec
+
+
+AWS::AppMesh::Route
+AWS::AppMesh::Route Duration
+AWS::AppMesh::Route GrpcRetryPolicy
+AWS::AppMesh::Route GrpcRoute
+AWS::AppMesh::Route GrpcRouteAction
+AWS::AppMesh::Route GrpcRouteMatch
+AWS::AppMesh::Route GrpcRouteMetadata
+AWS::AppMesh::Route GrpcRouteMetadataMatchMethod
+AWS::AppMesh::Route GrpcTimeout
+AWS::AppMesh::Route HeaderMatchMethod
+AWS::AppMesh::Route HttpRetryPolicy
+AWS::AppMesh::Route HttpRoute
+AWS::AppMesh::Route HttpRouteAction
+AWS::AppMesh::Route HttpRouteHeader
+AWS::AppMesh::Route HttpRouteMatch
+AWS::AppMesh::Route HttpTimeout
+AWS::AppMesh::Route MatchRange
+AWS::AppMesh::Route RouteSpec
+AWS::AppMesh::Route TcpRoute
+AWS::AppMesh::Route TcpRouteAction
+AWS::AppMesh::Route TcpTimeout
+AWS::AppMesh::Route WeightedTarget
+
+
+AWS::AppMesh::VirtualGateway
+AWS::AppMesh::VirtualGateway VirtualGatewayAccessLog
+AWS::AppMesh::VirtualGateway VirtualGatewayBackendDefaults
+AWS::AppMesh::VirtualGateway VirtualGatewayClientPolicy
+AWS::AppMesh::VirtualGateway VirtualGatewayClientPolicyTls
+AWS::AppMesh::VirtualGateway VirtualGatewayFileAccessLog
+AWS::AppMesh::VirtualGateway VirtualGatewayHealthCheckPolicy
+AWS::AppMesh::VirtualGateway VirtualGatewayListener
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTls
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTlsAcmCertificate
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTlsCertificate
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTlsFileCertificate
+AWS::AppMesh::VirtualGateway VirtualGatewayLogging
+AWS::AppMesh::VirtualGateway VirtualGatewayPortMapping
+AWS::AppMesh::VirtualGateway VirtualGatewaySpec
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContext
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContextAcmTrust
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContextFileTrust
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContextTrust
+
+
+AWS::AppMesh::VirtualNode
+AWS::AppMesh::VirtualNode AccessLog
+AWS::AppMesh::VirtualNode AwsCloudMapInstanceAttribute
+AWS::AppMesh::VirtualNode AwsCloudMapServiceDiscovery
+AWS::AppMesh::VirtualNode Backend
+AWS::AppMesh::VirtualNode BackendDefaults
+AWS::AppMesh::VirtualNode ClientPolicy
+AWS::AppMesh::VirtualNode ClientPolicyTls
+AWS::AppMesh::VirtualNode DnsServiceDiscovery
+AWS::AppMesh::VirtualNode Duration
+AWS::AppMesh::VirtualNode FileAccessLog
+AWS::AppMesh::VirtualNode GrpcTimeout
+AWS::AppMesh::VirtualNode HealthCheck
+AWS::AppMesh::VirtualNode HttpTimeout
+AWS::AppMesh::VirtualNode Listener
+AWS::AppMesh::VirtualNode ListenerTimeout
+AWS::AppMesh::VirtualNode ListenerTls
+AWS::AppMesh::VirtualNode ListenerTlsAcmCertificate
+AWS::AppMesh::VirtualNode ListenerTlsCertificate
+AWS::AppMesh::VirtualNode ListenerTlsFileCertificate
+AWS::AppMesh::VirtualNode Logging
+AWS::AppMesh::VirtualNode PortMapping
+AWS::AppMesh::VirtualNode ServiceDiscovery
+AWS::AppMesh::VirtualNode TcpTimeout
+AWS::AppMesh::VirtualNode TlsValidationContext
+AWS::AppMesh::VirtualNode TlsValidationContextAcmTrust
+AWS::AppMesh::VirtualNode TlsValidationContextFileTrust
+AWS::AppMesh::VirtualNode TlsValidationContextTrust
+AWS::AppMesh::VirtualNode VirtualNodeSpec
+AWS::AppMesh::VirtualNode VirtualServiceBackend
+
+
+AWS::AppMesh::VirtualRouter
+AWS::AppMesh::VirtualRouter PortMapping
+AWS::AppMesh::VirtualRouter VirtualRouterListener
+AWS::AppMesh::VirtualRouter VirtualRouterSpec
+
+
+AWS::AppMesh::VirtualService
+AWS::AppMesh::VirtualService VirtualNodeServiceProvider
+AWS::AppMesh::VirtualService VirtualRouterServiceProvider
+AWS::AppMesh::VirtualService VirtualServiceProvider
+AWS::AppMesh::VirtualService VirtualServiceSpec
+
+
+
+
+Amazon AppStream 2.0 resource type reference
+AWS::AppStream::DirectoryConfig
+AWS::AppStream::DirectoryConfig ServiceAccountCredentials
+
+
+AWS::AppStream::Fleet
+AWS::AppStream::Fleet ComputeCapacity
+AWS::AppStream::Fleet DomainJoinInfo
+AWS::AppStream::Fleet VpcConfig
+
+
+AWS::AppStream::ImageBuilder
+AWS::AppStream::ImageBuilder AccessEndpoint
+AWS::AppStream::ImageBuilder DomainJoinInfo
+AWS::AppStream::ImageBuilder VpcConfig
+
+
+AWS::AppStream::Stack
+AWS::AppStream::Stack AccessEndpoint
+AWS::AppStream::Stack ApplicationSettings
+AWS::AppStream::Stack StorageConnector
+AWS::AppStream::Stack UserSetting
+
+
+AWS::AppStream::StackFleetAssociation
+AWS::AppStream::StackUserAssociation
+AWS::AppStream::User
+
+
+AppSync resource type reference
+AWS::AppSync::ApiCache
+AWS::AppSync::ApiKey
+AWS::AppSync::DataSource
+AWS::AppSync::DataSource AuthorizationConfig
+AWS::AppSync::DataSource AwsIamConfig
+AWS::AppSync::DataSource DeltaSyncConfig
+AWS::AppSync::DataSource DynamoDBConfig
+AWS::AppSync::DataSource ElasticsearchConfig
+AWS::AppSync::DataSource HttpConfig
+AWS::AppSync::DataSource LambdaConfig
+AWS::AppSync::DataSource RdsHttpEndpointConfig
+AWS::AppSync::DataSource RelationalDatabaseConfig
+
+
+AWS::AppSync::FunctionConfiguration
+AWS::AppSync::GraphQLApi
+AWS::AppSync::GraphQLApi AdditionalAuthenticationProvider
+AWS::AppSync::GraphQLApi AdditionalAuthenticationProviders
+AWS::AppSync::GraphQLApi CognitoUserPoolConfig
+AWS::AppSync::GraphQLApi LogConfig
+AWS::AppSync::GraphQLApi OpenIDConnectConfig
+AWS::AppSync::GraphQLApi Tags
+AWS::AppSync::GraphQLApi UserPoolConfig
+
+
+AWS::AppSync::GraphQLSchema
+AWS::AppSync::Resolver
+AWS::AppSync::Resolver CachingConfig
+AWS::AppSync::Resolver LambdaConflictHandlerConfig
+AWS::AppSync::Resolver PipelineConfig
+AWS::AppSync::Resolver SyncConfig
+
+
+
+
+Amazon Athena resource type reference
+AWS::Athena::DataCatalog
+AWS::Athena::DataCatalog Tags
+
+
+AWS::Athena::NamedQuery
+AWS::Athena::WorkGroup
+AWS::Athena::WorkGroup EncryptionConfiguration
+AWS::Athena::WorkGroup ResultConfiguration
+AWS::Athena::WorkGroup ResultConfigurationUpdates
+AWS::Athena::WorkGroup Tags
+AWS::Athena::WorkGroup WorkGroupConfiguration
+AWS::Athena::WorkGroup WorkGroupConfigurationUpdates
+
+
+
+
+AWS Auto Scaling resource type reference
+AWS::AutoScalingPlans::ScalingPlan
+AWS::AutoScalingPlans::ScalingPlan ApplicationSource
+AWS::AutoScalingPlans::ScalingPlan CustomizedLoadMetricSpecification
+AWS::AutoScalingPlans::ScalingPlan CustomizedScalingMetricSpecification
+AWS::AutoScalingPlans::ScalingPlan MetricDimension
+AWS::AutoScalingPlans::ScalingPlan PredefinedLoadMetricSpecification
+AWS::AutoScalingPlans::ScalingPlan PredefinedScalingMetricSpecification
+AWS::AutoScalingPlans::ScalingPlan ScalingInstruction
+AWS::AutoScalingPlans::ScalingPlan TagFilter
+AWS::AutoScalingPlans::ScalingPlan TargetTrackingConfiguration
+
+
+
+
+Amazon EC2 Auto Scaling resource type reference
+AWS::AutoScaling::AutoScalingGroup
+AWS::AutoScaling::AutoScalingGroup InstancesDistribution
+AWS::AutoScaling::AutoScalingGroup LaunchTemplate
+AWS::AutoScaling::AutoScalingGroup LaunchTemplateOverrides
+AWS::AutoScaling::AutoScalingGroup LaunchTemplateSpecification
+AWS::AutoScaling::AutoScalingGroup LifecycleHookSpecification
+AWS::AutoScaling::AutoScalingGroup MetricsCollection
+AWS::AutoScaling::AutoScalingGroup MixedInstancesPolicy
+AWS::AutoScaling::AutoScalingGroup NotificationConfiguration
+AWS::AutoScaling::AutoScalingGroup TagProperty
+
+
+AWS::AutoScaling::LaunchConfiguration
+AWS::AutoScaling::LaunchConfiguration BlockDevice
+AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping
+
+
+AWS::AutoScaling::LifecycleHook
+AWS::AutoScaling::ScalingPolicy
+AWS::AutoScaling::ScalingPolicy CustomizedMetricSpecification
+AWS::AutoScaling::ScalingPolicy MetricDimension
+AWS::AutoScaling::ScalingPolicy PredefinedMetricSpecification
+AWS::AutoScaling::ScalingPolicy StepAdjustment
+AWS::AutoScaling::ScalingPolicy TargetTrackingConfiguration
+
+
+AWS::AutoScaling::ScheduledAction
+
+
+AWS Backup resource type reference
+AWS::Backup::BackupPlan
+AWS::Backup::BackupPlan BackupPlanResourceType
+AWS::Backup::BackupPlan BackupRuleResourceType
+AWS::Backup::BackupPlan CopyActionResourceType
+AWS::Backup::BackupPlan LifecycleResourceType
+
+
+AWS::Backup::BackupSelection
+AWS::Backup::BackupSelection BackupSelectionResourceType
+AWS::Backup::BackupSelection ConditionResourceType
+
+
+AWS::Backup::BackupVault
+AWS::Backup::BackupVault NotificationObjectType
+
+
+
+
+AWS Batch resource type reference
+AWS::Batch::ComputeEnvironment
+AWS::Batch::ComputeEnvironment ComputeResources
+AWS::Batch::ComputeEnvironment LaunchTemplateSpecification
+
+
+AWS::Batch::JobDefinition
+AWS::Batch::JobDefinition ContainerProperties
+AWS::Batch::JobDefinition Device
+AWS::Batch::JobDefinition Environment
+AWS::Batch::JobDefinition LinuxParameters
+AWS::Batch::JobDefinition MountPoints
+AWS::Batch::JobDefinition NodeProperties
+AWS::Batch::JobDefinition NodeRangeProperty
+AWS::Batch::JobDefinition ResourceRequirement
+AWS::Batch::JobDefinition RetryStrategy
+AWS::Batch::JobDefinition Timeout
+AWS::Batch::JobDefinition Ulimit
+AWS::Batch::JobDefinition Volumes
+AWS::Batch::JobDefinition VolumesHost
+
+
+AWS::Batch::JobQueue
+AWS::Batch::JobQueue ComputeEnvironmentOrder
+
+
+
+
+AWS Billing and Cost Management Budgets resource type reference
+AWS::Budgets::Budget
+AWS::Budgets::Budget BudgetData
+AWS::Budgets::Budget CostTypes
+AWS::Budgets::Budget Notification
+AWS::Budgets::Budget NotificationWithSubscribers
+AWS::Budgets::Budget Spend
+AWS::Budgets::Budget Subscriber
+AWS::Budgets::Budget TimePeriod
+
+
+
+
+Cassandra resource type reference
+AWS::Cassandra::Keyspace
+AWS::Cassandra::Table
+AWS::Cassandra::Table BillingMode
+AWS::Cassandra::Table ClusteringKeyColumn
+AWS::Cassandra::Table Column
+AWS::Cassandra::Table ProvisionedThroughput
+
+
+
+
+AWS Certificate Manager resource type reference
+AWS::CertificateManager::Certificate
+AWS::CertificateManager::Certificate DomainValidationOption
+
+
+
+
+Chatbot resource type reference
+AWS::Chatbot::SlackChannelConfiguration
+
+
+AWS Cloud9 resource type reference
+AWS::Cloud9::EnvironmentEC2
+AWS::Cloud9::EnvironmentEC2 Repository
+
+
+
+
+CloudFormation resource type reference
+AWS::CloudFormation::CustomResource
+AWS::CloudFormation::Macro
+AWS::CloudFormation::Stack
+AWS::CloudFormation::WaitCondition
+AWS::CloudFormation::WaitConditionHandle
+
+
+CloudFront resource type reference
+AWS::CloudFront::CloudFrontOriginAccessIdentity
+AWS::CloudFront::CloudFrontOriginAccessIdentity CloudFrontOriginAccessIdentityConfig
+
+
+AWS::CloudFront::Distribution
+AWS::CloudFront::Distribution CacheBehavior
+AWS::CloudFront::Distribution Cookies
+AWS::CloudFront::Distribution CustomErrorResponse
+AWS::CloudFront::Distribution CustomOriginConfig
+AWS::CloudFront::Distribution DefaultCacheBehavior
+AWS::CloudFront::Distribution DistributionConfig
+AWS::CloudFront::Distribution ForwardedValues
+AWS::CloudFront::Distribution GeoRestriction
+AWS::CloudFront::Distribution LambdaFunctionAssociation
+AWS::CloudFront::Distribution Logging
+AWS::CloudFront::Distribution Origin
+AWS::CloudFront::Distribution OriginCustomHeader
+AWS::CloudFront::Distribution OriginGroup
+AWS::CloudFront::Distribution OriginGroupFailoverCriteria
+AWS::CloudFront::Distribution OriginGroupMember
+AWS::CloudFront::Distribution OriginGroupMembers
+AWS::CloudFront::Distribution OriginGroups
+AWS::CloudFront::Distribution Restrictions
+AWS::CloudFront::Distribution S3OriginConfig
+AWS::CloudFront::Distribution StatusCodes
+AWS::CloudFront::Distribution ViewerCertificate
+
+
+AWS::CloudFront::StreamingDistribution
+AWS::CloudFront::StreamingDistribution Logging
+AWS::CloudFront::StreamingDistribution S3Origin
+AWS::CloudFront::StreamingDistribution StreamingDistributionConfig
+AWS::CloudFront::StreamingDistribution TrustedSigners
+
+
+
+
+AWS Cloud Map resource type reference
+AWS::ServiceDiscovery::HttpNamespace
+AWS::ServiceDiscovery::Instance
+AWS::ServiceDiscovery::PrivateDnsNamespace
+AWS::ServiceDiscovery::PublicDnsNamespace
+AWS::ServiceDiscovery::Service
+AWS::ServiceDiscovery::Service DnsConfig
+AWS::ServiceDiscovery::Service DnsRecord
+AWS::ServiceDiscovery::Service HealthCheckConfig
+AWS::ServiceDiscovery::Service HealthCheckCustomConfig
+
+
+
+
+CloudTrail resource type reference
+AWS::CloudTrail::Trail
+AWS::CloudTrail::Trail DataResource
+AWS::CloudTrail::Trail EventSelector
+
+
+
+
+CloudWatch resource type reference
+AWS::CloudWatch::Alarm
+AWS::CloudWatch::Alarm Dimension
+AWS::CloudWatch::Alarm Metric
+AWS::CloudWatch::Alarm MetricDataQuery
+AWS::CloudWatch::Alarm MetricStat
+
+
+AWS::CloudWatch::AnomalyDetector
+AWS::CloudWatch::AnomalyDetector Configuration
+AWS::CloudWatch::AnomalyDetector Dimension
+AWS::CloudWatch::AnomalyDetector Range
+
+
+AWS::CloudWatch::CompositeAlarm
+AWS::CloudWatch::Dashboard
+AWS::CloudWatch::InsightRule
+AWS::CloudWatch::InsightRule Tags
+
+
+
+
+CloudWatch Logs resource type reference
+AWS::Logs::Destination
+AWS::Logs::LogGroup
+AWS::Logs::LogStream
+AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter MetricTransformation
+
+
+AWS::Logs::SubscriptionFilter
+
+
+CodeBuild resource type reference
+AWS::CodeBuild::Project
+AWS::CodeBuild::Project Artifacts
+AWS::CodeBuild::Project BatchRestrictions
+AWS::CodeBuild::Project BuildStatusConfig
+AWS::CodeBuild::Project CloudWatchLogsConfig
+AWS::CodeBuild::Project Environment
+AWS::CodeBuild::Project EnvironmentVariable
+AWS::CodeBuild::Project FilterGroup
+AWS::CodeBuild::Project GitSubmodulesConfig
+AWS::CodeBuild::Project LogsConfig
+AWS::CodeBuild::Project ProjectBuildBatchConfig
+AWS::CodeBuild::Project ProjectCache
+AWS::CodeBuild::Project ProjectFileSystemLocation
+AWS::CodeBuild::Project ProjectSourceVersion
+AWS::CodeBuild::Project ProjectTriggers
+AWS::CodeBuild::Project RegistryCredential
+AWS::CodeBuild::Project S3LogsConfig
+AWS::CodeBuild::Project Source
+AWS::CodeBuild::Project SourceAuth
+AWS::CodeBuild::Project VpcConfig
+AWS::CodeBuild::Project WebhookFilter
+
+
+AWS::CodeBuild::ReportGroup
+AWS::CodeBuild::ReportGroup ReportExportConfig
+AWS::CodeBuild::ReportGroup S3ReportExportConfig
+
+
+AWS::CodeBuild::SourceCredential
+
+
+CodeCommit resource type reference
+AWS::CodeCommit::Repository
+AWS::CodeCommit::Repository Code
+AWS::CodeCommit::Repository RepositoryTrigger
+AWS::CodeCommit::Repository S3
+
+
+
+
+CodeDeploy resource type reference
+AWS::CodeDeploy::Application
+AWS::CodeDeploy::DeploymentConfig
+AWS::CodeDeploy::DeploymentConfig MinimumHealthyHosts
+
+
+AWS::CodeDeploy::DeploymentGroup
+AWS::CodeDeploy::DeploymentGroup Alarm
+AWS::CodeDeploy::DeploymentGroup AlarmConfiguration
+AWS::CodeDeploy::DeploymentGroup AutoRollbackConfiguration
+AWS::CodeDeploy::DeploymentGroup Deployment
+AWS::CodeDeploy::DeploymentGroup DeploymentStyle
+AWS::CodeDeploy::DeploymentGroup EC2TagFilter
+AWS::CodeDeploy::DeploymentGroup EC2TagSet
+AWS::CodeDeploy::DeploymentGroup EC2TagSetListObject
+AWS::CodeDeploy::DeploymentGroup ELBInfo
+AWS::CodeDeploy::DeploymentGroup GitHubLocation
+AWS::CodeDeploy::DeploymentGroup LoadBalancerInfo
+AWS::CodeDeploy::DeploymentGroup OnPremisesTagSet
+AWS::CodeDeploy::DeploymentGroup OnPremisesTagSetListObject
+AWS::CodeDeploy::DeploymentGroup RevisionLocation
+AWS::CodeDeploy::DeploymentGroup S3Location
+AWS::CodeDeploy::DeploymentGroup TagFilter
+AWS::CodeDeploy::DeploymentGroup TargetGroupInfo
+AWS::CodeDeploy::DeploymentGroup TriggerConfig
+
+
+
+
+CodeGuruProfiler resource type reference
+AWS::CodeGuruProfiler::ProfilingGroup
+AWS::CodeGuruProfiler::ProfilingGroup Channel
+
+
+
+
+CodePipeline resource type reference
+AWS::CodePipeline::CustomActionType
+AWS::CodePipeline::CustomActionType ArtifactDetails
+AWS::CodePipeline::CustomActionType ConfigurationProperties
+AWS::CodePipeline::CustomActionType Settings
+
+
+AWS::CodePipeline::Pipeline
+AWS::CodePipeline::Pipeline ActionDeclaration
+AWS::CodePipeline::Pipeline ActionTypeId
+AWS::CodePipeline::Pipeline ArtifactStore
+AWS::CodePipeline::Pipeline ArtifactStoreMap
+AWS::CodePipeline::Pipeline BlockerDeclaration
+AWS::CodePipeline::Pipeline EncryptionKey
+AWS::CodePipeline::Pipeline InputArtifact
+AWS::CodePipeline::Pipeline OutputArtifact
+AWS::CodePipeline::Pipeline StageDeclaration
+AWS::CodePipeline::Pipeline StageTransition
+
+
+AWS::CodePipeline::Webhook
+AWS::CodePipeline::Webhook WebhookAuthConfiguration
+AWS::CodePipeline::Webhook WebhookFilterRule
+
+
+
+
+CodeStar resource type reference
+AWS::CodeStar::GitHubRepository
+AWS::CodeStar::GitHubRepository Code
+AWS::CodeStar::GitHubRepository S3
+
+
+
+
+CodeStarConnections resource type reference
+AWS::CodeStarConnections::Connection
+
+
+CodeStarNotifications resource type reference
+AWS::CodeStarNotifications::NotificationRule
+AWS::CodeStarNotifications::NotificationRule Target
+
+
+
+
+Amazon Cognito resource type reference
+AWS::Cognito::IdentityPool
+AWS::Cognito::IdentityPool CognitoIdentityProvider
+AWS::Cognito::IdentityPool CognitoStreams
+AWS::Cognito::IdentityPool PushSync
+
+
+AWS::Cognito::IdentityPoolRoleAttachment
+AWS::Cognito::IdentityPoolRoleAttachment MappingRule
+AWS::Cognito::IdentityPoolRoleAttachment RoleMapping
+AWS::Cognito::IdentityPoolRoleAttachment RulesConfigurationType
+
+
+AWS::Cognito::UserPool
+AWS::Cognito::UserPool AccountRecoverySetting
+AWS::Cognito::UserPool AdminCreateUserConfig
+AWS::Cognito::UserPool DeviceConfiguration
+AWS::Cognito::UserPool EmailConfiguration
+AWS::Cognito::UserPool InviteMessageTemplate
+AWS::Cognito::UserPool LambdaConfig
+AWS::Cognito::UserPool NumberAttributeConstraints
+AWS::Cognito::UserPool PasswordPolicy
+AWS::Cognito::UserPool Policies
+AWS::Cognito::UserPool RecoveryOption
+AWS::Cognito::UserPool SchemaAttribute
+AWS::Cognito::UserPool SmsConfiguration
+AWS::Cognito::UserPool StringAttributeConstraints
+AWS::Cognito::UserPool UsernameConfiguration
+AWS::Cognito::UserPool UserPoolAddOns
+AWS::Cognito::UserPool VerificationMessageTemplate
+
+
+AWS::Cognito::UserPoolClient
+AWS::Cognito::UserPoolClient AnalyticsConfiguration
+
+
+AWS::Cognito::UserPoolDomain
+AWS::Cognito::UserPoolDomain CustomDomainConfigType
+
+
+AWS::Cognito::UserPoolGroup
+AWS::Cognito::UserPoolIdentityProvider
+AWS::Cognito::UserPoolResourceServer
+AWS::Cognito::UserPoolResourceServer ResourceServerScopeType
+
+
+AWS::Cognito::UserPoolRiskConfigurationAttachment
+AWS::Cognito::UserPoolRiskConfigurationAttachment AccountTakeoverActionsType
+AWS::Cognito::UserPoolRiskConfigurationAttachment AccountTakeoverActionType
+AWS::Cognito::UserPoolRiskConfigurationAttachment AccountTakeoverRiskConfigurationType
+AWS::Cognito::UserPoolRiskConfigurationAttachment CompromisedCredentialsActionsType
+AWS::Cognito::UserPoolRiskConfigurationAttachment CompromisedCredentialsRiskConfigurationType
+AWS::Cognito::UserPoolRiskConfigurationAttachment NotifyConfigurationType
+AWS::Cognito::UserPoolRiskConfigurationAttachment NotifyEmailType
+AWS::Cognito::UserPoolRiskConfigurationAttachment RiskExceptionConfigurationType
+
+
+AWS::Cognito::UserPoolUICustomizationAttachment
+AWS::Cognito::UserPoolUser
+AWS::Cognito::UserPoolUser AttributeType
+
+
+AWS::Cognito::UserPoolUserToGroupAttachment
+
+
+Config resource type reference
+AWS::Config::AggregationAuthorization
+AWS::Config::ConfigRule
+AWS::Config::ConfigRule Scope
+AWS::Config::ConfigRule Source
+AWS::Config::ConfigRule SourceDetail
+
+
+AWS::Config::ConfigurationAggregator
+AWS::Config::ConfigurationAggregator AccountAggregationSource
+AWS::Config::ConfigurationAggregator OrganizationAggregationSource
+
+
+AWS::Config::ConfigurationRecorder
+AWS::Config::ConfigurationRecorder RecordingGroup
+
+
+AWS::Config::ConformancePack
+AWS::Config::ConformancePack ConformancePackInputParameter
+
+
+AWS::Config::DeliveryChannel
+AWS::Config::DeliveryChannel ConfigSnapshotDeliveryProperties
+
+
+AWS::Config::OrganizationConfigRule
+AWS::Config::OrganizationConfigRule OrganizationCustomRuleMetadata
+AWS::Config::OrganizationConfigRule OrganizationManagedRuleMetadata
+
+
+AWS::Config::OrganizationConformancePack
+AWS::Config::OrganizationConformancePack ConformancePackInputParameter
+
+
+AWS::Config::RemediationConfiguration
+AWS::Config::RemediationConfiguration ExecutionControls
+AWS::Config::RemediationConfiguration RemediationParameterValue
+AWS::Config::RemediationConfiguration ResourceValue
+AWS::Config::RemediationConfiguration SsmControls
+AWS::Config::RemediationConfiguration StaticValue
+
+
+
+
+CE resource type reference
+AWS::CE::CostCategory
+
+
+AWS Data Pipeline resource type reference
+AWS::DataPipeline::Pipeline
+AWS::DataPipeline::Pipeline Field
+AWS::DataPipeline::Pipeline ParameterAttribute
+AWS::DataPipeline::Pipeline ParameterObject
+AWS::DataPipeline::Pipeline ParameterValue
+AWS::DataPipeline::Pipeline PipelineObject
+AWS::DataPipeline::Pipeline PipelineTag
+
+
+
+
+DAX resource type reference
+AWS::DAX::Cluster
+AWS::DAX::Cluster SSESpecification
+
+
+AWS::DAX::ParameterGroup
+AWS::DAX::SubnetGroup
+
+
+Detective resource type reference
+AWS::Detective::Graph
+AWS::Detective::MemberInvitation
+
+
+AWS Directory Service resource type reference
+AWS::DirectoryService::MicrosoftAD
+AWS::DirectoryService::MicrosoftAD VpcSettings
+
+
+AWS::DirectoryService::SimpleAD
+AWS::DirectoryService::SimpleAD VpcSettings
+
+
+
+
+DLM resource type reference
+AWS::DLM::LifecyclePolicy
+AWS::DLM::LifecyclePolicy CreateRule
+AWS::DLM::LifecyclePolicy CrossRegionCopyRetainRule
+AWS::DLM::LifecyclePolicy CrossRegionCopyRule
+AWS::DLM::LifecyclePolicy FastRestoreRule
+AWS::DLM::LifecyclePolicy Parameters
+AWS::DLM::LifecyclePolicy PolicyDetails
+AWS::DLM::LifecyclePolicy RetainRule
+AWS::DLM::LifecyclePolicy Schedule
+
+
+
+
+DMS resource type reference
+AWS::DMS::Certificate
+AWS::DMS::Endpoint
+AWS::DMS::Endpoint DynamoDbSettings
+AWS::DMS::Endpoint ElasticsearchSettings
+AWS::DMS::Endpoint KafkaSettings
+AWS::DMS::Endpoint KinesisSettings
+AWS::DMS::Endpoint MongoDbSettings
+AWS::DMS::Endpoint NeptuneSettings
+AWS::DMS::Endpoint S3Settings
+
+
+AWS::DMS::EventSubscription
+AWS::DMS::ReplicationInstance
+AWS::DMS::ReplicationSubnetGroup
+AWS::DMS::ReplicationTask
+
+
+Amazon DocumentDB resource type reference
+AWS::DocDB::DBCluster
+AWS::DocDB::DBClusterParameterGroup
+AWS::DocDB::DBInstance
+AWS::DocDB::DBSubnetGroup
+
+
+DynamoDB resource type reference
+AWS::DynamoDB::Table
+AWS::DynamoDB::Table AttributeDefinition
+AWS::DynamoDB::Table GlobalSecondaryIndex
+AWS::DynamoDB::Table KeySchema
+AWS::DynamoDB::Table LocalSecondaryIndex
+AWS::DynamoDB::Table PointInTimeRecoverySpecification
+AWS::DynamoDB::Table Projection
+AWS::DynamoDB::Table ProvisionedThroughput
+AWS::DynamoDB::Table SSESpecification
+AWS::DynamoDB::Table StreamSpecification
+AWS::DynamoDB::Table TimeToLiveSpecification
+
+
+
+
+EC2 resource type reference
+AWS::EC2::CapacityReservation
+AWS::EC2::CapacityReservation TagSpecification
+
+
+AWS::EC2::CarrierGateway
+AWS::EC2::CarrierGateway Tags
+
+
+AWS::EC2::ClientVpnAuthorizationRule
+AWS::EC2::ClientVpnEndpoint
+AWS::EC2::ClientVpnEndpoint CertificateAuthenticationRequest
+AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions
+AWS::EC2::ClientVpnEndpoint DirectoryServiceAuthenticationRequest
+AWS::EC2::ClientVpnEndpoint FederatedAuthenticationRequest
+AWS::EC2::ClientVpnEndpoint TagSpecification
+
+
+AWS::EC2::ClientVpnRoute
+AWS::EC2::ClientVpnTargetNetworkAssociation
+AWS::EC2::CustomerGateway
+AWS::EC2::DHCPOptions
+AWS::EC2::EC2Fleet
+AWS::EC2::EC2Fleet CapacityReservationOptionsRequest
+AWS::EC2::EC2Fleet FleetLaunchTemplateConfigRequest
+AWS::EC2::EC2Fleet FleetLaunchTemplateOverridesRequest
+AWS::EC2::EC2Fleet FleetLaunchTemplateSpecificationRequest
+AWS::EC2::EC2Fleet OnDemandOptionsRequest
+AWS::EC2::EC2Fleet Placement
+AWS::EC2::EC2Fleet SpotOptionsRequest
+AWS::EC2::EC2Fleet TagSpecification
+AWS::EC2::EC2Fleet TargetCapacitySpecificationRequest
+
+
+AWS::EC2::EgressOnlyInternetGateway
+AWS::EC2::EIP
+AWS::EC2::EIPAssociation
+AWS::EC2::FlowLog
+AWS::EC2::GatewayRouteTableAssociation
+AWS::EC2::Host
+AWS::EC2::Instance
+AWS::EC2::Instance AssociationParameter
+AWS::EC2::Instance BlockDeviceMapping
+AWS::EC2::Instance CpuOptions
+AWS::EC2::Instance CreditSpecification
+AWS::EC2::Instance Ebs
+AWS::EC2::Instance ElasticGpuSpecification
+AWS::EC2::Instance ElasticInferenceAccelerator
+AWS::EC2::Instance HibernationOptions
+AWS::EC2::Instance InstanceIpv6Address
+AWS::EC2::Instance LaunchTemplateSpecification
+AWS::EC2::Instance LicenseSpecification
+AWS::EC2::Instance NetworkInterface
+AWS::EC2::Instance NoDevice
+AWS::EC2::Instance PrivateIpAddressSpecification
+AWS::EC2::Instance SsmAssociation
+AWS::EC2::Instance Volume
+
+
+AWS::EC2::InternetGateway
+AWS::EC2::LaunchTemplate
+AWS::EC2::LaunchTemplate BlockDeviceMapping
+AWS::EC2::LaunchTemplate CapacityReservationSpecification
+AWS::EC2::LaunchTemplate CapacityReservationTarget
+AWS::EC2::LaunchTemplate CpuOptions
+AWS::EC2::LaunchTemplate CreditSpecification
+AWS::EC2::LaunchTemplate Ebs
+AWS::EC2::LaunchTemplate ElasticGpuSpecification
+AWS::EC2::LaunchTemplate HibernationOptions
+AWS::EC2::LaunchTemplate IamInstanceProfile
+AWS::EC2::LaunchTemplate InstanceMarketOptions
+AWS::EC2::LaunchTemplate Ipv6Add
+AWS::EC2::LaunchTemplate LaunchTemplateData
+AWS::EC2::LaunchTemplate LaunchTemplateElasticInferenceAccelerator
+AWS::EC2::LaunchTemplate LicenseSpecification
+AWS::EC2::LaunchTemplate MetadataOptions
+AWS::EC2::LaunchTemplate Monitoring
+AWS::EC2::LaunchTemplate NetworkInterface
+AWS::EC2::LaunchTemplate Placement
+AWS::EC2::LaunchTemplate PrivateIpAdd
+AWS::EC2::LaunchTemplate SpotOptions
+AWS::EC2::LaunchTemplate TagSpecification
+
+
+AWS::EC2::LocalGatewayRoute
+AWS::EC2::LocalGatewayRouteTableVPCAssociation
+AWS::EC2::LocalGatewayRouteTableVPCAssociation Tags
+
+
+AWS::EC2::NatGateway
+AWS::EC2::NetworkAcl
+AWS::EC2::NetworkAclEntry
+AWS::EC2::NetworkAclEntry Icmp
+AWS::EC2::NetworkAclEntry PortRange
+
+
+AWS::EC2::NetworkInterface
+AWS::EC2::NetworkInterface InstanceIpv6Address
+AWS::EC2::NetworkInterface PrivateIpAddressSpecification
+
+
+AWS::EC2::NetworkInterfaceAttachment
+AWS::EC2::NetworkInterfacePermission
+AWS::EC2::PlacementGroup
+AWS::EC2::PrefixList
+AWS::EC2::PrefixList Entry
+
+
+AWS::EC2::Route
+AWS::EC2::RouteTable
+AWS::EC2::SecurityGroup
+AWS::EC2::SecurityGroup Egress
+AWS::EC2::SecurityGroup Ingress
+
+
+AWS::EC2::SecurityGroupEgress
+AWS::EC2::SecurityGroupIngress
+AWS::EC2::SpotFleet
+AWS::EC2::SpotFleet BlockDeviceMapping
+AWS::EC2::SpotFleet ClassicLoadBalancer
+AWS::EC2::SpotFleet ClassicLoadBalancersConfig
+AWS::EC2::SpotFleet EbsBlockDevice
+AWS::EC2::SpotFleet FleetLaunchTemplateSpecification
+AWS::EC2::SpotFleet GroupIdentifier
+AWS::EC2::SpotFleet IamInstanceProfileSpecification
+AWS::EC2::SpotFleet InstanceIpv6Address
+AWS::EC2::SpotFleet InstanceNetworkInterfaceSpecification
+AWS::EC2::SpotFleet LaunchTemplateConfig
+AWS::EC2::SpotFleet LaunchTemplateOverrides
+AWS::EC2::SpotFleet LoadBalancersConfig
+AWS::EC2::SpotFleet PrivateIpAddressSpecification
+AWS::EC2::SpotFleet SpotFleetLaunchSpecification
+AWS::EC2::SpotFleet SpotFleetMonitoring
+AWS::EC2::SpotFleet SpotFleetRequestConfigData
+AWS::EC2::SpotFleet SpotFleetTagSpecification
+AWS::EC2::SpotFleet SpotPlacement
+AWS::EC2::SpotFleet TargetGroup
+AWS::EC2::SpotFleet TargetGroupsConfig
+
+
+AWS::EC2::Subnet
+AWS::EC2::SubnetCidrBlock
+AWS::EC2::SubnetNetworkAclAssociation
+AWS::EC2::SubnetRouteTableAssociation
+AWS::EC2::TrafficMirrorFilter
+AWS::EC2::TrafficMirrorFilterRule
+AWS::EC2::TrafficMirrorFilterRule TrafficMirrorPortRange
+
+
+AWS::EC2::TrafficMirrorSession
+AWS::EC2::TrafficMirrorTarget
+AWS::EC2::TransitGateway
+AWS::EC2::TransitGatewayAttachment
+AWS::EC2::TransitGatewayRoute
+AWS::EC2::TransitGatewayRouteTable
+AWS::EC2::TransitGatewayRouteTableAssociation
+AWS::EC2::TransitGatewayRouteTablePropagation
+AWS::EC2::Volume
+AWS::EC2::VolumeAttachment
+AWS::EC2::VPC
+AWS::EC2::VPCCidrBlock
+AWS::EC2::VPCDHCPOptionsAssociation
+AWS::EC2::VPCEndpoint
+AWS::EC2::VPCEndpointConnectionNotification
+AWS::EC2::VPCEndpointService
+AWS::EC2::VPCEndpointServicePermissions
+AWS::EC2::VPCGatewayAttachment
+AWS::EC2::VPCPeeringConnection
+AWS::EC2::VPNConnection
+AWS::EC2::VPNConnection VpnTunnelOptionsSpecification
+
+
+AWS::EC2::VPNConnectionRoute
+AWS::EC2::VPNGateway
+AWS::EC2::VPNGatewayRoutePropagation
+
+
+Amazon ECR resource type reference
+AWS::ECR::Repository
+
+
+ECS resource type reference
+AWS::ECS::CapacityProvider
+AWS::ECS::CapacityProvider AutoScalingGroupProvider
+AWS::ECS::CapacityProvider ManagedScaling
+
+
+AWS::ECS::Cluster
+AWS::ECS::Cluster CapacityProviderStrategyItem
+AWS::ECS::Cluster ClusterSettings
+
+
+AWS::ECS::PrimaryTaskSet
+AWS::ECS::Service
+AWS::ECS::Service AwsVpcConfiguration
+AWS::ECS::Service DeploymentConfiguration
+AWS::ECS::Service DeploymentController
+AWS::ECS::Service LoadBalancer
+AWS::ECS::Service NetworkConfiguration
+AWS::ECS::Service PlacementConstraint
+AWS::ECS::Service PlacementStrategy
+AWS::ECS::Service ServiceRegistry
+
+
+AWS::ECS::TaskDefinition
+AWS::ECS::TaskDefinition AuthorizationConfig
+AWS::ECS::TaskDefinition ContainerDefinition
+AWS::ECS::TaskDefinition ContainerDependency
+AWS::ECS::TaskDefinition Device
+AWS::ECS::TaskDefinition DockerVolumeConfiguration
+AWS::ECS::TaskDefinition EFSVolumeConfiguration
+AWS::ECS::TaskDefinition EnvironmentFile
+AWS::ECS::TaskDefinition FirelensConfiguration
+AWS::ECS::TaskDefinition HealthCheck
+AWS::ECS::TaskDefinition HostEntry
+AWS::ECS::TaskDefinition HostVolumeProperties
+AWS::ECS::TaskDefinition InferenceAccelerator
+AWS::ECS::TaskDefinition KernelCapabilities
+AWS::ECS::TaskDefinition KeyValuePair
+AWS::ECS::TaskDefinition LinuxParameters
+AWS::ECS::TaskDefinition LogConfiguration
+AWS::ECS::TaskDefinition MountPoint
+AWS::ECS::TaskDefinition Options
+AWS::ECS::TaskDefinition PortMapping
+AWS::ECS::TaskDefinition ProxyConfiguration
+AWS::ECS::TaskDefinition RepositoryCredentials
+AWS::ECS::TaskDefinition ResourceRequirement
+AWS::ECS::TaskDefinition Secret
+AWS::ECS::TaskDefinition SystemControl
+AWS::ECS::TaskDefinition TaskDefinitionPlacementConstraint
+AWS::ECS::TaskDefinition Tmpfs
+AWS::ECS::TaskDefinition Ulimit
+AWS::ECS::TaskDefinition Volume
+AWS::ECS::TaskDefinition VolumeFrom
+
+
+AWS::ECS::TaskSet
+AWS::ECS::TaskSet AwsVpcConfiguration
+AWS::ECS::TaskSet LoadBalancer
+AWS::ECS::TaskSet NetworkConfiguration
+AWS::ECS::TaskSet Scale
+AWS::ECS::TaskSet ServiceRegistry
+
+
+
+
+EFS resource type reference
+AWS::EFS::AccessPoint
+AWS::EFS::AccessPoint AccessPointTag
+AWS::EFS::AccessPoint CreationInfo
+AWS::EFS::AccessPoint PosixUser
+AWS::EFS::AccessPoint RootDirectory
+
+
+AWS::EFS::FileSystem
+AWS::EFS::FileSystem BackupPolicy
+AWS::EFS::FileSystem ElasticFileSystemTag
+AWS::EFS::FileSystem LifecyclePolicy
+
+
+AWS::EFS::MountTarget
+
+
+EKS resource type reference
+AWS::EKS::Cluster
+AWS::EKS::Cluster EncryptionConfig
+AWS::EKS::Cluster Provider
+AWS::EKS::Cluster ResourcesVpcConfig
+
+
+AWS::EKS::Nodegroup
+AWS::EKS::Nodegroup LaunchTemplateSpecification
+AWS::EKS::Nodegroup RemoteAccess
+AWS::EKS::Nodegroup ScalingConfig
+
+
+
+
+ElastiCache resource type reference
+AWS::ElastiCache::CacheCluster
+AWS::ElastiCache::ParameterGroup
+AWS::ElastiCache::ReplicationGroup
+AWS::ElastiCache::ReplicationGroup NodeGroupConfiguration
+
+
+AWS::ElastiCache::SecurityGroup
+AWS::ElastiCache::SecurityGroupIngress
+AWS::ElastiCache::SubnetGroup
+
+
+Elasticsearch resource type reference
+AWS::Elasticsearch::Domain
+AWS::Elasticsearch::Domain AdvancedSecurityOptionsInput
+AWS::Elasticsearch::Domain CognitoOptions
+AWS::Elasticsearch::Domain DomainEndpointOptions
+AWS::Elasticsearch::Domain EBSOptions
+AWS::Elasticsearch::Domain ElasticsearchClusterConfig
+AWS::Elasticsearch::Domain EncryptionAtRestOptions
+AWS::Elasticsearch::Domain LogPublishingOption
+AWS::Elasticsearch::Domain MasterUserOptions
+AWS::Elasticsearch::Domain NodeToNodeEncryptionOptions
+AWS::Elasticsearch::Domain SnapshotOptions
+AWS::Elasticsearch::Domain VPCOptions
+AWS::Elasticsearch::Domain ZoneAwarenessConfig
+
+
+
+
+AWS Elastic Beanstalk resource type reference
+AWS::ElasticBeanstalk::Application
+AWS::ElasticBeanstalk::Application ApplicationResourceLifecycleConfig
+AWS::ElasticBeanstalk::Application ApplicationVersionLifecycleConfig
+AWS::ElasticBeanstalk::Application MaxAgeRule
+AWS::ElasticBeanstalk::Application MaxCountRule
+
+
+AWS::ElasticBeanstalk::ApplicationVersion
+AWS::ElasticBeanstalk::ApplicationVersion SourceBundle
+
+
+AWS::ElasticBeanstalk::ConfigurationTemplate
+AWS::ElasticBeanstalk::ConfigurationTemplate ConfigurationOptionSetting
+AWS::ElasticBeanstalk::ConfigurationTemplate SourceConfiguration
+
+
+AWS::ElasticBeanstalk::Environment
+AWS::ElasticBeanstalk::Environment OptionSetting
+AWS::ElasticBeanstalk::Environment Tier
+
+
+
+
+Elastic Load Balancing resource type reference
+AWS::ElasticLoadBalancing::LoadBalancer
+AWS::ElasticLoadBalancing::LoadBalancer AccessLoggingPolicy
+AWS::ElasticLoadBalancing::LoadBalancer AppCookieStickinessPolicy
+AWS::ElasticLoadBalancing::LoadBalancer ConnectionDrainingPolicy
+AWS::ElasticLoadBalancing::LoadBalancer ConnectionSettings
+AWS::ElasticLoadBalancing::LoadBalancer HealthCheck
+AWS::ElasticLoadBalancing::LoadBalancer LBCookieStickinessPolicy
+AWS::ElasticLoadBalancing::LoadBalancer Listeners
+AWS::ElasticLoadBalancing::LoadBalancer Policies
+
+
+
+
+ElasticLoadBalancingV2 resource type reference
+AWS::ElasticLoadBalancingV2::Listener
+AWS::ElasticLoadBalancingV2::Listener Action
+AWS::ElasticLoadBalancingV2::Listener AuthenticateCognitoConfig
+AWS::ElasticLoadBalancingV2::Listener AuthenticateOidcConfig
+AWS::ElasticLoadBalancingV2::Listener Certificate
+AWS::ElasticLoadBalancingV2::Listener FixedResponseConfig
+AWS::ElasticLoadBalancingV2::Listener ForwardConfig
+AWS::ElasticLoadBalancingV2::Listener RedirectConfig
+AWS::ElasticLoadBalancingV2::Listener TargetGroupStickinessConfig
+AWS::ElasticLoadBalancingV2::Listener TargetGroupTuple
+
+
+AWS::ElasticLoadBalancingV2::ListenerCertificate
+AWS::ElasticLoadBalancingV2::ListenerCertificate Certificate
+
+
+AWS::ElasticLoadBalancingV2::ListenerRule
+AWS::ElasticLoadBalancingV2::ListenerRule Action
+AWS::ElasticLoadBalancingV2::ListenerRule AuthenticateCognitoConfig
+AWS::ElasticLoadBalancingV2::ListenerRule AuthenticateOidcConfig
+AWS::ElasticLoadBalancingV2::ListenerRule FixedResponseConfig
+AWS::ElasticLoadBalancingV2::ListenerRule ForwardConfig
+AWS::ElasticLoadBalancingV2::ListenerRule HostHeaderConfig
+AWS::ElasticLoadBalancingV2::ListenerRule HttpHeaderConfig
+AWS::ElasticLoadBalancingV2::ListenerRule HttpRequestMethodConfig
+AWS::ElasticLoadBalancingV2::ListenerRule PathPatternConfig
+AWS::ElasticLoadBalancingV2::ListenerRule QueryStringConfig
+AWS::ElasticLoadBalancingV2::ListenerRule QueryStringKeyValue
+AWS::ElasticLoadBalancingV2::ListenerRule RedirectConfig
+AWS::ElasticLoadBalancingV2::ListenerRule RuleCondition
+AWS::ElasticLoadBalancingV2::ListenerRule SourceIpConfig
+AWS::ElasticLoadBalancingV2::ListenerRule TargetGroupStickinessConfig
+AWS::ElasticLoadBalancingV2::ListenerRule TargetGroupTuple
+
+
+AWS::ElasticLoadBalancingV2::LoadBalancer
+AWS::ElasticLoadBalancingV2::LoadBalancer LoadBalancerAttribute
+AWS::ElasticLoadBalancingV2::LoadBalancer SubnetMapping
+
+
+AWS::ElasticLoadBalancingV2::TargetGroup
+AWS::ElasticLoadBalancingV2::TargetGroup Matcher
+AWS::ElasticLoadBalancingV2::TargetGroup TargetDescription
+AWS::ElasticLoadBalancingV2::TargetGroup TargetGroupAttribute
+
+
+
+
+Amazon EMR resource type reference
+AWS::EMR::Cluster
+AWS::EMR::Cluster Application
+AWS::EMR::Cluster AutoScalingPolicy
+AWS::EMR::Cluster BootstrapActionConfig
+AWS::EMR::Cluster CloudWatchAlarmDefinition
+AWS::EMR::Cluster Configuration
+AWS::EMR::Cluster EbsBlockDeviceConfig
+AWS::EMR::Cluster EbsConfiguration
+AWS::EMR::Cluster HadoopJarStepConfig
+AWS::EMR::Cluster InstanceFleetConfig
+AWS::EMR::Cluster InstanceFleetProvisioningSpecifications
+AWS::EMR::Cluster InstanceGroupConfig
+AWS::EMR::Cluster InstanceTypeConfig
+AWS::EMR::Cluster JobFlowInstancesConfig
+AWS::EMR::Cluster KerberosAttributes
+AWS::EMR::Cluster KeyValue
+AWS::EMR::Cluster MetricDimension
+AWS::EMR::Cluster PlacementType
+AWS::EMR::Cluster ScalingAction
+AWS::EMR::Cluster ScalingConstraints
+AWS::EMR::Cluster ScalingRule
+AWS::EMR::Cluster ScalingTrigger
+AWS::EMR::Cluster ScriptBootstrapActionConfig
+AWS::EMR::Cluster SimpleScalingPolicyConfiguration
+AWS::EMR::Cluster SpotProvisioningSpecification
+AWS::EMR::Cluster StepConfig
+AWS::EMR::Cluster VolumeSpecification
+
+
+AWS::EMR::InstanceFleetConfig
+AWS::EMR::InstanceFleetConfig Configuration
+AWS::EMR::InstanceFleetConfig EbsBlockDeviceConfig
+AWS::EMR::InstanceFleetConfig EbsConfiguration
+AWS::EMR::InstanceFleetConfig InstanceFleetProvisioningSpecifications
+AWS::EMR::InstanceFleetConfig InstanceTypeConfig
+AWS::EMR::InstanceFleetConfig SpotProvisioningSpecification
+AWS::EMR::InstanceFleetConfig VolumeSpecification
+
+
+AWS::EMR::InstanceGroupConfig
+AWS::EMR::InstanceGroupConfig AutoScalingPolicy
+AWS::EMR::InstanceGroupConfig CloudWatchAlarmDefinition
+AWS::EMR::InstanceGroupConfig Configuration
+AWS::EMR::InstanceGroupConfig EbsBlockDeviceConfig
+AWS::EMR::InstanceGroupConfig EbsConfiguration
+AWS::EMR::InstanceGroupConfig MetricDimension
+AWS::EMR::InstanceGroupConfig ScalingAction
+AWS::EMR::InstanceGroupConfig ScalingConstraints
+AWS::EMR::InstanceGroupConfig ScalingRule
+AWS::EMR::InstanceGroupConfig ScalingTrigger
+AWS::EMR::InstanceGroupConfig SimpleScalingPolicyConfiguration
+AWS::EMR::InstanceGroupConfig VolumeSpecification
+
+
+AWS::EMR::SecurityConfiguration
+AWS::EMR::Step
+AWS::EMR::Step HadoopJarStepConfig
+AWS::EMR::Step KeyValue
+
+
+
+
+Amazon EventBridge resource type reference
+AWS::Events::EventBus
+AWS::Events::EventBusPolicy
+AWS::Events::EventBusPolicy Condition
+
+
+AWS::Events::Rule
+AWS::Events::Rule AwsVpcConfiguration
+AWS::Events::Rule BatchArrayProperties
+AWS::Events::Rule BatchParameters
+AWS::Events::Rule BatchRetryStrategy
+AWS::Events::Rule EcsParameters
+AWS::Events::Rule HttpParameters
+AWS::Events::Rule InputTransformer
+AWS::Events::Rule KinesisParameters
+AWS::Events::Rule NetworkConfiguration
+AWS::Events::Rule RunCommandParameters
+AWS::Events::Rule RunCommandTarget
+AWS::Events::Rule SqsParameters
+AWS::Events::Rule Target
+
+
+
+
+EventSchemas resource type reference
+AWS::EventSchemas::Discoverer
+AWS::EventSchemas::Discoverer TagsEntry
+
+
+AWS::EventSchemas::Registry
+AWS::EventSchemas::Registry TagsEntry
+
+
+AWS::EventSchemas::RegistryPolicy
+AWS::EventSchemas::Schema
+AWS::EventSchemas::Schema TagsEntry
+
+
+
+
+FMS resource type reference
+AWS::FMS::NotificationChannel
+AWS::FMS::Policy
+AWS::FMS::Policy IEMap
+AWS::FMS::Policy PolicyTag
+AWS::FMS::Policy ResourceTag
+
+
+
+
+FSx resource type reference
+AWS::FSx::FileSystem
+AWS::FSx::FileSystem LustreConfiguration
+AWS::FSx::FileSystem SelfManagedActiveDirectoryConfiguration
+AWS::FSx::FileSystem WindowsConfiguration
+
+
+
+
+Amazon GameLift resource type reference
+AWS::GameLift::Alias
+AWS::GameLift::Alias RoutingStrategy
+
+
+AWS::GameLift::Build
+AWS::GameLift::Build S3Location
+
+
+AWS::GameLift::Fleet
+AWS::GameLift::Fleet CertificateConfiguration
+AWS::GameLift::Fleet IpPermission
+AWS::GameLift::Fleet ResourceCreationLimitPolicy
+AWS::GameLift::Fleet RuntimeConfiguration
+AWS::GameLift::Fleet ServerProcess
+
+
+AWS::GameLift::GameSessionQueue
+AWS::GameLift::GameSessionQueue Destination
+AWS::GameLift::GameSessionQueue PlayerLatencyPolicy
+
+
+AWS::GameLift::MatchmakingConfiguration
+AWS::GameLift::MatchmakingConfiguration GameProperty
+
+
+AWS::GameLift::MatchmakingRuleSet
+AWS::GameLift::Script
+AWS::GameLift::Script S3Location
+
+
+
+
+GlobalAccelerator resource type reference
+AWS::GlobalAccelerator::Accelerator
+AWS::GlobalAccelerator::EndpointGroup
+AWS::GlobalAccelerator::EndpointGroup EndpointConfiguration
+
+
+AWS::GlobalAccelerator::Listener
+AWS::GlobalAccelerator::Listener PortRange
+
+
+
+
+AWS Glue resource type reference
+AWS::Glue::Classifier
+AWS::Glue::Classifier CsvClassifier
+AWS::Glue::Classifier GrokClassifier
+AWS::Glue::Classifier JsonClassifier
+AWS::Glue::Classifier XMLClassifier
+
+
+AWS::Glue::Connection
+AWS::Glue::Connection ConnectionInput
+AWS::Glue::Connection PhysicalConnectionRequirements
+
+
+AWS::Glue::Crawler
+AWS::Glue::Crawler CatalogTarget
+AWS::Glue::Crawler DynamoDBTarget
+AWS::Glue::Crawler JdbcTarget
+AWS::Glue::Crawler S3Target
+AWS::Glue::Crawler Schedule
+AWS::Glue::Crawler SchemaChangePolicy
+AWS::Glue::Crawler Targets
+
+
+AWS::Glue::Database
+AWS::Glue::Database DatabaseInput
+
+
+AWS::Glue::DataCatalogEncryptionSettings
+AWS::Glue::DataCatalogEncryptionSettings ConnectionPasswordEncryption
+AWS::Glue::DataCatalogEncryptionSettings DataCatalogEncryptionSettings
+AWS::Glue::DataCatalogEncryptionSettings EncryptionAtRest
+
+
+AWS::Glue::DevEndpoint
+AWS::Glue::Job
+AWS::Glue::Job ConnectionsList
+AWS::Glue::Job ExecutionProperty
+AWS::Glue::Job JobCommand
+AWS::Glue::Job NotificationProperty
+
+
+AWS::Glue::MLTransform
+AWS::Glue::MLTransform FindMatchesParameters
+AWS::Glue::MLTransform GlueTables
+AWS::Glue::MLTransform InputRecordTables
+AWS::Glue::MLTransform TransformParameters
+
+
+AWS::Glue::Partition
+AWS::Glue::Partition Column
+AWS::Glue::Partition Order
+AWS::Glue::Partition PartitionInput
+AWS::Glue::Partition SerdeInfo
+AWS::Glue::Partition SkewedInfo
+AWS::Glue::Partition StorageDescriptor
+
+
+AWS::Glue::SecurityConfiguration
+AWS::Glue::SecurityConfiguration CloudWatchEncryption
+AWS::Glue::SecurityConfiguration EncryptionConfiguration
+AWS::Glue::SecurityConfiguration JobBookmarksEncryption
+AWS::Glue::SecurityConfiguration S3Encryption
+AWS::Glue::SecurityConfiguration S3Encryptions
+
+
+AWS::Glue::Table
+AWS::Glue::Table Column
+AWS::Glue::Table Order
+AWS::Glue::Table SerdeInfo
+AWS::Glue::Table SkewedInfo
+AWS::Glue::Table StorageDescriptor
+AWS::Glue::Table TableInput
+
+
+AWS::Glue::Trigger
+AWS::Glue::Trigger Action
+AWS::Glue::Trigger Condition
+AWS::Glue::Trigger NotificationProperty
+AWS::Glue::Trigger Predicate
+
+
+AWS::Glue::Workflow
+
+
+GroundStation resource type reference
+AWS::GroundStation::Config
+AWS::GroundStation::Config AntennaDownlinkConfig
+AWS::GroundStation::Config AntennaDownlinkDemodDecodeConfig
+AWS::GroundStation::Config AntennaUplinkConfig
+AWS::GroundStation::Config Bandwidth
+AWS::GroundStation::Config ConfigData
+AWS::GroundStation::Config DataflowEndpointConfig
+AWS::GroundStation::Config DecodeConfig
+AWS::GroundStation::Config DemodulationConfig
+AWS::GroundStation::Config Eirp
+AWS::GroundStation::Config Frequency
+AWS::GroundStation::Config SpectrumConfig
+AWS::GroundStation::Config TrackingConfig
+AWS::GroundStation::Config UplinkEchoConfig
+
+
+AWS::GroundStation::DataflowEndpointGroup
+AWS::GroundStation::DataflowEndpointGroup DataflowEndpoint
+AWS::GroundStation::DataflowEndpointGroup EndpointDetails
+AWS::GroundStation::DataflowEndpointGroup SecurityDetails
+AWS::GroundStation::DataflowEndpointGroup SocketAddress
+
+
+AWS::GroundStation::MissionProfile
+AWS::GroundStation::MissionProfile DataflowEdge
+
+
+
+
+GuardDuty resource type reference
+AWS::GuardDuty::Detector
+AWS::GuardDuty::Filter
+AWS::GuardDuty::Filter Condition
+AWS::GuardDuty::Filter FindingCriteria
+
+
+AWS::GuardDuty::IPSet
+AWS::GuardDuty::Master
+AWS::GuardDuty::Member
+AWS::GuardDuty::ThreatIntelSet
+
+
+IAM resource type reference
+AWS::IAM::AccessKey
+AWS::IAM::Group
+AWS::IAM::Group Policy
+
+
+AWS::IAM::InstanceProfile
+AWS::IAM::ManagedPolicy
+AWS::IAM::Policy
+AWS::IAM::Role
+AWS::IAM::Role Policy
+
+
+AWS::IAM::ServiceLinkedRole
+AWS::IAM::User
+AWS::IAM::User LoginProfile
+AWS::IAM::User Policy
+
+
+AWS::IAM::UserToGroupAddition
+
+
+ImageBuilder resource type reference
+AWS::ImageBuilder::Component
+AWS::ImageBuilder::DistributionConfiguration
+AWS::ImageBuilder::DistributionConfiguration Distribution
+
+
+AWS::ImageBuilder::Image
+AWS::ImageBuilder::Image ImageTestsConfiguration
+
+
+AWS::ImageBuilder::ImagePipeline
+AWS::ImageBuilder::ImagePipeline ImageTestsConfiguration
+AWS::ImageBuilder::ImagePipeline Schedule
+
+
+AWS::ImageBuilder::ImageRecipe
+AWS::ImageBuilder::ImageRecipe ComponentConfiguration
+AWS::ImageBuilder::ImageRecipe EbsInstanceBlockDeviceSpecification
+AWS::ImageBuilder::ImageRecipe InstanceBlockDeviceMapping
+
+
+AWS::ImageBuilder::InfrastructureConfiguration
+AWS::ImageBuilder::InfrastructureConfiguration Logging
+AWS::ImageBuilder::InfrastructureConfiguration S3Logs
+
+
+
+
+Inspector resource type reference
+AWS::Inspector::AssessmentTarget
+AWS::Inspector::AssessmentTemplate
+AWS::Inspector::ResourceGroup
+
+
+IoT resource type reference
+AWS::IoT::Certificate
+AWS::IoT::Policy
+AWS::IoT::PolicyPrincipalAttachment
+AWS::IoT::ProvisioningTemplate
+AWS::IoT::ProvisioningTemplate ProvisioningHook
+AWS::IoT::ProvisioningTemplate Tags
+
+
+AWS::IoT::Thing
+AWS::IoT::Thing AttributePayload
+
+
+AWS::IoT::ThingPrincipalAttachment
+AWS::IoT::TopicRule
+AWS::IoT::TopicRule Action
+AWS::IoT::TopicRule AssetPropertyTimestamp
+AWS::IoT::TopicRule AssetPropertyValue
+AWS::IoT::TopicRule AssetPropertyVariant
+AWS::IoT::TopicRule CloudwatchAlarmAction
+AWS::IoT::TopicRule CloudwatchMetricAction
+AWS::IoT::TopicRule DynamoDBAction
+AWS::IoT::TopicRule DynamoDBv2Action
+AWS::IoT::TopicRule ElasticsearchAction
+AWS::IoT::TopicRule FirehoseAction
+AWS::IoT::TopicRule HttpAction
+AWS::IoT::TopicRule HttpActionHeader
+AWS::IoT::TopicRule HttpAuthorization
+AWS::IoT::TopicRule IotAnalyticsAction
+AWS::IoT::TopicRule IotEventsAction
+AWS::IoT::TopicRule IotSiteWiseAction
+AWS::IoT::TopicRule KinesisAction
+AWS::IoT::TopicRule LambdaAction
+AWS::IoT::TopicRule PutAssetPropertyValueEntry
+AWS::IoT::TopicRule PutItemInput
+AWS::IoT::TopicRule RepublishAction
+AWS::IoT::TopicRule S3Action
+AWS::IoT::TopicRule SigV4Authorization
+AWS::IoT::TopicRule SnsAction
+AWS::IoT::TopicRule SqsAction
+AWS::IoT::TopicRule StepFunctionsAction
+AWS::IoT::TopicRule TopicRulePayload
+
+
+
+
+IoT1Click resource type reference
+AWS::IoT1Click::Device
+AWS::IoT1Click::Placement
+AWS::IoT1Click::Project
+AWS::IoT1Click::Project DeviceTemplate
+AWS::IoT1Click::Project PlacementTemplate
+
+
+
+
+AWS IoT Analytics resource type reference
+AWS::IoTAnalytics::Channel
+AWS::IoTAnalytics::Channel ChannelStorage
+AWS::IoTAnalytics::Channel CustomerManagedS3
+AWS::IoTAnalytics::Channel RetentionPeriod
+AWS::IoTAnalytics::Channel ServiceManagedS3
+
+
+AWS::IoTAnalytics::Dataset
+AWS::IoTAnalytics::Dataset Action
+AWS::IoTAnalytics::Dataset ContainerAction
+AWS::IoTAnalytics::Dataset DatasetContentDeliveryRule
+AWS::IoTAnalytics::Dataset DatasetContentDeliveryRuleDestination
+AWS::IoTAnalytics::Dataset DatasetContentVersionValue
+AWS::IoTAnalytics::Dataset DeltaTime
+AWS::IoTAnalytics::Dataset Filter
+AWS::IoTAnalytics::Dataset GlueConfiguration
+AWS::IoTAnalytics::Dataset IotEventsDestinationConfiguration
+AWS::IoTAnalytics::Dataset OutputFileUriValue
+AWS::IoTAnalytics::Dataset QueryAction
+AWS::IoTAnalytics::Dataset ResourceConfiguration
+AWS::IoTAnalytics::Dataset RetentionPeriod
+AWS::IoTAnalytics::Dataset S3DestinationConfiguration
+AWS::IoTAnalytics::Dataset Schedule
+AWS::IoTAnalytics::Dataset Trigger
+AWS::IoTAnalytics::Dataset TriggeringDataset
+AWS::IoTAnalytics::Dataset Variable
+AWS::IoTAnalytics::Dataset VersioningConfiguration
+
+
+AWS::IoTAnalytics::Datastore
+AWS::IoTAnalytics::Datastore CustomerManagedS3
+AWS::IoTAnalytics::Datastore DatastoreStorage
+AWS::IoTAnalytics::Datastore RetentionPeriod
+AWS::IoTAnalytics::Datastore ServiceManagedS3
+
+
+AWS::IoTAnalytics::Pipeline
+AWS::IoTAnalytics::Pipeline Activity
+AWS::IoTAnalytics::Pipeline AddAttributes
+AWS::IoTAnalytics::Pipeline Channel
+AWS::IoTAnalytics::Pipeline Datastore
+AWS::IoTAnalytics::Pipeline DeviceRegistryEnrich
+AWS::IoTAnalytics::Pipeline DeviceShadowEnrich
+AWS::IoTAnalytics::Pipeline Filter
+AWS::IoTAnalytics::Pipeline Lambda
+AWS::IoTAnalytics::Pipeline Math
+AWS::IoTAnalytics::Pipeline RemoveAttributes
+AWS::IoTAnalytics::Pipeline SelectAttributes
+
+
+
+
+IoTEvents resource type reference
+AWS::IoTEvents::DetectorModel
+AWS::IoTEvents::DetectorModel Action
+AWS::IoTEvents::DetectorModel AssetPropertyTimestamp
+AWS::IoTEvents::DetectorModel AssetPropertyValue
+AWS::IoTEvents::DetectorModel AssetPropertyVariant
+AWS::IoTEvents::DetectorModel ClearTimer
+AWS::IoTEvents::DetectorModel DetectorModelDefinition
+AWS::IoTEvents::DetectorModel DynamoDB
+AWS::IoTEvents::DetectorModel DynamoDBv2
+AWS::IoTEvents::DetectorModel Event
+AWS::IoTEvents::DetectorModel Firehose
+AWS::IoTEvents::DetectorModel IotEvents
+AWS::IoTEvents::DetectorModel IotSiteWise
+AWS::IoTEvents::DetectorModel IotTopicPublish
+AWS::IoTEvents::DetectorModel Lambda
+AWS::IoTEvents::DetectorModel OnEnter
+AWS::IoTEvents::DetectorModel OnExit
+AWS::IoTEvents::DetectorModel OnInput
+AWS::IoTEvents::DetectorModel Payload
+AWS::IoTEvents::DetectorModel ResetTimer
+AWS::IoTEvents::DetectorModel SetTimer
+AWS::IoTEvents::DetectorModel SetVariable
+AWS::IoTEvents::DetectorModel Sns
+AWS::IoTEvents::DetectorModel Sqs
+AWS::IoTEvents::DetectorModel State
+AWS::IoTEvents::DetectorModel TransitionEvent
+
+
+AWS::IoTEvents::Input
+AWS::IoTEvents::Input Attribute
+AWS::IoTEvents::Input InputDefinition
+
+
+
+
+AWS IoT Greengrass resource type reference
+AWS::Greengrass::ConnectorDefinition
+AWS::Greengrass::ConnectorDefinition Connector
+AWS::Greengrass::ConnectorDefinition ConnectorDefinitionVersion
+
+
+AWS::Greengrass::ConnectorDefinitionVersion
+AWS::Greengrass::ConnectorDefinitionVersion Connector
+
+
+AWS::Greengrass::CoreDefinition
+AWS::Greengrass::CoreDefinition Core
+AWS::Greengrass::CoreDefinition CoreDefinitionVersion
+
+
+AWS::Greengrass::CoreDefinitionVersion
+AWS::Greengrass::CoreDefinitionVersion Core
+
+
+AWS::Greengrass::DeviceDefinition
+AWS::Greengrass::DeviceDefinition Device
+AWS::Greengrass::DeviceDefinition DeviceDefinitionVersion
+
+
+AWS::Greengrass::DeviceDefinitionVersion
+AWS::Greengrass::DeviceDefinitionVersion Device
+
+
+AWS::Greengrass::FunctionDefinition
+AWS::Greengrass::FunctionDefinition DefaultConfig
+AWS::Greengrass::FunctionDefinition Environment
+AWS::Greengrass::FunctionDefinition Execution
+AWS::Greengrass::FunctionDefinition Function
+AWS::Greengrass::FunctionDefinition FunctionConfiguration
+AWS::Greengrass::FunctionDefinition FunctionDefinitionVersion
+AWS::Greengrass::FunctionDefinition ResourceAccessPolicy
+AWS::Greengrass::FunctionDefinition RunAs
+
+
+AWS::Greengrass::FunctionDefinitionVersion
+AWS::Greengrass::FunctionDefinitionVersion DefaultConfig
+AWS::Greengrass::FunctionDefinitionVersion Environment
+AWS::Greengrass::FunctionDefinitionVersion Execution
+AWS::Greengrass::FunctionDefinitionVersion Function
+AWS::Greengrass::FunctionDefinitionVersion FunctionConfiguration
+AWS::Greengrass::FunctionDefinitionVersion ResourceAccessPolicy
+AWS::Greengrass::FunctionDefinitionVersion RunAs
+
+
+AWS::Greengrass::Group
+AWS::Greengrass::Group GroupVersion
+
+
+AWS::Greengrass::GroupVersion
+AWS::Greengrass::LoggerDefinition
+AWS::Greengrass::LoggerDefinition Logger
+AWS::Greengrass::LoggerDefinition LoggerDefinitionVersion
+
+
+AWS::Greengrass::LoggerDefinitionVersion
+AWS::Greengrass::LoggerDefinitionVersion Logger
+
+
+AWS::Greengrass::ResourceDefinition
+AWS::Greengrass::ResourceDefinition GroupOwnerSetting
+AWS::Greengrass::ResourceDefinition LocalDeviceResourceData
+AWS::Greengrass::ResourceDefinition LocalVolumeResourceData
+AWS::Greengrass::ResourceDefinition ResourceDataContainer
+AWS::Greengrass::ResourceDefinition ResourceDefinitionVersion
+AWS::Greengrass::ResourceDefinition ResourceDownloadOwnerSetting
+AWS::Greengrass::ResourceDefinition ResourceInstance
+AWS::Greengrass::ResourceDefinition S3MachineLearningModelResourceData
+AWS::Greengrass::ResourceDefinition SageMakerMachineLearningModelResourceData
+AWS::Greengrass::ResourceDefinition SecretsManagerSecretResourceData
+
+
+AWS::Greengrass::ResourceDefinitionVersion
+AWS::Greengrass::ResourceDefinitionVersion GroupOwnerSetting
+AWS::Greengrass::ResourceDefinitionVersion LocalDeviceResourceData
+AWS::Greengrass::ResourceDefinitionVersion LocalVolumeResourceData
+AWS::Greengrass::ResourceDefinitionVersion ResourceDataContainer
+AWS::Greengrass::ResourceDefinitionVersion ResourceDownloadOwnerSetting
+AWS::Greengrass::ResourceDefinitionVersion ResourceInstance
+AWS::Greengrass::ResourceDefinitionVersion S3MachineLearningModelResourceData
+AWS::Greengrass::ResourceDefinitionVersion SageMakerMachineLearningModelResourceData
+AWS::Greengrass::ResourceDefinitionVersion SecretsManagerSecretResourceData
+
+
+AWS::Greengrass::SubscriptionDefinition
+AWS::Greengrass::SubscriptionDefinition Subscription
+AWS::Greengrass::SubscriptionDefinition SubscriptionDefinitionVersion
+
+
+AWS::Greengrass::SubscriptionDefinitionVersion
+AWS::Greengrass::SubscriptionDefinitionVersion Subscription
+
+
+
+
+AWS IoT Things Graph resource type reference
+AWS::IoTThingsGraph::FlowTemplate
+AWS::IoTThingsGraph::FlowTemplate DefinitionDocument
+
+
+
+
+Amazon Kinesis resource type reference
+AWS::Kinesis::Stream
+AWS::Kinesis::Stream StreamEncryption
+
+
+AWS::Kinesis::StreamConsumer
+
+
+KinesisAnalytics resource type reference
+AWS::KinesisAnalytics::Application
+AWS::KinesisAnalytics::Application CSVMappingParameters
+AWS::KinesisAnalytics::Application Input
+AWS::KinesisAnalytics::Application InputLambdaProcessor
+AWS::KinesisAnalytics::Application InputParallelism
+AWS::KinesisAnalytics::Application InputProcessingConfiguration
+AWS::KinesisAnalytics::Application InputSchema
+AWS::KinesisAnalytics::Application JSONMappingParameters
+AWS::KinesisAnalytics::Application KinesisFirehoseInput
+AWS::KinesisAnalytics::Application KinesisStreamsInput
+AWS::KinesisAnalytics::Application MappingParameters
+AWS::KinesisAnalytics::Application RecordColumn
+AWS::KinesisAnalytics::Application RecordFormat
+
+
+AWS::KinesisAnalytics::ApplicationOutput
+AWS::KinesisAnalytics::ApplicationOutput DestinationSchema
+AWS::KinesisAnalytics::ApplicationOutput KinesisFirehoseOutput
+AWS::KinesisAnalytics::ApplicationOutput KinesisStreamsOutput
+AWS::KinesisAnalytics::ApplicationOutput LambdaOutput
+AWS::KinesisAnalytics::ApplicationOutput Output
+
+
+AWS::KinesisAnalytics::ApplicationReferenceDataSource
+AWS::KinesisAnalytics::ApplicationReferenceDataSource CSVMappingParameters
+AWS::KinesisAnalytics::ApplicationReferenceDataSource JSONMappingParameters
+AWS::KinesisAnalytics::ApplicationReferenceDataSource MappingParameters
+AWS::KinesisAnalytics::ApplicationReferenceDataSource RecordColumn
+AWS::KinesisAnalytics::ApplicationReferenceDataSource RecordFormat
+AWS::KinesisAnalytics::ApplicationReferenceDataSource ReferenceDataSource
+AWS::KinesisAnalytics::ApplicationReferenceDataSource ReferenceSchema
+AWS::KinesisAnalytics::ApplicationReferenceDataSource S3ReferenceDataSource
+
+
+
+
+Amazon Kinesis Data Analytics V2 resource type reference
+AWS::KinesisAnalyticsV2::Application
+AWS::KinesisAnalyticsV2::Application ApplicationCodeConfiguration
+AWS::KinesisAnalyticsV2::Application ApplicationConfiguration
+AWS::KinesisAnalyticsV2::Application ApplicationSnapshotConfiguration
+AWS::KinesisAnalyticsV2::Application CheckpointConfiguration
+AWS::KinesisAnalyticsV2::Application CodeContent
+AWS::KinesisAnalyticsV2::Application CSVMappingParameters
+AWS::KinesisAnalyticsV2::Application EnvironmentProperties
+AWS::KinesisAnalyticsV2::Application FlinkApplicationConfiguration
+AWS::KinesisAnalyticsV2::Application Input
+AWS::KinesisAnalyticsV2::Application InputLambdaProcessor
+AWS::KinesisAnalyticsV2::Application InputParallelism
+AWS::KinesisAnalyticsV2::Application InputProcessingConfiguration
+AWS::KinesisAnalyticsV2::Application InputSchema
+AWS::KinesisAnalyticsV2::Application JSONMappingParameters
+AWS::KinesisAnalyticsV2::Application KinesisFirehoseInput
+AWS::KinesisAnalyticsV2::Application KinesisStreamsInput
+AWS::KinesisAnalyticsV2::Application MappingParameters
+AWS::KinesisAnalyticsV2::Application MonitoringConfiguration
+AWS::KinesisAnalyticsV2::Application ParallelismConfiguration
+AWS::KinesisAnalyticsV2::Application PropertyGroup
+AWS::KinesisAnalyticsV2::Application RecordColumn
+AWS::KinesisAnalyticsV2::Application RecordFormat
+AWS::KinesisAnalyticsV2::Application S3ContentLocation
+AWS::KinesisAnalyticsV2::Application SqlApplicationConfiguration
+
+
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption
+
+
+AWS::KinesisAnalyticsV2::ApplicationOutput
+AWS::KinesisAnalyticsV2::ApplicationOutput DestinationSchema
+AWS::KinesisAnalyticsV2::ApplicationOutput KinesisFirehoseOutput
+AWS::KinesisAnalyticsV2::ApplicationOutput KinesisStreamsOutput
+AWS::KinesisAnalyticsV2::ApplicationOutput LambdaOutput
+AWS::KinesisAnalyticsV2::ApplicationOutput Output
+
+
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource CSVMappingParameters
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource JSONMappingParameters
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource MappingParameters
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource RecordColumn
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource RecordFormat
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource ReferenceDataSource
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource ReferenceSchema
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource S3ReferenceDataSource
+
+
+
+
+Amazon Kinesis Data Firehose resource type reference
+AWS::KinesisFirehose::DeliveryStream
+AWS::KinesisFirehose::DeliveryStream BufferingHints
+AWS::KinesisFirehose::DeliveryStream CloudWatchLoggingOptions
+AWS::KinesisFirehose::DeliveryStream CopyCommand
+AWS::KinesisFirehose::DeliveryStream DataFormatConversionConfiguration
+AWS::KinesisFirehose::DeliveryStream Deserializer
+AWS::KinesisFirehose::DeliveryStream ElasticsearchBufferingHints
+AWS::KinesisFirehose::DeliveryStream ElasticsearchDestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream ElasticsearchRetryOptions
+AWS::KinesisFirehose::DeliveryStream EncryptionConfiguration
+AWS::KinesisFirehose::DeliveryStream ExtendedS3DestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream HiveJsonSerDe
+AWS::KinesisFirehose::DeliveryStream HttpEndpointCommonAttribute
+AWS::KinesisFirehose::DeliveryStream HttpEndpointConfiguration
+AWS::KinesisFirehose::DeliveryStream HttpEndpointDestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream HttpEndpointRequestConfiguration
+AWS::KinesisFirehose::DeliveryStream InputFormatConfiguration
+AWS::KinesisFirehose::DeliveryStream KinesisStreamSourceConfiguration
+AWS::KinesisFirehose::DeliveryStream KMSEncryptionConfig
+AWS::KinesisFirehose::DeliveryStream OpenXJsonSerDe
+AWS::KinesisFirehose::DeliveryStream OrcSerDe
+AWS::KinesisFirehose::DeliveryStream OutputFormatConfiguration
+AWS::KinesisFirehose::DeliveryStream ParquetSerDe
+AWS::KinesisFirehose::DeliveryStream ProcessingConfiguration
+AWS::KinesisFirehose::DeliveryStream Processor
+AWS::KinesisFirehose::DeliveryStream ProcessorParameter
+AWS::KinesisFirehose::DeliveryStream RedshiftDestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream RedshiftRetryOptions
+AWS::KinesisFirehose::DeliveryStream RetryOptions
+AWS::KinesisFirehose::DeliveryStream S3DestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream SchemaConfiguration
+AWS::KinesisFirehose::DeliveryStream Serializer
+AWS::KinesisFirehose::DeliveryStream SplunkDestinationConfiguration
+AWS::KinesisFirehose::DeliveryStream SplunkRetryOptions
+AWS::KinesisFirehose::DeliveryStream VpcConfiguration
+
+
+
+
+KMS resource type reference
+AWS::KMS::Alias
+AWS::KMS::Key
+
+
+LakeFormation resource type reference
+AWS::LakeFormation::DataLakeSettings
+AWS::LakeFormation::DataLakeSettings Admins
+AWS::LakeFormation::DataLakeSettings DataLakePrincipal
+
+
+AWS::LakeFormation::Permissions
+AWS::LakeFormation::Permissions ColumnWildcard
+AWS::LakeFormation::Permissions DatabaseResource
+AWS::LakeFormation::Permissions DataLakePrincipal
+AWS::LakeFormation::Permissions DataLocationResource
+AWS::LakeFormation::Permissions Resource
+AWS::LakeFormation::Permissions TableResource
+AWS::LakeFormation::Permissions TableWithColumnsResource
+
+
+AWS::LakeFormation::Resource
+
+
+Lambda resource type reference
+AWS::Lambda::Alias
+AWS::Lambda::Alias AliasRoutingConfiguration
+AWS::Lambda::Alias ProvisionedConcurrencyConfiguration
+AWS::Lambda::Alias VersionWeight
+
+
+AWS::Lambda::EventInvokeConfig
+AWS::Lambda::EventInvokeConfig DestinationConfig
+AWS::Lambda::EventInvokeConfig OnFailure
+AWS::Lambda::EventInvokeConfig OnSuccess
+
+
+AWS::Lambda::EventSourceMapping
+AWS::Lambda::EventSourceMapping DestinationConfig
+AWS::Lambda::EventSourceMapping OnFailure
+
+
+AWS::Lambda::Function
+AWS::Lambda::Function Code
+AWS::Lambda::Function DeadLetterConfig
+AWS::Lambda::Function Environment
+AWS::Lambda::Function FileSystemConfig
+AWS::Lambda::Function TracingConfig
+AWS::Lambda::Function VpcConfig
+
+
+AWS::Lambda::LayerVersion
+AWS::Lambda::LayerVersion Content
+
+
+AWS::Lambda::LayerVersionPermission
+AWS::Lambda::Permission
+AWS::Lambda::Version
+AWS::Lambda::Version ProvisionedConcurrencyConfiguration
+
+
+
+
+Macie resource type reference
+AWS::Macie::CustomDataIdentifier
+AWS::Macie::FindingsFilter
+AWS::Macie::FindingsFilter Criterion
+AWS::Macie::FindingsFilter FindingCriteria
+
+
+AWS::Macie::Session
+
+
+ManagedBlockchain resource type reference
+AWS::ManagedBlockchain::Member
+AWS::ManagedBlockchain::Member ApprovalThresholdPolicy
+AWS::ManagedBlockchain::Member MemberConfiguration
+AWS::ManagedBlockchain::Member MemberFabricConfiguration
+AWS::ManagedBlockchain::Member MemberFrameworkConfiguration
+AWS::ManagedBlockchain::Member NetworkConfiguration
+AWS::ManagedBlockchain::Member NetworkFabricConfiguration
+AWS::ManagedBlockchain::Member NetworkFrameworkConfiguration
+AWS::ManagedBlockchain::Member VotingPolicy
+
+
+AWS::ManagedBlockchain::Node
+AWS::ManagedBlockchain::Node NodeConfiguration
+
+
+
+
+AWS Elemental MediaConvert resource type reference
+AWS::MediaConvert::JobTemplate
+AWS::MediaConvert::JobTemplate AccelerationSettings
+AWS::MediaConvert::JobTemplate HopDestination
+
+
+AWS::MediaConvert::Preset
+AWS::MediaConvert::Queue
+
+
+AWS Elemental MediaLive resource type reference
+AWS::MediaLive::Channel
+AWS::MediaLive::Channel AribSourceSettings
+AWS::MediaLive::Channel AudioLanguageSelection
+AWS::MediaLive::Channel AudioPidSelection
+AWS::MediaLive::Channel AudioSelector
+AWS::MediaLive::Channel AudioSelectorSettings
+AWS::MediaLive::Channel CaptionSelector
+AWS::MediaLive::Channel CaptionSelectorSettings
+AWS::MediaLive::Channel DvbSubSourceSettings
+AWS::MediaLive::Channel EmbeddedSourceSettings
+AWS::MediaLive::Channel HlsInputSettings
+AWS::MediaLive::Channel InputAttachment
+AWS::MediaLive::Channel InputSettings
+AWS::MediaLive::Channel InputSpecification
+AWS::MediaLive::Channel MediaPackageOutputDestinationSettings
+AWS::MediaLive::Channel MultiplexProgramChannelDestinationSettings
+AWS::MediaLive::Channel NetworkInputSettings
+AWS::MediaLive::Channel OutputDestination
+AWS::MediaLive::Channel OutputDestinationSettings
+AWS::MediaLive::Channel Scte20SourceSettings
+AWS::MediaLive::Channel Scte27SourceSettings
+AWS::MediaLive::Channel TeletextSourceSettings
+AWS::MediaLive::Channel VideoSelector
+AWS::MediaLive::Channel VideoSelectorPid
+AWS::MediaLive::Channel VideoSelectorProgramId
+AWS::MediaLive::Channel VideoSelectorSettings
+
+
+AWS::MediaLive::Input
+AWS::MediaLive::Input InputDestinationRequest
+AWS::MediaLive::Input InputSourceRequest
+AWS::MediaLive::Input InputVpcRequest
+AWS::MediaLive::Input MediaConnectFlowRequest
+
+
+AWS::MediaLive::InputSecurityGroup
+AWS::MediaLive::InputSecurityGroup InputWhitelistRuleCidr
+
+
+
+
+MediaStore resource type reference
+AWS::MediaStore::Container
+AWS::MediaStore::Container CorsRule
+AWS::MediaStore::Container MetricPolicy
+AWS::MediaStore::Container MetricPolicyRule
+
+
+
+
+MSK resource type reference
+AWS::MSK::Cluster
+AWS::MSK::Cluster BrokerLogs
+AWS::MSK::Cluster BrokerNodeGroupInfo
+AWS::MSK::Cluster ClientAuthentication
+AWS::MSK::Cluster CloudWatchLogs
+AWS::MSK::Cluster ConfigurationInfo
+AWS::MSK::Cluster EBSStorageInfo
+AWS::MSK::Cluster EncryptionAtRest
+AWS::MSK::Cluster EncryptionInfo
+AWS::MSK::Cluster EncryptionInTransit
+AWS::MSK::Cluster Firehose
+AWS::MSK::Cluster JmxExporter
+AWS::MSK::Cluster LoggingInfo
+AWS::MSK::Cluster NodeExporter
+AWS::MSK::Cluster OpenMonitoring
+AWS::MSK::Cluster Prometheus
+AWS::MSK::Cluster S3
+AWS::MSK::Cluster StorageInfo
+AWS::MSK::Cluster Tls
+
+
+
+
+Amazon Neptune resource type reference
+AWS::Neptune::DBCluster
+AWS::Neptune::DBClusterParameterGroup
+AWS::Neptune::DBInstance
+AWS::Neptune::DBParameterGroup
+AWS::Neptune::DBSubnetGroup
+
+
+NetworkManager resource type reference
+AWS::NetworkManager::CustomerGatewayAssociation
+AWS::NetworkManager::Device
+AWS::NetworkManager::Device Location
+
+
+AWS::NetworkManager::GlobalNetwork
+AWS::NetworkManager::Link
+AWS::NetworkManager::Link Bandwidth
+
+
+AWS::NetworkManager::LinkAssociation
+AWS::NetworkManager::Site
+AWS::NetworkManager::Site Location
+
+
+AWS::NetworkManager::TransitGatewayRegistration
+
+
+AWS OpsWorks resource type reference
+AWS::OpsWorks::App
+AWS::OpsWorks::App DataSource
+AWS::OpsWorks::App EnvironmentVariable
+AWS::OpsWorks::App Source
+AWS::OpsWorks::App SslConfiguration
+
+
+AWS::OpsWorks::ElasticLoadBalancerAttachment
+AWS::OpsWorks::Instance
+AWS::OpsWorks::Instance BlockDeviceMapping
+AWS::OpsWorks::Instance EbsBlockDevice
+AWS::OpsWorks::Instance TimeBasedAutoScaling
+
+
+AWS::OpsWorks::Layer
+AWS::OpsWorks::Layer AutoScalingThresholds
+AWS::OpsWorks::Layer LifecycleEventConfiguration
+AWS::OpsWorks::Layer LoadBasedAutoScaling
+AWS::OpsWorks::Layer Recipes
+AWS::OpsWorks::Layer ShutdownEventConfiguration
+AWS::OpsWorks::Layer VolumeConfiguration
+
+
+AWS::OpsWorks::Stack
+AWS::OpsWorks::Stack ChefConfiguration
+AWS::OpsWorks::Stack ElasticIp
+AWS::OpsWorks::Stack RdsDbInstance
+AWS::OpsWorks::Stack Source
+AWS::OpsWorks::Stack StackConfigurationManager
+
+
+AWS::OpsWorks::UserProfile
+AWS::OpsWorks::Volume
+
+
+AWS OpsWorks CM resource type reference
+AWS::OpsWorksCM::Server
+AWS::OpsWorksCM::Server EngineAttribute
+
+
+
+
+Pinpoint resource type reference
+AWS::Pinpoint::ADMChannel
+AWS::Pinpoint::APNSChannel
+AWS::Pinpoint::APNSSandboxChannel
+AWS::Pinpoint::APNSVoipChannel
+AWS::Pinpoint::APNSVoipSandboxChannel
+AWS::Pinpoint::App
+AWS::Pinpoint::ApplicationSettings
+AWS::Pinpoint::ApplicationSettings CampaignHook
+AWS::Pinpoint::ApplicationSettings Limits
+AWS::Pinpoint::ApplicationSettings QuietTime
+
+
+AWS::Pinpoint::BaiduChannel
+AWS::Pinpoint::Campaign
+AWS::Pinpoint::Campaign AttributeDimension
+AWS::Pinpoint::Campaign CampaignEmailMessage
+AWS::Pinpoint::Campaign CampaignEventFilter
+AWS::Pinpoint::Campaign CampaignHook
+AWS::Pinpoint::Campaign CampaignSmsMessage
+AWS::Pinpoint::Campaign EventDimensions
+AWS::Pinpoint::Campaign Limits
+AWS::Pinpoint::Campaign Message
+AWS::Pinpoint::Campaign MessageConfiguration
+AWS::Pinpoint::Campaign MetricDimension
+AWS::Pinpoint::Campaign QuietTime
+AWS::Pinpoint::Campaign Schedule
+AWS::Pinpoint::Campaign SetDimension
+AWS::Pinpoint::Campaign WriteTreatmentResource
+
+
+AWS::Pinpoint::EmailChannel
+AWS::Pinpoint::EmailTemplate
+AWS::Pinpoint::EventStream
+AWS::Pinpoint::GCMChannel
+AWS::Pinpoint::PushTemplate
+AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate
+AWS::Pinpoint::PushTemplate APNSPushNotificationTemplate
+AWS::Pinpoint::PushTemplate DefaultPushNotificationTemplate
+
+
+AWS::Pinpoint::Segment
+AWS::Pinpoint::Segment AttributeDimension
+AWS::Pinpoint::Segment Behavior
+AWS::Pinpoint::Segment Coordinates
+AWS::Pinpoint::Segment Demographic
+AWS::Pinpoint::Segment GPSPoint
+AWS::Pinpoint::Segment Groups
+AWS::Pinpoint::Segment Location
+AWS::Pinpoint::Segment Recency
+AWS::Pinpoint::Segment SegmentDimensions
+AWS::Pinpoint::Segment SegmentGroups
+AWS::Pinpoint::Segment SetDimension
+AWS::Pinpoint::Segment SourceSegments
+
+
+AWS::Pinpoint::SMSChannel
+AWS::Pinpoint::SmsTemplate
+AWS::Pinpoint::VoiceChannel
+
+
+PinpointEmail resource type reference
+AWS::PinpointEmail::ConfigurationSet
+AWS::PinpointEmail::ConfigurationSet DeliveryOptions
+AWS::PinpointEmail::ConfigurationSet ReputationOptions
+AWS::PinpointEmail::ConfigurationSet SendingOptions
+AWS::PinpointEmail::ConfigurationSet Tags
+AWS::PinpointEmail::ConfigurationSet TrackingOptions
+
+
+AWS::PinpointEmail::ConfigurationSetEventDestination
+AWS::PinpointEmail::ConfigurationSetEventDestination CloudWatchDestination
+AWS::PinpointEmail::ConfigurationSetEventDestination DimensionConfiguration
+AWS::PinpointEmail::ConfigurationSetEventDestination EventDestination
+AWS::PinpointEmail::ConfigurationSetEventDestination KinesisFirehoseDestination
+AWS::PinpointEmail::ConfigurationSetEventDestination PinpointDestination
+AWS::PinpointEmail::ConfigurationSetEventDestination SnsDestination
+
+
+AWS::PinpointEmail::DedicatedIpPool
+AWS::PinpointEmail::DedicatedIpPool Tags
+
+
+AWS::PinpointEmail::Identity
+AWS::PinpointEmail::Identity MailFromAttributes
+AWS::PinpointEmail::Identity Tags
+
+
+
+
+QLDB resource type reference
+AWS::QLDB::Ledger
+AWS::QLDB::Stream
+AWS::QLDB::Stream KinesisConfiguration
+
+
+
+
+RAM resource type reference
+AWS::RAM::ResourceShare
+
+
+RDS resource type reference
+AWS::RDS::DBCluster
+AWS::RDS::DBCluster DBClusterRole
+AWS::RDS::DBCluster ScalingConfiguration
+
+
+AWS::RDS::DBClusterParameterGroup
+AWS::RDS::DBInstance
+AWS::RDS::DBInstance DBInstanceRole
+AWS::RDS::DBInstance ProcessorFeature
+
+
+AWS::RDS::DBParameterGroup
+AWS::RDS::DBProxy
+AWS::RDS::DBProxy AuthFormat
+AWS::RDS::DBProxy TagFormat
+
+
+AWS::RDS::DBProxyTargetGroup
+AWS::RDS::DBProxyTargetGroup ConnectionPoolConfigurationInfoFormat
+
+
+AWS::RDS::DBSecurityGroup
+AWS::RDS::DBSecurityGroup Ingress
+
+
+AWS::RDS::DBSecurityGroupIngress
+AWS::RDS::DBSubnetGroup
+AWS::RDS::EventSubscription
+AWS::RDS::OptionGroup
+AWS::RDS::OptionGroup OptionConfiguration
+AWS::RDS::OptionGroup OptionSetting
+
+
+
+
+Amazon Redshift resource type reference
+AWS::Redshift::Cluster
+AWS::Redshift::Cluster LoggingProperties
+
+
+AWS::Redshift::ClusterParameterGroup
+AWS::Redshift::ClusterParameterGroup Parameter
+
+
+AWS::Redshift::ClusterSecurityGroup
+AWS::Redshift::ClusterSecurityGroupIngress
+AWS::Redshift::ClusterSubnetGroup
+
+
+ResourceGroups resource type reference
+AWS::ResourceGroups::Group
+AWS::ResourceGroups::Group Query
+AWS::ResourceGroups::Group ResourceQuery
+AWS::ResourceGroups::Group TagFilter
+
+
+
+
+RoboMaker resource type reference
+AWS::RoboMaker::Fleet
+AWS::RoboMaker::Robot
+AWS::RoboMaker::RobotApplication
+AWS::RoboMaker::RobotApplication RobotSoftwareSuite
+AWS::RoboMaker::RobotApplication SourceConfig
+
+
+AWS::RoboMaker::RobotApplicationVersion
+AWS::RoboMaker::SimulationApplication
+AWS::RoboMaker::SimulationApplication RenderingEngine
+AWS::RoboMaker::SimulationApplication RobotSoftwareSuite
+AWS::RoboMaker::SimulationApplication SimulationSoftwareSuite
+AWS::RoboMaker::SimulationApplication SourceConfig
+
+
+AWS::RoboMaker::SimulationApplicationVersion
+
+
+Amazon Route 53 resource type reference
+AWS::Route53::HealthCheck
+AWS::Route53::HealthCheck AlarmIdentifier
+AWS::Route53::HealthCheck HealthCheckConfig
+AWS::Route53::HealthCheck HealthCheckTag
+
+
+AWS::Route53::HostedZone
+AWS::Route53::HostedZone HostedZoneConfig
+AWS::Route53::HostedZone HostedZoneTag
+AWS::Route53::HostedZone QueryLoggingConfig
+AWS::Route53::HostedZone VPC
+
+
+AWS::Route53::RecordSet
+AWS::Route53::RecordSet AliasTarget
+AWS::Route53::RecordSet GeoLocation
+
+
+AWS::Route53::RecordSetGroup
+AWS::Route53::RecordSetGroup AliasTarget
+AWS::Route53::RecordSetGroup GeoLocation
+AWS::Route53::RecordSetGroup RecordSet
+
+
+
+
+Amazon Route 53 Resolver resource type reference
+AWS::Route53Resolver::ResolverEndpoint
+AWS::Route53Resolver::ResolverEndpoint IpAddressRequest
+
+
+AWS::Route53Resolver::ResolverRule
+AWS::Route53Resolver::ResolverRule TargetAddress
+
+
+AWS::Route53Resolver::ResolverRuleAssociation
+
+
+Amazon Simple Storage Service resource type reference
+AWS::S3::AccessPoint
+AWS::S3::AccessPoint PublicAccessBlockConfiguration
+AWS::S3::AccessPoint VpcConfiguration
+
+
+AWS::S3::Bucket
+AWS::S3::Bucket AbortIncompleteMultipartUpload
+AWS::S3::Bucket AccelerateConfiguration
+AWS::S3::Bucket AccessControlTranslation
+AWS::S3::Bucket AnalyticsConfiguration
+AWS::S3::Bucket BucketEncryption
+AWS::S3::Bucket CorsConfiguration
+AWS::S3::Bucket CorsRule
+AWS::S3::Bucket DataExport
+AWS::S3::Bucket DefaultRetention
+AWS::S3::Bucket DeleteMarkerReplication
+AWS::S3::Bucket Destination
+AWS::S3::Bucket EncryptionConfiguration
+AWS::S3::Bucket FilterRule
+AWS::S3::Bucket InventoryConfiguration
+AWS::S3::Bucket LambdaConfiguration
+AWS::S3::Bucket LifecycleConfiguration
+AWS::S3::Bucket LoggingConfiguration
+AWS::S3::Bucket Metrics
+AWS::S3::Bucket MetricsConfiguration
+AWS::S3::Bucket NoncurrentVersionTransition
+AWS::S3::Bucket NotificationConfiguration
+AWS::S3::Bucket NotificationFilter
+AWS::S3::Bucket ObjectLockConfiguration
+AWS::S3::Bucket ObjectLockRule
+AWS::S3::Bucket PublicAccessBlockConfiguration
+AWS::S3::Bucket QueueConfiguration
+AWS::S3::Bucket RedirectAllRequestsTo
+AWS::S3::Bucket RedirectRule
+AWS::S3::Bucket ReplicationConfiguration
+AWS::S3::Bucket ReplicationDestination
+AWS::S3::Bucket ReplicationRule
+AWS::S3::Bucket ReplicationRuleAndOperator
+AWS::S3::Bucket ReplicationRuleFilter
+AWS::S3::Bucket ReplicationTime
+AWS::S3::Bucket ReplicationTimeValue
+AWS::S3::Bucket RoutingRule
+AWS::S3::Bucket RoutingRuleCondition
+AWS::S3::Bucket Rule
+AWS::S3::Bucket S3KeyFilter
+AWS::S3::Bucket ServerSideEncryptionByDefault
+AWS::S3::Bucket ServerSideEncryptionRule
+AWS::S3::Bucket SourceSelectionCriteria
+AWS::S3::Bucket SseKmsEncryptedObjects
+AWS::S3::Bucket StorageClassAnalysis
+AWS::S3::Bucket TagFilter
+AWS::S3::Bucket TopicConfiguration
+AWS::S3::Bucket Transition
+AWS::S3::Bucket VersioningConfiguration
+AWS::S3::Bucket WebsiteConfiguration
+
+
+AWS::S3::BucketPolicy
+
+
+Amazon SageMaker resource type reference
+AWS::SageMaker::CodeRepository
+AWS::SageMaker::CodeRepository GitConfig
+
+
+AWS::SageMaker::Endpoint
+AWS::SageMaker::Endpoint VariantProperty
+
+
+AWS::SageMaker::EndpointConfig
+AWS::SageMaker::EndpointConfig CaptureContentTypeHeader
+AWS::SageMaker::EndpointConfig CaptureOption
+AWS::SageMaker::EndpointConfig DataCaptureConfig
+AWS::SageMaker::EndpointConfig ProductionVariant
+
+
+AWS::SageMaker::Model
+AWS::SageMaker::Model ContainerDefinition
+AWS::SageMaker::Model VpcConfig
+
+
+AWS::SageMaker::MonitoringSchedule
+AWS::SageMaker::MonitoringSchedule BaselineConfig
+AWS::SageMaker::MonitoringSchedule ClusterConfig
+AWS::SageMaker::MonitoringSchedule ConstraintsResource
+AWS::SageMaker::MonitoringSchedule EndpointInput
+AWS::SageMaker::MonitoringSchedule Environment
+AWS::SageMaker::MonitoringSchedule MonitoringAppSpecification
+AWS::SageMaker::MonitoringSchedule MonitoringExecutionSummary
+AWS::SageMaker::MonitoringSchedule MonitoringInput
+AWS::SageMaker::MonitoringSchedule MonitoringInputs
+AWS::SageMaker::MonitoringSchedule MonitoringJobDefinition
+AWS::SageMaker::MonitoringSchedule MonitoringOutput
+AWS::SageMaker::MonitoringSchedule MonitoringOutputConfig
+AWS::SageMaker::MonitoringSchedule MonitoringResources
+AWS::SageMaker::MonitoringSchedule MonitoringScheduleConfig
+AWS::SageMaker::MonitoringSchedule NetworkConfig
+AWS::SageMaker::MonitoringSchedule S3Output
+AWS::SageMaker::MonitoringSchedule ScheduleConfig
+AWS::SageMaker::MonitoringSchedule StatisticsResource
+AWS::SageMaker::MonitoringSchedule StoppingCondition
+AWS::SageMaker::MonitoringSchedule VpcConfig
+
+
+AWS::SageMaker::NotebookInstance
+AWS::SageMaker::NotebookInstanceLifecycleConfig
+AWS::SageMaker::NotebookInstanceLifecycleConfig NotebookInstanceLifecycleHook
+
+
+AWS::SageMaker::Workteam
+AWS::SageMaker::Workteam CognitoMemberDefinition
+AWS::SageMaker::Workteam MemberDefinition
+AWS::SageMaker::Workteam NotificationConfiguration
+
+
+
+
+AWS Secrets Manager
+AWS::SecretsManager::ResourcePolicy
+AWS::SecretsManager::RotationSchedule
+AWS::SecretsManager::RotationSchedule HostedRotationLambda
+AWS::SecretsManager::RotationSchedule RotationRules
+
+
+AWS::SecretsManager::Secret
+AWS::SecretsManager::Secret GenerateSecretString
+
+
+AWS::SecretsManager::SecretTargetAttachment
+
+
+AWS Service Catalog resource type reference
+AWS::ServiceCatalog::AcceptedPortfolioShare
+AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct ProvisioningArtifactProperties
+
+
+AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningParameter
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningPreferences
+
+
+AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioShare
+AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::TagOption
+AWS::ServiceCatalog::TagOptionAssociation
+
+
+SecurityHub resource type reference
+AWS::SecurityHub::Hub
+
+
+SES resource type reference
+AWS::SES::ConfigurationSet
+AWS::SES::ConfigurationSetEventDestination
+AWS::SES::ConfigurationSetEventDestination CloudWatchDestination
+AWS::SES::ConfigurationSetEventDestination DimensionConfiguration
+AWS::SES::ConfigurationSetEventDestination EventDestination
+AWS::SES::ConfigurationSetEventDestination KinesisFirehoseDestination
+
+
+AWS::SES::ReceiptFilter
+AWS::SES::ReceiptFilter Filter
+AWS::SES::ReceiptFilter IpFilter
+
+
+AWS::SES::ReceiptRule
+AWS::SES::ReceiptRule Action
+AWS::SES::ReceiptRule AddHeaderAction
+AWS::SES::ReceiptRule BounceAction
+AWS::SES::ReceiptRule LambdaAction
+AWS::SES::ReceiptRule Rule
+AWS::SES::ReceiptRule S3Action
+AWS::SES::ReceiptRule SNSAction
+AWS::SES::ReceiptRule StopAction
+AWS::SES::ReceiptRule WorkmailAction
+
+
+AWS::SES::ReceiptRuleSet
+AWS::SES::Template
+AWS::SES::Template Template
+
+
+
+
+Amazon SimpleDB resource type reference
+AWS::SDB::Domain
+
+
+Amazon Simple Notification Service resource type reference
+AWS::SNS::Subscription
+AWS::SNS::Topic
+AWS::SNS::Topic Subscription
+
+
+AWS::SNS::TopicPolicy
+
+
+Amazon Simple Queue Service resource type reference
+AWS::SQS::Queue
+AWS::SQS::QueuePolicy
+
+
+AWS Step Functions resource type reference
+AWS::StepFunctions::Activity
+AWS::StepFunctions::Activity TagsEntry
+
+
+AWS::StepFunctions::StateMachine
+AWS::StepFunctions::StateMachine CloudWatchLogsLogGroup
+AWS::StepFunctions::StateMachine DefinitionSubstitutions
+AWS::StepFunctions::StateMachine LogDestination
+AWS::StepFunctions::StateMachine LoggingConfiguration
+AWS::StepFunctions::StateMachine S3Location
+AWS::StepFunctions::StateMachine TagsEntry
+AWS::StepFunctions::StateMachine TracingConfiguration
+
+
+
+
+AWS Systems Manager resource type reference
+AWS::SSM::Association
+AWS::SSM::Association InstanceAssociationOutputLocation
+AWS::SSM::Association ParameterValues
+AWS::SSM::Association S3OutputLocation
+AWS::SSM::Association Target
+
+
+AWS::SSM::Document
+AWS::SSM::MaintenanceWindow
+AWS::SSM::MaintenanceWindowTarget
+AWS::SSM::MaintenanceWindowTarget Targets
+
+
+AWS::SSM::MaintenanceWindowTask
+AWS::SSM::MaintenanceWindowTask LoggingInfo
+AWS::SSM::MaintenanceWindowTask MaintenanceWindowAutomationParameters
+AWS::SSM::MaintenanceWindowTask MaintenanceWindowLambdaParameters
+AWS::SSM::MaintenanceWindowTask MaintenanceWindowRunCommandParameters
+AWS::SSM::MaintenanceWindowTask MaintenanceWindowStepFunctionsParameters
+AWS::SSM::MaintenanceWindowTask NotificationConfig
+AWS::SSM::MaintenanceWindowTask Target
+AWS::SSM::MaintenanceWindowTask TaskInvocationParameters
+
+
+AWS::SSM::Parameter
+AWS::SSM::PatchBaseline
+AWS::SSM::PatchBaseline PatchFilter
+AWS::SSM::PatchBaseline PatchFilterGroup
+AWS::SSM::PatchBaseline PatchSource
+AWS::SSM::PatchBaseline PatchStringDate
+AWS::SSM::PatchBaseline Rule
+AWS::SSM::PatchBaseline RuleGroup
+
+
+AWS::SSM::ResourceDataSync
+AWS::SSM::ResourceDataSync AwsOrganizationsSource
+AWS::SSM::ResourceDataSync S3Destination
+AWS::SSM::ResourceDataSync SyncSource
+
+
+
+
+Synthetics resource type reference
+AWS::Synthetics::Canary
+AWS::Synthetics::Canary Code
+AWS::Synthetics::Canary RunConfig
+AWS::Synthetics::Canary Schedule
+AWS::Synthetics::Canary VPCConfig
+
+
+
+
+AWS Transfer Family resource type reference
+AWS::Transfer::Server
+AWS::Transfer::Server EndpointDetails
+AWS::Transfer::Server IdentityProviderDetails
+AWS::Transfer::Server Protocol
+
+
+AWS::Transfer::User
+AWS::Transfer::User HomeDirectoryMapEntry
+AWS::Transfer::User SshPublicKey
+
+
+
+
+WAF resource type reference
+AWS::WAF::ByteMatchSet
+AWS::WAF::ByteMatchSet ByteMatchTuple
+AWS::WAF::ByteMatchSet FieldToMatch
+
+
+AWS::WAF::IPSet
+AWS::WAF::IPSet IPSetDescriptor
+
+
+AWS::WAF::Rule
+AWS::WAF::Rule Predicate
+
+
+AWS::WAF::SizeConstraintSet
+AWS::WAF::SizeConstraintSet FieldToMatch
+AWS::WAF::SizeConstraintSet SizeConstraint
+
+
+AWS::WAF::SqlInjectionMatchSet
+AWS::WAF::SqlInjectionMatchSet FieldToMatch
+AWS::WAF::SqlInjectionMatchSet SqlInjectionMatchTuple
+
+
+AWS::WAF::WebACL
+AWS::WAF::WebACL ActivatedRule
+AWS::WAF::WebACL WafAction
+
+
+AWS::WAF::XssMatchSet
+AWS::WAF::XssMatchSet FieldToMatch
+AWS::WAF::XssMatchSet XssMatchTuple
+
+
+
+
+WAFv2 resource type reference
+AWS::WAFv2::IPSet
+AWS::WAFv2::RegexPatternSet
+AWS::WAFv2::RuleGroup
+AWS::WAFv2::RuleGroup AndStatementOne
+AWS::WAFv2::RuleGroup AndStatementTwo
+AWS::WAFv2::RuleGroup ByteMatchStatement
+AWS::WAFv2::RuleGroup FieldToMatch
+AWS::WAFv2::RuleGroup ForwardedIPConfiguration
+AWS::WAFv2::RuleGroup GeoMatchStatement
+AWS::WAFv2::RuleGroup IPSetForwardedIPConfiguration
+AWS::WAFv2::RuleGroup IPSetReferenceStatement
+AWS::WAFv2::RuleGroup NotStatementOne
+AWS::WAFv2::RuleGroup NotStatementTwo
+AWS::WAFv2::RuleGroup OrStatementOne
+AWS::WAFv2::RuleGroup OrStatementTwo
+AWS::WAFv2::RuleGroup RateBasedStatementOne
+AWS::WAFv2::RuleGroup RateBasedStatementTwo
+AWS::WAFv2::RuleGroup RegexPatternSetReferenceStatement
+AWS::WAFv2::RuleGroup Rule
+AWS::WAFv2::RuleGroup RuleAction
+AWS::WAFv2::RuleGroup SizeConstraintStatement
+AWS::WAFv2::RuleGroup SqliMatchStatement
+AWS::WAFv2::RuleGroup StatementOne
+AWS::WAFv2::RuleGroup StatementThree
+AWS::WAFv2::RuleGroup StatementTwo
+AWS::WAFv2::RuleGroup TextTransformation
+AWS::WAFv2::RuleGroup VisibilityConfig
+AWS::WAFv2::RuleGroup XssMatchStatement
+
+
+AWS::WAFv2::WebACL
+AWS::WAFv2::WebACL AndStatementOne
+AWS::WAFv2::WebACL AndStatementTwo
+AWS::WAFv2::WebACL ByteMatchStatement
+AWS::WAFv2::WebACL DefaultAction
+AWS::WAFv2::WebACL ExcludedRule
+AWS::WAFv2::WebACL FieldToMatch
+AWS::WAFv2::WebACL ForwardedIPConfiguration
+AWS::WAFv2::WebACL GeoMatchStatement
+AWS::WAFv2::WebACL IPSetForwardedIPConfiguration
+AWS::WAFv2::WebACL IPSetReferenceStatement
+AWS::WAFv2::WebACL ManagedRuleGroupStatement
+AWS::WAFv2::WebACL NotStatementOne
+AWS::WAFv2::WebACL NotStatementTwo
+AWS::WAFv2::WebACL OrStatementOne
+AWS::WAFv2::WebACL OrStatementTwo
+AWS::WAFv2::WebACL OverrideAction
+AWS::WAFv2::WebACL RateBasedStatementOne
+AWS::WAFv2::WebACL RateBasedStatementTwo
+AWS::WAFv2::WebACL RegexPatternSetReferenceStatement
+AWS::WAFv2::WebACL Rule
+AWS::WAFv2::WebACL RuleAction
+AWS::WAFv2::WebACL RuleGroupReferenceStatement
+AWS::WAFv2::WebACL SizeConstraintStatement
+AWS::WAFv2::WebACL SqliMatchStatement
+AWS::WAFv2::WebACL StatementOne
+AWS::WAFv2::WebACL StatementThree
+AWS::WAFv2::WebACL StatementTwo
+AWS::WAFv2::WebACL TextTransformation
+AWS::WAFv2::WebACL VisibilityConfig
+AWS::WAFv2::WebACL XssMatchStatement
+
+
+AWS::WAFv2::WebACLAssociation
+
+
+AWS WAF Regional resource type reference
+AWS::WAFRegional::ByteMatchSet
+AWS::WAFRegional::ByteMatchSet ByteMatchTuple
+AWS::WAFRegional::ByteMatchSet FieldToMatch
+
+
+AWS::WAFRegional::GeoMatchSet
+AWS::WAFRegional::GeoMatchSet GeoMatchConstraint
+
+
+AWS::WAFRegional::IPSet
+AWS::WAFRegional::IPSet IPSetDescriptor
+
+
+AWS::WAFRegional::RateBasedRule
+AWS::WAFRegional::RateBasedRule Predicate
+
+
+AWS::WAFRegional::RegexPatternSet
+AWS::WAFRegional::Rule
+AWS::WAFRegional::Rule Predicate
+
+
+AWS::WAFRegional::SizeConstraintSet
+AWS::WAFRegional::SizeConstraintSet FieldToMatch
+AWS::WAFRegional::SizeConstraintSet SizeConstraint
+
+
+AWS::WAFRegional::SqlInjectionMatchSet
+AWS::WAFRegional::SqlInjectionMatchSet FieldToMatch
+AWS::WAFRegional::SqlInjectionMatchSet SqlInjectionMatchTuple
+
+
+AWS::WAFRegional::WebACL
+AWS::WAFRegional::WebACL Action
+AWS::WAFRegional::WebACL Rule
+
+
+AWS::WAFRegional::WebACLAssociation
+AWS::WAFRegional::XssMatchSet
+AWS::WAFRegional::XssMatchSet FieldToMatch
+AWS::WAFRegional::XssMatchSet XssMatchTuple
+
+
+
+
+WorkSpaces resource type reference
+AWS::WorkSpaces::Workspace
+AWS::WorkSpaces::Workspace WorkspaceProperties
+
+
+
+
+Shared property types reference
+Name type
+Resource tag
+
+
+
+
+AWS CloudFormation resource specification
+Specification format
+
+
+CloudFormation resource provider schemas
+Resource attribute reference
+CreationPolicy attribute
+DeletionPolicy attribute
+DependsOn attribute
+Metadata attribute
+UpdatePolicy attribute
+UpdateReplacePolicy attribute
+
+
+Intrinsic function reference
+Fn::Base64
+Fn::Cidr
+Condition functions
+Sample templates
+
+
+Fn::FindInMap
+Fn::GetAtt
+Fn::GetAZs
+Fn::ImportValue
+Fn::Join
+Fn::Select
+Fn::Split
+Fn::Sub
+Fn::Transform
+Ref
+
+
+Pseudo parameters reference
+CloudFormation helper scripts reference
+cfn-init
+cfn-signal
+cfn-get-metadata
+cfn-hup
+
+
+Sample templates
+Troubleshooting AWS CloudFormation
+Release history
+Release history for AWS CloudFormation helper scripts
+AWS glossary

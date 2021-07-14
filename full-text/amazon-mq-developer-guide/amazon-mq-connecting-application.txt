@@ -1,0 +1,167 @@
+Tutorial: Connecting a Java Application to Your Amazon MQ Broker
+After you create an Amazon MQ broker, you can connect your application to it. The following examples show how you can use the Java Message Service (JMS) to create a connection to the broker, create a queue, and send a message. For a complete, working Java example, see Working Examples of Using Java Message Service (JMS) with ActiveMQ.
+You can connect to ActiveMQ brokers using various ActiveMQ clients. We recommend using the ActiveMQ Client.
+Topics
+ Prerequisites
+ To Create a Message Producer and Send a Message
+ To Create a Message Consumer and Receive the Message
+Prerequisites
+Enable VPC Attributes
+To ensure that your broker is accessible within your VPC, you must enable the enableDnsHostnames and enableDnsSupport VPC attributes. For more information, see DNS Support in your VPC in the Amazon VPC User Guide.
+Enable Inbound Connections
+
+
+Sign in to the Amazon MQ console.
+
+
+From the broker list, choose the name of your broker (for example, MyBroker).
+
+
+On the MyBroker page, in the Connections section, note the addresses and ports of the broker's ActiveMQ Web Console URL and wire-level protocols.
+
+
+In the Details section, under Security and network, choose the name of your security group or .
+
+
+The Security Groups page of the EC2 Dashboard is displayed.
+
+
+From the security group list, choose your security group.
+
+
+At the bottom of the page, choose Inbound, and then choose Edit.
+
+
+In the Edit inbound rules dialog box, add a rule for every URL or endpoint that you want to be publicly accessible (the following example shows how to do this for an ActiveMQ Web Console).
+
+
+Choose Add Rule.
+
+
+For Type, select Custom TCP.
+
+
+For Port Range, type the ActiveMQ Web Console port (8162).
+
+
+For Source, leave Custom selected and then type the IP address of the system that you want to be able to access the ActiveMQ Web Console (for example, 192.0.2.1).
+
+
+Choose Save.
+Your broker can now accept inbound connections.
+
+
+Add Java Dependencies
+Add the activemq-client.jar and activemq-pool.jar packages to your Java class path. The following example shows these dependencies in a Maven project pom.xml file.
+<dependencies>
+    <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-client</artifactId>
+        <version>5.15.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-pool</artifactId>
+        <version>5.15.8</version>
+    </dependency>
+</dependencies>
+For more information about activemq-client.jar, see Initial Configuration in the Apache ActiveMQ documentation.
+Important
+In the following example code, producers and consumers run in a single thread. For production systems (or to test broker instance failover), make sure that your producers and consumers run on separate hosts or threads.
+To Create a Message Producer and Send a Message
+
+Create a JMS pooled connection factory for the message producer using your broker's endpoint and then call the createConnection method against the factory.
+Note
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time. Likewise, Amazon MQ provides two endpoints for each wire-level protocol, but only one endpoint is active in each pair at a time. The -1 and -2 suffixes denote a redundant pair. For more information, see Amazon MQ Broker Architecture).
+For wire-level protocol endpoints, you can allow your application to connect to either endpoint by using the Failover Transport.
+
+```
+   // Create a connection factory.
+   final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(wireLevelEndpoint);
+// Pass the username and password.
+   connectionFactory.setUserName(activeMqUsername);
+   connectionFactory.setPassword(activeMqPassword);
+// Create a pooled connection factory.
+   final PooledConnectionFactory pooledConnectionFactory = new PooledConnectionFactory();
+   pooledConnectionFactory.setConnectionFactory(connectionFactory);
+   pooledConnectionFactory.setMaxConnections(10);
+// Establish a connection for the producer.
+   final Connection producerConnection = pooledConnectionFactory.createConnection();
+   producerConnection.start();
+   ``
+**Note**  
+Message producers should always use thePooledConnectionFactory` class. For more information, see Always Use Connection Pooling.
+
+Create a session, a queue named MyQueue, and a message producer.
+
+```
+   // Create a session.
+   final Session producerSession = producerConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+// Create a queue named "MyQueue".
+   final Destination producerDestination = producerSession.createQueue("MyQueue");
+// Create a producer from the session to the queue.
+   final MessageProducer producer = producerSession.createProducer(producerDestination);
+   producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+   ```
+
+Create the message string "Hello from Amazon MQ!" and then send the message.
+
+```
+   // Create a message.
+   final String text = "Hello from Amazon MQ!";
+   TextMessage producerMessage = producerSession.createTextMessage(text);
+// Send the message.
+   producer.send(producerMessage);
+   System.out.println("Message sent.");
+   ```
+
+Clean up the producer.
+
+producer.close();
+   producerSession.close();
+   producerConnection.close();
+To Create a Message Consumer and Receive the Message
+
+Create a JMS connection factory for the message producer using your broker's endpoint and then call the createConnection method against the factory.
+
+```
+   // Create a connection factory.
+   final ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(wireLevelEndpoint);
+// Pass the username and password.
+   connectionFactory.setUserName(activeMqUsername);
+   connectionFactory.setPassword(activeMqPassword);
+// Establish a connection for the consumer.
+   final Connection consumerConnection = connectionFactory.createConnection();
+   consumerConnection.start();
+   ``
+**Note**  
+Message consumers should *never* use thePooledConnectionFactory` class. For more information, see Always Use Connection Pooling.
+
+Create a session, a queue named MyQueue, and a message consumer.
+
+```
+   // Create a session.
+   final Session consumerSession = consumerConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+// Create a queue named "MyQueue".
+   final Destination consumerDestination = consumerSession.createQueue("MyQueue");
+// Create a message consumer from the session to the queue.
+   final MessageConsumer consumer = consumerSession.createConsumer(consumerDestination);
+   ```
+
+Begin to wait for messages and receive the message when it arrives.
+
+```
+   // Begin to wait for messages.
+   final Message consumerMessage = consumer.receive(1000);
+// Receive the message when it arrives.
+   final TextMessage consumerTextMessage = (TextMessage) consumerMessage;
+   System.out.println("Message received: "  consumerTextMessage.getText());
+   ```
+Note
+Unlike AWS messaging services (such as Amazon SQS), the consumer is constantly connected to the broker.
+
+Close the consumer, session, and connection.
+
+consumer.close();
+   consumerSession.close();
+   consumerConnection.close();

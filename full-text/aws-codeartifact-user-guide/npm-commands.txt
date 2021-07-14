@@ -1,0 +1,264 @@
+npm command support
+The following sections summarize the npm commands that are supported, by CodeArtifact repositories, in addition to specific commands that are not supported.
+Topics
+ Supported commands that interact with a repository
+ Supported client-side commands
+ Unsupported commands
+Supported commands that interact with a repository
+This section lists npm commands where the npm client makes one or more requests to the registry it's been configured with (for example, with npm config set registry ). These commands have been verified to function correctly when invoked against an CodeArtifact repository.
+
+
+
+
+Command
+Description
+
+
+
+
+bugs
+Tries to guess the location of a package’s bug tracker URL, and then tries to open it.
+
+
+ci
+Installs a project with a clean slate.
+
+
+deprecate
+Deprecates a version of a package.
+
+
+dist-tag
+Modifies package distribution tags.
+
+
+docs
+Tries to guess the location of a package’s documentation URL, and then tries to open it using the --browser config parameter.
+
+
+doctor
+Runs a set of checks to ensure that your npm installation has what it needs to manage your JavaScript packages.
+
+
+install
+Installs a package.
+
+
+install-ci-test
+Installs a project with a clean slate and runs tests. Alias: npm cit. This command runs an npm ci followed immediately by an npm test.
+
+
+install-test
+Installs package and runs tests. Runs an npm install followed immediately by an npm test.
+
+
+outdated
+Checks the configured registry to see if any installed packages are currently outdated.
+
+
+ping
+Pings the configured or given npm registry and verifies authentication.
+
+
+publish
+Publishes a package version to the registry.
+
+
+update
+Guesses the location of a package’s repository URL, and then tries to open it using the --browser config parameter.
+
+
+view
+Displays package metadata. Can be used to print metadata properties.
+
+
+
+Supported client-side commands
+These commands don't require any direct interaction with a repository, so CodeArtifact does not need to do anything to support them.
+
+
+
+
+Command
+Description
+
+
+
+
+bin
+Displays the npm bin folder.
+
+
+build
+Builds a package.
+
+
+cache
+Manipulates the packages cache.
+
+
+completion
+Enables tab completion in all npm commands.
+
+
+config
+Updates the contents of the user and global npmrc files.
+
+
+dedupe
+Searches the local package tree and attempts to simplify the structure by moving dependencies further up the tree, where they can be more effectively shared by multiple dependent packages.
+
+
+edit
+Edits an installed package. Selects a dependency in the current working directory and opens the package folder in the default editor.
+
+
+explore
+Browses an installed package. Spawns a subshell in the directory of the installed package specified. If a command is specified, then it is run in the subshell, which then immediately terminates.
+
+
+help
+Gets help on npm.
+
+
+help-search
+Searches npm help documentation.
+
+
+init
+Interactively creates a package.json file.
+
+
+link
+Symlink a package folder.
+
+
+ls
+Lists installed packages.
+
+
+pack
+Creates a tarball from a package.
+
+
+prefix
+Displays prefix. This is the closest parent directory to contain a package.json file unless -g is also specified.
+
+
+prune
+Removes packages that are not listed on the parent package's dependencies list.
+
+
+rebuild
+Runs the npm build command on the matched folders.
+
+
+restart
+Runs a package's stop, restart, and start scripts and associated pre- and post- scripts.
+
+
+root
+Prints the effective node_modules folder to standard out.
+
+
+run-script
+Runs arbitrary package scripts.
+
+
+shrinkwrap
+Locks down dependency versions for publication.
+
+
+uninstall
+Uninstalls a package.
+
+
+
+Unsupported commands
+These npm commands are not supported by CodeArtifact repositories.
+
+
+
+
+Command
+Description
+Notes
+
+
+
+
+access
+Sets the access level on published packages.
+CodeArtifact uses a permission model that is different from the public npmjs repository.
+
+
+adduser
+Adds a registry user account
+CodeArtifact uses a user model that is different from the public npmjs repository.
+
+
+audit
+Runs a security audit.
+CodeArtifact does not currently vend security vulnerability data.
+
+
+hook
+Allows you to manage npm hooks, including adding, removing, listing, and updating.
+CodeArtifact does not currently support any kind of change notification mechanism.
+
+
+login
+Authenticates a user. This is an alias for npm adduser.
+CodeArtifact uses an authentication model that is different from the public npmjs repository. For information, see Authentication with npm.
+
+
+logout
+Signs out of the registry.
+CodeArtifact uses an authentication model that is different from the public npmjs repository. There is no way to sign out from an CodeArtifact repository, but authentication tokens expire after their configurable expiration time. The default token duration is 12 hours.
+
+
+owner
+Manages package owners.
+CodeArtifact uses a permissions model that is different from the public npmjs repository.
+
+
+profile
+Changes settings on your registry profile.
+CodeArtifact uses a user model that is different from the public npmjs repository.
+
+
+search
+Searches the registry for packages matching the search terms.
+CodeArtifact supports limited search functionality with the list-packages command.
+
+
+star
+Marks your favorite packages.
+CodeArtifact currently does not support any kind of favorites mechanism.
+
+
+stars
+View packages marked as favorites.
+CodeArtifact currently does not support any kind of favorites mechanism.
+
+
+team
+Manages organization teams and team memberships.
+CodeArtifact uses a user and group membership model that is different from the public npmjs repository. For information, see Identities (Users, Groups, and Roles) in the IAM User Guide.
+
+
+token
+Manages your authentication tokens.
+CodeArtifact uses a different model for getting authentication tokens. For information, see Authentication with npm.
+
+
+unpublish
+Removes a package from the registry.
+CodeArtifact does not support removing a package version from a repository using the npm client. You can use the delete-package-version command.
+
+
+whoami
+Displays the npm user name.
+CodeArtifact uses a user model that is different from the public npmjs repository.
+
+

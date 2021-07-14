@@ -1,0 +1,77 @@
+Exporting a Private Certificate
+You can export a certificate issued by ACM Private CA for use anywhere in your private PKI environment. The exported file contains the certificate, the certificate chain, and the encrypted private key. This file must be stored securely. For more information about ACM Private CA, see AWS Certificate Manager Private Certificate Authority User Guide.
+Topics
+ Exporting a Private Certificate Using the Console
+ Export a Private Certificate Using the CLI
+Exporting a Private Certificate Using the Console
+
+
+Sign into the AWS Management Console and open the ACM console at https://console.aws.amazon.com/acm/home.
+
+
+Choose Certificate Manager
+
+
+Select the certificate that you want to export.
+
+
+On the Actions menu, choose Export (private certificates only).
+
+
+Enter and confirm a passphrase for the private key.
+
+
+Choose Generate PEM Encoding.
+
+
+You can copy the certificate, certificate chain, and encrypted key to memory or choose Export to a file  for each.
+
+
+Choose Done.
+
+
+Export a Private Certificate Using the CLI
+Use the export-certificate command to export a private certificate and private key. You must assign the passphrase when you run the command. For added security, store your passphrase securely in a file before using the command. This prevents your passphrase from being stored in the command history and prevents others from seeing the passphrase as you type it in. 
+The following example pipes the command output to jq to apply PEM formatting.
+aws acm export-certificate \
+--certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
+--passphrase file://path-to-passphrase-file  \
+| jq -r '"\(.Certificate)\(.CertificateChain)\(.PrivateKey)"'
+This outputs a base64-encoded, PEM-format certificate, also containing the certificate chain and encrypted private key, as in the following abbreviated example.
+-----BEGIN CERTIFICATE-----
+MIIDTDCCAjSgAwIBAgIRANWuFpqA16g3IwStE3vVpTwwDQYJKoZIhvcNAQELBQAw
+EzERMA8GA1UECgwIdHJvbG9sb2wwHhcNMTkwNzE5MTYxNTU1WhcNMjAwODE5MTcx
+NTU1WjAXMRUwEwYDVQQDDAx3d3cuc3B1ZHMuaW8wggEiMA0GCSqGSIb3DQEBAQUA
+...
+8UNFQvNoo1VtICL4cwWOdLOkxpwkkKWtcEkQuHE1v5Vn6HpbfFmxkdPEasoDhthH
+FFWIf4/VOlbDLgjU4HgtmV4IJDtqM9rGOZ42eFYmmc3eQO0GmigBBwwXp3j6hoi
+74YMigvtILnbYkPYhY9qz8h7lHUmannS8j6YxmtpPY=
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIC8zCCAdugAwIBAgIRAM/jQ/6h2/MI1NYWX3dDaZswDQYJKoZIhvcNAQELBQAw
+EzERMA8GA1UECgwIdHJvbG9sb2wwHhcNMTkwNjE5MTk0NTE2WhcNMjkwNjE5MjA0
+NTE2WjATMREwDwYDVQQKDAh0cm9sb2xvbDCCASIwDQYJKoZIhvcNAQEBBQADggEP
+...
+j2PAOviqIXjwr08Zo/rTy/8m6LAsmm3LVVYKLyPdlKB6M/H93Z1/Bs8ERqqga/
+6lfM6iw2JHtkWq4WexvQSoqRXFhCZWbWPZTUpBS0d4/Y5q92S3iJLRa/JQ0d4U1
+tWZyqJ2rj2RLh7CE71XIAM//oHGcDDPaQBFD2DTisB/ppGeDuB
+-----END CERTIFICATE-----
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIFKzBVBgkqhkiG9w0BBQ0wSDAnBgkqhkiG9w0BBQwwGgQUMrZb7kZJ8nTZg7aB
+1zmaQh4vwloCAggAMB0GCWCGSAFlAwQBKgQQDViroIHStQgNOjR6nTUnuwSCBNAN
+JM4SG202YPUiddWeWmX/RKGg3lIdEA0WLTPskNCdCAHqdhOSqBwt65qUTZe3gBt
+...
+ZGipF/DobHDMkpwiaRR5sz6nG4wcki0ryYjAQrdGsR6EVvUUXADkrnrrxuHTWjFl
+wEuqyd8X/ApkQsYFX/nhepOEIGWf8Xu0nrjQo77/evhG0sHXborGzgCJwKuimPVy
+Fs5kw5mvEoe5DAe3rSKsSUJ1tM4RagJj2WHBC04SZWNH8kxfOC1E/GSLBCixv3v
+Lwq38CEJRQJLdpta8NcLKnFBwmmVs9OV/VXzNuHYg==
+-----END ENCRYPTED PRIVATE KEY-----
+To output everything to a file, append the > redirector to the previous example, yielding the following. 
+```
+aws acm export-certificate \
+--certificate-arn arn:aws:acm:region:account:certificate/12345678-1234-1234-1234-123456789012 \
+--passphrase file://path-to-passphrase-file \
+| jq -r '"(.Certificate)(.CertificateChain)(.PrivateKey)"' \
+
+/tmp/export.txt
+```

@@ -1,0 +1,33 @@
+Creating Additional Custom AZs in a Region
+During the onboarding process described in Getting Started with Amazon RDS on VMware, you created a custom Availability Zone (custom AZ) in an AWS Region. You can create additional custom AZs in the same AWS Region. 
+To create a custom AZ
+
+
+Sign in to the AWS Management Console and open the Amazon RDS console at https://console.aws.amazon.com/rds/.
+
+
+In the top-right corner of the AWS Management Console, choose the AWS Region that you want to create the custom AZ in. 
+
+
+In the navigation pane, choose Custom AZs.
+
+
+Choose Create custom AZ.
+
+
+The Create custom AZ page appears.
+
+
+
+In Custom AZ name, enter a name for the custom AZ.
+
+
+In VPN settings, enter a friendly name for the VPN in VPN tunnel name, and enter the Local Uplink IP in VPN originator IP.
+Note
+A Local Uplink IP is the external source IPv4 address of packets leaving your virtual data center. Multiple vSphere clusters in the same virtual data center can use the same Local Uplink IP or different Local Uplink IPs. However, you must create a new VPN connection for each vSphere cluster.
+
+
+Choose Create custom AZ.
+
+
+Amazon RDS on VMware begins the custom AZ creation process.

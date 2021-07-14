@@ -1,0 +1,176 @@
+Instance Data Bag (aws_opsworks_instance)
+Represents an instance's settings.
+The following example shows how to use Chef search to search through a single data bag item and then multiple data bag items to write messages to the Chef log with the instances' hostnames and IDs:
+```
+instance = search("aws_opsworks_instance").first
+Chef::Log.info("* The instance's hostname is '#{instance['hostname']}' *")
+Chef::Log.info("* The instance's ID is '#{instance['instance_id']}' *")
+search("aws_opsworks_instance").each do |instance|
+  Chef::Log.info("* The instance's hostname is '#{instance['hostname']}' *")
+  Chef::Log.info("* The instance's ID is '#{instance['instance_id']}' *")
+end
+```
+The following example shows different ways of using Chef search to search through multiple data bag items to find the data bag item that contains the specified Amazon EC2 instance ID. The example then uses the data bag item's contents to write a message to the Chef log with the corresponding instance's public IP address:
+```
+instance = search("aws_opsworks_instance", "ec2_instance_id:i-12345678").first
+Chef::Log.info("* For instance '#{instance['ec2_instance_id']}', the instance's public IP address is '#{instance['public_ip']}' *")
+search("aws_opsworks_instance").each do |instance|
+  if instance['ec2_instance_id'] == 'i-12345678'
+    Chef::Log.info("* For instance '#{instance['ec2_instance_id']}', the instance's public IP address is '#{instance['public_ip']}' *")
+  end
+end
+```
+The following example shows how to use Chef search with self:true to find the data bag item that contains information related to the instance that the recipe is being executed on. The example then uses the data bag item's contents to write a message to the Chef log with the corresponding instance's AWS OpsWorks Stacks-generated ID and the instance's public IP address:
+instance = search("aws_opsworks_instance", "self:true").first
+Chef::Log.info("********** For instance '#{instance['instance_id']}', the instance's public IP address is '#{instance['public_ip']}' **********")
+
+
+
+
+
+
+
+
+
+
+
+ami_id
+architecture
+auto_scaling_type
+
+
+availability_zone
+created_at
+ebs_optimized
+
+
+ec2_instance_id
+elastic_ip
+hostname
+
+
+instance_id
+instance_type
+layer_ids
+
+
+os
+private_dns
+private_ip
+
+
+public_dns
+public_ip
+root_device_type
+
+
+root_device_volume_id
+self
+ssh_host_dsa_key_fingerprint
+
+
+ssh_host_dsa_key_private
+ssh_host_dsa_key_public
+ssh_host_rsa_key_fingerprint
+
+
+ssh_host_rsa_key_private
+ssh_host_rsa_key_public
+status
+
+
+subnet_id
+virtualization_type
+
+
+
+
+ami_id 
+The instance's AMI (Amazon Machine Image) ID (string).
+architecture 
+The instance's architecture, which is always set to "x86_64" (string).
+auto_scaling_type 
+The instance's scaling type: null, timer, or load (string).
+availability_zone 
+The instance's Availability Zone (AZ), such as "us-west-2a" (string).
+created_at 
+The time that the instance was created, using the UTC "yyyy-mm-dddThh:mm:sshh:mm" format (string). For example, "2013-10-01T08:35:2200:00" corresponds to 8:35:22 on Oct. 10, 2013, with no time zone offset. For more information, see ISO 8601.
+ebs_optimized 
+Whether the instance is EBS-optimized (Boolean).
+ec2_instance_id 
+The EC2 instance ID (string).
+elastic_ip 
+The Elastic IP address; set to "null" if the instance does not have an Elastic IP address (string).
+hostname 
+The host name, such as "demo1" (string).
+instance_id 
+The instance ID, which is an AWS OpsWorks Stacks-generated GUID that uniquely identifies the instance (string).
+instance_type 
+The instance type, such as "c1.medium" (string).
+layer_ids 
+A list of the instance's layers, identified by their unique IDs; for example, 307ut64c-c7e4-40cc-52f0-67d5k1f9992c.
+os 
+The instance's operating system (string). Valid values include:
+ "Amazon Linux 2"
+ "Amazon Linux 2018.03"
+ "Amazon Linux 2017.09"
+ "Amazon Linux 2017.03"
+ "Amazon Linux 2016.09"
+ "Amazon Linux 2015.03"
+ "Amazon Linux 2015.09"
+ "Amazon Linux 2016.03"
+ "Custom"
+ "Microsoft Windows Server 2012 R2 Base"
+ "Microsoft Windows Server 2012 R2 with SQL Server Express"
+ "Microsoft Windows Server 2012 R2 with SQL Server Standard"
+ "Microsoft Windows Server 2012 R2 with SQL Server Web"
+ "CentOS 7"
+ "Red Hat Enterprise Linux 7"
+ "Ubuntu 12.04 LTS"
+ "Ubuntu 14.04 LTS"
+ "Ubuntu 16.04 LTS"
+ "Ubuntu 18.04 LTS"
+private_dns 
+The private DNS name (string).
+private_ip 
+The private IP address (string).
+public_dns 
+The public DNS name (string).
+public_ip 
+The public IP address (string).
+root_device_type 
+The root device type (string). Valid values include:
+ "ebs
+ "instance-store"
+root_device_volume_id 
+The root device's volume ID (string).
+self 
+true if this data bag item contains information about the instance that the recipe is being executed on; otherwise, false (Boolean). This value is available only to recipes, not through the AWS OpsWorks Stacks API.
+ssh_host_dsa_key_fingerprint 
+A shorter sequence of bytes that identifies the longer DSA public key (string).
+ssh_host_dsa_key_private 
+The DSA-generated private key for SSH authentication with the instance (string).
+ssh_host_dsa_key_public 
+The DSA-generated public key for SSH authentication with the instance (string).
+ssh_host_rsa_key_fingerprint 
+A shorter sequence of bytes that identifies the longer RSA public key (string).
+ssh_host_rsa_key_private 
+The RSA-generated private key for SSH authentication with the instance (string).
+ssh_host_rsa_key_public 
+The RSA-generated public key for SSH authentication with the instance (string).
+status 
+The instance's status (string). Valid values include:
+ "requested"
+ "booting"
+ "running_setup"
+ "online"
+ "setup_failed"
+ "start_failed"
+ "terminating"
+ "terminated"
+ "stopped"
+ "connection_lost"
+subnet_id 
+The instance's subnet ID (string).
+virtualization_type 
+The instance's virtualization type (string).

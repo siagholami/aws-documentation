@@ -1,0 +1,34 @@
+Receiving and deleting messages (console)
+After you send messages to a queue, you can receive and delete them. When you request messages from a queue, you can't specify which messages to retrieve. Instead, you specify the maximum number of messages (up to 10) that you want to retrieve.
+Note
+Because Amazon SQS is a distributed system, a queue with very few messages might display an empty response to a receive request. In this case, rerun the request to get your message. Depending on your application's needs, you might have to use short or long polling to receive messages.
+Amazon SQS doesn't automatically delete a message after retrieving it for you, in case you don't successfully receive the message (for example, if the consumers fail or you lose connectivity). To delete a message, you must send a separate request which acknowledges that you've successfully received and processed the message. Note that you must receive a message before you can delete it. 
+To receive and delete a message (console)
+
+
+Open the Amazon SQS console at https://console.aws.amazon.com/sqs/.
+
+
+In the navigation pane, choose Queues.
+
+
+On the Queues page, choose a queue.
+
+
+From Actions, choose Send and receive messages.
+
+
+
+The console displays the Send and receive messages page.
+
+Choose Poll for messages.
+
+Amazon SQS begins to poll for messages in the queue. The progress bar on the right side of the Receive messages section displays the duration of polling.
+The Messages section displays a list of the received messages. For each message, the list displays the message ID, Sent date, Size, and Receive count.
+
+
+To delete messages, choose the messages that you want to delete and choose Delete.
+
+
+In the Delete Messages dialog box, choose Delete.
+

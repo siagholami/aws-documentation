@@ -1,0 +1,29 @@
+AWS::Transfer::User HomeDirectoryMapEntry
+Represents an object that contains entries and targets for HomeDirectoryMappings.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Entry](#cfn-transfer-user-homedirectorymapentry-entry)" : String,
+  "[Target](#cfn-transfer-user-homedirectorymapentry-target)" : String
+}
+YAML
+[Entry](#cfn-transfer-user-homedirectorymapentry-entry): String
+  [Target](#cfn-transfer-user-homedirectorymapentry-target): String
+Properties
+Entry 
+Represents an entry and a target for HomeDirectoryMappings.
+Required: Yes
+Type: String
+Maximum: 1024
+Pattern: ^/.*
+Update requires: No interruption
+Target 
+Represents the map target that is used in a HomeDirectorymapEntry.
+Required: Yes
+Type: String
+Maximum: 1024
+Pattern: ^/.*
+Update requires: No interruption
+See also
+HomeDirectoryMapEntry in the AWS Transfer Family User Guide.

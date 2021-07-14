@@ -1,0 +1,4 @@
+Africa
+You can use the following top-level domains (TLDs) for Africa to register domains with Amazon Route 53.
+.ac (Ascension Island), .co.za (South Africa), .sh (Saint Helena)
+Return to index

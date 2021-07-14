@@ -1,0 +1,634 @@
+Actions, resources, and condition keys for AWS OpsWorks
+AWS OpsWorks (service prefix: opsworks) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by AWS OpsWorks
+ Resource types defined by AWS OpsWorks
+ Condition keys for AWS OpsWorks
+Actions defined by AWS OpsWorks
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AssignInstance 
+Assign a registered instance to a layer
+Write
+ stack 
+
+
+
+
+ AssignVolume 
+Assigns one of the stack's registered Amazon EBS volumes to a specified instance
+Write
+ stack 
+
+
+
+
+ AssociateElasticIp 
+Associates one of the stack's registered Elastic IP addresses with a specified instance
+Write
+ stack 
+
+
+
+
+ AttachElasticLoadBalancer 
+Attaches an Elastic Load Balancing load balancer to a specified layer
+Write
+ stack 
+
+
+
+
+ CloneStack 
+Creates a clone of a specified stack
+Write
+ stack 
+
+
+
+
+ CreateApp 
+Creates an app for a specified stack
+Write
+ stack 
+
+
+
+
+ CreateDeployment 
+Runs deployment or stack commands
+Write
+ stack 
+
+
+
+
+ CreateInstance 
+Creates an instance in a specified stack
+Write
+ stack 
+
+
+
+
+ CreateLayer 
+Creates a layer
+Write
+ stack 
+
+
+
+
+ CreateStack 
+Creates a new stack
+Write
+
+
+
+
+
+ CreateUserProfile 
+Creates a new user profile
+Write
+
+
+
+
+
+ DeleteApp 
+Deletes a specified app
+Write
+ stack 
+
+
+
+
+ DeleteInstance 
+Deletes a specified instance, which terminates the associated Amazon EC2 instance
+Write
+ stack 
+
+
+
+
+ DeleteLayer 
+Deletes a specified layer
+Write
+ stack 
+
+
+
+
+ DeleteStack 
+Deletes a specified stack
+Write
+ stack 
+
+
+
+
+ DeleteUserProfile 
+Deletes a user profile
+Write
+
+
+
+
+
+ DeregisterEcsCluster 
+Deletes a user profile
+Write
+ stack 
+
+
+
+
+ DeregisterElasticIp 
+Deregisters a specified Elastic IP address
+Write
+ stack 
+
+
+
+
+ DeregisterInstance 
+Deregister a registered Amazon EC2 or on-premises instance
+Write
+ stack 
+
+
+
+
+ DeregisterRdsDbInstance 
+Deregisters an Amazon RDS instance
+Write
+ stack 
+
+
+
+
+ DeregisterVolume 
+Deregisters an Amazon EBS volume
+Write
+ stack 
+
+
+
+
+ DescribeAgentVersions 
+Describes the available AWS OpsWorks agent versions
+List
+ stack 
+
+
+
+
+ DescribeApps 
+Requests a description of a specified set of apps
+List
+ stack 
+
+
+
+
+ DescribeCommands 
+Describes the results of specified commands
+List
+ stack 
+
+
+
+
+ DescribeDeployments 
+Requests a description of a specified set of deployments
+List
+ stack 
+
+
+
+
+ DescribeEcsClusters 
+Describes Amazon ECS clusters that are registered with a stack
+List
+ stack 
+
+
+
+
+ DescribeElasticIps 
+Describes Elastic IP addresses
+List
+ stack 
+
+
+
+
+ DescribeElasticLoadBalancers 
+Describes a stack's Elastic Load Balancing instances
+List
+ stack 
+
+
+
+
+ DescribeInstances 
+Requests a description of a set of instances
+List
+ stack 
+
+
+
+
+ DescribeLayers 
+Requests a description of one or more layers in a specified stack
+List
+ stack 
+
+
+
+
+ DescribeLoadBasedAutoScaling 
+Describes load-based auto scaling configurations for specified layers
+List
+ stack 
+
+
+
+
+ DescribeMyUserProfile 
+Describes a user's SSH information
+List
+
+
+
+
+
+ DescribePermissions 
+Describes the permissions for a specified stack
+List
+ stack 
+
+
+
+
+ DescribeRaidArrays 
+Describe an instance's RAID arrays
+List
+ stack 
+
+
+
+
+ DescribeRdsDbInstances 
+Describes Amazon RDS instances
+List
+ stack 
+
+
+
+
+ DescribeServiceErrors 
+Describes AWS OpsWorks service errors
+List
+ stack 
+
+
+
+
+ DescribeStackProvisioningParameters 
+Requests a description of a stack's provisioning parameters
+List
+ stack 
+
+
+
+
+ DescribeStackSummary 
+Describes the number of layers and apps in a specified stack, and the number of instances in each state, such as running_setup or online
+List
+ stack 
+
+
+
+
+ DescribeStacks 
+Requests a description of one or more stacks
+List
+ stack 
+
+
+
+
+ DescribeTimeBasedAutoScaling 
+Describes time-based auto scaling configurations for specified instances
+List
+ stack 
+
+
+
+
+ DescribeUserProfiles 
+Describe specified users
+List
+
+
+
+
+
+ DescribeVolumes 
+Describes an instance's Amazon EBS volumes
+List
+ stack 
+
+
+
+
+ DetachElasticLoadBalancer 
+Detaches a specified Elastic Load Balancing instance from its layer
+Write
+ stack 
+
+
+
+
+ DisassociateElasticIp 
+Disassociates an Elastic IP address from its instance
+Write
+ stack 
+
+
+
+
+ GetHostnameSuggestion 
+Gets a generated host name for the specified layer, based on the current host name theme
+Read
+ stack 
+
+
+
+
+ GrantAccess 
+Grants RDP access to a Windows instance for a specified time period
+Write
+ stack 
+
+
+
+
+ ListTags 
+Returns a list of tags that are applied to the specified stack or layer
+List
+ stack 
+
+
+
+
+ RebootInstance 
+Reboots a specified instance
+Write
+ stack 
+
+
+
+
+ RegisterEcsCluster 
+Registers a specified Amazon ECS cluster with a stack
+Write
+ stack 
+
+
+
+
+ RegisterElasticIp 
+Registers an Elastic IP address with a specified stack
+Write
+ stack 
+
+
+
+
+ RegisterInstance 
+Registers instances with a specified stack that were created outside of AWS OpsWorks
+Write
+ stack 
+
+
+
+
+ RegisterRdsDbInstance 
+Registers an Amazon RDS instance with a stack
+Write
+ stack 
+
+
+
+
+ RegisterVolume 
+Registers an Amazon EBS volume with a specified stack
+Write
+ stack 
+
+
+
+
+ SetLoadBasedAutoScaling 
+Specify the load-based auto scaling configuration for a specified layer
+Write
+ stack 
+
+
+
+
+ SetPermission 
+Specifies a user's permissions
+Permissions management
+ stack 
+
+
+
+
+ SetTimeBasedAutoScaling 
+Specify the time-based auto scaling configuration for a specified instance
+Write
+ stack 
+
+
+
+
+ StartInstance 
+Starts a specified instance
+Write
+ stack 
+
+
+
+
+ StartStack 
+Starts a stack's instances
+Write
+ stack 
+
+
+
+
+ StopInstance 
+Stops a specified instance
+Write
+ stack 
+
+
+
+
+ StopStack 
+Stops a specified stack
+Write
+ stack 
+
+
+
+
+ TagResource 
+Apply tags to a specified stack or layer
+Write
+ stack 
+
+
+
+
+ UnassignInstance 
+Unassigns a registered instance from all of it's layers
+Write
+ stack 
+
+
+
+
+ UnassignVolume 
+Unassigns an assigned Amazon EBS volume
+Write
+ stack 
+
+
+
+
+ UntagResource 
+Removes tags from a specified stack or layer
+Write
+ stack 
+
+
+
+
+ UpdateApp 
+Updates a specified app
+Write
+ stack 
+
+
+
+
+ UpdateElasticIp 
+Updates a registered Elastic IP address's name
+Write
+ stack 
+
+
+
+
+ UpdateInstance 
+Updates a specified instance
+Write
+ stack 
+
+
+
+
+ UpdateLayer 
+Updates a specified layer
+Write
+ stack 
+
+
+
+
+ UpdateMyUserProfile 
+Updates a user's SSH public key
+Write
+
+
+
+
+
+ UpdateRdsDbInstance 
+Updates an Amazon RDS instance
+Write
+ stack 
+
+
+
+
+ UpdateStack 
+Updates a specified stack
+Write
+ stack 
+
+
+
+
+ UpdateUserProfile 
+Updates a specified user profile
+Permissions management
+
+
+
+
+
+ UpdateVolume 
+Updates an Amazon EBS volume's name or mount point
+Write
+ stack 
+
+
+
+
+
+Resource types defined by AWS OpsWorks
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ stack 
+arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/
+
+
+
+
+Condition keys for AWS OpsWorks
+OpsWorks has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

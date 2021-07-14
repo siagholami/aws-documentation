@@ -1,0 +1,229 @@
+AWS RoboMaker Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS RoboMaker?
+ROS 2 Dashing (Beta)
+How It Works
+Robotics Development with AWS RoboMaker
+Create a ROS Development Environment
+Create a Robot Application
+Develop Simulation and Testing Data
+Fleet Management and Deployment
+Getting Started with AWS RoboMaker
+Important Licensing Information
+Step 1: Create an AWS Account and an Administrator
+Step 2: Run the Hello World Sample Application
+Step 3: Configure Environment and Build Applications
+Step 4: Run Simulation
+Step 5: Deploy Robot Application
+Step 6: Clean up
+Additional Sample Robots
+Navigation and Person Recognition
+Voice Commands
+Robot Monitoring
+Object Following using Reinforcement Learning
+Self-Driving using Reinforcement Learning
+
+
+Sample Applications
+Launching a Sample Application
+Configuring Permissions
+Application Versioning
+Developing Applications
+Creating a New Robotic Application
+Building and Bundling Robotic Applications with Colcon
+Creating a Simulation Job
+AWS RoboMaker Cloud Extensions
+Developing with AWS Cloud9
+Creating a Development Environment
+Working with the development environment
+Manually Switching Gazebo Versions
+Environment Settings
+Creating a Workflow
+Menu Commands Reference
+
+
+Deleting an Environment
+
+
+Working with Robot Applications
+Creating a Robot Application
+Creating a Robot Application Version
+Viewing a Robot Application
+Updating a Robot Application
+Deleting a Robot Application
+Deleting a Robot Application Version
+Working with Simulation Applications
+Creating a Simulation Application
+Creating a Simulation Application Version
+Viewing a Simulation Application
+Updating a Simulation Application
+Deleting a Simulation Application
+Deleting a Simulation Application Version
+Running Simulation Jobs
+Configuring an AWS RoboMaker Simulation Job to Access Resources in an Amazon VPC
+Connecting to a Simulation Job
+Accessing Simulation Job Data
+Root Access and System Capabilities
+Environment Variables Created by AWS RoboMaker
+Managing Tags in a Simulation Job
+Using ROS Bags for Play Back
+Managing Simulation Jobs
+Creating a Simulation Job
+Viewing a Simulation Job
+Cancelling a Simulation Job
+Cloning a Simulation Job
+Restarting a Simulation Job
+
+
+Managing Simulation Job Batches
+Starting a Simulation Job Batch
+Viewing a Simulation Job Batch
+Cancelling a Simulation Job Batch
+Cloning a Simulation Job Batch
+
+
+Simulation Tools
+Gazebo
+rqt
+rviz
+Terminal
+
+
+Fleet Management
+Deploying a Robot Application
+Managing Robots
+Creating a Robot
+Deleting a Robot
+
+
+Managing Fleets
+Creating a Fleet
+Registering and Deregistering Robots
+Deleting a Fleet
+
+
+Managing Deployments
+Conditional Deployment
+Creating a deployment job
+Viewing a Deployment Job
+
+
+Security
+Authentication and Access Control for AWS RoboMaker
+What is Authentication?
+What is Access Control?
+What are Policies?
+Using Service-Linked Roles for AWS RoboMaker
+Getting Started with IAM
+
+
+Security Compliance
+Tagging Your AWS RoboMaker Resources
+Using Tags with IAM Policies
+Monitoring AWS RoboMaker with Amazon CloudWatch
+Troubleshooting
+Troubleshooting Simulation Jobs
+Troubleshooting Development Environments
+Troubleshooting Deployments
+Troubleshooting Colcon Build and Bundle
+Logging AWS RoboMaker API Calls with AWS CloudTrail
+API Reference
+Actions
+BatchDescribeSimulationJob
+CancelDeploymentJob
+CancelSimulationJob
+CancelSimulationJobBatch
+CreateDeploymentJob
+CreateFleet
+CreateRobot
+CreateRobotApplication
+CreateRobotApplicationVersion
+CreateSimulationApplication
+CreateSimulationApplicationVersion
+CreateSimulationJob
+DeleteFleet
+DeleteRobot
+DeleteRobotApplication
+DeleteSimulationApplication
+DeregisterRobot
+DescribeDeploymentJob
+DescribeFleet
+DescribeRobot
+DescribeRobotApplication
+DescribeSimulationApplication
+DescribeSimulationJob
+DescribeSimulationJobBatch
+ListDeploymentJobs
+ListFleets
+ListRobotApplications
+ListRobots
+ListSimulationApplications
+ListSimulationJobBatches
+ListSimulationJobs
+ListTagsForResource
+RegisterRobot
+RestartSimulationJob
+StartSimulationJobBatch
+SyncDeploymentJob
+TagResource
+UntagResource
+UpdateRobotApplication
+UpdateSimulationApplication
+
+
+Data Types
+BatchPolicy
+DataSource
+DataSourceConfig
+DeploymentApplicationConfig
+DeploymentConfig
+DeploymentJob
+DeploymentLaunchConfig
+FailedCreateSimulationJobRequest
+Filter
+Fleet
+LaunchConfig
+LoggingConfig
+NetworkInterface
+OutputLocation
+PortForwardingConfig
+PortMapping
+ProgressDetail
+RenderingEngine
+Robot
+RobotApplicationConfig
+RobotApplicationSummary
+RobotDeployment
+RobotSoftwareSuite
+S3KeyOutput
+S3Object
+SimulationApplicationConfig
+SimulationApplicationSummary
+SimulationJob
+SimulationJobBatchSummary
+SimulationJobRequest
+SimulationJobSummary
+SimulationSoftwareSuite
+Source
+SourceConfig
+VPCConfig
+VPCConfigResponse
+
+
+Common Errors
+Common Parameters
+Limits and Supported Regions
+Document History for AWS RoboMaker
+AWS Glossary

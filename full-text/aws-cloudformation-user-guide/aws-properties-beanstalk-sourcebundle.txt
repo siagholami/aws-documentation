@@ -1,0 +1,25 @@
+AWS::ElasticBeanstalk::ApplicationVersion SourceBundle
+The SourceBundle property is an embedded property of the AWS::ElasticBeanstalk::ApplicationVersion resource. It specifies the Amazon S3 location of the source bundle for an AWS Elastic Beanstalk application version.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3Bucket](#cfn-beanstalk-sourcebundle-s3bucket)" : String,
+  "[S3Key](#cfn-beanstalk-sourcebundle-s3key)" : String
+}
+YAML
+[S3Bucket](#cfn-beanstalk-sourcebundle-s3bucket): String
+  [S3Key](#cfn-beanstalk-sourcebundle-s3key): String
+Properties
+S3Bucket 
+The Amazon S3 bucket where the data is located.
+Required: Yes
+Type: String
+Maximum: 255
+Update requires: No interruption
+S3Key 
+The Amazon S3 key where the data is located.
+Required: Yes
+Type: String
+Maximum: 1024
+Update requires: No interruption

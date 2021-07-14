@@ -1,0 +1,34 @@
+Importing data into your PostgreSQL database in Amazon Lightsail
+Last updated: March 15, 2019 
+You can import a database backup file into your PostgreSQL managed database in Amazon Lightsail using pgAdmin.
+Note
+To learn how to connect pgAdmin to your database, see Connecting to your PostgreSQL database in Amazon Lightsail. For more information about creating a PostgreSQL database backup that you can import to another database, see Backup Dialog in the pgAdmin documentation.
+To import a backup file into your database
+
+
+Open pgAdmin.
+
+
+In the list of server connections, double-click your PostgreSQL managed database in Amazon Lightsail to connect to it.
+
+
+Expand the Databases node
+
+
+Right-click the database in which you would like to import data from a database backup file, then choose Restore.
+
+
+
+In the Restore form, complete the following fields:
+    Format — Choose the format of your backup file.
+    Filename — Choose the ellipsis icon, then locate and choose the database backup file on your local drive. After the file is highlighted, choose Select to go back to the Restore prompt.
+Note
+Choose the Format drop-down menu, and select All files to view all file formats on your local drive. Your backup file might be saved as a file type that is different than what is selected by default (sql).
+
+    Number of jobs and Role name — Leave these fields blank.
+
+
+Choose Restore to start the import.
+
+
+Your import may take a few minutes or more depending on the size of the database backup file. After the import is complete, you should see a message similar to the following:

@@ -1,0 +1,151 @@
+AWS CodeCommit User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS CodeCommit?
+Setting up for AWS CodeCommit
+Setup for HTTPS users using Git credentials
+Setup steps for HTTPS connections to AWS CodeCommit with git-remote-codecommit
+Set up connections from development tools using Git credentials
+Integrate AWS Cloud9 with AWS CodeCommit
+Integrate Visual Studio with AWS CodeCommit
+Integrate Eclipse with AWS CodeCommit
+
+
+Setup for SSH users not using the AWS CLI
+Setup steps for SSH connections to AWS CodeCommit repositories on Linux, macOS, or Unix
+Setup steps for SSH connections to AWS CodeCommit repositories on Windows
+Setup steps for HTTPS connections to AWS CodeCommit repositories on Linux, macOS, or Unix with the AWS CLI credential helper
+Setup steps for HTTPS connections to AWS CodeCommit repositories on Windows with the AWS CLI credential helper
+Getting started
+Getting started with AWS CodeCommit
+Getting started with Git and AWS CodeCommit
+Product and service integrations with AWS CodeCommit
+Working with repositories in AWS CodeCommit
+Create an AWS CodeCommit repository
+Connect to an AWS CodeCommit repository
+Share a AWS CodeCommit repository
+Configuring notifications for events in an AWS CodeCommit repository
+Create a notification rule
+Change or disable notifications
+Delete notifications
+
+
+Tagging repositories in AWS CodeCommit
+Add a tag to a repository
+View tags for a repository
+Edit tags for a repository
+Remove a tag from a repository
+
+
+Manage triggers for an AWS CodeCommit repository
+Example: Create an AWS CodeCommit trigger for an Amazon SNS topic
+Example: Create an AWS CodeCommit trigger for an AWS Lambda function
+Example: Create a trigger in AWS CodeCommit for an existing AWS Lambda function
+Edit triggers for an AWS CodeCommit repository
+Test triggers for an AWS CodeCommit repository
+Delete triggers from an AWS CodeCommit repository
+
+
+Associate or disassociate an AWS CodeCommit repository with Amazon CodeGuru Reviewer
+View CodeCommit repository details
+Change AWS CodeCommit repository settings
+Synchronize changes between a local repo and an AWS CodeCommit repository
+Push commits to an additional Git repository
+Configure cross-account access to an AWS CodeCommit repository using roles
+Cross-account repository access: Actions for the administrator in AccountA
+Cross-account repository access: Actions for the administrator in AccountB
+Cross-account repository access: Actions for the repository user in AccountB
+
+
+Delete an AWS CodeCommit repository
+Working with files in AWS CodeCommit repositories
+Browse files in an AWS CodeCommit repository
+Create or add a file to an AWS CodeCommit repository
+Edit the contents of a file in an AWS CodeCommit repository
+Working with pull requests in AWS CodeCommit repositories
+Create a pull request
+Create an approval rule for a pull request
+View pull requests in an AWS CodeCommit repository
+Review a pull request
+Update a pull request
+Edit or delete an approval rule for a pull request
+Override approval rules on a pull request
+Merge a pull request in an AWS CodeCommit repository
+Resolve conflicts in a pull request in an AWS CodeCommit repository
+Close a pull request in an AWS CodeCommit repository
+Working with approval rule templates
+Create an approval rule template
+Associate an approval rule template with a repository
+Manage approval rule templates
+Disassociate an approval rule template
+Delete an approval rule template
+Working with commits in AWS CodeCommit repositories
+Create a commit in AWS CodeCommit
+View commit details in AWS CodeCommit
+Compare commits in AWS CodeCommit
+Comment on a commit in AWS CodeCommit
+Create a Git tag in AWS CodeCommit
+View Git tag details in AWS CodeCommit
+Delete a Git tag in AWS CodeCommit
+Working with branches in AWS CodeCommit repositories
+Create a branch in AWS CodeCommit
+Limit pushes and merges to branches in AWS CodeCommit
+View branch details in AWS CodeCommit
+Compare and merge branches in AWS CodeCommit
+Change branch settings in AWS CodeCommit
+Delete a branch in AWS CodeCommit
+Working with user preferences
+Migrate to AWS CodeCommit
+Migrate a Git repository to AWS CodeCommit
+Migrate local or unversioned content to AWS CodeCommit
+Migrate a repository incrementally
+Security in AWS CodeCommit
+Data protection in AWS CodeCommit
+AWS Key Management Service and encryption for AWS CodeCommit repositories
+Connecting to AWS CodeCommit repositories with rotating credentials
+
+
+Identity and Access Management for AWS CodeCommit
+Authentication and access control for AWS CodeCommit
+Using identity-based policies (IAM Policies) for CodeCommit
+CodeCommit permissions reference
+
+
+How AWS CodeCommit works with IAM
+
+
+Resilience in AWS CodeCommit
+Infrastructure security in AWS CodeCommit
+Monitoring AWS CodeCommit
+Monitoring CodeCommit events in Amazon EventBridge and Amazon CloudWatch Events
+Logging AWS CodeCommit API calls with AWS CloudTrail
+Creating CodeCommit resources with AWS CloudFormation
+Troubleshooting AWS CodeCommit
+Troubleshooting Git credentials and HTTPS connections to AWS CodeCommit
+Troubleshooting git-remote-codecommit and AWS CodeCommit
+Troubleshooting SSH connections to AWS CodeCommit
+Troubleshooting the credential helper and HTTPS connections to AWS CodeCommit
+Troubleshooting Git clients and AWS CodeCommit
+Troubleshooting access errors and AWS CodeCommit
+Troubleshooting configuration errors and AWS CodeCommit
+Troubleshooting console errors and AWS CodeCommit
+Troubleshooting triggers and AWS CodeCommit
+AWS CodeCommit reference
+Regions and Git connection endpoints for AWS CodeCommit
+Using AWS CodeCommit with interface VPC endpoints
+Quotas in AWS CodeCommit
+AWS CodeCommit command line reference
+Basic Git commands
+AWS CodeCommit User Guide document history
+AWS glossary

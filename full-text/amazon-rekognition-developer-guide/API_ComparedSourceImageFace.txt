@@ -1,0 +1,18 @@
+ComparedSourceImageFace
+Type that describes the face Amazon Rekognition chose to compare with the faces in the target. This contains a bounding box for the selected face and confidence level that the bounding box contains a face. Note that Amazon Rekognition selects the largest face in the source image for this comparison. 
+Contents
+BoundingBox 
+Bounding box of the face.
+Type: BoundingBox object
+Required: No
+Confidence 
+Confidence level that the selected bounding box contains a face.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 100.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

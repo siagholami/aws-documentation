@@ -1,0 +1,8 @@
+CloudFront resource type reference
+Resource types
+ AWS::CloudFront::CachePolicy
+ AWS::CloudFront::CloudFrontOriginAccessIdentity
+ AWS::CloudFront::Distribution
+ AWS::CloudFront::OriginRequestPolicy
+ AWS::CloudFront::RealtimeLogConfig
+ AWS::CloudFront::StreamingDistribution

@@ -1,0 +1,26 @@
+AWS::IoTEvents::DetectorModel DetectorModelDefinition
+Information that defines how a detector operates.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[InitialStateName](#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)" : String,
+  "[States](#cfn-iotevents-detectormodel-detectormodeldefinition-states)" : [ State, ... ]
+}
+YAML
+[InitialStateName](#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename): String
+  [States](#cfn-iotevents-detectormodel-detectormodeldefinition-states): 
+    - State
+Properties
+InitialStateName 
+The state that is entered at the creation of each detector (instance).
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption
+States 
+Information about the states of the detector.
+Required: No
+Type: List of State
+Update requires: No interruption

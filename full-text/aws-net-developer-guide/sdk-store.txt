@@ -1,0 +1,76 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Using the SDK Store (Windows only)
+(Be sure to review the important warnings and guidelines.)
+On Windows, the SDK Store is another place to create profiles and store encrypted credentials for your AWS SDK for .NET application. It's located in %USERPROFILE%\AppData\Local\AWSToolkit\RegisteredAccounts.json. You can use the SDK Store during development as an alternative to the shared AWS credentials file.
+General information
+The SDK Store provides the following benefits:
+ The credentials in the SDK Store are encrypted, and the SDK Store resides in the user's home directory. This limits the risk of accidentally exposing your credentials.
+ The SDK Store also provides credentials to the AWS Tools for Windows PowerShell and the AWS Toolkit for Visual Studio.
+SDK Store profiles are specific to a particular user on a particular host. You can't copy them to other hosts or other users. This means that you can't reuse SDK Store profiles that are on your development machine for other hosts or developer machines. It also means that you can't use SDK Store profiles in production applications.
+You can manage the profiles in the SDK Store in the following ways:
+ Use the graphical user interface (GUI) in the AWS Toolkit for Visual Studio.
+ Use the Amazon.Runtime.CredentialManagement namespace of the AWS SDK for .NET API, as shown later in this topic.
+ Use commands from the AWS Tools for Windows PowerShell; for example, Set-AWSCredential and Remove-AWSCredentialProfile.
+Examples of profile management
+The following examples show you how to programmatically create and update a profile in the SDK Store.
+Create a profile programmatically
+This example shows you how to create a profile and save it to the SDK Store programmatically. It uses the following classes of the Amazon.Runtime.CredentialManagement namespace: CredentialProfileOptions, CredentialProfile, and NetSDKCredentialsFile.
+```
+using Amazon.Runtime.CredentialManagement;
+...
+// For illustrative purposes only--do not include credentials in your code.
+WriteProfile("my_new_profile", "AKIAIOSFODNN7EXAMPLE", "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY");
+...
+void WriteProfile(string profileName, string keyId, string secret)
+{
+    Console.WriteLine($"Create the [{profileName}] profile...");
+    var options = new CredentialProfileOptions
+    {
+        AccessKey = keyId,
+        SecretKey = secret
+    };
+    var profile = new CredentialProfile(profileName, options);
+    var netSdkStore = new NetSDKCredentialsFile();
+    netSdkStore.RegisterProfile(profile);
+}
+```
+Warning
+Code such as this generally shouldn't be in your application. If it's included in your application, take appropriate precautions to ensure that plaintext keys can't possibly be seen in the code, over the network, or even in computer memory.
+The following is the profile that's created by this example.
+"[generated GUID]" : {
+    "AWSAccessKey" : "01000000D08...[etc., encrypted access key ID]",
+    "AWSSecretKey" : "01000000D08...[etc., encrypted secret access key]",
+    "ProfileType"  : "AWS",
+    "DisplayName"  : "my_new_profile",
+}
+Update an existing profile programmatically
+This example shows you how to programmatically update the profile that was created earlier. It uses the following classes of the Amazon.Runtime.CredentialManagement namespace: CredentialProfile and NetSDKCredentialsFile. It also uses the RegionEndpoint class of the Amazon namespace.
+```
+using Amazon.Runtime.CredentialManagement;
+...
+AddRegion("my_new_profile", RegionEndpoint.USWest2);
+...
+void AddRegion(string profileName, RegionEndpoint region)
+{
+    var netSdkStore = new NetSDKCredentialsFile();
+    CredentialProfile profile;
+    if (netSdkStore.TryGetProfile(profileName, out profile))
+    {
+        profile.Region = region;
+        netSdkStore.RegisterProfile(profile);
+    }
+}
+```
+The following is the updated profile.
+"[generated GUID]" : {
+    "AWSAccessKey" : "01000000D08...[etc., encrypted access key ID]",
+    "AWSSecretKey" : "01000000D08...[etc., encrypted secret access key]",
+    "ProfileType"  : "AWS",
+    "DisplayName"  : "my_new_profile",
+    "Region"       : "us-west-2"
+}
+Note
+You can also set the AWS Region in other locations and by using other methods. For more information, see Configure the AWS Region.

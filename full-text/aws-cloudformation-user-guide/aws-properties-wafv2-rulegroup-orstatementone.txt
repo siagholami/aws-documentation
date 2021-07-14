@@ -1,0 +1,17 @@
+AWS::WAFv2::RuleGroup OrStatementOne
+Logical OR statement.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Statements](#cfn-wafv2-rulegroup-orstatementone-statements)" : [ StatementTwo, ... ]
+}
+YAML
+[Statements](#cfn-wafv2-rulegroup-orstatementone-statements): 
+    - StatementTwo
+Properties
+Statements 
+Logical OR statements.
+Required: Yes
+Type: List of StatementTwo
+Update requires: No interruption

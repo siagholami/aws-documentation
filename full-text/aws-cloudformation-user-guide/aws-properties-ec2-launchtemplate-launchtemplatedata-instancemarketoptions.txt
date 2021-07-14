@@ -1,0 +1,29 @@
+AWS::EC2::LaunchTemplate InstanceMarketOptions
+Specifies the market (purchasing) option for an instance.
+InstanceMarketOptions is a property of the AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype)" : String,
+  "[SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions)" : SpotOptions
+}
+YAML
+[MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype): String
+  [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions): 
+    SpotOptions
+Properties
+MarketType 
+The market type.
+Required: Conditional
+Type: String
+Allowed values: spot
+Update requires: No interruption
+SpotOptions 
+The options for Spot Instances.
+Required: No
+Type: SpotOptions
+Update requires: No interruption
+See also
+
+ LaunchTemplateInstanceMarketOptionsRequest in the Amazon Elastic Compute Cloud API Reference 

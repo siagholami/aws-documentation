@@ -1,0 +1,24 @@
+AWS DeepLens Project Workflow
+The following diagram illustrates the basic workflow of a deployed AWS DeepLens project.
+
+
+
+When turned on, the AWS DeepLens captures a video stream.
+
+
+Your AWS DeepLens produces two output streams:
+    Device stream—The video stream passed through without processing.
+    Project stream—The results of the model's processing video frames
+
+
+The Inference Lambda function receives unprocessed video frames.
+
+
+The Inference Lambda function passes the unprocessed frames to the project's deep learning model, where they are processed.
+
+
+The Inference Lambda function receives the processed frames from the model and passes the processed frames on in the project stream.
+
+
+
+For more information, see Viewing AWS DeepLens Output Streams.

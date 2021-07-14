@@ -1,0 +1,24 @@
+AWS::SES::ConfigurationSetEventDestination KinesisFirehoseDestination
+Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Data Firehose event destination.
+Event destinations, such as Amazon Kinesis Data Firehose, are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the Amazon SES Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeliveryStreamARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)" : String,
+  "[IAMRoleARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)" : String
+}
+YAML
+[DeliveryStreamARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn): String
+  [IAMRoleARN](#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn): String
+Properties
+DeliveryStreamARN 
+The ARN of the Amazon Kinesis Data Firehose stream that email sending events should be published to.
+Required: Yes
+Type: String
+Update requires: No interruption
+IAMRoleARN 
+The ARN of the IAM role that Amazon SES uses to publish email sending events to the Amazon Kinesis Data Firehose stream.
+Required: Yes
+Type: String
+Update requires: No interruption

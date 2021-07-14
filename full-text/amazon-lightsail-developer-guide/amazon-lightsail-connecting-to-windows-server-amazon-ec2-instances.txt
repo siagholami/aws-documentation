@@ -1,0 +1,97 @@
+Connecting to a Windows Server instance in Amazon EC2 created from an Amazon Lightsail snapshot
+Last updated: November 28, 2018 
+After your new Windows Server instance is created in Amazon Elastic Compute Cloud (Amazon EC2), you can connect to it using Remote Desktop Protocol (RDP). This is similar to how you connected to the source Amazon Lightsail instance. Connect to your EC2 instance using the default Lightsail key pair for the source instance’s AWS Region. This guide shows you how to connect to your Windows Server instance using Microsoft Remote Desktop Connection.
+Note
+For more information about connecting to a Linux or Unix instance, see Connecting to a Linux or Unix instance in Amazon EC2 created from an Amazon Lightsail snapshot.
+Contents
+ Get the key for your instance
+ Get the public DNS address for your instance
+ Get the password for your Windows Server instance
+ Configure Remote Desktop Connection to connect to your Windows Server instance
+ Next steps
+Get the key for your instance
+Your Windows Server instance in Amazon EC2 uses the default Lightsail key pair for the source instance’s Region to retrieve the default administrator password.
+Download the default private key from the SSH keys tab on the Lightsail account page. For more information about the default Lightsail SSH keys, see SSH and connecting to your Lightsail instance.
+Note
+After you connect to your EC2 instance, we recommend changing the administrator password for your Windows Server instance in Amazon EC2. It removes the association between the default Lightsail key pair and your Windows Server instance in Amazon EC2. For more information, see Securing a Windows Server instance in Amazon EC2 created from an Amazon Lightsail snapshot.
+Get the public DNS address for your instance
+Get the public DNS address for your Amazon EC2 instance, so that you can use it when configuring an RDP client, such as Microsoft Remote Desktop Connection, to connect to your instance.
+To get the public DNS address for your instance
+
+
+Sign in to the Amazon EC2 console.
+
+
+Choose Instances from the left navigation pane. 
+
+
+Choose the running Windows Server instance that you want to connect to.
+
+
+In the lower pane, locate the Public DNS address for your instance.
+
+
+This is the address that you use when configuring an RDP client to connect to your instance. Continue to the Get the password for your Windows Server instance section of this guide to learn how to get the default administrator password for your Windows Server instance in Amazon EC2.
+
+Get the password for your Windows Server instance
+Get the password for your Windows Server instance from the Amazon EC2 console. You need this password to sign in to your Windows Server instance when connecting to it through RDP.
+To get the password for your Windows Server instance
+
+
+Sign in to the Amazon EC2 console.
+
+
+From the left navigation pane, choose Instances.
+
+
+Choose the Windows Server instance that you want to connect to.
+
+
+Choose Actions, then choose Get Windows Password.
+
+
+
+At the prompt, choose Browse and open the default private key file that you downloaded from Lightsail earlier in this guide.
+
+
+Choose Decrypt Password.
+
+
+
+The password is displayed on the screen, as well as the public DNS and user name. Copy the password to your clipboard so that you can use it in the following Configure Remote Desktop Connection to connect to your Windows Server instance section of this guide. Highlight the password, and press CtrlC if you’re using Windows, or CmdC if you’re using macOS.
+
+Continue to the Configure Remote Desktop Connection to connect to your Windows Server instance section of this guide to learn how to configure Remote Desktop Connection to connect to your Windows Server instance in Amazon EC2.
+Configure Remote Desktop Connection to connect to your Windows Server instance
+Remote Desktop Connection is an RDP client that comes pre-installed on most Windows operating systems. Use it to graphically connect to your Windows Server instance in Amazon EC2.
+To configure Remote Desktop Connection to connect to your Windows Server instance
+
+Open Remote Desktop Connection.
+
+For example, choose the Windows Start menu, then search for Remote Desktop Connection.
+
+
+In the Computer text box, enter the public DNS address for your Windows Server instance in Amazon EC2 obtained earlier in this guide.
+
+
+Choose Show Options to view additional options.
+
+
+Enter Administrator into the User name text box.
+
+
+
+Choose Connect to connect to your Windows Server instance.
+
+
+At the Windows Security prompt, enter the password for your Windows Server instance into the Password text box, then choose OK.
+
+
+
+At the Remote Desktop Connection prompt, chose Yes to connect.
+
+
+
+You should see a screen similar to the following if you've successfully connected to your instance:
+
+Next steps
+We recommend changing the administrator password for your Windows Server instance in Amazon EC2. It removes the association between the default Lightsail key pair and your Windows Server instance in Amazon EC2. For more information, see Securing a Windows Server instance in Amazon EC2 created from an Amazon Lightsail snapshot.

@@ -1,0 +1,14 @@
+Activating Frameworks
+The following are the deep learning frameworks installed on the Deep Learning AMI with Conda. Click on a framework to learn how to activate it.
+Topics
+ Apache MXNet
+ Caffe2
+ Chainer
+ CNTK
+ Keras
+ PyTorch
+ TensorFlow
+ TensorFlow 2
+ TensorFlow with Horovod
+ TensorFlow 2 with Horovod
+ Theano

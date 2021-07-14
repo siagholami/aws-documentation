@@ -1,0 +1,23 @@
+AWS::DataPipeline::Pipeline PipelineTag
+A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to control permissions. For more information, see Controlling Access to Pipelines and Resources in the AWS Data Pipeline Developer Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-datapipeline-pipeline-pipelinetags-key)" : String,
+  "[Value](#cfn-datapipeline-pipeline-pipelinetags-value)" : String
+}
+YAML
+[Key](#cfn-datapipeline-pipeline-pipelinetags-key): String
+  [Value](#cfn-datapipeline-pipeline-pipelinetags-value): String
+Properties
+Key 
+The key name of a tag.
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+The value to associate with the key name.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,30 @@
+AWS::OpsWorks::App DataSource
+Describes an app's data source.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Arn](#cfn-opsworks-app-datasource-arn)" : String,
+  "[DatabaseName](#cfn-opsworks-app-datasource-databasename)" : String,
+  "[Type](#cfn-opsworks-app-datasource-type)" : String
+}
+YAML
+[Arn](#cfn-opsworks-app-datasource-arn): String
+  [DatabaseName](#cfn-opsworks-app-datasource-databasename): String
+  [Type](#cfn-opsworks-app-datasource-type): String
+Properties
+Arn 
+The data source's ARN.
+Required: No
+Type: String
+Update requires: No interruption
+DatabaseName 
+The database name.
+Required: No
+Type: String
+Update requires: No interruption
+Type 
+The data source's type, AutoSelectOpsworksMysqlInstance, OpsworksMysqlInstance, RdsDbInstance, or None.
+Required: No
+Type: String
+Update requires: No interruption

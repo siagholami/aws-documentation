@@ -1,0 +1,28 @@
+AWS::GroundStation::Config TrackingConfig
+Provides information about how AWS Ground Station should track the satellite through the sky during a contact. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AutoTrack](#cfn-groundstation-config-trackingconfig-autotrack)" : String
+}
+YAML
+[AutoTrack](#cfn-groundstation-config-trackingconfig-autotrack): String
+Properties
+AutoTrack 
+ Specifies whether or not to use autotrack. REMOVED specifies that program track should only be used during the contact. PREFERRED specifies that autotracking is preferred during the contact but fallback to program track if the signal is lost. REQUIRED specifies that autotracking is required during the contact and not to use program track if the signal is lost. 
+Required: Yes
+Type: String
+Update requires: No interruption
+Examples
+Create a TrackingConfig
+The following example creates a Ground Station TrackingConfig
+JSON
+{
+  "TrackingConfig": {
+    "Autotrack": "PREFERRED"
+  }
+}
+YAML
+TrackingConfig:
+  Autotrack: "PREFERRED"

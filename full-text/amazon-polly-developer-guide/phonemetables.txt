@@ -1,0 +1,295 @@
+Phonetic Tables Used by Amazon Polly
+The following provides a phonetic pronunciation (the phonemes) for Amazon Polly SSML tags for American English.
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+
+
+
+
+Consonants
+
+
+
+
+
+b
+b
+Voiced bilabial plosive
+bed
+
+
+d
+d
+Voiced alveolar plosive
+dig
+
+
+d͡ʒ
+dZ
+Voiced postalveolar affricate
+jump
+
+
+ð
+D
+Voiced dental fricative
+then
+
+
+f
+f
+Voiceless labiodental fricative
+five
+
+
+g
+g
+Voiced velar plosive
+game
+
+
+h
+h
+Voiceless glottal fricative
+house
+
+
+j
+j
+Palatal approximant
+yes
+
+
+k
+k
+Voiceless velar plosive
+cat
+
+
+l
+l
+Alveolar lateral approximant
+lay
+
+
+m
+m
+Bilabial nasal
+mouse
+
+
+n
+n
+Alveolar nasal
+nap
+
+
+ŋ
+N
+Velar nasal
+thing
+
+
+p
+p
+Voiceless bilabial plosive
+speak
+
+
+ɹ
+r\
+Alveolar approximant
+red
+
+
+s
+s
+Voiceless alveolar fricative
+seem
+
+
+ʃ
+S
+Voiceless postalveolar fricative
+ship
+
+
+t
+t
+Voiceless alveolar plosive
+trap
+
+
+t͡ʃ
+tS
+Voiceless postalveolar affricate
+chart
+
+
+Θ
+T
+Voiceless dental fricative
+thin
+
+
+v
+v
+Voiced labiodental fricative
+vest
+
+
+w
+w
+Labial-velar approximant
+west
+
+
+z
+z
+Voiced alveolar fricative
+zero
+
+
+ʒ
+Z
+Voiced postalveolar fricative
+vision
+
+
+Vowels
+
+
+
+
+
+ə
+@
+Mid central vowel
+arena
+
+
+ɚ
+@'
+Mid central r-colored vowel
+reader
+
+
+æ
+{
+Near open-front unrounded vowel
+trap
+
+
+aɪ
+aI
+Diphthong
+price
+
+
+aʊ
+aU
+Diphthong
+mouth
+
+
+ɑ
+A
+Long open-back unrounded vowel
+father
+
+
+eɪ
+eI
+Diphthong
+face
+
+
+ɝ
+3'
+Open mid-central unrounded r-colored vowel
+nurse
+
+
+ɛ
+E
+Open mid-front unrounded vowel
+dress
+
+
+i:
+i
+Long close front unrounded vowel
+fleece
+
+
+ɪ
+I
+Near-close near-front unrounded vowel
+kit
+
+
+oʊ
+oU
+Diphthong
+goat
+
+
+ɔ
+O
+Long open mid-back rounded vowel
+thought
+
+
+ɔɪ
+OI
+Diphthong
+choice
+
+
+u
+u
+Long close-back rounded vowel
+goose
+
+
+ʊ
+U
+Near-close near-back rounded vowel
+foot
+
+
+ʌ
+V
+Open-mid-back unrounded vowel
+strut
+
+
+Other Symbols
+
+
+
+
+
+'
+"
+primary stress
+Alabama
+
+
+,
+%
+secondary stress
+Alabama
+
+
+.
+.
+syllable boundary
+A.la.ba.ma
+
+

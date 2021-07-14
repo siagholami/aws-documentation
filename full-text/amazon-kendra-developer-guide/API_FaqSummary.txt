@@ -1,0 +1,36 @@
+
+
+FaqSummary
+Provides information about a frequently asked questions and answer contained in an index.
+Contents
+CreatedAt 
+The UNIX datetime that the FAQ was added to the index.
+Type: Timestamp
+Required: No
+Id 
+The unique identifier of the FAQ.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 100.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+Required: No
+Name 
+The name that you assigned the FAQ when you created or updated the FAQ.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 100.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+Required: No
+Status 
+The current status of the FAQ. When the status is ACTIVE the FAQ is ready for use.
+Type: String
+Valid Values:CREATING | UPDATING | ACTIVE | DELETING | FAILED 
+Required: No
+UpdatedAt 
+The UNIX datetime that the FAQ was last updated.
+Type: Timestamp
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

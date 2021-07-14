@@ -1,0 +1,70 @@
+Tutorial: Schedule Automated Amazon EBS Snapshots Using CloudWatch Events
+You can run CloudWatch Events rules according to a schedule. In this tutorial, you create an automated snapshot of an existing Amazon Elastic Block Store (Amazon EBS) volume on a schedule. You can choose a fixed rate to create a snapshot every few minutes or use a cron expression to specify that the snapshot is made at a specific time of day.
+Important
+Creating rules with built-in targets is supported only in the AWS Management Console.
+Step 1: Create a Rule
+Create a rule that takes snapshots on a schedule. You can use a rate expression or a cron expression to specify the schedule. For more information, see Schedule Expressions for Rules.
+To create a rule
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Events, Create rule.
+
+
+For Event Source, do the following:
+
+
+Choose Schedule.
+
+
+Choose Fixed rate of and specify the schedule interval (for example, 5 minutes). Alternatively, choose Cron expression and specify a cron expression (for example, every 15 minutes Monday through Friday, starting at the current time).
+
+
+For Targets, choose Add target and then select EC2 CreateSnapshot API call. You may have to scroll up in the list of possible targets to find EC2 CreateSnapshot API call.
+
+
+For Volume ID, type the volume ID of the targeted Amazon EBS volume.
+
+
+Choose Create a new role for this specific resource. The new role grants the target permissions to access resources on your behalf.
+
+
+Choose Configure details.
+
+
+For Rule definition, type a name and description for the rule.
+
+
+Choose Create rule.
+
+
+Step 2: Test the Rule
+You can verify your rule by viewing your first snapshot after it is taken.
+To test your rule
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Elastic Block Store, Snapshots.
+
+
+Verify that the first snapshot appears in the list.
+
+
+(Optional) When you are finished, you can disable the rule to prevent additional snapshots from being taken.
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Events, Rules.
+
+
+Select the rule and choose Actions, Disable.
+
+
+When prompted for confirmation, choose Disable.
+

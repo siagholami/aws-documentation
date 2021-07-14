@@ -1,0 +1,39 @@
+DeleteTerminology
+A synchronous action that deletes a custom terminology.
+Request Syntax
+{
+   "[Name](#Translate-DeleteTerminology-request-Name)": "string"
+}
+Request Parameters
+For information about the parameters that are common to all actions, see Common Parameters.
+The request accepts the following data in JSON format.
+ Name  
+The name of the custom terminology being deleted. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 256.
+Pattern: ^([A-Za-z0-9-]_?)$ 
+Required: Yes
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+InternalServerException 
+An internal server error occurred. Retry your request.
+HTTP Status Code: 500
+ResourceNotFoundException 
+The resource you are looking for has not been found. Review the resource you're looking for and see if a different resource will accomplish your needs before retrying the revised request.
+HTTP Status Code: 400
+TooManyRequestsException 
+ You have made too many requests within a short period of time. Wait for a short time and then try your request again.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V2 

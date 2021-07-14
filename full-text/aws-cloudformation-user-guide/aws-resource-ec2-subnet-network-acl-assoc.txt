@@ -1,0 +1,56 @@
+AWS::EC2::SubnetNetworkAclAssociation
+Associates a subnet with a network ACL. For more information, see ReplaceNetworkAclAssociation in the Amazon Elastic Compute Cloud API Reference.
+When AWS::EC2::SubnetNetworkAclAssociation resources are created during create or update operations, AWS CloudFormation adopts existing resources that share the same key properties (the properties that contribute to uniquely identify the resource). However, if the operation fails and rolls back, AWS CloudFormation deletes the previously out-of-band resources. You can protect against this behavior by using Retain deletion policies. For more information, see DeletionPolicy Attribute.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+  "Properties" : {
+      "[NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid)" : String,
+      "[SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::SubnetNetworkAclAssociation
+Properties: 
+  [NetworkAclId](#cfn-ec2-subnetnetworkaclassociation-networkaclid): String
+  [SubnetId](#cfn-ec2-subnetnetworkaclassociation-associationid): String
+Properties
+NetworkAclId 
+The ID of the network ACL.
+Required: Yes
+Type: String
+Update requires: Replacement
+SubnetId 
+The ID of the subnet.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the subnet network ACL association.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+
+AssociationId 
+Returns the value of this object's SubnetId property.
+Examples
+Subnet Network ACL Association
+The following example associates subnet mySubnet with the myNetworkAcl network ACL.
+JSON
+"mySubnetNetworkAclAssociation" : {
+   "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+   "Properties" : {
+      "SubnetId" : { "Ref" : "mySubnet" },
+      "NetworkAclId" : { "Ref" : "myNetworkAcl" }
+   }
+}
+YAML
+mySubnetNetworkAclAssociation:
+     Type: AWS::EC2::SubnetNetworkAclAssociation
+     Properties:
+       SubnetId:
+         Ref: mySubnet
+       NetworkAclId:
+         Ref: myNetworkAcl

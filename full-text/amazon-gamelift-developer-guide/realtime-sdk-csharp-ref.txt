@@ -1,0 +1,18 @@
+Realtime Servers Client API (C#) Reference
+Use the Realtime Client API to prepare your multiplayer game clients for use with Amazon GameLift Realtime Servers. For more on the integration process, see Get Started with Realtime Servers. The Client API contains a set of synchronous API calls and asynchronous callbacks that enable a game client to connect to a Realtime server and exchange messages and data with other game clients via the server. 
+This API is defined in the following libraries: 
+Client.cs 
+ Synchronous Actions
+ Asynchronous Callbacks
+ Data Types
+To set up the Realtime Client API
+
+
+Download the Amazon GameLift Realtime Client SDK. 
+
+
+Build the C# SDK libraries. Locate the solution file GameScaleLightweightClientSdkNet45.sln. See the README.md file for the C# Server SDK for minimum requirements and additional build options. In an IDE, load the solution file. To generate the SDK libraries, restore the NuGet packages and build the solution.
+
+
+Add the Realtime Client libraries to your game client project. 
+

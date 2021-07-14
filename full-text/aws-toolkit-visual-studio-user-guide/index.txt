@@ -1,0 +1,86 @@
+AWS Toolkit for Visual Studio User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+AWS Toolkit for Visual Studio
+Setting Up the AWS Toolkit for Visual Studio
+Setting Up the AWS Toolkit for Visual Studio
+Providing AWS Credentials
+Using the Toolkit for Visual Studio
+Working with AWS Services
+Managing Amazon EC2 Instances
+Managing Amazon ECS Instances
+Managing Security Groups from AWS Explorer
+Create an AMI from an Amazon EC2 Instance
+Setting Launch Permissions on an Amazon Machine Image
+Amazon Virtual Private Cloud (VPC)
+Deployment Using the AWS Toolkit
+Deploying to Elastic Beanstalk
+Deploy a Traditional ASP.NET Application to Elastic Beanstalk
+Deploying an ASP.NET Core Application to Elastic Beanstalk
+How to Specify the AWS Security Credentials for Your Application
+How to Republish Your Application to an Elastic Beanstalk Environment
+Custom Elastic Beanstalk Application Deployments
+Custom ASP.NET Core Elastic Beanstalk Deployments
+Multiple Application Support for .NET and Elastic Beanstalk
+Deploying to Elastic Beanstalk (Legacy)
+Deploying to AWS CloudFormation (Legacy)
+
+
+Deploying to Amazon EC2 Container Service
+Specify AWS Credentials for Your ASP.NET Core 2 Application
+Deploying an ASP.NET Core 2.0 App to Amazon ECS (Fargate)
+Deploying an ASP.NET Core 2.0 App to Amazon ECS (EC2)
+
+
+Standalone Deployment Tool
+Customizing the AWS CloudFormation Template Used for Deployment
+
+
+
+
+Using the AWS CloudFormation Template Editor for Visual Studio
+Creating an AWS CloudFormation Template Project in Visual Studio
+Deploying a AWS CloudFormation Template in Visual Studio
+Estimating the Cost of Your AWS CloudFormation Template Project in Visual Studio
+Formatting a AWS CloudFormation Template in Visual Studio
+
+
+Using Amazon S3 from AWS Explorer
+Using DynamoDB from AWS Explorer
+Using AWS CodeCommit with Visual Studio Team Explorer
+Amazon RDS from AWS Explorer
+Launch an Amazon RDS Database Instance
+Create a Microsoft SQL Server Database in an RDS Instance
+Amazon RDS Security Groups
+
+
+Using Amazon SimpleDB from AWS Explorer
+Using Amazon SQS from AWS Explorer
+Identity and Access Management
+Using the AWS Lambda Templates in the AWS Toolkit for Visual Studio
+Tutorial: Using the AWS Lambda Project in the AWS Toolkit for Visual Studio
+Tutorial: Build and Test a Serverless Application with AWS Lambda
+Tutorial: Creating an Amazon Rekognition Lambda Application
+Tutorial: Using Amazon Logging Frameworks with AWS Lambda to Create Application Logs
+
+
+Deploying an AWS Lambda Project with the .NET Core CLI
+Security for this AWS Product or Service
+Data Protection in this AWS Product or Service
+Identity and Access Management for this AWS Product or Service
+Compliance Validation for this AWS Product or Service
+Resilience for this AWS Product or Service
+Infrastructure Security for this AWS Product or Service
+Configuration and Vulnerability Analysis in this AWS Product or Service
+Document History of the AWS Toolkit for Visual Studio User Guide

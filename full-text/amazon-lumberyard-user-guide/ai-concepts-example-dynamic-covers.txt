@@ -1,0 +1,7 @@
+Individual AI: Dynamic Covers
+Example: CoverSurface and HMMWV
+This example shows the use of dynamic covers that are generated offline and adjusted during run time.  
+Useful AI debug draw:
+ ai_DebugDraw=1
+ ai_DebugDrawCover=2
+ [AI/Physics] is on

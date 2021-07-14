@@ -1,0 +1,20 @@
+Accepting a hosted connection
+If you are interested in purchasing a hosted connection, you must contact an AWS Direct Connect Partner in the AWS Direct Connect Partner Program. The partner provisions the connection for you. After the connection is configured, it appears in the Connections pane in the AWS Direct Connect console.
+Before you can begin using a hosted connection, you must accept the connection.
+
+
+Open the AWS Direct Connect console at https://console.aws.amazon.com/directconnect/v2/home.
+
+
+In the navigation pane, choose Connections.
+
+
+Select the hosted connection and choose View details.
+
+
+Select the confirmation check box and choose Accept connection.
+
+
+To accept a hosted connection using the command line or API
+ confirm-connection (AWS CLI)
+ ConfirmConnection (AWS Direct Connect API)

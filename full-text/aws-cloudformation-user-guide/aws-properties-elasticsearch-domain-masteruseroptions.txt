@@ -1,0 +1,30 @@
+AWS::Elasticsearch::Domain MasterUserOptions
+Specifies information about the master user.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MasterUserARN](#cfn-elasticsearch-domain-masteruseroptions-masteruserarn)" : String,
+  "[MasterUserName](#cfn-elasticsearch-domain-masteruseroptions-masterusername)" : String,
+  "[MasterUserPassword](#cfn-elasticsearch-domain-masteruseroptions-masteruserpassword)" : String
+}
+YAML
+[MasterUserARN](#cfn-elasticsearch-domain-masteruseroptions-masteruserarn): String
+  [MasterUserName](#cfn-elasticsearch-domain-masteruseroptions-masterusername): String
+  [MasterUserPassword](#cfn-elasticsearch-domain-masteruseroptions-masteruserpassword): String
+Properties
+MasterUserARN 
+ARN for the master user. Only specify if InternalUserDatabaseEnabled is false in AdvancedSecurityOptions.
+Required: No
+Type: String
+Update requires: No interruption
+MasterUserName 
+Username for the master user. Only specify if InternalUserDatabaseEnabled is true in AdvancedSecurityOptions.
+Required: No
+Type: String
+Update requires: No interruption
+MasterUserPassword 
+Password for the master user. Only specify if InternalUserDatabaseEnabled is true in AdvancedSecurityOptions.
+Required: No
+Type: String
+Update requires: No interruption

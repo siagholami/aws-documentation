@@ -1,0 +1,30 @@
+Step 5: Cleaning up resources
+When your migration is complete, delete the migration policy and role that you created from the IAM console.
+To delete the IAM policy and role
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Policies.
+
+
+Search for and select the policy that you created.
+
+
+For Policy actions, choose Delete.
+
+
+Choose Delete.
+
+
+Choose Roles.
+
+
+Search for and select the role that you created.
+
+
+Choose Delete role, Delete.
+
+
+When a scheduled migration starts, your Amazon WorkDocs user account Storage setting is automatically changed to Unlimited. After the migration, you can change your Storage settings by editing your user account from the admin control panel. For more information, see Editing users.

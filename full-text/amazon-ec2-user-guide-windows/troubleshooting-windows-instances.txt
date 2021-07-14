@@ -1,0 +1,15 @@
+Troubleshooting EC2 Windows instances
+The following procedures and tips can help you troubleshoot problems with your Amazon EC2 Windows instances.
+Topics
+ Troubleshooting instance launch issues
+ Troubleshooting connecting to your Windows instance
+ Troubleshoot an unreachable instance
+ Resetting a lost or expired Windows administrator password
+ Troubleshooting stopping your instance
+ Troubleshooting terminating (shutting down) your instance
+ Troubleshooting Sysprep
+ Using EC2Rescue for Windows Server
+ Sending a diagnostic interrupt (for advanced users)
+ Common issues with Windows instances
+ Common messages troubleshooting Windows instances
+To get additional information for troubleshooting problems with your instance, use Using EC2Rescue for Windows Server. For information about troubleshooting issues with PV drivers, see Troubleshooting PV Drivers.

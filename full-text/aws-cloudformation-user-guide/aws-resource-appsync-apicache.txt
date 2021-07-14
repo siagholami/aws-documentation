@@ -1,0 +1,114 @@
+AWS::AppSync::ApiCache
+Represents the input of a CreateApiCache operation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppSync::ApiCache",
+  "Properties" : {
+      "[ApiCachingBehavior](#cfn-appsync-apicache-apicachingbehavior)" : String,
+      "[ApiId](#cfn-appsync-apicache-apiid)" : String,
+      "[AtRestEncryptionEnabled](#cfn-appsync-apicache-atrestencryptionenabled)" : Boolean,
+      "[TransitEncryptionEnabled](#cfn-appsync-apicache-transitencryptionenabled)" : Boolean,
+      "[Ttl](#cfn-appsync-apicache-ttl)" : Double,
+      "[Type](#cfn-appsync-apicache-type)" : String
+    }
+}
+YAML
+Type: AWS::AppSync::ApiCache
+Properties: 
+  [ApiCachingBehavior](#cfn-appsync-apicache-apicachingbehavior): String
+  [ApiId](#cfn-appsync-apicache-apiid): String
+  [AtRestEncryptionEnabled](#cfn-appsync-apicache-atrestencryptionenabled): Boolean
+  [TransitEncryptionEnabled](#cfn-appsync-apicache-transitencryptionenabled): Boolean
+  [Ttl](#cfn-appsync-apicache-ttl): Double
+  [Type](#cfn-appsync-apicache-type): String
+Properties
+ApiCachingBehavior 
+Caching behavior.
+  FULL_REQUEST_CACHING: All requests are fully cached.
+  PER_RESOLVER_CACHING: Individual resovlers that you specify are cached.
+Required: Yes
+Type: String
+Update requires: No interruption
+ApiId 
+The GraphQL API Id.
+Required: Yes
+Type: String
+Update requires: Replacement
+AtRestEncryptionEnabled 
+At rest encryption flag for cache. This setting cannot be updated after creation.
+Required: No
+Type: Boolean
+Update requires: No interruption
+TransitEncryptionEnabled 
+Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Ttl 
+TTL in seconds for cache entries.
+Valid values are between 1 and 3600 seconds.
+Required: Yes
+Type: Double
+Update requires: No interruption
+Type 
+The cache instance type. Valid values are 
+  SMALL 
+  MEDIUM 
+  LARGE 
+  XLARGE 
+  LARGE_2X 
+  LARGE_4X 
+  LARGE_8X (not available in all regions)
+  LARGE_12X 
+Historically, instance types were identified by an EC2-style value. As of July 2020, this is deprecated, and the generic identifiers above should be used.
+The following legacy instance types are avaible, but their use is discouraged:
+  T2_SMALL: A t2.small instance type.
+  T2_MEDIUM: A t2.medium instance type.
+  R4_LARGE: A r4.large instance type.
+  R4_XLARGE: A r4.xlarge instance type.
+  R4_2XLARGE: A r4.2xlarge instance type.
+  R4_4XLARGE: A r4.4xlarge instance type.
+  R4_8XLARGE: A r4.8xlarge instance type.
+Required: Yes
+Type: String
+Update requires: No interruption
+Examples
+ApiCache Creation Example
+The following example creates an ApiCache for your GraphQL API.
+YAML
+Parameters:
+  graphQlApiId:
+    Type: String
+Resources:
+  ApiCache:
+    Type: 'AWS::AppSync::ApiCache'
+    Properties:
+      ApiId: graphQlApiId
+      Type: T2_SMALL
+      ApiCachingBehavior: FULL_REQUEST_CACHING
+      Ttl: 1200
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+JSON
+{
+    "Parameters": {
+        "graphQlApiId": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ApiCache": {
+            "Type": "AWS::AppSync::ApiCache",
+            "Properties": {
+                "ApiId": "graphQlApiId",
+                "Type": "T2_SMALL",
+                "ApiCachingBehavior": "FULL_REQUEST_CACHING",
+                "Ttl": 1200,
+                "TransitEncryptionEnabled": true,
+                "AtRestEncryptionEnabled": true
+            }
+        }
+    }
+}

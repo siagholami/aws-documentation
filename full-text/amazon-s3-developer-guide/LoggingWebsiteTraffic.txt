@@ -1,0 +1,42 @@
+(Optional) Logging web traffic
+You can optionally enable Amazon S3 server access logging for a bucket that is configured as a static website. Server access logging provides detailed records for the requests that are made to your bucket. For more information, see Amazon S3 server access logging. If you plan to use Amazon CloudFront to speed up your website, you can also use CloudFront logging. For more information, see Configuring and Using Access Logs in the Amazon CloudFront Developer Guide.
+To enable server access logging for your static website bucket
+
+
+Open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the same Region where you created the bucket that is configured as a static website, create a bucket for logging, for example logs.example.com.
+
+
+Create a folder for the server access logging log files (for example, logs).
+
+
+(Optional) If you want to use CloudFront to improve your website performance, create a folder for the CloudFront log files (for example, cdn).
+
+
+In the Bucket list, choose your bucket.
+
+
+Choose Properties.
+
+
+Choose Server access logging.
+
+
+Choose Enable logging.
+
+
+For Target bucket, choose the bucket that you created for the log files, for example logs.example.com.
+
+
+For Target prefix, enter the name of the folder that you created for the log files followed by the delimiter (/), for example logs/.
+
+
+When you set the Target prefix, you group your log data files in a folder so that they are easy to locate.
+
+Choose Save.
+
+In your log bucket, you can now access your logs. Amazon S3 writes website access logs to your log bucket every 2 hours.
+
+To view the logs, choose Overview, and choose the folder. 

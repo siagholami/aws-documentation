@@ -1,0 +1,3 @@
+Implementing Secrets Management Best Practices Using AWS Config
+Secrets Manager rotates secrets as part of a best practice security plan. Using the managed rule, secretsmanager-rotation-enabled-check, AWS Config verifies rotation of secrets in Secrets Manager.
+For more information about rule configuration in AWS Config, see AWS Config Rules in the AWS Config Developer Guide. 

@@ -1,0 +1,77 @@
+AWS::IoT::ProvisioningTemplate
+Creates a fleet provisioning template.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoT::ProvisioningTemplate",
+  "Properties" : {
+      "[Description](#cfn-iot-provisioningtemplate-description)" : String,
+      "[Enabled](#cfn-iot-provisioningtemplate-enabled)" : Boolean,
+      "[PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook)" : ProvisioningHook,
+      "[ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn)" : String,
+      "[Tags](#cfn-iot-provisioningtemplate-tags)" : Tags,
+      "[TemplateBody](#cfn-iot-provisioningtemplate-templatebody)" : String,
+      "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String
+    }
+}
+YAML
+Type: AWS::IoT::ProvisioningTemplate
+Properties: 
+  [Description](#cfn-iot-provisioningtemplate-description): String
+  [Enabled](#cfn-iot-provisioningtemplate-enabled): Boolean
+  [PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook): 
+    ProvisioningHook
+  [ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn): String
+  [Tags](#cfn-iot-provisioningtemplate-tags): 
+    Tags
+  [TemplateBody](#cfn-iot-provisioningtemplate-templatebody): String
+  [TemplateName](#cfn-iot-provisioningtemplate-templatename): String
+Properties
+Description 
+The description of the fleet provisioning template.
+Required: No
+Type: String
+Update requires: No interruption
+Enabled 
+True to enable the fleet provisioning template, otherwise false.
+Required: No
+Type: Boolean
+Update requires: No interruption
+PreProvisioningHook 
+Creates a pre-provisioning hook template.
+Required: No
+Type: ProvisioningHook
+Update requires: No interruption
+ProvisioningRoleArn 
+The role ARN for the role associated with the fleet provisioning template. This IoT role grants permission to provision a device.
+Required: Yes
+Type: String
+Update requires: No interruption
+Tags 
+Metadata which can be used to manage the fleet provisioning template.
+Required: No
+Type: Tags
+Update requires: No interruption
+TemplateBody 
+The JSON formatted contents of the fleet provisioning template.
+Required: Yes
+Type: String
+Update requires: No interruption
+TemplateName 
+The JSON formatted contents of the fleet provisioning template.
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the thing name. For example:
+{ "Ref": "MyThing" } 
+For a stack named MyStack, a value similar to the following is returned:
+MyStack-MyThing-AB1CDEFGHIJK 
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+TemplateArn 
+The ARN that identifies the provisioning template.

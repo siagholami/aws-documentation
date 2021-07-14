@@ -1,0 +1,8 @@
+Transferring domains
+You can transfer domain registration from another registrar to Amazon Route 53, from one AWS account to another, or from Route 53 to another registrar.
+Topics
+ Transferring registration for a domain to Amazon Route 53
+ Viewing the status of a domain transfer
+ How transferring a domain to Amazon Route 53 affects the expiration date for your domain registration
+ Transferring a domain to a different AWS account
+ Transferring a domain from Amazon Route 53 to another registrar

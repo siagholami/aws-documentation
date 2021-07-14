@@ -1,0 +1,6 @@
+Creating a file gateway
+In this section, you can find instructions about how to create and use a file gateway.
+Topics
+ Creating a gateway
+ Creating a file share
+ Using your file share

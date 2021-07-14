@@ -1,0 +1,8 @@
+Settings for a Microsoft Smooth Output
+On the Output page for a Microsoft Smooth output group, you provide information about the video, audio, and captions encodes to create in the output.
+Output Settings Section
+For Name modifier, complete the field as described in Microsoft Smooth Group Destinations.
+Streams Section
+In the Stream settings section, decide if you need to create more encodes for this output, based on the workflow that you planned. By default, each output is set up with one video encode and one audio encode. Choose the appropriate Add button or Delete button to set up the output with the encodes—video, audio, and captions—that you planned for this output.
+For example, in one output you might want one video asset and two audio assets, in another output you might want one captions asset for French captions, and in a third output you might want one captions asset for Spanish captions. For information about why you would set up like this (for example, with an output that contains only one captions asset), see Examples of Channel Designs.
+For information about the fields in each type of encode, see Step 7: Set Up the Video Encode, Step 8: Set Up the Audio Encodes, and Step 9: Set up the Captions Encodes. 

@@ -1,0 +1,209 @@
+AWS CloudFormation resource specification
+The AWS CloudFormation resource specification is a JSON-formatted text file that defines the resources and properties that AWS CloudFormation supports. The document is a machine-readable, strongly typed specification that you can use to build tools for creating AWS CloudFormation templates. For example, you can use the specification to build auto completion and validation functionality for AWS CloudFormation templates in your IDE (integrated development environment).
+The resource specification is organized as both a single file and as a series of files, where each file contains the definition of one resource type. The single and separated files contain identical information. Depending on the tool and your implementation, use the file or files that work for you.
+To download the resource specification, see the following table. 
+Resource availability may vary by region. To check the availability of a resource in a given region, refer to the resource specification for that region.
+Resource specification 
+
+
+
+Region name
+Region
+Single file
+All files
+
+
+
+
+US East (Ohio)
+us-east-2
+.json
+.zip
+
+
+US East (N. Virginia)
+us-east-1
+.json
+.zip
+
+
+US West (N. California)
+us-west-1
+.json
+.zip
+
+
+US West (Oregon)
+us-west-2
+.json
+.zip
+
+
+Africa (Cape Town)
+af-south-1
+.json
+.zip
+
+
+Asia Pacific (Hong Kong)
+ap-east-1
+.json
+.zip
+
+
+Asia Pacific (Mumbai)
+ap-south-1
+.json
+.zip
+
+
+Asia Pacific (Osaka-Local)
+ap-northeast-3
+.json
+.zip
+
+
+Asia Pacific (Seoul)
+ap-northeast-2
+.json
+.zip
+
+
+Asia Pacific (Singapore)
+ap-southeast-1
+.json
+.zip
+
+
+Asia Pacific (Sydney)
+ap-southeast-2
+.json
+.zip
+
+
+Asia Pacific (Tokyo)
+ap-northeast-1
+.json
+.zip
+
+
+Canada (Central)
+ca-central-1
+.json
+.zip
+
+
+China (Beijing)
+cn-north-1
+.json
+.zip
+
+
+China (Ningxia)
+cn-northwest-1
+.json
+.zip
+
+
+Europe (Frankfurt)
+eu-central-1
+.json
+.zip
+
+
+Europe (Ireland)
+eu-west-1
+.json
+.zip
+
+
+Europe (London)
+eu-west-2
+.json
+.zip
+
+
+Europe (Paris)
+eu-west-3
+.json
+.zip
+
+
+Europe (Stockholm)
+eu-north-1
+.json
+.zip
+
+
+Europe (Milan)
+eu-south-1
+.json
+.zip
+
+
+Middle East (Bahrain)
+me-south-1
+.json
+.zip
+
+
+South America (São Paulo)
+sa-east-1
+.json
+.zip
+
+
+AWS GovCloud (US-East)
+us-gov-east-1
+.json
+.zip
+
+
+AWS GovCloud (US-West)
+us-gov-west-1
+.json
+.zip
+
+
+
+The following example shows the specification for an AWS Key Management Service key resource (AWS::KMS::Key). It shows the properties for the AWS::KMS::Key resource, which properties are required, the type of allowed value for each property, and their update behavior. For details about the specification, see Specification format.
+"AWS::KMS::Key": {
+      "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html",
+      "Properties": {
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "EnableKeyRotation": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enablekeyrotation",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "Enabled": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enabled",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "KeyPolicy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy",
+          "PrimitiveType": "Json",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "KeyUsage": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyusage",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        }
+      }
+    }

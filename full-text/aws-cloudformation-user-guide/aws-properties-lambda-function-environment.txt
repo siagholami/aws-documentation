@@ -1,0 +1,22 @@
+AWS::Lambda::Function Environment
+A function's environment variable settings.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Variables](#cfn-lambda-function-environment-variables)" : {Key : Value, ...}
+}
+YAML
+[Variables](#cfn-lambda-function-environment-variables): 
+    Key : Value
+Properties
+Variables 
+Environment variable key-value pairs.
+Required: No
+Type: Map of String
+Update requires: No interruption
+Examples
+Environment Variables
+Add environment variables to a function.
+YAML
+Environment: Variables: databaseName: lambdadb databaseUser: admin

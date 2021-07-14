@@ -1,0 +1,6 @@
+Ingesting data from AWS IoT Events
+With AWS IoT Events, you can build complex event monitoring applications for your IoT fleet in the AWS Cloud. You can use the IoT SiteWise action in AWS IoT Events to send data to asset properties in AWS IoT SiteWise when an event occurs.
+For more information, see the following topics in the AWS IoT Events Developer Guide:
+ What is AWS IoT Events?
+ AWS IoT Events actions
+ IoT SiteWise action

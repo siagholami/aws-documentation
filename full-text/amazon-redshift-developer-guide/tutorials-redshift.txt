@@ -1,0 +1,6 @@
+Tutorials for Amazon Redshift
+Follow the steps in these tutorials to learn about Amazon Redshift features:
+ Tutorial: Tuning table design
+ Tutorial: Loading data from Amazon S3
+ Tutorial: Querying nested data with Amazon Redshift SpectrumTutorial: Querying nested data with Amazon Redshift Spectrum 
+ Tutorial: Configuring manual workload management (WLM) queues

@@ -1,0 +1,83 @@
+AWS::Glue::Table TableInput
+A structure used to define a table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Description](#cfn-glue-table-tableinput-description)" : String,
+  "[Name](#cfn-glue-table-tableinput-name)" : String,
+  "[Owner](#cfn-glue-table-tableinput-owner)" : String,
+  "[Parameters](#cfn-glue-table-tableinput-parameters)" : Json,
+  "[PartitionKeys](#cfn-glue-table-tableinput-partitionkeys)" : [ Column, ... ],
+  "[Retention](#cfn-glue-table-tableinput-retention)" : Integer,
+  "[StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor)" : StorageDescriptor,
+  "[TableType](#cfn-glue-table-tableinput-tabletype)" : String,
+  "[ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext)" : String,
+  "[ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext)" : String
+}
+YAML
+[Description](#cfn-glue-table-tableinput-description): String
+  [Name](#cfn-glue-table-tableinput-name): String
+  [Owner](#cfn-glue-table-tableinput-owner): String
+  [Parameters](#cfn-glue-table-tableinput-parameters): Json
+  [PartitionKeys](#cfn-glue-table-tableinput-partitionkeys): 
+    - Column
+  [Retention](#cfn-glue-table-tableinput-retention): Integer
+  [StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor): 
+    StorageDescriptor
+  [TableType](#cfn-glue-table-tableinput-tabletype): String
+  [ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext): String
+  [ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext): String
+Properties
+Description 
+A description of the table.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The table name. For Hive compatibility, this is folded to lowercase when it is stored.
+Required: No
+Type: String
+Update requires: Replacement
+Owner 
+The table owner.
+Required: No
+Type: String
+Update requires: No interruption
+Parameters 
+These key-value pairs define properties associated with the table.
+Required: No
+Type: Json
+Update requires: No interruption
+PartitionKeys 
+A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+When you create a table used by Amazon Athena, and you do not specify any partitionKeys, you must at least set the value of partitionKeys to an empty list. For example:
+"PartitionKeys": [] 
+Required: No
+Type: List of Column
+Update requires: No interruption
+Retention 
+The retention time for this table.
+Required: No
+Type: Integer
+Update requires: No interruption
+StorageDescriptor 
+A storage descriptor containing information about the physical storage of this table.
+Required: No
+Type: StorageDescriptor
+Update requires: No interruption
+TableType 
+The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
+Required: No
+Type: String
+Update requires: No interruption
+ViewExpandedText 
+If the table is a view, the expanded text of the view; otherwise null.
+Required: No
+Type: String
+Update requires: No interruption
+ViewOriginalText 
+If the table is a view, the original text of the view; otherwise null.
+Required: No
+Type: String
+Update requires: No interruption

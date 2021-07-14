@@ -1,0 +1,24 @@
+Connect AWS SSO to an AWS Managed Microsoft AD Directory
+Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to AWS SSO. 
+To connect AWS SSO to AWS Managed Microsoft AD
+
+
+Open the AWS SSO console.
+Note
+Make sure that the AWS SSO console is using one of the Regions where your AWS Managed Microsoft AD directory is located before you move to the next step.
+
+
+Choose Settings.
+
+
+Under Identity source, choose Change.
+
+
+On the Change identity source page, choose Active Directory, choose the AWS Managed Microsoft AD directory from the list, and then choose Next: Review.
+
+
+On the Review and confirm page, review the information and type CONFIRM.
+
+
+Choose Change identity source.
+

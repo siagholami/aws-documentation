@@ -1,0 +1,63 @@
+AWS::Lambda::LayerVersionPermission
+The AWS::Lambda::LayerVersionPermission resource adds permissions to the resource-based policy of a version of an AWS Lambda layer. Use this action to grant layer usage permission to other accounts. You can grant permission to a single account, all AWS accounts, or all accounts in an organization.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Lambda::LayerVersionPermission",
+  "Properties" : {
+      "[Action](#cfn-lambda-layerversionpermission-action)" : String,
+      "[LayerVersionArn](#cfn-lambda-layerversionpermission-layerversionarn)" : String,
+      "[OrganizationId](#cfn-lambda-layerversionpermission-organizationid)" : String,
+      "[Principal](#cfn-lambda-layerversionpermission-principal)" : String
+    }
+}
+YAML
+Type: AWS::Lambda::LayerVersionPermission
+Properties: 
+  [Action](#cfn-lambda-layerversionpermission-action): String
+  [LayerVersionArn](#cfn-lambda-layerversionpermission-layerversionarn): String
+  [OrganizationId](#cfn-lambda-layerversionpermission-organizationid): String
+  [Principal](#cfn-lambda-layerversionpermission-principal): String
+Properties
+Action 
+The API action that grants access to the layer. For example, lambda:GetLayerVersion.
+Required: Yes
+Type: String
+Pattern: lambda:GetLayerVersion
+Update requires: Replacement
+LayerVersionArn 
+The Amazon Resource Name (ARN) of the layer.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 140
+Pattern: (arn:[a-zA-Z0-9-]:lambda:[a-zA-Z0-9-]:\d{12}:layer:[a-zA-Z0-9-_])|[a-zA-Z0-9-_]
+Update requires: Replacement
+OrganizationId 
+With the principal set to *, grant permission to all accounts in the specified organization.
+Required: No
+Type: String
+Pattern: o-[a-z0-9]{10,32}
+Update requires: Replacement
+Principal 
+An account ID, or * to grant permission to all AWS accounts.
+Required: Yes
+Type: String
+Pattern: \d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the layer version ARN and statement ID, such as arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1#engineering-org.
+For more information about using the Ref function, see Ref.
+Examples
+Layer Version Permission
+Grant layer use permission to accounts in organization o-t194hfs8cz.
+JSON
+"MyLayerPermission": { "Type": "AWS::Lambda::LayerVersionPermission", "Properties": {
+        "Action": "lambda:GetLayerVersion", "LayerVersionArn": "arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1",
+        "OrganizationId": "o-t194hfs8cz", "Principal": "*" } }
+YAML
+MyLayerPermission: Type: AWS::Lambda::LayerVersionPermission Properties: Action:
+        lambda:GetLayerVersion LayerVersionArn: arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1 OrganizationId:
+        o-t194hfs8cz Principal: *

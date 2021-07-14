@@ -1,0 +1,9 @@
+Label Images
+Use Ground Truth to label images. Select one of the following built in task types to learn more about that task type. Each page includes instructions to help you create a labeling job using that task type.
+Topics
+ Bounding Box
+ Image Semantic Segmentation
+ Auto-Segmentation Tool
+ Image Classification (Single Label)
+ Image Classification (Multi-label)
+ Label Verification

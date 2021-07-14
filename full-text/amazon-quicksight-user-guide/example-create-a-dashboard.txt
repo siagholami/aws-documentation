@@ -1,0 +1,14 @@
+Tutorial: Create a Dashboard
+Use the following procedure to create a dashboard from the analysis created using the procedure in Tutorial: Create an Analysis.
+
+
+In the analysis, choose Share and then Create dashboard on the application bar.
+
+
+
+Choose Create new dashboard as, type the name Marketing Dashboard, and then choose Create dashboard.
+
+
+
+On the Share dashboard dialog, choose Cancel (you can share the dashboard later by using the sharing option on the dashboard page). The dashboard is created.
+

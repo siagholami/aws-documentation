@@ -1,0 +1,2 @@
+ST_Length2D
+ST_Length2D is an alias for ST_Length. For more information, see ST_Length. 

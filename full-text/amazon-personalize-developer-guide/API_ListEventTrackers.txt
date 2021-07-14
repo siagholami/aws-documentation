@@ -1,0 +1,68 @@
+ListEventTrackers
+Returns the list of event trackers associated with the account. The response provides the properties for each event tracker, including the Amazon Resource Name (ARN) and tracking ID. For more information on event trackers, see CreateEventTracker.
+Request Syntax
+{
+   "datasetGroupArn": "string",
+   "maxResults": number,
+   "nextToken": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ datasetGroupArn  
+The ARN of a dataset group used to filter the response.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+ maxResults  
+The maximum number of event trackers to return.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 100.
+Required: No
+ nextToken  
+A token returned from the previous call to ListEventTrackers for getting the next set of event trackers (if they exist).
+Type: String
+Length Constraints: Maximum length of 1300.
+Required: No
+Response Syntax
+{
+   "eventTrackers": [ 
+      { 
+         "creationDateTime": number,
+         "eventTrackerArn": "string",
+         "lastUpdatedDateTime": number,
+         "name": "string",
+         "status": "string"
+      }
+   ],
+   "nextToken": "string"
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ eventTrackers  
+A list of event trackers.
+Type: Array of EventTrackerSummary objects
+Array Members: Maximum number of 100 items.
+ nextToken  
+A token for getting the next set of event trackers (if they exist).
+Type: String
+Length Constraints: Maximum length of 1300.
+Errors
+InvalidInputException 
+Provide a valid value for the field or parameter.
+HTTP Status Code: 400
+InvalidNextTokenException 
+The token is not valid.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

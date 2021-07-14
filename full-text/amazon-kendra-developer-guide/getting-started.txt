@@ -1,0 +1,15 @@
+
+
+Getting started
+This section shows how to create a data source and add documents, create an index, get search results, and get code samples to help you integrate Kendra into your application. Instructions are provided for the AWS console, the AWS CLI, a Python program using the AWS SDK for Python (Boto3), and a Java program using the AWS SDK for Java.
+Topics
+ Prerequisites
+ Getting started with an S3 bucket (Console)
+ Getting started (AWS CLI)
+ Getting started (AWS SDK for Python (Boto3))
+ Getting started (AWS SDK for Java)
+ Getting started with a Microsoft OneDrive for Business data source (Console)
+ Getting started with an Amazon S3 data source (Console)
+ Getting started with a Salesforce data source (Console)
+ Getting started with a ServiceNow data source (Console)
+ Getting started with a Microsoft SharePoint Online data source (Console)

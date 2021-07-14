@@ -1,0 +1,77 @@
+(Optional) inspect and test your infrastructure
+This topic shows how to view your infrastructure components and test your Lambda function. 
+To see the result of your stack after you run sam deploy
+
+
+Open the AWS CloudFormation console at https://console.aws.amazon.com/cloudformation.
+
+
+In the navigation pane, choose Stacks. The my-date-time-app stack appears at the top. 
+
+
+Choose the Events tab to see which events are complete. You can view the events while the stack creation is in progress. When creation of the stack is complete, you can see all stack creation events. 
+
+
+With your stack selected, choose Resources. In the Type column, you can see your Lambda functions, myDateTimeFunction, CodeDeployHook_beforeAllowTraffic, and CodeDeployHook_afterAllowTraffic. The Physical ID column of each of your Lambda functions contains a link to view the functions in the Lambda console. 
+Note
+ The name of the myDateTimeFunction Lambda function is prepended with the name of the AWS CloudFormation stack and has an identifier added to it, so it looks like my-date-time-app-myDateTimeFunction-123456ABCDEF. 
+
+
+Open the CodeDeploy console at https://console.aws.amazon.com/codedeploy/.
+
+
+In the navigation pane, expand Deploy, and then choose Applications. 
+
+
+You should see a new CodeDeploy application created by AWS CloudFormation with a name that starts with my-date-time-app-ServerlessDeploymentApplication. Choose this application. 
+
+
+You should see a deployment group with a name that starts with my-date-time-app-myDateTimeFunctionDeploymentGroup. Choose this deployment group. 
+Under Deployment configuration, you should see CodeDeployDefault.LambdaLinear10PercentEvery1Minute. 
+
+
+(Optional) to test your function (console)
+
+
+Open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
+
+
+From the navigation pane, choose your my-date-time-app-myDateTimeFunction function. In the console, its name contains an identifier, so it looks like my-date-time-app-myDateTimeFunction-123456ABCDEF. 
+
+
+Choose Test. 
+
+
+In Event name, enter a name for your test event. 
+
+
+Enter the following for your test event, and then choose Create. 
+
+
+{
+     "option": "date",
+     "period": "today"
+   }
+
+
+Choose Test. You should see only your test event in the list of test events. 
+For Execution result, you should see succeeded. 
+
+
+Under Execution result, expand Details to see the results. You should see the current month, day, and year. 
+
+
+(Optional) to test your function (AWS CLI)
+
+
+Locate the ARN of your Lambda function. It appears at the top of the Lambda console when you are viewing your function. 
+
+
+Run the following command. Replace your-function-arn with the function ARN. 
+
+
+aws lambda invoke \
+   --function your-function-arn \
+   --payload "{\"option\": \"date\", \"period\": \"today\"}" out.txt
+
+Open out.txt to confirm the result contains the current month, day, and year. 

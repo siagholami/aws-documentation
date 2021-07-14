@@ -1,0 +1,61 @@
+Live-to-VOD Supported Codecs and Input Types
+The following sections describe supported input types and codecs for live-to-VOD assets that are harvested from streaming content in AWS Elemental MediaPackage.
+Supported Input Types
+These are the input types that AWS Elemental MediaPackage supports for live-to-VOD assets.
+
+
+
+MediaPackage Input Type
+Use Case
+
+
+
+
+HLS
+Extract a portion of a live HLS endpoint in MediaPackage and save it as a live-to-VOD asset.Additional requirements:[See the AWS documentation website for more details]
+
+
+
+Supported Input Codecs
+These are the video, audio, and subtitles codecs that MediaPackage supports for live-to-VOD assets.
+
+
+
+Media Container
+Video Codecs
+Audio Codecs
+Subtitles Format
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+WebVTT
+
+
+
+Supported Output Codecs
+These are the video, audio, and subtitles codecs that MediaPackage supports when saving a live-to-VOD asset to an Amazon S3 bucket.
+
+
+
+Endpoint Type
+Manifest Format
+Media Container
+Video Codecs
+Audio Codecs
+Subtitles Format
+
+
+
+
+Apple HLS
+HLS
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+WebVTT
+
+

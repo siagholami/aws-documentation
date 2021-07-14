@@ -1,0 +1,126 @@
+Getting Started
+This tutorial introduces you to the basics of working with AWS Step Functions. To get started, you create a simple, independently running state machine using a Pass state. The Pass state represents a no-op (an instruction with no operation).
+Topics
+ Create a state machine
+ Start a new execution
+ Update a state machine
+ Next Steps
+Step Functions offers various predefined state machines as templates. Create your first state machine using the Hello World template.
+Create a state machine
+
+
+Sign in to the AWS Management Console and open the Step Functions console at https://console.aws.amazon.com/states/home?#/statemachines/create.
+
+
+On the Define state machine page select Templates and choose Hello world. Review the State machine definition and the visual workflow.
+
+
+
+Step Functions fills in the name of the state machine automatically. It also populates the Code pane with the Amazon States Language description of the state machine.
+This JSON text defines a Pass state named HelloWorld. For more information, see State Machine Structure.
+{
+     "Comment": "A Hello World example of the Amazon States Language using a Pass state",
+     "StartAt": "HelloWorld",
+     "States": {
+       "HelloWorld": {
+         "Type": "Pass",
+         "Result": "Hello World!",
+         "End": true
+       }
+     }
+   }
+
+Use the graph in the Visual Workflow pane to check that your Amazon States Language code describes your state machine correctly.
+
+If you don't see the graph, choose  in the Visual Workflow pane.
+
+
+
+Choose Next.
+
+
+Create or enter an IAM role:
+    To create an IAM role for Step Functions, select Create an IAM role for me, and enter a Name for your role.
+    If you have previously created an IAM role with the correct permissions for your state machine, select Choose an existing IAM role. Select a role from the list, or provide an ARN for that role. 
+Note
+If you delete the IAM role that Step Functions creates, Step Functions can't recreate it later. Similarly, if you modify the role (for example, by removing Step Functions from the principals in the IAM policy), Step Functions can't restore its original settings later. 
+
+
+Select Create state machine.
+
+
+Start a new execution
+After you create your state machine, you can start an execution.
+
+
+On the Helloworld page, choose New execution or, if you have started an execution before, choose Start execution.
+
+
+(Optional) To help identify your execution, you can specify an ID for it in the Enter an execution name box. If you don't enter an ID, Step Functions generates a unique ID automatically.
+Note
+Step Functions allows you to create state machine, execution, and activity names that contain non-ASCII characters. These non-ASCII names don't work with Amazon CloudWatch. To ensure that you can track CloudWatch metrics, choose a name that uses only ASCII characters.
+
+
+On the New execution page, choose Start execution.
+
+
+A new execution of your state machine starts, and a new page showing your running execution is displayed.
+
+
+(Optional) In the Execution Details section, choose the Info tab to view the Execution Status and the Started and Closed timestamps.
+
+
+To view the results of your execution, choose the Output tab.
+
+
+
+Update a state machine
+You can update your state machine for future executions.
+Note
+State machine updates in Step Functions are eventually consistent. All executions within a few seconds will use the updated definition and roleArn. Executions started immediately after updating a state machine can use the previous state machine definition and roleArn.
+
+
+On the Helloworld page, choose Edit.
+
+
+In the Code pane on the Edit page, edit the Amazon States Language description of the state machine. Update the Result to read Hello World has been updated!
+
+
+{
+     "Comment": "A Hello World example of the Amazon States Language using a Pass state",
+     "StartAt": "HelloWorld",
+     "States": {
+       "HelloWorld": {
+         "Type": "Pass",
+         "Result": "Hello World has been updated!",
+         "End": true
+       }
+     }
+   }
+
+
+(Optional) Select a new AWS Identity and Access Management (IAM) role from the IAM role for executions list.
+Note
+You can also choose Create new role to create an IAM role. For more information, see Creating IAM Roles for AWS Step Functions.
+
+
+Choose Save, and then choose Start execution.
+
+
+On the New execution page, choose Start Execution.
+
+
+To view the results of your execution, select the HelloWorld state in the Visual workflow, and expand the Output section under Step details.
+
+Note
+The output text matches your newly updated state machine.
+
+
+Next Steps
+Now that you've created a simple state machine using a Pass state, try the following:
+ Create a Lambda State Machine
+ Create a Lambda State Machine Using AWS CloudFormation
+ Create an Activity State Machine
+ Handle Error Conditions Using a State Machine
+ Start a State Machine Using Amazon CloudWatch Events
+ Create a Step Functions API Using Amazon API Gateway

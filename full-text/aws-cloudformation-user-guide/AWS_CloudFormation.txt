@@ -1,0 +1,7 @@
+CloudFormation resource type reference
+Resource types
+ AWS::CloudFormation::CustomResource
+ AWS::CloudFormation::Macro
+ AWS::CloudFormation::Stack
+ AWS::CloudFormation::WaitCondition
+ AWS::CloudFormation::WaitConditionHandle

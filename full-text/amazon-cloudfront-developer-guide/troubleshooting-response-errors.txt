@@ -1,0 +1,10 @@
+Troubleshooting Error Responses from Your Origin
+If CloudFront requests an object from your origin, and the origin returns an HTTP 4xx or 5xx status code, there's a problem with communication between CloudFront and your origin. The following topics describe common causes for some of these HTTP status codes, and some possible solutions.
+Topics
+ HTTP 400 Status Code (Bad Request)
+ HTTP 500 Status Code (Lambda Execution Error)
+ HTTP 502 Status Code (Bad Gateway)
+ HTTP 502 Status Code (Lambda Validation Error)
+ HTTP 503 Status Code (Lambda Limit Exceeded)
+ HTTP 503 Status Code (Service Unavailable)
+ HTTP 504 Status Code (Gateway Timeout)

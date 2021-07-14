@@ -1,0 +1,51 @@
+Document History
+The following table describes important changes in each release the Amazon RDS on VMware User Guide after October 2019. For notification about updates to this documentation, you can subscribe to an RSS feed. For information about Amazon Relational Database Service (Amazon RDS), see the  Amazon Relational Database Service User Guide.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Read replica support
+RDS on VMware now supports creating read replicas for MySQL and PostgreSQL DB instances. For more information, see Creating Read Replicas.
+June 18, 2020
+
+
+DB engine upgrade supported for PostgreSQL DB instances
+RDS on VMware now supports upgrading PostgreSQL DB instances from release from 10.9-R1 to release 10.10-R1. For more information, see  Support for RDS Features in Amazon RDS on VMware.
+May 20, 2020
+
+
+Proxy server support
+RDS on VMware connects with AWS services, such as Amazon CloudWatch and Amazon S3, over HTTPS. RDS on VMware now supports using a proxy server for such external traffic. For more information about using a proxy server, see  Complete the Prerequisites and  Onboard Your vSphere Cluster.
+May 12, 2020
+
+
+Disconnected status
+RDS on VMware now displays the Disconnected status if Amazon RDS can't reach your custom AZ. For more information, see  Custom AZ Is Disconnected.
+February 12, 2020
+
+
+
+Earlier Updates
+The following table describes important changes to the Amazon RDS on VMware User Guide before November 2019.
+
+
+
+
+Change
+Description
+Date Changed
+
+
+
+
+New guide
+This is the first release of the Amazon RDS on VMware User Guide.
+October 16, 2019
+
+

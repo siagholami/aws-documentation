@@ -1,0 +1,27 @@
+AWS::CodePipeline::CustomActionType ArtifactDetails
+Returns information about the details of an artifact.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MaximumCount](#cfn-codepipeline-customactiontype-artifactdetails-maximumcount)" : Integer,
+  "[MinimumCount](#cfn-codepipeline-customactiontype-artifactdetails-minimumcount)" : Integer
+}
+YAML
+[MaximumCount](#cfn-codepipeline-customactiontype-artifactdetails-maximumcount): Integer
+  [MinimumCount](#cfn-codepipeline-customactiontype-artifactdetails-minimumcount): Integer
+Properties
+MaximumCount 
+The maximum number of artifacts allowed for the action type.
+Required: Yes
+Type: Integer
+Minimum: 0
+Maximum: 5
+Update requires: No interruption
+MinimumCount 
+The minimum number of artifacts allowed for the action type.
+Required: Yes
+Type: Integer
+Minimum: 0
+Maximum: 5
+Update requires: No interruption

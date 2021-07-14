@@ -1,0 +1,15 @@
+AWS Glue resource type reference
+Resource types
+ AWS::Glue::Classifier
+ AWS::Glue::Connection
+ AWS::Glue::Crawler
+ AWS::Glue::Database
+ AWS::Glue::DataCatalogEncryptionSettings
+ AWS::Glue::DevEndpoint
+ AWS::Glue::Job
+ AWS::Glue::MLTransform
+ AWS::Glue::Partition
+ AWS::Glue::SecurityConfiguration
+ AWS::Glue::Table
+ AWS::Glue::Trigger
+ AWS::Glue::Workflow

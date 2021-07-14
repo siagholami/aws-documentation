@@ -1,0 +1,6 @@
+Allowing AWS Elemental MediaPackage to Access Other AWS Services
+Some features require you to allow MediaPackage to access other AWS services, such as Amazon Simple Storage Service (Amazon S3) and Secrets Manager. To allow this access, create an IAM role and policy with the appropriate permissions. The following steps describe how to create roles and policies for MediaPackage features.
+Topics
+ Step 1: Create a Policy
+ Step 2: Create a Role
+ Step 3: Modify the Trust Relationship

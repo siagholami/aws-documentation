@@ -1,0 +1,12 @@
+AWS Glue Scala LongNode APIs
+Package: com.amazonaws.services.glue.types
+LongNode Case Class
+LongNode
+case class LongNode extends ScalarNode(value, TypeCode.LONG)  (
+           value : Long )
+LongNode val Fields
+
+ordering
+
+LongNode def Methods
+def equals( other : Any )

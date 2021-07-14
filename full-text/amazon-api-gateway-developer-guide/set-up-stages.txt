@@ -1,0 +1,6 @@
+Setting up a stage for a REST API
+A stage is a named reference to a deployment, which is a snapshot of the API. You use a Stage to manage and optimize a particular deployment. For example, you can configure stage settings to enable caching, customize request throttling, configure logging, define stage variables, or attach a canary release for testing. 
+Topics
+ Setting up a stage using the API Gateway console
+ Setting up tags for an API stage in API Gateway
+ Setting up stage variables for a REST API deployment

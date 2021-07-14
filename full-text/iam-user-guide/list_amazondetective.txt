@@ -1,0 +1,186 @@
+Actions, resources, and condition keys for Amazon Detective
+Amazon Detective (service prefix: detective) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Amazon Detective
+ Resource types defined by Amazon Detective
+ Condition keys for Amazon Detective
+Actions defined by Amazon Detective
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AcceptInvitation 
+Grants permission to accept an invitation to become a member of a behavior graph
+Write
+ Graph* 
+
+
+
+
+ CreateGraph 
+Grants permission to create a behavior graph and begin to aggregate security information
+Write
+
+
+
+
+
+ CreateMembers 
+Grants permission to request the membership of one or more accounts in a behavior graph managed by this account
+Write
+ Graph* 
+
+
+
+
+ DeleteGraph 
+Grants permission to delete a behavior graph and stop aggregating security information
+Write
+ Graph* 
+
+
+
+
+ DeleteMembers 
+Grants permission to remove member accounts from a behavior graph managed by this account
+Write
+ Graph* 
+
+
+
+
+ DisassociateMembership 
+Grants permission to remove the association of this account with a behavior graph
+Write
+ Graph* 
+
+
+
+
+GetFreeTrialEligibility [permission only]
+Grants permission to retrieve a behavior graph's eligibility for a free trial period
+Read
+ Graph* 
+
+
+
+
+GetGraphIngestState [permission only]
+Grants permission to retrieve the data ingestion state of a behavior graph
+Read
+ Graph* 
+
+
+
+
+ GetMembers 
+Grants permission to retrieve details on specified members of a behavior graph
+Read
+ Graph* 
+
+
+
+
+GetPricingInformation [permission only]
+Grants permission to retrieve information about Amazon Detective's pricing
+Read
+
+
+
+
+
+GetUsageInformation [permission only]
+Grants permission to list usage information of a behavior graph
+Read
+ Graph* 
+
+
+
+
+ ListGraphs 
+Grants permission to list behavior graphs managed by this account
+List
+
+
+
+
+
+ ListInvitations 
+Grants permission to retrieve details on the behavior graphs to which this account has been invited to join
+List
+
+
+
+
+
+ ListMembers 
+Grants permission to retrieve details on all members of a behavior graph
+List
+ Graph* 
+
+
+
+
+ RejectInvitation 
+Grants permission to reject an invitation to become a member of a behavior graph
+Write
+ Graph* 
+
+
+
+
+SearchGraph [permission only]
+Grants permission to search the data stored in a behavior graph
+Read
+ Graph* 
+
+
+
+
+ StartMonitoringMember 
+Grants permission to start data ingest for a member account that has a status of ACCEPTED_BUT_DISABLED.
+Write
+ Graph* 
+
+
+
+
+
+Resource types defined by Amazon Detective
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ Graph 
+arn:${Partition}:detective:${Region}:${Account}:graph:${ResourceId}
+
+
+
+
+Condition keys for Amazon Detective
+Detective has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

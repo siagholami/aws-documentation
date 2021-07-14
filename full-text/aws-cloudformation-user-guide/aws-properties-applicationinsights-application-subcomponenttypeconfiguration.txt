@@ -1,0 +1,24 @@
+AWS::ApplicationInsights::Application SubComponentTypeConfiguration
+The AWS::ApplicationInsights::Application SubComponentTypeConfiguration property type specifies the sub-component configurations for a component.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SubComponentConfigurationDetails](#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponentconfigurationdetails)" : SubComponentConfigurationDetails,
+  "[SubComponentType](#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponenttype)" : String
+}
+YAML
+[SubComponentConfigurationDetails](#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponentconfigurationdetails): 
+    SubComponentConfigurationDetails
+  [SubComponentType](#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponenttype): String
+Properties
+SubComponentConfigurationDetails 
+The configuration settings of the sub-components.
+Required: Yes
+Type: SubComponentConfigurationDetails
+Update requires: No interruption
+SubComponentType 
+The sub-component type.
+Required: Yes
+Type: String
+Update requires: No interruption

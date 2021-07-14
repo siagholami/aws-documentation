@@ -1,0 +1,19 @@
+
+
+TimeRange
+Provides a range of time.
+Contents
+EndTime 
+The UNIX datetime of the end of the time range.
+Type: Timestamp
+Required: No
+StartTime 
+The UNIX datetime of the beginning of the time range.
+Type: Timestamp
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

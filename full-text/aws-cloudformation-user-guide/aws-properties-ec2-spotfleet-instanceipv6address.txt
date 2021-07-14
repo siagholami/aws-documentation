@@ -1,0 +1,16 @@
+AWS::EC2::SpotFleet InstanceIpv6Address
+Describes an IPv6 address.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Ipv6Address](#cfn-ec2-spotfleet-instanceipv6address-ipv6address)" : String
+}
+YAML
+[Ipv6Address](#cfn-ec2-spotfleet-instanceipv6address-ipv6address): String
+Properties
+Ipv6Address 
+The IPv6 address.
+Required: Yes
+Type: String
+Update requires: No interruption

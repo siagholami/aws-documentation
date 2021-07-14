@@ -1,0 +1,16 @@
+Material Nodes
+You can use the Script Canvas editor to interact with materials in two ways. The following section describes how to access and manipulate materials directly, which affects all entities to which the material is applied. For example, you can load materials, get and set parameters, and apply the material to entities. Changes made to a material affect all entities that use that material.
+You can also use the Script Canvas editor to manipulate materials on a single entity. For more information, see Material Owner Nodes.
+Topics
+ Clone
+ Find by Name
+ Find Sub-Material
+ Get Param Color
+ Get Param Number
+ Get Param Vector3
+ Get Param Vector4
+ Load by Name
+ Set Param Color
+ Set Param Number
+ Set Param Vector3
+ Set Param Vector4

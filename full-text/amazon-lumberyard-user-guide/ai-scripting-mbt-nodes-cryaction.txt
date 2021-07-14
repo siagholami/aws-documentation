@@ -1,0 +1,11 @@
+CryAction Nodes
+These nodes provide MBT functionality for CryAction features.
+AnimateFragment
+Plays a Mannequin animation fragment and waits until the animation finishes. 
+Parameters
+name
+Name of the animation to play.
+Success/Failure
+The node SUCCEEDS if the animation is correctly played or if no operation was needed. The node FAILS if an error occurs while trying to queue the animation request.
+Example
+<AnimateFragment name="SomeFragmentName" />

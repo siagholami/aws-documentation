@@ -1,0 +1,26 @@
+AWS::Glue::Table Order
+Specifies the sort order of a sorted column.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Column](#cfn-glue-table-order-column)" : String,
+  "[SortOrder](#cfn-glue-table-order-sortorder)" : Integer
+}
+YAML
+[Column](#cfn-glue-table-order-column): String
+  [SortOrder](#cfn-glue-table-order-sortorder): Integer
+Properties
+Column 
+The name of the column.
+Required: Yes
+Type: String
+Update requires: No interruption
+SortOrder 
+Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
+Required: Yes
+Type: Integer
+Update requires: No interruption
+See also
+
+Order Structure in the AWS Glue Developer Guide 

@@ -1,0 +1,14 @@
+Tutorial: Hello AWS Cloud9 (CLI)
+This tutorial provides a first look at AWS Cloud9. It uses the AWS Command Line Interface (AWS CLI), which enables you to set up and tear down the resources you need by using a command line instead of a graphical user interface.
+In this tutorial, you set up an AWS Cloud9 development environment and then use the AWS Cloud9 IDE to code, run, and debug your first application.
+This tutorial should take approximately an hour.
+Warning
+Completing this tutorial might result in charges to your AWS account. These include possible charges for Amazon EC2. For more information, see Amazon EC2 Pricing.
+Prerequisites
+To successfully complete this tutorial, you must first complete the steps in Setting up AWS Cloud9.
+Steps
+
+Step 1: Create an Environment
+Step 2: Basic Tour of the IDE
+Step 3: Clean Up
+Related Information

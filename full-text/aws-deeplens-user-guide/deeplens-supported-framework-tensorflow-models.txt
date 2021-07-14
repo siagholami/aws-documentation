@@ -1,0 +1,39 @@
+Supported TensorFlow Models
+AWS DeepLens supports the following deep learning models that have been trained with TensorFlow.
+
+
+
+Supported TensorFlow Models
+Model
+Description
+
+
+
+
+Inception
+An image classification model trained on the ImageNet dataset using TensorFlow
+
+
+
+MobileNet
+An image classification model trained on the ImageNet dataset using TensorFlow
+
+
+
+NasNet
+An image classification model trained on the ImageNet dataset using TensorFlow
+
+
+
+ResNet
+An image classification model trained on the ImageNet dataset using TensorFlow
+
+
+
+VGG
+An image classification model trained on the ImageNet dataset using TensorFlow
+
+
+
+
+For more information about TensorFlow models, see tensorflow/models on GitHub. 

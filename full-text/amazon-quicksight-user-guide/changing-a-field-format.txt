@@ -1,0 +1,9 @@
+Changing a Field Format
+You can change the format of a field within the context of an analysis. The formatting options available for fields vary based on the field's data type.
+Use menu options in the Field list pane or the visual field wells to make simple format changes, or use the Format Data pane to make more extensive formatting changes.
+Topics
+ Format a Date Field
+ Format a Number Field
+ Format a Currency Field
+ Format a Percent Field
+ Return a Field's Format to Default Settings

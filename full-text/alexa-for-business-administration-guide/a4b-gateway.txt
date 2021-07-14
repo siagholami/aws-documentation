@@ -1,0 +1,34 @@
+Use the Alexa for Business Gateway
+The Alexa for Business gateway enables you to connect Alexa for Business to your Cisco TelePresence and Polycom Group Series endpoints to control meetings with your voice. The gateway software runs on your on-premises hardware and securely proxies conferencing directives from Alexa for Business to your Cisco endpoint. The gateway is available for both Windows and Linux.
+The gateway needs two pairs of AWS credentials to communicate with Alexa for Business. We recommend that you create two limited-access IAM users for your Alexa for Business gateways, one for installing the gateway and one for operating the gateway.
+To create new IAM users
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Users, Add user.
+
+
+Enter a user name (for example, AlexaforBusinessGatewayInstaller).
+
+
+For Access type, choose Programmatic access.
+
+
+Choose Next, Attach existing policies directly, AlexaForBusinessFullAccess in the list of policies, and then choose Next.
+
+
+Choose Create user.
+
+
+Download and save the IAM access key and secret key. You need them later when you configure the Alexa for Business gateway.
+
+
+To create a second user that is used to run the Alexa for Business gateway, repeat steps 2-7. Enter a user name (for example, AlexaforBusinessGateway) and choose AlexaForBusinessGatewayExecution in the list of policies.
+
+
+Topics
+ Installing the Gateway
+ Running Multiple Gateways
+ Maintaining the Gateway

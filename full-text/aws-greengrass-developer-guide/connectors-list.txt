@@ -1,0 +1,114 @@
+AWS-provided Greengrass connectors
+AWS provides the following connectors that support common AWS IoT Greengrass scenarios. For more information about how connectors work, see the following documentation:
+ Integrate with services and protocols using Greengrass connectors
+ Get started with connectors (console) or Get started with connectors (CLI)
+
+
+
+Connector
+Description
+Supported Lambda runtimes
+Supports No container mode
+
+
+
+
+CloudWatch Metrics
+Publishes custom metrics to Amazon CloudWatch.
+[See the AWS documentation website for more details]
+Yes
+
+
+Device Defender
+Sends system metrics to AWS IoT Device Defender.
+[See the AWS documentation website for more details]
+No
+
+
+Docker Application Deployment
+Runs a Docker Compose file to start a Docker application on the core device.
+[See the AWS documentation website for more details]
+Yes
+
+
+IoT Analytics
+Sends data from devices and sensors to AWS IoT Analytics.
+[See the AWS documentation website for more details]
+Yes
+
+
+IoT SiteWise
+Sends data from devices and sensors to asset properties in AWS IoT SiteWise.
+[See the AWS documentation website for more details]
+Yes
+
+
+Kinesis Firehose
+Sends data to Amazon Kinesis Data Firehose delivery streams.
+[See the AWS documentation website for more details]
+No
+
+
+ML Feedback
+Publishes machine learning model input to the cloud and output to an MQTT topic.
+[See the AWS documentation website for more details]
+No
+
+
+ML Image Classification
+Runs a local image classification inference service. This connector provides versions for several platforms.
+[See the AWS documentation website for more details]
+No
+
+
+ML Object Detection
+Runs a local object detection inference service. This connector provides versions for several platforms.
+[See the AWS documentation website for more details]
+No
+
+
+Modbus-RTU Protocol Adapter
+Sends requests to Modbus RTU devices.
+[See the AWS documentation website for more details]
+No
+
+
+Raspberry Pi GPIO
+Controls GPIO pins on a Raspberry Pi core device.
+[See the AWS documentation website for more details]
+No
+
+
+Serial Stream
+Reads and writes to a serial port on the core device.
+[See the AWS documentation website for more details]
+No
+
+
+ServiceNow MetricBase Integration
+Publishes time series metrics to ServiceNow MetricBase.
+[See the AWS documentation website for more details]
+Yes
+
+
+SNS
+Sends messages to an Amazon SNS topic.
+[See the AWS documentation website for more details]
+Yes
+
+
+Splunk Integration
+Publishes data to Splunk HEC.
+[See the AWS documentation website for more details]
+Yes
+
+
+Twilio Notifications
+Triggers a Twilio text or voice message.
+[See the AWS documentation website for more details]
+Yes
+
+
+
+Note
+We recommend that you upgrade connector versions from Python 2.7 to Python 3.7. Continued support for Python 2.7 connectors depends on AWS Lambda runtime support. For more information, see Runtime support policy in the AWS Lambda Developer Guide.

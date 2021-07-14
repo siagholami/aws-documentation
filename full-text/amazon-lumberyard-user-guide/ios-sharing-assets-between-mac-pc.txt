@@ -1,0 +1,61 @@
+Sharing Assets Between Windows and macOS
+You can build your assets on a Windows computer and then use them in an iOS build. To do so, you must set up sharing between your Windows and macOS computers.
+To set up your Windows computer for sharing assets
+
+
+On your Windows computer, navigate to the lumberyard_version\dev\Cache\ directory.
+
+
+Right-click the Cache directory and choose Properties.
+
+
+In the Properties window, on the Sharing tab, click Advanced Sharing.
+
+
+In the Advanced Sharing window, select the Share this folder check box.
+
+
+(Optional) Click Permissions to set permissions for specific groups or users. Add users who will modify the files on a macOS computer.
+
+
+Click OK.
+
+
+To set up your macOS computer for sharing assets
+
+
+On your macOS computer, rename any Cache directories. For example, rename to Cache.old.
+
+
+In the Finder, choose Go, Connect to Server.
+
+
+For Server Address, type: smb://<IP address or DNS name of Windows computer>/Cache
+
+
+Click Connect.
+
+
+(Optional) To enable your macOS computer to connect to this shared folder on startup, do the following:
+
+
+Launch System Preferences and then choose Users & Groups, Login Items.
+
+
+Click the  button to add a login item.
+
+
+In the Finder, under Shared, select your Windows computer.
+
+
+Select your shared Cache directory and then click Add.
+
+
+In a Terminal window, navigate to the lumberyard_version\dev\ directory.
+
+
+To create a symbolic link to the shared Cache directory, type: sudo ln -s /Volumes/Cache Cache
+
+
+If prompted, type your macOS password.
+

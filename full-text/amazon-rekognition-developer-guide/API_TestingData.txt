@@ -1,0 +1,17 @@
+TestingData
+The dataset used for testing. Optionally, if AutoCreate is set, Amazon Rekognition Custom Labels creates a testing dataset using an 80/20 split of the training dataset.
+Contents
+Assets 
+The assets used for testing.
+Type: Array of Asset objects
+Required: No
+AutoCreate 
+If specified, Amazon Rekognition Custom Labels creates a testing dataset with an 80/20 split of the training dataset.
+Type: Boolean
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

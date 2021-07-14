@@ -1,0 +1,10 @@
+internet-gateway-authorized-vpc-only
+Checks that Internet gateways (IGWs) are only attached to an authorized Amazon Virtual Private Cloud (VPCs). The rule is NON_COMPLIANT if IGWs are not attached to an authorized VPC. 
+Identifier: INTERNET_GATEWAY_AUTHORIZED_VPC_ONLY
+Trigger type: Configuration changes 
+AWS Region: All supported AWS Regions except Africa (Cape Town) and Europe (Milan)
+Parameters:
+AuthorizedVpcIds
+Comma-separated list of the authorized VPC IDs with attached IGWs. If parameter is not provided all attached IGWs will be NON_COMPLIANT. 
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

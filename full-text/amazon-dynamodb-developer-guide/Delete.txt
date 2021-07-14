@@ -1,0 +1,32 @@
+Deleting a DynamoDB Table Backup
+This section describes how to use the AWS Management Console or the AWS Command Line Interface (AWS CLI) to delete an Amazon DynamoDB table backup. 
+Note
+If you want to use the AWS CLI, you have to configure it first. For more information, see Using the AWS CLI.
+Topics
+ Deleting a Table Backup (Console)
+ Deleting a Table Backup (AWS CLI)
+Deleting a Table Backup (Console)
+The following procedure shows how to use the console to delete the MusicBackup that is created in the Backing Up a DynamoDB Table tutorial.
+To delete a backup
+
+
+Sign in to the AWS Management Console and open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Backups.
+
+
+In the list of backups, choose MusicBackup.
+
+
+
+Choose Delete backup:
+
+
+
+Choose Delete to delete the backup.
+
+Deleting a Table Backup (AWS CLI)
+The following example deletes a backup for an existing table Music table using the AWS CLI.
+aws dynamodb delete-backup \
+--backup-arn arn:aws:dynamodb:us-east-1:123456789012:table/Music/backup/01489602797149-73d8d5bc

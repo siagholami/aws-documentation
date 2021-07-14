@@ -1,0 +1,9 @@
+Managing Amazon SQS queues (console)
+After you create and configure your queue, you can use the Amazon SQS console to send messages to the queue and retrieve then from the queue.
+Topics
+ Sending messages
+ Message attributes
+ Receiving and deleting a message
+ Purging a queue
+ Deleting a queue
+ Confirming that a queue is empty

@@ -1,0 +1,28 @@
+Editing static routes for a Site-to-Site VPN connection
+For a Site-to-Site VPN connection on a virtual private gateway that's configured for static routing, you can add, modify, or remove the static routes for your VPN configuration. 
+To add, modify, or remove a static route
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Site-to-Site VPN Connections.
+
+
+Choose Static Routes, Edit. 
+
+
+Modify your existing static IP prefixes, or choose Remove to delete them. Choose Add Another Rule to add a new IP prefix to your configuration. When you are done, choose Save.
+
+
+Note
+If you have not enabled route propagation for your route table, you must manually update the routes in your route table to reflect the updated static IP prefixes in your Site-to-Site VPN connection. For more information, see (Virtual private gateway) Enable route propagation in your route table.
+For a Site-to-Site VPN connection on a transit gateway, you add, modify, or remove the static routes in the transit gateway route table. For more information, see Transit gateway route tables.
+To add a static route using the command line or API
+ CreateVpnConnectionRoute (Amazon EC2 Query API)
+ create-vpn-connection-route (AWS CLI)
+ New-EC2VpnConnectionRoute (AWS Tools for Windows PowerShell)
+To delete a static route using the command line or API
+ DeleteVpnConnectionRoute (Amazon EC2 Query API)
+ delete-vpn-connection-route (AWS CLI)
+ Remove-EC2VpnConnectionRoute (AWS Tools for Windows PowerShell)

@@ -1,0 +1,127 @@
+AWS resource and property types reference
+This section contains reference information for all AWS resource and property types that are supported by AWS CloudFormation.
+Resource type identifiers always take the following form:
+service-provider::service-name::data-type-name
+Topics
+ AccessAnalyzer
+ ACMPCA
+ ASK
+ AmazonMQ
+ Amplify Console
+ API Gateway
+ API Gateway V2
+ AppConfig
+ Application Auto Scaling
+ ApplicationInsights
+ App Mesh
+ AppStream 2.0
+ AppSync
+ Athena
+ AWS Auto Scaling
+ Amazon EC2 Auto Scaling
+ AWS Backup
+ AWS Batch
+ AWS Budgets
+ Cassandra
+ Certificate Manager
+ Chatbot
+ AWS Cloud9
+ CloudFormation
+ CloudFront
+ AWS Cloud Map
+ CloudTrail
+ CloudWatch
+ CloudWatch Logs
+ CodeBuild
+ CodeCommit
+ CodeDeploy
+ CodeGuruProfiler
+ CodePipeline
+ CodeStar
+ CodeStarConnections
+ CodeStarNotifications
+ Amazon Cognito
+ Config
+ CE
+ AWS Data Pipeline
+ DAX
+ Detective
+ Directory Service
+ DLM
+ DMS
+ Amazon DocumentDB
+ DynamoDB
+ EC2
+ Amazon ECR
+ ECS
+ EFS
+ EKS
+ ElastiCache
+ Elasticsearch
+ Elastic Beanstalk
+ Elastic Load Balancing
+ ElasticLoadBalancingV2
+ Amazon EMR
+ Amazon EventBridge
+ EventSchemas
+ FMS
+ FSx
+ GameLift
+ GlobalAccelerator
+ AWS Glue
+ GroundStation
+ GuardDuty
+ IAM
+ ImageBuilder
+ Inspector
+ IoT
+ IoT1Click
+ IoT Analytics
+ IoTEvents
+ AWS IoT Greengrass
+ AWS IoT Things Graph
+ Amazon Kinesis
+ KinesisAnalytics
+ Amazon Kinesis Data Analytics V2
+ Amazon Kinesis Data Firehose
+ KMS
+ LakeFormation
+ Lambda
+ Macie
+ ManagedBlockchain
+ MediaConvert
+ MediaLive
+ MediaStore
+ MSK
+ Amazon Neptune
+ NetworkManager
+ OpsWorks
+ OpsWorks-CM
+ Pinpoint
+ PinpointEmail
+ QLDB
+ RAM
+ RDS
+ Amazon Redshift
+ ResourceGroups
+ RoboMaker
+ Route 53
+ Route 53 Resolver
+ Amazon S3
+ Amazon SageMaker
+ Secrets Manager
+ Service Catalog
+ SecurityHub
+ SES
+ Amazon SimpleDB
+ Amazon SNS
+ Amazon SQS
+ Step Functions
+ Systems Manager
+ Synthetics
+ AWS Transfer Family
+ WAF
+ WAFv2
+ WAF Regional
+ WorkSpaces
+ Shared property types

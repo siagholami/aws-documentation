@@ -1,0 +1,6 @@
+Setting up CloudWatch Events rules
+To set up CloudWatch Events rules, you create a rule that links AWS Elemental MediaConvert and the service that responds to your job status change, such as Amazon Simple Notification Service (SNS) or AWS Lambda. The following illustration shows these two parts of CloudWatch Events rules. 
+
+For a tutorial on setting up a CloudWatch rule with AWS Elemental MediaConvert, see Tutorial: Setting up email notifications for failed jobs.
+For a list of the events that MediaConvert sends in the CloudWatch Events event stream, see Events that AWS Elemental MediaConvert sends to CloudWatch.
+For more general information about using CloudWatch Events, see the Amazon CloudWatch Events User Guide.

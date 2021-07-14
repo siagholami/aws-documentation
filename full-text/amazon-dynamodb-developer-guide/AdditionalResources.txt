@@ -1,0 +1,38 @@
+Additional Amazon DynamoDB Resources
+Topics
+ Blog Posts, Repositories, and Guides
+ Data Modeling and Design Patterns
+ Advanced Design Patterns with Rick Houlihan
+ Training Courses
+ Tools for Coding and Visualization
+Blog Posts, Repositories, and Guides
+
+How to switch from RDBMS to DynamoDB in 20 easy steps — An irreverent list from Jeremy Daly of useful steps for learning data modeling.
+DynamoDB JavaScript DocumentClient cheat sheet — A cheat sheet to help you get started building applications with DynamoDB in a Node.js or JavaScript environment.
+From relational database to single DynamoDB table: A step-by-step exploration — An in-depth post from Forrest Brazeal that includes a step-by-step approach for moving to a DynamoDB-style, one-table design.
+
+Data Modeling and Design Patterns
+
+AWS re:Invent 2019: Data modeling with DynamoDB — A talk by Alex DeBrie that gets you started on the principles of DynamoDB data modeling.
+
+Advanced Design Patterns with Rick Houlihan
+
+AWS re:Invent 2019: Advanced design patterns
+Jeremy Daly shares his 12 key takeaways from this session.
+AWS re:Invent 2018: Advanced design patterns
+AWS re:Invent 2017: Advanced design patterns
+
+Note
+Each session covers different use cases and examples.
+Training Courses
+
+DynamoDB Deep-Dive Course — A course from Linux Academy with help from the Amazon DynamoDB team.
+Amazon DynamoDB: Building NoSQL Database-Driven Applications — A course from the AWS Training and Certification team hosted on edX.
+AWS DynamoDB — From Beginner to Pro — A course from A Cloud Guru.
+
+Tools for Coding and Visualization
+
+NoSQL Workbench for Amazon DynamoDB — A unified, visual tool that provides data modeling, data visualization, and query development features to help you design, create, query, and manage DynamoDB tables.
+DynamoDB Toolbox — A project from Jeremy Daly that provides helpful utilities for working with data modeling and in JavaScript and Node.js.
+Dynobase — A desktop tool that makes it easy to see and work with your DynamoDB tables, create app code, and edit records with real-time validation.
+DynamoDB Streams Processor — A simple tool that makes working with DynamoDB Streams super easy.

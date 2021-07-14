@@ -1,0 +1,3 @@
+Amazon Personalize Runtime
+The following data types are supported by Amazon Personalize Runtime:
+  PredictedItem 

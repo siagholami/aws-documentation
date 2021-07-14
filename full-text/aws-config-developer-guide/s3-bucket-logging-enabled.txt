@@ -1,0 +1,12 @@
+s3-bucket-logging-enabled
+Checks whether logging is enabled for your S3 buckets.
+Identifier: S3_BUCKET_LOGGING_ENABLED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+targetBucket 
+ Target S3 bucket for storing server access logs. 
+targetPrefix 
+ Prefix of the target S3 bucket for storing server access logs. 
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

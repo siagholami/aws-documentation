@@ -1,0 +1,78 @@
+AWS::EC2::ClientVpnRoute
+Specifies a network route to add to a Client VPN endpoint. Each Client VPN endpoint has a route table that describes the available destination network routes. Each route in the route table specifies the path for traffic to specifc resources or networks.
+A target network association must be created before you can specify a route. If you're setting up all the components of a Client VPN endpoint at the same time, you must use the DependsOn Attribute to declare a dependency on the AWS::EC2::ClientVpnTargetNetworkAssociation resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::ClientVpnRoute",
+  "Properties" : {
+      "[ClientVpnEndpointId](#cfn-ec2-clientvpnroute-clientvpnendpointid)" : String,
+      "[Description](#cfn-ec2-clientvpnroute-description)" : String,
+      "[DestinationCidrBlock](#cfn-ec2-clientvpnroute-destinationcidrblock)" : String,
+      "[TargetVpcSubnetId](#cfn-ec2-clientvpnroute-targetvpcsubnetid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::ClientVpnRoute
+Properties: 
+  [ClientVpnEndpointId](#cfn-ec2-clientvpnroute-clientvpnendpointid): String
+  [Description](#cfn-ec2-clientvpnroute-description): String
+  [DestinationCidrBlock](#cfn-ec2-clientvpnroute-destinationcidrblock): String
+  [TargetVpcSubnetId](#cfn-ec2-clientvpnroute-targetvpcsubnetid): String
+Properties
+ClientVpnEndpointId 
+The ID of the Client VPN endpoint to which to add the route.
+Required: Yes
+Type: String
+Update requires: Replacement
+Description 
+A brief description of the route.
+Required: No
+Type: String
+Update requires: Replacement
+DestinationCidrBlock 
+The IPv4 address range, in CIDR notation, of the route destination. For example:
+ To add a route for Internet access, enter 0.0.0.0/0 
+ To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range
+ To add a route for an on-premises network, enter the AWS Site-to-Site VPN connection's IPv4 CIDR range
+Route address ranges cannot overlap with the CIDR range specified for client allocation.
+Required: Yes
+Type: String
+Update requires: Replacement
+TargetVpcSubnetId 
+The ID of the subnet through which you want to route traffic. The specified subnet must be an existing target network of the Client VPN endpoint.
+Required: Yes
+Type: String
+Update requires: Replacement
+Examples
+Adding a route to a Client VPN endpoint
+The following example adds a route for internet access to a Client VPN endpoint.
+YAML
+myRoute:
+  Type: "AWS::EC2::ClientVpnRoute"
+  Properties:
+    ClientVpnEndpointId: 
+      Ref: myClientVpnEndpoint
+    TargetVpcSubnetId: 
+      Ref: mySubnet
+    DestinationCidrBlock: "0.0.0.0/0"
+    Description: "myRoute"
+JSON
+"myRoute": {
+    "Type": "AWS::EC2::ClientVpnRoute",
+    "Properties": {
+        "ClientVpnEndpointId": {
+            "Ref": "myClientVpnEndpoint"
+        },
+        "TargetVpcSubnetId": {
+            "Ref": "mySubnet"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "Description": "myRoute"
+    }
+}
+See also
+
+Getting Started with Client VPN in the AWS Client VPN Administrator Guide
+Routes in the AWS Client VPN Administrator Guide

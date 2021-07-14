@@ -1,0 +1,31 @@
+What Is Amazon MQ?
+Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to migrate to a message broker in the cloud. A message broker allows software applications and components to communicate using various programming languages, operating systems, and formal messaging protocols.
+
+Amazon MQ works with your existing applications and services without the need to manage, operate, or maintain your own messaging system.
+Topics
+ What Are the Main Benefits of Amazon MQ?
+ How is Amazon MQ Different from Amazon SQS or Amazon SNS?
+ How Can I Get Started with Amazon MQ?
+ We Want to Hear from You
+What Are the Main Benefits of Amazon MQ?
+
+Security – You control who can create and modify brokers and who can send messages to and receive messages from an ActiveMQ broker. Amazon MQ encrypts messages at rest and in transit using encryption keys that it manages and stores securely.
+Durability – To ensure the safety of your messages, Amazon MQ stores them on redundant shared storage.
+Availability – You can create a single-instance broker (comprised of one broker in one Availability Zone), or an active/standby broker for high availability (comprised of two brokers in two different Availability Zones). For either broker type, Amazon MQ automatically provisions infrastructure for high durability.
+Compatibility – Amazon MQ supports industry-standard APIs and protocols so you can migrate from your existing message broker without rewriting application code.
+Operation offloading – You can configure many aspects of your ActiveMQ broker, such as predefined destinations, destination policies, authorization policies, and plugins. Amazon MQ controls some of these configuration elements, such as network transports and storage, simplifying the maintenance and administration of your messaging system in the cloud.
+Simplified authentication – You can authenticate Amazon MQ users through the credentials stored in your lightweight directory access protocol (LDAP) server. You can also add, delete, and modify Amazon MQ users and assign permissions to topics and queues through it. Management operations like creating, updating and deleting brokers still require IAM credentials and are not integrated with LDAP. 
+
+How Is Amazon MQ Different from Amazon SQS or Amazon SNS?
+Amazon MQ is a managed message broker service that provides compatibility with many popular message brokers. We recommend Amazon MQ for migrating applications from existing message brokers that rely on compatibility with APIs such as JMS or protocols such as AMQP, MQTT, OpenWire, and STOMP.
+Amazon SQS and Amazon SNS are queue and topic services that are highly scalable, simple to use, and don't require you to set up message brokers. We recommend these services for new applications that can benefit from nearly unlimited scalability and simple APIs.
+How Can I Get Started with Amazon MQ?
+
+To create your first broker with Amazon MQ, see Getting Started with Amazon MQ.
+To discover the functionality and architecture of Amazon MQ, see How Amazon MQ Works.
+To find out the guidelines and caveats that will help you make the most of Amazon MQ, see Best Practices for Amazon MQ.
+To learn about Amazon MQ REST APIs, see the Amazon MQ REST API Reference.
+To learn about Amazon MQ AWS CLI commands, see Amazon MQ in the AWS CLI Command Reference.
+
+We Want to Hear from You
+We welcome your feedback. To contact us, visit the Amazon MQ Discussion Forum.

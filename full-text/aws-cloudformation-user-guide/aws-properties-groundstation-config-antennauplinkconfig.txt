@@ -1,0 +1,54 @@
+AWS::GroundStation::Config AntennaUplinkConfig
+Provides information about how AWS Ground Station should configure an antenna for uplink during a contact. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SpectrumConfig](#cfn-groundstation-config-antennauplinkconfig-spectrumconfig)" : SpectrumConfig,
+  "[TargetEirp](#cfn-groundstation-config-antennauplinkconfig-targeteirp)" : Eirp
+}
+YAML
+[SpectrumConfig](#cfn-groundstation-config-antennauplinkconfig-spectrumconfig): 
+    SpectrumConfig
+  [TargetEirp](#cfn-groundstation-config-antennauplinkconfig-targeteirp): 
+    Eirp
+Properties
+SpectrumConfig 
+ Defines the spectrum configuration. 
+Required: Yes
+Type: SpectrumConfig
+Update requires: No interruption
+TargetEirp 
+ The equivalent isotropically radiated power (EIRP) to use for uplink transmissions. Valid values are between 20.0 to 50.0 dBW. 
+Required: Yes
+Type: Eirp
+Update requires: No interruption
+Examples
+Create an AntennaUplinkConfig
+The following example creates a Ground Station AntennaUplinkConfig
+JSON
+{
+  "AntennaUplinkConfig": {
+    "SpectrumConfig": {
+    "CenterFrequency": {
+      "Value": 2072.5,
+      "Units": "MHz"
+    },
+    "Polarization": "RIGHT_HAND"
+    },
+    "TargetEirp": {
+      "Value": 20,
+      "Units": "dBW"
+    }
+  }
+}
+YAML
+AntennaUplinkConfig:
+  SpectrumConfig:
+    CenterFrequency:
+      Value: 2072.5
+      Units: MHz
+    Polarization: RIGHT_HAND
+  TargetEirp:
+    Value: 20.0
+    Units: dBW

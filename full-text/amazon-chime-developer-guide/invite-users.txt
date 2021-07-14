@@ -1,0 +1,11 @@
+Invite multiple users
+The following example shows how to invite multiple users to an Amazon Chime Team account.
+```
+List emails = new ArrayList<>();
+emails.add("janedoe@example.com");
+emails.add("richardroe@example.net");
+InviteUsersRequest inviteUsersRequest = new InviteUsersRequest()
+    .withAccountId("chimeAccountId")
+    .withUserEmailList(emails);
+chime.inviteUsers(inviteUsersRequest);
+```

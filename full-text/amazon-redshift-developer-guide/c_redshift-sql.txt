@@ -1,0 +1,7 @@
+Amazon Redshift SQL
+Topics
+ SQL functions supported on the leader node
+ Amazon Redshift and PostgreSQL
+Amazon Redshift is built around industry-standard SQL, with added functionality to manage very large datasets and support high-performance analysis and reporting of those data.
+Note
+The maximum size for a single Amazon Redshift SQL statement is 16 MB.

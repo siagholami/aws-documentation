@@ -1,0 +1,85 @@
+Broker
+A broker is a message broker environment running on Amazon MQ. It is the basic building block of Amazon MQ. The combined description of the broker instance class (m5, t2) and size (large, micro) is a broker instance type (for example, mq.m5.large). For more information, see Instance Types.
+ A single-instance broker is comprised of one broker in one Availability Zone. The broker communicates with your application and with Amazon EFS (by default) or with Amazon EBS.
+ An active/standby broker is comprised of two brokers in two different Availability Zones, configured in a redundant pair. These brokers communicate synchronously with your application, and with Amazon EFS.
+For more information, see Amazon MQ Broker Architecture.
+You can enable automatic minor version upgrades to new minor versions of the broker engine, as Apache releases new versions. Automatic upgrades occur during the maintenance window defined by the day of the week, the time of day (in 24-hour format), and the time zone (UTC by default).
+For information about creating and managing brokers, see the following:
+ Tutorial: Creating and Configuring an Amazon MQ Broker
+ Brokers
+ Statuses
+Supported Wire-level Protocols
+You can access your brokers by using any programming language that ActiveMQ supports and by enabling TLS explicitly for the following protocols:
+ AMQP
+ MQTT
+ MQTT over WebSocket
+ OpenWire
+ STOMP
+ STOMP over WebSocket
+Attributes
+A broker has several attributes, for example:
+ A name (MyBroker)
+ An ID (b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9)
+ An Amazon Resource Name (ARN) (arn:aws:mq:us-east-2:123456789012:broker:MyBroker:b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9)
+ An ActiveMQ Web Console URL (https://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:8162)
+For more information, see Web Console in the Apache ActiveMQ documentation.
+Important
+If you specify an authorization map which doesn't include the activemq-webconsole group, you can't use the ActiveMQ Web Console because the group isn't authorized to send messages to, or receive messages from, the Amazon MQ broker.
+ Wire-level protocol endpoints:
+   amqpssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:5671
+   mqttssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:8883
+   ssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61617
+Note
+This is an OpenWire endpoint.
+   stompssl://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61614
+   wss://b-1234a5b6-78cd-901e-2fgh-3i45j6k178l9-1.mq.us-east-2.amazonaws.com:61619
+For more information, see Configuring Transports in the Apache ActiveMQ documentation.
+Note
+For an active/standby broker, Amazon MQ provides two ActiveMQ Web Console URLs, but only one URL is active at a time. Likewise, Amazon MQ provides two endpoints for each wire-level protocol, but only one endpoint is active in each pair at a time. The -1 and -2 suffixes denote a redundant pair.
+For a full list of broker attributes, see the following in the Amazon MQ REST API Reference:
+ REST Operation ID: Broker
+ REST Operation ID: Brokers
+ REST Operation ID: Broker Reboot
+Instance Types
+The combined description of the broker instance class (m5, t2) and size (large, micro) is a broker instance type (for example, mq.m5.large). The following table lists the available Amazon MQ broker instance types.
+Important
+You can use Amazon EBS only with the mq.m5 broker instance type family. For more information, see Storage.
+[See the AWS documentation website for more details]
+For more information about throughput considerations, see Choose the Correct Broker Instance Type for the Best Throughput.
+Statuses
+A broker's current condition is indicated by a status. The following table lists the statuses of an Amazon MQ broker.
+
+
+
+Console
+API
+Description
+
+
+
+
+Creation failed
+CREATION_FAILED
+The broker couldn't be created.
+
+
+Creation in progress
+CREATION_IN_PROGRESS
+The broker is currently being created.
+
+
+Deletion in progress
+DELETION_IN_PROGRESS
+The broker is currently being deleted.
+
+
+Reboot in progress
+REBOOT_IN_PROGRESS
+The broker is currently being rebooted.
+
+
+Running
+RUNNING
+The broker is operational.
+
+

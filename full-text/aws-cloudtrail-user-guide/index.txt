@@ -1,0 +1,150 @@
+AWS CloudTrail User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS CloudTrail?
+How CloudTrail Works
+CloudTrail Workflow
+CloudTrail Concepts
+CloudTrail Supported Regions
+CloudTrail Log File Examples
+CloudTrail Supported Services and Integrations
+CloudTrail Unsupported Services
+
+
+Limits in AWS CloudTrail
+Getting Started with AWS CloudTrail Tutorial
+Working with CloudTrail
+Viewing Events with CloudTrail Event History
+Viewing CloudTrail Events in the CloudTrail Console
+Viewing CloudTrail Events with the AWS CLI
+
+
+Viewing CloudTrail Insights Events
+Viewing CloudTrail Insights Events in the CloudTrail Console
+Viewing CloudTrail Insights Events with the AWS CLI
+
+
+Creating a Trail For Your AWS Account
+Creating and Updating a Trail with the Console
+Creating a Trail
+Updating a Trail
+Deleting a Trail
+Turning off Logging for a Trail
+
+
+Creating, Updating, and Managing Trails with the AWS Command Line Interface
+Using create-trail
+Using update-trail
+Managing Trails With the AWS CLI
+
+
+
+
+Creating a Trail for an Organization
+Prepare For Creating a Trail For Your Organization
+Creating a Trail For Your Organization in the Console
+Creating a Trail for an Organization with the AWS Command Line Interface
+
+
+Getting and Viewing Your CloudTrail Log Files
+Finding Your CloudTrail Log Files
+Downloading Your CloudTrail Log Files
+
+
+Configuring Amazon SNS Notifications for CloudTrail
+Controlling User Permissions for CloudTrail
+Tips for Managing Trails
+Managing CloudTrail Costs
+CloudTrail Trail Naming Requirements
+Amazon S3 Bucket Naming Requirements
+AWS KMS Alias Naming Requirements
+
+
+Using AWS CloudTrail with Interface VPC Endpoints
+Working with CloudTrail Log Files
+Create Multiple Trails
+Logging Management Events for Trails
+Logging Data Events for Trails
+Logging Insights Events for Trails
+Receiving CloudTrail Log Files from Multiple Regions
+Monitoring CloudTrail Log Files with Amazon CloudWatch Logs
+Sending Events to CloudWatch Logs
+Creating CloudWatch Alarms with an AWS CloudFormation Template
+Creating CloudWatch Alarms for CloudTrail Events: Examples
+Creating CloudWatch Alarms for CloudTrail Events: Additional Examples
+Configuring Notifications for CloudWatch Logs Alarms
+Stopping CloudTrail from Sending Events to CloudWatch Logs
+CloudWatch Log Group and Log Stream Naming for CloudTrail
+Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring
+
+
+Receiving CloudTrail Log Files from Multiple Accounts
+Setting Bucket Policy for Multiple Accounts
+Turning on CloudTrail in Additional Accounts
+
+
+Sharing CloudTrail Log Files Between AWS Accounts
+Creating a Role
+Creating an Access Policy to Grant Access to Accounts You Own
+Creating an Access Policy to Grant Access to a Third Party
+Assuming a Role
+Stop Sharing CloudTrail Log Files Between AWS Accounts
+
+
+Validating CloudTrail Log File Integrity
+Enabling Log File Integrity Validation for CloudTrail
+Validating CloudTrail Log File Integrity with the AWS CLI
+CloudTrail Digest File Structure
+Custom Implementations of CloudTrail Log File Integrity Validation
+
+
+Using the CloudTrail Processing Library
+Security in AWS CloudTrail
+Data Protection in AWS CloudTrail
+Identity and Access Management for AWS CloudTrail
+How AWS CloudTrail Works with IAM
+AWS CloudTrail Identity-Based Policy Examples
+Amazon S3 Bucket Policy for CloudTrail
+Amazon SNS Topic Policy for CloudTrail
+Troubleshooting AWS CloudTrail Identity and Access
+Using Service-Linked Roles for AWS CloudTrail
+
+
+Compliance Validation for AWS CloudTrail
+Resilience in AWS CloudTrail
+Infrastructure Security in AWS CloudTrail
+Security Best Practices in AWS CloudTrail
+Encrypting CloudTrail Log Files with AWS KMS–Managed Keys (SSE-KMS)
+Granting Permissions to Create a CMK
+Configure AWS KMS Key Policies for CloudTrail
+Default Key Policy Created in CloudTrail Console
+
+
+Updating a Trail to Use Your CMK
+Enabling and disabling CloudTrail log file encryption with the AWS CLI
+
+
+CloudTrail Log Event Reference
+CloudTrail Record Contents
+sharedEventID Example
+
+
+CloudTrail userIdentity Element
+Non-API Events Captured by CloudTrail
+AWS Service Events
+AWS Console Sign-in Events
+
+
+Document History
+AWS Glossary

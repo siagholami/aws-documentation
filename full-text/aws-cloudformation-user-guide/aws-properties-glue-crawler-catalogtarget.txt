@@ -1,0 +1,24 @@
+AWS::Glue::Crawler CatalogTarget
+Specifies an AWS Glue Data Catalog target.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DatabaseName](#cfn-glue-crawler-catalogtarget-databasename)" : String,
+  "[Tables](#cfn-glue-crawler-catalogtarget-tables)" : [ String, ... ]
+}
+YAML
+[DatabaseName](#cfn-glue-crawler-catalogtarget-databasename): String
+  [Tables](#cfn-glue-crawler-catalogtarget-tables): 
+    - String
+Properties
+DatabaseName 
+The name of the database to be synchronized.
+Required: No
+Type: String
+Update requires: No interruption
+Tables 
+A list of the tables to be synchronized.
+Required: No
+Type: List of String
+Update requires: No interruption

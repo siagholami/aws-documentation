@@ -1,0 +1,20 @@
+AWS::EC2::LaunchTemplate Ipv6Add
+Specifies an IPv6 address in an Amazon EC2 launch template.
+Ipv6Add is a property of AWS::EC2::LaunchTemplate NetworkInterface.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Ipv6Address](#cfn-ec2-launchtemplate-ipv6add-ipv6address)" : String
+}
+YAML
+[Ipv6Address](#cfn-ec2-launchtemplate-ipv6add-ipv6address): String
+Properties
+Ipv6Address 
+One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying a number of IPv6 addresses.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ InstanceIpv6AddressRequest in the Amazon Elastic Compute Cloud API Reference 

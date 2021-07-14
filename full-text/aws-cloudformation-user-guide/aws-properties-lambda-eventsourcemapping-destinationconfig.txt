@@ -1,0 +1,23 @@
+AWS::Lambda::EventSourceMapping DestinationConfig
+(Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)" : OnFailure
+}
+YAML
+[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure): 
+    OnFailure
+Properties
+OnFailure 
+The destination configuration for failed invocations.
+Required: No
+Type: OnFailure
+Update requires: No interruption
+Examples
+On-Failure Destination Configuration
+Configure a function to send a record of failed batches to an SQS queue.
+YAML
+DestinationConfig: OnFailure: Destination:
+        arn:aws:sqs:us-east-2:123456789012:dlq

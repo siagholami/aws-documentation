@@ -1,0 +1,28 @@
+Step 3: Start the Instance and Deploy the App
+Now that you have an instance and an app, start the instance and deploy the app to the instance.
+To start the instance and deploy the app
+
+
+Do one of the following:
+    In the service navigation pane, choose Instances:
+
+    On the My Sample Stack (Linux) page, choose Instances:
+
+
+
+On the Instances page, for Node.js App Server, for nodejs-server1, choose start:
+
+
+
+Do not proceed until the online circle is bright green. (If you see a failure message, consult the Debugging and Troubleshooting Guide.)
+
+
+As the instance is setting up, AWS OpsWorks Stacks deploys the app to the instance.
+
+
+Your results should resemble the following screenshot before you continue (if you receive a failure message, you may want to consult the Debugging and Troubleshooting Guide.):
+
+
+
+You now have an instance with an app that has been deployed to the instance.
+In the next step, you test the app on the instance.

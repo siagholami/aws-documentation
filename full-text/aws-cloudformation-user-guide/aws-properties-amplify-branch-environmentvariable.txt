@@ -1,0 +1,23 @@
+AWS::Amplify::Branch EnvironmentVariable
+The EnvironmentVariable property type sets environment variables for a specific branch. Environment variables are key-value pairs that are available at build time.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-amplify-branch-environmentvariable-name)" : String,
+  "[Value](#cfn-amplify-branch-environmentvariable-value)" : String
+}
+YAML
+[Name](#cfn-amplify-branch-environmentvariable-name): String
+  [Value](#cfn-amplify-branch-environmentvariable-value): String
+Properties
+Name 
+The environment variable name.
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+The environment variable value.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,130 @@
+Getting Started with Custom Rules for AWS Config
+This procedure guides you through the process of creating a custom rule that evaluates whether each of your EC2 instances is the t2.micro type. AWS Config will run event-based evaluations for this rule, meaning it will check your instance configurations each time AWS Config detects a configuration change in an instance. AWS Config will flag t2.micro instances as compliant and all other instances as noncompliant. The compliance status will appear in the AWS Config console.
+To have the best outcome with this procedure, you should have one or more EC2 instances in your AWS account. Your instances should include a combination of at least one t2.micro instance and other types.
+To create this rule, first, you will create an AWS Lambda function by customizing a blueprint in the AWS Lambda console. Then, you will create a custom rule in AWS Config, and you will associate the rule with the function.
+Topics
+ Creating an AWS Lambda Function for a Custom Config Rule
+ Creating a Custom Rule
+Creating an AWS Lambda Function for a Custom Config Rule
+
+
+Sign in to the AWS Management Console and open the AWS Lambda console at https://console.aws.amazon.com/lambda/.
+
+
+In the AWS Management Console menu, verify that the region selector is set to a region that supports AWS Config rules. For the list of supported regions, see AWS Config Regions and Endpoints in the Amazon Web Services General Reference.
+
+
+In the AWS Lambda console, choose Create a Lambda function.
+
+
+On the Select blueprint page, for filter, type config-rule-change-triggered. Select the blueprint in the filter results. 
+
+
+On the Configure triggers page, choose Next.
+
+
+On the Configure function page, complete the following steps:
+
+
+For Name, type InstanceTypeCheck.
+
+
+For Runtime, keep Node.js.
+
+
+For Code entry type, keep Edit code inline. The Node.js code for your function is provided in the code editor. For this procedure, you do not need to change the code.
+
+
+For Handler, keep index.handler.
+
+
+For Role, choose Create new role from template(s).
+
+
+For Role name, type a name.
+
+
+For Policy templates, choose AWS Config Rules permission. 
+
+
+On the Configure function page, choose Next.
+
+
+On the Review page, verify the details about your function, and choose Create function. The AWS Lambda console displays your function.
+
+
+To verify that your function is set up correctly, test it with the following steps:
+
+
+Choose Actions, and then choose Configure test event.
+
+
+In the Input test event window, for Sample event template, choose AWS Config Change Triggered Rule.
+
+
+Choose Save and test. AWS Lambda tests your function with the example event. If your function is working as expected, an error message similar to the following appears under Execution result:
+{
+    "errorMessage": "Result Token provided is invalid",
+    "errorType": "InvalidResultTokenException",
+  . . .
+The InvalidResultTokenException is expected because your function runs successfully only when it receives a result token from AWS Config. The result token identifies the AWS Config rule and the event that caused the evaluation, and the result token associates an evaluation with a rule. This exception indicates that your function has the permission it needs to send results to AWS Config. Otherwise, the following error message appears: not authorized to perform: config:PutEvaluations. If this error occurs, update the role that you assigned to your function to allow the config:PutEvaluations action, and test your function again.
+
+
+Creating a Custom Rule
+
+
+Open the AWS Config console at https://console.aws.amazon.com/config/.
+
+
+In the AWS Management Console menu, verify that the region selector is set to the same region in which you created the AWS Lambda function for your custom rule.
+
+
+On the Rules page, choose Add rule.
+
+
+On the Add rule page, choose Add custom rule.
+
+
+On the Configure rule page, complete the following steps:
+
+
+For Name, type InstanceTypesAreT2micro.
+
+
+For Description, type Evaluates whether EC2 instances are the t2.micro type.
+
+
+For AWS Lambda function ARN, specify the ARN that AWS Lambda assigned to your function.
+Note
+The ARN that you specify in this step must not include the $LATEST qualifier. You can specify an ARN without a version qualifier or with any qualifier besides $LATEST. AWS Lambda supports function versioning, and each version is assigned an ARN with a qualifier. AWS Lambda uses the $LATEST qualifier for the latest version. 
+
+
+For Trigger type, choose Configuration changes.
+
+
+For Scope of changes, choose Resources.
+
+
+For Resources, choose Instance.
+
+
+In the Rule parameters section, you must specify the rule parameter that your AWS Lambda function evaluates and the desired value. The function for this procedure evaluates the desiredInstanceType parameter.
+For Key, type desiredInstanceType. For Value, type t2.micro.
+
+
+Choose Save. Your new rule displays on the Rules page. 
+
+
+Compliance will display Evaluating... until AWS Config receives evaluation results from your AWS Lambda function. If the rule and the function are working as expected, a summary of the results appears after several minutes. For example, a result of 2 noncompliant resource(s) indicates that 2 of your instances are not t2.micro instances, and a result of Compliant indicates that all instances are t2.micro. You can update the results with the refresh button.
+If the rule or function is not working as expected, you might see one of the following for Compliance:
+    No results reported - AWS Config evaluated your resources against the rule. The rule did not apply to the AWS resources in its scope, the specified resources were deleted, or the evaluation results were deleted. To get evaluation results, update the rule, change its scope, or choose Re-evaluate. 
+ Verify that the scope includes **Instance** for **Resources**, and try again\.
+
+
+
+No resources in scope  - AWS Config cannot evaluate your recorded AWS resources against this rule because none of your resources are within the rule’s scope. To get evaluation results, edit the rule and change its scope, or add resources for AWS Config to record by using the Settings page.
+Verify that AWS Config is recording EC2 instances.
+    Evaluations failed - For information that can help you determine the problem, choose the rule name to open its details page and see the error message.
+
+
+If your rule works correctly and AWS Config provides evaluation results, you can learn which conditions affect the compliance status of your rule. You can learn which resources, if any, are noncompliant, and why. For more information, see Viewing Configuration Compliance.

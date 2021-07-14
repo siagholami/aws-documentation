@@ -1,0 +1,20 @@
+Step 7: Run the API in Production
+(Previous step: Step 6: Run the Function in Production)
+In this step, you use the IDE to run the API in API Gateway itself.
+Note
+AWS Cloud9 deployed the API to API Gateway during Step 2: Create the Lambda Function and API. Because you haven't made any changes to the API since AWS Cloud9 first deployed it, you don't need to deploy the API again before you can run it in API Gateway itself.
+
+
+In the Lambda pane of the AWS Resources window, right-click the myDateTimeFunction Lambda icon, and then choose Run, Run APIGateway Remote.
+Note
+You can also do this by choosing the Lambda (remote) list on the run tab from the previous step, and then choosing API Gateway (remote).
+
+
+Ensure Path is still set to /, Method is still set to POST, and Body is still set to one of the bodies in Step 5.1: Run the API Locally. If any of these aren't set correctly, set them.
+
+
+Choose Run, and see the results in the Response area, which should be the same results as in Step 5.1: Run the API Locally.
+
+
+Next Step
+Step 8: Change the Function and Deploy the Change

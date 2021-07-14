@@ -1,0 +1,372 @@
+German (de-DE)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the German voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ʔ
+?
+glottal stop
+
+
+
+
+b
+b
+voiced bilabial plosive
+Bier
+p
+
+
+d
+d
+voiced alveolar plosive
+Dach
+t
+
+
+ç
+C
+voiceless palatal fricative
+ich
+k
+
+
+d͡ʒ
+dZ
+voiced postalveolar affricate
+Dschungel
+S
+
+
+f
+f
+Voiceless labiodental fricative
+Vogel
+f
+
+
+g
+g
+Voiced velar plosive
+Gabel
+k
+
+
+h
+h
+Voiceless glottal fricative
+Haus
+k
+
+
+j
+j
+Voiceless glottal fricative
+jemand
+i
+
+
+k
+k
+Voiceless velar plosive
+Kleid
+k
+
+
+l
+l
+Alveolar lateral approximant
+Loch
+t
+
+
+m
+m
+Bilabial nasal
+Milch
+p
+
+
+n
+n
+Alveolar nasal
+Natur
+t
+
+
+ŋ
+N
+Velar nasal
+klingen
+k
+
+
+p
+p
+Voiceless bilabial plosive
+Park
+p
+
+
+p͡f
+pf
+Voiceless labiodental affricate
+Apfel
+
+
+
+ʀ
+R
+Uvular trill
+Regen
+
+
+
+s
+s
+voiceless alveolar fricative
+Messer
+s
+
+
+ʃ
+S
+Voiceless postalveolar fricative
+Fischer
+S
+
+
+t
+t
+Voiceless alveolar plosive
+Topf
+T
+
+
+t͡s
+Ts
+Voiceless alveolar affricate
+Zahl
+
+
+
+t͡ʃ
+tS
+Voiceless postalveolar affricate
+deutsch
+S
+
+
+v
+v
+Voiced labiodental fricative
+Wasser
+f
+
+
+x
+x
+Voiceless velar fricative
+kochen
+k
+
+
+z
+z
+Voiced alveolar fricative
+See
+s
+
+
+ʒ
+Z
+Voiced postalveolar fricative
+Orange
+S
+
+
+Vowels
+
+
+
+
+
+
+øː
+2:
+long close-mid front rounded vowel
+böse
+o
+
+
+ɐ
+6
+near-open central vowel
+besser
+a
+
+
+ɐ̯
+6_^
+non-syllabic near-open central vowel
+Klar
+a
+
+
+œ
+9
+open-mid front rounded vowel
+können
+O
+
+
+ə
+@
+mid central vowel
+Rede
+@
+
+
+a
+a
+open front unrounded vowel
+Salz
+a
+
+
+a:
+a:
+long open front unrounded vowel
+Sahne
+a
+
+
+aɪ
+aI
+diphthong
+nein
+a
+
+
+aʊ
+aU
+diphthong
+Augen
+a
+
+
+ɑ̃
+A\~
+nasal open back unrounded vowel
+Restaurant
+a
+
+
+e:
+e:
+long close-mid front unrounded vowel
+Rede
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+Keller
+E
+
+
+ɛ̃
+E\~
+nasal open-mid front unrounded vowel
+Terrain
+E
+
+
+i:
+i:
+long close front unrounded vowel
+Lied
+i
+
+
+ɪ
+I
+near-close near-front unrounded vowel
+bitte
+i
+
+
+o:
+o:
+long close-mid back rounded vowel
+Kohl
+o
+
+
+ɔ
+O
+open-mid back rounded vowel
+Koffer
+O
+
+
+ɔ̃
+O\~
+nasal open-mid back rounded vowel
+Annonce
+O
+
+
+ɔʏ
+OY
+diphthong
+neu
+O
+
+
+u:
+u:
+long close back rounded vowel
+Bruder
+u
+
+
+ʊ
+U
+near-close near-back rounded vowel
+Wunder
+u
+
+
+y:
+y:
+long close front rounded vowel
+kühl
+u
+
+
+ʏ
+Y
+near-close near-front rounded vowel
+Küche
+u
+
+

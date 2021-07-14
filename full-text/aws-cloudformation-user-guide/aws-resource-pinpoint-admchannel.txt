@@ -1,0 +1,47 @@
+AWS::Pinpoint::ADMChannel
+A channel is a type of platform that you can deliver messages to. You can use the ADM channel to send push notifications through the Amazon Device Messaging (ADM) service to apps that run on Amazon devices, such as Kindle Fire tablets. Before you can use Amazon Pinpoint to send messages to Amazon devices, you have to enable the ADM channel for an Amazon Pinpoint application.
+The AWS::Pinpoint::ADMChannel resource defines the status and authentication settings of the ADM channel for an application.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Pinpoint::ADMChannel",
+  "Properties" : {
+      "[ApplicationId](#cfn-pinpoint-admchannel-applicationid)" : String,
+      "[ClientId](#cfn-pinpoint-admchannel-clientid)" : String,
+      "[ClientSecret](#cfn-pinpoint-admchannel-clientsecret)" : String,
+      "[Enabled](#cfn-pinpoint-admchannel-enabled)" : Boolean
+    }
+}
+YAML
+Type: AWS::Pinpoint::ADMChannel
+Properties: 
+  [ApplicationId](#cfn-pinpoint-admchannel-applicationid): String
+  [ClientId](#cfn-pinpoint-admchannel-clientid): String
+  [ClientSecret](#cfn-pinpoint-admchannel-clientsecret): String
+  [Enabled](#cfn-pinpoint-admchannel-enabled): Boolean
+Properties
+ApplicationId 
+The unique identifier for the application that the ADM channel applies to.
+Required: Yes
+Type: String
+Update requires: Replacement
+ClientId 
+The Client ID that you received from Amazon to send messages by using ADM.
+Required: Yes
+Type: String
+Update requires: No interruption
+ClientSecret 
+The Client Secret that you received from Amazon to send messages by using ADM.
+Required: Yes
+Type: String
+Update requires: No interruption
+Enabled 
+Specifies whether to enable the ADM channel for the application.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the unique identifier (ApplicationId) for the Amazon Pinpoint application that the channel is associated with.
+For more information about using the Ref function, see Ref.

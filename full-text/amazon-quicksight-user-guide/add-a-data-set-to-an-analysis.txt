@@ -1,0 +1,14 @@
+Add or Edit a Data Set
+Use the following procedure to add a data set to an analysis or edit a data set used by an analysis.
+
+
+On the analysis page, choose the pencil-shaped edit icon at the top of the Fields list pane.
+
+
+
+Choose Add data set to add a data set. Or, choose the pencil-shaped edit icon to edit a data set. For more information about editing a data set, see Editing a Data Set. 
+
+
+
+A list of your data sets appears. Choose a data set and then choose Select. To cancel, choose Cancel.
+

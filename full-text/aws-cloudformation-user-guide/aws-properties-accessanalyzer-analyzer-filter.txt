@@ -1,0 +1,47 @@
+AWS::AccessAnalyzer::Analyzer Filter
+The criteria that defines the rule.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Contains](#cfn-accessanalyzer-analyzer-filter-contains)" : [ String, ... ],
+  "[Eq](#cfn-accessanalyzer-analyzer-filter-eq)" : [ String, ... ],
+  "[Exists](#cfn-accessanalyzer-analyzer-filter-exists)" : Boolean,
+  "[Neq](#cfn-accessanalyzer-analyzer-filter-neq)" : [ String, ... ],
+  "[Property](#cfn-accessanalyzer-analyzer-filter-property)" : String
+}
+YAML
+[Contains](#cfn-accessanalyzer-analyzer-filter-contains): 
+    - String
+  [Eq](#cfn-accessanalyzer-analyzer-filter-eq): 
+    - String
+  [Exists](#cfn-accessanalyzer-analyzer-filter-exists): Boolean
+  [Neq](#cfn-accessanalyzer-analyzer-filter-neq): 
+    - String
+  [Property](#cfn-accessanalyzer-analyzer-filter-property): String
+Properties
+Contains 
+A "contains" condition to match for the rule.
+Required: No
+Type: List of String
+Update requires: No interruption
+Eq 
+An "equals" condition to match for the rule.
+Required: No
+Type: List of String
+Update requires: No interruption
+Exists 
+An "exists" condition to match for the rule.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Neq 
+A "not equal" condition to match for the rule.
+Required: No
+Type: List of String
+Update requires: No interruption
+Property 
+The property used to define the criteria in the filter for the rule.
+Required: Yes
+Type: String
+Update requires: No interruption

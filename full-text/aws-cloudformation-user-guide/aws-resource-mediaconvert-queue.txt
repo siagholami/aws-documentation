@@ -1,0 +1,63 @@
+AWS::MediaConvert::Queue
+The AWS::MediaConvert::Queue resource is an AWS Elemental MediaConvert resource type that you can use to manage the resources that are available to your account for parallel processing of jobs. For more information about queues, see Working with AWS Elemental MediaConvert Queues in the AWS Elemental MediaConvert User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::MediaConvert::Queue",
+  "Properties" : {
+      "[Description](#cfn-mediaconvert-queue-description)" : String,
+      "[Name](#cfn-mediaconvert-queue-name)" : String,
+      "[PricingPlan](#cfn-mediaconvert-queue-pricingplan)" : String,
+      "[Status](#cfn-mediaconvert-queue-status)" : String,
+      "[Tags](#cfn-mediaconvert-queue-tags)" : Json
+    }
+}
+YAML
+Type: AWS::MediaConvert::Queue
+Properties: 
+  [Description](#cfn-mediaconvert-queue-description): String
+  [Name](#cfn-mediaconvert-queue-name): String
+  [PricingPlan](#cfn-mediaconvert-queue-pricingplan): String
+  [Status](#cfn-mediaconvert-queue-status): String
+  [Tags](#cfn-mediaconvert-queue-tags): Json
+Properties
+Description 
+Optional. A description of the queue that you are creating.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of the queue that you are creating.
+Required: No
+Type: String
+Update requires: Replacement
+PricingPlan 
+When you use AWS CloudFormation, you can create only on-demand queues. Therefore, always set PricingPlan to the value "ON_DEMAND" when declaring an AWS::MediaConvert::Queue in your AWS CloudFormation template.
+To create a reserved queue, use the AWS Elemental MediaConvert console at https://console.aws.amazon.com/mediaconvert to set up a contract. For more information, see Working with AWS Elemental MediaConvert Queues in the AWS Elemental MediaConvert User Guide.
+Required: No
+Type: String
+Update requires: No interruption
+Status 
+Initial state of the queue. Queues can be either ACTIVE or PAUSED. If you create a paused queue, then jobs that you send to that queue won't begin.
+Required: No
+Type: String
+Update requires: No interruption
+Tags 
+An array of key-value pairs to apply to this resource.
+For more information, see Tag.
+Required: No
+Type: Json
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of an AWS::MediaConvert::Queue resource to the intrinsic Ref function, the function returns the name of the queue, such as Queue 2. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the queue, such as arn:aws:mediaconvert:us-west-2:123456789012.
+Name 
+The name of the queue, such as Queue 2.

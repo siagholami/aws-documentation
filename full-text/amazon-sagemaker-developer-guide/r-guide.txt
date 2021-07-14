@@ -1,0 +1,30 @@
+R User Guide to Amazon SageMaker
+This document will walk you through ways of leveraging Amazon SageMaker features using R. This guide introduces SageMaker's built-in R kernel, how to get started with R on SageMaker, and finally several example notebooks.
+The examples are organized in three levels, Beginner, Intermediate, and Advanced. They start from Getting Started with R on SageMaker, continue to end-to-end machine learning with R on SageMaker, and then finish with more advanced topics such as SageMaker Processing with R script, and Bring-Your-Own (BYO) R algorithm to SageMaker.  
+R Kernel in SageMaker
+SageMaker notebook instances support R using a pre-installed R kernel. Also, the R kernel has the reticulate library, an R to Python interface, so you can use the features of SageMaker Python SDK from within an R script. paws is an optional library that you can add to your R kernel to get further functionality.  
+  reticulatelibrary: provides an R interface to the Amazon SageMaker Python SDK. The reticulate package translates between R and Python objects. 
+  pawslibrary: provides an R interface to make API calls to AWS services, similar to how boto3 works. paws enables Python developers to create, configure, and manage AWS services, such as EC2 and S3 using R.  
+Get Started with R in SageMaker
+
+Create a Notebook Instance using the t2.medium instance type and default storage size. You can pick a faster instance and more storage if you plan to continue using the instance for more advanced examples, or create a bigger instance later. 
+Wait until the status of the notebook is In Service, and then click Open Jupyter. 
+
+ 
+  Create a new notebook with R kernel from the list of available environments.  
+ 
+  When the new notebook is created, you should see an R logo in the upper right corner of the notebook environment, and also R as the kernel under that logo. This indicates that SageMaker has successfully launched the R kernel for this notebook. 
+ 
+  Alternatively, when you are in a Jupyter notebook, you can use Kernel menu, and then select R from Change Kernel option. 
+ 
+Example Notebooks
+Prerequisites 
+Getting Started with R on SageMaker: This sample notebook describes how you can develop R scripts using Amazon SageMaker‘s R kernel. In this notebook you set up your SageMaker environment and permissions, download the abalone dataset from the UCI Machine Learning Repository, do some basic processing and visualization on the data, then save the data as .csv format to S3. 
+Beginner Level 
+End-to-End Machine Learning with R on SageMaker: This sample notebook extends the previous prerequisite getting started notebook. You learn how to train a model on the abalone dataset that predicts abalone age as measured by the number of rings in the shell. After you train your model, you create an endpoint and deploy your model to the endpoint. With your endpoint in place, you can test the model and generate predictions. The reticulate package will be used as an R interface to the Amazon SageMaker Python SDK.  
+SageMaker Batch Transform using R Kernel: This sample Notebook describes how to conduct a batch transform job using SageMaker’s Transformer API and the XGBoost algorithm. The notebook also uses the Abalone dataset. 
+Intermediate Level 
+Hyperparameter Optimization for XGBoost in R: This sample notebook extends the previous beginner notebooks that use the abalone dataset and XGBoost. It describes how to do model tuning with hyperparamter optimization. You will also learn how to use batch transform for batching predictions, as well as how to create a model endpoint to make real-time predictions.  
+Amazon SageMaker Processing with R: SageMaker Processing lets you preprocess, post-process and run model evaluation workloads. This example shows you how to create an R script to orchestrate a Processing job.  
+Advanced Level 
+Train and Deploy Your Own R Algorithm in SageMaker: Do you already have an R algorithm, and you want to bring it into SageMaker to tune, train, or deploy it? This example walks you through how to customize SageMaker containers with custom R packages, all the way to using a hosted endpoint for inference on your R-origin model. 

@@ -1,0 +1,10 @@
+Using custom policies with the Amazon SQS Access Policy Language
+If you want to allow Amazon SQS access based only on an AWS account ID and basic permissions (such as for https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessage.html or https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ReceiveMessage.html), you don't need to write your own policies. You can just use the Amazon SQS https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_AddPermission.html action.
+If you want to explicitly deny or allow access based on more specific conditions (such as the time the request comes in or the IP address of the requester), you need to write your own Amazon SQS policies and upload them to the AWS system using the Amazon SQS SetQueueAttributes action.
+Topics
+ Amazon SQS access control architecture
+ Amazon SQS access control process workflow
+ Amazon SQS Access Policy Language key concepts
+ Amazon SQS Access Policy Language evaluation logic
+ Relationships between explicit and default denials in the Amazon SQS Access Policy Language
+ Custom Amazon SQS Access Policy Language examples

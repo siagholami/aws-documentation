@@ -1,0 +1,92 @@
+Document history
+The following table describes important changes to the Amazon WorkDocs User Guide, beginning in February 2018. For notifications about updates to this documentation, you can subscribe to an RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Using Amazon WorkDocs for Amazon Business
+Amazon WorkDocs for Amazon Business is supported. For more information, see Using Amazon WorkDocs for Amazon Business in the Amazon WorkDocs User Guide.
+March 26, 2020
+
+
+Updates to Amazon WorkDocs Drive troubleshooting
+Various updates to Amazon WorkDocs Drive troubleshooting tips. For more information, see Troubleshooting Amazon WorkDocs Drive in the Amazon WorkDocs User Guide.
+August 2, 2019
+
+
+Amazon WorkDocs Drive default drive 
+Users can select a default drive when installing Amazon WorkDocs Drive. For more information, see Installing Amazon WorkDocs Drive in the Amazon WorkDocs User Guide.
+July 18, 2019
+
+
+Amazon WorkDocs approvals
+Use the Amazon WorkDocs Approvals app to request that users in your Amazon WorkDocs organization approve your files and folders. For more information, see Working with approvals in the Amazon WorkDocs User Guide.
+April 16, 2019
+
+
+Amazon WorkDocs Drive Offline Access
+Use Amazon WorkDocs Drive to enable offline access to your files and folders. For more information, see Enabling Offline Access in the Amazon WorkDocs User Guide.
+March 19, 2019
+
+
+Amazon WorkDocs tasks
+Amazon WorkDocs supports Tasks, which lets you transfer document ownership and request document access. For more information, see Transferring document ownership and Requesting the ability to add feedback in the Amazon WorkDocs User Guide.
+December 19, 2018
+
+
+Amazon WorkDocs Drive for macOS
+Amazon WorkDocs Drive is available for macOS users. For more information, see Using Amazon WorkDocs Drive in the Amazon WorkDocs User Guide.
+October 25, 2018
+
+
+Amazon WorkDocs smart search
+Amazon WorkDocs smart search is available for the Amazon WorkDocs web application. For more information, see Searching files and folders in the Amazon WorkDocs User Guide.
+October 19, 2018
+
+
+Updates to web application
+The user interface for the Amazon WorkDocs web application is updated. For more information, see the topics linked from Working with files and folders, Sharing files and folders, and Feedback and collaborative editing in the Amazon WorkDocs User Guide.
+October 4, 2018
+
+
+Amazon WorkDocs Companion updates for Windows users
+Amazon WorkDocs Companion supports the ability for Windows users to upload and share files by using a single step. For more information, see Using Amazon WorkDocs Companion in the Amazon WorkDocs User Guide.
+August 28, 2018
+
+
+Various updates
+Various updates to topic layout and organization.
+August 3, 2018
+
+
+iOS Files app integration
+Access Amazon WorkDocs content with the Files app for iOS version 11 and later. For more information, see Using the Files app in iOS in the Amazon WorkDocs User Guide.
+July 24, 2018
+
+
+Hancom ThinkFree
+Hancom ThinkFree editing is available. Create and collaboratively edit Microsoft Office files from the Amazon WorkDocs web application. For more information, see Editing with Hancom ThinkFree in the Amazon WorkDocs User Guide.
+June 21, 2018
+
+
+Open with Office Online
+Open with Office Online is available. Collaboratively edit Microsoft Office files from the Amazon WorkDocs web application. For more information, see Open with Office Online in the Amazon WorkDocs User Guide.
+June 6, 2018
+
+
+Amazon WorkDocs Drive
+Amazon WorkDocs Drive is available for all Windows PC users. Enable offline access for Amazon WorkDocs Drive. For more information, see Amazon WorkDocs Drive in the Amazon WorkDocs User Guide.
+April 2, 2018
+
+
+Web client UI update
+Various changes to the web client interface. For more information, see Amazon WorkDocs web client in the Amazon WorkDocs User Guide.
+February 22, 2018
+
+

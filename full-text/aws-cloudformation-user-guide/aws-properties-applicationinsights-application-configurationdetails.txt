@@ -1,0 +1,41 @@
+AWS::ApplicationInsights::Application ConfigurationDetails
+The AWS::ApplicationInsights::Application ConfigurationDetails property type specifies the configuration settings.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AlarmMetrics](#cfn-applicationinsights-application-configurationdetails-alarmmetrics)" : [ AlarmMetric, ... ],
+  "[Alarms](#cfn-applicationinsights-application-configurationdetails-alarms)" : [ Alarm, ... ],
+  "[Logs](#cfn-applicationinsights-application-configurationdetails-logs)" : [ Log, ... ],
+  "[WindowsEvents](#cfn-applicationinsights-application-configurationdetails-windowsevents)" : [ WindowsEvent, ... ]
+}
+YAML
+[AlarmMetrics](#cfn-applicationinsights-application-configurationdetails-alarmmetrics): 
+    - AlarmMetric
+  [Alarms](#cfn-applicationinsights-application-configurationdetails-alarms): 
+    - Alarm
+  [Logs](#cfn-applicationinsights-application-configurationdetails-logs): 
+    - Log
+  [WindowsEvents](#cfn-applicationinsights-application-configurationdetails-windowsevents): 
+    - WindowsEvent
+Properties
+AlarmMetrics 
+A list of metrics to monitor for the component. All component types can use AlarmMetrics.
+Required: No
+Type: List of AlarmMetric
+Update requires: No interruption
+Alarms 
+A list of alarms to monitor for the component. All component types can use Alarm.
+Required: No
+Type: List of Alarm
+Update requires: No interruption
+Logs 
+A list of logs to monitor for the component. Only Amazon EC2 instances can use Logs.
+Required: No
+Type: List of Log
+Update requires: No interruption
+WindowsEvents 
+A list of Windows Events to monitor for the component. Only Amazon EC2 instances running on Windows can use WindowsEvents.
+Required: No
+Type: List of WindowsEvent
+Update requires: No interruption

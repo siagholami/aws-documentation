@@ -1,0 +1,15 @@
+(Optional) Set Up Sample Containerized Workloads for Prometheus Metric Testing
+To test the Prometheus metric support in CloudWatch Container Insights, you can set up one or more of the following containerized workloads. The CloudWatch agent with Prometheus support automatically collects metrics from each of these workloads. To see the metrics that are collected by default, see Prometheus Metrics Collected by the CloudWatch Agent.
+Before you can install any of these workloads, you must install Helm 3.x by entering the following commands:
+brew install helm
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+For more information, see Helm.
+Sample workloads for Amazon EKS and Kubernetes clusters
+ (Optional) Set Up AWS App Mesh sample workload for Amazon EKS and Kubernetes
+ (Optional) Set Up NGINX with Sample Traffic on Amazon EKS and Kubernetes
+ (Optional) Set Up memcached with a Metric Exporter on Amazon EKS and Kubernetes
+ (Optional) Set Up Java/JMX sample workload on Amazon EKS and Kubernetes
+ (Optional) Set Up HAProxy with a Metric Exporter on Amazon EKS and Kubernetes
+Sample workloads for Amazon ECS clusters
+ (Optional) Sample App Mesh Workload for Amazon ECS clusters
+ (Optional) Sample Java/JMX Workload for Amazon ECS clusters

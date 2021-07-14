@@ -1,0 +1,5 @@
+Setting Up a Project to Use Resource Manager
+After initializing Cloud Canvas Resource Manager so that your Amazon Lumberyard project can use AWS, you can use Resource Manager to configure the stacks for your project.
+Topics
+ Initializing Cloud Canvas Resource Manager
+ Working with Project Stacks

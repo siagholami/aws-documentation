@@ -1,0 +1,28 @@
+AWS::ElastiCache::SecurityGroup
+The AWS::ElastiCache::SecurityGroup resource creates a cache security group. For more information about cache security groups, go to CacheSecurityGroups in the Amazon ElastiCache User Guide or go to CreateCacheSecurityGroup in the Amazon ElastiCache API Reference Guide. 
+For more information, see CreateCacheSubnetGroup.
+Note
+Updates are not supported.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ElastiCache::SecurityGroup",
+  "Properties" : {
+      "[Description](#cfn-elasticache-securitygroup-description)" : String
+    }
+}
+YAML
+Type: AWS::ElastiCache::SecurityGroup
+Properties: 
+  [Description](#cfn-elasticache-securitygroup-description): String
+Properties
+Description 
+A description for the cache security group.
+Required: Yes
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the resource name. 
+For more information about using the Ref function, see Ref.

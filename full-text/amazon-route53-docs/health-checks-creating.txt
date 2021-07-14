@@ -1,0 +1,30 @@
+Creating and updating health checks
+The following procedure describes how to create and update health checks using the Route 53 console.
+To create or update a health check (console)
+
+
+If you're updating health checks that are already associated with records, perform the recommended tasks in Updating or deleting health checks when DNS failover is configured.
+
+
+Sign in to the AWS Management Console and open the Route 53 console at https://console.aws.amazon.com/route53/.
+
+
+In the navigation pane, choose Health Checks.
+
+
+If you want to update an existing health check, select the health check, and then choose Edit Health Check.
+
+
+If you want to create a health check, choose Create Health Check. For more information about each setting, move the mouse pointer over a label to see its tooltip.
+
+
+Enter the applicable values. Note that some values can't be changed after you create a health check. For more information, see Values that you specify when you create or update health checks.
+
+
+Choose Create Health Check.
+Note
+Route 53 considers a new health check to be healthy until there's enough data to determine the actual status, healthy or unhealthy. If you chose the option to invert the health check status, Route 53 considers a new health check to be unhealthy until there's enough data.
+
+
+Associate the health check with one or more Route 53 records. For information about creating and updating records, see Working with records.
+

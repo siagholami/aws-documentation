@@ -1,0 +1,10 @@
+Lambda resource type reference
+Resource types
+ AWS::Lambda::Alias
+ AWS::Lambda::EventInvokeConfig
+ AWS::Lambda::EventSourceMapping
+ AWS::Lambda::Function
+ AWS::Lambda::LayerVersion
+ AWS::Lambda::LayerVersionPermission
+ AWS::Lambda::Permission
+ AWS::Lambda::Version

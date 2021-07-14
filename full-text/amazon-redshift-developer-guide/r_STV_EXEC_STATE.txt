@@ -1,0 +1,8 @@
+STV_EXEC_STATE
+Use the STV_EXEC_STATE table to find out information about queries and query steps that are actively running on compute nodes.
+This information is usually used only to troubleshoot engineering issues. The views SVV_QUERY_STATE and SVL_QUERY_SUMMARY extract their information from STV_EXEC_STATE.
+STV_EXEC_STATE is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+Rather than querying STV_EXEC_STATE directly, Amazon Redshift recommends querying SVL_QUERY_SUMMARY or SVV_QUERY_STATE to obtain the information in STV_EXEC_STATE in a more user-friendly format. See the SVL_QUERY_SUMMARY or SVV_QUERY_STATE table documentation for more details.

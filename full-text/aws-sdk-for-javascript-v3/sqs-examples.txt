@@ -1,0 +1,10 @@
+Amazon SQS Examples
+Amazon Simple Queue Service (SQS) is a fast, reliable, scalable, fully managed message queuing service. Amazon SQS lets you decouple the components of a cloud application. Amazon SQS includes standard queues with high throughput and at-least-once processing, and FIFO queues that provide FIFO (first-in, first-out) delivery and exactly-once processing.
+
+The JavaScript API for Amazon SQS is exposed through the AWS.SQS client class. For more information about using the CloudWatch client class, see Class: AWS.SQS in the API reference.
+Topics
+ Using Queues in Amazon SQS
+ Sending and Receiving Messages in Amazon SQS
+ Managing Visibility Timeout in Amazon SQS
+ Enabling Long Polling in Amazon SQS
+ Using Dead Letter Queues in Amazon SQS

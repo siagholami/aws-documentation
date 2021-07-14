@@ -1,0 +1,7 @@
+Common elements of built-in algorithms
+The following topics provide information common to all of the algorithms provided by Amazon SageMaker.
+Topics
+ Common parameters for built-in algorithms
+ Common data formats for built-in algorithms
+ Instance types for built-in algorithms
+ Logs for built-In Algorithms

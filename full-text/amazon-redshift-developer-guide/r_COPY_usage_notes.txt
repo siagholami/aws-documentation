@@ -1,0 +1,10 @@
+Usage notes
+Topics
+ Permissions to access other AWS Resources
+ Loading multibyte data from Amazon S3
+ Loading a column of the GEOMETRY data type
+ Errors when reading multiple files
+ COPY from JSON format
+ COPY from columnar data formats
+ DATEFORMAT and TIMEFORMAT strings
+ Using automatic recognition with DATEFORMAT and TIMEFORMAT

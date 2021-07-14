@@ -1,0 +1,22 @@
+Enable an existing group
+When Amazon WorkMail is integrated with your corporate Active Directory or you already have groups available in your simple Active Directory, you can use these groups as security groups or distribution lists in Amazon WorkMail.
+To enable an existing directory group
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+If you require a different AWS Region, change it from the navigation bar. For more information, see Regions and endpoints in the Amazon Web Services General Reference.
+
+
+For Organizations, choose the name of your organization.
+
+
+In the navigation pane, choose Groups to see a list of enabled, disabled, and system groups.
+
+
+From the list of disabled groups, select the groups to enable and choose Enable Group.
+
+
+In the Enable group(s) dialog box, review the primary email address and choose Enable.
+

@@ -1,0 +1,33 @@
+WindowSummary
+The metrics for a time range within the evaluation portion of a dataset. This object is part of the EvaluationResult object.
+The TestWindowStart and TestWindowEnd parameters are determined by the BackTestWindowOffset parameter of the EvaluationParameters object.
+Contents
+EvaluationType 
+The type of evaluation.
+  SUMMARY - The average metrics across all windows.
+  COMPUTED - The metrics for the specified window.
+Type: String
+Valid Values:SUMMARY | COMPUTED 
+Required: No
+ItemCount 
+The number of data points within the window.
+Type: Integer
+Required: No
+Metrics 
+Provides metrics used to evaluate the performance of a predictor.
+Type: Metrics object
+Required: No
+TestWindowEnd 
+The timestamp that defines the end of the window.
+Type: Timestamp
+Required: No
+TestWindowStart 
+The timestamp that defines the start of the window.
+Type: Timestamp
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

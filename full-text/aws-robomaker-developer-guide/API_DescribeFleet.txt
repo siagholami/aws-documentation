@@ -1,0 +1,113 @@
+DescribeFleet
+Describes a fleet.
+Request Syntax
+```
+POST /describeFleet HTTP/1.1
+Content-type: application/json
+{
+   "fleet": "string"
+}
+```
+URI Request Parameters
+The request does not use any URI parameters.
+Request Body
+The request accepts the following data in JSON format.
+ fleet  
+The Amazon Resource Name (ARN) of the fleet.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+Required: Yes
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "arn": "string",
+   "createdAt": number,
+   "lastDeploymentJob": "string",
+   "lastDeploymentStatus": "string",
+   "lastDeploymentTime": number,
+   "name": "string",
+   "robots": [ 
+      { 
+         "architecture": "string",
+         "arn": "string",
+         "createdAt": number,
+         "fleetArn": "string",
+         "greenGrassGroupId": "string",
+         "lastDeploymentJob": "string",
+         "lastDeploymentTime": number,
+         "name": "string",
+         "status": "string"
+      }
+   ],
+   "tags": { 
+      "string" : "string" 
+   }
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ arn  
+The Amazon Resource Name (ARN) of the fleet.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+ createdAt  
+The time, in milliseconds since the epoch, when the fleet was created.
+Type: Timestamp
+ lastDeploymentJob  
+The Amazon Resource Name (ARN) of the last deployment job.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+ lastDeploymentStatus  
+The status of the last deployment.
+Type: String
+Valid Values:Pending | Preparing | InProgress | Failed | Succeeded | Canceled 
+ lastDeploymentTime  
+The time of the last deployment.
+Type: Timestamp
+ name  
+The name of the fleet.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Pattern: [a-zA-Z0-9_\-]* 
+ robots  
+A list of robots.
+Type: Array of Robot objects
+Array Members: Minimum number of 0 items. Maximum number of 1000 items.
+ tags  
+The list of all tags added to the specified fleet.
+Type: String to string map
+Key Length Constraints: Minimum length of 1. Maximum length of 128.
+Key Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Value Length Constraints: Minimum length of 0. Maximum length of 256.
+Value Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+InternalServerException 
+AWS RoboMaker experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidParameterException 
+A parameter specified in a request is not valid, is unsupported, or cannot be used. The returned message provides an explanation of the error value.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The specified resource does not exist.
+HTTP Status Code: 400
+ThrottlingException 
+AWS RoboMaker is temporarily unable to process the request. Try your call again.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V2 

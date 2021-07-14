@@ -1,0 +1,24 @@
+AWS Glue Scala ObjectNode APIs
+Topics
+ ObjectNode Object
+ ObjectNode Case Class
+Package: com.amazonaws.services.glue.types
+ObjectNode Object
+ObjectNode
+object ObjectNode
+ObjectNode def Methods
+def apply( frameKeys : Set[String],
+           v1 : mutable.Map[String, DynamicNode],
+           v2 : mutable.Map[String, DynamicNode],
+           resolveWith : String
+         ) : ObjectNode
+ObjectNode Case Class
+ObjectNode
+case class ObjectNode extends MapLikeNode(value)  (
+           val value : mutable.Map[String, DynamicNode] )
+ObjectNode def Methods
+def clone
+def equals( other : Any )
+def hashCode : Int
+def nodeType
+def this

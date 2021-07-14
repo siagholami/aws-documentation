@@ -1,0 +1,33 @@
+AWS::AppMesh::GatewayRoute GatewayRouteSpec
+An object that represents a gateway route specification. Specify one gateway route type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[GrpcRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-grpcroute)" : GrpcGatewayRoute,
+  "[Http2Route](#cfn-appmesh-gatewayroute-gatewayroutespec-http2route)" : HttpGatewayRoute,
+  "[HttpRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-httproute)" : HttpGatewayRoute
+}
+YAML
+[GrpcRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-grpcroute): 
+    GrpcGatewayRoute
+  [Http2Route](#cfn-appmesh-gatewayroute-gatewayroutespec-http2route): 
+    HttpGatewayRoute
+  [HttpRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-httproute): 
+    HttpGatewayRoute
+Properties
+GrpcRoute 
+An object that represents the specification of a gRPC gateway route.
+Required: No
+Type: GrpcGatewayRoute
+Update requires: No interruption
+Http2Route 
+An object that represents the specification of an HTTP/2 gateway route.
+Required: No
+Type: HttpGatewayRoute
+Update requires: No interruption
+HttpRoute 
+An object that represents the specification of an HTTP gateway route.
+Required: No
+Type: HttpGatewayRoute
+Update requires: No interruption

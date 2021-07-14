@@ -1,0 +1,33 @@
+AWS::Glue::Table SerdeInfo
+Information about a serialization/deserialization program (SerDe) that serves as an extractor and loader.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-glue-table-serdeinfo-name)" : String,
+  "[Parameters](#cfn-glue-table-serdeinfo-parameters)" : Json,
+  "[SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary)" : String
+}
+YAML
+[Name](#cfn-glue-table-serdeinfo-name): String
+  [Parameters](#cfn-glue-table-serdeinfo-parameters): Json
+  [SerializationLibrary](#cfn-glue-table-serdeinfo-serializationlibrary): String
+Properties
+Name 
+Name of the SerDe.
+Required: No
+Type: String
+Update requires: No interruption
+Parameters 
+These key-value pairs define initialization parameters for the SerDe.
+Required: No
+Type: Json
+Update requires: No interruption
+SerializationLibrary 
+Usually the class that implements the SerDe. An example is org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+SerDeInfo Structure in the AWS Glue Developer Guide 

@@ -1,0 +1,26 @@
+Download recordings/transcripts of past conversations
+These are the steps that a manager does to download past recordings/transcripts of conversations.
+
+
+Log in to Amazon Connect with a user account that has permissions to access recordings.
+
+
+In Amazon Connect choose Metrics and quality, Contact search. 
+
+
+Filter the list of contacts by date, agent login, phone number, or other criteria. Choose Search.
+
+
+Conversations that were recorded have icons in the Recording/Transcript column. If you don't have the appropriate permissions, you won't see these icons.
+
+
+
+Choose the Download icon. 
+
+
+
+The recording is saved automatically to your Downloads folder as a .wav file. 
+
+
+
+The name of the file is the contact ID. 

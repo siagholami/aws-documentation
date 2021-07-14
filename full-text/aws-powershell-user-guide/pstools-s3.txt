@@ -1,0 +1,17 @@
+Amazon S3 and Tools for Windows PowerShell
+Topics
+ See Also
+ Create an Amazon S3 Bucket, Verify Its Region, and Optionally Remove It
+ Configure an Amazon S3 Bucket as a Website and Enable Logging
+ Upload Objects to an Amazon S3 Bucket
+ Delete Amazon S3 Objects and Buckets
+ Upload In-Line Text Content to Amazon S3
+In this section, we create a static website using the AWS Tools for Windows PowerShell using Amazon S3 and CloudFront. In the process, we demonstrate a number of common tasks with these services. This walkthrough is modeled after the Getting Started Guide for Host a Static Website, which describes a similar process using the AWS Management Console.
+The commands shown here assume that you have set default credentials and a default region for your PowerShell session. Therefore, credentials and regions are not included in the invocation of the cmdlets.
+Note
+There is currently no Amazon S3 API for renaming a bucket or object, and therefore, no single Tools for Windows PowerShell cmdlet for performing this task. To rename an object in S3, we recommend that you copy the object to one with a new name, by running the Copy-S3Object cmdlet, and then delete the original object by running the Remove-S3Object cmdlet.
+See Also
+
+Using the AWS Tools for Windows PowerShell 
+Hosting a Static Website on Amazon S3 
+Amazon S3 Console 

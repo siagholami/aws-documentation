@@ -1,0 +1,24 @@
+AWS::Lambda::Alias AliasRoutingConfiguration
+The traffic-shifting configuration of a Lambda function alias.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ VersionWeight, ... ]
+}
+YAML
+[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
+    - VersionWeight
+Properties
+AdditionalVersionWeights 
+The second version, and the percentage of traffic that's routed to it.
+Required: Yes
+Type: List of VersionWeight
+Update requires: No interruption
+Examples
+Routing Configuration
+An alias that routes half of incoming requests to a second version.
+YAML
+alias: Type: AWS::Lambda::Alias Properties: FunctionName: !Ref function FunctionVersion:
+        !GetAtt newVersion.Version Name: BLUE RoutingConfig: AdditionalVersionWeights: - FunctionVersion: !GetAtt
+        version.Version FunctionWeight: 0.5

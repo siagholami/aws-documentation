@@ -1,0 +1,80 @@
+Creating a Volume
+Previously, you allocated local disks that you added to the VM cache storage and upload buffer. Now you create a storage volume to which your applications read and write data. The gateway maintains the volume's recently accessed data locally in cache storage, and asynchronously transferred data to Amazon S3. For stored volumes, you allocated local disks that you added to the VM upload buffer and your application's data.
+Note
+You can use AWS Key Management Service (AWS KMS) to encrypt data written to a cached volume that is stored in Amazon S3. Currently, you can do this by using the AWS Storage Gateway API Reference. For more information, see CreateCachediSCSIVolume or create-cached-iscsi-volume.
+To create a volume
+
+
+Open the AWS Storage Gateway console at https://console.aws.amazon.com/storagegateway/home.
+
+
+On the AWS Storage Gateway console, choose Create volume.
+
+
+In the Create volume dialog box, choose a gateway for Gateway. 
+
+
+For the cached volumes, type the capacity in Capacity.
+
+
+For stored volumes, choose a Disk ID value from the list.
+
+For Volume content, your choices depend on the type of gateway you are creating the volume for.
+
+For cached volumes, you have the following options: 
+    Create a new empty volume.
+    Create a volume based on an Amazon EBS snapshot. If you choose this option, provide a value for EBS snapshot ID. 
+    Clone from last volume recovery point. If you choose this option, choose a volume ID for Source volume. If there are no volumes in the region, this option doesn't appear.
+For stored volumes, you have the following options: 
+    Create a new empty volume. 
+    Create a volume based on a snapshot. If you choose this option, provide a value for EBS snapshot ID.
+    Preserve existing data on the disk
+
+Type a name for iSCSI target name.
+
+The target name can contain lowercase letters, numbers, periods (.), and hyphens (-). This target name appears as the iSCSI target node name in the Targets tab of the iSCSI Microsoft initiator UI after discovery. For example, the name target1 appears as iqn.1007-05.com.amazon:target1. Make sure that the target name is globally unique within your storage area network (SAN). 
+
+Verify that the Network interface setting has IP address selected, or choose an IP address for Network interface. For Network interface, one IP address appears for each adapter that is configured for the gateway VM. If the gateway VM is configured for only one network adapter, no Network interface list appears because there is only one IP address.
+
+Your iSCSI target will be available on the network adapter you choose.
+If you have defined your gateway to use multiple network adapters, choose the IP address that your storage applications should use to access your volume. For information about configuring multiple network adapters, see Configuring Your Gateway for Multiple NICs.
+Note
+After you choose a network adapter, you can't change this setting. 
+
+
+(Optional) For Tags, enter a key and value to add tags to your volume. A tag is a case-sensitive key-value pair that helps you manage, filter, and search for your volumes. 
+
+
+Choose Create volume. 
+
+
+If you have previously created volumes in this region, you can see them listed on the Storage Gateway console. 
+The Configure CHAP Authentication dialog box appears. You can configure Challenge-Handshake Authentication Protocol (CHAP) for your volume at this point, or you can choose Cancel and configure CHAP later. For more information on CHAP setup, see Configure CHAP Authentication for Your Volumes, following.
+
+If you don't want to set up CHAP, get started using your volume. For more information, see Using Your Volume.
+Configure CHAP Authentication for Your Volumes
+CHAP provides protection against playback attacks by requiring authentication to access your storage volume targets. In the Configure CHAP Authentication dialog box, you provide information to configure CHAP for your volumes.
+To configure CHAP
+
+
+Choose the volume for which you want to configure CHAP.
+
+
+For Actions, choose Configure CHAP authentication.
+
+
+For Initiator Name, type the name of your initiator.
+
+
+For Initiator secret, type the secret phrase you used to authenticate your iSCSI initiator.
+
+
+For Target secret, type the secret phrase used to authenticate your target for mutual CHAP.
+
+
+Choose Save to save your entries. 
+
+
+For more information about setting up CHAP authentication, see Configuring CHAP Authentication for Your iSCSI Targets.
+Next Step
+Using Your Volume 

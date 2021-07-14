@@ -1,0 +1,15 @@
+SVCS views
+SVCS System views with the prefix SVCS provide details about queries on both the main and concurrency scaling clusters. The views are similar to the tables with the prefix STL except that the STL tables provide information only for queries run on the main cluster.
+Topics
+ SVCS_ALERT_EVENT_LOG
+ SVCS_COMPILE
+ SVCS_CONCURRENCY_SCALING_USAGE
+ SVCS_EXPLAIN
+ SVCS_PLAN_INFO
+ SVCS_QUERY_SUMMARY
+ SVCS_S3LIST
+ SVCS_S3LOG
+ SVCS_S3PARTITION_SUMMARY
+ SVCS_S3QUERY_SUMMARY
+ SVCS_STREAM_SEGS
+ SVCS_UNLOAD_LOG

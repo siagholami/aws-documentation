@@ -1,0 +1,11 @@
+Using AWS Identity and Access Management from the AWS CLI
+You can access the features of AWS Identity and Access Management (IAM) using the AWS Command Line Interface (AWS CLI). To list the AWS CLI commands for IAM, use the following command.
+aws iam help
+This topic shows examples of AWS CLI commands that perform common tasks for IAM.
+Before you run any commands, set your default credentials. For more information, see Configuring the AWS CLI.
+For more information on the IAM service, see the AWS Identity and Access Management User Guide.
+Topics
+ Creating IAM users and groups
+ Attaching an IAM managed policy to an IAM user
+ Setting an initial password for an IAM user
+ Create an access key for an IAM user

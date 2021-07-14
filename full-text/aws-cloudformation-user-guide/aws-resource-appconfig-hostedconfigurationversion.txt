@@ -1,0 +1,127 @@
+AWS::AppConfig::HostedConfigurationVersion
+Create a new configuration in the AppConfig hosted configuration store. Configurations must be 64 KB or smaller. The AppConfig hosted configuration store provides the following benefits over other configuration store options.
+ You don't need to set up and configure other services such as Amazon Simple Storage Service (Amazon S3) or Parameter Store.
+ You don't need to configure AWS Identity and Access Management (IAM) permissions to use the configuration store.
+ You can store configurations in any content type.
+ There is no cost to use the store.
+ You can create a configuration and add it to the store when you create a configuration profile.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppConfig::HostedConfigurationVersion",
+  "Properties" : {
+      "[ApplicationId](#cfn-appconfig-hostedconfigurationversion-applicationid)" : String,
+      "[ConfigurationProfileId](#cfn-appconfig-hostedconfigurationversion-configurationprofileid)" : String,
+      "[Content](#cfn-appconfig-hostedconfigurationversion-content)" : String,
+      "[ContentType](#cfn-appconfig-hostedconfigurationversion-contenttype)" : String,
+      "[Description](#cfn-appconfig-hostedconfigurationversion-description)" : String,
+      "[LatestVersionNumber](#cfn-appconfig-hostedconfigurationversion-latestversionnumber)" : Double
+    }
+}
+YAML
+Type: AWS::AppConfig::HostedConfigurationVersion
+Properties: 
+  [ApplicationId](#cfn-appconfig-hostedconfigurationversion-applicationid): String
+  [ConfigurationProfileId](#cfn-appconfig-hostedconfigurationversion-configurationprofileid): String
+  [Content](#cfn-appconfig-hostedconfigurationversion-content): String
+  [ContentType](#cfn-appconfig-hostedconfigurationversion-contenttype): String
+  [Description](#cfn-appconfig-hostedconfigurationversion-description): String
+  [LatestVersionNumber](#cfn-appconfig-hostedconfigurationversion-latestversionnumber): Double
+Properties
+ApplicationId 
+The application ID.
+Required: Yes
+Type: String
+Pattern: [a-z0-9]{4,7}
+Update requires: Replacement
+ConfigurationProfileId 
+The configuration profile ID.
+Required: Yes
+Type: String
+Pattern: [a-z0-9]{4,7}
+Update requires: Replacement
+Content 
+The content of the configuration or the configuration data.
+Required: Yes
+Type: String
+Update requires: Replacement
+ContentType 
+A standard MIME type describing the format of the configuration content. For more information, see Content-Type.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 255
+Update requires: Replacement
+Description 
+A description of the configuration.
+Required: No
+Type: String
+Minimum: 0
+Maximum: 1024
+Update requires: Replacement
+LatestVersionNumber 
+An optional locking token used to prevent race conditions from overwriting configuration updates when creating a new version. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid succession, specify the version number of the latest hosted configuration version.
+Required: No
+Type: Double
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the version number.
+Examples
+AWS AppConfig hosted configuration
+The following example creates an AWS AppConfig configuration profile named MyTestProfile for an application called MyApplication. AppConfig stores the configuration data for this profile in the AppConfig hosted configuration store.
+JSON
+{
+  "Resources": {
+    "DependentApplication": {
+      "Type": "AWS::AppConfig::Application",
+      "Properties": {
+        "Name": "MyApplication"
+      }
+    },
+    "DependentConfigurationProfile": {
+      "Type": "AWS::AppConfig::ConfigurationProfile",
+      "Properties": {
+        "ApplicationId": "DependentApplication",
+        "Name": "MyTestProfile",
+        "LocationUri": "hosted"
+      }
+    },
+    "BasicHostedConfigurationVersion": {
+      "Type": "AWS::AppConfig::HostedConfigurationVersion",
+      "Properties": {
+        "ApplicationId": "DependentApplication",
+        "ConfigurationProfileId": "DependentConfigurationProfile",
+        "Description": "A sample hosted configuration version",
+        "Content": "My hosted configuration content",
+        "ContentType": "text/plain"
+      }
+    }
+  }
+}
+YAML
+Resources:
+  DependentApplication:
+    Type: AWS::AppConfig::Application
+    Properties:
+      Name: "MyApplication"
+  DependentConfigurationProfile:
+    Type: AWS::AppConfig::ConfigurationProfile
+    Properties:
+      ApplicationId: !Ref DependentApplication
+      Name: "MyTestProfile"
+      LocationUri: "hosted"
+  BasicHostedConfigurationVersion:
+    Type: AWS::AppConfig::HostedConfigurationVersion
+    Properties:
+      ApplicationId: !Ref DependentApplication
+      ConfigurationProfileId: !Ref DependentConfigurationProfile
+      Description: 'A sample hosted configuration version'
+      Content: 'My hosted configuration content'
+      ContentType: 'text/plain'
+See also
+
+AWS AppConfig 
+Creating a configuration and a configuration profile 
+About the AppConfig hosted configuration store

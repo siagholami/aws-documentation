@@ -1,0 +1,119 @@
+AWS::IoT1Click::Placement
+The AWS::IoT1Click::Placement resource creates a placement to be associated with an AWS IoT 1-Click project. A placement is an instance of a device in a location. For more information, see Projects, Templates, and Placements in the AWS IoT 1-Click Developer Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoT1Click::Placement",
+  "Properties" : {
+      "[AssociatedDevices](#cfn-iot1click-placement-associateddevices)" : Json,
+      "[Attributes](#cfn-iot1click-placement-attributes)" : Json,
+      "[PlacementName](#cfn-iot1click-placement-placementname)" : String,
+      "[ProjectName](#cfn-iot1click-placement-projectname)" : String
+    }
+}
+YAML
+Type: AWS::IoT1Click::Placement
+Properties: 
+  [AssociatedDevices](#cfn-iot1click-placement-associateddevices): Json
+  [Attributes](#cfn-iot1click-placement-attributes): Json
+  [PlacementName](#cfn-iot1click-placement-placementname): String
+  [ProjectName](#cfn-iot1click-placement-projectname): String
+Properties
+AssociatedDevices 
+The devices to associate with the placement, as defined by a mapping of zero or more key-value pairs wherein the key is a template name and the value is a device ID.
+Required: No
+Type: Json
+Update requires: Replacement
+Attributes 
+The user-defined attributes associated with the placement.
+Required: No
+Type: Json
+Update requires: No interruption
+PlacementName 
+The name of the placement.
+Required: No
+Type: String
+Update requires: Replacement
+ProjectName 
+The name of the project containing the placement.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns a string of the form projects/A/placements/B, where A is the name of the project and B is the name of the placement.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+PlacementName 
+The name of the placement, such as floor17.
+ProjectName 
+The name of the project containing the placement, such as conference-rooms.
+Examples
+Declare a Project and Placement
+JSON
+```
+{
+    "BasicProjectWithPlacement": {
+        "Type": "AWS::IoT1Click::Project",
+        "Properties": {
+            "ProjectName": "project-with-placements",
+            "Description": "description",
+            "PlacementTemplate": {
+                "DefaultAttributes": {
+                    "Attribute": "Value",
+                    "Foo": "Bar"
+                },
+                "DeviceTemplates": {
+                    "testButton": {
+                        "DeviceType": "button",
+                        "CallbackOverrides": {
+                            "onClickCallback": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+"BasicPlacement": {
+    "Type": "AWS::IoT1Click::Placement",
+    "Properties": {
+        "ProjectName": {
+            "Ref": "BasicProjectWithPlacement"
+        },
+        "PlacementName": "placement"
+    }
+}
+
+}
+```
+YAML
+```
+BasicProjectWithPlacement:
+  Type: "AWS::IoT1Click::Project"
+  Properties:
+    ProjectName: "project-with-placements"
+    Description: "description"
+    PlacementTemplate:
+      DefaultAttributes:
+        Attribute: Value
+        Foo: Bar
+      DeviceTemplates:
+        testButton:
+          DeviceType: "button"
+          CallbackOverrides:
+            onClickCallback: ""
+BasicPlacement:
+  Type: "AWS::IoT1Click::Placement"
+  Properties:
+    ProjectName: !Ref BasicProjectWithPlacement
+    PlacementName: "placement"
+```
+See also
+
+CreatePlacement
+Projects, Templates, and Placements
+AWS IoT 1-Click Programming Model

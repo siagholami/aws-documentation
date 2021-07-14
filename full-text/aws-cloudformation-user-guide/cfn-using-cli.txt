@@ -1,0 +1,15 @@
+Using the AWS Command Line Interface
+With the AWS Command Line Interface (CLI), you can create, monitor, update and delete stacks from your system's terminal. You can also use the AWS CLI to automate actions through scripts. For more information about the AWS CLI, see the AWS Command Line Interface User Guide.
+If you use Windows PowerShell, AWS also offers the AWS Tools for Windows PowerShell.
+Note
+The prior AWS CloudFormation CLI tools are still available, but not recommended. If you need information about the prior AWS CloudFormation CLI tools, see the AWS CloudFormation CLI Reference in the documentation archive.
+Topics
+ Creating a stack
+ Describing and listing your stacks
+ Viewing stack event history
+ Listing resources
+ Retrieving a template
+ Validating a template
+ Uploading local artifacts to an S3 bucket
+ Quickly deploying templates with transforms
+ Deleting a stack

@@ -1,0 +1,6 @@
+Creating a Dynamic Night Sky
+To add a dynamic nighttime sky, you adjust various horizon, moon, and stars settings. Dynamic skies use the SkyHDR Shader.
+All properties and settings in the following topics are ignored when using a static sky (SkyBox).
+Topics
+ Setting Nighttime Atmospheric Effects
+ Setting Moon Parameters

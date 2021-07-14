@@ -1,0 +1,5 @@
+Developing Custom Consumers with Shared Throughput Using KCL
+One of the methods of developing a custom consumer application with shared throughput is to use the Kinesis Client Library (KCL).
+Topics
+ Developing KCL 1.x Consumers
+ Developing KCL 2.x Consumers

@@ -1,0 +1,158 @@
+Set Up Required Permissions
+Before you can build and run your AWS DeepLens-based computer vision application, you must give AWS DeepLens permissions to create the project for your application and deploy it to your device. Because AWS DeepLens uses Lambda functions to make inference calls and uses AWS IoT Greengrass as the underlying infrastructure to connect your AWS DeepLens device to the AWS Cloud, AWS DeepLens also needs permissions for these dependent AWS services to execute the Lambda functions and manage the device on your behalf. 
+To control access to AWS resources, you use AWS Identity and Access Management (IAM). With IAM, you control who is authenticated (signed in) and authorized (has permissions) to use resources with roles and permissions policies. 
+When you register your device using the AWS DeepLens console for the first time, the AWS DeepLens console can create the following required IAM roles with predefined IAM policies, with a single command: 
+  AWSDeepLensServiceRole:—An IAM role that AWS DeepLens uses to access the AWS services that it uses, including AWS IoT, Amazon Simple Storage Service (Amazon S3), AWS IoT Greengrass, and AWS Lambda. The AWS DeepLens console attaches the AWS-managed policy of AWSDeepLensServiceRolePolicy to this role. You don't need to customize it.
+ AWSDeepLensLambdaRole:—An IAM role that is passed to AWS Lambda for creating Lambda functions and accessing other AWS services on your behalf. The AWS DeepLens console attaches the AWS-managed policy of AWSLambdaFullAccess to this role. Customization of this default policy is not necessary.
+ AWSDeepLensGreengrassRole:—An IAM role that is passed to AWS IoT Greengrass to allow AWS IoT Greengrass to create needed AWS resources and to access other required AWS services. This role allows you to deploy Lambda inference functions to your AWS DeepLens device for on-device execution. The AWS DeepLens console attaches the AWS-managed policy of AWSGreengrassResourceAccessRolePolicy to this role. You don't need to customize it.
+ AWSDeepLensGreengrassGroupRole:—An IAM role that is passed to AWS IoT Greengrass device groups, which gives AWS DeepLens administrative Lambda functions to access other AWS services. The AWS DeepLens console attaches the AWS-managed policy of AWSDeepLensLambdaFunctionAccessPolicy to this role. The AWS IoT Greengrass group defines how your AWS DeepLens device communicates with the AWS IoT Greengrass core devices.
+The managed AWSDeepLensLambdaFunctionAccessPolicy has predefined permissions to allow the project's Lambda function to call certain operations on Amazon S3 objects with the deeplens prefixes, It also supports AWS DeepLens logging operations to CloudWatch Logs and permits the function to send video feeds to Kinesis Video Streams. If your project's Lambda function makes use of other AWS services, you need to customize the AWSDeepLensLambdaFunctionAccessPolicy policy to add new policy statements specific to the additional services. 
+For example, suppose that you have a device installed in a warehouse and another one at your office. The device in the warehouse needs to access your inventory system built upon DynamoDB, whereas the one in the office does not. You must then create a new IAM role of the AWSDeepLensGreengrassGroupRole type and attach to the new role the AWSDeepLensLambdaFunctionAccessPolicy and additional policy statements that permit the Lambda function on the device in the warehouse to access DynamoDB. 
+Alternatively, you can create these IAM roles yourself. For information about how to create the required IAM roles and permissions yourself, see Create IAM Roles for Your AWS DeepLens Project. 
+Create IAM Roles for Your AWS DeepLens Project
+If your AWS account doesn't already have required IAM roles, you can use the AWS DeepLens console to create them with a single command or use the AWS Identity and Access Management console to create them individually. 
+If you already have these roles, AWS DeepLens uses them when you register your device. 
+In either case, you have the option to customize the AWSDeepLensGreengrassGroupRole to grant different permissions to different devices. 
+Topics
+ Create AWSDeepLensServiceRole Using the IAM Console
+ Create AWSDeepLensLambdaRole Using the IAM Console
+ Create AWSDeepLensGreengrassGroupRole Using the IAM Console
+ Create AWSDeepLensGreengrassRole Using the IAM Console
+ Create AWSDeepLensSagemakerRole Using the IAM Console
+Create AWSDeepLensServiceRole Using the IAM Console
+To create AWSDeepLensServiceRole Using the IAM console
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Create role.
+
+
+Under Select type of trusted entity, choose AWS service.
+
+
+Under Choose the service that will use this role, choose DeepLens. 
+
+
+Under Select your use case, choose DeepLens
+
+
+Choose Next: Permissions.
+
+
+In the Create role page, make sure that the AWSDeepLensServiceRolePolicy is listed under Attached permissions policies and then choose Next: Review.
+
+
+For Role name, type AWSDeepLensServiceRole and then choose Create role.
+
+
+Create AWSDeepLensLambdaRole Using the IAM Console
+To create AWSDeepLensLambdaRolein the IAM console
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Create role.
+
+
+Under Select type of trusted entity, choose AWS service.
+
+
+Under Choose the service that will use this role, choose Lambda. 
+
+
+Choose Next: Permissions.
+
+
+In the Create role page, type AWSLambdaFullAccess in the search query input field next to Filer policies under Attached permissions policies. Choose the checkmark next to the AWSLambdaFullAccess policy entry and then choose Next: Review.
+
+
+For Role name, type AWSDeepLensLambdaRole and then choose Create role.
+
+
+Create AWSDeepLensGreengrassGroupRole Using the IAM Console
+To create AWSDeepLensGreengrassGroupRole in the IAM console
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Create role.
+
+
+Under Select type of trusted entity, choose AWS service.
+
+
+Under Choose the service that will use this role, choose DeepLens. 
+
+
+Under Select your use case, choose DeepLens - Greengrass Lambda
+
+
+Choose Next: Permissions.
+
+
+In the Create role page, make sure that the AWSDeepLensLambdaFunctionAccessPolicy is listed under Attached permissions policies and then choose Next: Review.
+
+
+For Role name, type AWSDeepLensGreengrassGroupRole and then choose Create role.
+
+
+Create AWSDeepLensGreengrassRole Using the IAM Console
+To create AWSDeepLensGreengrassRole in the IAM console
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Create role. 
+
+
+Under Select type of trusted entity, choose AWS service.
+
+
+Under Choose the service that will use this role, choose Greengrass. 
+
+
+Under Select your use case, choose Greengrass
+
+
+Choose Next: Permissions.
+
+
+In the Create role page, type AWSGreengrassResourceAccessRolePolicy in the filter query input field. Choose the checkmark next to the AWSGreengrassResourceAccessRolePolicy listed under Attached permissions policies and then choose Next: Review.
+
+
+For Role name, type AWSDeepLensGreengrassRole and then choose Create role.
+
+
+Create AWSDeepLensSagemakerRole Using the IAM Console
+If you use Amazon SageMaker to train a custom deep learning model for your AWS DeepLens project, you must also create an IAM role to grant Amazon SageMaker permissions to access required AWS resource on your behalf. To grant the permissions, follow the step below to create the AWSDeepLensSagemakerRole in the IAM console. 
+To create AWSDeepLensSagemakerRole in the IAM console
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Create role. 
+
+
+Under Select type of trusted entity, choose AWS service.
+
+
+Under Choose the service that will use this role, choose SageMaker. 
+
+
+Under Select your use case, choose SageMaker - Execution
+
+
+Choose Next: Permissions.
+
+
+In the Create role page, type AmazonSageMakerFullAccess in the filter query input field. Choose the checkmark next to the AmazonSageMakerFullAccess listed under Attached permissions policies and then choose Next: Review.
+
+
+For Role name, type AWSDeepLensSageMakerRole and then choose Create role.
+

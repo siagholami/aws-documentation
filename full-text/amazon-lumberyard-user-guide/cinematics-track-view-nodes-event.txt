@@ -1,0 +1,32 @@
+Event Node
+You can add an Event node to your sequence to trigger and send values to Script Canvas. You create Track Events using the Track View Events window. You then assign the Track Event to an animation key that is added to the track for the Event node. When the key is played during the sequence, the event is triggered. Script Canvas then uses the Track Event to trigger additional script logic.
+To add an Event node
+
+
+In the Track View, select or create a sequence. 
+
+
+In the node browser, right-click and choose Add Event Node.
+
+
+In the Track Event Name window, enter a name for the track and choose OK. 
+
+
+This creates a Track Event node and a Track Event track is automatically to that node.
+
+To create a Track Event
+
+
+In the node browser, right-click and choose Edit Events. This opens the Track View Events window.
+
+
+
+In the Track View Events window, click Add to create an event.
+
+
+Enter an event name and choose OK. Your track event appears in the window.
+
+
+
+When you are done, close the window. You can now specify this track event in Script Canvas.
+

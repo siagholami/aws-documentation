@@ -1,0 +1,30 @@
+Disabling AWS Security Hub
+To disable AWS Security Hub, you can use the Security Hub console or the Security Hub API.
+When you disable Security Hub for an account, it is disabled only in the current Region. No new findings are processed for the account in that Region.
+The following also occurs.
+ After 90 days, your existing findings and insights and any Security Hub configuration settings are deleted and cannot be recovered.
+If you want to save your existing findings, you must export them before you disable Security Hub. For more information, see Effect of account actions on Security Hub data.
+ Any enabled standards are disabled.
+Disabling Security Hub (console)
+You can disable Security Hub from the AWS Management Console.
+To disable Security Hub (console)
+
+
+Open the AWS Security Hub console at https://console.aws.amazon.com/securityhub/.
+
+
+In the navigation pane, choose Settings.
+
+
+On the Settings page, choose General.
+
+
+Under Disable AWS Security Hub, choose Disable AWS Security Hub. Then choose Disable AWS Security Hub again.
+
+
+Disabling Security Hub (Security Hub API, AWS CLI)
+To disable Security Hub, you can use an API call or the AWS Command Line Interface.
+To disable Security Hub (Security Hub API, AWS CLI)
+ Security Hub API – Use the https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisableSecurityHub.html operation.
+ AWS CLI – At the command line, run the https://docs.aws.amazon.com/cli/latest/reference/securityhub/disable-security-hub.html command.
+aws securityhub disable-security-hub

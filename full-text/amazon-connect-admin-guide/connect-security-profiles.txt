@@ -1,0 +1,10 @@
+Security profiles
+A security profile is a group of permissions that map to a common role in a contact center. For example, the Agent security profile contains permissions needed to access the Contact Control Panel (CCP).
+Security profiles help you manage who can access the Amazon Connect dashboard and Contact Control Panel (CCP), and who can perform specific tasks. 
+Topics
+ Best practices for security profiles
+ About inherited permissions
+ Default security profiles
+ Assign a security profile to a user
+ Create a security profile
+ Update security profiles

@@ -1,0 +1,10 @@
+AWS Systems Manager resource type reference
+Resource types
+ AWS::SSM::Association
+ AWS::SSM::Document
+ AWS::SSM::MaintenanceWindow
+ AWS::SSM::MaintenanceWindowTarget
+ AWS::SSM::MaintenanceWindowTask
+ AWS::SSM::Parameter
+ AWS::SSM::PatchBaseline
+ AWS::SSM::ResourceDataSync

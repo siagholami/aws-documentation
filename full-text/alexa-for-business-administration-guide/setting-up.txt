@@ -1,0 +1,8 @@
+Prerequisites
+Before you can get started with Alexa for Business, complete the following tasks:
+Topics
+ Sign Up for AWS
+ Create IAM Users and Policies
+ Firewall and Network Requirements
+ WPA2 Enterprise Prerequisite
+ AVS Permissions

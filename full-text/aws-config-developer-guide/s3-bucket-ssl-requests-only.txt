@@ -1,0 +1,63 @@
+s3-bucket-ssl-requests-only
+Checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL).
+Identifier:S3_BUCKET_SSL_REQUESTS_ONLY
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+None   
+An example of a bucket policy that is COMPLIANT with the SSL AWS Config rule is as follows:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [ 
+          "123412341234" 
+        ]
+      },
+      "Action": "s3:Get*",
+      "Resource": "arn:aws:s3:::example-bucket/*"
+    },
+    {
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "*",
+      "Resource": "arn:aws:s3:::example-bucket/*",
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      }
+    }
+  ]
+}
+An example of a bucket policy that is NON_COMPLIANT with the SSL AWS Config rule is as follows:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [ 
+          "123412341234" 
+        ]
+      },
+      "Action": "s3:Get*",
+      "Resource": "arn:aws:s3:::example-bucket/*"
+    },
+    {
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "*",
+      "Resource": "arn:aws:s3:::example-bucket/private/*",
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      }
+    }
+  ]
+}
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

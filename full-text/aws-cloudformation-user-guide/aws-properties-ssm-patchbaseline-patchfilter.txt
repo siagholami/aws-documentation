@@ -1,0 +1,29 @@
+AWS::SSM::PatchBaseline PatchFilter
+The PatchFilter property type defines a patch filter for an AWS Systems Manager patch baseline.
+The PatchFilters property of the PatchFilterGroup property type contains a list of PatchFilter property types.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-ssm-patchbaseline-patchfilter-key)" : String,
+  "[Values](#cfn-ssm-patchbaseline-patchfilter-values)" : [ String, ... ]
+}
+YAML
+[Key](#cfn-ssm-patchbaseline-patchfilter-key): String
+  [Values](#cfn-ssm-patchbaseline-patchfilter-values): 
+    - String
+Properties
+Key 
+The key for the filter.
+For information about valid keys, see PatchFilter in the AWS Systems Manager API Reference.
+Required: No
+Type: String
+Allowed values: CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | PATCH_SET | PRIORITY | PRODUCT | PRODUCT_FAMILY | SECTION | SEVERITY
+Update requires: No interruption
+Values 
+The value for the filter key.
+For information about valid values for each key based on operating system type, see PatchFilter in the AWS Systems Manager API Reference.
+Required: No
+Type: List of String
+Maximum: 20
+Update requires: No interruption

@@ -1,0 +1,44 @@
+Abstract DataSink Class
+Topics
+ def writeDynamicFrame
+ def pyWriteDynamicFrame
+ def supportsFormat
+ def setFormat
+ def withFormat
+ def setAccumulableSize
+ def getOutputErrorRecordsAccumulable
+ def errorsAsDynamicFrame
+ DataSink Object
+Package: com.amazonaws.services.glue
+abstract class DataSink
+The writer analog to a DataSource. DataSink encapsulates a destination and a format that a DynamicFrame can be written to.
+def writeDynamicFrame
+def writeDynamicFrame( frame : DynamicFrame,
+                       callSite : CallSite = CallSite("Not provided", "")
+                     ) : DynamicFrame
+def pyWriteDynamicFrame
+def pyWriteDynamicFrame( frame : DynamicFrame,
+                         site : String = "Not provided",
+                         info : String = "" )
+def supportsFormat
+def supportsFormat( format : String ) : Boolean
+def setFormat
+def setFormat( format : String,
+               options : JsonOptions
+             ) : Unit
+def withFormat
+def withFormat( format : String,
+                options : JsonOptions = JsonOptions.empty
+              ) : DataSink
+def setAccumulableSize
+def setAccumulableSize( size : Int ) : Unit
+def getOutputErrorRecordsAccumulable
+def getOutputErrorRecordsAccumulable : Accumulable[List[OutputError], OutputError]
+def errorsAsDynamicFrame
+def errorsAsDynamicFrame : DynamicFrame
+DataSink Object
+object DataSink
+def recordMetrics
+def recordMetrics( frame : DynamicFrame,
+                   ctxt : String
+                 ) : DynamicFrame

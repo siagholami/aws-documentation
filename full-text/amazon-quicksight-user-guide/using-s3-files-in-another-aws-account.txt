@@ -1,0 +1,80 @@
+Data Sets Using S3 Files in Another AWS Account
+Use this section to learn how to set up security so you can use Amazon QuickSight to access Amazon S3 files in another AWS account. 
+For you to access files in another account, the owner of the other account must first set Amazon S3 to grant you permissions to read the file. Then, in Amazon QuickSight, you must set up access to the buckets that were shared with you. After both of these steps are finished, you can use a manifest to create a data set.
+Note
+ To access files that are shared with the public, you don't need to set up any special security. However, you still need a manifest file.
+Topics
+ Setting Up Amazon S3 to Allow Access from a Different Amazon QuickSight Account
+ Setting Up Amazon QuickSight to Access Amazon S3 Files in Another AWS Account
+Setting Up Amazon S3 to Allow Access from a Different Amazon QuickSight Account
+Use this section to learn how to set permissions in Amazon S3 files so they can be accessed by Amazon QuickSight in another AWS account. 
+For information on accessing another account's Amazon S3 files from your Amazon QuickSight account, see Setting Up Amazon QuickSight to Access Amazon S3 Files in Another AWS Account. For more information about S3 permissions, see Managing Access Permissions to Your Amazon S3 Resources and How Do I Set Permissions on an Object?
+You can use the following procedure to set this access from the S3 console. Alternatively, you can grant permissions by using the AWS CLI or by writing a script. If you have a lot of files to share, you can instead create an S3 bucket policy on the s3:GetObject action. To use a bucket policy, add it to the bucket permissions, not to the file permissions. For information on bucket policies, see Bucket Policy Examples in the *Amazon S3 Developer Guide. *
+
+
+Get the email address of the AWS account email you want to share with. Alternatively, you can get and use the canonical user ID. For more information on canonical user IDs, see AWS Account Identifiers in the AWS General Reference.
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+Locate the Amazon S3 bucket that you want to share with Amazon QuickSight. Choose Permissions.
+
+
+Choose Add Account, and then type in an email address, or paste in a canonical user ID, for the AWS account that you want to share with. This email address should be the primary one associated with the AWS account. 
+
+
+Choose Yes for both Read bucket permissions and List objects.
+
+
+Choose Save to confirm.
+
+
+Locate the file you want to share, and open the file's permission settings. 
+
+
+Type in an email address or canonical user ID for the AWS account you want to share with. This email address should be the primary one associated with the AWS account. 
+
+
+Enable Read object permissions for each file that Amazon QuickSight needs access to. 
+
+
+Notify the Amazon QuickSight user that the files are now available for use.
+
+
+Setting Up Amazon QuickSight to Access Amazon S3 Files in Another AWS Account
+Use this section to learn how to set up Amazon QuickSight so you can access Amazon S3 files in another AWS account. For information on allowing someone else to access your Amazon S3 files from their Amazon QuickSight account, see Setting Up Amazon S3 to Allow Access from a Different Amazon QuickSight Account.
+Use the following procedure to access another account's Amazon S3 files from Amazon QuickSight. Before you can use this procedure, the users in the other AWS account must share the files in their Amazon S3 bucket with you.
+
+
+Verify that the user or users in the other AWS account gave your account read and write permission to the S3 bucket in question. 
+
+
+Choose your profile icon, and then choose Manage QuickSight.
+
+
+Choose Edit AWS Permissions.
+
+
+
+Choose Choose S3 buckets.
+
+
+On the Select Amazon S3 buckets screen, choose the S3 buckets you can access across AWS tab.
+
+
+
+The default tab is named S3 buckets linked to QuickSight account. It shows all the buckets your Amazon QuickSight account has access to. 
+
+If you want to add all the buckets you have permission to use, choose Choose accessible buckets from other AWS accounts. Otherwise, type the name of the Amazon S3 bucket that you want to add. It must exactly match the unique name of the Amazon S3 bucket.
+
+If you don't have the appropriate permissions, you see the error message "We can't connect to this S3 bucket. Make sure that any S3 buckets you specify are associated with the AWS account used to create this QuickSight account." This error message appears if you don't have either account permissions or Amazon QuickSight permissions.
+Note
+To use Amazon Athena, Amazon QuickSight needs to access the Amazon S3 buckets that Athena uses. You can add them here one by one, or use the Choose accessible buckets from other AWS accounts option.
+
+
+Choose Select buckets to confirm your selection. 
+
+
+Create a new data set based on Amazon S3, and upload your manifest file. For more information Amazon S3 data sets, see Creating a Data Set Using Amazon S3 Files.
+

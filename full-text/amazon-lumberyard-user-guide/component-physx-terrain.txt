@@ -1,0 +1,61 @@
+PhysX Terrain
+The PhysX Terrain component exports and saves the terrain as an asset that loads at runtime. The PhysX Terrain component is required for games in which physics interacts with the terrain. For example, you can create a terrain collider so that your entities can interact with it, such as a barrel that falls to the ground and then rolls to a stop.
+For more information about using PhysX components, see Simulating physics behavior with the PhysX system.
+Topics
+ PhysX Terrain Component Properties
+ Creating a PhysX Terrain Collider
+PhysX Terrain Component Properties
+
+
+
+
+Property
+Description
+
+
+
+
+Collision Layer
+Specifies on which Collision Layer the terrain exists. You can configure Collision Layer settings in the PhysX Configuration window.  See Configuring the PhysX System.
+
+
+Collision Group
+Specifies the group of layers in which the terrain collides. You can configure Collision Group settings in the PhysX Configuration window.  See Configuring the PhysX System.
+
+
+HeightField Asset
+A read-only parameter that specifies the height field asset that contains the terrain. This property can't be changed.
+
+
+Terrain In Editor
+If set, terrain physics exist while editing. This means raycasts can be performed in Lumberyard Editor and can be viewed in the PhysX Visual Debugger. For more information, see Debugger Configuration.
+
+
+
+Creating a PhysX Terrain Collider
+As a best practice, create a top-level entity in your level and add the PhysX Terrain component. You only need one entity with the PhysX Terrain attached for your level.
+To create a PhysX Terrain Collider
+
+
+In Lumberyard Editor, create an entity. For more information, see Creating an Entity.
+
+
+Enter a name for the entity, such as terrain.
+
+
+In the Entity Inspector, choose Add Component and then select a PhysX Terrain component. The terrain collider appears in the viewport.
+Note
+The Transform component for the entity is ignored and doesn't affect the position of the terrain.
+
+
+To have an entity interact with the terrain collider, you can create a dynamic entity so that the two entities interact. For more information, see Creating a Dynamic PhysX Entity.
+
+
+After you create your dynamic entity, press CtrlG to enter gameplay mode. The dynamic entity falls and then collides with the terrain collider. 
+
+
+Press Esc to leave gameplay mode.
+
+
+Note
+In some cases, performance can be impacted when a large body intersects the terrain. To overcome this issue, you can clear the Persistent Contact Manifold option in the World Configuration. If you clear this option, keep the size of the colliders that intersect the terrain small.

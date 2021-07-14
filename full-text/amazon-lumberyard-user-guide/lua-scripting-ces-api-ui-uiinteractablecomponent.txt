@@ -1,0 +1,187 @@
+UIInteractableComponent
+Controls elements that respond to user input.
+UiInteractableBus
+Services messages for the UiInteractableComponent.
+GetIsAutoActivationEnabled
+Returns true if automatic activation is enabled; false otherwise.
+Syntax
+bool GetIsAutoActivationEnabled ()
+IsHandlingEvents
+Returns true if event handling is enabled; false otherwise.
+Syntax
+bool IsHandlingEvents()
+SetIsAutoActivationEnabled
+Sets whether automatic activation is enabled.
+Syntax
+void SetIsAutoActivationEnabled (bool isEnabled)
+SetIsHandlingEvents
+Sets whether event handling is enabled.
+Syntax
+void SetIsHandlingEvents (bool isHandlingEvents)
+UiInteractableActionsBus
+Services actions for the UiInteractableComponent.
+GetHoverEndActionName
+Returns the current hover end action name.
+Syntax
+AZStd::string& GetHoverEndActionName()
+GetHoverStartActionName
+Returns the current hover start action name.
+Syntax
+AZStd::string& GetHoverStartActionName()
+GetPressedActionName
+Returns the pressed action name.
+Syntax
+AZStd::string& GetPressedActionName()
+GetReleasedActionName
+Returns the released action name.
+Syntax
+AZStd::string& GetReleasedActionName()
+SetHoverEndActionName
+Sets the hover end action name.
+Syntax
+SetHoverEndActionName(const AZStd::string& actionName)
+SetHoverStartActionName
+Sets the hover start action name.
+Syntax
+SetHoverStartActionName(const AZStd::string& actionName)
+SetPressedActionName
+Sets the pressed action name.
+Syntax
+SetPressedActionName(const AZStd::string& actionName)
+SetReleasedActionName
+Sets the released action name.
+Syntax
+SetReleasedActionName(const AZStd::string& actionName)
+UiInteractableStatesBus
+Services states for the UiInteractableComponent.
+GetStateAlpha
+Returns the alpha to be used for the specified target when the interactable element is in the specified state.
+Syntax
+float GetStateAlpha(eUiInteractableState state, AZ::EntityId target)
+GetStateColor
+Returns the color to be used for the specified target when the interactable element is in the specified state.
+Syntax
+AZ::Color GetStateColor(eUiInteractableState state, AZ::EntityId target)
+Possible values for eUiInteractableState are as follows.
+enum eUiInteractableState
+    {
+        eUiInteractableState_Normal,
+        eUiInteractableState_Hover,
+        eUiInteractableState_Pressed,
+        eUiInteractableState_Disabled
+    };
+GetStateFontEffectIndex
+Returns the font effect to be used for the specified target when the interactable element is in the specified state.
+Syntax
+unsigned int GetStateFontEffectIndex(eUiInteractableState state, AZ::EntityId target)
+GetStateFontPathname
+Returns the font path to be used for the specified target when the interactable element is in the specified state.
+Syntax
+AZStd::string GetStateFontPathname(eUiInteractableState state, AZ::EntityId target)
+GetStateSpritePathname
+Returns the sprite path to be used for the specified target when the interactable element is in the specified state.
+Syntax
+AZStd::string GetStateSpritePathname(eUiInteractableState state, AZ::EntityId target)
+HasStateAlpha
+Returns true if the interactable element has an alpha action for the specified state and target combination.
+Syntax
+bool HasStateAlpha(eUiInteractableState state, AZ::EntityId target)
+HasStateColor
+Returns true if the interactable element has a color action for the specified state and target combination.
+Syntax
+bool HasStateColor(eUiInteractableState state, AZ::EntityId target)
+HasStateFont
+Returns true if the interactable element has a font action for the specified state and target combination.
+Syntax
+bool HasStateFont(eUiInteractableState state, AZ::EntityId target)
+HasStateSprite
+Returns true if the interactable element has a sprite action for the specified state and target combination.
+Syntax
+bool HasStateSprite(eUiInteractableState state, AZ::EntityId target)
+SetStateAlpha
+Sets the alpha to be used for the specified target when the interactable element is in the specified state. If the interactable element already has an alpha action for this state and target combination, then SetStateAlpha replaces the alpha action.
+Syntax
+void SetStateAlpha(eUiInteractableState state, AZ::EntityId target, float alpha)
+SetStateColor
+Sets the color to be used for the specified target when the interactable element is in the specified state. If the interactable element already has a color action for the current state and target combination, then SetStateColor replaces the color action.
+Syntax
+void SetStateColor(eUiInteractableState state, AZ::EntityId target, const AZ::Color& color)
+SetStateFont
+Sets the font to be used for the specified target when the interactable element is in the specified state. If the interactable element already has a font action for the specified state and target combination, then SetStateFont replaces the font action.
+Syntax
+void SetStateFont(eUiInteractableState state, AZ::EntityId target, const AZStd::string& fontPathname, unsigned int fontEffectIndex)
+SetStateSpritePathname
+Sets the sprite path to be used for the specified target when the interactable element is in the specified state. If the interactable element already has a sprite action for the specified state and target combination, then SetStateSpritePathname replaces the sprite action.
+Syntax
+void SetStateSpritePathname(eUiInteractableState state, AZ::EntityId target, const AZStd::string& spritePath)
+UiInteractableNotificationBus
+Services notifications for the UIInteractableComponent.
+OnHoverEnd
+Called on hover end.
+Syntax
+void OnHoverEnd()
+OnHoverStart
+Called on hover start.
+Syntax
+void OnHoverStart()
+OnPressed
+Called when an element has been pressed.
+Syntax
+void OnPressed()
+OnReleased
+Called when an element has been released.
+Syntax
+void OnReleased()
+OnReceivedHoverByNavigatingFromDescendant
+Called when the element receives the hover by being navigated to from a descendant.
+Syntax
+void OnReceivedHoverByNavigatingFromDescendant(AZ::EntityId descendantEntityId)
+UiNavigationBus
+Services navigation for the UIInteractableComponent.
+GetNavigationMode
+Returns the navigation mode.
+Syntax
+eUiNavigationMode GetNavigationMode()
+Possible values for eUiNavigationMode are as follows.
+enum eUiNavigationMode
+    {
+        eUiNavigationMode_Automatic,
+        eUiNavigationMode_Custom,
+        eUiNavigationMode_None
+    };
+GetOnDownEntity
+Returns the ID of the entity that receives focus when down is pressed.
+Syntax
+AZ::EntityId GetOnDownEntity()
+GetOnLeftEntity
+Returns the ID of the entity to receive focus when left is pressed.
+Syntax
+AZ::EntityId GetOnLeftEntity()
+GetOnRightEntity
+Returns the ID of the entity to receive focus when right is pressed.
+Syntax
+AZ::EntityId GetOnRightEntity()
+GetOnUpEntity
+Returns the ID of the entity that receives focus when up is pressed.
+Syntax
+AZ::EntityId GetOnUpEntity()
+SetNavigationMode
+Sets the navigation mode.
+Syntax
+void SetNavigationMode(eUiNavigationMode navigationMode)
+SetOnDownEntity
+Sets the entity to receive focus when down is pressed.
+Syntax
+void SetOnDownEntity(AZ::EntityId entityId)
+SetOnLeftEntity
+Sets the entity to receive focus when left is pressed.
+Syntax
+void SetOnLeftEntity(AZ::EntityId entityId)
+SetOnRightEntity
+Sets the entity to receive focus when right is pressed.
+Syntax
+void SetOnRightEntity(AZ::EntityId entityId)
+SetOnUpEntity
+Sets the entity to receive focus when up is pressed.
+Syntax
+void SetOnUpEntity(AZ::EntityId entityId)

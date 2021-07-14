@@ -1,0 +1,4 @@
+EKS resource type reference
+Resource types
+ AWS::EKS::Cluster
+ AWS::EKS::Nodegroup

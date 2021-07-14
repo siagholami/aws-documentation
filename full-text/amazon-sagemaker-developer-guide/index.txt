@@ -1,0 +1,737 @@
+Amazon SageMaker Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon SageMaker?
+Machine Learning with Amazon SageMaker
+Explore, Analyze, and Process Data
+Train a Model with Amazon SageMaker
+Deploy a Model in Amazon SageMaker
+Get Inferences for an Entire Dataset with Batch Transform
+Validate a Machine Learning Model
+Monitoring a Model in Production
+Use Machine Learning Frameworks, Python, and R with Amazon SageMaker
+Use Apache MXNet with Amazon SageMaker
+Use Apache Spark with Amazon SageMaker
+Example 1: Use Amazon SageMaker for Training and Inference with Apache Spark
+Use Custom Algorithms for Model Training and Hosting on Amazon SageMaker with Apache Spark
+Use the SageMakerEstimator in a Spark Pipeline
+
+
+Additional Examples: Use Amazon SageMaker with Apache Spark
+
+
+Use Chainer with Amazon SageMaker
+Use PyTorch with Amazon SageMaker
+R User Guide to Amazon SageMaker
+Use Scikit-learn with Amazon SageMaker
+Use SparkML Serving with Amazon SageMaker
+Use TensorFlow with Amazon SageMaker
+
+
+Supported Regions and Quotas
+Get Started with Amazon SageMaker
+Set Up Amazon SageMaker
+Onboard to Amazon SageMaker Studio
+Onboard to Amazon SageMaker Studio Using Quick Start
+Onboard to Amazon SageMaker Studio Using AWS SSO
+Set Up AWS SSO for Use with Amazon SageMaker Studio
+
+
+Onboard to Amazon SageMaker Studio Using IAM
+Delete an Amazon SageMaker Studio Domain
+
+
+Get Started with Amazon SageMaker Studio
+Amazon SageMaker Studio Tour
+
+
+Get Started with Amazon SageMaker Notebook Instances and SDKs
+Step 1: Create an Amazon S3 Bucket
+Step 2: Create an Amazon SageMaker Notebook Instance
+Step 3: Create a Jupyter Notebook
+Step 4: Download, Explore, and Transform the Training Data
+Step 4.1: Download the MNIST Dataset
+Step 4.2: Explore the Training Dataset
+Step 4.3: Transform the Training Dataset and Upload It to Amazon S3
+
+
+Step 5: Train a Model
+Step 6: Deploy the Model to Amazon SageMaker
+Step 6.1: Deploy the Model to SageMaker Hosting Services
+Step 6.2: Deploy the Model with Batch Transform
+
+
+Step 7: Validate the Model
+Step 7.1: Validate a Model Deployed to SageMaker Hosting Services
+Step 7.2: Validate a Model Deployed with Batch Transform
+
+
+Step 8: Integrating Amazon SageMaker Endpoints into Internet-facing Applications
+Step 9: Clean Up
+
+
+Amazon SageMaker Studio
+Amazon SageMaker Studio UI Overview
+Use the Amazon SageMaker Studio Launcher
+Use Amazon SageMaker Studio Notebooks
+How Are Amazon SageMaker Studio Notebooks Different from Notebook Instances?
+Get Started
+Create or Open an Amazon SageMaker Studio Notebook
+Use the Amazon SageMaker Studio Notebook Toolbar
+Share and Use a Amazon SageMaker Studio Notebook
+Get Notebook and App Metadata
+Get Notebook Differences
+Manage Resources
+Change an Instance Type
+Change an Amazon SageMaker Image
+Create a Custom Kernel
+Shut Down Resources
+
+
+Usage Metering
+Available Resources
+Available Instance Types
+Available Amazon SageMaker Images
+Available Amazon SageMaker Kernels
+
+
+
+
+Perform Common Tasks in Amazon SageMaker Studio
+Amazon SageMaker Studio Pricing
+Use Amazon SageMaker Notebook Instances
+Create a Notebook Instance
+Access Notebook Instances
+Control Root Access to a Notebook Instance
+
+
+Customize a Notebook Instance Using a Lifecycle Configuration Script
+Lifecycle Configuration Best Practices
+Install External Libraries and Kernels in Notebook Instances
+Notebook Instance Software Updates
+Control an Amazon EMR Spark Instance Using a Notebook
+
+
+Example Notebooks
+Set the Notebook Kernel
+Associate Git Repositories with SageMaker Notebook Instances
+Add a Git Repository to Your Amazon SageMaker Account
+Add a Git Repository to Your Amazon SageMaker Account (CLI)
+
+
+Create a Notebook Instance with an Associated Git Repository
+Create a Notebook Instance with an Associated Git Repository (CLI)
+
+
+Associate a CodeCommit Repository in a Different AWS Account with a Notebook Instance
+Use Git Repositories in a Notebook Instance
+
+
+Notebook Instance Metadata
+Monitor Jupyter Logs in Amazon CloudWatch Logs
+Automate model development with Amazon SageMaker Autopilot
+Get started with Amazon SageMaker Autopilot
+Samples: Explore modeling with Amazon SageMaker Autopilot
+Videos: Use Autopilot to automate and explore the machine learning process
+Tutorials: Get started with Amazon SageMaker Autopilot
+
+
+Create an Amazon SageMaker Autopilot experiment
+Amazon SageMaker Autopilot problem types
+Amazon SageMaker Autopilot notebook output
+Amazon SageMaker Autopilot container output
+API reference guide for Amazon SageMaker Autopilot
+Prepare and Label Data
+Process Data and Evaluate Models
+Process Data and Evaluate Models with scikit-learn
+Use Your Own Processing Code
+Run Scripts with Your Own Processing Container
+Build Your Own Processing Container (Advanced Scenario)
+
+
+
+
+Use Amazon SageMaker Ground Truth to Label Data
+Getting started
+Step 1: Before You Begin
+Step 2: Create a Labeling Job
+Step 3: Select Workers
+Step 4: Configure the Bounding Box Tool
+Step 5: Monitoring Your Labeling Job
+
+
+Label Images
+Bounding Box
+Image Semantic Segmentation
+Auto-Segmentation Tool
+Image Classification (Single Label)
+Image Classification (Multi-label)
+Label Verification
+
+
+Use Ground Truth to Label Text
+Named Entity Recognition
+Text Classification (Single Label)
+Text Classification (Multi-label)
+
+
+Label Videos and Video Frames
+Video Classification
+Label Video Frames
+Video Frame Object Detection
+Video Frame Object Tracking
+Video Frame Labeling Job Overview
+
+
+Worker Instructions
+Work on Video Frame Object Tracking Tasks
+Work on Video Frame Object Detection Tasks
+
+
+
+
+Use Ground Truth to Label 3D Point Clouds
+3D Point Cloud Task types
+3D Point Cloud Object Detection
+3D Point Cloud Object Tracking
+3D Point Cloud Semantic Segmentation
+
+
+3D Point Cloud Labeling Jobs Overview
+Worker Instructions
+3D Point Cloud Semantic Segmentation
+3D Point Cloud Object Detection
+3D Point Cloud Object Tracking
+
+
+
+
+Verify and Adjust Labels
+Creating Custom Labeling Workflows
+Step 1: Setting up your workforce
+Step 2: Creating your custom labeling task template
+Demo Template: Annotation of Images with crowd-bounding-box
+Demo Template: Labeling Intents with crowd-classifier
+Step 3: Processing with AWS Lambda
+Custom Workflows via the API
+
+
+Create a Labeling Job
+Built-in Task Types
+Creating Instruction Pages
+Create a Labeling Job (Console)
+Create a Labeling Job (API)
+Create a Labeling Category Configuration File with Label Category Attributes
+
+
+Use Input and Output Data
+Input Data
+Input Data Quotas
+Filter and Select Data for Labeling
+
+
+3D Point Cloud Input Data
+Accepted Raw 3D Data Formats
+Create an Input Manifest File for a 3D Point Cloud Labeling Job
+Create a Point Cloud Frame Input Manifest File
+Create a Point Cloud Sequence Input Manifest
+Understand Coordinate Systems and Sensor Fusion
+
+
+Video Frame Input Data
+Choose Video Files or Video Frames for Input Data
+Input Data Setup
+Automated Video Frame Input Data Setup
+Manual Input Data Setup
+
+
+Output Data
+
+
+Enhanced Data Labeling
+Batches for Labeling Tasks
+Consolidate Annotations
+Automate Data Labeling
+Chaining Labeling Jobs
+
+
+Ground Truth Security and Permissions
+Assign IAM Permissions to Use Ground Truth
+Data and Storage Volume Encryption
+Workforce Authentication and Restrictions
+
+
+Monitor Labeling Job Status
+
+
+Create and Manage Workforces
+Using the Amazon Mechanical Turk Workforce
+Managing Vendor Workforces
+Use a Private Workforce
+Create and Manage Amazon Cognito Workforce
+Create a Private Workforce (Amazon Cognito)
+Create a Private Workforce (Amazon SageMaker Console)
+Create a Private Workforce (Amazon Cognito Console)
+Manage a Private Workforce (Amazon Cognito)
+Manage a Workforce (Amazon SageMaker Console)
+Manage a Private Workforce (Amazon Cognito Console)
+
+
+Create and Manage OIDC IdP Workforce
+Create a Private Workforce (OIDC IdP)
+Manage a Private Workforce (OIDC IdP)
+
+
+Manage Private Workforce Using the Amazon SageMaker API
+Track Worker Performance
+Create and manage Amazon SNS topics for your work teams
+
+
+
+
+Crowd HTML Elements Reference
+Train Models
+Choose an Algorithm
+Use Amazon SageMaker built-in algorithms
+Common elements of built-in algorithms
+Common parameters for built-in algorithms
+Common data formats for built-in algorithms
+Common data formats for training
+Common Data Formats for Inference
+Instance types for built-in algorithms
+Logs for built-In Algorithms
+
+
+BlazingText algorithm
+BlazingText Hyperparameters
+Tune a BlazingText Model
+
+
+DeepAR Forecasting Algorithm
+How the DeepAR Algorithm Works
+DeepAR Hyperparameters
+Tune a DeepAR Model
+DeepAR Inference Formats
+
+
+Factorization Machines Algorithm
+How Factorization Machines Work
+Factorization Machines Hyperparameters
+Tune a Factorization Machines Model
+Factorization Machine Response Formats
+
+
+Image Classification Algorithm
+How Image Classification Works
+Image Classification Hyperparameters
+Tune an Image Classification Model
+
+
+IP Insights Algorithm
+How IP Insights Works
+IP Insights Hyperparameters
+Tune an IP Insights Model
+IP Insights Data Formats
+IP Insights Training Data Formats
+IP Insights Inference Data Formats
+
+
+K-Means Algorithm
+How K-Means Clustering Works
+K-Means Hyperparameters
+Tune a K-Means Model
+K-Means Response Formats
+
+
+K-Nearest Neighbors (k-NN) Algorithm
+How the k-NN Algorithm Works
+k-NN Hyperparameters
+Tune a k-NN Model
+Data Formats for k-NN Training Input
+k-NN Request and Response Formats
+
+
+Latent Dirichlet Allocation (LDA) Algorithm
+How LDA Works
+LDA Hyperparameters
+Tune an LDA Model
+
+
+Linear learner algorithm
+How linear learner works
+Linear learner hyperparameters
+Tune a linear learner model
+Linear learner response formats
+
+
+Neural Topic Model (NTM) Algorithm
+NTM Hyperparameters
+Tune an NTM Model
+NTM Response Formats
+
+
+Object2Vec Algorithm
+How Object2Vec Works
+Object2Vec Hyperparameters
+Tune an Object2Vec Model
+Data Formats for Object2Vec Training
+Data Formats for Object2Vec Inference
+Encoder Embeddings for Object2Vec
+
+
+Object Detection Algorithm
+How Object Detection Works
+Object Detection Hyperparameters
+Tune an Object Detection Model
+Object Detection Request and Response Formats
+
+
+Principal Component Analysis (PCA) Algorithm
+How PCA Works
+PCA Hyperparameters
+PCA Response Formats
+
+
+Random Cut Forest (RCF) Algorithm
+How RCF Works
+RCF Hyperparameters
+Tune an RCF Model
+RCF Response Formats
+
+
+Semantic Segmentation Algorithm
+Semantic Segmentation Hyperparameters
+
+
+Sequence-to-Sequence Algorithm
+How Sequence-to-Sequence Works
+Sequence-to-Sequence Hyperparameters
+Tune a Sequence-to-Sequence Model
+
+
+XGBoost Algorithm
+How XGBoost Works
+XGBoost Hyperparameters
+Tune an XGBoost Model
+XGBoost Previous Versions
+XGBoost Release 0.72
+
+
+
+
+Use Your Own Algorithms or Models with Amazon SageMaker
+Docker Container Basics
+Create Docker Containers with the Amazon SageMaker Containers Library
+Get Started: Build Your Custom Training Container with Amazon SageMaker
+Prebuilt Amazon SageMaker Docker Images for TensorFlow, MXNet, Chainer, and PyTorch
+Prebuilt Amazon SageMaker Docker Images for Scikit-learn and Spark ML
+Example Notebooks: Use Your Own Algorithm or Model
+Use Your Own Training Algorithms
+How Amazon SageMaker Runs Your Training Image
+How Amazon SageMaker Provides Training Information
+How Amazon SageMaker Signals Algorithm Success and Failure
+How Amazon SageMaker Processes Training Output
+
+
+Use Your Own Inference Code
+Use Your Own Inference Code with Hosting Services
+Use a Private Docker Registry for Real-Time Inference Containers
+Use Your Own Inference Code with Batch Transform
+
+
+Create Algorithm and Model Package Resources
+Create an Algorithm Resource
+Create a Model Package Resource
+
+
+Use Algorithm and Model Package Resources
+Use an Algorithm to Run a Training Job
+Use an Algorithm to Run a Hyperparameter Tuning Job
+Use a Model Package to Create a Model
+
+
+
+
+Use Reinforcement Learning with Amazon SageMaker
+Sample RL Workflow Using Amazon SageMaker RL
+RL Environments in Amazon SageMaker
+Distributed Training with Amazon SageMaker RL
+Hyperparameter Tuning with Amazon SageMaker RL
+
+
+Train a Deep Graph Network
+
+
+Manage Machine Learning with Amazon SageMaker Experiments
+Create an Amazon SageMaker Experiment
+View and Compare Amazon SageMaker Experiments, Trials, and Trial Components
+Track and Compare Tutorial
+Search Experiments Using Amazon SageMaker Studio
+Clean Up Amazon SageMaker Experiment Resources
+Search Using the Amazon SageMaker Console and API
+
+
+Amazon SageMaker Debugger
+Amazon SageMaker Studio Visualization Demos of Model Analysis with Debugger
+Use Debugger in AWS Containers
+Configure and Save Tensor Data Using the Debugger API Operations
+Use Debugger Built-in Rules for Training Job Analysis
+List of Debugger Built-in Rules
+Create Debugger Custom Rules for Training Job Analysis
+Action on Amazon SageMaker Debugger Rules Using Amazon CloudWatch and AWS Lambda
+Amazon SageMaker Debugger Advanced Topics and Reference Documentation
+Use Debugger with Custom Training Containers
+Amazon SageMaker Debugger API Operations
+Use the SageMaker CreateTrainingJob and Debugger Configuration API Operations to Create and Debug Your Training Job
+Use Debugger Docker Images for Built-in or Custom Rules
+Amazon SageMaker Debugger Exceptions
+Known Limitations with Amazon SageMaker Debugger
+
+
+
+
+Perform Automatic Model Tuning
+How Hyperparameter Tuning Works
+Define Metrics
+Define Hyperparameter Ranges
+Tune Multiple Algorithms to Find the Best Model
+Get Started
+Managing Hyperparameter Tuning Jobs
+Create a new single or multi-algorithm HPO tuning job
+
+
+Example: Hyperparameter Tuning Job
+Create a Notebook
+Get the Amazon SageMaker Boto 3 Client
+Get the SageMaker Execution Role
+Specify a Bucket and Data Output Location
+Download, Prepare, and Upload Training Data
+Configure and Launch a Hyperparameter Tuning Job
+Monitor the Progress of a Hyperparameter Tuning Job
+Clean up
+
+
+Stop Training Jobs Early
+Run a Warm Start Hyperparameter Tuning Job
+Best Practices for Hyperparameter Tuning
+
+
+Incremental Training in Amazon SageMaker
+Managed Spot Training in Amazon SageMaker
+Use Checkpoints in Amazon SageMaker
+Provide Dataset Metadata to Training Jobs with an Augmented Manifest File
+Monitor Amazon SageMaker
+Monitor and Analyze Training Jobs Using Metrics
+Monitor Amazon SageMaker with Amazon CloudWatch
+Log Amazon SageMaker Events with Amazon CloudWatch
+Log Amazon SageMaker API Calls with AWS CloudTrail
+Automating Amazon SageMaker with Amazon EventBridge
+
+
+Deploy Models for Inference
+Host Multiple Models with Multi-Model Endpoints
+Create a Multi-Model Endpoint
+Create a Multi-Model Endpoint (AWS SDK for Python (Boto))
+Create a Multi-Model Endpoint (Console)
+
+
+Invoke a Multi-Model Endpoint
+Add or Remove Models
+Build Your Own Container with Multi Model Server
+Contract for Custom Containers to Serve Multiple Model
+
+
+How Multi-Model Endpoints Work
+Multi-Model Endpoint Security
+CloudWatch Metrics for Multi-Model Endpoint Deployments
+
+
+Amazon SageMaker Model Monitor
+Capture Data
+Create a Baseline
+Schedule Monitoring Jobs
+The cron Expression for Monitoring Schedule
+Amazon SageMaker Model Monitor Pre-built Container
+
+
+Interpret Results
+Schema for Statistics (statistics.json file)
+Schema for Violations (constraint_violations.json file)
+CloudWatch Metrics
+Visualize Results in Amazon SageMaker Studio
+
+
+Advanced Topics
+Customize Monitoring
+Preprocessing and Postprocessing
+Bring Your Own Containers
+Container Contract Inputs
+Container Contract Outputs
+Schema for Statistics (statistics.json file)
+Schema for Constraints (constraints.json file)
+
+
+CloudWatch Metrics
+
+
+Create a Monitoring Schedule with an AWS CloudFormation Custom Resource
+
+
+
+
+Deploy an Inference Pipeline
+Feature Processing with Spark ML and Scikit-learn
+Create a Pipeline Model
+Run Real-time Predictions with an Inference Pipeline
+Run Batch Transforms with Inference Pipelines
+Inference Pipeline Logs and Metrics
+Troubleshoot Inference Pipelines
+
+
+Compile and Deploy Models with Amazon SageMaker Neo
+Use Neo to Compile a Model
+Compile a Model (AWS Command Line Interface)
+Compile a Model (Amazon SageMaker Console)
+Compile a Model (Amazon SageMaker SDK)
+
+
+Deploy a Model
+Deploy a Model Compiled with Neo with Hosting Services
+Deploy a Model Compiled with Neo (AWS CLI)
+Deploy a Model Compiled with Neo (Console)
+Deploy a Model Compiled with Neo (Amazon SageMaker SDK)
+
+
+Deploy a Model Compiled with Neo (AWS IoT Greengrass)
+
+
+Request Inferences from a Deployed Service
+Troubleshooting Neo Compilation Errors
+
+
+Use Amazon SageMaker Elastic Inference (EI)
+Set Up to Use EI
+Attach EI to a Notebook Instance
+Use EI on Amazon SageMaker Hosted Endpoints
+
+
+Use Batch Transform
+Associate Prediction Results with Input Records
+
+
+Automatically Scale Amazon SageMaker Models
+Prerequisites
+Configure model autoscaling with the console
+Register a model
+Define a scaling policy
+Apply a scaling policy
+Edit a scaling policy
+Delete a scaling policy
+Query Endpoint Autoscaling History
+Update or delete endpoints that use automatic scaling
+Load testing your autoscaling configuration
+Use AWS CloudFormation to update autoscaling policies
+
+
+Test models in production
+Troubleshoot Amazon SageMaker Model Deployments
+Deployment Best Practices
+Host Instance Storage Volumes
+SageMaker Workflows
+Kubernetes Orchestration
+SageMaker Operators for Kubernetes
+Using SageMaker Jobs
+
+
+SageMaker Components for Kubeflow Pipelines
+Using SageMaker Components
+
+
+
+
+Using Amazon Augmented AI for Human Review
+Get Started with Amazon Augmented AI
+Use Task Types
+Use Amazon Augmented AI with Amazon Textract
+Use Amazon Augmented AI with Amazon Rekognition
+Use Amazon Augmented AI with Custom Task Types
+
+
+Create a Flow Definition
+JSON Schema for Human Loop Activation Conditions in Amazon Augmented AI
+Use Human Loop Activation Conditions JSON Schema with Amazon Textract
+Use Human Loop Activation Conditions JSON Schema with Amazon Rekognition
+
+
+
+
+Delete a Flow Definition
+Create and Start a Human Loop
+Create and Manage Worker Task Templates
+Create and Delete a Worker Task Templates
+Create Custom Worker Task Template
+Creating Good Worker Instructions
+
+
+Monitor and Manage Your Human Loop
+Permissions and Security in Amazon Augmented AI
+Use Amazon CloudWatch Events in Amazon Augmented AI
+Use APIs in Amazon Augmented AI
+Buy and Sell Amazon SageMaker Algorithms and Models in AWS Marketplace
+Sell Amazon SageMaker Algorithms and Model Packages
+Develop Algorithms and Models in Amazon SageMaker
+List Your Algorithm or Model Package on AWS Marketplace
+
+
+Find and Subscribe to Algorithms and Model Packages on AWS Marketplace
+Security in Amazon SageMaker
+Data Protection in Amazon SageMaker
+Protect Data at Rest Using Encryption
+Protecting Data in Transit with Encryption
+Protect Communications Between ML Compute Instances in a Distributed Training Job
+
+
+Key Management
+Internetwork Traffic Privacy
+
+
+Identity and Access Management for Amazon SageMaker
+How Amazon SageMaker Works with IAM
+Amazon SageMaker Identity-Based Policy Examples
+SageMaker Roles
+AWS Managed (Predefined) Policies for Amazon SageMaker
+Amazon SageMaker API Permissions: Actions, Permissions, and Resources Reference
+Troubleshooting Amazon SageMaker Identity and Access
+
+
+Logging and Monitoring
+Compliance Validation for Amazon SageMaker
+Resilience in Amazon SageMaker
+Infrastructure Security in Amazon SageMaker
+Connect a Notebook Instance to Resources in a VPC
+Training and Inference Containers Run in Internet-Free Mode
+Connect to SageMaker Through a VPC Interface Endpoint
+Connect to a Notebook Instance Through a VPC Interface Endpoint
+
+
+Give SageMaker Processing Jobs Access to Resources in Your Amazon VPC
+Give SageMaker Training Jobs Access to Resources in Your Amazon VPC
+Give SageMaker Hosted Endpoints Access to Resources in Your Amazon VPC
+Give Batch Transform Jobs Access to Resources in Your Amazon VPC
+
+
+API Reference Guide for Amazon SageMaker
+Programming Model for Amazon SageMaker
+Document History for Amazon SageMaker
+AWS glossary

@@ -1,0 +1,56 @@
+Amazon Managed Blockchain Management Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Managed Blockchain?
+Key Concepts: Managed Blockchain Networks, Members, and Peer Nodes
+Get Started Creating a Hyperledger Fabric Blockchain Network Using Amazon Managed Blockchain
+Prerequisites and Considerations
+Step 1: Create the Network and First Member
+Step 2: Create and Configure the Interface VPC Endpoint
+Step 3: Create an Amazon EC2 Instance and Set Up the Hyperledger Fabric Client
+Step 4: Enroll an Administrative User
+Step 5: Create a Peer Node in Your Membership
+Step 6: Create a Hyperledger Fabric Channel
+Step 7: Install and Run Chaincode
+Step 8: Invite Another AWS Account to be a Member and Create a Joint Channel
+Create an Amazon Managed Blockchain Network
+Delete an Amazon Managed Blockchain Network
+Invite or Remove Members
+Accept an Invitation to Create a Member and Join a Managed Blockchain Network
+Work with Invitations
+Create a Member and Join a Network
+Create an Interface VPC Endpoint to Connect to Managed Blockchain Network Resources
+Work with Peer Nodes in a Managed Blockchain Network
+Create a Peer Node
+View Peer Node Properties
+Use Peer Node Metrics
+Work with Proposals
+Automating Managed Blockchain Proposal Notifications with CloudWatch Events
+Work with Hyperledger Fabric
+Register and Enroll a User as an Administrator
+Develop Chaincode
+Amazon Managed Blockchain Security
+Data Protection for Amazon Managed Blockchain
+Authentication and Access Control
+Identity and Access Management for Amazon Managed Blockchain
+How Amazon Managed Blockchain Works with IAM
+Amazon Managed Blockchain Identity-Based Policy Examples
+Using Service-Linked Roles for Managed Blockchain
+Troubleshooting Amazon Managed Blockchain Identity and Access
+
+
+Configuring Security Groups
+Monitoring Blockchain Activity Using CloudWatch Logs
+Document History for Amazon Managed Blockchain Management Guide
+AWS Glossary

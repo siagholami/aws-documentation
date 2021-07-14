@@ -1,0 +1,16 @@
+Amazon MQ Broker Architecture
+Amazon MQ brokers can be created as single-instance brokers or active/standby brokers. For both deployment modes, Amazon MQ provides high durability by storing its data redundantly.
+Note
+Amazon MQ uses Apache KahaDB as its data store. Other data stores, such as JDBC and LevelDB, aren't supported.
+You can access your brokers by using any programming language that ActiveMQ supports and by enabling TLS explicitly for the following protocols:
+ AMQP
+ MQTT
+ MQTT over WebSocket
+ OpenWire
+ STOMP
+ STOMP over WebSocket
+Topics
+ Amazon MQ Single-Instance Broker
+ Amazon MQ Active/Standby Broker for High Availability
+ Amazon MQ Network of Brokers
+ Amazon MQ Broker Configuration Lifecycle

@@ -1,0 +1,23 @@
+Integrating an Amazon Lex Bot with Slack
+This exercise provides instructions for integrating an Amazon Lex bot with the Slack messaging application. You perform the following steps:
+
+
+Create an Amazon Lex bot.
+
+
+Create a Slack messaging application. 
+
+
+Integrate the Slack application with your bot Amazon Lex.
+
+
+Test the integration by engaging in conversation with your Amazon Lex bot. You send messages with the Slack application and test in a browser window.
+
+
+Topics
+ Step 1: Create an Amazon Lex Bot
+ Step 2: Sign Up for Slack and Create a Slack Team
+ Step 3: Create a Slack Application
+ Step 4: Integrate the Slack Application with the Amazon Lex Bot
+ Step 5: Complete Slack Integration
+ Step 6: Test the Integration

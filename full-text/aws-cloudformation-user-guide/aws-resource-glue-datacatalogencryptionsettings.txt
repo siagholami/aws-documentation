@@ -1,0 +1,31 @@
+AWS::Glue::DataCatalogEncryptionSettings
+Sets the security configuration for a specified catalog. After the configuration has been set, the specified encryption is applied to every catalog write thereafter.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Glue::DataCatalogEncryptionSettings",
+  "Properties" : {
+      "[CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid)" : String,
+      "[DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)" : DataCatalogEncryptionSettings
+    }
+}
+YAML
+Type: AWS::Glue::DataCatalogEncryptionSettings
+Properties: 
+  [CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid): String
+  [DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings): 
+    DataCatalogEncryptionSettings
+Properties
+CatalogId 
+The ID of the Data Catalog in which the settings are created.
+Required: Yes
+Type: String
+Update requires: Replacement
+DataCatalogEncryptionSettings 
+Contains configuration information for maintaining Data Catalog security.
+Required: Yes
+Type: DataCatalogEncryptionSettings
+Update requires: No interruption
+Return values
+Ref

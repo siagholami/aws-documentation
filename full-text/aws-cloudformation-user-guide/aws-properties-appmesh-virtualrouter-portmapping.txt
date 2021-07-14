@@ -1,0 +1,23 @@
+AWS::AppMesh::VirtualRouter PortMapping
+An object representing a virtual router listener port mapping.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Port](#cfn-appmesh-virtualrouter-portmapping-port)" : Integer,
+  "[Protocol](#cfn-appmesh-virtualrouter-portmapping-protocol)" : String
+}
+YAML
+[Port](#cfn-appmesh-virtualrouter-portmapping-port): Integer
+  [Protocol](#cfn-appmesh-virtualrouter-portmapping-protocol): String
+Properties
+Port 
+The port used for the port mapping.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+Protocol 
+The protocol used for the port mapping. Specify one protocol.
+Required: Yes
+Type: String
+Update requires: No interruption

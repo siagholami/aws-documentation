@@ -1,0 +1,16 @@
+AWS::AppMesh::VirtualNode DnsServiceDiscovery
+An object that represents the DNS service discovery information for your virtual node.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Hostname](#cfn-appmesh-virtualnode-dnsservicediscovery-hostname)" : String
+}
+YAML
+[Hostname](#cfn-appmesh-virtualnode-dnsservicediscovery-hostname): String
+Properties
+Hostname 
+Specifies the DNS service discovery hostname for the virtual node. 
+Required: Yes
+Type: String
+Update requires: No interruption

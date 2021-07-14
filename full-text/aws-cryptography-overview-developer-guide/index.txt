@@ -1,0 +1,47 @@
+AWS cryptography services AWS cryptographic services and tools guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+AWS cryptographic services and tools
+What is cryptography?
+Cryptography concepts
+Cryptographic algorithms
+
+
+AWS cryptographic services and tools
+AWS CloudHSM
+AWS Key Management Service
+AWS Encryption SDK
+DynamoDB Encryption Client
+AWS Secrets Manager
+Other AWS services that use cryptography
+
+
+How to choose an encryption tool or service
+When to use AWS Key Management Service (AWS KMS)
+When to use AWS CloudHSM
+When to use AWS Encryption SDK
+When to use DynamoDB Encryption Client
+
+
+AWS PKI services
+What is public key infrastructure?
+PKI concepts
+AWS public key infrastructure (PKI) services and tools
+AWS Certificate Manager
+AWS Certificate Manager Private Certificate Authority
+Other AWS services that use X.509 public key certificates
+
+
+How to choose a PKI service
+Document history for AWS cryptography services

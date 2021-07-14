@@ -1,0 +1,3 @@
+ApplicationInsights resource type reference
+Resource types
+ AWS::ApplicationInsights::Application

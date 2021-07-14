@@ -1,0 +1,76 @@
+Realtime Servers Interface
+When a Realtime script initializes, an interface to the Realtime server is returned. This topic describes the properties and methods available through the interface. Learn more about writing Realtime scripts and view a detailed script example in Creating a Realtime Script.
+The Realtime interface provides access to the following objects:
+ session
+ player
+ gameMessage
+Realtime Session object
+Use these methods to access server-related information and perform server-related actions.
+getPlayers()
+Retrieves a list of peer IDs for players that are currently connected to the game session. Returns an array of player objects. 
+Syntax
+rtSession.getPlayers()
+broadcastGroupMembershipUpdate()
+Triggers delivery of an updated group membership list to player group. Specify which membership to broadcast (groupIdToBroadcast) and the group to receive the update (targetGroupId).
+Syntax
+rtSession.broadcastGroupMembershipUpdate(groupIdToBroadcast, targetGroupId)
+getServerId()
+Retrieves the server's unique peer ID identifier, which is used to route messages to the server. 
+Syntax
+rtSession.getServerId()
+getAllPlayersGroupId()
+Retrieves the group ID for the default group that contains all players currently connected to the game session.
+Syntax
+rtSession.getAllPlayersGroupId()
+processEnding()
+Triggers the Realtime server to terminate the game server. This function must be called from the Realtime script to exit cleanly from a game session.
+Syntax
+rtSession.processEnding()
+getGameSessionId()
+Retrieves the unique ID of the game session currently running.
+Syntax
+rtSession.getGameSessionId()
+getLogger()
+Retrieves the interface for logging. Use this to log statements that will be captured in your game session logs. The logger supports use of "info", "warn", and "error" statements. For example: logger.info("<string>").
+Syntax
+rtSession.getLogger()
+sendMessage()
+Sends a message, created using newTextGameMessage or newBinaryGameMessage, from the Realtime server to a player recipient using the UDP channel. Identify the recipient using the player's peer ID.
+Syntax
+rtSession.sendMessage(gameMessage, targetPlayer)
+sendGroupMessage()
+Sends a message, created using newTextGameMessage or newBinaryGameMessage, from the Realtime server to all players in a player group using the UDP channel. Identify the recipients using the group ID.
+Syntax
+rtSession.sendGroupMessage(gameMessage, targetGroup)
+sendReliableMessage()
+Sends a message, created using newTextGameMessage or newBinaryGameMessage, from the Realtime server to a player recipient using the TCP channel. Identify the recipient using the player's peer ID.
+Syntax
+rtSession.sendReliableMessage(gameMessage, targetPlayer)
+sendReliableGroupMessage()
+Sends a message, created using newTextGameMessage or newBinaryGameMessage, from the Realtime server to all players in a player group using the TCP channel. Identify the recipients using the group ID.
+Syntax
+rtSession.sendReliableGroupMessage(gameMessage, targetGroup)
+newTextGameMessage()
+Creates a new message containing text, to be sent from the server to player recipients using the SendMessage functions. Message format is similar to the format used in the Realtime Client SDK (see RTMessage). Returns a gameMessage object.
+Syntax
+rtSession.newTextGameMessage(opcode, sender, payload)
+newBinaryGameMessage()
+Creates a new message containing binary data, to be sent from the server to player recipients using the SendMessage functions. Message format is similar to the format used in the Realtime Client SDK (see RTMessage). Returns a gameMessage object.
+Syntax
+rtSession.newBinaryGameMessage(opcode, sender, binaryPayload)
+Player object
+Access player-related information.
+player.peerId
+Unique ID that is assigned to a game client when it connects to the Realtime server and joined the game session.
+player.playerSessionId
+Player session ID that was referenced by the game client when it connected to the Realtime server and joined the game session.
+Game message object
+Use these methods to access messages that are received by the Realtime server. Messages received from game clients have the RTMessage structure.
+gameMessage.opcode
+Operation code contained in a message.
+gameMessage.payload
+Payload contained in a message. May be text or binary.
+gameMessage.sender
+Peer ID of the game client that sent a message.
+gameMessage.reliable
+Boolean indicating whether the message was sent via TCP (true) or UDP (false).

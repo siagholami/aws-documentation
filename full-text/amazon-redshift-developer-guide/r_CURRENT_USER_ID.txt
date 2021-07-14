@@ -1,0 +1,15 @@
+CURRENT_USER_ID
+Returns the unique identifier for the Amazon Redshift user logged in to the current session.
+Syntax
+CURRENT_USER_ID
+Return type
+The CURRENT_USER_ID function returns an integer. 
+Examples
+The following example returns the user name and current user ID for this session: 
+```
+select user, current_user_id;
+current_user | current_user_id
+-------------------------------
+   dwuser     |               1
+(1 row)
+```

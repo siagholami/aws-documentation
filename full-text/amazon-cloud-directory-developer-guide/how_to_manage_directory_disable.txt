@@ -1,0 +1,16 @@
+Disable Your Directory
+Use the following procedure to disable a directory in Cloud Directory.
+To disable a directory
+
+
+In the AWS Directory Service console navigation pane, under Cloud Directory, select Directories.
+
+
+Select the option in the table next to the directory ID you want to disable.
+
+
+Choose Actions.
+
+
+Choose Disable
+

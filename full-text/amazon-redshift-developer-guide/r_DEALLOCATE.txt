@@ -1,0 +1,13 @@
+DEALLOCATE
+Deallocates a prepared statement. 
+Syntax
+DEALLOCATE [PREPARE] plan_name
+Parameters
+PREPARE 
+This keyword is optional and is ignored. 
+plan_name 
+The name of the prepared statement to deallocate. 
+Usage Notes
+DEALLOCATE is used to deallocate a previously prepared SQL statement. If you don't explicitly deallocate a prepared statement, it is deallocated when the current session ends. For more information on prepared statements, see PREPARE.
+See Also
+EXECUTE, PREPARE 

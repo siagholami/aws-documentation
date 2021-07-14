@@ -1,0 +1,8 @@
+Populating a Scene
+Cinematic scenes, also known as sequences, consist of multiple nodes, tracks, and track events. When you create a sequence, the sequence name is always the top (parent) node in the node browser.
+For more information, see Using the Track View Editor.
+Topics
+ Setting Sequence Properties
+ Working with Slices and Sequences
+ Adding Component Entities
+ Moving a Component Entity in a Sequence

@@ -1,0 +1,80 @@
+AWS::RoboMaker::Fleet
+The AWS::RoboMaker::Fleet resource creates an AWS RoboMaker fleet. Fleets contain robots and can receive deployments.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::RoboMaker::Fleet",
+  "Properties" : {
+      "[Name](#cfn-robomaker-fleet-name)" : String,
+      "[Tags](#cfn-robomaker-fleet-tags)" : Json
+    }
+}
+YAML
+Type: AWS::RoboMaker::Fleet
+Properties: 
+  [Name](#cfn-robomaker-fleet-name): String
+  [Tags](#cfn-robomaker-fleet-tags): Json
+Properties
+Name 
+The name of the fleet.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 255
+Pattern: [a-zA-Z0-9_\-]*
+Update requires: Replacement
+Tags 
+The list of all tags added to the fleet.
+Required: No
+Type: Json
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of an AWS::RoboMaker::Fleet resource to the intrinsic Ref function, the function returns the Amazon Resource Name (ARN) of the fleet, such as arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the fleet, such as arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711.
+Examples
+Specifies an AWS RoboMaker Fleet
+The following example creates a fleet.
+JSON
+{
+  "Description": "RoboMaker Fleet example",
+  "Resources": {
+    "BasicFleet": {
+      "Type": "AWS::RoboMaker::Fleet",
+      "Properties": {
+        "Name": "MyFleet",
+        "Tags": {
+          "Name": "BasicFleet",
+          "Type": "CFN"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "Fleet": {
+      "Value": "BasicFleet"
+    }
+  }
+}
+YAML
+```
+Description: "RoboMaker Fleet example"
+Resources:
+  BasicFleet:
+    Type: "AWS::RoboMaker::Fleet"
+    Properties:
+      Name: "MyFleet"
+      Tags:
+        "Name" : "BasicFleet"
+        "Type" : "CFN"
+Outputs:
+  Fleet:
+    Value: !Ref BasicFleet
+```

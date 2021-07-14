@@ -1,0 +1,3 @@
+September 25, 2017
+Published on 2017-09-25
+Added support for Asia Pacific (Sydney). For a list of supported regions, see AWS Regions and Endpoints.

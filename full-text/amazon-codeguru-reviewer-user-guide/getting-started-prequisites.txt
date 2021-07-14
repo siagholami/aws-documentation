@@ -1,0 +1,2 @@
+Step 1: Get set up
+Before you get started, you must prepare by running through the steps in Setting up with Amazon CodeGuru Reviewer. 

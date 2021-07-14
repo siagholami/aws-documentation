@@ -1,0 +1,79 @@
+AWS::EC2::TrafficMirrorFilter
+Specifies a Traffic Mirror filter.
+A Traffic Mirror filter is a set of rules that defines the traffic to mirror.
+By default, no traffic is mirrored. To mirror traffic, use AWS::EC2::TrafficMirrorFilterRule to add Traffic Mirror rules to the filter. The rules you add define what traffic gets mirrored.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::TrafficMirrorFilter",
+  "Properties" : {
+      "[Description](#cfn-ec2-trafficmirrorfilter-description)" : String,
+      "[NetworkServices](#cfn-ec2-trafficmirrorfilter-networkservices)" : [ String, ... ],
+      "[Tags](#cfn-ec2-trafficmirrorfilter-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::EC2::TrafficMirrorFilter
+Properties: 
+  [Description](#cfn-ec2-trafficmirrorfilter-description): String
+  [NetworkServices](#cfn-ec2-trafficmirrorfilter-networkservices): 
+    - String
+  [Tags](#cfn-ec2-trafficmirrorfilter-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+Description 
+The description of the Traffic Mirror filter.
+Required: No
+Type: String
+Update requires: Replacement
+NetworkServices 
+The network service traffic that is associated with the Traffic Mirror filter.
+Valid values are amazon-dns.
+Required: No
+Type: List of String
+Update requires: No interruption
+Tags 
+The tags to assign to a Traffic Mirror filter.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the Traffic Mirror filter.
+For more information about using the Ref function, see Ref.
+Examples
+Create a Traffic Mirror Filter
+This is a filter that you can use when you create a traffic mirror session. This filter also configures mirroring of Amazon DNS network services.
+JSON
+{
+  "SampleTrafficMirrorFilter": {
+    "Type": "AWS::EC2::TrafficMirrorFilter",
+    "Properties": {
+      "Description": "Example traffic mirror filter",
+      "NetworkServices": [
+        "amazon-dns"
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "SampleFilter"
+        }
+      ]
+    }
+  }
+}
+YAML
+SampleTrafficMirrorFilter:
+  Type: "AWS::EC2::TrafficMirrorFilter"
+  Properties:
+    Description: "Example traffic mirror filter"
+    NetworkServices:
+      - "amazon-dns"
+    Tags:
+    - Key: "Name"
+      Value: "SampleFilter"
+See also
+
+Traffic Mirror Filters and Filter Rules in Traffic Mirroring
+CreateTrafficMirrorFilter in the Amazon EC2 API Reference

@@ -1,0 +1,23 @@
+Deleting Services
+Before you can delete a service, you must deregister all service instances that were registered using the service. For more information, see Deregistering Service Instances.
+To delete a service, perform the following procedure.
+To delete a service
+
+
+Sign in to the AWS Management Console and open the AWS Cloud Map console at https://console.aws.amazon.com/cloudmap/.
+
+
+In the navigation pane, choose Namespaces.
+
+
+Choose the option for the namespace that contains the service that you want to delete.
+
+
+On the Namespace: namespace-name page, choose the option for the service that you want to delete.
+
+
+Choose Delete.
+
+
+Confirm that you want to delete the service.
+

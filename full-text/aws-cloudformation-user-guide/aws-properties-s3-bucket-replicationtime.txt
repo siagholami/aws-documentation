@@ -1,0 +1,25 @@
+AWS::S3::Bucket ReplicationTime
+Not currently supported by AWS CloudFormation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Status](#cfn-s3-bucket-replicationtime-status)" : String,
+  "[Time](#cfn-s3-bucket-replicationtime-time)" : ReplicationTimeValue
+}
+YAML
+[Status](#cfn-s3-bucket-replicationtime-status): String
+  [Time](#cfn-s3-bucket-replicationtime-time): 
+    ReplicationTimeValue
+Properties
+Status 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Allowed values: Disabled | Enabled
+Update requires: No interruption
+Time 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: ReplicationTimeValue
+Update requires: No interruption

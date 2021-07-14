@@ -1,0 +1,23 @@
+AWS::IoTThingsGraph::FlowTemplate DefinitionDocument
+A document that defines an entity. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Language](#cfn-iotthingsgraph-flowtemplate-definitiondocument-language)" : String,
+  "[Text](#cfn-iotthingsgraph-flowtemplate-definitiondocument-text)" : String
+}
+YAML
+[Language](#cfn-iotthingsgraph-flowtemplate-definitiondocument-language): String
+  [Text](#cfn-iotthingsgraph-flowtemplate-definitiondocument-text): String
+Properties
+Language 
+The language used to define the entity. GRAPHQL is the only valid value.
+Required: Yes
+Type: String
+Update requires: No interruption
+Text 
+The GraphQL text that defines the entity.
+Required: Yes
+Type: String
+Update requires: No interruption

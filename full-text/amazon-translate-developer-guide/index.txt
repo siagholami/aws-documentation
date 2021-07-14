@@ -1,0 +1,100 @@
+Amazon Translate Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Translate?
+How Amazon Translate Works
+Getting Started with Amazon Translate
+Step 1: Set Up an AWS Account and Create an Administrator User
+Step 2: Set Up the AWS Command Line Interface (AWS CLI)
+Step 3: Getting Started (Console)
+Step 4: Getting Started (AWS CLI)
+Step 5: Getting Started (SDK)
+Translating Text Using the AWS SDK for Java
+Translating Text Using the AWS SDK for Python (Boto)
+Translating Text Using the AWS Mobile SDK for Android
+Translating Text Using the AWS Mobile SDK for iOS
+
+
+Translation Processing Modes
+Real-Time Translation
+Asynchronous Batch Processing
+Custom Terminology
+Creating a Custom Terminology
+Compatible Languages
+
+
+Using Custom Terminologies
+Encrypting Your Terminology
+Best Practices
+Examples
+Using Amazon Polly with Amazon Translate
+Using Amazon Translate to Translate a Chat Channel
+Using Amazon Translate with Amazon DynamoDB
+Using Amazon Translate to Translate a Web Page
+Using Amazon Translate to Translate Large Documents
+Using Signature Version 4 with Amazon Translate
+Security in Amazon Translate
+Data Protection in Amazon Translate
+Encryption at Rest
+Encryption in Transit
+Key Management
+
+
+Identity and Access Management for Amazon Translate
+How Amazon Translate Works with IAM
+Amazon Translate Identity-based Policy Examples
+Troubleshooting Amazon Translate Identity and Access
+Amazon Translate API Permissions: Actions, Resources, and Conditions Reference
+
+
+Monitoring Amazon Translate
+Logging Amazon Translate API Calls with AWS CloudTrail
+CloudWatch Metrics and Dimensions for Amazon Translate
+
+
+Compliance Validation for Amazon Translate
+Resilience in Amazon Translate
+Infrastructure Security in Amazon Translate
+Guidelines and Limits
+Document History for Amazon Translate
+API Reference
+Actions
+DeleteTerminology
+DescribeTextTranslationJob
+GetTerminology
+ImportTerminology
+ListTerminologies
+ListTextTranslationJobs
+StartTextTranslationJob
+StopTextTranslationJob
+TranslateText
+
+
+Data Types
+AppliedTerminology
+EncryptionKey
+InputDataConfig
+JobDetails
+OutputDataConfig
+Term
+TerminologyData
+TerminologyDataLocation
+TerminologyProperties
+TextTranslationJobFilter
+TextTranslationJobProperties
+
+
+Common Errors
+Common Parameters
+AWS Glossary

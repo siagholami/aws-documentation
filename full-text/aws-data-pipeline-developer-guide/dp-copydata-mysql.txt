@@ -1,0 +1,13 @@
+Export MySQL Data to Amazon S3 Using AWS Data Pipeline
+This tutorial walks you through the process of creating a data pipeline to copy data (rows) from a table in MySQL database to a CSV (comma-separated values) file in an Amazon S3 bucket and then sending an Amazon SNS notification after the copy activity completes successfully. You will use an EC2 instance provided by AWS Data Pipeline for this copy activity.
+Pipeline Objects
+The pipeline uses the following objects:
+ CopyActivity
+ Ec2Resource
+ MySqlDataNode
+ S3DataNode
+ SnsAlarm
+Topics
+ Before You Begin
+ Copy MySQL Data Using the AWS Data Pipeline Console
+ Copy MySQL Data Using the Command Line

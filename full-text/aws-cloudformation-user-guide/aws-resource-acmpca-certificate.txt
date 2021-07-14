@@ -1,0 +1,63 @@
+AWS::ACMPCA::Certificate
+The AWS::ACMPCA::Certificate resource is used to issue a certificate using your private certificate authority. For more information, see the IssueCertificate action.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ACMPCA::Certificate",
+  "Properties" : {
+      "[CertificateAuthorityArn](#cfn-acmpca-certificate-certificateauthorityarn)" : String,
+      "[CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest)" : String,
+      "[SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm)" : String,
+      "[TemplateArn](#cfn-acmpca-certificate-templatearn)" : String,
+      "[Validity](#cfn-acmpca-certificate-validity)" : Validity
+    }
+}
+YAML
+Type: AWS::ACMPCA::Certificate
+Properties: 
+  [CertificateAuthorityArn](#cfn-acmpca-certificate-certificateauthorityarn): String
+  [CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest): String
+  [SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm): String
+  [TemplateArn](#cfn-acmpca-certificate-templatearn): String
+  [Validity](#cfn-acmpca-certificate-validity): 
+    Validity
+Properties
+CertificateAuthorityArn 
+The Amazon Resource Name (ARN) for the private CA used to issue the certificate.
+Required: Yes
+Type: String
+Update requires: Replacement
+CertificateSigningRequest 
+The certificate signing request (CSR) for the certificate.
+Required: Yes
+Type: String
+Update requires: Replacement
+SigningAlgorithm 
+The name of the algorithm that will be used to sign the certificate to be issued. 
+This parameter should not be confused with the SigningAlgorithm parameter used to sign a CSR.
+Required: Yes
+Type: String
+Allowed values: SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA
+Update requires: Replacement
+TemplateArn 
+Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template. For more information about ACM Private CA templates, see Using Templates. 
+Required: No
+Type: String
+Update requires: Replacement
+Validity 
+The period of time during which the certificate will be valid.
+Required: Yes
+Type: Validity
+Update requires: Replacement
+Return values
+Ref
+This reference should not be used in CloudFormation templates. Instead, use AWS::ACMPCA::Certificate.Arn to identify a certificate, and use AWS::ACMPCA::Certificate.CertificateAuthorityArn to identify a certificate authority.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the issued certificate.
+Certificate 
+The issued Base64 PEM-encoded certificate.

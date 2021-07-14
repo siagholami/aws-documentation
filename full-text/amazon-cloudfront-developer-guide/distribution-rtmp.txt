@@ -1,0 +1,17 @@
+Working with RTMP Distributions
+Note
+Adobe designated Flash as end-of-life at the end of 2020. As a result, Amazon CloudFront will no longer support Adobe Flash Media Server and will be deprecating Real-Time Messaging Protocol (RTMP) distributions by December 31, 2020. For more information, read the full announcement on the Amazon CloudFront discussion forum.
+This section describes how you configure and manage RTMP distributions. RTMP distributions stream media files using Adobe Media Server and the Adobe Real-Time Messaging Protocol (RTMP). For information about how to create an RTMP distribution, see Task List for Streaming Media Files Using RTMP.
+Topics
+ RTMP Distributions
+ How RTMP Distributions Work
+ Task List for Streaming Media Files Using RTMP
+ Creating an RTMP Distribution Using the CloudFront Console
+ Values that You Specify When You Create or Update an RTMP Distribution
+ Values that CloudFront Displays in the Console When You Create or Update an RTMP Distribution
+ Configuring the Media Player
+ Using an Amazon S3 Bucket as the Origin for an RTMP Distribution
+ Creating Multiple RTMP Distributions for an Origin Server
+ Restricting Access Using Crossdomain.xml
+ Error Codes for RTMP Distributions
+ Troubleshooting RTMP Distributions

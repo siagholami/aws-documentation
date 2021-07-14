@@ -1,0 +1,10 @@
+Amazon Kinesis Video Streams
+The following data types are supported by Amazon Kinesis Video Streams:
+  ChannelInfo 
+  ChannelNameCondition 
+  ResourceEndpointListItem 
+  SingleMasterChannelEndpointConfiguration 
+  SingleMasterConfiguration 
+  StreamInfo 
+  StreamNameCondition 
+  Tag 

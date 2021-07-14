@@ -1,0 +1,25 @@
+AWS::KinesisFirehose::DeliveryStream Serializer
+The serializer that you want Kinesis Data Firehose to use to convert data to the target format before writing it to Amazon S3. Kinesis Data Firehose supports two types of serializers: the ORC SerDe and the Parquet SerDe.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde)" : OrcSerDe,
+  "[ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde)" : ParquetSerDe
+}
+YAML
+[OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde): 
+    OrcSerDe
+  [ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde): 
+    ParquetSerDe
+Properties
+OrcSerDe 
+A serializer to use for converting data to the ORC format before storing it in Amazon S3. For more information, see Apache ORC.
+Required: No
+Type: OrcSerDe
+Update requires: No interruption
+ParquetSerDe 
+A serializer to use for converting data to the Parquet format before storing it in Amazon S3. For more information, see Apache Parquet.
+Required: No
+Type: ParquetSerDe
+Update requires: No interruption

@@ -1,0 +1,16 @@
+AWS::EC2::SpotFleet GroupIdentifier
+Describes a security group.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid)" : String
+}
+YAML
+[GroupId](#cfn-ec2-spotfleet-groupidentifier-groupid): String
+Properties
+GroupId 
+The ID of the security group.
+Required: Yes
+Type: String
+Update requires: No interruption

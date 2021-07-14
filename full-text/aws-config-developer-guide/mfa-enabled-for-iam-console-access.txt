@@ -1,0 +1,9 @@
+mfa-enabled-for-iam-console-access
+Checks whether AWS Multi-Factor Authentication (MFA) is enabled for all AWS Identity and Access Management (IAM) users that use a console password. The rule is COMPLIANT if MFA is enabled.
+Identifier: MFA_ENABLED_FOR_IAM_CONSOLE_ACCESS
+Trigger type: Periodic
+AWS Region: All supported AWS Regions
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

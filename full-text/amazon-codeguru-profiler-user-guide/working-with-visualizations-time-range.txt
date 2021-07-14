@@ -1,0 +1,27 @@
+Selecting a custom time range
+By default, visualizations display the latest hour of data from the profiling group. You can select a different start time and end time to explore other data for other time ranges. This can be helpful to see how performance has changed over time. 
+To select a custom time range
+
+
+Sign in to the AWS Management Console and open the Amazon CodeGuru Profiler console at https://console.aws.amazon.com/codeguru.
+
+
+In the navigation pane on the left, choose Profiler, and then select Profiling groups.
+
+
+On the Profiling groups page, select a profiling group.
+
+
+In the Profiling group detail page, at the top of the visualization, select the date/time displayed. For example, 2019-12-04 @ 7:30 - 7:40 PST. 
+
+
+In the Select a custom time range page, choose a Start time. You can optionally keep the existing start time. 
+
+
+Choose an End time. You can optionally keep the existing end time. 
+
+
+Choose Confirm to update the visualization. 
+
+
+If there is not enough data for the selected range, select a different time range. For the CodeGuru Profiler preview, you can reset the time range back to the default by choosing Profiler, Profiling groups in the navigation pane, and then selecting the profiling group. 

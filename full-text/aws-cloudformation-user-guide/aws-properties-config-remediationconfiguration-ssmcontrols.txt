@@ -1,0 +1,27 @@
+AWS::Config::RemediationConfiguration SsmControls
+The SsmControls property type specifies Not currently supported by AWS CloudFormation. for an AWS::Config::RemediationConfiguration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ConcurrentExecutionRatePercentage](#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage)" : Integer,
+  "[ErrorPercentage](#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage)" : Integer
+}
+YAML
+[ConcurrentExecutionRatePercentage](#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage): Integer
+  [ErrorPercentage](#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage): Integer
+Properties
+ConcurrentExecutionRatePercentage 
+The maximum percentage of remediation actions allowed to run in parallel on the non-compliant resources for that specific rule. You can specify a percentage, such as 10%. The default value is 10. 
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 100
+Update requires: No interruption
+ErrorPercentage 
+The percentage of errors that are allowed before SSM stops running automations on non-compliant resources for that specific rule. You can specify a percentage of errors, for example 10%. If you do not specifiy a percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10 non-compliant resources, then SSM stops running the automations when the fifth error is received. 
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 100
+Update requires: No interruption

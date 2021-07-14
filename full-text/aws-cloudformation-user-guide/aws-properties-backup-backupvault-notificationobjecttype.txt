@@ -1,0 +1,24 @@
+AWS::Backup::BackupVault NotificationObjectType
+Specifies an object containing SNS event notification properties for the target backup vault.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BackupVaultEvents](#cfn-backup-backupvault-notificationobjecttype-backupvaultevents)" : [ String, ... ],
+  "[SNSTopicArn](#cfn-backup-backupvault-notificationobjecttype-snstopicarn)" : String
+}
+YAML
+[BackupVaultEvents](#cfn-backup-backupvault-notificationobjecttype-backupvaultevents): 
+    - String
+  [SNSTopicArn](#cfn-backup-backupvault-notificationobjecttype-snstopicarn): String
+Properties
+BackupVaultEvents 
+An array of events that indicate the status of jobs to back up resources to the backup vault.
+Required: Yes
+Type: List of String
+Update requires: No interruption
+SNSTopicArn 
+An ARN that uniquely identifies an Amazon Simple Notification Service (Amazon SNS) topic; for example, arn:aws:sns:us-west-2:111122223333:MyTopic.
+Required: Yes
+Type: String
+Update requires: No interruption

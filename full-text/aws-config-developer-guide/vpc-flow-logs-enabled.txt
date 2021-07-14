@@ -1,0 +1,10 @@
+vpc-flow-logs-enabled
+Checks whether Amazon Virtual Private Cloud flow logs are found and enabled for Amazon VPC.
+Identifier: VPC_FLOW_LOGS_ENABLED
+Trigger type: Periodic
+AWS Region: All supported AWS Regions
+Parameters:
+trafficType
+ The valid trafficType values are ACCEPT, REJECT, or ALL.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

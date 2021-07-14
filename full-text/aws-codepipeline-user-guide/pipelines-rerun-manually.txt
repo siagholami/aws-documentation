@@ -1,0 +1,32 @@
+Start a pipeline manually in AWS CodePipeline
+By default, a pipeline starts automatically when it is created and any time a change is made in a source repository. However, you might want to rerun the most recent revision through the pipeline a second time. You can use the CodePipeline console or the AWS CLI and start-pipeline-execution command to manually rerun the most recent revision through your pipeline.
+Topics
+ Start a pipeline manually (console)
+ Start a pipeline manually (CLI)
+Start a pipeline manually (console)
+To manually start a pipeline and run the most recent revision through a pipeline
+
+
+Sign in to the AWS Management Console and open the CodePipeline console at http://console.aws.amazon.com/codesuite/codepipeline/home.
+
+
+In Name, choose the name of the pipeline you want to start. 
+
+
+On the pipeline details page, choose Release change. This starts the most recent revision available in each source location specified in a source action through the pipeline.
+
+
+Start a pipeline manually (CLI)
+To manually start a pipeline and run the most recent version of an artifact through a pipeline
+
+Open a terminal (Linux, macOS, or Unix) or command prompt (Windows) and use the AWS CLI to run the start-pipeline-execution command, specifying the name of the pipeline you want to start. For example, to start running the last change through a pipeline named MyFirstPipeline: 
+
+aws codepipeline start-pipeline-execution --name MyFirstPipeline
+
+To verify success, view the returned object. This command returns an execution ID, similar to the following:
+
+{
+       "pipelineExecutionId": "c53dbd42-This-Is-An-Example"
+   }
+Note
+After you have started the pipeline, you can monitor its progress in the CodePipeline console or by running the get-pipeline-state command. For more information, see View pipeline details and history (console) and View pipeline details and history (CLI).

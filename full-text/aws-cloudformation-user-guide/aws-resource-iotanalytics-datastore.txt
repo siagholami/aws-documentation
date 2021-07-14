@@ -1,0 +1,125 @@
+AWS::IoTAnalytics::Datastore
+AWS::IoTAnalytics::Datastore resource is a repository for messages. For more information, see  How to Use AWS IoT Analytics in the AWS IoT Analytics User Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoTAnalytics::Datastore",
+  "Properties" : {
+      "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
+      "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
+      "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
+      "[Tags](#cfn-iotanalytics-datastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::IoTAnalytics::Datastore
+Properties: 
+  [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
+  [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
+    DatastoreStorage
+  [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
+    RetentionPeriod
+  [Tags](#cfn-iotanalytics-datastore-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+DatastoreName 
+The name of the data store.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z0-9_]$
+Update requires: Replacement
+DatastoreStorage 
+Where data store data is stored.
+Required: No
+Type: DatastoreStorage
+Update requires: No interruption
+RetentionPeriod 
+How long, in days, message data is kept for the data store. When customerManagedS3 storage is selected, this parameter is ignored.
+Required: No
+Type: RetentionPeriod
+Update requires: No interruption
+Tags 
+Metadata which can be used to manage the data store.
+For more information, see Tag.
+Required: No
+Type: List of Tag
+Maximum: 50
+Update requires: No interruption
+Examples
+Simple Datastore
+The following example creates a simple datastore.
+JSON
+{
+    "Description": "Create a simple Datastore",
+    "Resources": {
+        "Datastore": {
+            "Type": "AWS::IoTAnalytics::Datastore",
+            "Properties": {
+                "DatastoreName": "SimpleDatastore"
+            }
+        }
+    }
+}
+YAML
+```
+Description: "Create a simple Datastore"
+Resources:
+  Datastore:
+    Type: "AWS::IoTAnalytics::Datastore"
+    Properties:
+      DatastoreName: "SimpleDatastore"
+```
+Complex Datastore
+The following example creates a complex datastore.
+JSON
+{
+    "Description": "Create a complex Datastore",
+    "Resources": {
+        "Datastore": {
+            "Type": "AWS::IoTAnalytics::Datastore",
+            "Properties": {
+                "DatastoreName": "ComplexDatastore",
+                "RetentionPeriod": {
+                    "Unlimited": false,
+                    "NumberOfDays": 10
+                },
+                "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ]
+            }
+        }
+    }
+}
+YAML
+```
+Description: "Create a complex Datastore"
+Resources:
+  Datastore:
+    Type: "AWS::IoTAnalytics::Datastore"
+    Properties:
+      DatastoreName: "ComplexDatastore"
+      RetentionPeriod:
+        Unlimited: false
+        NumberOfDays: 10
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
+```
+See also
+
+How to Use AWS IoT Analytics in the AWS IoT Analytics User Guide 
+CreateDatastore in the AWS IoT Analytics API Reference 

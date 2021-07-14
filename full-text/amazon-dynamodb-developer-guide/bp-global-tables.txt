@@ -1,0 +1,2 @@
+Best Practices for Using Global Tables
+There are several requirements and best practices that you must consider when using global tables. For more information, see Best Practices and Requirements for Managing Global Tables. 

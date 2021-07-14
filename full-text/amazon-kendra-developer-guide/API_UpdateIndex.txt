@@ -1,0 +1,102 @@
+
+
+UpdateIndex
+Updates an existing Amazon Kendra index.
+Request Syntax
+{
+   "CapacityUnits": { 
+      "QueryCapacityUnits": number,
+      "StorageCapacityUnits": number
+   },
+   "Description": "string",
+   "DocumentMetadataConfigurationUpdates": [ 
+      { 
+         "Name": "string",
+         "Relevance": { 
+            "Duration": "string",
+            "Freshness": boolean,
+            "Importance": number,
+            "RankOrder": "string",
+            "ValueImportanceMap": { 
+               "string" : number 
+            }
+         },
+         "Search": { 
+            "Displayable": boolean,
+            "Facetable": boolean,
+            "Searchable": boolean,
+            "Sortable": boolean
+         },
+         "Type": "string"
+      }
+   ],
+   "Id": "string",
+   "Name": "string",
+   "RoleArn": "string"
+}
+Request Parameters
+For information about the parameters that are common to all actions, see Common Parameters.
+The request accepts the following data in JSON format.
+ CapacityUnits  
+Sets the number of addtional storage and query capacity units that should be used by the index. You can change the capacity of the index up to 5 times per day.
+If you are using extra storage units, you can't reduce the storage capacity below that required to meet the storage needs for your index.
+Type: CapacityUnitsConfiguration object
+Required: No
+ Description  
+A new description for the index.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1000.
+Pattern: ^\P{C}*$ 
+Required: No
+ DocumentMetadataConfigurationUpdates  
+The document metadata to update. 
+Type: Array of DocumentMetadataConfiguration objects
+Array Members: Minimum number of 0 items. Maximum number of 500 items.
+Required: No
+ Id  
+The identifier of the index to update.
+Type: String
+Length Constraints: Fixed length of 36.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9-]* 
+Required: Yes
+ Name  
+The name of the index to update.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1000.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+Required: No
+ RoleArn  
+A new IAM role that gives Amazon Kendra permission to access your Amazon CloudWatch logs.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1284.
+Pattern: arn:[a-z0-9-\.]{1,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[^/].{0,1023} 
+Required: No
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+AccessDeniedException 
+HTTP Status Code: 400
+ConflictException 
+HTTP Status Code: 400
+InternalServerException 
+HTTP Status Code: 500
+ResourceNotFoundException 
+HTTP Status Code: 400
+ServiceQuotaExceededException 
+HTTP Status Code: 400
+ThrottlingException 
+HTTP Status Code: 400
+ValidationException 
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

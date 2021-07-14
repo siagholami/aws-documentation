@@ -1,0 +1,32 @@
+Detach and delete a block storage disk in Lightsail
+Last updated: November 14, 2017 
+If you no longer need a block storage disk, you can detach it from your stopped Lightsail instance, and then delete it. This topic describes how to back up your data and safely delete a disk.
+Prerequisites
+
+Stop your instance from running. You have to do this before you can detach and then delete your disk. Learn how to stop your instance
+(Optional) We recommend that you create a snapshot of your disk. That way, you have a backup in case you change your mind. For more information, see Creating a snapshot of your database in Amazon Lightsail
+
+Detach and delete your disk
+Once you stop your Lightsail instance, you can safely detach and delete your disk.
+
+
+On the home page, choose Storage.
+
+
+Choose the name of your attached disk to manage it.
+
+
+
+On the disk management page, choose Detach.
+
+
+After a few seconds, the disk is detached and ready to be deleted or reattached.
+
+
+Choose the Delete tab.
+
+
+Choose Delete disk, and then confirm by choosing Yes, delete.
+Important
+This is a permanent operation and can't be undone. You will lose all data on the disk when you delete it.
+

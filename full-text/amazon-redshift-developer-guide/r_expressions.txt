@@ -1,0 +1,23 @@
+Expressions
+Topics
+ Simple expressions
+ Compound expressions
+ Expression lists
+ Scalar subqueries
+ Function expressions
+An expression is a combination of one or more values, operators, or functions that evaluate to a value. The data type of an expression is generally that of its components. 
+Simple expressions
+A simple expression is one of the following: 
+ A constant or literal value 
+ A column name or column reference 
+ A scalar function 
+ An aggregate (set) function 
+ A window function 
+ A scalar subquery 
+Examples of simple expressions include: 
+512
+dateid
+sales.qtysold * 100
+sqrt (4)
+max (qtysold)
+(select max (qtysold) from sales)

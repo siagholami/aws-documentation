@@ -1,0 +1,274 @@
+Portuguese, Brazilian (pt-BR)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Brazilian Portuguese voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ɾ
+4
+alveolar flap
+pira
+t
+
+
+b
+b
+voiced bilabial plosive
+bato
+p
+
+
+d
+d
+voiced alveolar plosive
+dato
+t
+
+
+d͡ʒ
+dZ
+voiced postalveolar affricate
+idade
+S
+
+
+f
+f
+voiceless labiodental fricative
+facto
+f
+
+
+g
+g
+voiced velar plosive
+gato
+k
+
+
+j
+j
+palatal approximant
+paraguay
+i
+
+
+k
+k
+voiceless velar plosive
+cacto
+k
+
+
+l
+l
+alveolar lateral approximant
+galo
+t
+
+
+ʎ
+L
+palatal lateral approximant
+galho
+J
+
+
+m
+m
+bilabial nasal
+mato
+p
+
+
+n
+n
+alveolar nasal
+nato
+t
+
+
+ɲ
+J
+palatal nasal
+pinha
+J
+
+
+p
+p
+voiceless bilabial plosive
+pato
+p
+
+
+s
+s
+voiceless alveolar fricative
+saca
+s
+
+
+ʃ
+S
+voiceless postalveolar fricative
+chato
+S
+
+
+t
+t
+voiceless alveolar plosive
+tacto
+t
+
+
+t͡ʃ
+tS
+voiceless postalveolar affricate
+noite
+S
+
+
+v
+v
+voiced labiodental fricative
+vaca
+f
+
+
+w
+w
+labial-velar approximant
+mau
+u
+
+
+χ
+X
+voiceless uvular fricative
+carro
+k
+
+
+z
+z
+voiced alveolar fricative
+zaca
+s
+
+
+ʒ
+Z
+voiced postalveolar fricative
+jacto
+S
+
+
+Vowels
+
+
+
+
+
+
+a
+a
+open front unrounded vowel
+parto
+a
+
+
+ã
+a\~
+nasal open front unrounded vowel
+pensamos
+a
+
+
+e
+e
+close-mid front unrounded vowel
+pega
+e
+
+
+ẽ
+e\~
+nasal close-mid front unrounded vowel
+movem
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+café
+E
+
+
+i
+i
+close front unrounded vowel
+lingueta
+i
+
+
+ĩ
+i\~
+nasal close front unrounded vowel
+cinto
+i
+
+
+o
+o
+close-mid back rounded vowel
+poder
+o
+
+
+õ
+o\~
+nasal close-mid back rounded vowel
+compra
+o
+
+
+ɔ
+O
+open-mid back rounded vowel
+cotó
+O
+
+
+u
+u
+close back rounded vowel
+fui
+u
+
+
+ũ
+u\~
+nasal close back rounded vowel
+sunto
+u
+
+

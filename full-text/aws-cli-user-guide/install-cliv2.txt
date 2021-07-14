@@ -1,0 +1,14 @@
+Installing the AWS CLI version 2
+This section provides links to information about how to install version 2 of the AWS Command Line Interface (AWS CLI) on the supported operating systems. For information on the latest releases of AWS CLI version 2, see the AWS CLI version 2 change notes on GitHub.
+For information about how to install AWS CLI version 1, see Installing the AWS CLI version 1.
+Topics
+ Using the official AWS CLI version 2 Docker image
+ Installing the AWS CLI version 2 on Linux
+ Installing the AWS CLI version 2 on macOS
+ Installing the AWS CLI version 2 on Windows
+ Additional Documentation and Resources
+Additional Documentation and Resources
+In addition to this guide, the following are valuable online resources for the AWS CLI.
+ AWS CLI version 2 reference guide
+ AWS CLI GitHub Repository You can view—and fork—the source code for the AWS CLI on GitHub in the aws-cli repository. Join the community of users on GitHub to provide feedback, request features, and submit your own contributions!
+ AWS CLI version 2 change notes

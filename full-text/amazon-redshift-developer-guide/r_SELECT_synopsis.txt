@@ -1,0 +1,30 @@
+SELECT
+Topics
+ Syntax
+ WITH clause
+ SELECT list
+ FROM clause
+ WHERE clause
+ GROUP BY clause
+ HAVING clause
+ UNION, INTERSECT, and EXCEPT
+ ORDER BY clause
+ Join examples
+ Subquery examples
+ Correlated subqueries
+Returns rows from tables, views, and user-defined functions. 
+Note
+The maximum size for a single SQL statement is 16 MB.
+Syntax
+[ WITH with_subquery [, ...] ]
+SELECT
+[ TOP number | [ ALL | DISTINCT ]
+* | expression [ AS output_name ] [, ...] ]
+[ FROM table_reference [, ...] ]
+[ WHERE condition ]
+[ GROUP BY expression [, ...] ]
+[ HAVING condition ]
+[ { UNION | ALL | INTERSECT | EXCEPT | MINUS } query ]
+[ ORDER BY expression [ ASC | DESC ] ]
+[ LIMIT { number | ALL } ]
+[ OFFSET start ]

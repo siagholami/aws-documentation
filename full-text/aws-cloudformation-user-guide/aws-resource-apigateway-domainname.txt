@@ -1,0 +1,365 @@
+AWS::ApiGateway::DomainName
+The AWS::ApiGateway::DomainName resource specifies a custom domain name for your API in API Gateway.
+You can use a custom domain name to provide a URL that's more intuitive and easier to recall. For more information about using custom domain names, see Set up Custom Domain Name for an API in API Gateway in the API Gateway Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGateway::DomainName",
+  "Properties" : {
+      "[CertificateArn](#cfn-apigateway-domainname-certificatearn)" : String,
+      "[DomainName](#cfn-apigateway-domainname-domainname)" : String,
+      "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : EndpointConfiguration,
+      "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String,
+      "[SecurityPolicy](#cfn-apigateway-domainname-securitypolicy)" : String,
+      "[Tags](#cfn-apigateway-domainname-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::ApiGateway::DomainName
+Properties: 
+  [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
+  [DomainName](#cfn-apigateway-domainname-domainname): String
+  [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
+    EndpointConfiguration
+  [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
+  [SecurityPolicy](#cfn-apigateway-domainname-securitypolicy): String
+  [Tags](#cfn-apigateway-domainname-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+CertificateArn 
+The reference to an AWS-managed certificate for use by the edge-optimized endpoint for this domain name. AWS Certificate Manager is the only supported source. For requirements and additional information about setting up certificates, see Get Certificates Ready in AWS Certificate Manager in the API Gateway Developer Guide.
+Required: No
+Type: String
+Update requires: No interruption
+DomainName 
+The custom domain name for your API. Uppercase letters are not supported.
+Required: No
+Type: String
+Update requires: No interruption
+EndpointConfiguration 
+A list of the endpoint types of the domain name.
+Required: No
+Type: EndpointConfiguration
+Update requires: No interruption
+RegionalCertificateArn 
+The reference to an AWS-managed certificate for use by the regional endpoint for the domain name. AWS Certificate Manager is the only supported source.
+Required: No
+Type: String
+Update requires: No interruption
+SecurityPolicy 
+The Transport Layer Security (TLS) version  cipher suite for this domain name.
+Valid values include TLS_1_0 and TLS_1_2.
+Required: No
+Type: String
+Update requires: No interruption
+Tags 
+An array of arbitrary tags (key-value pairs) to associate with the domain name.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the domain name.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+DistributionDomainName 
+The Amazon CloudFront distribution domain name that's mapped to the custom domain name. This is only applicable for endpoints whose type is EDGE.
+Example: d111111abcdef8.cloudfront.net
+DistributionHostedZoneId 
+The region-agnostic Amazon Route 53 Hosted Zone ID of the edge-optimized endpoint. The only valid value is Z2FDTNDATAQYW2 for all regions.
+RegionalDomainName 
+The domain name associated with the regional endpoint for this custom domain name. You set up this association by adding a DNS record that points the custom domain name to this regional domain name.
+RegionalHostedZoneId 
+The region-specific Amazon Route 53 Hosted Zone ID of the regional endpoint.
+Examples
+Create Custom Domain
+The following example creates a custom domain name of api.mydomain.com.
+JSON
+{
+    "MyDomainName": {
+        "Type": "AWS::ApiGateway::DomainName",
+        "Properties": {
+            "DomainName": "api.mydomain.com",
+            "CertificateArn": "arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3"
+        }
+    }
+}
+YAML
+MyDomainName:
+  Type: 'AWS::ApiGateway::DomainName'
+  Properties:
+    DomainName: api.mydomain.com
+    CertificateArn: >-
+      arn:aws:acm:us-east-1:111122223333:certificate/fb1b9770-a305-495d-aefb-27e5e101ff3
+Create Custom Domain from Parameters
+The following example creates a custom domain name of example.mydomain.com.
+JSON
+{
+    "Parameters": {
+        "basePath": {
+            "Type": "String",
+            "Default": "examplepath"
+        },
+        "domainName": {
+            "Type": "String",
+            "Default": "example.mydomain.com"
+        },
+        "restApiName": {
+            "Type": "String",
+            "Default": "exampleapi"
+        }
+    },
+    "Resources": {
+        "myCertificate": {
+            "Type": "AWS::CertificateManager::Certificate",
+            "Properties": {
+                "DomainName": {
+                    "Ref": "domainName"
+                }
+            }
+        },
+        "myDomainName": {
+            "Type": "AWS::ApiGateway::DomainName",
+            "Properties": {
+                "CertificateArn": {
+                    "Ref": "myCertificate"
+                },
+                "DomainName": {
+                    "Ref": "domainName"
+                }
+            }
+        },
+        "myMapping": {
+            "Type": "AWS::ApiGateway::BasePathMapping",
+            "Properties": {
+                "BasePath": {
+                    "Ref": "basePath"
+                },
+                "DomainName": {
+                    "Ref": "myDomainName"
+                },
+                "RestApiId": {
+                    "Ref": "myRestApi"
+                }
+            }
+        },
+        "myRestApi": {
+            "Type": "AWS::ApiGateway::RestApi",
+            "Properties": {
+                "Name": {
+                    "Ref": "restApiName"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "domainName": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "DistributionDomainName"
+                ]
+            }
+        }
+    }
+}
+YAML
+Parameters:
+  basePath:
+    Type: String
+    Default: examplepath
+  domainName:
+    Type: String
+    Default: example.mydomain.com
+  restApiName:
+    Type: String
+    Default: exampleapi
+Resources:
+  myCertificate:
+    Type: 'AWS::CertificateManager::Certificate'
+    Properties:
+      DomainName: !Ref domainName
+  myDomainName:
+    Type: 'AWS::ApiGateway::DomainName'
+    Properties:
+      CertificateArn: !Ref myCertificate
+      DomainName: !Ref domainName
+  myMapping:
+    Type: 'AWS::ApiGateway::BasePathMapping'
+    Properties:
+      BasePath: !Ref basePath
+      DomainName: !Ref myDomainName
+      RestApiId: !Ref myRestApi
+  myRestApi:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: !Ref restApiName
+Outputs:
+  domainName:
+    Value: !GetAtt 
+      - myDomainName
+      - DistributionDomainName
+Create domain name with EndpointConfiguration
+The following example creates a custom domain name that specifies a regional certificate ARN and an endpoint type.
+JSON
+{
+  "Parameters": {
+    "cfnDomainName": {
+      "Type": "String"
+    },
+    "certificateArn": {
+      "Type": "String"
+    },
+    "type": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "myDomainName": {
+      "Type": "AWS::ApiGateway::DomainName",
+      "Properties": {
+        "CertificateArn": {
+          "Ref": "certificateArn"
+        },
+        "DomainName": {
+          "Ref": "cfnDomainName"
+        },
+        "EndpointConfiguration": {
+          "Types": [
+            {
+              "Ref": "type"
+            }
+          ]
+        },
+        "RegionalCertificateArn": {
+          "Ref": "certificateArn"
+        }
+      }
+    }
+  },
+  "Outputs": {  
+    "DomainName": {
+      "Value": {
+        "Ref": "myDomainName"
+      }
+    }
+  }
+}
+YAML
+Parameters:
+  cfnDomainName:
+    Type: String
+  certificateArn:
+    Type: String
+  type:
+    Type: String
+Resources:
+  myDomainName:
+    Type: AWS::ApiGateway::DomainName
+    Properties:
+      CertificateArn: !Ref certificateArn
+      DomainName: !Ref cfnDomainName
+      EndpointConfiguration:
+        Types:
+          - !Ref type
+      RegionalCertificateArn: !Ref certificateArn
+Outputs:  
+  DomainName:
+    Value: !Ref myDomainName
+Create Domain Names and Zone IDs as Outputs
+The following example defines the distribution and regional domain names, as well as the distribution and regional hosted zone IDs, as outputs from the stack.
+JSON
+{
+    "Resources": {
+        "myDomainName": {
+            "Type": "AWS::ApiGateway::DomainName",
+            "Properties": {
+                "CertificateArn": {
+                    "Ref": "certificateArn"
+                },
+                "DomainName": {
+                    "Ref": "cfnDomainName"
+                },
+                "EndpointConfiguration": {
+                    "Types": [
+                        {
+                            "Ref": "type"
+                        }
+                    ]
+                },
+                "RegionalCertificateArn": {
+                    "Ref": "certificateArn"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "DistributionDomainName": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "DistributionDomainName"
+                ]
+            }
+        },
+        "DistributionHostedZoneId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "DistributionHostedZoneId"
+                ]
+            }
+        },
+        "RegionalDomainName": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "RegionalDomainName"
+                ]
+            }
+        },
+        "RegionalHostedZoneId": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "myDomainName",
+                    "RegionalHostedZoneId"
+                ]
+            }
+        }
+    }
+}
+YAML
+Resources:
+  myDomainName:
+    Type: 'AWS::ApiGateway::DomainName'
+    Properties:
+      CertificateArn: !Ref certificateArn
+      DomainName: !Ref cfnDomainName
+      EndpointConfiguration:
+        Types:
+          - !Ref type
+      RegionalCertificateArn: !Ref certificateArn
+Outputs:
+  DistributionDomainName:
+    Value: !GetAtt 
+      - myDomainName
+      - DistributionDomainName
+  DistributionHostedZoneId:
+    Value: !GetAtt 
+      - myDomainName
+      - DistributionHostedZoneId
+  RegionalDomainName:
+    Value: !GetAtt 
+      - myDomainName
+      - RegionalDomainName
+  RegionalHostedZoneId:
+    Value: !GetAtt 
+      - myDomainName
+      - RegionalHostedZoneId
+See also
+
+domainname:create in the Amazon API Gateway REST API Reference

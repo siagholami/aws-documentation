@@ -1,0 +1,59 @@
+Adding Door Sounds
+You add two Lua Script components and two audio components to the EntryDoor_Trigger entity to trigger sounds of a door opening and closing.
+To add the Lua Script component for door sounds
+
+In the Entity Outliner, select EntryDoor_Trigger. 
+
+In the Entity Inspector, click Add Component, and then add the Lua Script component. Repeat this step to add a second Lua Script component.
+
+
+In the first Lua Script component, click Browse (...) next to the Script box.
+
+Navigate to StarterGame\Scripts\Triggers and select TriggerEventAudioReceiver.lua. Click OK.
+
+
+In the properties that appear, set the following values: 
+    EventName – Type OpenEntryDoor
+    Sound – Type Play_AMZ_sfx_spfx_ship_door_open
+    TriggerOnce – Clear the check box
+
+
+
+In the second Lua Script component, click Browse (...) next to the Script box.
+
+
+Navigate to StarterGame\Scripts\Triggers and select TriggerEventAudioReceiver.lua. Click OK.
+
+In the properties that appear, set the following values: 
+    EventName – Type CloseEntryDoor
+    Sounds – Type Play_AMZ_sfx_spfx_ship_door_close
+    TriggerOnce – Clear the check box
+
+
+Now you add two audio components: Audio Proxy and Audio Trigger. The Audio Proxy component is required on any entity that uses audio. The Audio Trigger component triggers the audio.
+To add the audio components
+
+
+In the Entity Outliner, select the EntryDoor_Trigger entity.
+
+
+In the Entity Inspector, click Add Component. Under Audio, select Audio Proxy. 
+
+
+
+Click Add Component again. Under Audio, select Audio Trigger. 
+
+
+
+Your two Lua Script components and your two audio components should look like the following.
+
+
+
+Press CtrlS to save your level.
+
+
+Press CtrlG to play your level. When you approach the door, you should hear the door opening and closing in concert with those actions.
+
+
+Press Esc to quit.
+Next: Adding the Exit Door

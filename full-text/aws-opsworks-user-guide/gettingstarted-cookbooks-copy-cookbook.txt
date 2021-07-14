@@ -1,0 +1,52 @@
+Step 5: Update the Cookbook on the Instance and Run the Recipe
+Update the cookbook on the instance and then run the recipe from within the updated cookbook on the instance. Throughout the rest of this walkthrough, you repeat this step every time you update the cookbook by adding a new recipe.
+To update the cookbook on the instance
+
+
+In the service navigation pane, choose Stack. The MyCookbooksDemoStack page is displayed.
+
+
+Choose Run Command. The Run Command page is displayed.
+
+
+For Command, choose Update Custom Cookbooks.
+
+
+Leave the following default settings:
+    Comment (blank)
+    Advanced, Custom Chef JSON (blank)
+    Advanced, Instances (Select all checked, MyCookbooksDemoLayer checked, cookbooks-demo1 checked)
+
+
+Choose Update Custom Cookbooks. The Running command update_custom_cookbooks page is displayed. Do not proceed until Status changes to successful. This process might take several minutes, so be patient.
+
+
+To run the recipe
+
+
+In the service navigation pane, choose Stack. The MyCookbooksDemoStack page is displayed.
+
+
+Choose Run Command. The Run Command page is displayed.
+
+
+For Command, choose Execute Recipes.
+
+
+For Recipes to execute, type the name of the recipe to run. The first time you do this, the recipe is named opsworks_cookbook_demo::install_package.
+Note
+As you repeat this procedure later, type the name of the cookbook (opsworks_cookbook_demo), followed by two colons (::), followed by the name of the recipe (the recipe's file name, without the .rb file extension).
+
+
+Leave the following default settings:
+    Comment (blank)
+    Advanced, Custom Chef JSON (blank)
+    Instances Select all checked, MyCookbooksDemoLayer checked, cookbooks-demo1 checked)
+
+
+Choose Execute Recipes. The Running command execute_recipes page is displayed. Do not proceed until Status changes to successful. This process might take a few minutes, so be patient.
+
+
+Note
+You don't have to manually run recipes. You can assign recipes to a layer's lifecycle events, such as the Setup and Configure events, and AWS OpsWorks Stacks will run those recipes automatically when the event occurs. For more information, see AWS OpsWorks Stacks Lifecycle Events.
+In the next step, you will update the cookbook to add a user to the instance.

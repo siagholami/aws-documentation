@@ -1,0 +1,472 @@
+Actions, resources, and condition keys for Amazon Personalize
+Amazon Personalize (service prefix: personalize) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+Topics
+ Actions defined by Amazon Personalize
+ Resource types defined by Amazon Personalize
+ Condition keys for Amazon Personalize
+Actions defined by Amazon Personalize
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ CreateBatchInferenceJob 
+Creates a batch inference job
+Write
+ batchInferenceJob* 
+
+
+
+
+ CreateCampaign 
+Creates a campaign
+Write
+ campaign* 
+
+
+
+
+ CreateDataset 
+Creates a dataset
+Write
+ dataset* 
+
+
+
+
+ CreateDatasetGroup 
+Creates a dataset group
+Write
+ datasetGroup* 
+
+
+
+
+ CreateDatasetImportJob 
+Creates a dataset import job
+Write
+ datasetImportJob* 
+
+
+
+
+ CreateEventTracker 
+Creates an event tracker
+Write
+ eventTracker* 
+
+
+
+
+ CreateFilter 
+Creates a filter
+Write
+ filter* 
+
+
+
+
+ CreateSchema 
+Creates a schema
+Write
+ schema* 
+
+
+
+
+ CreateSolution 
+Creates a solution
+Write
+ solution* 
+
+
+
+
+ CreateSolutionVersion 
+Creates a solution version
+Write
+ solution* 
+
+
+
+
+ DeleteCampaign 
+Deletes a campaign
+Write
+ campaign* 
+
+
+
+
+ DeleteDataset 
+Deletes a dataset
+Write
+ dataset* 
+
+
+
+
+ DeleteDatasetGroup 
+Deletes a dataset group
+Write
+ datasetGroup* 
+
+
+
+
+ DeleteEventTracker 
+Deletes an event tracker
+Write
+ eventTracker* 
+
+
+
+
+ DeleteFilter 
+Deletes a filter
+Write
+ filter* 
+
+
+
+
+ DeleteSchema 
+Deletes a schema
+Write
+ schema* 
+
+
+
+
+ DeleteSolution 
+Deletes a solution including all versions of the solution
+Write
+ solution* 
+
+
+
+
+ DescribeAlgorithm 
+Describes an algorithm
+Read
+ algorithm* 
+
+
+
+
+ DescribeBatchInferenceJob 
+Describes a batch inference job
+Read
+ batchInferenceJob* 
+
+
+
+
+ DescribeCampaign 
+Describes a campaign
+Read
+ campaign* 
+
+
+
+
+ DescribeDataset 
+Describes a dataset
+Read
+ dataset* 
+
+
+
+
+ DescribeDatasetGroup 
+Describes a dataset group
+Read
+ datasetGroup* 
+
+
+
+
+ DescribeDatasetImportJob 
+Describes a dataset import job
+Read
+ datasetImportJob* 
+
+
+
+
+ DescribeEventTracker 
+Describes an event tracker
+Read
+ eventTracker* 
+
+
+
+
+ DescribeFeatureTransformation 
+Describes a feature transformation
+Read
+ featureTransformation* 
+
+
+
+
+ DescribeFilter 
+Describes a filter
+Read
+ filter* 
+
+
+
+
+ DescribeRecipe 
+Describes a recipe
+Read
+ recipe* 
+
+
+
+
+ DescribeSchema 
+Describes a schema
+Read
+ schema* 
+
+
+
+
+ DescribeSolution 
+Describes a solution
+Read
+ solution* 
+
+
+
+
+ DescribeSolutionVersion 
+Describes a version of a solution
+Read
+ solution* 
+
+
+
+
+ GetPersonalizedRanking 
+Gets a re-ranked list of recommendations
+Write
+ campaign* 
+
+
+
+
+ GetRecommendations 
+Gets a list of recommendations from a campaign
+Read
+ campaign* 
+
+
+
+
+ GetSolutionMetrics 
+Gets metrics for a solution version
+Read
+ solution* 
+
+
+
+
+ ListBatchInferenceJobs 
+Lists batch inference jobs
+List
+
+
+
+
+
+ ListCampaigns 
+Lists campaigns
+List
+
+
+
+
+
+ ListDatasetGroups 
+Lists dataset groups
+List
+
+
+
+
+
+ ListDatasetImportJobs 
+Lists dataset import jobs
+List
+
+
+
+
+
+ ListDatasets 
+Lists datasets
+List
+
+
+
+
+
+ ListEventTrackers 
+Lists event trackers
+List
+
+
+
+
+
+ ListFilters 
+Lists filters
+List
+
+
+
+
+
+ ListRecipes 
+Lists recipes
+List
+
+
+
+
+
+ ListSchemas 
+Lists schemas
+List
+
+
+
+
+
+ ListSolutionVersions 
+Lists versions of a solution
+List
+
+
+
+
+
+ ListSolutions 
+Lists solutions
+List
+
+
+
+
+
+ PutEvents 
+Records real time event data
+Write
+ eventTracker* 
+
+
+
+
+ UpdateCampaign 
+Updates a campaign
+Write
+ campaign* 
+
+
+
+
+
+Resource types defined by Amazon Personalize
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+schema
+arn:${Partition}:personalize:${Region}:${Account}:schema/${ResourceId}
+
+
+
+featureTransformation
+arn:${Partition}:personalize:${Region}:${Account}:feature-transformation/${ResourceId}
+
+
+
+dataset
+arn:${Partition}:personalize:${Region}:${Account}:dataset/${ResourceId}
+
+
+
+datasetGroup
+arn:${Partition}:personalize:${Region}:${Account}:dataset-group/${ResourceId}
+
+
+
+datasetImportJob
+arn:${Partition}:personalize:${Region}:${Account}:dataset-import-job/${ResourceId}
+
+
+
+solution
+arn:${Partition}:personalize:${Region}:${Account}:solution/${ResourceId}
+
+
+
+campaign
+arn:${Partition}:personalize:${Region}:${Account}:campaign/${ResourceId}
+
+
+
+eventTracker
+arn:${Partition}:personalize:${Region}:${Account}:event-tracker/${ResourceId}
+
+
+
+recipe
+arn:${Partition}:personalize:${Region}:${Account}:recipe/${ResourceId}
+
+
+
+algorithm
+arn:${Partition}:personalize:${Region}:${Account}:algorithm/${ResourceId}
+
+
+
+batchInferenceJob
+arn:${Partition}:personalize:${Region}:${Account}:batch-inference-job/${ResourceId}
+
+
+
+filter
+arn:${Partition}:personalize:${Region}:${Account}:filter/${ResourceId}
+
+
+
+
+Condition keys for Amazon Personalize
+Personalize has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

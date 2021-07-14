@@ -1,0 +1,28 @@
+Product integration manifest
+Every AWS Security Hub integration partner must complete a product integration manifest that provides the required details for the proposed integration.
+The Security Hub team uses this information in several ways:
+ To create your website listing
+ To create the product card for the Security Hub console
+ To inform the product team of your use case.
+To evaluate the quality of the proposed integration and the provided information, the Security Hub team uses the Product readiness checklist. This checklist determines whether your integration is ready to be launched.
+All of the technical information that you provide must also be reflected in your documentation.
+You can download a PDF version of the product integration manifest from the Resources section of the AWS Security Hub partners page.
+Contents
+ Use case and marketing information
+   Finding providers and consumers use case
+   Consulting Partner (CP) use case
+   Datasets
+   Architecture
+   Configuration
+   Average findings per day per customer
+   Latency
+   Company and product description
+   Partner website assets
+   Logo for partners page
+   Logo for Security Hub console
+   Finding types
+   Hotline
+   Heartbeat finding
+ AWS Security Hub console information
+   Company information
+   Product information

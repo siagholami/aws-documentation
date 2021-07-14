@@ -1,0 +1,35 @@
+MacOS
+The following procedures show how to establish a VPN connection using macOS-based VPN clients.
+Before you begin, ensure that your Client VPN administrator has created a Client VPN endpoint and provided you with the Client VPN endpoint configuration file.
+For troubleshooting information, see MacOS troubleshooting.
+Tunnelblick
+The following procedure shows how to establish a VPN connection using the Tunnelblick client application on a macOS computer.
+Note
+For more information about the Tunnelblick client application for macOS, see the Tunnelblick documentation on the Tunnelblick website.
+To establish a VPN connection
+
+
+Start the Tunnelblick client application and choose I have configuration files.
+
+
+
+Drag and drop the configuration file that you received from your VPN administrator in the Configurations panel.
+
+
+
+Select the configuration file in the Configurations panel and choose Connect.
+
+
+
+OpenVPN Connect Client
+The following procedure shows how to establish a VPN connection using the OpenVPN Connect Client application on a macOS computer.
+Note
+For more information, see Connecting to Access Server with macOS on the OpenVPN website.
+To establish a VPN connection
+
+
+Start the OpenVPN application and choose Import, From local file....
+
+
+Navigate to the configuration file that you received from your VPN administrator and choose Open.
+

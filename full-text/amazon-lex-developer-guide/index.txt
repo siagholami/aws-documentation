@@ -1,0 +1,323 @@
+Amazon Lex Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Lex?
+Amazon Lex: How It Works
+Programming Model
+Managing Messages
+Managing Conversation Context
+Using Confidence Scores
+Conversation Logs
+IAM Policies for Conversation Logs
+Configuring Conversation Logs
+Encrypting Conversation Logs
+Viewing Text Logs in Amazon CloudWatch Logs
+Accessing Audio Logs in Amazon S3
+Monitoring Conversation Log Status with CloudWatch Metrics
+
+
+Managing Sessions With the Amazon Lex API
+Bot Deployment Options
+Built-in Intents and Slot Types
+Built-in Intents
+AMAZON.FallbackIntent
+AMAZON.KendraSearchIntent
+Example: Creating a FAQ Bot for an Amazon Kendra Index
+
+
+
+
+Built-in Slot Types
+Alexa Skills Kit Slot Types
+AMAZON.AlphaNumeric
+AMAZON.EmailAddress
+AMAZON.NUMBER
+AMAZON.Percentage
+AMAZON.PhoneNumber
+AMAZON.SpeedUnit
+AMAZON.TIME
+AMAZON.WeightUnit
+
+
+
+
+Custom Slot Types
+Slot Obfuscation
+Sentiment Analysis
+Tagging Your Amazon Lex Resources
+Tagging Resources (Console)
+Tagging Resources (AWS CLI)
+
+
+Getting Started with Amazon Lex
+Step 1: Set Up an AWS Account and Create an Administrator User
+Step 2: Set Up the AWS Command Line Interface
+Step 3: Getting Started (Console)
+Exercise 1: Create an Amazon Lex Bot Using a Blueprint (Console)
+Step 1: Create an Amazon Lex Bot (Console)
+Step 2 (Optional): Review the Details of Information Flow (Console)
+Step 2a (Optional): Review the Details of the Spoken Information Flow (Console)
+Step 2b (Optional): Review the Details of the Typed Information Flow (Console)
+
+
+Step 3: Create a Lambda Function (Console)
+Step 4: Add the Lambda Function as Code Hook (Console)
+Step 5 (Optional): Review the Details of the Information Flow (Console)
+Step 6: Update the Intent Configuration to Add an Utterance (Console)
+Step 7 (Optional): Clean Up (Console)
+
+
+Exercise 2: Create a Custom Amazon Lex Bot
+Step 1: Create a Lambda Function
+Step 2: Create a Bot
+Create the Bot
+Create an Intent
+Create Slot Types
+Configure the Intent
+Configure the Bot
+
+
+Step 3: Build and Test the Bot
+Step 4 (Optional): Clean up
+
+
+Exercise 3: Publish a Version and Create an Alias
+
+
+Step 4: Getting Started (AWS CLI)
+Exercise 1: Create an Amazon Lex Bot (AWS CLI)
+Step 1: Create a Service-Linked Role (AWS CLI)
+Step 2: Create a Custom Slot Type (AWS CLI)
+FlowerTypes.json
+
+
+Step 3: Create an Intent (AWS CLI)
+OrderFlowers.json
+
+
+Step 4: Create a Bot (AWS CLI)
+OrderFlowersBot.json
+
+
+Step 5: Test a Bot (AWS CLI)
+Test the Bot Using Text Input (AWS CLI)
+Test the Bot Using Speech Input (AWS CLI)
+
+
+
+
+Exercise 2: Add a New Utterance (AWS CLI)
+Exercise 3: Add a Lambda Function (AWS CLI)
+Exercise 4: Publish a Version (AWS CLI)
+Step 1: Publish the Slot Type (AWS CLI)
+Step 2: Publish the Intent (AWS CLI)
+Step 3: Publish the Bot (AWS CLI)
+
+
+Exercise 5: Create an Alias (AWS CLI)
+Exercise 6: Clean Up (AWS CLI)
+
+
+Versioning and Aliases
+Using Lambda Functions
+Lambda Function Input Event and Response Format
+Amazon Lex and AWS Lambda Blueprints
+Deploying Amazon Lex Bots
+Deploying an Amazon Lex Bot on a Messaging Platform
+Integrating an Amazon Lex Bot with Facebook Messenger
+Integrating an Amazon Lex Bot with Kik
+Step 1: Create an Amazon Lex Bot
+Step 2: Create a Kik Bot
+Step 3: Integrate the Kik Bot with the Amazon Lex Bot
+Step 4: Test the Integration
+
+
+Integrating an Amazon Lex Bot with Slack
+Step 1: Create an Amazon Lex Bot
+Step 2: Sign Up for Slack and Create a Slack Team
+Step 3: Create a Slack Application
+Step 4: Integrate the Slack Application with the Amazon Lex Bot
+Step 5: Complete Slack Integration
+Step 6: Test the Integration
+
+
+Integrating an Amazon Lex Bot with Twilio Programmable SMS
+
+
+Deploying an Amazon Lex Bot in Mobile Applications
+Importing and Exporting Amazon Lex Bots, Intents, and Slot Types
+Exporting and Importing in Amazon Lex Format
+Exporting in Amazon Lex Format
+Importing in Amazon Lex Format
+JSON Format for Importing and Exporting
+
+
+Exporting to an Alexa Skill
+Additional Examples: Creating Amazon Lex Bots
+Example: ScheduleAppointment
+Step 1: Create an Amazon Lex Bot
+Step 2: Create a Lambda Function
+Step 3: Update the Intent: Configure a Code Hook
+Step 4: Deploy the Bot on the Facebook Messenger Platform
+Details of Information Flow
+
+
+Example: BookTrip
+Step 1: Review the Blueprints Used in this Exercise
+Step 2: Create an Amazon Lex Bot
+Step 3: Create a Lambda function
+Step 4: Add the Lambda Function as a Code Hook
+Details of the Information Flow
+
+
+Example: Using a Response Card
+Example: Updating Utterances
+Example: Integrating with a Web site
+Example Bot: Call Center Agent Assistant
+Step 1: Create an Amazon Kendra Index
+Step 2: Create an Amazon Lex Bot
+Step 3: Add a Custom and Built-in Intent
+Step 4: Set up Amazon Cognito
+Step 5: Deploy Your Bot as a Web Application
+Step 6: Use the Bot
+
+
+Security in Amazon Lex
+Data Protection in Amazon Lex
+Encryption at Rest
+Encryption in Transit
+Key Management
+
+
+Identity and Access Management for Amazon Lex
+How Amazon Lex Works with IAM
+Amazon Lex Identity-Based Policy Examples
+Amazon Lex Resource-Based Policy Example
+Troubleshooting Amazon Lex Identity and Access
+
+
+Using Service-Linked Roles for Amazon Lex
+Monitoring in Amazon Lex
+Monitoring Amazon Lex with Amazon CloudWatch
+Monitoring Amazon Lex API Calls with AWS CloudTrail Logs
+
+
+Compliance Validation for Amazon Lex
+Resilience in Amazon Lex
+Infrastructure Security in Amazon Lex
+Guidelines and Quotas in Amazon Lex
+Supported Regions
+General Guidelines
+Quotas
+API Reference
+Actions
+Amazon Lex Model Building Service
+CreateBotVersion
+CreateIntentVersion
+CreateSlotTypeVersion
+DeleteBot
+DeleteBotAlias
+DeleteBotChannelAssociation
+DeleteBotVersion
+DeleteIntent
+DeleteIntentVersion
+DeleteSlotType
+DeleteSlotTypeVersion
+DeleteUtterances
+GetBot
+GetBotAlias
+GetBotAliases
+GetBotChannelAssociation
+GetBotChannelAssociations
+GetBots
+GetBotVersions
+GetBuiltinIntent
+GetBuiltinIntents
+GetBuiltinSlotTypes
+GetExport
+GetImport
+GetIntent
+GetIntents
+GetIntentVersions
+GetSlotType
+GetSlotTypes
+GetSlotTypeVersions
+GetUtterancesView
+ListTagsForResource
+PutBot
+PutBotAlias
+PutIntent
+PutSlotType
+StartImport
+TagResource
+UntagResource
+
+
+Amazon Lex Runtime Service
+DeleteSession
+GetSession
+PostContent
+PostText
+PutSession
+
+
+
+
+Data Types
+Amazon Lex Model Building Service
+BotAliasMetadata
+BotChannelAssociation
+BotMetadata
+BuiltinIntentMetadata
+BuiltinIntentSlot
+BuiltinSlotTypeMetadata
+CodeHook
+ConversationLogsRequest
+ConversationLogsResponse
+EnumerationValue
+FollowUpPrompt
+FulfillmentActivity
+Intent
+IntentMetadata
+KendraConfiguration
+LogSettingsRequest
+LogSettingsResponse
+Message
+Prompt
+ResourceReference
+Slot
+SlotTypeConfiguration
+SlotTypeMetadata
+SlotTypeRegexConfiguration
+Statement
+Tag
+UtteranceData
+UtteranceList
+
+
+Amazon Lex Runtime Service
+Button
+DialogAction
+GenericAttachment
+IntentConfidence
+IntentSummary
+PredictedIntent
+ResponseCard
+SentimentResponse
+
+
+
+
+Document History for Amazon Lex
+AWS glossary

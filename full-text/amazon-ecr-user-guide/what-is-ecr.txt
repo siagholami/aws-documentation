@@ -1,0 +1,23 @@
+What Is Amazon Elastic Container Registry?
+Amazon Elastic Container Registry (Amazon ECR) is a managed AWS container image registry service that is secure, scalable, and reliable. Amazon ECR supports private container image repositories with resource-based permissions using AWS IAM so that specific users or Amazon EC2 instances can access repositories and images. Developers can use the their preferred CLI to push, pull, and manage Docker images, Open Container Initiative (OCI) images, and OCI compatible artifacts.
+The AWS container services team maintains a public roadmap on GitHub. It contains information about what the teams are working on and allows all AWS customers the ability to give direct feedback. For more information, see AWS Containers Roadmap.
+Components of Amazon ECR
+Amazon ECR contains the following components:
+Registry
+An Amazon ECR registry is provided to each AWS account; you can create image repositories in your registry and store images in them. For more information, see Amazon ECR registries.
+Authorization token
+Your client must authenticate to Amazon ECR registries as an AWS user before it can push and pull images. For more information, see Registry authentication.
+Repository
+An Amazon ECR image repository contains your Docker images, Open Container Initiative (OCI) images, and OCI compatible artifacts. For more information, see Amazon ECR repositories.
+Repository policy
+You can control access to your repositories and the images within them with repository policies. For more information, see Repository policies.
+Image
+You can push and pull container images to your repositories. You can use these images locally on your development system, or you can use them in Amazon ECS task definitions and Amazon EKS pod specifications. For more information, see Using Amazon ECR images with Amazon ECS and Using Amazon ECR Images with Amazon EKS.
+Features of Amazon ECR
+Amazon ECR provides the following features:
+ Lifecycle policies enable you to manage the lifecycle of the images in your repositories. You define rules which result in the cleaning up of unused images which you can test before applying to your repository. For more information, see Lifecycle policies.
+ Image scanning helps in identifying software vulnerabilities in your container images. Each repository can be configured to scan on push, which ensures that each new image pushed to the repository is scanned. You can then retrieve the results of the image scan. For more information, see Image scanning.
+How to Get Started with Amazon ECR
+To use Amazon ECR, you must be set up to install the AWS Command Line Interface and Docker. For more information, see Setting up with Amazon ECR and Getting started with Amazon ECR using the AWS CLI.
+Pricing for Amazon ECR
+With Amazon ECR, you only pay for the amount of data you store in your repositories and for the data transfer from your image pushes and pulls. For more information, see Amazon ECR pricing.

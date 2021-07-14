@@ -1,0 +1,23 @@
+AWS::Cognito::UserPool NumberAttributeConstraints
+The minimum and maximum value of an attribute that is of the number data type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue)" : String,
+  "[MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue)" : String
+}
+YAML
+[MaxValue](#cfn-cognito-userpool-numberattributeconstraints-maxvalue): String
+  [MinValue](#cfn-cognito-userpool-numberattributeconstraints-minvalue): String
+Properties
+MaxValue 
+The maximum value of an attribute that is of the number data type.
+Required: No
+Type: String
+Update requires: No interruption
+MinValue 
+The minimum value of an attribute that is of the number data type.
+Required: No
+Type: String
+Update requires: No interruption

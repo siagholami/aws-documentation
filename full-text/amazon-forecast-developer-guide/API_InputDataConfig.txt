@@ -1,0 +1,20 @@
+InputDataConfig
+The data used to train a predictor. The data includes a dataset group and any supplementary features. You specify this object in the CreatePredictor request.
+Contents
+DatasetGroupArn 
+The Amazon Resource Name (ARN) of the dataset group.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\-\_\.\/\:]$ 
+Required: Yes
+SupplementaryFeatures 
+An array of supplementary features. The only supported feature is a holiday calendar.
+Type: Array of SupplementaryFeature objects
+Array Members: Fixed number of 1 item.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

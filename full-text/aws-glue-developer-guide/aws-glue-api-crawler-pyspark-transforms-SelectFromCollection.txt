@@ -1,0 +1,33 @@
+SelectFromCollection Class
+Selects one DynamicFrame in a DynamicFrameCollection.
+Methods
+
+__call__
+apply
+name
+describeArgs
+describeReturn
+describeTransform
+describeErrors
+describe
+
+__call__(dfc, key, transformation_ctx = "")
+Gets one DynamicFrame from a DynamicFrameCollection.
+ dfc – The DynamicFrameCollection from which the DynamicFrame should be selected (required).
+ key – The key of the DynamicFrame to select (required).
+ transformation_ctx – A unique string that is used to identify state information (optional).
+Returns the specified DynamicFrame.
+apply(cls, *args, **kwargs)
+Inherited from GlueTransform apply.
+name(cls)
+Inherited from GlueTransform name.
+describeArgs(cls)
+Inherited from GlueTransform describeArgs.
+describeReturn(cls)
+Inherited from GlueTransform describeReturn.
+describeTransform(cls)
+Inherited from GlueTransform describeTransform.
+describeErrors(cls)
+Inherited from GlueTransform describeErrors.
+describe(cls)
+Inherited from GlueTransform describe.

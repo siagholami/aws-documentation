@@ -1,0 +1,9 @@
+iam-no-inline-policy-check
+Checks that inline policy feature is not in use. The rule is NON_COMPLIANT if an AWS Identity and Access Management (IAM) user, IAM role or IAM group has any inline policy. 
+Identifier: IAM_NO_INLINE_POLICY_CHECK
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

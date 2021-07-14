@@ -1,0 +1,9 @@
+root-account-mfa-enabled
+Checks whether users of your AWS account require a multi-factor authentication (MFA) device to sign in with root credentials.
+Identifier: ROOT_ACCOUNT_MFA_ENABLED
+Trigger type: Periodic
+AWS Region: All supported AWS Regions except China (Beijing), China (Ningxia), AWS GovCloud (US-East), and AWS GovCloud (US-West)
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

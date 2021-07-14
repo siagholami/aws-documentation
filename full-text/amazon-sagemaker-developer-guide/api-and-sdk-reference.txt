@@ -1,0 +1,18 @@
+API Reference Guide for Amazon SageMaker
+Overview
+Amazon SageMaker provides APIs, SDKs, and a command line interface that you can use to create and manage notebook instances and train and deploy models. 
+ https://sagemaker.readthedocs.io/en/stable/ (Recommended)
+ Amazon SageMaker API Reference
+ Amazon Augmented AI API Reference
+ AWS Command Line Interface
+ AWS SDK for .NET
+ AWS SDK for C
+ AWS SDK for Go
+ AWS SDK for Java
+ AWS SDK for JavaScript
+ AWS SDK for PHP
+ AWS SDK for Python (Boto)
+ AWS SDK for Ruby
+ Amazon SageMaker Spark
+You can also get code examples from the Amazon SageMaker example notebooks GitHub repository.
+ Example notebooks

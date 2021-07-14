@@ -1,0 +1,16 @@
+AWS::MSK::Cluster NodeExporter
+Indicates whether you want to enable or disable the Node Exporter.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[EnabledInBroker](#cfn-msk-cluster-nodeexporter-enabledinbroker)" : Boolean
+}
+YAML
+[EnabledInBroker](#cfn-msk-cluster-nodeexporter-enabledinbroker): Boolean
+Properties
+EnabledInBroker 
+Indicates whether you want to enable or disable the Node Exporter.
+Required: Yes
+Type: Boolean
+Update requires: No interruption

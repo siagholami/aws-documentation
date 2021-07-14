@@ -1,0 +1,35 @@
+AWS::WAFv2::WebACL DefaultAction
+Note
+This is the latest version of AWS WAF, named AWS WAFV2, released in November, 2019. For information, including how to migrate your AWS WAF resources from the prior release, see the AWS WAF Developer Guide. 
+In a WebACL, this is the action that you want AWS WAF to perform when a web request doesn't match any of the rules in the WebACL. The default action must be a terminating action, so count is not allowed.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Allow](#cfn-wafv2-webacl-defaultaction-allow)" : Json,
+  "[Block](#cfn-wafv2-webacl-defaultaction-block)" : Json
+}
+YAML
+[Allow](#cfn-wafv2-webacl-defaultaction-allow): Json
+  [Block](#cfn-wafv2-webacl-defaultaction-block): Json
+Properties
+Allow 
+Specifies that AWS WAF should allow requests by default.
+Required: No
+Type: Json
+Update requires: No interruption
+Block 
+Specifies that AWS WAF should block requests by default. 
+Required: No
+Type: Json
+Update requires: No interruption
+Examples
+Set a web ACL default action
+The following shows an example web ACL default action specification, that sets the default action to "Block". 
+YAML
+DefaultAction:
+        Block: {}
+JSON
+"DefaultAction": {
+          "Block": {}
+        }

@@ -1,0 +1,16 @@
+How do I empty an S3 Bucket?
+You can empty a bucket, which deletes all of the objects in the bucket without deleting the bucket. When you empty a bucket with versioning enabled, all versions of all the objects in the bucket are deleted. For more information, see Managing Objects in a Versioning-Enabled Bucket and Deleting/Emptying a Bucket in the Amazon Simple Storage Service Developer Guide.
+To empty an S3 bucket
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Bucket name list, select the option next to the name of the bucket that you want to empty and then choose Empty.
+
+
+On the Empty bucket page, confirm that you want to empty the bucket by entering the bucket name into the text field, and then choose Empty.
+
+
+(Optional) Monitor the progress of the bucket emptying process on the Empty bucket: Status page.
+

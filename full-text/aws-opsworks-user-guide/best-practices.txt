@@ -1,0 +1,8 @@
+AWS OpsWorks Stacks Best Practices
+Strategies, techniques, and suggestions in this section can help you get the maximum benefit and optimal outcomes from AWS OpsWorks Stacks.
+Topics
+ Best Practices: Root Device Storage for Instances
+ Best Practices: Optimizing the Number of Application Servers
+ Best Practices: Managing Permissions
+ Best Practices: Managing and Deploying Apps and Cookbooks
+ Packaging Cookbook Dependencies Locally

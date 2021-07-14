@@ -1,0 +1,24 @@
+AWS::CloudFront::Distribution OriginGroups
+A complex data type for the origin groups specified for a distribution.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Items](#cfn-cloudfront-distribution-origingroups-items)" : [ OriginGroup, ... ],
+  "[Quantity](#cfn-cloudfront-distribution-origingroups-quantity)" : Integer
+}
+YAML
+[Items](#cfn-cloudfront-distribution-origingroups-items): 
+    - OriginGroup
+  [Quantity](#cfn-cloudfront-distribution-origingroups-quantity): Integer
+Properties
+Items 
+The items (origin groups) in a distribution.
+Required: No
+Type: List of OriginGroup
+Update requires: No interruption
+Quantity 
+The number of origin groups.
+Required: Yes
+Type: Integer
+Update requires: No interruption

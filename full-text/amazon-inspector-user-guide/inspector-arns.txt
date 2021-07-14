@@ -1,0 +1,19 @@
+Amazon Inspector ARNs
+Each resource type and rules package in Amazon Inspector has a unique Amazon Resource Name (ARN) associated with it.
+Contents
+ ARNs for Amazon Inspector resources
+ Amazon Inspector ARNS for rules packages
+   US East (Ohio)
+   US East (N. Virginia)
+   US West (N. California)
+   US West (Oregon)
+   Asia Pacific (Mumbai)
+   Asia Pacific (Seoul)
+   Asia Pacific (Sydney)
+   Asia Pacific (Tokyo)
+   Europe (Frankfurt)
+   Europe (Ireland)
+   Europe (London)
+   Europe (Stockholm)
+   AWS GovCloud (US-East)
+   AWS GovCloud (US-West)

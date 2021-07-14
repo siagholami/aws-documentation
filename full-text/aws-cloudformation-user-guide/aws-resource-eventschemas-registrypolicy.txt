@@ -1,0 +1,116 @@
+AWS::EventSchemas::RegistryPolicy
+Use the AWS::EventSchemas::RegistryPolicy resource to specify resource-based policies for an EventBridge Schema Registry.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EventSchemas::RegistryPolicy",
+  "Properties" : {
+      "[Policy](#cfn-eventschemas-registrypolicy-policy)" : Json,
+      "[RegistryName](#cfn-eventschemas-registrypolicy-registryname)" : String,
+      "[RevisionId](#cfn-eventschemas-registrypolicy-revisionid)" : String
+    }
+}
+YAML
+Type: AWS::EventSchemas::RegistryPolicy
+Properties: 
+  [Policy](#cfn-eventschemas-registrypolicy-policy): Json
+  [RegistryName](#cfn-eventschemas-registrypolicy-registryname): String
+  [RevisionId](#cfn-eventschemas-registrypolicy-revisionid): String
+Properties
+Policy 
+A resource-based policy.
+Required: Yes
+Type: Json
+Update requires: No interruption
+RegistryName 
+The name of the registry.
+Required: Yes
+Type: String
+Update requires: No interruption
+RevisionId 
+The revision ID of the policy.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you provide the logical ID of this resource to the Ref intrinsic function, Ref the name of the registry.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Id 
+The ID of the policy.
+Examples
+
+YAML
+Resources:
+  RegistryPolicy:
+    Type: AWS::EventSchemas::RegistryPolicy
+    Properties:
+      RegistryName: registryName
+      Policy:
+        Version: 2012-10-17
+        Statement:
+          Sid: 1
+          Effect: Allow
+          Principal:
+            AWS: arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy
+          Action:
+            - schemas:DescribeRegistry
+            - schemas:CreateSchema
+          Resource: registryArn
+
+YAML
+Resources:
+  RegistryPolicy:
+    Type: 'AWS::EventSchemas::RegistryPolicy'
+    Properties:
+      RegistryName: 'MyRegistry'
+      Policy:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: 'Test'
+            Effect: 'Allow'
+            Action:
+              - 'schemas:*'
+            Principal:
+              AWS:
+                - '109876543210'
+            Resource:
+              - 'arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry'
+              - 'arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*'
+
+JSON
+{
+  "Resources": {
+    "RegistryPolicy": {
+      "Type": "AWS::EventSchemas::RegistryPolicy",
+      "Properties": {
+        "RegistryName": "MyRegistry",
+        "Policy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "Test",
+              "Effect": "Allow",
+              "Action": [
+                "schemas:*"
+              ],
+              "Principal": {
+                "AWS": [
+                  "109876543210"
+                ]
+              },
+              "Resource": [
+                "arn:aws:schemas:us-east-1:012345678901:registry/MyRegistry",
+                "arn:aws:schemas:us-east-1:012345678901:schema/MyRegistry*"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+AWS::GlobalAccelerator::EndpointGroup
+The AWS::GlobalAccelerator::EndpointGroup resource is a Global Accelerator resource type that contains information about how you create an endpoint group for the specified listener. An endpoint group is a collection of endpoints in one AWS Region.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::GlobalAccelerator::EndpointGroup",
+  "Properties" : {
+      "[EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations)" : [ EndpointConfiguration, ... ],
+      "[EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion)" : String,
+      "[HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds)" : Integer,
+      "[HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath)" : String,
+      "[HealthCheckPort](#cfn-globalaccelerator-endpointgroup-healthcheckport)" : Integer,
+      "[HealthCheckProtocol](#cfn-globalaccelerator-endpointgroup-healthcheckprotocol)" : String,
+      "[ListenerArn](#cfn-globalaccelerator-endpointgroup-listenerarn)" : String,
+      "[ThresholdCount](#cfn-globalaccelerator-endpointgroup-thresholdcount)" : Integer,
+      "[TrafficDialPercentage](#cfn-globalaccelerator-endpointgroup-trafficdialpercentage)" : Double
+    }
+}
+YAML
+Type: AWS::GlobalAccelerator::EndpointGroup
+Properties: 
+  [EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations): 
+    - EndpointConfiguration
+  [EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion): String
+  [HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds): Integer
+  [HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath): String
+  [HealthCheckPort](#cfn-globalaccelerator-endpointgroup-healthcheckport): Integer
+  [HealthCheckProtocol](#cfn-globalaccelerator-endpointgroup-healthcheckprotocol): String
+  [ListenerArn](#cfn-globalaccelerator-endpointgroup-listenerarn): String
+  [ThresholdCount](#cfn-globalaccelerator-endpointgroup-thresholdcount): Integer
+  [TrafficDialPercentage](#cfn-globalaccelerator-endpointgroup-trafficdialpercentage): Double
+Properties
+EndpointConfigurations 
+The list of endpoint objects.
+Required: No
+Type: List of EndpointConfiguration
+Maximum: 10
+Update requires: No interruption
+EndpointGroupRegion 
+The AWS Region where the endpoint group is located.
+Required: Yes
+Type: String
+Maximum: 255
+Update requires: Replacement
+HealthCheckIntervalSeconds 
+The time—10 seconds or 30 seconds—between health checks for each endpoint. The default value is 30.
+Required: No
+Type: Integer
+Minimum: 10
+Maximum: 30
+Update requires: No interruption
+HealthCheckPath 
+If the protocol is HTTP/S, then this value provides the ping path that Global Accelerator uses for the destination on the endpoints for health checks. The default is slash (/).
+Required: No
+Type: String
+Maximum: 255
+Update requires: No interruption
+HealthCheckPort 
+The port that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. 
+The default port is the port for the listener that this endpoint group is associated with. If the listener port is a list, Global Accelerator uses the first specified port in the list of ports.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 65535
+Update requires: No interruption
+HealthCheckProtocol 
+The protocol that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. The default value is TCP.
+Required: No
+Type: String
+Allowed values: HTTP | HTTPS | TCP
+Update requires: No interruption
+ListenerArn 
+The Amazon Resource Name (ARN) of the listener.
+Required: Yes
+Type: String
+Maximum: 255
+Update requires: Replacement
+ThresholdCount 
+The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 10
+Update requires: No interruption
+TrafficDialPercentage 
+The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. 
+Use this action to increase (dial up) or decrease (dial down) traffic to a specific Region. The percentage is applied to the traffic that would otherwise have been routed to the Region based on optimal routing.
+The default value is 100.
+Required: No
+Type: Double
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ARN of the endpoint group, such as arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+EndpointGroupArn 
+The ARN of the endpoint group, such as arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu.
+Examples
+Add an endpoint group
+These are examples to specify an endpoint group.
+JSON
+"Resources": {
+        "EndpointGroup": {
+        "Type": "AWS::GlobalAccelerator::EndpointGroup",
+        "Properties": {
+            "ListenerArn": {
+                "Ref": "Listener"
+            },
+            "EndpointGroupRegion": {
+                "Ref": "EndpointRegion"
+            },
+            "TrafficDialPercentage": 100.0,
+            "EndpointConfigurations": [
+                {
+                    "EndpointId": {
+                        "Ref": "EndpointId"
+                    }
+                }
+            ]
+        }
+    }
+}
+YAML
+EndpointGroup:
+  Type: AWS::GlobalAccelerator::EndpointGroup
+  Properties:
+    ListenerArn:
+      Ref: Listener
+    EndpointGroupRegion:
+      Ref: EndpointRegion
+    TrafficDialPercentage: 100
+    EndpointConfigurations:
+    - EndpointId:
+        Ref: EndpointId

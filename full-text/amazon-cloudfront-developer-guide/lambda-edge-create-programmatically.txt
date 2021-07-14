@@ -1,0 +1,11 @@
+Creating Lambda Functions and CloudFront Triggers Programmatically
+You can set up Lambda@Edge functions and CloudFront triggers programmatically by using API actions instead of by using the AWS console. For more information, see the following:
+ API Reference in the AWS Lambda Developer Guide
+ Amazon CloudFront API Reference
+ AWS CLI
+   Lambda create-function command
+   CloudFront create-distribution command
+   CloudFront create-distribution-with-tags command
+   CloudFront update-distribution command
+ AWS SDKs (See the SDKs & Toolkits section.)
+ AWS Tools for PowerShell Cmdlet Reference

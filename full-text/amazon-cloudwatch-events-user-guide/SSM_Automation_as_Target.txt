@@ -1,0 +1,46 @@
+Tutorial: Set AWS Systems Manager Automation as a CloudWatch Events Target
+You can use CloudWatch Events to invoke AWS Systems Manager Automation on a regular timed schedule, or when specified events are detected. This tutorial assumes that you are invoking Systems Manager Automation based on certain events.
+To create the CloudWatch Events rule
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Events, Create rule.
+
+
+For Event source, do the following:
+
+
+Choose Event Pattern and choose Build event pattern to match events by service. 
+
+
+For Service Name and Event Type, choose the service and event type to use as the trigger.
+Depending on the service and event type you choose, you may need to specify additional options under Event Source.
+
+
+For Targets, choose Add Target, SSM Automation. 
+
+
+For Document, choose the Systems Manager document to run when the target is triggered.
+
+
+(Optional), To specify a certain version of the document, choose Configure document version.
+
+
+Under Configure parameter(s), choose No Parameter(s) or Constant.
+
+
+If you choose Constant, specify the constants to pass to the document execution.
+
+
+CloudWatch Events can create the IAM role needed for your event to run: 
+    To create an IAM role automatically, choose Create a new role for this specific resource.
+    To use an IAM role that you created before, choose Use existing role.
+
+
+Choose Configure details. For Rule definition, type a name and description for the rule. 
+
+
+Choose Create rule.
+

@@ -1,0 +1,6 @@
+Product and service integrations with CodePipeline
+By default, AWS CodePipeline is integrated with a number of AWS services and partner products and services. Use the information in the following sections to help you configure CodePipeline to integrate with the products and services you use.
+Topics
+ Integrations with CodePipeline action types
+ General integrations with CodePipeline
+ Examples from the community

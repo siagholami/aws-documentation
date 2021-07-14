@@ -1,0 +1,235 @@
+Controlling Access
+Your administrative account has all of the permissions needed to manage agreements, but different documents and agreements might require you to delegate permissions differently for various user accounts. You delegate permissions by using IAM policies.
+To grant non-administrative access, you must create a policy, attach the policy to a group, and add IAM users to the group.
+
+
+Create an IAM Policy
+
+
+Create an IAM Group
+
+
+Create an IAM User and Add Them to a Group
+
+
+Create an IAM Policy
+Create a permissions policy that grants permissions to IAM users. The permissions allow the users to access AWS Artifact reports and accept and download agreements on behalf of either a single account or an organization. The following tables show the permissions that you can assign to IAM users based on the level of access that they need. 
+ Report Permissions
+ Agreement Permissions
+ Common AWS Artifact IAM Policies
+ To create an IAM policy
+Report Permissions 
+
+
+
+Permission Name
+Permissions Granted
+Example IAM Policy
+
+
+
+
+Get
+Grants the IAM user permission to download all reports that are accessible by the root account.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:Get"            ],            "Resource": [                "arn:aws:artifact:::report-package/*"            ]        }    ]}
+
+
+
+Agreement Permissions 
+
+
+
+Permission Name
+Permissions Granted
+Example IAM Policy
+
+
+
+
+DownloadAgreement
+Grants the IAM user permission to download all agreements that are accessible by the root account. IAM users must have this permission to accept agreements.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:DownloadAgreement"            ],            "Resource": [                "*"            ]        }    ]}
+
+
+AcceptAgreement
+Grants the IAM user permission to accept an agreement on behalf of the root account.IAM users must also have permission to download agreements in order to accept an agreement.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:AcceptAgreement"            ],            "Resource": [                "*"            ]        }    ]}
+
+
+TerminateAgreement
+Grants the IAM user permission to terminate an agreement on behalf of the root account.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:TerminateAgreement"            ],            "Resource": [                "*"            ]        }    ]}
+
+
+DescribeOrganization
+Grants the IAM user permission to retrieve information about the AWS Organizations organization that the user's account belongs to. Both master and member accounts need the DescribeOrganizations permission to view or use organization agreements.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "organizations:DescribeOrganization"            ],            "Resource": "*"        }    ]}
+
+
+[See the AWS documentation website for more details]
+Grants the IAM user permission to create the IAM role that AWS Artifact uses to integrate with AWS Organizations. Your organization's master account must have these permissions to get started with organizational agreements.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": "iam:ListRoles",            "Resource": "arn:aws:iam:::role/"        },        {            "Effect": "Allow",            "Action": "iam:CreateRole",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync"        },        {            "Effect": "Allow",            "Action": "iam:AttachRolePolicy",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync",            "Condition": {                "ArnEquals": {                    "iam:PolicyARN": "arn:aws:iam::aws:policy/service-role/AWSArtifactAccountSync"                }            }        }    ]}
+
+
+[See the AWS documentation website for more details]
+Grants the IAM user permission to grant AWS Artifact the permissions to use AWS Organizations. For more information about AWS Organizations, see Managing Your Agreements in AWS Artifact. Your organization's master account must have these permissions to get started with organizational agreements.
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "organizations:EnableAWSServiceAccess",                "organizations:DescribeOrganization",                "organizations:ListAWSServiceAccessForOrganization"            ],            "Resource": "*"        }    ]}
+
+
+
+Here are policies for seven of the most common use cases.
+Common AWS Artifact IAM Policies 
+
+
+
+Use case
+Permission names
+Example policy
+
+
+
+
+Full access to download reports and manage agreements
+artifact:Get artifact:AcceptAgreement artifact:DownloadAgreement artifact:TerminateAgreement organizations:DescribeOrganization organizations:EnableAWSServiceAccess organizations:ListAccounts organizations:ListAWSServiceAccessForOrganization iam:CreateRole iam:AttachRolePolicy iam:ListRoles
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:Get",                "artifact:AcceptAgreement",                "artifact:DownloadAgreement",                "artifact:TerminateAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/",                "arn:aws:artifact:::report-package/"            ]        },        {            "Effect": "Allow",            "Action": "iam:ListRoles",            "Resource": "arn:aws:iam:::role/"        },        {            "Effect": "Allow",            "Action": "iam:CreateRole",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync"        },        {            "Effect": "Allow",            "Action": "iam:AttachRolePolicy",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync",            "Condition": {                "ArnEquals": {                    "iam:PolicyARN": "arn:aws:iam::aws:policy/service-role/AWSArtifactAccountSync"                }            }        },        {            "Effect": "Allow",            "Action": [                "organizations:DescribeOrganization",                "organizations:EnableAWSServiceAccess",                "organizations:ListAccounts",                "organizations:ListAWSServiceAccessForOrganization"            ],            "Resource": "*"        }    ]}
+
+
+Permission to download reports
+artifact:Get
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:Get"            ],            "Resource": [                "arn:aws:artifact:::report-package/*"            ]        }    ]}
+
+
+Permissions to get started with and manage organizational agreements Master account only
+artifact:AcceptAgreement artifact:DownloadAgreement artifact:TerminateAgreement organizations:DescribeOrganization organizations:EnableAWSServiceAccess organizations:ListAccounts organizations:ListAWSServiceAccessForOrganization iam:CreateRole iam:AttachRolePolicy iam:ListRoles
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:AcceptAgreement",                "artifact:DownloadAgreement",                "artifact:TerminateAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/"            ]        },        {            "Effect": "Allow",            "Action": "iam:ListRoles",            "Resource": "arn:aws:iam:::role/"        },        {            "Effect": "Allow",            "Action": "iam:CreateRole",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync"        },        {            "Effect": "Allow",            "Action": "iam:AttachRolePolicy",            "Resource": "arn:aws:iam:::role/service-role/AWSArtifactAccountSync",            "Condition": {                "ArnEquals": {                    "iam:PolicyARN": "arn:aws:iam::aws:policy/service-role/AWSArtifactAccountSync"                }            }        },        {            "Effect": "Allow",            "Action": [                "organizations:DescribeOrganization",                "organizations:EnableAWSServiceAccess",                "organizations:ListAccounts",                "organizations:ListAWSServiceAccessForOrganization"                            ],            "Resource": ""        }    ]}
+
+
+Permissions to manage organizational agreements Master account only. You must set up organizational agreements beforehand.
+artifact:AcceptAgreement artifact:DownloadAgreement artifact:TerminateAgreement organizations:DescribeOrganization
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:AcceptAgreement",                "artifact:DownloadAgreement",                "artifact:TerminateAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/"            ]        },        {            "Effect": "Allow",            "Action": [                "organizations:DescribeOrganization"            ],            "Resource": ""        }    ]}
+
+
+Permissions to view organizational agreements
+artifact:DownloadAgreement organizations:DescribeOrganization
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:DownloadAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/"            ]        },        {            "Effect": "Allow",            "Action": [                "organizations:DescribeOrganization"            ],            "Resource": ""        }    ]}
+
+
+Permissions to view and download agreements
+artifact:DownloadAgreement
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:DownloadAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/*"            ]        }    ]}
+
+
+Permissions for a user to manage the agreements of a single account
+artifact:AcceptAgreement artifact:DownloadAgreement artifact:TerminateAgreement
+{    "Version": "2012-10-17",    "Statement": [        {            "Effect": "Allow",            "Action": [                "artifact:AcceptAgreement",                "artifact:TerminateAgreement",                "artifact:DownloadAgreement"            ],            "Resource": [                "arn:aws:artifact:::customer-agreement/",                "arn:aws:artifact:::agreement/*"            ]        }    ]}
+
+
+
+To create an IAM policy
+Use the following procedure to create an IAM policy. You can use your own, or you can use one of the policies from the previous tables.
+
+
+Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+In the navigation pane, choose Policies.
+
+
+Choose Create Policy.
+
+
+Choose Create Your Own Policy.
+
+
+For Policy Name, type a unique name that helps you to remember what your policy is intended to do.
+
+
+For Description, type a description for your policy.
+
+
+For Policy Document, copy and paste one of the policy documents from the Report Permissions, Agreement Permissions, or Common AWS Artifact IAM Policies tables, or copy and paste the following policy to grant access to to just the AWS PCI, SOC, and ISO reports in AWS Artifact:
+
+
+{
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Effect": "Allow",
+               "Action": [
+                   "artifact:Get"
+               ],
+               "Resource": [
+                   "arn:aws:artifact:::report-package/Certifications and Attestations/SOC/*",
+                   "arn:aws:artifact:::report-package/Certifications and Attestations/PCI/*",
+                   "arn:aws:artifact:::report-package/Certifications and Attestations/ISO/*"
+               ]
+           }
+       ]
+   }
+To remove permissions for a specific type of report, remove the line with that report type. For example, to remove the SOC reports, remove the following line:
+"arn:aws:artifact:::report-package/Certifications and Attestations/SOC/*",
+
+
+Choose Validate Policy. 
+
+
+Choose Create Policy.
+
+
+Now that you have created your policy, you can attach the policy to a group.
+Create an IAM Group
+In the preceding procedure, you created a permissions policy. You can attach the policy to a group and add other IAM users to the group at any time. 
+To create an IAM group and attach your policy
+
+
+Use your AWS account email address and password to sign in as the AWS account root user to the IAM console at https://console.aws.amazon.com/iam/.
+
+
+In the navigation pane of the console, choose Groups and then choose Create New Group.
+
+
+For Group Name, type a name for your IAM group and then choose Next Step.
+
+
+In the search box, type the name of the policy that you created.
+
+
+In the policy list, select the check box for your policy. Then choose Next Step.
+
+
+Review the group name and policies. When you are ready to proceed, choose Create Group.
+
+
+Now that you have created your group and attached your policy to it, you can add a user to the group.
+Create an IAM User and Add Them to a Group
+In the preceding procedure, you created an IAM policy, created a group, and attached the policy to the group. You can add IAM users to the group at any time. 
+To create an IAM user and add the user to a group
+
+
+Use your AWS account email address and password to sign in as the AWS account root user to the IAM console at https://console.aws.amazon.com/iam/.
+Note
+We strongly recommend that you adhere to the best practice of using the Administrator IAM user below and securely lock away the root user credentials. Sign in as the root user only to perform a few account and service management tasks.
+
+
+In the navigation pane of the console, choose Users and then choose Add user.
+
+
+For User name, type the name for your user.
+
+
+Select the check box next to AWS Management Console access, select Custom password, and type the new user's password in the text box. You can optionally select Require password reset to force the user to create a new password the next time the user signs in.
+
+
+Choose Next: Permissions.
+
+
+On the Set permissions for user page, choose Add user to group.
+
+
+In the list of groups, select the check box for your new group. Choose Refresh if necessary to see the group in the list.
+
+
+Choose Next: Review to see the list of group memberships to be added to the new user. When you are ready to proceed, choose Create user.
+
+
+Now that you have created your group, attached your policy to it, and added a user to the group, you can add more users or groups with different permissions using the same procedures.

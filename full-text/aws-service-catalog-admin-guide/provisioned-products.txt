@@ -1,0 +1,6 @@
+Managing Provisioned Products
+AWS Service Catalog provides an interface for managing provisioned products. You can view, update, and terminate all provisioned products for your catalog based on access level. Refer to the following sections for example procedures.
+Topics
+ Managing All Provisioned Products as Administrator
+ Changing Provisioned Product Owner
+ Tutorial: Identifying User Resource Allocation

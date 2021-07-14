@@ -1,0 +1,26 @@
+Filter
+Describes a filter for choosing a subset of objects. Each filter consists of a condition and a match statement. The condition is either IS or IS_NOT, which specifies whether to include or exclude the objects that match the statement, respectively. The match statement consists of a key and a value.
+Contents
+Condition 
+The condition to apply. To include the objects that match the statement, specify IS. To exclude matching objects, specify IS_NOT.
+Type: String
+Valid Values:IS | IS_NOT 
+Required: Yes
+Key 
+The name of the parameter to filter on.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\_]$ 
+Required: Yes
+Value 
+The value to match.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\-\_\.\/\:]$ 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

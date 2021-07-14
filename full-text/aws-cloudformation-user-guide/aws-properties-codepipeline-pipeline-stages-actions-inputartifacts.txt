@@ -1,0 +1,20 @@
+AWS::CodePipeline::Pipeline InputArtifact
+Represents information about an artifact to be worked on, such as a test or build artifact.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name)" : String
+}
+YAML
+[Name](#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name): String
+Properties
+Name 
+The name of the artifact to be worked on (for example, "My App").
+The input artifact of an action must exactly match the output artifact declared in a preceding action, but the input artifact does not have to be the next action in strict sequence from the action that provided the output artifact. Actions in parallel can declare different output artifacts, which are in turn consumed by different following actions.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: [a-zA-Z0-9_\-]
+Update requires: No interruption

@@ -1,0 +1,28 @@
+Migrating from .NET on Windows Server platforms to the .NET Core on Linux platform
+You can migrate applications that run on .NET on Windows Server platforms to the .NET Core on Linux platforms. Following are some considerations when migrating from Windows to Linux platforms.
+Considerations for migrating to the .NET Core on Linux platform
+
+
+
+Area
+Changes and information
+
+
+
+
+Application configuration
+On Windows platforms, you use a deployment manifest to specify the applications that run in your environment. The .NET Core on Linux platforms use a Procfile to specify the applications that run on your environment's instances. For details on bundling applications, see Bundling applications for the .NET Core on Linux platform.
+
+
+Proxy server
+On Windows platforms, you use IIS as your application's proxy server. The .NET Core on Linux platforms include nginx as a reverse proxy by default. You can choose to use no proxy server and use Kestrel as your application's web server. To learn more, see Configuring the proxy server for your .NET Core on Linux environment.
+
+
+Routing
+On Windows platforms, you use IIS in your application code and include a deployment manifest to configure the IIS path. For the .NET Core on Linux platform, you use ASP .NET Core routing in your application code, and update your environment's nginx configuration. To learn more, see Configuring the proxy server for your .NET Core on Linux environment.
+
+
+Logs
+The Linux and Windows platforms stream different logs. For details, see How Elastic Beanstalk sets up CloudWatch Logs.
+
+

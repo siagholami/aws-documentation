@@ -1,0 +1,12 @@
+Working with branches in AWS CodeCommit repositories
+What is a branch? In Git, branches are simply pointers or references to a commit. In development, they're a convenient way to organize your work. You can use branches to separate work on a new or different version of files without impacting work in other branches. You can use branches to develop new features, store a specific version of your project from a particular commit, and more.
+In CodeCommit, you can change the default branch for your repository. This default branch is the one used as the base or default branch in local repos when users clone the repository. You can also create and delete branches and view details about a branch. You can quickly compare differences between a branch and the default branch (or any two branches). To view the history of branches and merges in your repository, you can use the Commit Visualizer.
+
+For information about working with other aspects of your repository in CodeCommit, see Working with repositories, Working with files, Working with pull requests, Working with commits, and Working with user preferences. 
+Topics
+ Create a branch in AWS CodeCommit
+ Limit pushes and merges to branches in AWS CodeCommit
+ View branch details in AWS CodeCommit
+ Compare and merge branches in AWS CodeCommit
+ Change branch settings in AWS CodeCommit
+ Delete a branch in AWS CodeCommit

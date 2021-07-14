@@ -1,0 +1,7 @@
+Get started with Amazon CloudWatch Application Insights
+To get started on CloudWatch Application Insights, verify that you have met the prerequisites outlined below and have created an IAM policy. Then, you can get started using the console link to enable CloudWatch Application Insights. To configure your application resources, follow the steps under Set up, configure, and manage your application for monitoring.
+Topics
+ Access CloudWatch Application Insights
+ Prerequisites
+ IAM policy
+ Set up, configure, and manage your application for monitoring

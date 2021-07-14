@@ -1,0 +1,118 @@
+AWS Certificate Manager Private Certificate Authority User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is ACM Private CA?
+Regions
+Services Integrated with AWS Certificate Manager Private Certificate Authority
+Supported Cryptographic Algorithms
+Quotas
+RFC Compliance
+Pricing
+Security in AWS Certificate Manager Private Certificate Authority
+Data Protection in AWS Certificate Manager Private Certificate Authority
+Identity and Access Management for AWS Certificate Manager Private Certificate Authority
+Cross-Account Access to Private CAs
+Resource-Based Policies
+
+
+Logging and Monitoring for AWS Certificate Manager Private Certificate Authority
+Supported CloudWatch Metrics
+Using CloudWatch Events
+Using CloudTrail
+Creating a Certificate Authority
+Creating an Audit Report
+Deleting a Certificate Authority
+Restoring a Certificate Authority
+Describing a Certificate Authority
+Retrieving a Certificate Authority Certificate
+Retrieving the Certificate Authority Signing Request
+Retrieving a Certificate
+Importing a Certificate Authority Certificate
+Issuing a Certificate
+Listing Certificate Authorities
+Listing Tags
+Revoking a Certificate
+Tagging Private Certificate Authorities
+Removing Tags from a Private Certificate Authority
+Updating a Certificate Authority
+
+
+
+
+Compliance Validation for AWS Certificate Manager Private Certificate Authority
+Using Audit Reports with Your Private CA
+
+
+Infrastructure Security in AWS Certificate Manager Private Certificate Authority
+ACM Private CA VPC Endpoints (AWS PrivateLink)
+
+
+ACM Private CA Best Practices
+Planning Your ACM Private CA Deployment
+Designing a CA Hierarchy
+Managing the Private CA Lifecycle
+Resilience in AWS Certificate Manager Private Certificate Authority
+Creating and Managing a Private CA
+Setting Up ACM Private CA
+Creating a Private CA and CRL
+Creating and Installing the Certificate for a Private CA
+Enabling Access to a Private CA
+Updating Your Private CA
+Deleting Your Private CA
+Restoring Your Private CA
+Issuing and Revoking End-Entity Certificates
+Issuing a Private End-Entity Certificate
+Revoking a Private Certificate
+Understanding Certificate Templates
+Using the ACM Private CA API (Java Examples)
+Create and Activate a Root CA Programmatically
+Create and Activate a Subordinate CA Programmatically
+CreateCertificateAuthority
+CreateCertificateAuthorityAuditReport
+CreatePermission
+DeleteCertificateAuthority
+DeletePermission
+DeletePolicy
+DescribeCertificateAuthority
+DescribeCertificateAuthorityAuditReport
+GetCertificate
+GetCertificateAuthorityCertificate
+GetCertificateAuthorityCsr
+GetPolicy
+ImportCertificateAuthorityCertificate
+IssueCertificate
+ListCertificateAuthorities
+ListPermissions
+ListTags
+PutPolicy
+RestoreCertificateAuthority
+RevokeCertificate
+TagCertificateAuthorities
+UntagCertificateAuthority
+UpdateCertificateAuthority
+Signing Private CA Certificates with an External CA
+Get a Certificate Signing Request (CSR)
+Sign Your Private CA Certificate
+Import Your Private CA Certificate into ACM Private CA
+Retrieve a Private Certificate Created by ACM Private CA
+Retrieve a Certificate Authority (CA) Certificate
+Enforcing Name Constraints on a Private CA
+Troubleshooting
+Creating and Signing a Private CA Certificate
+Configure Amazon S3 to Allow Creation of a CRL Bucket
+Deleting a Self-signed CA Certificate
+Amazon S3 Permissions and CRL Buckets
+Handling Exceptions
+Terms and Concepts
+Document History

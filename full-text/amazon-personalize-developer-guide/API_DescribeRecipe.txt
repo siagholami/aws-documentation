@@ -1,0 +1,57 @@
+DescribeRecipe
+Describes a recipe.
+A recipe contains three items:
+ An algorithm that trains a model.
+ Hyperparameters that govern the training.
+ Feature transformation information for modifying the input data before training.
+Amazon Personalize provides a set of predefined recipes. You specify a recipe when you create a solution with the CreateSolution API. CreateSolution trains a model by using the algorithm in the specified recipe and a training dataset. The solution, when deployed as a campaign, can provide recommendations using the GetRecommendations API.
+Request Syntax
+{
+   "recipeArn": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ recipeArn  
+The Amazon Resource Name (ARN) of the recipe to describe.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: Yes
+Response Syntax
+{
+   "recipe": { 
+      "algorithmArn": "string",
+      "creationDateTime": number,
+      "description": "string",
+      "featureTransformationArn": "string",
+      "lastUpdatedDateTime": number,
+      "name": "string",
+      "recipeArn": "string",
+      "recipeType": "string",
+      "status": "string"
+   }
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ recipe  
+An object that describes the recipe.
+Type: Recipe object
+Errors
+InvalidInputException 
+Provide a valid value for the field or parameter.
+HTTP Status Code: 400
+ResourceNotFoundException 
+Could not find the specified resource.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

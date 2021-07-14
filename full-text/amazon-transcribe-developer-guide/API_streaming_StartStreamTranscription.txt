@@ -1,0 +1,174 @@
+StartStreamTranscription
+Starts a bidirectional HTTP2 stream where audio is streamed to Amazon Transcribe and the transcription results are streamed to your application.
+The following are encoded as HTTP2 headers:
+ x-amzn-transcribe-language-code
+ x-amzn-transcribe-media-encoding
+ x-amzn-transcribe-sample-rate
+ x-amzn-transcribe-session-id
+Request Syntax
+```
+POST /stream-transcription HTTP/2
+x-amzn-transcribe-language-code: LanguageCode
+x-amzn-transcribe-sample-rate: MediaSampleRateHertz
+x-amzn-transcribe-media-encoding: MediaEncoding
+x-amzn-transcribe-vocabulary-name: VocabularyName
+x-amzn-transcribe-session-id: SessionId
+x-amzn-transcribe-vocabulary-filter-name: VocabularyFilterName
+x-amzn-transcribe-vocabulary-filter-method: VocabularyFilterMethod
+x-amzn-transcribe-show-speaker-label: ShowSpeakerLabel
+Content-type: application/json
+{
+   "AudioStream": { 
+      "AudioEvent": { 
+         "AudioChunk": blob
+      }
+   }
+}
+```
+URI Request Parameters
+The request uses the following URI parameters.
+ LanguageCode  
+Indicates the source language used in the input audio stream.
+Valid Values:en-US | en-GB | es-US | fr-CA | fr-FR | en-AU 
+Required: Yes
+ MediaEncoding  
+The encoding used for the input audio. pcm is the only valid value.
+Valid Values:flac | ogg-opus | pcm 
+Required: Yes
+ MediaSampleRateHertz  
+The sample rate, in Hertz, of the input audio. We suggest that you use 8000 Hz for low quality audio and 16000 Hz for high quality audio.
+Valid Range: Minimum value of 8000. Maximum value of 48000.
+Required: Yes
+ SessionId  
+A identifier for the transcription session. Use this parameter when you want to retry a session. If you don't provide a session ID, Amazon Transcribe will generate one for you and return it in the response.
+Pattern: [a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12} 
+ ShowSpeakerLabel  
+When true, enables speaker identification in your real-time stream.
+ VocabularyFilterMethod  
+The manner in which you use your vocabulary filter to filter words in your transcript. Remove removes filtered words from your transcription results. Mask masks those words with a *** in your transcription results. Tag keeps the filtered words in your transcription results and tags them. The tag appears as VocabularyFilterMatch equal to True 
+Valid Values:mask | remove | tag 
+ VocabularyFilterName  
+The name of the vocabulary filter you've created that is unique to your AWS account. Provide the name in this field to successfully use it in a stream.
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: ^[0-9a-zA-Z._-] 
+ VocabularyName  
+The name of the vocabulary to use when processing the transcription job.
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: ^[0-9a-zA-Z._-] 
+Request Body
+The request accepts the following data in JSON format.
+ AudioStream  
+PCM-encoded stream of audio blobs. The audio stream is encoded as an HTTP2 data frame.
+Type: AudioStream object
+Required: Yes
+Response Syntax
+```
+HTTP/2 200
+x-amzn-request-id: RequestId
+x-amzn-transcribe-language-code: LanguageCode
+x-amzn-transcribe-sample-rate: MediaSampleRateHertz
+x-amzn-transcribe-media-encoding: MediaEncoding
+x-amzn-transcribe-vocabulary-name: VocabularyName
+x-amzn-transcribe-session-id: SessionId
+x-amzn-transcribe-vocabulary-filter-name: VocabularyFilterName
+x-amzn-transcribe-vocabulary-filter-method: VocabularyFilterMethod
+x-amzn-transcribe-show-speaker-label: ShowSpeakerLabel
+Content-type: application/json
+{
+   "TranscriptResultStream": { 
+      "BadRequestException": { 
+      },
+      "ConflictException": { 
+      },
+      "InternalFailureException": { 
+      },
+      "LimitExceededException": { 
+      },
+      "ServiceUnavailableException": { 
+      },
+      "TranscriptEvent": { 
+         "Transcript": { 
+            "Results": [ 
+               { 
+                  "Alternatives": [ 
+                     { 
+                        "Items": [ 
+                           { 
+                              "Content": "string",
+                              "EndTime": number,
+                              "Speaker": "string",
+                              "StartTime": number,
+                              "Type": "string",
+                              "VocabularyFilterMatch": boolean
+                           }
+                        ],
+                        "Transcript": "string"
+                     }
+                  ],
+                  "EndTime": number,
+                  "IsPartial": boolean,
+                  "ResultId": "string",
+                  "StartTime": number
+               }
+            ]
+         }
+      }
+   }
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The response returns the following HTTP headers.
+ LanguageCode  
+The language code for the input audio stream.
+Valid Values:en-US | en-GB | es-US | fr-CA | fr-FR | en-AU 
+ MediaEncoding  
+The encoding used for the input audio stream.
+Valid Values:flac | ogg-opus | pcm 
+ MediaSampleRateHertz  
+The sample rate for the input audio stream. Use 8000 Hz for low quality audio and 16000 Hz for high quality audio.
+Valid Range: Minimum value of 8000. Maximum value of 48000.
+ RequestId  
+An identifier for the streaming transcription.
+ SessionId  
+An identifier for a specific transcription session.
+Pattern: [a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12} 
+ ShowSpeakerLabel  
+Shows whether speaker identification was enabled in the stream.
+ VocabularyFilterMethod  
+The vocabulary filtering method used in the real-time stream.
+Valid Values:mask | remove | tag 
+ VocabularyFilterName  
+The name of the vocabulary filter used in your real-time stream.
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: ^[0-9a-zA-Z._-] 
+ VocabularyName  
+The name of the vocabulary used when processing the stream.
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: ^[0-9a-zA-Z._-] 
+The following data is returned in JSON format by the service.
+ TranscriptResultStream  
+Represents the stream of transcription events from Amazon Transcribe to your application.
+Type: TranscriptResultStream object
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+BadRequestException 
+One or more arguments to the StartStreamTranscription operation was invalid. For example, MediaEncoding was not set to pcm or LanguageCode was not set to a valid code. Check the parameters and try your request again.
+HTTP Status Code: 400
+ConflictException 
+A new stream started with the same session ID. The current stream has been terminated.
+HTTP Status Code: 409
+InternalFailureException 
+A problem occurred while processing the audio. Amazon Transcribe terminated processing. Try your request again.
+HTTP Status Code: 500
+LimitExceededException 
+You have exceeded the maximum number of concurrent transcription streams, are starting transcription streams too quickly, or the maximum audio length of 4 hours. Wait until a stream has finished processing, or break your audio stream into smaller chunks and try your request again.
+HTTP Status Code: 429
+ServiceUnavailableException 
+Service is currently unavailable. Try your request later.
+HTTP Status Code: 503
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

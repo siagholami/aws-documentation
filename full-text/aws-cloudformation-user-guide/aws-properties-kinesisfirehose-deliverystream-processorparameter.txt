@@ -1,0 +1,27 @@
+AWS::KinesisFirehose::DeliveryStream ProcessorParameter
+The ProcessorParameter property specifies a processor parameter in a data processor for an Amazon Kinesis Data Firehose delivery stream. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ParameterName](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername)" : String,
+  "[ParameterValue](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue)" : String
+}
+YAML
+[ParameterName](#cfn-kinesisfirehose-deliverystream-processorparameter-parametername): String
+  [ParameterValue](#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue): String
+Properties
+ParameterName 
+The name of the parameter.
+Required: Yes
+Type: String
+Allowed values: BufferIntervalInSeconds | BufferSizeInMBs | LambdaArn | NumberOfRetries | RoleArn
+Update requires: No interruption
+ParameterValue 
+The parameter value.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 512
+Pattern: ^(?!\s*$).
+Update requires: No interruption

@@ -1,0 +1,16 @@
+Deleting a Filter
+Use the following procedures to delete a filter.
+
+
+On the analysis page, choose Filter on the tool bar.
+
+
+On the Applied filters pane, choose the filter that you want to delete.
+
+
+
+Choose one of the following:
+    To delete a filter, choose Delete filter. 
+    To delete all filters from a filter group, choose Delete all.
+    To delete one filter from a filter group, scroll to the filter that you want to delete. Then choose the delete icon near the appropriate field name. Doing this removes a single filter condition.
+

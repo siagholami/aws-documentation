@@ -1,0 +1,8 @@
+Working with AWS Identity and Access Management (IAM) Users, Roles, and Policies
+Amazon QuickSight is fully integrated with AWS Identity and Access Management (IAM). Use this section to find how to configure IAM identities and policies for use with Amazon QuickSight:
+ For information on creating IAM users, groups, and roles, see IAM Identities.
+ For information on creating policies in IAM, see Creating a New Policy.
+ To start work directly with IAM, sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+Topics
+ Working with IAM Actions and Permissions for Amazon QuickSight Users
+ Setting Your IAM Policy

@@ -1,0 +1,26 @@
+AWS::ApiGateway::UsagePlan ThrottleSettings
+ThrottleSettings is a property of the AWS::ApiGateway::UsagePlan resource that specifies the overall request rate (average requests per second) and burst capacity when users call your REST APIs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BurstLimit](#cfn-apigateway-usageplan-throttlesettings-burstlimit)" : Integer,
+  "[RateLimit](#cfn-apigateway-usageplan-throttlesettings-ratelimit)" : Double
+}
+YAML
+[BurstLimit](#cfn-apigateway-usageplan-throttlesettings-burstlimit): Integer
+  [RateLimit](#cfn-apigateway-usageplan-throttlesettings-ratelimit): Double
+Properties
+BurstLimit 
+The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity. For more information about request throttling, see Manage API Request Throttling in the API Gateway Developer Guide.
+Required: No
+Type: Integer
+Update requires: No interruption
+RateLimit 
+The API request steady-state rate limit (average requests per second over an extended period of time). For more information about request throttling, see Manage API Request Throttling in the API Gateway Developer Guide.
+Required: No
+Type: Double
+Update requires: No interruption
+See also
+
+UsagePlan in the Amazon API Gateway REST API Reference

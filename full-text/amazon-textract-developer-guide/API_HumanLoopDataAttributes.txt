@@ -1,0 +1,15 @@
+HumanLoopDataAttributes
+Allows you to set attributes of the image. Currently, you can declare an image as free of personally identifiable information and adult content. 
+Contents
+ContentClassifiers 
+Sets whether the input image is free of personally identifiable information or adult content.
+Type: Array of strings
+Array Members: Maximum number of 256 items.
+Valid Values:FreeOfPersonallyIdentifiableInformation | FreeOfAdultContent 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

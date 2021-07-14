@@ -1,0 +1,9 @@
+Deploying to Amazon EC2 Container Service
+Amazon Elastic Container Service is a highly scalable, high performance container management service that supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances.
+To deploy applications on Amazon Elastic Container Service, your application components must be developed to run in a Docker container. A Docker container is a standardized unit of software development, containing everything that your software application needs to run: code, runtime, system tools, system libraries, etc.
+The Toolkit for Visual Studio provides a wizard that simplifies publishing applications through Amazon ECS. This wizard is described in the following sections.
+For more information about Amazon ECS, go to the Elastic Container Service documentation. It includes an overview of Docker basics and creating a cluster.
+Topics
+ Specify AWS Credentials
+ Deploy an ASP.NET Core 2.0 App (Fargate)
+ Deploy an ASP.NET Core 2.0 App (EC2)

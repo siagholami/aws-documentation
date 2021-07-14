@@ -1,0 +1,31 @@
+AWS::ECS::TaskDefinition Device
+The Device property specifies an object representing a container instance host device.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ContainerPath](#cfn-ecs-taskdefinition-device-containerpath)" : String,
+  "[HostPath](#cfn-ecs-taskdefinition-device-hostpath)" : String,
+  "[Permissions](#cfn-ecs-taskdefinition-device-permissions)" : [ String, ... ]
+}
+YAML
+[ContainerPath](#cfn-ecs-taskdefinition-device-containerpath): String
+  [HostPath](#cfn-ecs-taskdefinition-device-hostpath): String
+  [Permissions](#cfn-ecs-taskdefinition-device-permissions): 
+    - String
+Properties
+ContainerPath 
+The path inside the container at which to expose the host device.
+Required: No
+Type: String
+Update requires: Replacement
+HostPath 
+The path for the device on the host container instance.
+Required: No
+Type: String
+Update requires: Replacement
+Permissions 
+The explicit permissions to provide to the container for the device. By default, the container has permissions for read, write, and mknod for the device.
+Required: No
+Type: List of String
+Update requires: Replacement

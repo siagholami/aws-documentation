@@ -1,0 +1,17 @@
+AWS::S3::Bucket AccelerateConfiguration
+Configures the transfer acceleration state for an Amazon S3 bucket. For more information, see Amazon S3 Transfer Acceleration in the Amazon Simple Storage Service Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus)" : String
+}
+YAML
+[AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
+Properties
+AccelerationStatus 
+Specifies the transfer acceleration status of the bucket.
+Required: Yes
+Type: String
+Allowed values: Enabled | Suspended
+Update requires: No interruption

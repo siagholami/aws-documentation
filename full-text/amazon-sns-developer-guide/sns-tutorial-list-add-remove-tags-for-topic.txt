@@ -1,0 +1,81 @@
+Tutorial: Listing, adding, and removing tags for an Amazon SNS topic
+You can track your Amazon SNS resources (for example, for cost allocation) by adding, removing, and listing metadata tags for Amazon SNS topics. The following tutorial shows how to add, update, and remove tags for a topic using the AWS Management Console and the AWS SDK for Java. For more information, see Amazon SNS tags.
+Topics
+ AWS Management Console
+ AWS SDK for Java
+Note
+Currently, tag-based access control isn't available.
+To list, add, and remove, metadata tags for an Amazon SNS topic using the AWS Management Console
+
+
+Sign in to the Amazon SNS console.
+
+
+On the navigation panel, choose Topics.
+
+
+On the Topics page, choose a topic and choose Edit.
+
+
+Expand the Tags section.
+
+
+The tags added to the topic are listed.
+
+
+Modify topic tags:
+    To add a tag, choose Add tag and enter a Key and Value (optional),
+    To remove a tag, choose Remove tag next to a key-value pair.
+
+
+Choose Save changes
+
+
+To list, add, and remove metadata tags for an Amazon SNS topic using the AWS SDK for Java.
+
+
+Specify your AWS credentials. For more information, see Set up AWS Credentials and Region for Development in the AWS SDK for Java 2.x Developer Guide.
+
+
+Write your code. For more information, see Using the SDK for Java 2.x.
+
+
+To list the tags added to a topic, add the following code:
+
+
+final ListTagsForResourceRequest listTagsForResourceRequest = new ListTagsForResourceRequest();
+   listTagsForResourceRequest.setResourceArn(topicArn);
+   final ListTagsForResourceResult listTagsForResourceResult = snsClient.listTagsForResource(listTagsForResourceRequest);
+   System.out.println(String.format("ListTagsForResource: \tTags for topic %s are %s.\n",
+    topicArn, listTagsForResourceResult.getTags()));
+
+To add tags (or update the value of tags), add the following code:
+
+```
+   final Tag tagTeam = new Tag();
+   tagTeam.setKey("Team");
+   tagTeam.setValue("Development");
+   final Tag tagEnvironment = new Tag();
+   tagEnvironment.setKey("Environment");
+   tagEnvironment.setValue("Gamma");
+final List tagList = new ArrayList<>();
+   tagList.add(tagTeam);
+   tagList.add(tagEnvironment);
+final TagResourceRequest tagResourceRequest = new TagResourceRequest();
+   tagResourceRequest.setResourceArn(topicArn);
+   tagResourceRequest.setTags(tagList);
+   final TagResourceResult tagResourceResult = snsClient.tagResource(tagResourceRequest);
+   ```
+
+To remove a tag from the topic using the tag's key, add the following code:
+
+final UntagResourceRequest untagResourceRequest = new UntagResourceRequest();
+   untagResourceRequest.setResourceArn(topicArn);
+   final List<String> tagKeyList = new ArrayList<>();
+   tagKeyList.add("Team");
+   untagResourceRequest.setTagKeys(tagKeyList);
+   final UntagResourceResult untagResourceResult = snsClient.untagResource(untagResourceRequest);
+
+Compile and run your code.
+
+The existing tags are listed, two are added, and one is removed from the topic.

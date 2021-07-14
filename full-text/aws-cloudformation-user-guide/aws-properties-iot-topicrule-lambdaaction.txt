@@ -1,0 +1,16 @@
+AWS::IoT::TopicRule LambdaAction
+Describes an action to invoke a Lambda function.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FunctionArn](#cfn-iot-topicrule-lambdaaction-functionarn)" : String
+}
+YAML
+[FunctionArn](#cfn-iot-topicrule-lambdaaction-functionarn): String
+Properties
+FunctionArn 
+The ARN of the Lambda function.
+Required: No
+Type: String
+Update requires: No interruption

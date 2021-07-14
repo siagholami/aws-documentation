@@ -1,0 +1,80 @@
+AWS::SES::ReceiptFilter
+Specify a new IP address filter. You use IP address filters when you receive email with Amazon SES. For more information, see the Amazon SES Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::SES::ReceiptFilter",
+  "Properties" : {
+      "[Filter](#cfn-ses-receiptfilter-filter)" : Filter
+    }
+}
+YAML
+Type: AWS::SES::ReceiptFilter
+Properties: 
+  [Filter](#cfn-ses-receiptfilter-filter): 
+    Filter
+Properties
+Filter 
+A data structure that describes the IP address filter that you want to specify. This object consists of a name, an IP address range, and a boolean that indicates whether to allow or block mail from the IP range.
+Required: Yes
+Type: Filter
+Update requires: Replacement
+Examples
+Specifies an IP address filter for incoming email.
+
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS SES ReceiptFilter Sample Template",
+    "Parameters": {
+        "FilterName": {
+            "Type": "String"
+        },
+        "Policy": {
+            "Type": "String"
+        },
+        "Cidr": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ReceiptFilter": {
+            "Type": "AWS::SES::ReceiptFilter",
+            "Properties": {
+                "Filter": {
+                    "Name": {
+                        "Ref": "FilterName"
+                    },
+                    "IpFilter": {
+                        "Policy": {
+                            "Ref": "Policy"
+                        },
+                        "Cidr": {
+                            "Ref": "Cidr"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'AWS SES ReceiptFilter Sample Template'
+Parameters:
+  FilterName:
+    Type: String
+  Policy:
+    Type: String
+  Cidr:
+    Type: String
+Resources:
+  ReceiptFilter:
+    Type: AWS::SES::ReceiptFilter
+    Properties:
+      Filter:
+        Name: !Ref FilterName
+        IpFilter:
+          Policy: !Ref Policy
+          Cidr: !Ref Cidr

@@ -1,0 +1,89 @@
+Cloud Gem Message of the Day API Calls
+The game client and Cloud Gem Portal use Amazon API Gateway to securely invoke service API Lambda functions. The game client can read messages while the Cloud Gem Portal can add, list, edit, and delete messages.
+
+The Game Client Service API Calls: /player/messages
+The game client read-message functionality is implemented by the player_messages.py file located in the \dev\Gems\CloudGemMessageOfTheDay\AWS\lambda-function-code\api directory.
+get (Read Messages)
+The get function reads messages for the player.
+Parameters
+The get function has the following parameters.
+{
+    "clientTime" : datetime as string : Opt [default UTC] : The datetime value used to retrieve the messages. The default is UTC.
+    "clientLanguage" : String : Opt [default "Eng"] : The language used for localization.
+}
+Description
+The get function returns a list of messages whose startTime <= clientTime <= endTime.
+Return Value
+The get function returns a list of messages of the day.
+{
+    "list" : a list of objects
+    {
+        "message": string
+        "priority": integer,
+        "startTime": datetime,
+        "endTime": datetime
+    }
+}
+Cloud Gem Portal Admin Service API Calls: /admin/messages
+The Cloud Gem Portal message functionality is implemented by code in the admin_messages.py file located in the \dev\Gems\CloudGemMessageOfTheDay\AWS\lambda-function-code\api directory.
+post (Add Message)
+The post function adds a message of the day.
+Parameters
+The post function has the following parameters.
+{
+    "message": String: Required
+    "priority": Integer, : Opt [default 0]
+    "startTime": datetime: Opt [default Jan 01 1900 00:00 ]
+    "endTime": datetime: Opt [default Dec 31 2100 23:59 ]
+}
+Description
+The post function adds a message entry to the main table in DynamoDB and returns a UniqueMsgID string.
+put (Edit Message)
+The put function edits an existing message.
+Parameters
+The put function has the following parameters.
+{
+    "UniqueMsgID": String: Required
+    "message": String: Opt [default leaves current message unchanged]
+    "priority": Integer, : Opt [default 0]
+    "startTime": datetime: Opt [default Jan 01 1900 00:00 ]
+    "endTime": datetime: Opt [default Dec 31 2100 23:59 ]
+}
+Description
+The put function updates the message in the main table that matches the specified message ID. To update the message, the function overwrites its attributes. You can also use the put function to reschedule and reprioritize a message by updating the start time, end time, and priority values.
+Return Value
+The put function returns a string that indicates the result status of the operation.
+delete (Delete Message)
+The delete function deletes the specified message.
+Parameters
+The delete function has the following parameters.
+{
+    "UniqueMsgID": String: Required
+}
+Description
+Deletes the message from the main table that matches the specified message ID.
+Return Value
+The delete function returns a string that indicates the result status of the operation.
+get (List Messages)
+The get function retrieves a list of messages of the day.
+Parameters
+The get function has the following parameters.
+{
+    "index": Integer: Opt [default 0]
+    "count": Integer: Opt [default 9999999]
+    "filter": Opt [default all] Can be one of the following: "active", "expired", "planned" or "all"
+}
+Description
+The get function returns the filtered count of entries in the table, including all fields starting at the specified index.
+Return Value
+The get function returns a list of messages of the day in the following format.
+{
+    "list" : a list of objects
+    {
+        "UniqueMsgID": String
+        "message": String
+        "priority": Integer,
+        "startTime": datetime,
+        "endTime": datetime
+    }
+}

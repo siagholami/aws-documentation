@@ -1,0 +1,54 @@
+Best practices for AWS IoT Events
+Follow these best practices to get the maximum benefit from AWS IoT Events.
+Topics
+ Enable Amazon CloudWatch logging when developing AWS IoT Events detector models
+ Publish regularly to save your detector model when working in the AWS IoT Events console
+ Store your AWS IoT Events data to avoid possible data loss due to a long period of inactivity
+Enable Amazon CloudWatch logging when developing AWS IoT Events detector models
+Amazon CloudWatch monitors your AWS resources and the applications that you run on AWS in real time. With CloudWatch, you gain systemwide visibility into resource use, application performance, and operational health. When you develop or debug an AWS IoT Events detector model, CloudWatch helps you know what AWS IoT Events is doing, and any errors it encounters.
+To enable CloudWatch
+
+
+If you haven't already, follow the steps in Setting up permissions for AWS IoT Events to create a role with an attached policy that grants permission to create and manage CloudWatch logs for AWS IoT Events.
+
+
+In the AWS IoT Events console, choose the menu icon in the upper-left corner to open the navigation pane.
+
+
+
+If you're on the Getting started page, choose the X in the upper right to close that page and go to the Detector model palette. Choose the menu icon in the upper-left corner.
+
+
+
+In the navigation pane, choose Settings.
+
+
+
+On the Settings page, choose Edit.
+
+
+
+On the Edit logging options page, do the following.
+
+
+Choose the Level of verbosity.
+
+
+For Select role, select a role with sufficient permissions to perform the logging actions that you chose.
+
+
+If you chose Debug for the Level of verbosity, you can also choose Add Model Option and add a Detector Model Name and (optional) KeyValue to specify the detector model(s) and specific detectors (instances) to log.
+
+
+Choose Update.
+
+
+
+Your logging options are successfully updated.
+
+Publish regularly to save your detector model when working in the AWS IoT Events console
+When you use the AWS IoT Events console, your work in progress is saved locally in your browser (cookies). But you must choose Publish to save your detector model to AWS IoT Events. After you publish a detector model, your published work is available in any browser that you use to access your account. Before you publish, your work isn't saved. 
+Note
+After you publish a detector model, you can't change its name but you can continue to modify its definition.
+Store your AWS IoT Events data to avoid possible data loss due to a long period of inactivity
+If you don't use AWS IoT Events for a significant period of time (that is, don't incur charges and don't create detector models) your data, including your detector models, might be deleted automatically. However, we won't delete data or detector models without providing you with at least 30 days prior notice. If you need to store data for an extended period of time, consider using AWS storage services.

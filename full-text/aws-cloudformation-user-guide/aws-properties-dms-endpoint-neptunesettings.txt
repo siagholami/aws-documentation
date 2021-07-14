@@ -1,0 +1,58 @@
+AWS::DMS::Endpoint NeptuneSettings
+The NeptuneSettings property type specifies Not currently supported by AWS CloudFormation. for an AWS::DMS::Endpoint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ErrorRetryDuration](#cfn-dms-endpoint-neptunesettings-errorretryduration)" : Integer,
+  "[IamAuthEnabled](#cfn-dms-endpoint-neptunesettings-iamauthenabled)" : Boolean,
+  "[MaxFileSize](#cfn-dms-endpoint-neptunesettings-maxfilesize)" : Integer,
+  "[MaxRetryCount](#cfn-dms-endpoint-neptunesettings-maxretrycount)" : Integer,
+  "[S3BucketFolder](#cfn-dms-endpoint-neptunesettings-s3bucketfolder)" : String,
+  "[S3BucketName](#cfn-dms-endpoint-neptunesettings-s3bucketname)" : String,
+  "[ServiceAccessRoleArn](#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn)" : String
+}
+YAML
+[ErrorRetryDuration](#cfn-dms-endpoint-neptunesettings-errorretryduration): Integer
+  [IamAuthEnabled](#cfn-dms-endpoint-neptunesettings-iamauthenabled): Boolean
+  [MaxFileSize](#cfn-dms-endpoint-neptunesettings-maxfilesize): Integer
+  [MaxRetryCount](#cfn-dms-endpoint-neptunesettings-maxretrycount): Integer
+  [S3BucketFolder](#cfn-dms-endpoint-neptunesettings-s3bucketfolder): String
+  [S3BucketName](#cfn-dms-endpoint-neptunesettings-s3bucketname): String
+  [ServiceAccessRoleArn](#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn): String
+Properties
+ErrorRetryDuration 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: Integer
+Update requires: No interruption
+IamAuthEnabled 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: Boolean
+Update requires: No interruption
+MaxFileSize 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: Integer
+Update requires: No interruption
+MaxRetryCount 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: Integer
+Update requires: No interruption
+S3BucketFolder 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Update requires: No interruption
+S3BucketName 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Update requires: No interruption
+ServiceAccessRoleArn 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Update requires: No interruption

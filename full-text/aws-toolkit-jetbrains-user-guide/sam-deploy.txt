@@ -1,0 +1,18 @@
+Deploying an AWS serverless application by using the AWS Toolkit for JetBrains
+To complete this procedure, you must first create the AWS serverless application that you want to deploy, if you haven't created it already.
+Note
+To deploy a serverless application that contains an AWS Lambda function, and deploy that function with any nondefault or optional properties, you must first set those properties in the function's corresponding AWS Serverless Application Model (AWS SAM) template file (for example, in a file named template.yaml within the project). For a list of available properties, see AWS::Serverless::Function in the awslabs/serverless-application-model repository on GitHub.
+
+
+If you need to switch to a different AWS Region to deploy the serverless application, do that now. 
+
+
+With the Project tool window already open and displaying the project that contains the serverless application's files, right-click the project's template.yaml file. Then choose Deploy Serverless Application.
+
+
+
+Complete the Deploy Serverless Application dialog box, and then choose Deploy. 
+
+
+The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment. It also adds the name of the stack to the CloudFormation list in AWS Explorer. If the deployment fails, you can try to figure out why by viewing event logs for the stack.
+After you deploy it, you can run (invoke) the remote version of an AWS Lambda function that is part of that deployed application.

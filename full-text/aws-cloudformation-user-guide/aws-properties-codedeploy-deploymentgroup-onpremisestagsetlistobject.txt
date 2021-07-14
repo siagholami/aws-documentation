@@ -1,0 +1,18 @@
+AWS::CodeDeploy::DeploymentGroup OnPremisesTagSetListObject
+The OnPremisesTagSetListObject property type specifies lists of on-premises instance tag groups. In order for an instance to be included in the deployment group, it must be identified by all the tag groups in the list. 
+OnPremisesTagSetListObject is a property of the CodeDeploy DeploymentGroup OnPremisesTagSet property type. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[OnPremisesTagGroup](#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)" : [ TagFilter, ... ]
+}
+YAML
+[OnPremisesTagGroup](#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup): 
+    - TagFilter
+Properties
+OnPremisesTagGroup 
+Information about groups of on-premises instance tags.
+Required: No
+Type: List of TagFilter
+Update requires: No interruption

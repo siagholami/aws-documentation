@@ -1,0 +1,6 @@
+Working with contacts
+You can add, edit, delete, copy, and print contacts, as well as share contacts with other users.
+Topics
+ Managing contacts
+ Creating distribution lists
+ Sharing contacts

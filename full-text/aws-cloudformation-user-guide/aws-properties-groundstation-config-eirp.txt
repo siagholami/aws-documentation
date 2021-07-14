@@ -1,0 +1,37 @@
+AWS::GroundStation::Config Eirp
+Defines an equivalent isotropically radiated power (EIRP). 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Units](#cfn-groundstation-config-eirp-units)" : String,
+  "[Value](#cfn-groundstation-config-eirp-value)" : Double
+}
+YAML
+[Units](#cfn-groundstation-config-eirp-units): String
+  [Value](#cfn-groundstation-config-eirp-value): Double
+Properties
+Units 
+ The units of the EIRP. 
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+ The value of the EIRP. Valid values are between 20.0 to 50.0 dBW. 
+Required: Yes
+Type: Double
+Update requires: No interruption
+Examples
+Create an EIRP
+The following example creates a Ground Station EIRP
+JSON
+{
+  "TargetEirp": {
+    "Value": 20,
+    "Units": "dBW"
+  }
+}
+YAML
+TargetEirp:
+  Value: 20.0
+  Units: dBW

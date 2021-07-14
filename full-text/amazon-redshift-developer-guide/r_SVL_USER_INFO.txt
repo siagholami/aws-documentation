@@ -1,0 +1,7 @@
+SVL_USER_INFO
+You can retrieve data about Amazon Redshift database users with the SVL_USER_INFO view.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+The following command retrieves user information from SVL_USER_INFO.
+SELECT * FROM SVL_USER_INFO;

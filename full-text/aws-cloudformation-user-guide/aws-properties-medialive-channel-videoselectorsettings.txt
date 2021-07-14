@@ -1,0 +1,26 @@
+AWS::MediaLive::Channel VideoSelectorSettings
+Information about the video to extract from the input.
+The parent of this entity is VideoSelector.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VideoSelectorPid](#cfn-medialive-channel-videoselectorsettings-videoselectorpid)" : VideoSelectorPid,
+  "[VideoSelectorProgramId](#cfn-medialive-channel-videoselectorsettings-videoselectorprogramid)" : VideoSelectorProgramId
+}
+YAML
+[VideoSelectorPid](#cfn-medialive-channel-videoselectorsettings-videoselectorpid): 
+    VideoSelectorPid
+  [VideoSelectorProgramId](#cfn-medialive-channel-videoselectorsettings-videoselectorprogramid): 
+    VideoSelectorProgramId
+Properties
+VideoSelectorPid 
+Used to extract video by PID.
+Required: No
+Type: VideoSelectorPid
+Update requires: No interruption
+VideoSelectorProgramId 
+Used to extract video by program ID.
+Required: No
+Type: VideoSelectorProgramId
+Update requires: No interruption

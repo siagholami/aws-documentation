@@ -1,0 +1,51 @@
+Creating a Data Set Using Amazon Athena Data
+You can connect to Amazon Athena data sources and use Athena data to create Amazon QuickSight data sets.
+Before you try to read files from Amazon S3 buckets, make sure that you grant Amazon QuickSight access to them. For more information, see Managing Amazon QuickSight Permissions to AWS Resources.
+To create an Athena data set
+
+
+Check Data Source Limits to make sure that your target table or query doesn't exceed data source limits.
+
+
+On the Amazon QuickSight start page, choose Manage data.
+
+
+On the Your Data Sets page, choose New data set.
+
+
+In the FROM NEW DATA SOURCES section of the Create a Data Set page, choose the Athena icon.
+
+
+For Data source name, type a name for the data source.
+
+
+Choose Validate connection to validate the connection. If validation fails, make sure Amazon QuickSight has permission to access Athena resources. Then, try validating again. For more information on setting Amazon QuickSight permissions to AWS resources, see Managing Amazon QuickSight Permissions to AWS Resources.
+
+
+Choose Create data source. 
+Note
+Amazon QuickSight automatically secures connections to Athena instances by using Secure Sockets Layer (SSL). You don't need to do anything to enable this.
+
+
+For Database: contain sets of tables., choose Select, and then choose your Athena database.
+
+Note
+If you want to create a custom SQL query, choose Edit/Preview data to edit a query. If you do this without selecting a table, an error appears in the data preview area. You can safely ignore this. The error is saying that there is no data to display until your query is created. 
+
+
+Choose one of the following options:
+    To prepare the data before creating an analysis, choose Edit/Preview data to begin data preparation. Choose to prepare data at this point if you are planning on writing a SQL query, rather than selecting data from a single table. For more information about data preparation, see Preparing Data Sets.
+    Otherwise, choose a table, and then choose Select to confirm.
+
+
+
+If you did not choose to prepare the data in the previous step, you will see the following screen.
+
+
+
+To load your data into SPICE, choose Import to SPICE. The green indicator shows whether or not you have space available. 
+Alternatively, you can choose to query your data without using SPICE. To do this, choose Directly query your data.
+
+After choosing how to query your data, choose one of the following options:
+    To prepare the data before creating an analysis, choose Edit/Preview data to begin data preparation for the selected table. For more information about data preparation, see Preparing Data Sets.
+    To create a data set and analyze the data using the table as-is, choose Visualize.

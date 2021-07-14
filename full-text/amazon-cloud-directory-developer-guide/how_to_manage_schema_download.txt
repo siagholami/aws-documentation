@@ -1,0 +1,16 @@
+Download a Schema
+Use the following procedure to download a schema.
+To download a schema
+
+
+In the AWS Directory Service console navigation pane, under Cloud Directory, select Schemas.
+
+
+Select the option in the table next to the schema name you want to download.
+
+
+Choose Actions.
+
+
+Choose Download schema
+

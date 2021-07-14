@@ -1,0 +1,13 @@
+PG_LIBRARY
+Stores information about user-defined libraries.
+PG_LIBRARY is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Example
+The following example returns information for user-installed libraries. 
+```
+select * from pg_library;
+name       | language_oid | file_store_id | owner
+----------------------------------------------
+f_urlparse |       108254 |          2000 |   100
+```

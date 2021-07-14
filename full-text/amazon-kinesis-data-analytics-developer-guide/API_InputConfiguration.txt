@@ -1,0 +1,19 @@
+InputConfiguration
+When you start your application, you provide this configuration, which identifies the input source and the point in the input source at which you want the application to start processing records.
+Contents
+Id 
+Input source ID. You can get this ID by calling the DescribeApplication operation.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 50.
+Pattern: [a-zA-Z0-9_.-] 
+Required: Yes
+InputStartingPositionConfiguration 
+Point at which you want the application to start processing records from the streaming source.
+Type: InputStartingPositionConfiguration object
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

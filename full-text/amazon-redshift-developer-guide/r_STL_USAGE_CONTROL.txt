@@ -1,0 +1,11 @@
+STL_USAGE_CONTROL
+The STL_USAGE_CONTROL view contains information that is logged when a usage limit is reached. For more information about usage limits, see Managing Usage Limits in the Amazon Redshift Cluster Management Guide. 
+STL_USAGE_CONTROL is visible only to superusers. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample query
+The following SQL example returns some of the information logged when a usage limit is reached. 
+select query, pid, eventtime, feature_type
+from stl_usage_control
+order by eventtime desc
+limit 5;

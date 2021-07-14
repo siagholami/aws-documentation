@@ -1,0 +1,163 @@
+Working with the Input Component
+You can create an .inputbindings file for an Input component and specify the input values and events.
+Topics
+ Creating an Input to Event Binding Asset
+ Creating Input Event Groups
+ Creating Event Generators
+ Mapping Input Events to Gameplay Actions
+ Testing Your Input Events
+Creating an Input to Event Binding Asset
+Follow these steps to create an .inputbindings file.
+To create an input to event binding asset
+
+
+Create an entity.
+
+
+In the Perspective viewport, select the entity. 
+
+
+In the Entity Inspector, click Add Component, and add the Input component.
+
+
+In the Entity Inspector, under Input, click the Input Bindings Editor icon  to open the Asset Editor.
+
+
+
+In the Asset Editor, choose File, New, Input Bindings.
+
+
+Enter a name for the .inputbindings file and click Save.
+
+
+Creating Input Event Groups
+After you create your .inputbindings file, you can add input event groups for different actions.
+To add an input event group
+
+
+In the Asset Editor, for your .inputbindings file, click the  icon.
+
+
+
+For Event Name, enter a name for your event, such as Action.
+
+
+
+Creating Event Generators
+After you create your input event group, you can add event generators to the group. An event generator is a handler that generates the named event. For example, a pressed key, a held mouse button, or a series of actions on a game controller results in the named event.
+To add an event generator to your input event group
+
+
+In the Asset Editor, for your input event group, next to Event Generators, click the  icon.
+
+
+In the Class to create window, select Input, and click OK.
+
+
+Specify your changes for the event generator. Each event generator has a set of properties that you can customize.
+Event Generator Properties 
+[See the AWS documentation website for more details]
+Example 
+
+
+The following .inputbindings file specifies a keyboard for the device type and the spacebar for the input name.
+
+
+
+Save your .inputbindings file.
+
+
+In the Entity Inspector, in the Input component, for Input to event binding, click the browse (…) icon and select your .inputbindings file.
+
+
+Mapping Input Events to Gameplay Actions
+After you create an .inputbindings file and specify your input events, you can use a Script Canvas graph or Lua script to map the input events to gameplay actions. You can create your graph in a visual scripting environment with the Script Canvas editor or write your own scripts with the Lua Editor (Lua IDE).
+Using a Script Canvas Graph for Input
+You can create a Script Canvas graph that maps to your input events. For more information, see Creating Gameplay with Script Canvas. 
+To use a Script Canvas graph for input
+
+
+In the Perspective viewport, select the entity. 
+
+
+In the Entity Inspector, click Add Component and add the Script Canvas component.
+
+
+In the Script Canvas component, for Script Canvas Asset, specify a Script Canvas graph like the following.
+Example Script Canvas Graph 
+
+
+In the following graph, the Input Handler node maps the Event Name Action to the .inputbindings file.
+
+Using a Lua Script for Input
+You can also create a Lua script that maps to your input events. For more information about Lua, see Writing Lua Scripts.
+To add a Lua script for input
+
+
+In the Perspective viewport, select the entity. 
+
+
+In the Entity Inspector, click Add Component, and add the Lua Script component.
+
+
+In the Lua Script component, specify a Lua script file like the following.
+Example Lua Script 
+
+
+The following Lua script maps the Event Name Action to the .inputbindings file.
+```
+   local tutorial_input =
+   {
+    Properties =
+    {
+    },
+   }
+   function tutorial_input:OnActivate()
+    self.Inputs = {}
+self.Inputs.OnPressed = function(_, value) 
+    TransformBus.Event.SetLocalScaleZ(self.entityId, 2.0)
+end
+
+self.Inputs.OnHeld = function (_, value) 
+    TransformBus.Event.RotateAroundLocalZ(self.entityId, 0.01)
+end
+
+self.Inputs.OnReleased = function (_, value) 
+    TransformBus.Event.SetLocalScaleZ(self.entityId, 1.0)
+end
+
+self.InputNotificationBus = InputEventNotificationBus.Connect(
+    self.Inputs, InputEventNotificationId("Action")
+)
+
+end
+function
+   tutorial_input:OnDeactivate()
+    self.InputNotificationBus:Disconnect()
+   end
+return tutorial_input
+   ```
+Testing Your Input Events
+After you specify the Script Canvas graph or Lua script, you can test your input events.
+To test your input events
+
+
+In the Perspective viewport, select your entity. 
+
+
+In the Entity Inspector, click Add Component, and add the Mesh component.
+
+
+For Mesh asset, specify a mesh asset file. This gives your entity a shape. For example, you can specify the lumberyard_version\dev\SamplesProject\Objects\Primitives\cube_001.cgf file.
+
+
+Press CtrlG to enter game mode.
+
+
+Press the keyboard spacebar so that your entity rotates on the local z-axis.
+Example 
+
+
+
+To exit gameplay mode, press Esc
+

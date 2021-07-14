@@ -1,0 +1,8 @@
+Compile a Model (Amazon SageMaker SDK)
+Follow the steps described in the Running the Training Job section of the MNIST Training, Compilation and Deployment with MXNet Module sample to produce a machine learning model train using SageMaker. Then you can use Neo to further optimize the model with the following code: 
+output_path = ‘/’.join( mnist_estimator.output_path.split(‘/’)[:-1])
+compiled_model = mnist_estimator.compile_model(target_instance_family='ml_c5', 
+                                               input_shape={'data':[1, 784]},
+                                               role=role,
+                                               output_path=output_path)
+This code compiles the model and saves the optimized model in output_path. Sample notebooks of using SDK are provided in the Neo Model Compilation Sample Notebooks section.

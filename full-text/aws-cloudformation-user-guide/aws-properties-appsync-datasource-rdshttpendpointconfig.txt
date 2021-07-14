@@ -1,0 +1,45 @@
+AWS::AppSync::DataSource RdsHttpEndpointConfig
+Use the RdsHttpEndpointConfig property type to specify RdsHttpEndpoint for an AWS AppSync relational database.
+RdsHttpEndpointConfig is a property of the AWS AppSync DataSource RelationalDatabaseConfig resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AwsRegion](#cfn-appsync-datasource-rdshttpendpointconfig-awsregion)" : String,
+  "[AwsSecretStoreArn](#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn)" : String,
+  "[DatabaseName](#cfn-appsync-datasource-rdshttpendpointconfig-databasename)" : String,
+  "[DbClusterIdentifier](#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier)" : String,
+  "[Schema](#cfn-appsync-datasource-rdshttpendpointconfig-schema)" : String
+}
+YAML
+[AwsRegion](#cfn-appsync-datasource-rdshttpendpointconfig-awsregion): String
+  [AwsSecretStoreArn](#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn): String
+  [DatabaseName](#cfn-appsync-datasource-rdshttpendpointconfig-databasename): String
+  [DbClusterIdentifier](#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier): String
+  [Schema](#cfn-appsync-datasource-rdshttpendpointconfig-schema): String
+Properties
+AwsRegion 
+AWS Region for RDS HTTP endpoint.
+Required: Yes
+Type: String
+Update requires: No interruption
+AwsSecretStoreArn 
+AWS secret store ARN for database credentials.
+Required: Yes
+Type: String
+Update requires: No interruption
+DatabaseName 
+Logical database name.
+Required: No
+Type: String
+Update requires: No interruption
+DbClusterIdentifier 
+Amazon RDS cluster ARN.
+Required: Yes
+Type: String
+Update requires: No interruption
+Schema 
+Logical schema name.
+Required: No
+Type: String
+Update requires: No interruption

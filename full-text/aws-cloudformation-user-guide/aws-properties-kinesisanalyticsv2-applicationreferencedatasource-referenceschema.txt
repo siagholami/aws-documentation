@@ -1,0 +1,37 @@
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource ReferenceSchema
+For a SQL-based Kinesis Data Analytics application, describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[RecordColumns](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)" : [ RecordColumn, ... ],
+  "[RecordEncoding](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)" : String,
+  "[RecordFormat](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)" : RecordFormat
+}
+YAML
+[RecordColumns](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns): 
+    - RecordColumn
+  [RecordEncoding](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat): 
+    RecordFormat
+Properties
+RecordColumns 
+A list of RecordColumn objects. 
+Required: Yes
+Type: List of RecordColumn
+Maximum: 1000
+Update requires: No interruption
+RecordEncoding 
+Specifies the encoding of the records in the streaming source. For example, UTF-8.
+Required: No
+Type: String
+Pattern: UTF-8
+Update requires: No interruption
+RecordFormat 
+Specifies the format of the records on the streaming source.
+Required: Yes
+Type: RecordFormat
+Update requires: No interruption
+See also
+
+SourceSchema in the Amazon Kinesis Data Analytics API Reference 

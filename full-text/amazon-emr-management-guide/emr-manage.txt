@@ -1,0 +1,10 @@
+Manage Clusters
+After you've launched your cluster, you can monitor and manage it. Amazon EMR provides several tools you can use to connect to and control your cluster. 
+Topics
+ View and Monitor a Cluster
+ Connect to the Cluster
+ Terminate a Cluster
+ Scaling Cluster Resources
+ Cloning a Cluster Using the Console
+ Submit Work to a Cluster
+ Automate Recurring Clusters with AWS Data Pipeline

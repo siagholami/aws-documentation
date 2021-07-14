@@ -1,0 +1,75 @@
+Serverless Projects
+The AWS Toolkit for Eclipse includes a project creation wizard that you can use to quickly configure and create serverless projects that deploy on AWS CloudFormation and run Lambda functions in response to RESTful web requests.
+Creating a Serverless Project
+To create a serverless project
+
+
+Select the AWS icon in the toolbar, and choose New AWS serverless project… from the menu that appears.
+
+
+Enter a Project name.
+
+
+Enter a Package namespace for your project. This will be used as the prefix for the source namespaces created for your project.
+
+
+Choose either to Select a blueprint or to Select a serverless template file:
+Select a Blueprint
+Choose a pre-defined project blueprint to use for your serverless project.
+Select a Serverless Template File
+Choose a JSON-formatted Serverless Application Model (SAM) .template file on your filesystem to fully customize your serverless project.
+Note
+For information about the structure and contents of a .template file, view the current version of the specification on GitHub.
+
+
+Press the Finish button to create your new serverless project.
+
+
+
+Serverless Project Blueprints
+The following serverless project blueprints are available to use:
+article
+This blueprint creates a S3 Bucket for storing article content, and a DynamoDB Table for article metadata. It contains Lambda functions for retrieving (GetArticle) and storing (PutArticle) articles, which are triggered by API Gateway events.
+hello-world
+A simple blueprint that creates a Lambda function which takes a single string. Its output is Hello, value, where value is the string that was passed in, or World if no string is passed to the function.
+Serverless Project Structure
+The serverless project wizard will create a new Eclipse project for you, consisting of the following parts:
+ The src directory contains two sub-directories, each prefaced with your chosen Package namespace:
+mynamespace.function
+Contains class files for the Lambda functions that are defined by your serverless template.
+mynamespace.model
+Contains generic ServerlessInput and ServerlessOutput classes that define the input and output model for your Lambda functions.
+For more information about the input and output formats used in the model classes, see the Configure Proxy Integration for a Proxy Resource page in the API Gateway Developer Guide.
+ The serverless.template file defines the AWS resources and Lambda functions (a resource of type “AWS::Serverless:Function”) used by your project.
+Deploying a Serverless Project
+To deploy your serverless project
+
+
+In Eclipse’s Project Explorer window, select your project and open the context menu (right-click or long press).
+
+
+Choose Amazon Web Services ‣ Deploy Serverless Project… on the context menu. This will bring up the Deploy Serverless to AWS CloudFormation dialog.
+
+
+Select the AWS Regions to use. This determines where the AWS CloudFormation stack that you deploy is located.
+
+
+Choose an S3 Bucket to use to store your Lambda function code, or select the Create button to create a new S3 bucket to store your code.
+
+
+Choose a name for your AWS CloudFormation stack.
+
+
+Press the Finish button to upload your Lambda functions to Amazon S3 and deploy your project template to AWS CloudFormation.
+
+
+
+When your project is deployed, a AWS CloudFormation stack detail window will appear that provides information about your deployment and its current status. It will initially show its status as CREATE_IN_PROGRESS. When the status is CREATE_COMPLETE, your deployment is active.
+To return to this window at any time, open the AWS Explorer, select the AWS CloudFormation node, and then select the name of the AWS CloudFormation stack you specified.
+Note
+If there was an error during deployment, your stack may be rolled back. See Troubleshooting in the AWS CloudFormation User Guide for information about how to diagnose stack deployment errors.
+See Also
+
+AWS Serverless Application Model (GitHub) 
+The AWS CloudFormation Template Editor 
+Using Lambda with the AWS Toolkit for Eclipse 

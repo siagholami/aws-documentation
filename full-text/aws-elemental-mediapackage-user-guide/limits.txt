@@ -1,0 +1,5 @@
+Quotas in AWS Elemental MediaPackage
+The following sections provide information about the quotas in AWS Elemental MediaPackage.
+Topics
+ Live Content Quotas
+ VOD Content Quotas

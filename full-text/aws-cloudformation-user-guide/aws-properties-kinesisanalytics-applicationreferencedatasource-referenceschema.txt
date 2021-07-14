@@ -1,0 +1,32 @@
+AWS::KinesisAnalytics::ApplicationReferenceDataSource ReferenceSchema
+The ReferenceSchema property type specifies the format of the data in the reference source for a SQL-based Amazon Kinesis Data Analytics application. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns)" : [ RecordColumn, ... ],
+  "[RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding)" : String,
+  "[RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat)" : RecordFormat
+}
+YAML
+[RecordColumns](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns): 
+    - RecordColumn
+  [RecordEncoding](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding): String
+  [RecordFormat](#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat): 
+    RecordFormat
+Properties
+RecordColumns 
+A list of RecordColumn objects.
+Required: Yes
+Type: List of RecordColumn
+Update requires: No interruption
+RecordEncoding 
+Specifies the encoding of the records in the reference source. For example, UTF-8.
+Required: No
+Type: String
+Update requires: No interruption
+RecordFormat 
+Specifies the format of the records on the reference source.
+Required: Yes
+Type: RecordFormat
+Update requires: No interruption

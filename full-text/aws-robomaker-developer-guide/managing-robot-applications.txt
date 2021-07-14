@@ -1,0 +1,10 @@
+Working with Robot Applications
+An AWS RoboMaker robot application includes one or more Amazon S3 locations with robot application bundles. The Amazon S3 resources include the ROS distribution used by the robot application. 
+Your robot application can be paired with a simulation application. This is called a simulation job. You can also deploy your application to physical robots.
+Topics
+ Creating a Robot Application
+ Creating a Robot Application Version
+ Viewing a Robot Application
+ Updating a Robot Application
+ Deleting a Robot Application
+ Deleting a Robot Application Version

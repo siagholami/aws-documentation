@@ -1,0 +1,97 @@
+Asset and model states
+When you create, update, or delete an asset or an asset model, the changes take time to propagate. AWS IoT SiteWise resolves these operations asynchronously and updates the status of each resource. Each asset and asset model has a status field that contains the state of the resource and any error message, if applicable. The state can be one of the following values:
+ ACTIVE – The asset or asset model is active. This is the only state in which you can query and interact with assets and asset models.
+ CREATING – The asset or asset model is being created.
+ UPDATING – The asset or asset model is being updated.
+ DELETING – The asset or asset model is being deleted.
+ PROPAGATING – (Asset models only) The asset model's changes are propagating to all of its assets.
+ FAILED – The asset or asset model failed to validate during a create or update operation, possibly due to a circular reference in an expression. You can delete assets and asset models that are in the FAILED state.
+Some of the create, update, and delete operations in AWS IoT SiteWise place an asset or asset model in a state other than ACTIVE while the operation resolves. If you need to query or interact with an asset or asset model after you perform one of these operations, you must wait until the state changes to ACTIVE. Otherwise, your requests fail.
+Topics
+ Checking the status of an asset
+ Checking the status of an asset model
+Checking the status of an asset
+You can use the AWS IoT SiteWise console or API to check the status of an asset.
+Topics
+ Checking the status of an asset (console)
+ Checking the status of an asset (CLI)
+Checking the status of an asset (console)
+Use the following procedure to check the status of an asset in the AWS IoT SiteWise console.
+To check the status of an asset (console)
+
+
+Navigate to the AWS IoT SiteWise console.
+
+
+In the navigation pane, choose Assets.
+
+
+Choose the asset to check.
+Tip 
+You can choose the arrow icon to expand an asset hierarchy to find your asset.  
+
+
+
+
+Find Status in the Asset details panel.
+
+
+Checking the status of an asset (CLI)
+You can use the AWS Command Line Interface (AWS CLI) to check the status of an asset.
+To check the status of an asset, use the DescribeAsset operation with the assetId parameter.
+To check the status of an asset (CLI)
+ Run the following command to describe the asset. Replace asset-id with the asset's ID.
+aws iotsitewise describe-asset --asset-id asset-id
+The operation returns a response that contains the asset's details. The response contains an assetStatus object that has the following structure.
+{
+    ...
+    "assetStatus": {
+      "state": "String",
+      "error": {
+         "code": "String",
+         "message": "String"
+      }
+    }
+  }
+The asset's state is in assetStatus.state in the JSON object.
+Checking the status of an asset model
+You can use the AWS IoT SiteWise console or API to check the status of an asset model.
+Topics
+ Checking the status of an asset model (console)
+ Checking the status of an asset model (CLI)
+Checking the status of an asset model (console)
+Use the following procedure to check the status of an asset model in the AWS IoT SiteWise console.
+To check the status of an asset model (console)
+
+
+Navigate to the AWS IoT SiteWise console.
+
+
+In the navigation pane, choose Models.
+
+
+Choose the asset model to check.
+
+
+Find Status in the Details panel.
+
+
+
+Checking the status of an asset model (CLI)
+You can use the AWS CLI to check the status of an asset model.
+To check the status of an asset model, use the DescribeAssetModel operation with the assetModelId parameter.
+To check the status of an asset model (CLI)
+ Run the following command to describe the asset model. Replace asset-model-id with the asset model's ID.
+aws iotsitewise describe-asset-model --asset-model-id asset-model-id
+The operation returns a response that contains the asset model's details. The response contains an assetModelStatus object that has the following structure.
+{
+    ...
+    "assetModelStatus": {
+      "state": "String",
+      "error": {
+         "code": "String",
+         "message": "String"
+      }
+    }
+  }
+The asset model's state is in assetModelStatus.state in the JSON object.

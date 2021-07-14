@@ -1,0 +1,20 @@
+Working with Pipelines
+You can administer, create, and modify pipelines using the AWS Data Pipeline console, an AWS SDK, or the command line interface (CLI). The following sections introduce fundamental AWS Data Pipeline concepts and show you how to work with pipelines.
+Important
+Before you begin, see Setting up for AWS Data Pipeline.
+Topics
+ Scheduling Pipelines
+ Creating a Pipeline
+ Viewing Your Pipelines
+ Editing Your Pipeline
+ Cloning Your Pipeline
+ Tagging Your Pipeline
+ Deactivating Your Pipeline
+ Deleting Your Pipeline
+ Staging Data and Tables with Pipeline Activities
+ Launching Resources for Your Pipeline into a VPC
+ Using Amazon EC2 Spot Instances in a Pipeline
+ Using a Pipeline with Resources in Multiple Regions
+ Cascading Failures and Reruns
+ Pipeline Definition File Syntax
+ Working with the API

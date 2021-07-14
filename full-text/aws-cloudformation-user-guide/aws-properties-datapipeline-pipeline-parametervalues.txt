@@ -1,0 +1,30 @@
+AWS::DataPipeline::Pipeline ParameterValue
+A value or list of parameter values.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Id](#cfn-datapipeline-pipeline-parametervalues-id)" : String,
+  "[StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue)" : String
+}
+YAML
+[Id](#cfn-datapipeline-pipeline-parametervalues-id): String
+  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue): 
+    String
+Properties
+Id 
+The ID of the parameter value.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 256
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*
+Update requires: No interruption
+StringValue 
+The field value, expressed as a String.
+Required: Yes
+Type: String
+Minimum: 0
+Maximum: 10240
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*
+Update requires: No interruption

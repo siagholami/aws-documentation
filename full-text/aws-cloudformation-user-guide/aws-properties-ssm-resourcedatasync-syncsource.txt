@@ -1,0 +1,41 @@
+AWS::SSM::ResourceDataSync SyncSource
+Information about the source of the data included in the resource data sync.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AwsOrganizationsSource](#cfn-ssm-resourcedatasync-syncsource-awsorganizationssource)" : AwsOrganizationsSource,
+  "[IncludeFutureRegions](#cfn-ssm-resourcedatasync-syncsource-includefutureregions)" : Boolean,
+  "[SourceRegions](#cfn-ssm-resourcedatasync-syncsource-sourceregions)" : [ String, ... ],
+  "[SourceType](#cfn-ssm-resourcedatasync-syncsource-sourcetype)" : String
+}
+YAML
+[AwsOrganizationsSource](#cfn-ssm-resourcedatasync-syncsource-awsorganizationssource): 
+    AwsOrganizationsSource
+  [IncludeFutureRegions](#cfn-ssm-resourcedatasync-syncsource-includefutureregions): Boolean
+  [SourceRegions](#cfn-ssm-resourcedatasync-syncsource-sourceregions): 
+    - String
+  [SourceType](#cfn-ssm-resourcedatasync-syncsource-sourcetype): String
+Properties
+AwsOrganizationsSource 
+Information about the AwsOrganizationsSource resource data sync source. A sync source of this type can synchronize data from AWS Organizations.
+Required: No
+Type: AwsOrganizationsSource
+Update requires: No interruption
+IncludeFutureRegions 
+Whether to automatically synchronize and aggregate data from new AWS Regions when those Regions come online.
+Required: No
+Type: Boolean
+Update requires: No interruption
+SourceRegions 
+The SyncSource AWS Regions included in the resource data sync.
+Required: Yes
+Type: List of String
+Update requires: No interruption
+SourceType 
+The type of data source for the resource data sync. SourceType is either AwsOrganizations (if an organization is present in AWS Organizations) or singleAccountMultiRegions.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Update requires: Replacement

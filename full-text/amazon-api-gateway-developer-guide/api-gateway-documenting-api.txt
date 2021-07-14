@@ -1,0 +1,11 @@
+Documenting REST APIs
+To help customers understand and use your API, you should document the API. To help you document your API, API Gateway lets you add and update the help content for individual API entities as an integral part of your API development process. API Gateway stores the source content and enables you to archive different versions of the documentation. You can associate a documentation version with an API stage, export a stage-specific documentation snapshot to an external OpenAPI file, and distribute the file as a publication of the documentation. 
+To document your API, you can call the API Gateway REST API, use one of the AWS SDKs or AWS CLIs for API Gateway, or use the API Gateway console. In addition, you can import or export the documentation parts that are defined in an external OpenAPI file. Before explaining how to document your API, we show how API documentation is represented in API Gateway.
+Topics
+ Representation of API documentation in API Gateway
+ Document an API using the API Gateway console
+ Publish API documentation using the API Gateway console
+ Document an API using the API Gateway REST API
+ Publish API documentation using the API Gateway REST API
+ Import API documentation
+ Control access to API documentation

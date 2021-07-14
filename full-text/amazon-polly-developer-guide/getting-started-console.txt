@@ -1,0 +1,84 @@
+Step 2: Getting Started Using the Console
+The Amazon Polly console is the easiest way to get started testing and using Amazon Polly's speech synthesizing. The Amazon Polly console supports synthesizing speech from either plain text or SSML input.
+
+Exercise 1: Synthesizing Speech Quick Start (Console)
+Exercise 2: Synthesizing Speech (Plain Text Input)
+Next Step
+
+Exercise 1: Synthesizing Speech Quick Start (Console)
+The Quick Start walks you through the fastest way to test the Amazon Polly speech synthesis for speech quality. When you select the Text-to-Speech tab, the text field for entering your text is pre-loaded with example text so you can quickly try out Amazon Polly.
+To quickly test Amazon Polly
+
+
+Sign in to the AWS Management Console and open the Amazon Polly console at https://console.aws.amazon.com/polly/.
+
+
+Choose the Text-to-Speech tab.
+
+
+(Optional) Choose SSML.
+
+
+Choose a language and region, then choose a voice.
+
+
+Choose Listen to speech.
+
+
+For more in-depth testing, see the following topics:
+
+
+Exercise 2: Synthesizing Speech (Plain Text Input)
+
+
+Using SSML with the Amazon Polly Console
+
+
+Applying Lexicons Using the Console (Synthesize Speech)
+
+
+Exercise 2: Synthesizing Speech (Plain Text Input)
+The following procedure synthesizes speech using plain text input. Note how "W3C" and the date "10/3" (October 3rd) are synthesized.
+To synthesize speech using plain text input
+
+
+After logging on to the Amazon Polly console, choose Get started, and then choose the Text-to-Speech tab. 
+
+
+Choose the Plain text tab.
+
+
+Type or paste this text into the input box.
+
+
+He was caught up in the game. 
+   In the middle of the 10/3/2014 W3C meeting
+   he shouted, "Score!" quite loudly.
+
+
+For Choose a language and region, choose English US, then choose the voice you want to use for this text.
+
+
+To listen to the speech immediately, choose Listen to speech.
+
+
+To save the speech to a file, do one of the following:
+
+
+Choose Save speech to MP3.
+
+
+To change to a different file format, choose Change file format, choose the file format you want, and then choose Change.
+
+
+For more in-depth examples, see the following topics:
+
+
+Applying Lexicons Using the Console (Synthesize Speech)
+
+
+Using SSML with the Amazon Polly Console
+
+
+Next Step
+Step 3: Getting Started Using the AWS CLI

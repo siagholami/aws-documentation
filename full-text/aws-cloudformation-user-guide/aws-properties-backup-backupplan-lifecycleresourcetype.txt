@@ -1,0 +1,23 @@
+AWS::Backup::BackupPlan LifecycleResourceType
+Specifies an object containing an array of Transition objects that determine how long in days before a recovery point transitions to cold storage or is deleted. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeleteAfterDays](#cfn-backup-backupplan-lifecycleresourcetype-deleteafterdays)" : Double,
+  "[MoveToColdStorageAfterDays](#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays)" : Double
+}
+YAML
+[DeleteAfterDays](#cfn-backup-backupplan-lifecycleresourcetype-deleteafterdays): Double
+  [MoveToColdStorageAfterDays](#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays): Double
+Properties
+DeleteAfterDays 
+Specifies the number of days after creation that a recovery point is deleted. Must be greater than MoveToColdStorageAfterDays.
+Required: No
+Type: Double
+Update requires: No interruption
+MoveToColdStorageAfterDays 
+Specifies the number of days after creation that a recovery point is moved to cold storage.
+Required: No
+Type: Double
+Update requires: No interruption

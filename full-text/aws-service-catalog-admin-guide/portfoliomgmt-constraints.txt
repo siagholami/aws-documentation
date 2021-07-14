@@ -1,0 +1,46 @@
+Adding Constraints
+To control how users are able to use products, add constraints. For more information about the types of constraints that AWS Service Catalog supports, see Using AWS Service Catalog Constraints. 
+You add constraints to products after they have been placed in a portfolio.
+To add a constraint to a product
+
+
+Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/.
+
+
+Choose Portfolios and select a portfolio. 
+
+
+In the portfolio details page, expand the Constraints section and choose Add constraints. 
+
+
+For Product, select the product to which to apply the constraint.
+
+
+For Constraint type, choose one of the following options:
+    Launch – The IAM role that AWS Service Catalog uses to launch and manage the product. For more information, see AWS Service Catalog Launch Constraints.
+    Notification – The Amazon SNS topic specified to receive notifications. For more information, see AWS Service Catalog Notification Constraints.
+    Template – A JSON–formatted text file that contains one or more rules. Rules are added to the AWS CloudFormation template used by the product. For more information, see Template Constraint Rules.
+    Stack Set – Uses AWS CloudFormation StackSets to specify multiple accounts and regions for the AWS Service Catalog product launch. For more information, see AWS Service Catalog Stack Set Constraints.
+    Tag Update – Allows you to update tags after the product has been provisioned. For more information, see AWS Service Catalog Tag Update Constraints.
+
+
+Choose Continue.
+
+
+To edit a constraint
+
+
+Sign in to the AWS Management Console and open the AWS Service Catalog administrator console at https://console.aws.amazon.com/catalog/.
+
+
+Choose Portfolios and select a portfolio. 
+
+
+In the portfolio details page, expand the Constraints section and select the constraint to edit.
+
+
+Choose Edit constraints.
+
+
+Edit the constraint as needed, and choose Submit.
+

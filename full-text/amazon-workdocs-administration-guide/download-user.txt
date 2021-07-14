@@ -1,0 +1,23 @@
+Downloading user list
+To download a list of users from the Admin control panel, you must install Amazon WorkDocs Companion. To install Amazon WorkDocs Companion, see Apps & Integrations for Amazon WorkDocs.
+To download a list of users
+
+
+From the admin control panel, under Manage Users, choose Download user.
+
+
+For Download user, choose one of the following options to export a list of users as a .json file to your desktop:
+    All users
+    Guest user
+    WS user
+    User
+    Power user
+    Admin
+
+
+The file is saved in one of the following locations:
+    Windows – WorkDocsDownloads folder in your PC's Downloads folder
+    macOS – /users/username/WorkDocsDownloads/folder
+
+
+For more information about these user roles, see User roles overview.

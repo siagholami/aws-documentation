@@ -1,0 +1,29 @@
+Accessing Training Results (Console)
+You can use the Amazon Rekognition Custom Labels console to see training results for a model.
+To access training results (console)
+
+
+Open the Amazon Rekognition console at https://console.aws.amazon.com/rekognition/.
+
+
+Choose Use Custom Labels.
+
+
+Choose Get started. 
+
+
+In the left navigation pane, choose Projects.
+
+
+On the Projects resources page, choose the project that contains the trained model you want to evaluate.
+
+
+In the Model section, choose the model for which you want to see training results. The evaluation summary results are shown. 
+
+
+
+Choose View test results to see the test results for individual images. A series of tips is shown before the test results are shown. For more information about image test results, see Metrics for Evaluating Your Model.
+
+
+Use the metrics to evaluate the performance of the model. For more information, see Improving an Amazon Rekognition Custom Labels Model.
+

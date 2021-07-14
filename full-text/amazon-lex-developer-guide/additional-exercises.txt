@@ -1,0 +1,9 @@
+Additional Examples: Creating Amazon Lex Bots
+The following sections provide additional Amazon Lex exercises with step-by-step instructions.
+Topics
+ Example: ScheduleAppointment
+ Example: BookTrip
+ Example: Using a Response Card
+ Example: Updating Utterances
+ Example: Integrating with a Web site
+ Example Bot: Call Center Agent Assistant

@@ -1,0 +1,29 @@
+AWS::ECS::TaskDefinition FirelensConfiguration
+The FireLens configuration for the container. This is used to specify and configure a log router for container logs. For more information, see Custom Log Routing in the Amazon Elastic Container Service Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key : Value, ...},
+  "[Type](#cfn-ecs-taskdefinition-firelensconfiguration-type)" : String
+}
+YAML
+[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options): 
+    Key : Value
+  [Type](#cfn-ecs-taskdefinition-firelensconfiguration-type): String
+Properties
+Options 
+The options to use when configuring the log router. This field is optional and can be used to add additional metadata, such as the task, task definition, cluster, and container instance details to the log event.
+ If specified, valid option keys are:
+ enable-ecs-log-metadata, which can be true or false
+ config-file-type, which can be s3 or file
+ config-file-value, which is either an S3 ARN or a file path
+Required: No
+Type: Map of String
+Update requires: Replacement
+Type 
+The log router to use. The valid values are fluentd or fluentbit.
+Required: No
+Type: String
+Allowed values: fluentbit | fluentd
+Update requires: Replacement

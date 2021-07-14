@@ -1,0 +1,60 @@
+AWS::Route53Resolver::ResolverRuleAssociation
+In the response to an AssociateResolverRule, DisassociateResolverRule, or ListResolverRuleAssociations request, provides information about an association between a resolver rule and a VPC. The association determines which DNS queries that originate in the VPC are forwarded to your network. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Route53Resolver::ResolverRuleAssociation",
+  "Properties" : {
+      "[Name](#cfn-route53resolver-resolverruleassociation-name)" : String,
+      "[ResolverRuleId](#cfn-route53resolver-resolverruleassociation-resolverruleid)" : String,
+      "[VPCId](#cfn-route53resolver-resolverruleassociation-vpcid)" : String
+    }
+}
+YAML
+Type: AWS::Route53Resolver::ResolverRuleAssociation
+Properties: 
+  [Name](#cfn-route53resolver-resolverruleassociation-name): String
+  [ResolverRuleId](#cfn-route53resolver-resolverruleassociation-resolverruleid): String
+  [VPCId](#cfn-route53resolver-resolverruleassociation-vpcid): String
+Properties
+Name 
+The name of an association between a Resolver rule and a VPC.
+Required: No
+Type: String
+Maximum: 64
+Pattern: (?!^[0-9]$)([a-zA-Z0-9\-_' '])
+Update requires: Replacement
+ResolverRuleId 
+The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Update requires: Replacement
+VPCId 
+The ID of the VPC that you associated the Resolver rule with.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ResolverRuleAssociationId.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Name 
+The name of an association between a resolver rule and a VPC, such as test.example.com in beta VPC.
+ResolverRuleAssociationId 
+The ID of the resolver rule association that you want to get information about, such as rslvr-rrassoc-97242eaf88example.
+ResolverRuleId 
+The ID of the resolver rule that you associated with the VPC that is specified by VPCId, such as rslvr-rr-5328a0899example.
+VPCId 
+The ID of the VPC that you associated the resolver rule with, such as vpc-03cf94c75cexample.
+See also
+
+ResolverRuleAssociation in the Amazon Route 53 API Reference 

@@ -1,0 +1,29 @@
+Step 1: Create an ElastiCache Redis Cluster
+You must first create an Amazon ElastiCache Redis cluster by using the ElastiCache console, API, or CLI. The following describes how to use the console to create a cluster.
+To create an ElastiCache Redis cluster
+
+
+Go to the ElastiCache console and click Launch Cache Cluster to start the Cache Cluster wizard.
+
+
+On the Cache Cluster Details page, do the following:
+    Set Name to your cache server name.
+This example uses OpsWorks-Redis.
+    Set Engine to redis.
+    Set Topic for SNS Notification to Disable Notifications.
+    Accept the defaults for the other settings and click Continue.
+
+
+
+On the Additional Configuration page, accept the defaults and click Continue.
+
+
+
+Click Launch Cache Cluster to create the cluster.
+Important
+The default cache security group is sufficient for this example, but for production use you should create one that is appropriate for your environment. For more information, see Managing Cache Security Groups.
+
+
+After the cluster has started, click the name to open the details page and click the Nodes tab. Record the cluster's Port and Endpoint values for later use.
+
+

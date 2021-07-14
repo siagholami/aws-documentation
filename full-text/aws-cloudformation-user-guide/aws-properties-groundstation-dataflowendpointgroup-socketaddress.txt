@@ -1,0 +1,37 @@
+AWS::GroundStation::DataflowEndpointGroup SocketAddress
+The address of the endpoint, such as 192.168.1.1. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-groundstation-dataflowendpointgroup-socketaddress-name)" : String,
+  "[Port](#cfn-groundstation-dataflowendpointgroup-socketaddress-port)" : Integer
+}
+YAML
+[Name](#cfn-groundstation-dataflowendpointgroup-socketaddress-name): String
+  [Port](#cfn-groundstation-dataflowendpointgroup-socketaddress-port): Integer
+Properties
+Name 
+The name of the endpoint, such as Endpoint 1. 
+Required: No
+Type: String
+Update requires: No interruption
+Port 
+The port of the endpoint, such as 55888. 
+Required: No
+Type: Integer
+Update requires: No interruption
+Examples
+Create a SocketAddress
+The following example creates a Ground Station SocketAddress
+JSON
+{
+  "Address": {
+    "Name": "172.10.0.2",
+    "Port": 44720
+  }
+}
+YAML
+Address:
+  Name: 172.10.0.2
+  Port: 44720

@@ -1,0 +1,19 @@
+Create a Signaling Channel
+You can use the Kinesis Video Streams console, the AWS APIs (CreateSignalingChannel), or the AWS CLI to create your signaling channels.
+Create a Signaling Channel Using the Console
+
+
+Sign in to the AWS Management Console and open the Amazon Kinesis Video Streams console at https://console.aws.amazon.com/kinesisvideo.
+
+
+On the Signaling channels page, choose Create signaling channel.
+
+
+On the Create a new signaling channel page, type in the name for the signaling channel. Leave the default Time-to-live (Ttl) value of 60 seconds unchanged. 
+
+
+Choose Create signaling channel.
+
+
+After the signaling channel is created, review its details on the channel's details page.
+

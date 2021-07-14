@@ -1,0 +1,37 @@
+Creating security groups
+Note
+The following section is specific to Amazon EC2 and discusses how to create security groups so you can use Secure Shell (SSH) to connect to any instances that have mounted Amazon EFS file systems. If you're not using SSH to connect to your Amazon EC2 instances, you can skip this section. 
+Both an Amazon EC2 instance and a mount target have associated security groups. These security groups act as a virtual firewall that controls the traffic between them. If you don't provide a security group when creating a mount target, Amazon EFS associates the default security group of the VPC with it.
+Regardless, to enable traffic between an EC2 instance and a mount target (and thus the file system), you must configure the following rules in these security groups:
+ The security groups you associate with a mount target must allow inbound access for the TCP protocol on the NFS port from all EC2 instances on which you want to mount the file system.
+ Each EC2 instance that mounts the file system must have a security group that allows outbound access to the mount target on the NFS port. 
+For more information about security groups, see Amazon EC2 Security Groups in the Amazon EC2 User Guide for Linux Instances. 
+Creating security groups using the AWS Management Console
+You can use the AWS Management Console to create security groups in your VPC. To connect your Amazon EFS file system to your Amazon EC2 instance, you must create two security groups: one for your Amazon EC2 instance and another for your Amazon EFS mount target.
+
+
+Create two security groups in your VPC. For instructions, see Creating a Security Group in the Amazon VPC User Guide.
+
+
+In the VPC console, verify the default rules for these security groups. Both security groups should have only an outbound rule that allows traffic to leave.
+
+
+You need to authorize additional access to the security groups as follows:
+
+
+Add a rule to the EC2 security group to allow SSH access to the instance on port 22 as shown following. This is useful if you're planning on using an SSH client like PuTTY to connect to and administer your EC2 instance through a terminal interface. Optionally, you can restrict the Source address. 
+
+For instructions, see Adding, removing, and updating rules in the Amazon VPC User Guide.
+
+
+Add a rule to the mount target security group to allow inbound access from the EC2 security group, as shown following (where the EC2 security group is identified as the source).
+
+Note
+You don't need to add an outbound rule because the default outbound rule allows all traffic to leave (otherwise, you will need to add an outbound rule to open TCP connection on the NFS port, identifying the mount target security group as the destination).
+
+
+Verify that both security groups now authorize inbound and outbound access as described in this section.
+
+
+Creating security groups using the AWS CLI
+For an example that shows how to create security groups using the AWS CLI, see Step 1: Create Amazon EC2 Resources.

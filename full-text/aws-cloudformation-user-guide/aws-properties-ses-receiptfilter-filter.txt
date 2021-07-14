@@ -1,0 +1,27 @@
+AWS::SES::ReceiptFilter Filter
+A data structure that describes the IP address filter that you want to specify. This structure consists of a name, an IP address range, and whether to allow or block mail from it.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter)" : IpFilter,
+  "[Name](#cfn-ses-receiptfilter-filter-name)" : String
+}
+YAML
+[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter): 
+    IpFilter
+  [Name](#cfn-ses-receiptfilter-filter-name): String
+Properties
+IpFilter 
+A structure that provides the IP addresses to block or allow, and whether to block or allow incoming mail from them.
+Required: Yes
+Type: IpFilter
+Update requires: No interruption
+Name 
+The name of the IP address filter. The name must:
+ Only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).
+ Start and end with a letter or number.
+ Contain 64 characters or fewer.
+Required: No
+Type: String
+Update requires: No interruption

@@ -1,0 +1,86 @@
+Enable Color Correction
+Sets color correction parameters. You can use this node to specify the CMYK, brightness, contrast, saturation, and hue in a scene. Most color correction properties aren't updated smoothly, so it's recommended that you hide stronger color correction changes with cuts or fading between scenes.
+You can also apply color correction in the Track View. See Color Correction Node.
+To disable the effect, see Disable Color Correction.
+Contents
+ Inputs
+ Outputs
+
+Example
+In the following example, the Saturation value is 2.0.  
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Cyan
+Number
+Adjusts cyan to enhance the color of the scene.
+
+
+Magenta
+Number
+Adjusts magenta to enhance color of the scene.
+
+
+Yellow
+Number
+Adjusts yellow to enhance color of the scene.
+
+
+Luminance
+Number
+Adjusts luminance to enhance the color of the scene.
+
+
+Brightness
+Number
+Adjusts brightness to enhance light and darkness of the scene.
+
+
+Contrast
+Number
+Adjusts contrast to enhance the bias of highlights and shadows of the scene.
+
+
+Saturation
+Number
+Adjusts saturation to enhance the color intensity of the scene.
+
+
+Hue
+Number
+Adjusts hue to enhance the color globally.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

@@ -1,0 +1,13 @@
+AWS WAF Regional resource type reference
+Resource types
+ AWS::WAFRegional::ByteMatchSet
+ AWS::WAFRegional::GeoMatchSet
+ AWS::WAFRegional::IPSet
+ AWS::WAFRegional::RateBasedRule
+ AWS::WAFRegional::RegexPatternSet
+ AWS::WAFRegional::Rule
+ AWS::WAFRegional::SizeConstraintSet
+ AWS::WAFRegional::SqlInjectionMatchSet
+ AWS::WAFRegional::WebACL
+ AWS::WAFRegional::WebACLAssociation
+ AWS::WAFRegional::XssMatchSet

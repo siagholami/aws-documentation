@@ -1,0 +1,379 @@
+Icelandic (is-IS)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Icelandic voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+b
+b
+voiced bilabial plosive
+grasbakkanum
+0
+
+
+c
+c
+voiceless palatal plosive
+pakkin
+k
+
+
+cʰ
+c_h
+aspirated voiceless palatal plosive
+anarkistai
+k
+
+
+ç
+C
+voiceless palatal fricative
+héðan
+k
+
+
+d
+d
+voiced alveolar plosive
+bóndi
+t
+
+
+ð
+D
+voiced dental fricative
+borð
+T
+
+
+f
+f
+voiceless labiodental fricative
+duft
+f
+
+
+g
+g
+voiced velar plosive
+holgóma
+k
+
+
+ɣ
+G
+voiced velar fricative
+hugur
+k
+
+
+h
+h
+voiceless glottal fricative
+heili
+k
+
+
+j
+j
+palatal approximant
+jökull
+i
+
+
+kʰ
+k_h
+aspirated voiceless velar plosive
+ósköpunum
+k
+
+
+l
+l
+alveolar lateral approximant
+gólf
+t
+
+
+l̥
+l_0
+voiceless alveolar lateral approximant
+fólk
+t
+
+
+m
+m
+bilabial nasal
+september
+p
+
+
+m̥
+m_0
+voiceless bilabial nasal
+kompa
+p
+
+
+n
+n
+alveolar nasal
+númer
+t
+
+
+n̥
+n_0
+voiceless alveolar nasal
+pöntun
+t
+
+
+ɲ
+J
+palatal nasal
+pælingar
+J
+
+
+ŋ
+N
+velar nasal
+söngvarann
+k
+
+
+ŋ̊
+N_0
+voiceless velar nasal
+frænka
+k
+
+
+pʰ
+p_h
+aspirated voiceless bilabial plosive
+afplánun
+p
+
+
+r
+r
+alveolar trill
+afskrifta
+r
+
+
+r̥
+r_0
+voiceless alveolar trill
+andvörpum
+r
+
+
+s
+s
+voiceless alveolar fricative
+baðhús
+s
+
+
+tʰ
+t_h
+aspirated voiceless alveolar plosive
+tanki
+t
+
+
+θ
+T
+voiceless dental fricative
+þeldökki
+T
+
+
+v
+v
+voiced labiodental fricative
+silfur
+f
+
+
+w
+w
+labial-velar approximant
+
+u
+
+
+x
+x
+voiceless velar fricative
+samfélags
+k
+
+
+Vowels
+
+
+
+
+
+
+œ
+9
+open-mid front rounded vowel
+þröskuldinum
+O
+
+
+œː
+9:
+long open-mid front rounded vowel
+tvö
+O
+
+
+a
+a
+open front unrounded vowel
+nefna
+a
+
+
+a:
+a:
+long open front unrounded vowel
+fara
+a
+
+
+au
+au
+diphthong
+átta
+a
+
+
+au:
+au:
+diphthong
+átján
+a
+
+
+ɛ
+E
+open-mid front unrounded vowel
+kennari
+E
+
+
+ɛ:
+E:
+long open-mid front unrounded vowel
+dreka
+E
+
+
+i
+i
+close front unrounded vowel
+Gúlíver
+i
+
+
+i:
+i:
+long close front unrounded vowel
+þrír
+i
+
+
+ɪ
+I
+near-close near-front unrounded vowel
+samspil
+i
+
+
+ɪ:
+I:
+long near-close near-front unrounded vowel
+stig
+i
+
+
+ɔ
+O
+open-mid back rounded vowel
+regndropar
+O
+
+
+ɔ:
+O:
+long open-mid back rounded vowel
+ullarbolur
+O
+
+
+ɔu
+Ou
+diphthong
+tólf
+O
+
+
+ɔu:
+Ou:
+diphthong
+fjórir
+O
+
+
+u
+u
+close back rounded vowel
+stúlkan
+u
+
+
+u:
+u:
+long close back rounded vowel
+frú
+u
+
+
+ʏ
+Y
+near-close near-front rounded vowel
+tíu
+u
+
+
+ʏ:
+Y
+long near-close near-front rounded vowel
+gruninn
+u
+
+

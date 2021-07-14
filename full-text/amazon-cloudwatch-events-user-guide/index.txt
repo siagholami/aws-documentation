@@ -1,0 +1,56 @@
+Amazon CloudWatch Events User Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon CloudWatch Events?
+Setting Up Amazon CloudWatch Events
+Getting Started with Amazon CloudWatch Events
+Creating a CloudWatch Events Rule That Triggers on an Event
+Creating a CloudWatch Events Rule That Triggers on an AWS API Call Using AWS CloudTrail
+Creating a CloudWatch Events Rule That Triggers on a Schedule
+Deleting or Disabling a CloudWatch Events Rule
+CloudWatch Events Tutorials
+Tutorial: Use CloudWatch Events to Relay Events to Amazon EC2 Run Command
+Tutorial: Log the State of an Amazon EC2 Instance Using CloudWatch Events
+Tutorial: Log the State of an Auto Scaling Group Using CloudWatch Events
+Tutorial: Log Amazon S3 Object-Level Operations Using CloudWatch Events
+Tutorial: Use Input Transformer to Customize What is Passed to the Event Target
+Tutorial: Log AWS API Calls Using CloudWatch Events
+Tutorial: Schedule Automated Amazon EBS Snapshots Using CloudWatch Events
+Tutorial: Schedule AWS Lambda Functions Using CloudWatch Events
+Tutorial: Set AWS Systems Manager Automation as a CloudWatch Events Target
+Tutorial: Relay Events to an Amazon Kinesis Stream Using CloudWatch Events
+Tutorial: Run an Amazon ECS Task When a File is Uploaded to an Amazon S3 Bucket
+Tutorial: Schedule Automated Builds Using CodeBuild
+Tutorial: Log State Changes of Amazon EC2 Instances
+Schedule Expressions for Rules
+Event Patterns in CloudWatch Events
+CloudWatch Events Event Examples From Supported Services
+Sending and Receiving Events Between AWS Accounts
+Adding Events with PutEvents
+Calculating PutEvents Event Entry Sizes
+Using CloudWatch Events with Interface VPC Endpoints
+Monitoring Usage with CloudWatch Metrics
+Amazon CloudWatch Events Managed Rules
+Authentication and Access Control for Amazon CloudWatch Events
+Overview of Managing Access Permissions to Your CloudWatch Events Resources
+Using Identity-Based Policies (IAM Policies) for CloudWatch Events
+Using Resource-Based Policies for CloudWatch Events
+CloudWatch Events Permissions Reference
+Using IAM Policy Conditions for Fine-Grained Access Control
+Tagging Your Amazon CloudWatch Events Resources
+Logging Amazon CloudWatch Events API Calls with AWS CloudTrail
+CloudWatch Events Limits
+Troubleshooting CloudWatch Events
+Document History
+AWS Glossary

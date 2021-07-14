@@ -1,0 +1,12 @@
+Step 1: Sign up for AWS
+To use AWS Elemental MediaConvert, you need an AWS account. If you don't already have an account, you are prompted to create one when you sign up. You aren't charged for any AWS services that you sign up for unless you use them.
+To sign up for AWS
+
+
+Open https://portal.aws.amazon.com/billing/signup.
+
+
+Follow the online instructions.
+
+
+Part of the sign-up procedure involves receiving a phone call and entering a verification code on the phone keypad.

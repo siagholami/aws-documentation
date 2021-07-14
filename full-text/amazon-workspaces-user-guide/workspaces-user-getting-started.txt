@@ -1,0 +1,88 @@
+Getting Started with Your WorkSpace
+After your administrator creates your WorkSpace, you receive an invitation email. Complete the following tasks to get started with your WorkSpace.
+Topics
+ Complete Your User Profile
+ Choose a Client
+ Determine Your Client Version
+ Verify Networking Requirements
+ (Optional) Access the Applications Assigned to You
+ (Optional) Integrate with WorkDocs
+Complete Your User Profile
+After your administrator creates your WorkSpace, you must complete your user profile within seven days; otherwise, your invitation expires. If your invitation expires, ask your administrator for another invitation.
+To complete your user profile
+
+
+Open the link in the invitation email.
+
+
+Enter your password. Passwords are case-sensitive and must be between 8 and 64 characters in length, inclusive. Passwords must contain at least one character from three of the following categories:
+    Lowercase characters (a-z)
+    Uppercase characters (A-Z)
+    Numbers (0-9)
+    Non-alphanumeric characters (\~!@#$%^&*_-=`|\(){}[]:;"'<>,.?/)
+
+
+Choose Update User.
+
+
+You can change your WorkSpaces password anytime. For more information, see Change Your Password.
+Choose a Client
+You can connect to your WorkSpace using the client application for a supported device or a web browser. To run the Amazon WorkSpaces client application, you must have a Windows or Linux PC, Mac, iPad, Kindle, Chromebook, or Android tablet or phone. To run Amazon WorkSpaces Web Access, you must have a Windows PC or a Mac running a Chrome or Firefox web browser, or a Linux PC running a Firefox browser.
+For information about connecting to your WorkSpace, see the following client documentation.
+ Android Client Application
+ iPad Client Application
+ Linux Client Application
+ macOS Client Application
+ PCoIP Zero Client
+ Web Access
+ Windows Client Application
+Determine Your Client Version
+To see which version of the WorkSpaces client you have, choose Amazon WorkSpaces, About Amazon WorkSpaces, or click the gear icon in the upper-right corner and choose About Amazon WorkSpaces.
+Verify Networking Requirements
+To ensure a good experience with your WorkSpace, verify that your client device meets the networking requirements.
+To verify networking requirements for 3.0 clients
+
+
+Open your Amazon WorkSpaces client. If this is the first time you have opened the client, you are prompted to enter the registration code that you received in the invitation email.
+
+
+Depending on which client you're using, do one of the following.  
+[See the AWS documentation website for more details]
+
+
+The client application tests the network connection, ports, and round-trip time, and reports the results of these tests.
+
+Close the Network dialog box to return to the sign-in page.
+
+To verify networking requirements for 1.0 and 2.0 clients
+
+
+Open your Amazon WorkSpaces client. If this is the first time you have opened the client, you are prompted to enter the registration code that you received in the invitation email.
+
+
+Choose Network in the lower-right corner of the client application. The client application tests the network connection, ports, and round-trip time, and reports the results of these tests.
+
+
+Choose Dismiss to return to the sign-in page.
+
+
+(Optional) Access the Applications Assigned to You
+You use the Amazon WorkSpaces Application Manager client application on your Windows WorkSpace to install and access the applications that your Amazon WorkSpaces administrator has assigned to you.
+To install and start assigned applications
+
+To start the Amazon WorkSpaces Application Manager client application, choose the Amazon WAM shortcut on the desktop of your Windows WorkSpace.
+
+If the shortcut is not available, see Troubleshooting Amazon WAM Issues in the Amazon WAM User Guide.
+
+
+To find applications that have been assigned to you but have not been installed, choose DISCOVER.
+
+
+To install an application, choose the triangle (install).
+
+
+You can start your Amazon WAM applications by using the Amazon WorkSpaces Application Manager client application or the Windows Start menu. For more information, see Getting Started in the Amazon WAM User Guide.
+
+
+(Optional) Integrate with WorkDocs
+If your Amazon WorkSpaces administrator has enabled it, you can integrate your WorkSpace with Amazon WorkDocs. Amazon WorkDocs Drive enables you to stream your Amazon WorkDocs files to your WorkSpace on demand. You can easily access any file on Amazon WorkDocs without needing to keep a local copy. For more information, see Amazon WorkDocs Drive in the Amazon WorkDocs Administration Guide.

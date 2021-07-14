@@ -1,0 +1,153 @@
+AWS::RoboMaker::SimulationApplication
+The AWS::RoboMaker::SimulationApplication resource creates an AWS RoboMaker simulation application.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::RoboMaker::SimulationApplication",
+  "Properties" : {
+      "[CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid)" : String,
+      "[Name](#cfn-robomaker-simulationapplication-name)" : String,
+      "[RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine)" : RenderingEngine,
+      "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
+      "[SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite)" : SimulationSoftwareSuite,
+      "[Sources](#cfn-robomaker-simulationapplication-sources)" : [ SourceConfig, ... ],
+      "[Tags](#cfn-robomaker-simulationapplication-tags)" : Json
+    }
+}
+YAML
+Type: AWS::RoboMaker::SimulationApplication
+Properties: 
+  [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid): String
+  [Name](#cfn-robomaker-simulationapplication-name): String
+  [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine): 
+    RenderingEngine
+  [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite): 
+    RobotSoftwareSuite
+  [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite): 
+    SimulationSoftwareSuite
+  [Sources](#cfn-robomaker-simulationapplication-sources): 
+    - SourceConfig
+  [Tags](#cfn-robomaker-simulationapplication-tags): Json
+Properties
+CurrentRevisionId 
+The current revision id.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of the simulation application.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 255
+Pattern: [a-zA-Z0-9_\-]*
+Update requires: Replacement
+RenderingEngine 
+The rendering engine for the simulation application.
+Required: Yes
+Type: RenderingEngine
+Update requires: Replacement
+RobotSoftwareSuite 
+The robot software suite (ROS distribution) used by the simulation application.
+Required: Yes
+Type: RobotSoftwareSuite
+Update requires: Replacement
+SimulationSoftwareSuite 
+The simulation software suite used by the simulation application.
+Required: Yes
+Type: SimulationSoftwareSuite
+Update requires: Replacement
+Sources 
+The sources of the simulation application.
+Required: Yes
+Type: List of SourceConfig
+Update requires: No interruption
+Tags 
+A map that contains tag keys and tag values that are attached to the simulation application.
+Required: No
+Type: Json
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of an AWS::RoboMaker::SimulationApplication resource to the intrinsic Ref function, the function returns the Amazon Resource Name (ARN) of the simulation application, such as arn:aws:robomaker:us-west-2:123456789012:simulation-application/MySimulationApplication/1546541201334. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the simulation application.
+CurrentRevisionId 
+The current revision id.
+Examples
+Create an AWS RoboMaker Simulation Application
+The following example creates a simulation application.
+JSON
+{
+  "Description": "RoboMaker SimulationApplication example",
+  "Resources": {
+    "BasicSimulationApplication": {
+      "Type": "AWS::RoboMaker::SimulationApplication",
+      "Properties": {
+        "Name": "MySimulationApplication",
+        "Sources": [
+          {
+            "S3Bucket": "my-bucket",
+            "S3Key": "robot_bundle_x86.tar.gz",
+            "Architecture": "X86_64"
+          }
+        ],
+        "RobotSoftwareSuite": {
+          "Name": "ROS",
+          "Version": "Kinetic"
+        },
+        "SimulationSoftwareSuite": {
+          "Name": "Gazebo",
+          "Version": "7"
+        },
+        "RenderingEngine": {
+          "Name": "OGRE",
+          "Version": "1.x"
+        },
+        "Tags": {
+          "Name": "BasicSimulationApplication",
+          "Type": "CFN"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "SimulationApplication": {
+      "Value": "BasicSimulationApplication"
+    }
+  }
+}
+YAML
+```
+Description: "RoboMaker SimulationApplication example"
+Resources:
+  BasicSimulationApplication:
+    Type: "AWS::RoboMaker::SimulationApplication"
+    Properties:
+      Name: "MySimulationApplication"
+      Sources:
+        - S3Bucket: "my-bucket"
+          S3Key: "robot_bundle_x86.tar.gz"
+          Architecture: "X86_64"
+      RobotSoftwareSuite:
+        Name: "ROS"
+        Version: "Kinetic"
+      SimulationSoftwareSuite:
+        Name: "Gazebo"
+        Version: "7"
+      RenderingEngine:
+        Name: "OGRE"
+        Version: "1.x"
+      Tags:
+        "Name" : "BasicSimulationApplication"
+        "Type" : "CFN"
+Outputs:
+  SimulationApplication:
+    Value: !Ref BasicSimulationApplication
+```

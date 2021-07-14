@@ -1,0 +1,30 @@
+AWS::Cognito::IdentityPool CognitoStreams
+CognitoStreams is a property of the AWS::Cognito::IdentityPool resource that defines configuration options for Amazon Cognito streams.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[RoleArn](#cfn-cognito-identitypool-cognitostreams-rolearn)" : String,
+  "[StreamingStatus](#cfn-cognito-identitypool-cognitostreams-streamingstatus)" : String,
+  "[StreamName](#cfn-cognito-identitypool-cognitostreams-streamname)" : String
+}
+YAML
+[RoleArn](#cfn-cognito-identitypool-cognitostreams-rolearn): String
+  [StreamingStatus](#cfn-cognito-identitypool-cognitostreams-streamingstatus): String
+  [StreamName](#cfn-cognito-identitypool-cognitostreams-streamname): String
+Properties
+RoleArn 
+The Amazon Resource Name (ARN) of the role Amazon Cognito can assume to publish to the stream. This role must grant access to Amazon Cognito (cognito-sync) to invoke PutRecord on your Amazon Cognito stream.
+Required: No
+Type: String
+Update requires: No interruption
+StreamingStatus 
+Status of the Amazon Cognito streams. Valid values are: ENABLED or DISABLED.
+Required: No
+Type: String
+Update requires: No interruption
+StreamName 
+The name of the Amazon Cognito stream to receive updates. This stream must be in the developer's account and in the same Region as the identity pool.
+Required: No
+Type: String
+Update requires: No interruption

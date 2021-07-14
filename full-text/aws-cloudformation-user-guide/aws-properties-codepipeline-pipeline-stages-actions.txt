@@ -1,0 +1,91 @@
+AWS::CodePipeline::Pipeline ActionDeclaration
+Represents information about an action declaration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid)" : ActionTypeId,
+  "[Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration)" : Json,
+  "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ InputArtifact, ... ],
+  "[Name](#cfn-codepipeline-pipeline-stages-actions-name)" : String,
+  "[Namespace](#cfn-codepipeline-pipeline-actiondeclaration-namespace)" : String,
+  "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ OutputArtifact, ... ],
+  "[Region](#cfn-codepipeline-pipeline-stages-actions-region)" : String,
+  "[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
+  "[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder)" : Integer
+}
+YAML
+[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid): 
+    ActionTypeId
+  [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration): Json
+  [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts): 
+    - InputArtifact
+  [Name](#cfn-codepipeline-pipeline-stages-actions-name): String
+  [Namespace](#cfn-codepipeline-pipeline-actiondeclaration-namespace): String
+  [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts): 
+    - OutputArtifact
+  [Region](#cfn-codepipeline-pipeline-stages-actions-region): String
+  [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
+  [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
+Properties
+ActionTypeId 
+Specifies the action type and the provider of the action.
+Required: Yes
+Type: ActionTypeId
+Update requires: No interruption
+Configuration 
+The action's configuration. These are key-value pairs that specify input values for an action. For more information, see Action Structure Requirements in CodePipeline. For the list of configuration properties for the AWS CloudFormation action type in CodePipeline, see Configuration Properties Reference in the AWS CloudFormation User Guide. For template snippets with examples, see Using Parameter Override Functions with CodePipeline Pipelines in the AWS CloudFormation User Guide.
+The values can be represented in either JSON or YAML format. For example, the JSON configuration item format is as follows: 
+JSON: 
+"Configuration" : { Key : Value }, 
+Required: No
+Type: Json
+Update requires: No interruption
+InputArtifacts 
+The name or ID of the artifact consumed by the action, such as a test or build artifact.
+For a CodeBuild action with multiple input artifacts, one of your input sources must be designated the PrimarySource. For more information, see the CodeBuild action reference page in the AWS CodePipeline User Guide.
+Required: No
+Type: List of InputArtifact
+Update requires: No interruption
+Name 
+The action declaration's name.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: [A-Za-z0-9.@\-_]
+Update requires: No interruption
+Namespace 
+The variable namespace associated with the action. All variables produced as output by this action fall under this namespace.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: [A-Za-z0-9@\-_]
+Update requires: No interruption
+OutputArtifacts 
+The name or ID of the result of the action declaration, such as a test or build artifact.
+Required: No
+Type: List of OutputArtifact
+Update requires: No interruption
+Region 
+The action declaration's AWS Region, such as us-east-1.
+Required: No
+Type: String
+Minimum: 4
+Maximum: 30
+Update requires: No interruption
+RoleArn 
+The ARN of the IAM service role that performs the declared action. This is assumed through the roleArn for the pipeline.
+Required: No
+Type: String
+Maximum: 1024
+Pattern: arn:aws(-[\w])*:iam::[0-9]{12}:role/.*
+Update requires: No interruption
+RunOrder 
+The order in which actions are run.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 999
+Update requires: No interruption

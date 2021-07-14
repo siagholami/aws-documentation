@@ -1,0 +1,6 @@
+Working with content delivery networks (CDNs)
+You can use a content delivery network (CDN) such as Amazon CloudFront to serve the content that you store in AWS Elemental MediaStore. A CDN is a globally distributed set of servers that caches content such as videos. When a user requests your content, the CDN routes the request to the edge location that provides the lowest latency. If your content is already cached in that edge location, the CDN delivers it immediately. If your content is not currently in that edge location, the CDN retrieves it from your origin (such as your MediaStore container) and distributes it to the user.
+
+Topics
+ Allowing Amazon CloudFront to access your AWS Elemental MediaStore container
+ AWS Elemental MediaStore's interaction with HTTP caches

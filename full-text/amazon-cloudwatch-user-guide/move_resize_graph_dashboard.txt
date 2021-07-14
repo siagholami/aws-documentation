@@ -1,0 +1,43 @@
+Move or Resize a Graph on a CloudWatch Dashboard
+You can arrange and resize graphs on your CloudWatch dashboard.
+To move a graph on a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Hover over the title of the graph until the selection icon appears. Select and drag the graph to a new location on the dashboard.
+
+
+Choose Save dashboard.
+
+
+To resize a graph
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and choose a dashboard.
+
+
+To increase or decrease the size, hover over the graph and drag the lower right corner of the graph. Stop dragging the corner when you have the size that you want.
+
+
+Choose Save dashboard.
+
+
+To enlarge a graph temporarily
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Select the graph. Alternatively, hover over the title of the graph and choose Widget actions, Enlarge.
+

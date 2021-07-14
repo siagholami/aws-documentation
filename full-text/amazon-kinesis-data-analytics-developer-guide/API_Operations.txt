@@ -1,0 +1,22 @@
+Actions
+The following actions are supported:
+  AddApplicationCloudWatchLoggingOption 
+  AddApplicationInput 
+  AddApplicationInputProcessingConfiguration 
+  AddApplicationOutput 
+  AddApplicationReferenceDataSource 
+  CreateApplication 
+  DeleteApplication 
+  DeleteApplicationCloudWatchLoggingOption 
+  DeleteApplicationInputProcessingConfiguration 
+  DeleteApplicationOutput 
+  DeleteApplicationReferenceDataSource 
+  DescribeApplication 
+  DiscoverInputSchema 
+  ListApplications 
+  ListTagsForResource 
+  StartApplication 
+  StopApplication 
+  TagResource 
+  UntagResource 
+  UpdateApplication 

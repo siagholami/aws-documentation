@@ -1,0 +1,39 @@
+SimulationApplicationSummary
+Summary information for a simulation application.
+Contents
+arn 
+The Amazon Resource Name (ARN) of the simulation application.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+Required: No
+lastUpdatedAt 
+The time, in milliseconds since the epoch, when the simulation application was last updated.
+Type: Timestamp
+Required: No
+name 
+The name of the simulation application.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Pattern: [a-zA-Z0-9_\-]* 
+Required: No
+robotSoftwareSuite 
+Information about a robot software suite (ROS distribution).
+Type: RobotSoftwareSuite object
+Required: No
+simulationSoftwareSuite 
+Information about a simulation software suite.
+Type: SimulationSoftwareSuite object
+Required: No
+version 
+The version of the simulation application.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Pattern: (\$LATEST)|[0-9]* 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

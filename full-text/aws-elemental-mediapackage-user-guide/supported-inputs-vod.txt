@@ -1,0 +1,98 @@
+VOD Supported Codecs and Input Types
+The following sections describe supported input types and codecs for file-based video on demand (VOD) content.
+Supported Input Types
+These are the input types that AWS Elemental MediaPackage supports for VOD content.
+
+
+
+MediaPackage Input Type
+Use Case
+
+
+
+
+HLS
+Pull an HLS stream set from an Amazon Simple Storage Service bucket, with or without a secure connection.Additional requirements:[See the AWS documentation website for more details]
+
+
+SMIL
+Pull an MP4 stream set referenced by a .smil manifest from an Amazon Simple Storage Service bucket, with or without a secure connection. For information about the .smil manifest, see Creating a SMIL File.Additional requirements:[See the AWS documentation website for more details]
+
+
+
+Supported Input Codecs
+These are the video, audio, and subtitles codecs that MediaPackage supports for file-based source content.
+
+
+
+Input Type
+Media Container
+Video Codecs
+Audio Codecs
+Subtitles Format
+
+
+
+
+HLS
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+WebVTT
+
+
+SMIL
+MP4 (non-fragmented)
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+SRT
+
+
+
+Supported Output Codecs
+These are the video, audio, and subtitles codecs that MediaPackage supports for delivering VOD content.
+
+
+
+Endpoint Type
+Manifest Format
+Media Container
+Video Codecs
+Audio Codecs
+Subtitles Format
+
+
+
+
+Apple HLS
+HLS
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+WebVTT
+
+
+Microsoft Smooth
+MSS
+MP4
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+DFXP
+
+
+DASH-ISO
+MPEG-DASH
+MP4
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+EBU-TT
+
+
+CMAF
+HLS
+CMAF
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+WebVTT
+
+

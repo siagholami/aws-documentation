@@ -1,0 +1,230 @@
+Actions, resources, and condition keys for Amazon Managed Blockchain
+Amazon Managed Blockchain (service prefix: managedblockchain) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Amazon Managed Blockchain
+ Resource types defined by Amazon Managed Blockchain
+ Condition keys for Amazon Managed Blockchain
+Actions defined by Amazon Managed Blockchain
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ CreateMember 
+Grants permission to create a member of an Amazon Managed Blockchain network.
+Write
+ network* 
+
+
+
+
+ CreateNetwork 
+Grants permission to create an Amazon Managed Blockchain network.
+Write
+
+
+
+
+
+ CreateNode 
+Grants permission to create a node within a member of an Amazon Managed Blockchain network.
+Write
+ member* 
+
+
+
+
+ CreateProposal 
+Grants permission to create a proposal that other blockchain network members can vote on to add or remove a member in an Amazon Managed Blockchain network.
+Write
+ network* 
+
+
+
+
+ DeleteMember 
+Grants permission to delete a member and all associated resources from an Amazon Managed Blockchain network.
+Write
+ member* 
+
+
+
+
+ DeleteNode 
+Grants permission to delete a node from a member of an Amazon Managed Blockchain network.
+Write
+ node* 
+
+
+
+
+ GetMember 
+Grants permission to return detailed information about a member of an Amazon Managed Blockchain network.
+Read
+ member* 
+
+
+
+
+ GetNetwork 
+Grants permission to return detailed information about an Amazon Managed Blockchain network.
+Read
+ network* 
+
+
+
+
+ GetNode 
+Grants permission to return detailed information about a node within a member of an Amazon Managed Blockchain network.
+Read
+ node* 
+
+
+
+
+ GetProposal 
+Grants permission to return detailed information about a proposal of an Amazon Managed Blockchain network.
+Read
+ proposal* 
+
+
+
+
+ ListInvitations 
+Grants permission to list the invitations extended to the active AWS account from any Managed Blockchain network.
+List
+
+
+
+
+
+ ListMembers 
+Grants permission to list the members of an Amazon Managed Blockchain network and the properties of their memberships.
+List
+ network* 
+
+
+
+
+ ListNetworks 
+Grants permission to return information about the Amazon Managed Blockchain networks in which the current AWS account has members.
+List
+
+
+
+
+
+ ListNodes 
+Grants permission to list the nodes within a member of an Amazon Managed Blockchain network.
+List
+ member* 
+
+
+
+
+ ListProposalVotes 
+Grants permission to list all votes for a proposal, including the value of the vote and the unique identifier of the member that cast the vote for the given Amazon Managed Blockchain network.
+List
+ proposal* 
+
+
+
+
+ ListProposals 
+Grants permission to list proposals for the given Amazon Managed Blockchain network.
+List
+ network* 
+
+
+
+
+ RejectInvitation 
+Grants permission to reject the invitation to join the blockchain network.
+Write
+ invitation* 
+
+
+
+
+ UpdateMember 
+Grants permission to update a member of an Amazon Managed Blockchain network.
+Write
+ member* 
+
+iam:CreateServiceLinkedRole
+
+
+ UpdateNode 
+Grants permission to update a node from a member of an Amazon Managed Blockchain network.
+Write
+ node* 
+
+iam:CreateServiceLinkedRole
+
+
+ VoteOnProposal 
+Grants permission to cast a vote for a proposal on behalf of the blockchain network member specified.
+Write
+ proposal* 
+
+
+
+
+
+Resource types defined by Amazon Managed Blockchain
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ network 
+arn:${Partition}:managedblockchain:${Region}::networks/${NetworkId}
+
+
+
+ member 
+arn:${Partition}:managedblockchain:${Region}:${Account}:members/${MemberId}
+
+
+
+ node 
+arn:${Partition}:managedblockchain:${Region}:${Account}:nodes/${NodeId}
+
+
+
+ proposal 
+arn:${Partition}:managedblockchain:${Region}::proposals/${ProposalId}
+
+
+
+ invitation 
+arn:${Partition}:managedblockchain:${Region}:${Account}:invitations/${InvitationId}
+
+
+
+
+Condition keys for Amazon Managed Blockchain
+Managed Blockchain has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

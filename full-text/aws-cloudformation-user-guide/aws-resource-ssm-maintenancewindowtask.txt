@@ -1,0 +1,262 @@
+AWS::SSM::MaintenanceWindowTask
+The AWS::SSM::MaintenanceWindowTask resource defines information about a task for an AWS Systems Manager maintenance window. For more information, see RegisterTaskWithMaintenanceWindow in the AWS Systems Manager API Reference.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::SSM::MaintenanceWindowTask",
+  "Properties" : {
+      "[Description](#cfn-ssm-maintenancewindowtask-description)" : String,
+      "[LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo)" : LoggingInfo,
+      "[MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
+      "[MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors)" : String,
+      "[Name](#cfn-ssm-maintenancewindowtask-name)" : String,
+      "[Priority](#cfn-ssm-maintenancewindowtask-priority)" : Integer,
+      "[ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
+      "[Targets](#cfn-ssm-maintenancewindowtask-targets)" : [ Target, ... ],
+      "[TaskArn](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
+      "[TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : TaskInvocationParameters,
+      "[TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters)" : Json,
+      "[TaskType](#cfn-ssm-maintenancewindowtask-tasktype)" : String,
+      "[WindowId](#cfn-ssm-maintenancewindowtask-windowid)" : String
+    }
+}
+YAML
+Type: AWS::SSM::MaintenanceWindowTask
+Properties: 
+  [Description](#cfn-ssm-maintenancewindowtask-description): String
+  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
+    LoggingInfo
+  [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
+  [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
+  [Name](#cfn-ssm-maintenancewindowtask-name): String
+  [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
+  [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
+  [Targets](#cfn-ssm-maintenancewindowtask-targets): 
+    - Target
+  [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
+  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters): 
+    TaskInvocationParameters
+  [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters): Json
+  [TaskType](#cfn-ssm-maintenancewindowtask-tasktype): String
+  [WindowId](#cfn-ssm-maintenancewindowtask-windowid): String
+Properties
+Description 
+A description of the task.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption
+LoggingInfo 
+Information about an Amazon S3 bucket to write task-level logs to.
+LoggingInfo has been deprecated. To specify an S3 bucket to contain logs, instead use the OutputS3BucketName and OutputS3KeyPrefix options in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported maintenance window task types, see AWS Systems Manager MaintenanceWindowTask TaskInvocationParameters.
+Required: No
+Type: LoggingInfo
+Update requires: No interruption
+MaxConcurrency 
+The maximum number of targets this task can be run for, in parallel.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 7
+Pattern: ^([1-9][0-9]*|[1-9][0-9]%|[1-9]%|100%)$
+Update requires: No interruption
+MaxErrors 
+The maximum number of errors allowed before this task stops being scheduled.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 7
+Pattern: ^([1-9][0-9]*|[0]|[1-9][0-9]%|[0-9]%|100%)$
+Update requires: No interruption
+Name 
+The task name.
+Required: No
+Type: String
+Minimum: 3
+Maximum: 128
+Pattern: ^[a-zA-Z0-9_\-.]{3,128}$
+Update requires: No interruption
+Priority 
+The priority of the task in the maintenance window. The lower the number, the higher the priority. Tasks that have the same priority are scheduled in parallel.
+Required: Yes
+Type: Integer
+Minimum: 0
+Update requires: No interruption
+ServiceRoleArn 
+The ARN of the IAM service role to use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance window Run Command tasks.
+Required: No
+Type: String
+Update requires: No interruption
+Targets 
+The targets, either instances or window target IDs.
+ Specify instances using Key=InstanceIds,Values=instanceid1,instanceid2.
+ Specify window target IDs using Key=WindowTargetIds,Values=window-target-id-1,window-target-id-2.
+Required: Yes
+Type: List of Target
+Maximum: 5
+Update requires: No interruption
+TaskArn 
+The resource that the task uses during execution.
+For RUN_COMMAND and AUTOMATION task types, TaskArn is the SSM document name or Amazon Resource Name (ARN).
+For LAMBDA tasks, TaskArn is the function name or ARN.
+For STEP_FUNCTIONS tasks, TaskArn is the state machine ARN.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1600
+Update requires: No interruption
+TaskInvocationParameters 
+The parameters to pass to the task when it runs. Populate only the fields that match the task type. All other fields should be empty. 
+Required: No
+Type: TaskInvocationParameters
+Update requires: No interruption
+TaskParameters 
+The parameters to pass to the task when it runs.
+TaskParameters has been deprecated. To specify parameters to pass to a task when it runs, instead use the Parameters option in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported maintenance window task types, see MaintenanceWindowTaskInvocationParameters.
+Required: No
+Type: Json
+Update requires: No interruption
+TaskType 
+The type of task. Valid values: RUN_COMMAND, AUTOMATION, LAMBDA, STEP_FUNCTIONS.
+Required: Yes
+Type: String
+Allowed values: AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS
+Update requires: Replacement
+WindowId 
+The ID of the maintenance window where the task is registered.
+Required: Yes
+Type: String
+Minimum: 20
+Maximum: 20
+Pattern: ^mw-[0-9a-f]{17}$
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the maintenance window task ID, such as 12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9.
+For more information about using the Ref function, see Ref.
+Examples
+AWS Systems Manager Maintenance Window Task Window Target ID Example
+The following example creates a Systems Manager maintenance window task that runs the specified Step Function. The maintenance window task targets managed instances using a maintenance window target ID.
+JSON
+{
+    "Resources": {
+        "MaintenanceWindowStepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskArn": "SSMStepFunctionDemo",
+                "ServiceRoleArn": "StepFunctionRole.Arn",
+                "TaskType": "STEP_FUNCTIONS",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowStepFunctionsParameters": {
+                        "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}",
+                        "Name": "{{INVOCATION_ID}}"
+                    }
+                },
+                "Priority": 1,
+                "MaxConcurrency": 5,
+                "MaxErrors": 5,
+                "Name": "StepFunctionsTask"
+            },
+            "DependsOn": "MaintenanceWindowTarget"
+        }
+    }
+}
+YAML
+```
+Resources:
+  MaintenanceWindowStepFunctionsTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: WindowTargetIds
+        Values:
+        - MaintenanceWindowTarget
+      TaskArn: SSMStepFunctionDemo
+      ServiceRoleArn: StepFunctionRole.Arn
+      TaskType: STEP_FUNCTIONS
+      TaskInvocationParameters:
+        MaintenanceWindowStepFunctionsParameters:
+          Input: '{"instanceId":"{{TARGET_ID}}", "wait_time": 20}'
+          Name: "{{INVOCATION_ID}}"
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: StepFunctionsTask
+    DependsOn: MaintenanceWindowTarget
+```
+AWS Systems Manager Maintenance Window Task Instance ID Target Example
+The following example creates a Systems Manager maintenance window task that runs the specified Step Function. The maintenance window task targets the specified instance IDs.
+JSON
+{
+    "Resources": {
+        "StepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "i-012345678912345678"
+                        ]
+                    }
+                ],
+                "TaskArn": "SSMStepFunctionDemo",
+                "ServiceRoleArn": "StepFunctionRole.Arn",
+                "TaskType": "STEP_FUNCTIONS",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowStepFunctionsParameters": {
+                        "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}",
+                        "Name": "{{INVOCATION_ID}}"
+                    }
+                },
+                "Priority": 1,
+                "MaxConcurrency": 5,
+                "MaxErrors": 5,
+                "Name": "StepFunctionsTask"
+            },
+            "DependsOn": "MaintenanceWindowTarget"
+        }
+    }
+}
+YAML
+```
+Resources:
+  StepFunctionsTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: InstanceIds
+        Values:
+        - i-012345678912345678
+      TaskArn: SSMStepFunctionDemo
+      ServiceRoleArn: StepFunctionRole.Arn
+      TaskType: STEP_FUNCTIONS
+      TaskInvocationParameters:
+        MaintenanceWindowStepFunctionsParameters:
+          Input: '{"instanceId":"{{TARGET_ID}}", "wait_time": 20}'
+          Name: "{{INVOCATION_ID}}"
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: StepFunctionsTask
+    DependsOn: MaintenanceWindowTarget
+```
+See also
+
+AWS::SSM::MaintenanceWindow 
+AWS::SSM::MaintenanceWindowTarget 
+RegisterTaskWithMaintenanceWindow in the AWS Systems Manager API Reference.

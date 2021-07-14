@@ -1,0 +1,49 @@
+Creating a Simulation Application
+Create a simulation application to use in simulation jobs.
+To create a simulation application
+Follow the steps under one of the following tabs.
+Note
+Amazon S3 objects must be located in the same Region as AWS RoboMaker.
+
+[ Using the console ]
+
+
+Sign in to the AWS RoboMaker console at https://console.aws.amazon.com/robomaker/.
+
+
+In the left navigation pane, choose Development, and then choose simulation applications.
+
+
+Type a name for the application. Choose a name that helps you identify the simulation. For example, Outdoor v2.
+
+
+Select the ROS distribution used by your robot application. For more information about ROS, see www.ros.org. 
+
+
+Select the Simulation software suite used by your simulation application. For more information about ROS, see www.ros.org. 
+
+
+Select the Simulation rendering engine used by your simulation application. 
+
+
+Provide the Amazon S3 path to your bundled simulation application file built for the X86_64 platform. 
+
+
+(Optional) select Create new S3 folder to go to the Amazon Simple Storage Service console. There, you can create and manage buckets.
+
+(Optional) Under Tags, specify one or more tags for the simulation application. Tags are words or phrases that act as metadata to identify your AWS resources. Each tag consists of a key and a value. You can manage tags for your simulation on the Simulation application details page.
+
+For more about tagging, see Tagging Your AWS RoboMaker Resources. 
+
+Choose Create.
+
+
+[ Using the AWS CLI ]
+Example
+Here's an example AWS CLI command that performs the equivalent of the console-based create simulation application on the other tab.  
+$ aws robomaker create-simulation-application \
+--name HelloWorldSimulationApplication \
+--rendering-engine name=OGRE,version=1.x \
+--simulation-software-suite name=Gazebo,version=7 \
+--robot-software-suite name=ROS,version=Melodic \
+--sources architecture=X86_64,s3Bucket=my-bucket-name,s3Key=my-key-name/hello-world-simulation.tar

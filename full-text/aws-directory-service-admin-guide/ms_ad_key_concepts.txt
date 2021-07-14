@@ -1,0 +1,7 @@
+Key Concepts for AWS Managed Microsoft AD
+You'll get more out of AWS Managed Microsoft AD if you become familiar with the following key concepts.
+Topics
+ Active Directory Schema
+ Patching and Maintenance for AWS Managed Microsoft AD
+ Group Managed Service Accounts
+ Kerberos Constrained Delegation

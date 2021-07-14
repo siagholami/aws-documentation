@@ -1,0 +1,30 @@
+Adding or removing VPC endpoint service tags
+Tags provide a way to identify the VPC endpoint service. You can add or remove a tag.
+
+[ Console ]
+To add or remove a VPC endpoint service tag
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Endpoint Services.
+
+
+Select the VPC endpoint service and choose Actions, Add/Edit Tags.
+
+
+Add or remove a tag.
+
+
+[Add a tag] Choose Create tag and do the following:
+    For Key, enter the key name.
+    For Value, enter the key value.
+[Remove a tag] Choose the delete button (“x”) to the right of the tag’s Key and Value.
+
+[  AWS Tools for Windows PowerShell ]
+Use CreateTags and DeleteTags.
+To accept an endpoint connection request, use the accept-vpc-endpoint-connections command and specify the endpoint ID and endpoint service ID.
+
+[ API ]
+Use create-tags and delete-tags.

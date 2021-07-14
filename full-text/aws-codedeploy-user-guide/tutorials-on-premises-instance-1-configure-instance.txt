@@ -1,0 +1,4 @@
+Step 1: Configure the on-premises instance
+Before you can deploy to your on-premises instance, you must configure it. Follow the instructions in Working with on-premises instances for CodeDeploy, and then return to this page.
+Install the CodeDeploy agent
+After you configure your on-premises instance, follow the steps for on-premises instances in Install the CodeDeploy agent and return to this page.

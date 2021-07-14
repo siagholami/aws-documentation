@@ -1,0 +1,7 @@
+Working with Services
+A service is a template for registering service instances, which allow you to locate the resources for an application using DNS queries or the AWS Cloud Map DiscoverInstances API action, depending on how you configured the namespace.
+Topics
+ Creating Services
+ Values That You Specify When You Create Services
+ Viewing a List of Services That You Created in a Namespace
+ Deleting Services

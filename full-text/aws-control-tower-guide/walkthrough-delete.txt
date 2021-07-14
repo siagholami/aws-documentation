@@ -1,0 +1,324 @@
+Walkthrough: Cleaning up AWS Control Tower Managed Resources
+When your landing zone was set up, AWS Control Tower provisioned resources and services in your landing zone on your behalf. For example, an AWS Organizations organization with multiple accounts and organizational units (OUs) were provisioned. Additionally, guardrails were deployed in your accounts using AWS CloudFormation stacks, stack sets, and AWS Organizations policies.
+This document provides instructions for how to delete AWS Control Tower resources individually, as part of regular maintenance and administrative tasks. The procedures given in this chapter are intended only for removing individual resources, or a few resources, when needed. 
+Warning
+If you intend to decommission your landing zone, contact AWS Support first, before manually deleting resources. Manually deleting resources will not allow you to set up a new landing zone. It is not the same as decommissioning. Complete decommissioning requires assistance from AWS Support.
+If you delete all of your landing zone resources manually, it is not the same as decommissioning the landing zone, and you may incur unexpected charges.
+Manual Cleanup of AWS Control Tower Resources
+The following procedures guide you through manual methods of cleaning up AWS Control Tower resources. These procedures can be followed any time you need to delete resources from you landing zone. Two types of tasks may require cleanup of resources:
+ To delete resources as you manage your landing zone in ordinary situations.
+ To clean up resources that remain after automated decommissioning, in cooperation with AWS Support.
+Before performing these procedures, unless it's otherwise indicated, you must be signed in to the AWS Management Console in the home Region for your landing zone, and you must be signed in as an IAM user with administrative permissions for the master account that contains your landing zone.
+Warning
+These are destructive actions that can introduce governance drift into your AWS Control Tower setup. They cannot be undone.
+Topics
+ Manual Cleanup of AWS Control Tower Resources
+ Delete SCPs
+ Delete StackSets and Stacks
+ Delete Amazon S3 Buckets in the Log Archive Account
+ Clean Up Account Factory
+ Clean Up Roles and Polices
+ AWS Control Tower Clean Up Help
+Delete SCPs
+AWS Control Tower uses service control policies (SCPs) for its guardrails. This procedure walks through how to delete the SCPs specifically related to AWS Control Tower.
+To delete AWS Organizations SCPs
+
+
+Open the Organizations console at https://console.aws.amazon.com/organizations/.
+
+
+Open the Policies tab, and find the Service Control Policies (SCPs) that have the prefix aws-guardrails- and do the following for each SCP:
+
+
+Detach the SCP from the associated OU.
+
+
+Delete the SCP.
+
+
+Delete StackSets and Stacks
+AWS Control Tower uses StackSets and stacks to deploy AWS Config Rules related to guardrails in your landing zone. The following procedures walk through how to delete these specific resources.
+To delete AWS CloudFormation StackSets
+
+
+Open the AWS CloudFormation console at https://console.aws.amazon.com/cloudformation.
+
+
+From the left navigation menu, choose StackSets.
+
+
+For each StackSet with the prefix AWSControlTower, do the following. If you have many accounts in a StackSet, this can take some time.
+
+
+Choose the specific StackSet from the table in the dashboard. This opens the properties page for that StackSet.
+
+
+At the bottom of the page, in the Stacks table, make a record of the AWS account IDs for all the accounts in the table. Copy the list of all accounts.
+
+
+Choose Manage StackSet to open the management wizard.
+
+
+From Select action, choose Delete stacks, and choose Next.
+
+
+On Set deployment options, from Specify accounts, choose Delete stacks from account.
+
+
+In the text field, enter the AWS account IDs you made a record of in step 3.b, separated by commas. For example: 123456789012, 098765431098, and so on.
+
+
+From Specify regions, choose Add all, leave the rest of the parameters on the page set to their defaults, and choose Next.
+
+
+On the Review page, review your choices, and then choose Delete stacks.
+
+
+On the StackSet properties page, you can begin this procedure again for your other StackSets.
+
+
+The process is complete when the records in the Stacks table of the different StackSets properties pages are empty.
+
+
+When the records in the Stacks table are empty, choose Delete StackSet.
+
+
+To delete AWS CloudFormation stacks
+
+
+Open the AWS CloudFormation console at https://console.aws.amazon.com/cloudformation.
+
+
+From the Stacks dashboard, search for all of the stacks with the prefix AWSControlTower.
+
+
+For each stack in the table, do the following:
+
+
+Choose the check box next to the name of the stack.
+
+
+From the Actions menu, choose Delete Stack.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and choose Yes, Delete.
+
+
+Delete Amazon S3 Buckets in the Log Archive Account
+The following procedures guide you through how to sign in to the log archive account as an AWS SSO user in the AWSControlTowerExecution group and then delete the Amazon S3 buckets in your log archive account.
+To sign in to your log archive account with the right permissions
+
+
+Open the Organizations console at https://console.aws.amazon.com/organizations/.
+
+
+From the Accounts tab, find the Log archive account.
+
+
+From the right pane that opens, make a record of the log archive account number.
+
+
+From the navigation bar, choose your account name to open your account menu.
+
+
+Choose Switch Role.
+
+
+On the page that opens, provide the account number for the log archive account in Account.
+
+
+For Role, enter AWSControlTowerExecution.
+
+
+The Display Name populates with text.
+
+
+Choose your favorite Color.
+
+
+Choose Switch Role.
+
+
+To delete Amazon S3 buckets
+
+
+Open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+Search for bucket names that contain aws-controltower.
+
+
+For each bucket in the table, do the following:
+
+
+Choose the check box for the bucket in the table.
+
+
+Choose Delete.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, enter the name of the bucket to confirm, and then choose Confirm.
+
+
+Clean Up Account Factory
+The following procedure guides you through how to sign in as an AWS SSO user in the AWSServiceCatalogAdmins group and then clean up your Account Factory accounts.
+To sign in to your master account with the right permissions
+
+
+Go to your user portal URL at directory-id.awsapps.com/start
+
+
+From AWS Account, find the Master account.
+
+
+From AWSServiceCatalogAdminFullAccess, choose Management console to sign in to the AWS Management Console as this role.
+
+
+To clean up Account Factory
+
+
+Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/.
+
+
+From the left navigation menu, choose Portfolios list.
+
+
+In the Local Portfolios table, search for a portfolio named AWS Control Tower Account Factory Portfolio.
+
+
+Choose the name of that portfolio to go to its details page.
+
+
+Expand the Constraints section of the page, and choose the radio button for the constraint with the product name AWS Control Tower Account Factory.
+
+
+Choose REMOVE CONSTRAINTS.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose CONTINUE.
+
+
+From the Products section of the page, choose the radio button for the product named AWS Control Tower Account Factory.
+
+
+Choose REMOVE PRODUCT.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose CONTINUE.
+
+
+Expand the Users, Groups, and Roles section of the page, and choose the check boxes for all the records in this table.
+
+
+Choose REMOVE USERS, GROUP OR ROLE.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose CONTINUE.
+
+
+From the left navigation menu, choose Portfolios list.
+
+
+In the Local Portfolios table, search for a portfolio named AWS Control Tower Account Factory Portfolio.
+
+
+Choose the radio button for that portfolio, and then choose DELETE PORTFOLIO.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose CONTINUE.
+
+
+From the left navigation menu, choose Product list.
+
+
+On the Admin products page, search for the product named AWS Control Tower Account Factory.
+
+
+Choose the product to open the Admin product details page.
+
+
+From Actions, choose Delete product.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose CONTINUE.
+
+
+Clean Up Roles and Polices
+These procedures walk you through how to clean up the roles and policies that were created when your landing zone was set up.
+To delete the AWS SSO AWSServiceCatalogEndUserAccess role
+
+
+Open the AWS Single Sign-On console at https://console.aws.amazon.com/singlesignon/.
+
+
+Change your AWS Region to your home Region, which is the Region where you initially set up AWS Control Tower.
+
+
+From the left navigation menu, choose AWS accounts.
+
+
+Choose your master account link.
+
+
+Choose the dropdown for Permission sets, select AWSServiceCatalogEndUserAccess, and then choose Remove.
+
+
+Choose AWS accounts from the left panel.
+
+
+Open the Permission sets tab.
+
+
+Select AWSServiceCatalogEndUserAccess and delete it.
+
+
+To delete IAM roles
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+From the left navigation menu, choose Roles.
+
+
+From the table, search for roles with the name AWSControlTower.
+
+
+For each role in the table, do the following:
+
+
+Choose the check box for the role.
+
+
+Choose Delete role.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose Yes, delete.
+
+
+To delete IAM policies
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+From the left navigation menu, choose Policies.
+
+
+From the table, search for policies with the name AWSControlTower.
+
+
+For each policy in the table, do the following:
+
+
+Choose the check box for the policy.
+
+
+Choose Policy actions, and Delete from the dropdown menu.
+
+
+In the dialog box that opens, review the information to make sure it's accurate, and then choose Delete.
+
+
+AWS Control Tower Clean Up Help
+If you encounter any issues that you can't resolve during this clean up process, contact AWS Support.

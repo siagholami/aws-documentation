@@ -1,0 +1,27 @@
+Placing Lamp Post Slices
+Instantiate, or place, multiple instances of the lamp post slice to add some overhead lamps to the maze.
+To place lamp post slices
+
+In the Asset Browser, navigate to StarterGame/slices/GSG.
+
+Drag Maze_Lamp_01.slice into the viewport. 
+
+
+
+Position the lamp post on top of one of the interior maze walls, similar to the following image.
+
+
+
+In the Entity Outliner, right-click Lamp and then choose duplicate. This creates a copy of the lamp. Move your mouse pointer to the position you want it, and then click to place it.
+Tip
+You can also duplicate an entity by selecting it in the viewport and pressing CtrlD.
+
+
+Repeat this process to place four or five more lamps into the scene, anywhere you want.
+
+
+
+Press CtrlS to save your level.
+
+
+Next: Saving Slice Changes

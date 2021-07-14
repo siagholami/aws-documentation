@@ -1,0 +1,142 @@
+Launch a WorkSpace Using AD Connector
+Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your users, known as WorkSpaces.
+Amazon WorkSpaces uses directories to store and manage information for your WorkSpaces and users. For your directory, you can choose from Simple AD, AD Connector, or AWS Directory Service for Microsoft Active Directory, also known as AWS Managed Microsoft AD. In addition, you can establish a trust relationship between your AWS Managed Microsoft AD directory and your on-premises domain.
+In this tutorial, we launch a WorkSpace that uses AD Connector. For tutorials that use the other options, see Launch a Virtual Desktop Using Amazon WorkSpaces.
+Topics
+ Before You Begin
+ Step 1: Create an AD Connector
+ Step 2: Create a WorkSpace
+ Step 3: Connect to the WorkSpace
+ Next Steps
+Before You Begin
+
+Amazon WorkSpaces is not available in every Region. Verify the supported Regions and select a Region for your WorkSpaces. For more information about the supported Regions, see Amazon WorkSpaces Pricing by AWS Region.
+When you launch a WorkSpace, you must select a WorkSpace bundle. A bundle is a combination of an operating system, and storage, compute, and software resources. For more information, see Amazon WorkSpaces Bundles.
+Create a virtual private cloud with at least two private subnets. For more information, see Configure a VPC for Amazon WorkSpaces. The VPC must be connected to your on-premises network through a virtual private network (VPN) connection or AWS Direct Connect. For more information, see AD Connector Prerequisites in the AWS Directory Service Administration Guide.
+Provide access to the internet from the WorkSpace. For more information, see Provide Internet Access from Your WorkSpace.
+
+Step 1: Create an AD Connector
+To create an AD Connector
+
+
+Open the Amazon WorkSpaces console at https://console.aws.amazon.com/workspaces/.
+
+
+In the navigation pane, choose Directories.
+
+
+Choose Set up Directory, Create AD Connector.
+
+
+For Organization name, enter a unique organization name for your directory (for example, my-example-directory). This name must be at least four characters in length, consist of only alphanumeric characters and hyphens (-), and begin or end with a character other than a hyphen.
+
+
+For Connected directory DNS, enter the fully-qualified name of your on-premises directory (for example, example.com).
+
+
+For Connected directory NetBIOS name, enter the short name of your on-premises directory (for example, example).
+
+
+For Connector account username, enter the user name of a user in your on-premises directory. The user must have permissions to read users and groups, create computer objects, and join computers to the domain.
+
+
+For Connector account password and Confirm password, enter the password for the on-premises user account.
+
+
+For DNS address, enter the IP address of at least one DNS server in your on-premises directory.
+Important
+If you need to update your DNS server IP address after launching your WorkSpaces, follow the procedure in Update DNS Servers for Amazon WorkSpaces to ensure that your WorkSpaces get properly updated.
+
+
+(Optional) For Description, enter a description for the directory.
+
+
+Keep Size as Small.
+
+
+For VPC, select your VPC.
+
+
+For Subnets, select your subnets. The DNS servers that you specified must be accessible from each subnet.
+
+
+Choose Next Step.
+
+
+Choose Create AD Connector. It takes several minutes for your directory to be connected. The initial status of the directory is Requested and then Creating. When directory creation is complete, the status is Active.
+
+
+Step 2: Create a WorkSpace
+Now you are ready to launch WorkSpaces for one or more users in your on-premises directory.
+To launch a WorkSpace for an existing user
+
+
+Open the Amazon WorkSpaces console at https://console.aws.amazon.com/workspaces/.
+
+
+In the navigation pane, choose WorkSpaces.
+
+
+Choose Launch WorkSpaces.
+
+
+For Directory, choose the directory that you created.
+
+
+(Optional) If this is the first time you have launched a WorkSpace in this directory, and Amazon WorkDocs is supported in the Region, you can enable or disable Amazon WorkDocs for all users in the directory. For more information, see Amazon WorkDocs Sync Client Help in the Amazon WorkDocs Administration Guide.
+
+
+Choose Next. Amazon WorkSpaces registers your AD Connector.
+
+
+Select one or more existing users from your on-premises directory. Do not add new users to an on-premises directory through the Amazon WorkSpaces console.
+
+
+To find users to select, you can enter all or part of the user's name and choose Search or choose Show All Users. Note that you cannot select a user that does not have an email address.
+After you select the users, choose Add Selected and then choose Next Step.
+
+
+Under Select Bundle, choose the default WorkSpace bundle to be used for the WorkSpaces. Under Assign WorkSpace Bundles, you can choose a different the bundle for an individual WorkSpace if needed. When you have finished, choose Next Step.
+
+
+Choose a running mode for your WorkSpaces and then choose Next Step. For more information, see Manage the WorkSpace Running Mode.
+
+
+Choose Launch WorkSpaces. The initial status of the WorkSpace is PENDING. When the launch is complete, the status is AVAILABLE.
+
+
+Send invitations to the email address for each user. (These invitations aren't sent automatically if you're using AD Connector.) For more information, see Send an Invitation Email.
+
+
+Step 3: Connect to the WorkSpace
+You can connect to your WorkSpace using the client of your choice. After you sign in, the client displays the WorkSpace desktop.
+To connect to the WorkSpace
+
+
+Open the link in the invitation email.
+
+
+Review Amazon WorkSpaces Clients in the Amazon WorkSpaces User Guide for more information about the requirements for each client, and then do one of the following: 
+    When prompted, download one of the client applications or launch Web Access.
+    If you aren't prompted and you haven't installed a client application already, open https://clients.amazonworkspaces.com/ and download one of the client applications or launch Web Access.
+Note
+You cannot use a web browser (Web Access) to connect to Amazon Linux WorkSpaces.
+
+
+Start the client, enter the registration code from the invitation email, and choose Register.
+
+
+When prompted to sign in, enter the user name and password for the user, and then choose Sign In.
+
+
+(Optional) When prompted to save your credentials, choose Yes.
+
+
+Note
+Because you're using AD Connector, your users won't be able to reset their own passwords. (The Forgot password? option on the WorkSpaces client application login screen won't be available.) For information about how to reset user passwords, see Set Up Active Directory Administration Tools for Amazon WorkSpaces.
+Next Steps
+You can continue to customize the WorkSpace that you just created. For example, you can install software and then create a custom bundle from your WorkSpace. If you are finished with your WorkSpace, you can delete it. For more information, see the following documentation.
+ Create a Custom WorkSpaces Image and Bundle
+ Administer Your WorkSpaces
+ Manage Directories for Amazon WorkSpaces
+ Delete a WorkSpace

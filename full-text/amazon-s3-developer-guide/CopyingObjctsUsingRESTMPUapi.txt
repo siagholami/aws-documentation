@@ -1,0 +1,10 @@
+Copy object using the REST multipart upload API
+The following sections in the Amazon Simple Storage Service API Reference describe the REST API for multipart upload. For copying an existing object you use the Upload Part (Copy) API and specify the source object by adding the x-amz-copy-source request header in your request. 
+ Initiate Multipart Upload
+ Upload Part
+ Upload Part (Copy)
+ Complete Multipart Upload
+ Abort Multipart Upload
+ List Parts
+ List Multipart Uploads
+You can use these APIs to make your own REST requests, or you can use one the SDKs we provide. For more information about the SDKs, see API support for multipart upload.

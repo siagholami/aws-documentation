@@ -1,0 +1,17 @@
+Adding and Accessing AWS CloudFormation Templates in Eclipse
+To add a CloudFormation template to your Eclipse project 
+
+
+Locate the template you’d like to add to your project in your system’s file manager, and drag the file into your project’s Package Explorer window.
+
+
+
+Choose how you would like to add the file to your project, and click OK.
+
+
+
+To access a CloudFormation template in your Eclipse project 
+ Double-click the template name in Package Explorer to begin editing the file.
+
+Note
+Files that end with .template or .json will automatically use the AWS CloudFormation template editor. If your file is not automatically recognized as an AWS CloudFormation template, you can select the editor by right-clicking the file name in Package Explorer or by right-clicking in the editor window with the file loaded, selecting Open With, then CloudFormation Template Editor 

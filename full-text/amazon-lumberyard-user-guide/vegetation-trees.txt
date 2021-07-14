@@ -1,0 +1,15 @@
+Adding Trees and Bushes
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+You can add realistic trees and bushes to your terrain in your environment level. You must add trees and bushes manually.
+To add trees or bushes
+
+
+In the Rollup Bar, on the Objects tab, click Geom Entity.
+
+
+Under Browser, select the desired vegetation.
+
+
+Drag to place the tree or bush in your level.
+

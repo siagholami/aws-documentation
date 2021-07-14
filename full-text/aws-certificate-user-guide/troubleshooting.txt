@@ -1,0 +1,10 @@
+Troubleshooting
+Consult the following topics if you encounter problems using AWS Certificate Manager.
+Note
+If you don't see your issue addressed in this section, we recommend visiting the AWS Knowledge Center.
+Topics
+ Troubleshooting Certificate Requests
+ Troubleshooting Certificate Validation
+ Troubleshooting Managed Certificate Renewal
+ Troubleshooting Other Problems
+ Handling Exceptions

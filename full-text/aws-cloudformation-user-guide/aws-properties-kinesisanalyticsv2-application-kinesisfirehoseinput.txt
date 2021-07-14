@@ -1,0 +1,22 @@
+AWS::KinesisAnalyticsV2::Application KinesisFirehoseInput
+For a SQL-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery stream as the streaming source. You provide the delivery stream's Amazon Resource Name (ARN).
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ResourceARN](#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn)" : String
+}
+YAML
+[ResourceARN](#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn): String
+Properties
+ResourceARN 
+The Amazon Resource Name (ARN) of the delivery stream.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:.*
+Update requires: No interruption
+See also
+
+KinesisFirehoseInput in the Amazon Kinesis Data Analytics API Reference 

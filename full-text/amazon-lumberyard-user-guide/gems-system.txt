@@ -1,0 +1,6 @@
+Programming with Gems
+The modular gems system is a management infrastructure for sharing code and art assets between Lumberyard game projects. The modular gems system consists of gem packages that you can access and manage with the Project Configurator or Lmbr.exe. You can use gems to add functionality such as code, art, scripts, supporting files, and references to other gems to your game project.
+Topics
+ Gem Structure
+ Adding C Code to a Lumberyard Game with Gems
+ Using AZ Modules to Initialize Gems

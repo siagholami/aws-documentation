@@ -1,0 +1,46 @@
+Get Speed
+Returns the current time of day speed multiplier. The value is specified in conversion units of hours per second. For example, a value of 1 runs through an entire time of day cycle in 24 seconds.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+
+Speed
+Number
+Current speed multiplier that determines how quickly the time of day changes.
+
+

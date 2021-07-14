@@ -1,0 +1,119 @@
+AWS::Config::ConfigurationAggregator
+The details about the configuration aggregator, including information about source accounts, regions, and metadata of the aggregator. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Config::ConfigurationAggregator",
+  "Properties" : {
+      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ AccountAggregationSource, ... ],
+      "[ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname)" : String,
+      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : OrganizationAggregationSource,
+      "[Tags](#cfn-config-configurationaggregator-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::Config::ConfigurationAggregator
+Properties: 
+  [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
+    - AccountAggregationSource
+  [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
+  [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
+    OrganizationAggregationSource
+  [Tags](#cfn-config-configurationaggregator-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+AccountAggregationSources 
+Provides a list of source accounts and regions to be aggregated.
+Required: No
+Type: List of AccountAggregationSource
+Maximum: 1
+Update requires: No interruption
+ConfigurationAggregatorName 
+The name of the aggregator.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 256
+Pattern: [\w\-]
+Update requires: Replacement
+OrganizationAggregationSource 
+Provides an organization and list of regions to be aggregated.
+Required: No
+Type: OrganizationAggregationSource
+Update requires: No interruption
+Tags 
+An array of tag object.
+Required: No
+Type: List of Tag
+Maximum: 50
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ConfigurationAggregatorName, such as myConfigurationAggregator. 
+For more information about using the Ref function, see Ref.
+Examples
+Configuration Aggregator With Multiple Accounts Multiple Regions
+The following example creates a ConfigurationAggregator.
+JSON
+"ConfigurationAggregator": {
+    "Type": "AWS::Config::ConfigurationAggregator",
+    "Properties": {
+      "AccountAggregationSources": [
+        {
+          "AccountIds": [
+            "123456789012",
+            "987654321012"
+          ],
+          "AwsRegions": [
+            "us-west-2",
+            "us-east-1"
+          ],
+          "AllAwsRegions": false
+        }
+      ],
+      "ConfigurationAggregatorName": "MyConfigurationAggregator"
+    }
+  }
+YAML
+ConfigurationAggregator:
+  Type: 'AWS::Config::ConfigurationAggregator'
+  Properties:
+    AccountAggregationSources:
+      - AccountIds:
+          - '123456789012'
+          - '987654321012'
+        AwsRegions:
+          - us-west-2
+          - us-east-1
+        AllAwsRegions: false
+    ConfigurationAggregatorName: MyConfigurationAggregator
+Configuration Aggregator for an Organization
+The following example creates a ConfigurationAggregator for an organization.
+JSON
+"ConfigurationAggregator": {
+    "Type": "AWS::Config::ConfigurationAggregator",
+    "Properties": {
+      "OrganizationAggregationSource": {
+        "RoleArn": "arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+        "AwsRegions": [
+          "us-west-2",
+          "us-east-1"
+        ],
+        "AllAwsRegions": false
+      }
+      "ConfigurationAggregatorName": "MyConfigurationAggregator"
+    }
+  }
+YAML
+ConfigurationAggregator:
+  Type: 'AWS::Config::ConfigurationAggregator'
+  Properties:
+    OrganizationAggregationSource:
+      RoleArn: >-
+        arn:aws:iam::012345678912:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations
+      AwsRegions:
+        - us-west-2
+        - us-east-1
+      AllAwsRegions: false
+    ConfigurationAggregatorName: MyConfigurationAggregator

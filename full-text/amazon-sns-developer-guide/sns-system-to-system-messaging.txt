@@ -1,0 +1,7 @@
+Using Amazon SNS for system-to-system messaging
+This section provides information about using Amazon SNS for system-to-system messaging with subscribers such as Lambda functions, Amazon SQS queues, HTTP/S endpoints, and AWS Event Fork Pipelines.
+Topics
+ Using Amazon SNS for system-to-system messaging with an AWS Lambda function as a subscriber
+ Using Amazon SNS for system-to-system messaging with an Amazon SQS queue as a subscriber
+ Using Amazon SNS for system-to-system messaging with an HTTP/s endpoint as a subscriber
+ Using Amazon SNS for system-to-system messaging with AWS Event Fork Pipelines as a subscriber

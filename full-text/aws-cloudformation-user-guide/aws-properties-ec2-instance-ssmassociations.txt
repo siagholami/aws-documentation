@@ -1,0 +1,25 @@
+AWS::EC2::Instance SsmAssociation
+Specifies the SSM document and parameter values in AWS Systems Manager to associate with an instance.
+SsmAssociations is a property of the AWS::EC2::Instance resource. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters)" : [ AssociationParameter, ... ],
+  "[DocumentName](#cfn-ec2-instance-ssmassociations-documentname)" : String
+}
+YAML
+[AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters): 
+    - AssociationParameter
+  [DocumentName](#cfn-ec2-instance-ssmassociations-documentname): String
+Properties
+AssociationParameters 
+The input parameter values to use with the associated SSM document.
+Required: No
+Type: List of AssociationParameter
+Update requires: No interruption
+DocumentName 
+The name of an SSM document to associate with the instance.
+Required: Yes
+Type: String
+Update requires: No interruption

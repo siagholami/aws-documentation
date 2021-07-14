@@ -1,0 +1,11 @@
+Working with UI Slices
+The UI system uses the slices technology, which is a cascaded data management system for entities. This slice technology is similar to what the main Lumberyard Editor uses, but the user interface and some of the requirements are slightly different for the UI system. 
+For more information about component entity system slices, see Working with Slices.
+Topics
+ Creating a UI Slice
+ Instantiating a UI Slice
+ Creating a Cascaded UI Slice
+ Creating a Detached UI Slice
+ Modifying a UI Slice and Pushing Changes
+ Editing Slices in a New Tab
+ Flagging Dynamic Slices

@@ -1,0 +1,2 @@
+Restore an Archived Object Using the REST API
+Amazon S3 provides an API for you to initiate an archive restoration. For more information, see POST Object restore in the Amazon Simple Storage Service API Reference.

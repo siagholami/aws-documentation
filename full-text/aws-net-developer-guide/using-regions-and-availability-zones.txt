@@ -1,0 +1,66 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Seeing your Amazon EC2 Regions and Availability Zones
+Amazon EC2 is hosted in multiple locations worldwide. These locations are composed of Regions and Availability Zones. Each Region is a separate geographic area that has multiple, isolated locations known as Availability Zones.
+Read more about Regions and Availability Zones in the EC2 user guide for Linux or the EC2 user guide for Windows.
+This example shows you how to use the AWS SDK for .NET to get details about the AWS Regions and Availability Zones related to an EC2 client. The application displays lists of the Regions and Availability Zones available to an EC2 client.
+SDK references
+NuGet packages:
+ AWSSDK.EC2
+Programming elements:
+ Namespace Amazon.EC2
+Class AmazonEC2Client
+ Namespace Amazon.EC2.Model
+Class DescribeAvailabilityZonesResponse
+Class DescribeRegionsResponse
+Class AvailabilityZone
+Class Region
+```
+using System;
+using System.Threading.Tasks;
+using Amazon.EC2;
+using Amazon.EC2.Model;
+namespace EC2RegionsAndZones
+{
+  class Program
+  {
+    static async Task Main(string[] args)
+    {
+      Console.WriteLine(
+        "Finding the Regions and Availability Zones available to an EC2 client...");
+  // Create the EC2 client
+  var ec2Client = new AmazonEC2Client();
+
+  // Display the Regions and Availability Zones
+  await DescribeRegions(ec2Client);
+  await DescribeAvailabilityZones(ec2Client);
+}
+
+
+//
+// Method to display Regions
+private static async Task DescribeRegions(IAmazonEC2 ec2Client)
+{
+  Console.WriteLine("\nRegions that are enabled for the EC2 client:");
+  DescribeRegionsResponse response = await ec2Client.DescribeRegionsAsync();
+  foreach (Region region in response.Regions)
+    Console.WriteLine(region.RegionName);
+}
+
+
+//
+// Method to display Availability Zones
+private static async Task DescribeAvailabilityZones(IAmazonEC2 ec2Client)
+{
+  Console.WriteLine("\nAvailability Zones for the EC2 client's region:");
+  DescribeAvailabilityZonesResponse response =
+    await ec2Client.DescribeAvailabilityZonesAsync();
+  foreach (AvailabilityZone az in response.AvailabilityZones)
+    Console.WriteLine(az.ZoneName);
+}
+
+}
+}
+```

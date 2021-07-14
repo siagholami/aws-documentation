@@ -1,0 +1,21 @@
+ContentRedaction
+Settings for content redaction within a transcription job.
+Contents
+RedactionOutput 
+The output transcript file stored in either the default S3 bucket or in a bucket you specify.
+When you choose redacted Amazon Transcribe outputs only the redacted transcript.
+When you choose redacted_and_unredacted Amazon Transcribe outputs both the redacted and unredacted transcripts.
+Type: String
+Valid Values:redacted | redacted_and_unredacted 
+Required: Yes
+RedactionType 
+Request parameter that defines the entities to be redacted. The only accepted value is PII.
+Type: String
+Valid Values:PII 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

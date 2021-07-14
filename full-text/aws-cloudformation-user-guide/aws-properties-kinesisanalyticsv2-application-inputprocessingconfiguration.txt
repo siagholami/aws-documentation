@@ -1,0 +1,20 @@
+AWS::KinesisAnalyticsV2::Application InputProcessingConfiguration
+For an SQL-based Amazon Kinesis Data Analytics application, describes a processor that is used to preprocess the records in the stream before being processed by your application code. Currently, the only input processor available is AWS Lambda.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[InputLambdaProcessor](#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)" : InputLambdaProcessor
+}
+YAML
+[InputLambdaProcessor](#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor): 
+    InputLambdaProcessor
+Properties
+InputLambdaProcessor 
+The InputLambdaProcessor that is used to preprocess the records in the stream before being processed by your application code.
+Required: No
+Type: InputLambdaProcessor
+Update requires: No interruption
+See also
+
+InputProcessingConfiguration in the Amazon Kinesis Data Analytics API Reference 

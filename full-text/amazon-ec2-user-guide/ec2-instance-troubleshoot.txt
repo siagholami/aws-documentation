@@ -1,0 +1,13 @@
+Troubleshooting EC2 instances
+The following documentation can help you troubleshoot problems that you might have with your instance.
+Topics
+ Troubleshooting instance launch issues
+ Troubleshooting connecting to your instance
+ Troubleshooting stopping your instance
+ Troubleshooting terminating (shutting down) your instance
+ Troubleshooting instances with failed status checks
+ Troubleshooting an unreachable instance
+ Booting from the wrong volume
+ Using EC2Rescue for Linux
+ Sending a diagnostic interrupt (for advanced users)
+For additional help with Windows instances, see Troubleshooting Windows Instances in the Amazon EC2 User Guide for Windows Instances.

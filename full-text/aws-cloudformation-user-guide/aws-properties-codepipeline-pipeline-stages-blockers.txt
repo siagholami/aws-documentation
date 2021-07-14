@@ -1,0 +1,26 @@
+AWS::CodePipeline::Pipeline BlockerDeclaration
+Reserved for future use.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-codepipeline-pipeline-stages-blockers-name)" : String,
+  "[Type](#cfn-codepipeline-pipeline-stages-blockers-type)" : String
+}
+YAML
+[Name](#cfn-codepipeline-pipeline-stages-blockers-name): String
+  [Type](#cfn-codepipeline-pipeline-stages-blockers-type): String
+Properties
+Name 
+Reserved for future use.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Update requires: No interruption
+Type 
+Reserved for future use.
+Required: Yes
+Type: String
+Allowed values: Schedule
+Update requires: No interruption

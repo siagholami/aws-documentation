@@ -1,0 +1,21 @@
+
+
+FacetResult
+The facet values for the documents in the response.
+Contents
+DocumentAttributeKey 
+The key for the facet values. This is the same as the DocumentAttributeKey provided in the query.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: [a-zA-Z0-9_][a-zA-Z0-9_-]* 
+Required: No
+DocumentAttributeValueCountPairs 
+An array of key/value pairs, where the key is the value of the attribute and the count is the number of documents that share the key value.
+Type: Array of DocumentAttributeValueCountPair objects
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

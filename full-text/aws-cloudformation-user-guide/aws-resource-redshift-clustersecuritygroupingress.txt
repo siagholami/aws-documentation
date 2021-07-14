@@ -1,0 +1,65 @@
+AWS::Redshift::ClusterSecurityGroupIngress
+Adds an inbound (ingress) rule to an Amazon Redshift security group. Depending on whether the application accessing your cluster is running on the Internet or an Amazon EC2 instance, you can authorize inbound access to either a Classless Interdomain Routing (CIDR)/Internet Protocol (IP) range or to an Amazon EC2 security group. You can add as many as 20 ingress rules to an Amazon Redshift security group.
+If you authorize access to an Amazon EC2 security group, specify EC2SecurityGroupName and EC2SecurityGroupOwnerId. The Amazon EC2 security group and Amazon Redshift cluster must be in the same AWS Region. 
+If you authorize access to a CIDR/IP address range, specify CIDRIP. For an overview of CIDR blocks, see the Wikipedia article on Classless Inter-Domain Routing. 
+You must also associate the security group with a cluster so that clients running on these IP addresses or the EC2 instance are authorized to connect to the cluster. For information about managing security groups, go to Working with Security Groups in the Amazon Redshift Cluster Management Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Redshift::ClusterSecurityGroupIngress",
+  "Properties" : {
+      "[CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip)" : String,
+      "[ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)" : String,
+      "[EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)" : String,
+      "[EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)" : String
+    }
+}
+YAML
+Type: AWS::Redshift::ClusterSecurityGroupIngress
+Properties: 
+  [CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip): String
+  [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname): String
+  [EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid): String
+Properties
+CIDRIP 
+The IP range to be added the Amazon Redshift security group.
+Required: No
+Type: String
+Update requires: Replacement
+ClusterSecurityGroupName 
+The name of the security group to which the ingress rule is added.
+Required: Yes
+Type: String
+Update requires: Replacement
+EC2SecurityGroupName 
+The EC2 security group to be added the Amazon Redshift security group.
+Required: No
+Type: String
+Update requires: Replacement
+EC2SecurityGroupOwnerId 
+The AWS account number of the owner of the security group specified by the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value. 
+Example: 111122223333 
+Conditional. If you specify the EC2SecurityGroupName property, you must specify this property.
+Required: No
+Type: String
+Update requires: Replacement
+Examples
+Ingress Rules
+The following snippet describes a ingress rules for an Amazon Redshift cluster security group.
+JSON
+"myClusterSecurityGroupIngressIP" : {
+  "Type": "AWS::Redshift::ClusterSecurityGroupIngress",
+  "Properties": {
+    "ClusterSecurityGroupName" : {"Ref":"myClusterSecurityGroup"},
+    "CIDRIP" : "10.0.0.0/16"
+  }
+}
+YAML
+myClusterSecurityGroupIngressIP: 
+  Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+  Properties: 
+    ClusterSecurityGroupName: 
+    Ref: "myClusterSecurityGroup"
+    CIDRIP: "10.0.0.0/16"

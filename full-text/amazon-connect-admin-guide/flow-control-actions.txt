@@ -1,0 +1,16 @@
+Flow control actions in the Amazon Connect Flow language
+These actions don't have any side effects and are only used to determine the path through a flow. Certain data may not be available (such as contact data, if the action is determining its path based on contact data). These actions generally work in every circumstance.
+A flow control action is an action that:
+ Does not need a contact or a participant to succeed.
+ Controls the behavior of the flow, by either enabling or disabling flow behavior (such as logging) or by choosing a branch when the flow runs.
+Topics
+ CheckHoursOfOperation
+ CheckMetricData
+ Compare
+ DistributeByPercentage
+ EndFlowExecution
+ GetMetricData
+ Loop
+ TransferToFlow
+ UpdateFlowLoggingBehavior
+ Wait

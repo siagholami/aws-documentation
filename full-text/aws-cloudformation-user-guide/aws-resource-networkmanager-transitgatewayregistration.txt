@@ -1,0 +1,52 @@
+AWS::NetworkManager::TransitGatewayRegistration
+Registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::NetworkManager::TransitGatewayRegistration",
+  "Properties" : {
+      "[GlobalNetworkId](#cfn-networkmanager-transitgatewayregistration-globalnetworkid)" : String,
+      "[TransitGatewayArn](#cfn-networkmanager-transitgatewayregistration-transitgatewayarn)" : String
+    }
+}
+YAML
+Type: AWS::NetworkManager::TransitGatewayRegistration
+Properties: 
+  [GlobalNetworkId](#cfn-networkmanager-transitgatewayregistration-globalnetworkid): String
+  [TransitGatewayArn](#cfn-networkmanager-transitgatewayregistration-transitgatewayarn): String
+Properties
+GlobalNetworkId 
+The ID of the global network.
+Required: Yes
+Type: String
+Update requires: Replacement
+TransitGatewayArn 
+The Amazon Resource Name (ARN) of the transit gateway.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the global network and the ARN of the transit gateway. For example: global-network-01231231231231231|arn:aws:ec2:us-west-2:123456789012:transit-gateway/tgw-123abc05e04123abc.
+For more information about using the Ref function, see Ref.
+Examples
+Transit Gateway Registration
+The following example registers a transit gateway in a global network.
+JSON
+{
+    "Type": "AWS::NetworkManager::TransitGatewayRegistration",
+    "Properties": {
+        "GlobalNetworkId": {
+            "Ref": "GlobalNetwork"
+        },
+        "TransitGatewayArn": {
+            "Fn::Sub": "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:transit-gateway/${TransitGateway}"
+        }
+    }
+}
+YAML
+Type: AWS::NetworkManager::TransitGatewayRegistration
+Properties:
+  GlobalNetworkId: !Ref GlobalNetwork
+  TransitGatewayArn: !Sub 'arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:transit-gateway/${TransitGateway}'

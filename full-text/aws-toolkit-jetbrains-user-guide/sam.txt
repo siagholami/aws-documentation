@@ -1,0 +1,7 @@
+Working with AWS serverless applications by using the AWS Toolkit for JetBrains
+The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS serverless applications in an AWS account.
+Topics
+ Creating an application
+ Deploying an application
+ Changing (updating) application settings
+ Deleting an application

@@ -1,0 +1,36 @@
+How do I manage the replication rules for an S3 Bucket?
+Replication is the automatic, asynchronous copying of objects across buckets in the same or different AWS Regions. It replicates newly created objects and object updates from a source bucket to a specified destination bucket. 
+You use the Amazon S3 console to add replication rules to the source bucket. Replication rules define the source bucket objects to replicate and the destination bucket where the replicated objects are stored. For more information about replication, see Replication in the Amazon Simple Storage Service Developer Guide.
+You can manage replication rules on the Replication page. You can add, view, enable, disable, delete, and change the priority of the replication rules. For information about adding replication rules to a bucket, see How do I add a replication rule to an S3 bucket?.
+To manage the replication rules for an S3 bucket
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Bucket name list, choose the name of the bucket that you want.
+
+
+
+Choose Management, and then choose Replication.
+
+
+
+You change the replication rules in the following ways.
+    To change settings that affect all the replication rules in the bucket, choose Edit global settings. 
+
+You can change the destination bucket, and the IAM role. If needed, you can copy the required bucket policy for cross-account destination buckets. 
+
+    To change a replication rule, select the rule and choose Edit, which starts the Replication wizard to help you make the change. For information about using the wizard, see How do I add a replication rule to an S3 bucket?.
+
+    To enable or disable a replication rule, select the rule, choose More, and in the drop-down list, choose Enable rule or Disable rule. You can also disable, enable, or delete all the rules in the bucket from the More drop-down list.
+
+    To change the rule priorities, choose Edit priorities. You can then change the priority for each rule under the Priority column heading. Choose Save to save your changes.
+You set rule priorities to avoid conflicts caused by objects that are included in the scope of more than one rule. In the case of overlapping rules, Amazon S3 uses the rule priority to determine which rule to apply. The higher the number, the higher the priority. For more information about rule priority, see Replication Configuration Overview in the Amazon Simple Storage Service Developer Guide.
+
+
+
+More info
+
+How do I add a replication rule to an S3 bucket?
+Replication in the Amazon Simple Storage Service Developer Guide

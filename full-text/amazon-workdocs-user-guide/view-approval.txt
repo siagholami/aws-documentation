@@ -1,0 +1,16 @@
+Viewing completed approval requests
+You can still view approval requests after they have been approved or rejected.
+To view a completed approval request
+
+
+From the Amazon WorkDocs site, choose Apps.
+
+
+For Approvals, choose Launch.
+
+
+(Optional) Choose Filters to apply filters which show only the approval requests that match the filters you apply.
+
+
+Choose the approval request to open for viewing.
+

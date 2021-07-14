@@ -1,0 +1,71 @@
+[ebs] section
+Topics
+ shared_dir
+ ebs_snapshot_id
+ volume_type
+ volume_size
+ volume_iops
+ encrypted
+ ebs_kms_key_id
+ ebs_volume_id
+Defines Amazon EBS volume configuration settings for volumes that are mounted on the head node and shared via NFS to the compute nodes.
+The format is [ebs ebs-name]. ebs-name must start with a letter, contain no more than 30 characters, and only contain letters, numbers, hyphens (-), and underscores (_).
+```
+[ebs custom1]
+shared_dir = vol1
+ebs_snapshot_id = snap-xxxxx
+volume_type = io1
+volume_iops = 200
+...
+[ebs custom2]
+shared_dir = vol2
+...
+...
+```
+shared_dir
+Specifies the path where the shared Amazon EBS volume is mounted.
+This parameter is required when using multiple Amazon EBS volumes.
+When using one (1) Amazon EBS volume, this option overwrites the shared_dir that is specified under the [cluster] section. In the following example, the volume mounts to /vol1.
+shared_dir = vol1
+Update policy: If this setting is changed, the update is not allowed.
+ebs_snapshot_id
+Defines the Amazon EBS snapshot Id, if you are using a snapshot as the source for the volume.
+The default value is NONE.
+ebs_snapshot_id = snap-xxxxx
+Update policy: If this setting is changed, the update is not allowed.
+volume_type
+Specifies the Amazon EBS volume type of the volume that you want to launch.
+Valid options are:
+ gp2
+ io1
+ st1
+ sc1
+The default value is gp2.
+volume_type = io1
+Update policy: If this setting is changed, the update is not allowed.
+volume_size
+Specifies the size of the volume to be created, in GiB (if not using a snapshot).
+The default value is 20.
+volume_size = 20
+Update policy: If this setting is changed, the update is not allowed.
+volume_iops
+Defines the number of IOPS for io1-type volumes.
+The default value is 100.
+volume_iops = 200
+Update policy: This setting can be changed during an update.
+encrypted
+Specifies whether the Amazon EBS volume is encrypted. Note: Do not use with snapshots.
+The default value is false.
+encrypted = false
+Update policy: If this setting is changed, the update is not allowed.
+ebs_kms_key_id
+Specifies a custom AWS KMS key to use for encryption.
+This parameter must be used together with encrypted = true. It also must have a custom ec2_iam_role.
+For more information, see Disk encryption with a custom KMS Key.
+ebs_kms_key_id = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+Update policy: If this setting is changed, the update is not allowed.
+ebs_volume_id
+Defines the volume Id of an existing Amazon EBS volume to attach to the head node.
+The default value is NONE.
+ebs_volume_id = vol-xxxxxx
+Update policy: If this setting is changed, the update is not allowed.

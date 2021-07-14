@@ -1,0 +1,14 @@
+Getting Started with the Amazon Rekognition Custom Labels Console
+These Getting Started instructions show you how to create and train an Amazon Rekognition Custom Labels model by using the Amazon Rekognition Custom Labels console. It also shows you how to start the model and use it to detect custom labels in new images. 
+Topics
+ Step 1: Prepare Your Images
+ Step 2: Create Your First Project
+ Step 3: Create a Dataset
+ Step 4: Create Labels
+ Step 5: Identify Scenes and Concepts with Image-Level Labels
+ Step 6: Identify Objects with Bounding Boxes
+ Step 7: Train Your Model
+ Step 8: Evaluate Your Model
+ Step 9: Start Your Model
+ Step 10: Analyze Images with Your Model
+ Step 11: Stop Your Model

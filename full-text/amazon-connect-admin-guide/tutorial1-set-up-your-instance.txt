@@ -1,0 +1,7 @@
+Tutorial 1: Set up your Amazon Connect instance
+You can have multiple instances of Amazon Connect. Each instance contains all the resources related to your contact center, such as phone numbers, agent accounts, and queues.
+In this tutorial, you open Amazon Connect, create an instance of Amazon Connect, and claim a phone number that you can use for testing.
+Topics
+ Step 1: Launch Amazon Connect
+ Step 2: Create an instance
+ Step 3: Claim a phone number

@@ -1,0 +1,8 @@
+AppConfig resource type reference
+Resource types
+ AWS::AppConfig::Application
+ AWS::AppConfig::ConfigurationProfile
+ AWS::AppConfig::Deployment
+ AWS::AppConfig::DeploymentStrategy
+ AWS::AppConfig::Environment
+ AWS::AppConfig::HostedConfigurationVersion

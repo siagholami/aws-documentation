@@ -1,0 +1,138 @@
+Modifying a role (AWS CLI)
+You can use the AWS Command Line Interface to modify a role. To change the set of tags on a role, see Managing tags on IAM entities (console).
+Topics
+ Modifying a role trust policy (AWS CLI)
+ Modifying a role permissions policy (AWS CLI)
+ Modifying a role description (AWS CLI)
+ Modifying a role maximum session duration (AWS CLI)
+ Modifying a role permissions boundary (AWS CLI)
+Modifying a role trust policy (AWS CLI)
+To change who can assume a role, you must modify the role's trust policy. You cannot modify the trust policy for a service-linked role.
+Note
+If a user is listed as the principal in a role's trust policy but cannot assume the role, check the user's permissions boundary. If a permissions boundary is set for the user, then it must allow the sts:AssumeRole action.
+To modify a role trust policy (AWS CLI)
+
+
+(Optional) If you don't know the name of the role that you want to modify, run the following command to list the roles in your account:
+    aws iam list-roles
+
+
+(Optional) To view the current trust policy for a role, run the following command:
+    aws iam get-role
+
+
+To modify the trusted principals that can access the role, create a text file with the updated trust policy. You can use any text editor to construct the policy.
+
+
+For example, the following trust policy shows how to reference two AWS accounts in the Principal element. This allows users within two separate AWS accounts to assume this role.
+{
+       "Version": "2012-10-17",
+       "Statement": {
+           "Effect": "Allow",
+           "Principal": {"AWS": [
+               "arn:aws:iam::111122223333:root",
+               "arn:aws:iam::444455556666:root"
+           ]},
+           "Action": "sts:AssumeRole"
+       }
+   }
+If you specify a principal in another account, adding an account to the trust policy of a role is only half of establishing the cross-account trust relationship. By default, no users in the trusted accounts can assume the role. The administrator for the newly trusted account must grant the users the permission to assume the role. To do that, the administrator must create or edit a policy that is attached to the user to allow the user access to the sts:AssumeRole action. For more information, see the following procedure or Granting a user permissions to switch roles.
+
+To use the file that you just created to update the trust policy, run the following command:
+    aws iam update-assume-role-policy
+
+To allow users in a trusted external account to use the role (AWS CLI)
+For more information and detail about this procedure, see Granting a user permissions to switch roles.
+
+Create a JSON file that contains a permissions policy that grants permissions to assume the role. For example, the following policy contains the minimum necessary permissions:
+
+{
+     "Version": "2012-10-17",
+     "Statement": {
+       "Effect": "Allow",
+       "Action": "sts:AssumeRole",
+       "Resource": "arn:aws:iam::ACCOUNT-ID-THAT-CONTAINS-ROLE:role/ROLE-NAME"
+     }
+   }
+Replace the ARN in the statement with the ARN of the role that the user can assume.
+
+Run the following command to upload the JSON file that contains the trust policy to IAM:
+    aws iam create-policy
+
+The output of this command includes the ARN of the policy. Make a note of this ARN because you will need it in a later step. 
+
+
+Decide which user or group to attach the policy to. If you don't know the name of the intended user or group, use one of the following commands to list the users or groups in your account:
+    aws iam list-users
+    aws iam list-groups
+
+
+Use one of the following commands to attach the policy that you created in the previous step to the user or group:
+    aws iam attach-user-policy
+    aws iam attach-group-policy
+
+
+Modifying a role permissions policy (AWS CLI)
+To change the permissions allowed by the role, modify the role's permissions policy (or policies). You cannot modify the permissions policy for a service-linked role in IAM. You might be able to modify the permissions policy within the service that depends on the role. To check whether a service supports this feature, see AWS services that work with IAM and look for the services that have Yes in the Service-linked roles column. Choose a Yes with a link to view the service-linked role documentation for that service.
+To change the permissions allowed by a role (AWS CLI)
+
+
+(Optional) To view the current permissions associated with a role, run the following commands:
+
+
+aws iam list-role-policies to list inline policies
+
+
+aws iam list-attached-role-policies to list managed policies
+
+
+The command to update permissions for the role differs depending on whether you are updating a managed policy or an inline policy.
+
+
+To update a managed policy, run the following command to create a new version of the managed policy:
+    aws iam create-policy-version
+To update an inline policy, run the following command:
+    aws iam put-role-policy
+Modifying a role description (AWS CLI)
+To change the description of the role, modify the description text.
+To change the description of a role (AWS CLI)
+
+
+(Optional) To view the current description for a role, run the following command:
+    aws iam get-role
+
+
+To update a role's description, run the following command with the description parameter:
+    aws iam update-role
+
+
+Modifying a role maximum session duration (AWS CLI)
+To specify the maximum session duration setting for roles that are assumed using the AWS CLI or API, modify the maximum session duration setting's value. This setting can have a value from 1 hour to 12 hours. If you do not specify a value, the default maximum of 1 hour is applied. This setting does not limit sessions assumed by AWS services.
+Note
+Anyone who assumes the role from the AWS CLI or API can use the duration-seconds CLI parameter or the DurationSeconds API parameter to request a longer session. The MaxSessionDuration setting determines the maximum duration of the role session that can be requested using the DurationSeconds parameter. If users don't specify a value for the DurationSeconds parameter, their security credentials are valid for one hour.
+To change the maximum session duration setting for roles that are assumed using the AWS CLI (AWS CLI)
+
+
+(Optional) To view the current maximum session duration setting for a role, run the following command:
+    aws iam get-role
+
+
+To update a role's maximum session duration setting, run the following command with the max-sessionduration CLI parameter or the MaxSessionDuration API parameter:
+    aws iam update-role
+
+
+Your changes don't take effect until the next time someone assumes this role. To learn how to revoke existing sessions for this role, see Revoking IAM role temporary security credentials.
+Modifying a role permissions boundary (AWS CLI)
+To change the maximum permissions allowed for a role, modify the role's permissions boundary.
+To change the managed policy used to set the permissions boundary for a role (AWS CLI)
+
+
+(Optional) To view the current permissions boundary for a role, run the following command: 
+    aws iam get-role
+
+
+To use a different managed policy to update the permissions boundary for a role, run the following command: 
+    aws iam put-role-permissions-boundary
+
+
+A role can have only one managed policy set as a permissions boundary. If you change the permissions boundary, you change the maximum permissions allowed for a role.

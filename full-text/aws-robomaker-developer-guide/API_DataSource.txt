@@ -1,0 +1,25 @@
+DataSource
+Information about a data source.
+Contents
+name 
+The name of the data source.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Pattern: [a-zA-Z0-9_\-]* 
+Required: No
+s3Bucket 
+The S3 bucket where the data files are located.
+Type: String
+Length Constraints: Minimum length of 3. Maximum length of 63.
+Pattern: [a-z0-9][a-z0-9.\-]*[a-z0-9] 
+Required: No
+s3Keys 
+The list of S3 keys identifying the data source files.
+Type: Array of S3KeyOutput objects
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

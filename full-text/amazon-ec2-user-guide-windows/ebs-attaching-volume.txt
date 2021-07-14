@@ -1,0 +1,38 @@
+Attaching an Amazon EBS volume to an instance
+You can attach an available EBS volume to one or more of your instances that is in the same Availability Zone as the volume.
+Prerequisites
+ Determine how many volumes you can attach to your instance. For more information, see Instance volume limits.
+ If a volume is encrypted, it can only be attached to an instance that supports Amazon EBS encryption. For more information, see Supported instance types.
+ If a volume has an AWS Marketplace product code:
+   The volume can only be attached to a stopped instance.
+   You must be subscribed to the AWS Marketplace code that is on the volume.
+   The configuration (instance type, operating system) of the instance must support that specific AWS Marketplace code. For example, you cannot take a volume from a Windows instance and attach it to a Linux instance.
+   AWS Marketplace product codes are copied from the volume to the instance.
+To attach an EBS volume to an instance using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Elastic Block Store, Volumes.
+
+
+Select an available volume and choose Actions, Attach Volume.
+
+
+For Instance, start typing the name or ID of the instance. Select the instance from the list of options (only instances that are in the same Availability Zone as the volume are displayed).
+
+
+For Device, you can keep the suggested device name, or type a different supported device name. For more information, see Device naming on Windows instances.
+
+
+Choose Attach.
+
+
+Connect to your instance and mount the volume. For more information, see Making an Amazon EBS volume available for use on Windows.
+
+
+To attach an EBS volume to an instance using the command line
+You can use one of the following commands. For more information about these command line interfaces, see Accessing Amazon EC2.
+ attach-volume (AWS CLI)
+ Add-EC2Volume (AWS Tools for Windows PowerShell)

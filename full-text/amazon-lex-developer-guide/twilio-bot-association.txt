@@ -1,0 +1,103 @@
+Integrating an Amazon Lex Bot with Twilio Programmable SMS
+This exercise provides instructions for integrating an Amazon Lex bot with the Twilio simple messaging service (SMS). You perform the following steps:
+
+
+Create an Amazon Lex bot
+
+
+Integrate Twilio programmable SMS with your bot Amazon Lex
+
+
+Engage in an interaction with the Amazon Lex bot by testing the setup using the SMS service on your mobile phone
+
+
+Test the integration 
+
+
+Topics
+ Step 1: Create an Amazon Lex Bot
+ Step 2: Create a Twilio SMS Account
+ Step 3: Integrate the Twilio Messaging Service Endpoint with the Amazon Lex Bot
+ Step 4: Test the Integration
+Step 1: Create an Amazon Lex Bot
+If you don't already have an Amazon Lex bot, create and deploy one. In this topic, we assume that you are using the bot that you created in Getting Started Exercise 1. However, you can use any of the example bots provided in this guide. For Getting Started Exercise 1, see Exercise 1: Create an Amazon Lex Bot Using a Blueprint (Console).
+
+
+Create an Amazon Lex bot. For instructions, see Exercise 1: Create an Amazon Lex Bot Using a Blueprint (Console). 
+
+
+Deploy the bot and create an alias. For instructions, see Exercise 3: Publish a Version and Create an Alias.
+
+
+Step 2: Create a Twilio SMS Account
+Sign up for a Twilio account and record the following account information: 
+ ACCOUNT SID 
+ AUTH TOKEN 
+For sign-up instructions, see https://www.twilio.com/console.
+Step 3: Integrate the Twilio Messaging Service Endpoint with the Amazon Lex Bot
+To integrate Twilio with your Amazon Lex bot
+
+
+To associate the Amazon Lex bot with your Twilio programmable SMS endpoint, activate bot channel association in the Amazon Lex console. When the bot channel association has been activated, Amazon Lex returns a callback URL. Record this callback URL because you need it later.
+
+
+Sign in to the AWS Management Console and open the Amazon Lex console at https://console.aws.amazon.com/lex/.
+
+
+Choose the Amazon Lex bot that you created in Step 1.
+
+
+Choose the Channels tab.
+
+
+In the Chatbots section, choose Twilio SMS. 
+
+
+On the Twilio SMS page, provide the following information:
+
+Type a name. For example, BotTwilioAssociation.
+Choose "aws/lex" from KMS key.
+For Alias, choose the bot alias.
+For Authentication Token, type the AUTH TOKEN for your Twilio account. 
+For Account SID, type the ACCOUNT SID for your Twilio account.
+
+
+
+
+Choose Activate. 
+The console creates the bot channel association and returns a callback URL. Record this URL.
+
+
+On the Twilio console, connect the Twilio SMS endpoint to the Amazon Lex bot.
+
+
+Sign in to the Twilio console at https://www.twilio.com/console. 
+
+
+If you don't have a Twilio SMS endpoint, create it.
+
+
+Update the Inbound Settings configuration of the messaging service by setting the REQUEST URL value to the callback URL that Amazon Lex provided in the preceding step.
+
+
+Step 4: Test the Integration
+Use your mobile phone to test the integration between Twilio SMS and your bot.
+To test integration
+
+
+Sign in to the Twilio console at https://www.twilio.com/console and do the following:
+
+
+Verify that you have a Twilio number associated with the messaging service under Manage Numbers. 
+You send messages to this number and engage in SMS interaction with the Amazon Lex bot from your mobile phone. 
+
+
+Verify that your mobile phone is listed as Verified Caller ID. 
+If it isn't, follow instructions on the Twilio console to enable the mobile phone that you plan to use for testing. 
+Now you can use your mobile phone to send messages to the Twilio SMS endpoint, which is mapped to the Amazon Lex bot. 
+
+
+Using your mobile phone, send messages to the Twilio number. 
+
+
+The Amazon Lex bot responds. If you created the bot using Getting Started Exercise 1, you can use the example conversations provided in that exercise. For more information, see Step 4: Add the Lambda Function as Code Hook (Console).

@@ -1,0 +1,48 @@
+DropNullFields Class
+Drops all null fields in a DynamicFrame whose type is NullType. These are fields with missing or null values in every record in the DynamicFrame data set.
+Methods
+
+__call__
+apply
+name
+describeArgs
+describeReturn
+describeTransform
+describeErrors
+describe
+
+__call__(frame, transformation_ctx = "", info = "", stageThreshold = 0, totalThreshold = 0)
+Drops all null fields in a DynamicFrame whose type is NullType. These are fields with missing or null values in every record in the DynamicFrame data set.
+ frame – The DynamicFrame in which to drop null fields (required).
+ transformation_ctx – A unique string that is used to identify state information (optional).
+ info – A string associated with errors in the transformation (optional).
+ stageThreshold – The maximum number of errors that can occur in the transformation before it errors out (optional; the default is zero).
+ totalThreshold – The maximum number of errors that can occur overall before processing errors out (optional; the default is zero).
+Returns a new DynamicFrame with no null fields.
+apply(cls, *args, **kwargs)
+
+cls – cls
+
+name(cls)
+
+cls – cls
+
+describeArgs(cls)
+
+cls – cls
+
+describeReturn(cls)
+
+cls – cls
+
+describeTransform(cls)
+
+cls – cls
+
+describeErrors(cls)
+
+cls – cls
+
+describe(cls)
+
+cls – cls

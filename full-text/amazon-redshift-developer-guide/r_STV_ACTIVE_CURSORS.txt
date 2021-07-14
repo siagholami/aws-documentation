@@ -1,0 +1,5 @@
+STV_ACTIVE_CURSORS
+STV_ACTIVE_CURSORS displays details for currently open cursors. For more information, see DECLARE. 
+STV_ACTIVE_CURSORS is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views. A user can only view cursors opened by that user. A superuser can view all cursors.
+Table columns
+[See the AWS documentation website for more details]

@@ -1,0 +1,10 @@
+Using the AWS Command Line Interface for multipart upload
+The following sections in the AWS Command Line Interface describe the operations for multipart upload. 
+ Initiate Multipart Upload
+ Upload Part
+ Upload Part (Copy)
+ Complete Multipart Upload
+ Abort Multipart Upload
+ List Parts
+ List Multipart Uploads
+You can also use the REST API to make your own REST requests, or you can use one the SDKs we provide. For more information about the REST API, see Using the REST API for multipart upload. For more information about the SDKs, see API support for multipart upload.

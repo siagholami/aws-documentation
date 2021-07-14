@@ -1,0 +1,16 @@
+Contact actions in the Amazon Connect Flow language
+Contact actions are attempted only for flows that run in context of a contact. They generally result in contact data being manipulated in some way.
+Topics
+ CompleteOutboundCall
+ DequeueContactAndTransferToQueue
+ TransferContactToAgent
+ TransferContactToQueue
+ UpdateContactAttributes
+ UpdateContactCallbackNumber
+ UpdateContactEventHooks
+ UpdateContactMediaStreamingBehavior
+ UpdateContactRecordingBehavior
+ UpdateContactRoutingBehavior
+ UpdateContactTargetQueue
+ UpdateContactTextToSpeechVoice
+ UpdatePreviousContactParticipantState

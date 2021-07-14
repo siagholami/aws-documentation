@@ -1,0 +1,28 @@
+AWS::IoTAnalytics::Pipeline Datastore
+The datastore activity that specifies where to store the processed data.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DatastoreName](#cfn-iotanalytics-pipeline-datastore-datastorename)" : String,
+  "[Name](#cfn-iotanalytics-pipeline-datastore-name)" : String
+}
+YAML
+[DatastoreName](#cfn-iotanalytics-pipeline-datastore-datastorename): String
+  [Name](#cfn-iotanalytics-pipeline-datastore-name): String
+Properties
+DatastoreName 
+The name of the data store where processed messages are stored.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z0-9_]$
+Update requires: No interruption
+Name 
+The name of the datastore activity.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption

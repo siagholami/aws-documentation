@@ -1,0 +1,377 @@
+Amazon WorkSpaces Android Client Application
+The following information will help you get started with the Amazon WorkSpaces Android client application.
+Topics
+ Requirements
+ Setup and Installation
+ Connecting to Your WorkSpace
+ Gestures
+ Sidebar Menu
+ Keyboard
+ Trackpad Mode
+ Disconnect
+ Clipboard Redirection
+ Release Notes
+Requirements
+The Amazon WorkSpaces Android client application requires the following:
+ Amazon Kindle Fire tablets released after 2012 with Fire OS 4.0 and later.
+ Android tablets and phones with Android OS 4.4 and later. The client application works on most devices with Android version 4.4 or later, but some devices might not be compatible. If you have problems with a device, you can report the problem on the Amazon WorkSpaces forum.
+Note
+Versions of the Android client application after 2.4.15 require devices with Android OS 9 and later.
+ Chromebooks that support installing Android applications. Chromebooks launched in 2019 or later support installing Android applications. However, some Chromebooks launched before 2019 might not support installing Android applications.
+We recommend using the Android client application if your Chromebook supports it. To determine whether your Chromebook is compatible with the Amazon WorkSpaces Android client application or whether it requires the Amazon WorkSpaces Chromebook client application, see the installation steps for Chromebooks launched before 2019.
+Setup and Installation
+To download and install the client application, complete the following procedure.
+(For devices other than Chromebooks launched before 2019) To download and install the client application
+
+
+On your device, open https://clients.amazonworkspaces.com/ and choose the link for your device (either Android/Chromebook or Fire Tablet).
+
+
+Download and install the application.
+
+
+Verify that the Amazon WorkSpaces client application icon appears on one of the device desktops.
+
+
+(For Chromebooks launched before 2019) To download and install the client application
+
+
+Determine whether your Chromebook supports Android applications by checking its status on the list of  Chrome OS Systems Supporting Android Apps.
+
+
+Depending on your Chromebook's status, do one of the following:
+    If your Chromebook's status is marked as Stable Channel, do the following:
+
+
+Follow the instructions in  Install Android apps on your Chromebook to enable your Chromebook to install Android applications. 
+Note
+In some cases, your WorkSpaces administrator might need to enable your Chromebook to install Android applications. If you are unable to install the Android client application on your Chromebook, contact your WorkSpaces administrator for assistance.
+
+
+On your Chromebook, open https://clients.amazonworkspaces.com/ and choose Android/Chromebook.
+
+
+Download and install the application.
+
+
+Verify that the Amazon WorkSpaces client application icon appears on one of the device desktops.
+    If your Chromebook's status is marked as Planned or if your Chromebook does not appear on the list, do the following:
+
+
+Determine whether your Chromebook meets the requirements of the Amazon WorkSpaces Chromebook client application:
+
+The Amazon WorkSpaces Chromebook client application requires a Chromebook with Chrome OS version 45 or later. The client application works on most Chromebooks with version 45 or later, but some devices might not be compatible. If you have problems with a device, you can report the problem on the Amazon WorkSpaces forum.
+To check the version of Chrome OS on your Chromebook, go to the status area, where your account picture appears. Choose Settings, About Chrome OS.
+
+
+
+If your Chromebook is running Chrome OS version 45 or later, open the link to the  Amazon WorkSpaces Chromebook client application on the Chrome Web Store.
+
+
+Download and install the application.
+
+
+Verify that the Amazon WorkSpaces client application icon appears in your Chromebook search.
+
+
+
+
+Connecting to Your WorkSpace
+To connect to your WorkSpace, complete the following procedure.
+To connect to your WorkSpace
+
+
+On your device, open the Amazon WorkSpaces client application.
+
+
+The first time that you run the client application, you are prompted for your registration code, which is contained in your welcome email. The Amazon WorkSpaces client application uses the registration code and user name to identify which WorkSpace to connect to. When you launch the client application later, the same registration code is used. You can enter a different registration code by launching the client application and tapping Enter new registration code on the login screen.
+
+
+Enter your user name and password and tap Sign In. If your Amazon WorkSpaces administrator has enabled multi-factor authentication for your organization's WorkSpaces, you are prompted for a passcode to complete your login. Your Amazon WorkSpaces administrator will provide more information about how to obtain your passcode.
+
+
+If your Amazon WorkSpaces administrator has not disabled the "Remember Me" feature, you are prompted to save your credentials securely so that you can connect to your WorkSpace easily in the future. Your credentials will be securely cached up to the maximum lifetime of your Kerberos ticket.
+
+
+After the client application connects to your WorkSpace, your WorkSpace desktop is displayed.
+Gestures
+The following gestures are supported for the Amazon WorkSpaces Android client application.
+Single tap
+Equivalent to a single click in Windows.
+Double tap
+Equivalent to a double-click in Windows.
+Two finger single tap
+Equivalent to a right-click in Windows.
+Two finger double tap
+Toggles the on-screen keyboard display. If a keyboard is attached to the device, a set of keyboard shortcuts is shown instead.
+Swipe from left
+Displays the sidebar menu. For more information, see Sidebar Menu.
+Two finger scroll
+Scrolls vertically.
+Two finger pinch
+Zooms display in or out.
+Two finger pan
+Pans the desktop when zoomed in.
+Sidebar Menu
+The sidebar menu is displayed by swiping from the left side of the screen.
+
+The sidebar menu provides quick access to the following features:
+ Trackpad Mode – Turns the trackpad on or off. For more information, see Trackpad Mode. 
+ Show Keyboard – Toggles the display of the on-screen keyboard. If a keyboard is already attached, only a row of keyboard shortcuts is displayed. 
+ Settings – Displays controls to change the screen resolution or the scroll direction. 
+ Connection Check – Displays the connection status.
+ Windows Menu – Displays the Windows Start Menu. 
+ Disconnect – Disconnects the client application without logging off.
+Keyboard
+To toggle the display of the on-screen keyboard, double-tap with two fingers anywhere on the screen. Special key combinations are displayed in the top row of the keyboard.
+Trackpad Mode
+The trackpad mode is set using the sidebar menu.
+Trackpad Mode Off
+When trackpad mode is off, the mouse cursor is placed wherever you tap your finger. In this mode, a single tap is equivalent to a left mouse button click and a two finger single tap is equivalent to a right mouse button click.
+Trackpad Mode On
+When trackpad mode is on, the mouse cursor tracks the movement of your finger on the screen. In this mode, simulate a left mouse button click by tapping the left mouse button icon.
+
+Simulate a right mouse button click by tapping the right mouse button icon.
+
+Disconnect
+To disconnect the Android client, display the sidebar menu, tap the disconnect icon, and tap Disconnect. You can also log off of the WorkSpace, which disconnects the client.
+Clipboard Redirection
+The clipboard supports copy and paste of text and HTML content only.
+Release Notes
+Android Client Application Release Notes
+The following table describes the changes to each release of the Android client application.
+
+
+
+Release
+Date
+Changes
+
+
+
+
+2.4.17
+February 24, 2020
+Minor bug fixes and enhancements
+
+
+2.4.16
+January 30, 2020
+Adds 64-bit support for Android 9 and 10
+
+
+2.4.15
+June 24, 2019
+Adds support for mouse cursor contextual shape changes
+
+
+2.4.14
+
+[See the AWS documentation website for more details]
+
+
+2.4.13
+
+Minor fixes
+
+
+2.4.12
+
+[See the AWS documentation website for more details]
+
+
+2.4.11
+
+[See the AWS documentation website for more details]
+
+
+2.4.10
+
+Improves support for Japanese keyboard layouts
+
+
+2.4.9
+
+Adds support for Samsung Galaxy Note 9
+
+
+2.4.7
+
+[See the AWS documentation website for more details]
+
+
+2.4.6
+
+Adds support for uniform resource identifiers (URIs), which enable login orchestration
+
+
+2.4.5
+
+[See the AWS documentation website for more details]
+
+
+2.4.4
+
+Minor improvements to session provision handling
+
+
+2.4.2
+
+[See the AWS documentation website for more details]
+
+
+2.4.0
+
+[See the AWS documentation website for more details]
+
+
+2.3.4
+
+[See the AWS documentation website for more details]
+
+
+2.3.3
+
+Localization enhancements
+
+
+2.2.0
+
+[See the AWS documentation website for more details]
+
+
+2.1.0
+
+[See the AWS documentation website for more details]
+
+
+2.0.0
+
+[See the AWS documentation website for more details]
+
+
+1.0.15
+
+[See the AWS documentation website for more details]
+
+
+1.0.11
+
+[See the AWS documentation website for more details]
+
+
+1.0.10
+
+[See the AWS documentation website for more details]
+
+
+1.0.9
+
+Improves the login experience
+
+
+1.0
+
+Initial release
+
+
+
+Chromebook Client Application Release Notes
+The following table describes the changes to each release of the Chromebook client application.
+Note
+Version 2.4.13 is the final release of the Amazon WorkSpaces Chromebook client application. Because  Google is phasing out support for Chrome Apps, there will be no further updates to the WorkSpaces Chromebook client application, and its use is unsupported.
+
+
+
+Release
+Date
+Changes
+
+
+
+
+2.4.13
+April 24, 2019
+Fixed an issue that causes the app not to restore to full-screen mode after a screen unlock
+
+
+2.4.12
+
+Minor bug fixes
+
+
+2.4.11
+
+Minor bug fixes
+
+
+2.4.10
+
+Improves support for Japanese keyboard layouts
+
+
+2.4.8
+
+Improves support for UK keyboards
+
+
+2.4.7
+
+[See the AWS documentation website for more details]
+
+
+2.4.6
+
+[See the AWS documentation website for more details]
+
+
+2.4.5
+
+[See the AWS documentation website for more details]
+
+
+2.4.4
+
+Minor improvements to session provision handling
+
+
+2.4.2
+
+Resolves a bug with Caps Lock
+
+
+2.4.0
+
+[See the AWS documentation website for more details]
+
+
+2.2.7
+
+Resolves minor issues
+
+
+2.2.4
+
+Localization enhancements
+
+
+2.2.1
+
+[See the AWS documentation website for more details]
+
+
+2.1.3
+
+[See the AWS documentation website for more details]
+
+
+2.0.0
+
+[See the AWS documentation website for more details]
+
+
+1.0
+
+Initial release
+
+

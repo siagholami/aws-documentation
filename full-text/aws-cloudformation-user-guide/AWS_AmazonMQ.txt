@@ -1,0 +1,5 @@
+AmazonMQ resource type reference
+Resource types
+ AWS::AmazonMQ::Broker
+ AWS::AmazonMQ::Configuration
+ AWS::AmazonMQ::ConfigurationAssociation

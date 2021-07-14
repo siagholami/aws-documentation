@@ -1,0 +1,24 @@
+DetectionFilter
+A set of parameters that allow you to filter out certain results from your returned results.
+Contents
+MinBoundingBoxHeight 
+Sets the minimum height of the word bounding box. Words with bounding box heights lesser than this value will be excluded from the result. Value is relative to the video frame height.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 1.
+Required: No
+MinBoundingBoxWidth 
+Sets the minimum width of the word bounding box. Words with bounding boxes widths lesser than this value will be excluded from the result. Value is relative to the video frame width.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 1.
+Required: No
+MinConfidence 
+Sets confidence of word detection. Words with detection confidence below this will be excluded from the result. Values should be between 0.5 and 1 as Text in Video will not return any result below 0.5.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 100.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

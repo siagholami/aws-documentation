@@ -1,0 +1,23 @@
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides AccessLogSettings
+The AccessLogSettings property overrides the access log settings for an API Gateway-managed stage.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DestinationArn](#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn)" : String,
+  "[Format](#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format)" : String
+}
+YAML
+[DestinationArn](#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-destinationarn): String
+  [Format](#cfn-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings-format): String
+Properties
+DestinationArn 
+The ARN of the CloudWatch Logs log group to receive access logs.
+Required: No
+Type: String
+Update requires: No interruption
+Format 
+A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+Required: No
+Type: String
+Update requires: No interruption

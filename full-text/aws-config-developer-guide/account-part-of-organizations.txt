@@ -1,0 +1,10 @@
+account-part-of-organizations
+Checks whether AWS account is part of AWS Organizations. The rule is NON_COMPLIANT if an AWS account is not part of AWS Organizations or AWS Organizations master account ID does not match rule parameter MasterAccountId. 
+Identifier: ACCOUNT_PART_OF_ORGANIZATIONS
+Trigger type: Periodic
+AWS Region: All supported AWS Regions except China (Beijing) Region
+Parameters:
+MasterAccountId (Optional)Type: String
+The master account ID for an AWS account.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

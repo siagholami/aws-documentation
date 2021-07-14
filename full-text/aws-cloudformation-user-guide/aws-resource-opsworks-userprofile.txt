@@ -1,0 +1,77 @@
+AWS::OpsWorks::UserProfile
+Describes a user's SSH information.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::OpsWorks::UserProfile",
+  "Properties" : {
+      "[AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
+      "[IamUserArn](#cfn-opsworks-userprofile-iamuserarn)" : String,
+      "[SshPublicKey](#cfn-opsworks-userprofile-sshpublickey)" : String,
+      "[SshUsername](#cfn-opsworks-userprofile-sshusername)" : String
+    }
+}
+YAML
+Type: AWS::OpsWorks::UserProfile
+Properties: 
+  [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
+  [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
+  [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
+  [SshUsername](#cfn-opsworks-userprofile-sshusername): String
+Properties
+AllowSelfManagement 
+Whether users can specify their own SSH public key through the My Settings page. For more information, see Managing User Permissions.
+Required: No
+Type: Boolean
+Update requires: No interruption
+IamUserArn 
+The user's IAM ARN.
+Required: Yes
+Type: String
+Update requires: Replacement
+SshPublicKey 
+The user's SSH public key.
+Required: No
+Type: String
+Update requires: No interruption
+SshUsername 
+The user's SSH user name.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the IAM user ARN, such as arn:aws:iam::123456789012:user/opsworksuser.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+SshUsername 
+The user's SSH user name, as a string.
+Examples
+Template Snippet
+The following example registers a public key to the testUser IAM user. Users can also use self-management to specify their own public keys.
+JSON
+"userProfile": {
+  "Type": "AWS::OpsWorks::UserProfile",
+  "Properties": {
+    "IamUserArn": {
+      "Fn::GetAtt": ["testUser", "Arn"]
+    },
+    "AllowSelfManagement": "true",
+    "SshPublicKey": "xyz1234567890"
+  }
+}
+YAML
+userProfile:
+  Type: AWS::OpsWorks::UserProfile
+  Properties:
+    IamUserArn: !GetAtt [testUser, Arn]
+    AllowSelfManagement: 'true'
+    SshPublicKey: xyz1234567890
+See also
+
+CreateUserProfile in the AWS OpsWorks API Reference.
+Managing AWS OpsWorks Stacks User Permissions in the AWS OpsWorks User Guide.

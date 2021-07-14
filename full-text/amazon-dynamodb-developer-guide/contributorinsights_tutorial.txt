@@ -1,0 +1,97 @@
+Getting Started with CloudWatch Contributor Insights for DynamoDB
+This section describes how to use Amazon CloudWatch Contributor Insights with the Amazon DynamoDB console or the AWS Command Line Interface (AWS CLI). 
+In the following examples, you use the DynamoDB table that is defined in the Getting Started with DynamoDB tutorial.
+Topics
+ Using Contributor Insights (Console)
+ Using Contributor Insights (AWS CLI)
+Using Contributor Insights (Console)
+
+
+Sign in to the AWS Management Console and open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Tables.
+
+
+Choose the Music table.
+
+
+Choose the Contributor Insights tab.
+
+
+Choose Manage Contributor Insights.
+
+
+
+In the Manage Contributor Insights dialog box, under Contributor Insights Status, choose Enabled for both the Music base table and the AlbumTitle-index global secondary index. Then choose Confirm.
+
+
+
+If the operation fails, see DescribeContributorInsights FailureException in the Amazon DynamoDB API Reference for possible reasons.
+
+
+Choose View in DynamoDB.
+
+
+
+The Contributor Insights graphs are now visible on the Contributor Insights tab for the Music table. 
+
+
+
+Creating CloudWatch Alarms
+Follow these steps to create a CloudWatch alarm and be notified when any partition key consumes more than 50,000 ConsumedThroughputUnits.
+
+
+Sign in to the AWS Management Console and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/
+
+
+In the navigation pane on the left side of the console, choose Contributor Insights.
+
+
+Choose the DynamoDBContributorInsights-PKC-Music rule.
+
+
+Choose the Actions drop down.
+
+
+Choose View in metrics.
+
+
+Choose Max Contributor Value.
+Note
+Only Max Contributor Value and Maximum return useful statistics. The other statistics in this list don't return meaningful values.
+
+
+
+On the Actions column, Choose Create Alarm.
+
+
+
+Enter a value of 50000 for threshold and choose Next.
+
+
+
+See Using Amazon CloudWatch Alarms for details on how to configure the notification for the alarm.
+
+
+Using Contributor Insights (AWS CLI)
+
+Enable CloudWatch Contributor Insights for DynamoDB on the Music base table.
+
+aws dynamodb update-contributor-insights --table-name Music --contributor-insights-action=ENABLE
+
+Enable Contributor Insights for DynamoDB on the AlbumTitle-index global secondary index.
+
+aws dynamodb update-contributor-insights --table-name Music --index-name AlbumTitle-index --contributor-insights-action=ENABLE
+
+Get the status and rules for the Music table and all its indexes.
+
+aws dynamodb describe-contributor-insights --table-name Music
+
+Disable CloudWatch Contributor Insights for DynamoDB on the AlbumTitle-index global secondary index.
+
+aws dynamodb update-contributor-insights --table-name Music --index-name AlbumTitle-index --contributor-insights-action=DISABLE
+
+Get the status of the Music table and all its indexes.
+
+aws dynamodb list-contributor-insights --table-name Music

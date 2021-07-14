@@ -1,0 +1,15 @@
+OutputDataConfig
+The output configuration properties for a batch translation job.
+Contents
+S3Uri 
+The URI of the S3 folder that contains a translation job's output file. The folder must be in the same Region as the API endpoint that you are calling.
+Type: String
+Length Constraints: Maximum length of 1024.
+Pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)? 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

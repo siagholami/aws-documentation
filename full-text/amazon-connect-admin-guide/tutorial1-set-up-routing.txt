@@ -1,0 +1,62 @@
+Step 3: Set up routing
+In this step, you start at the Amazon Connect console for your instance. This step shows how to set up your queues, create a routing profile, and then assign your user account to the profile. 
+
+
+On the navigation menu, go to Routing, Queues. 
+
+
+
+Choose Add new queue.
+
+
+
+Complete the page, as shown in the following image, to add a queue named PasswordReset. When done, choose Add new queue.
+
+
+
+Add a queue named NetworkIssue. Complete the Add new queue page like you did for the PasswordReset queue.
+
+
+When done, you'll have three queues.
+
+
+
+On the navigation menu, go to Users, Routing Profiles. 
+
+
+
+Choose Add new profile. 
+
+
+
+Assign a name to the new profile (for example, Test routing profile). Enter a description, select Voice, Chat, and set Maximum chats to 1.
+
+
+
+In the Routing profile queues section, use the drop-down arrow to search for the queues you just created. Choose NetworkIssue, select Voice and Chat, and then choose Add queue.
+
+
+
+Then add the PasswordReset queue. Select Voice and Chat, and then choose Add queue.
+
+
+Under Default outbound queue, use the drop-down arrow to choose BasicQueue.
+
+
+
+When done, scroll to the top of the page, and choose Add new profile to save the profile.
+
+
+On the navigation menu, go to Users, User management. 
+
+
+
+Select your login name, and choose Edit. 
+
+
+
+Use the drop-down arrow to choose the routing profile you created, for example, Test routing profile. Choose Save.
+
+
+
+Routing is all set up and ready to go. 

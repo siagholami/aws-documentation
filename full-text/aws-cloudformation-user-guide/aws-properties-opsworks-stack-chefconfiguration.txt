@@ -1,0 +1,23 @@
+AWS::OpsWorks::Stack ChefConfiguration
+Describes the Chef configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BerkshelfVersion](#cfn-opsworks-chefconfiguration-berkshelfversion)" : String,
+  "[ManageBerkshelf](#cfn-opsworks-chefconfiguration-berkshelfversion)" : Boolean
+}
+YAML
+[BerkshelfVersion](#cfn-opsworks-chefconfiguration-berkshelfversion): String
+  [ManageBerkshelf](#cfn-opsworks-chefconfiguration-berkshelfversion): Boolean
+Properties
+BerkshelfVersion 
+The Berkshelf version.
+Required: No
+Type: String
+Update requires: No interruption
+ManageBerkshelf 
+Whether to enable Berkshelf.
+Required: No
+Type: Boolean
+Update requires: No interruption

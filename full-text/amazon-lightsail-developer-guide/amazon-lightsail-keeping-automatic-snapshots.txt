@@ -1,0 +1,75 @@
+Keeping automatic snapshots of instances or disks in Amazon Lightsail
+Last updated: October 2, 2019 
+When you enable the automatic snapshots feature for an instance or block storage disk in Amazon Lightsail, only the latest seven automatic snapshots of the resource are stored. Then, the oldest one is replaced with the newest one. If you want to keep a specific automatic snapshot from being replaced, you can copy it as a manual snapshot. Manual snapshots are kept until you delete them.
+Follow the steps in this guide to keep an automatic snapshot by copying it as a manual snapshot. You will be billed the snapshot storage fee for the automatic snapshots stored on your Lightsail account.
+Note
+If you disable the automatic snapshots feature for a resource, the existing automatic snapshots of the resource are kept until you re-enable the feature and they are replaced by newer snapshots, or you until you delete the automatic snapshots.
+Contents
+ Keeping automatic snapshots restriction
+ Keeping automatic snapshots of instances using the Lightsail console
+ Keeping automatic snapshots of instances and block storage disks using the AWS CLI
+Keeping automatic snapshots restriction
+Automatic snapshots of block storage disks cannot be copied to manual snapshots using the Lightsail console. To copy an automatic snapshot of a block storage disk, you must use the Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs. For more information, see Keeping automatic snapshots of instances and block storage disks using the AWS CLI.
+Keeping automatic snapshots of instances using the Lightsail console
+Complete the following steps to keep automatic snapshots for an instance using the Lightsail console.
+
+
+Sign in to the Lightsail console.
+
+
+On the Lightsail home page, choose the Instances tab.
+
+
+
+Choose the name of the instance for which you want to keep automatic snapshots.
+
+
+On the instance management page, choose the Snapshots tab.
+
+
+
+Under the Automatic snapshots section, choose the ellipsis icon next to the automatic snapshot that you want to keep, then choose Keep snapshot.
+
+
+At the prompt, choose Yes, save to confirm that you want to keep the automatic snapshot.
+
+
+The automatic snapshot is copied as a manual snapshot after a few moments. Manual snapshots are kept until you delete them.
+Important
+If you no longer need the automatic snapshot, we recommend that you delete it. Otherwise, you will be billed the snapshot storage fee for the automatic snapshot and the duplicate manual snapshot stored on your Lightsail account. For more information, see Deleting automatic snapshots of instances or disks in Amazon Lightsail.
+Keeping automatic snapshots of instances and block storage disks using the AWS CLI
+Complete the following steps to keep automatic snapshots for an instance or block storage disk using the AWS CLI.
+
+Open a Terminal or Command Prompt window.
+
+If you haven't already, install the AWS CLI and configure it to work with Lightsail.
+
+Enter the following command to get the dates of the available automatic snapshots for a specific resource. You need the date of the automatic snapshot to specify as the restore date parameter in the subsequent command.
+
+aws lightsail get-auto-snapshots --region Region --resource-name ResourceName
+In the command, replace:
+    Region with the AWS Region in which the resource is located.
+    ResourceName with the name of the resource.
+Example:
+aws lightsail get-auto-snapshots --region us-west-2 --resource-name MyFirstWordPressWebsite01
+You should see a result similar to the following, which lists the available automatic snapshots:
+
+
+Enter the following command to keep an automatic snapshot for a specific resource:
+
+aws lightsail copy-snapshot --region TargetRegion --source-resource-name ResourceName --restore-date YYYY-MM-DD --source-region SourceRegion --target-snapshot-name SnapshotName
+In the command, replace:
+    TargetRegion with the AWS Region in which you want to copy the snapshot to.
+    ResourceName with the name of the resource.
+    YYYY-MM-DD with the date of the available auto snapshot that you obtained using the preceding command.
+    SourceRegion with the AWS Region in which the automatic snapshot is currently in.
+    SnapshotName with the name of the new snapshot to be created.
+Example:
+aws lightsail copy-snapshot --region us-west-2 --source-resource-name MyFirstWordPressWebsite01 --restore-date 2019-09-16 --source-region us-west-2 --target-snapshot-name Snapshot-Copied-From-Auto-Snapshot
+You should see a result similar to the following example:
+
+The automatic snapshot is copied as a manual snapshot after a few moments. Manual snapshots are kept until you delete them.
+Important
+If you no longer need the automatic snapshot, we recommend that you delete it. Otherwise, you will be billed the snapshot storage fee for the automatic snapshot and duplicate manual snapshot stored on your Lightsail account. For more information, see Deleting automatic snapshots of instances or disks in Amazon Lightsail.
+Note
+For more information about the GetAutoSnapshots and CopySnapshot API operations in these commands, see GetAutoSnapshots and CopySnapshot in the Lightsail API documentation.

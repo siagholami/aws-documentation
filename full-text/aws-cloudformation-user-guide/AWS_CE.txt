@@ -1,0 +1,3 @@
+CE resource type reference
+Resource types
+ AWS::CE::CostCategory

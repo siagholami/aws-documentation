@@ -1,0 +1,48 @@
+Actor
+
+This feature is in preview release and is subject to change. 
+You can use the Actor component to create characters for your game. After you import your character files from your DCC tool into Lumberyard, you can create an entity and add the Actor component to it. For example, you must use an Actor component to create a controllable character for your game.
+For the Actor component to work properly, you must also add one of the following:
+ Simple Motion component – Uses a single motion for your actor.
+ AnimGraph component – Uses an animation graph to control your actor's behavior.
+Topics
+ Actor Component Properties
+ Using Multiple Skin Attachments for an Actor
+ Setting Up Actor Entities
+Actor Component Properties
+
+The Actor component has the following properties.
+
+
+
+
+Property
+Description
+
+
+
+
+Actor asset
+Specifies the actor file that you want to add to your entity.
+
+
+LOD Materials
+Specifies the material that is linked to your actor asset.
+
+
+Attachment type
+The Actor component has the following attachment types: [See the AWS documentation website for more details]
+
+
+Draw skeleton
+Determines whether character joints are visible.
+
+
+Draw character
+Determines whether character mesh is visible.
+
+
+Skinning method
+Specifies the skinning method to use for the actor. You can choose the following options: [See the AWS documentation website for more details]
+
+

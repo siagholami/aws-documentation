@@ -1,0 +1,21 @@
+Deleting an OpsWorks Layer
+If you no longer need an AWS OpsWorks Stacks layer, you can delete it from your stack.
+To delete an OpsWorks layer
+
+
+In the navigation pane, click Instances.
+
+
+On the Instances page, under the name of the layer you want to delete, click stop in the Actions column for each instance.
+
+
+
+After each instance has stopped, click delete to remove it from the layer.
+
+
+In the navigation pane, click Layers.
+
+
+On the Layers page, choose Delete.
+
+

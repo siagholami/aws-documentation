@@ -1,0 +1,23 @@
+Getting Started with Amazon CloudWatch Events
+Use the procedures in this section to create and delete CloudWatch Events rules. These are general procedures usable for any event source or target. For tutorials written for specific scenarios and specific targets, see Tutorials.
+Topics
+ Creating a Rule That Triggers on an Event
+ Creating a Rule That Triggers on an AWS API Call via CloudTrail
+ Creating a Rule That Triggers on a Schedule
+ Deleting or Disabling a Rule
+Limits
+ Some target types might not be available in every region. For more information, see Regions and Endpoints in the Amazon Web Services General Reference.
+ Creating rules with built-in targets is supported only in the AWS Management Console.
+ If you create a rule with an encrypted Amazon SQS queue as a target, you must have the following section included in your KMS key policy. It allows the event to be successfully delivered to the encrypted queue.
+{
+                  "Sid": "Allow CWE to use the key",
+                  "Effect": "Allow",
+                  "Principal": {
+                                  "Service": "events.amazonaws.com"
+                  },
+                  "Action": [
+                                  "kms:Decrypt",
+                                  "kms:GenerateDataKey"
+                  ],
+                  "Resource": "*"
+  }

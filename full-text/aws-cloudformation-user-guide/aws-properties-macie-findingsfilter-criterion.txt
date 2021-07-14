@@ -1,0 +1,2 @@
+AWS::Macie::FindingsFilter Criterion
+A condition that specifies the property, operator, and value to use to filter the results of a query for findings. For more information, see Criterion in the Amazon Macie API Reference.

@@ -1,0 +1,232 @@
+AWS::StepFunctions::StateMachine
+Provisions a state machine. A state machine consists of a collection of states that can do work (Task states), determine to which states to transition next (Choice states), stop an execution with an error (Fail states), and so on. State machines are specified using a JSON-based, structured language.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::StepFunctions::StateMachine",
+  "Properties" : {
+      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
+      "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : DefinitionSubstitutions,
+      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
+      "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
+      "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
+      "[StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype)" : String,
+      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ TagsEntry, ... ],
+      "[TracingConfiguration](#cfn-stepfunctions-statemachine-tracingconfiguration)" : TracingConfiguration
+    }
+}
+YAML
+Type: AWS::StepFunctions::StateMachine
+Properties: 
+  [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
+    S3Location
+  [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
+    String
+  [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
+    DefinitionSubstitutions
+  [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
+    LoggingConfiguration
+  [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
+  [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename): String
+  [StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype): String
+  [Tags](#cfn-stepfunctions-statemachine-tags): 
+    - TagsEntry
+  [TracingConfiguration](#cfn-stepfunctions-statemachine-tracingconfiguration): 
+    TracingConfiguration
+Properties
+DefinitionS3Location 
+The name of the S3 bucket where the state machine definition is stored. The state machine definition must be a JSON file.
+Required: No
+Type: S3Location
+Update requires: No interruption
+DefinitionString 
+The Amazon States Language definition of the state machine. See Amazon States Language.
+Required: No
+Type: String
+Update requires: No interruption
+DefinitionSubstitutions 
+A map (string to string) that specifies the mappings for placeholder variables in the state machine definition. This enables the customer to inject values obtained at runtime, for example from intrinsic functions, in the state machine definition. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key-value map. 
+Required: No
+Type: DefinitionSubstitutions
+Update requires: No interruption
+LoggingConfiguration 
+Defines what execution history events are logged and where they are logged.
+By default, the level is set to OFF. For more information see Log Levels in the AWS Step Functions User Guide.
+Required: No
+Type: LoggingConfiguration
+Update requires: No interruption
+RoleArn 
+The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
+Required: Yes
+Type: String
+Update requires: No interruption
+StateMachineName 
+The name of the state machine. 
+A name must not contain:
+ white space
+ brackets < > { } [ ] 
+ wildcard characters ? * 
+ special characters " # % \ ^ | ~ $ & , ; : / control characters \(U0000-001F,U007F-009F`)
+If you specify a name, you cannot perform updates that require replacement of this resource. You can perform updates that require no or some interruption. If you must replace the resource, specify a new name. 
+Required: No
+Type: String
+Update requires: Replacement
+StateMachineType 
+Determines whether a STANDARD or EXPRESS state machine is created. The default is STANDARD. You cannot update the type of a state machine once it has been created. For more information on STANDARD and EXPRESS workflows, see Standard Versus Express Workflows in the AWS Step Functions Developer Guide.
+Required: No
+Type: String
+Update requires: No interruption
+Tags 
+The list of tags to add to a resource.
+Tags may only contain Unicode letters, digits, white space, or these symbols: _ . : / =  - @.
+Required: No
+Type: List of TagsEntry
+Update requires: No interruption
+TracingConfiguration 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: TracingConfiguration
+Update requires: No interruption
+Return values
+Ref
+When you provide the logical ID of this resource to the Ref intrinsic function, Ref returns the ARN of the created state machine. For example:
+{ "Ref": "MyStateMachine" }Guide 
+Returns a value similar to the following:
+arn:aws:states:us-east-1:111122223333:stateMachine:HelloWorld-StateMachine 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+Fn::GetAtt returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+
+Arn 
+Not currently supported by AWS CloudFormation.
+Name 
+Returns the name of the state machine. For example:
+{ "Fn::GetAtt": ["MyStateMachine", "Name"] } 
+Returns the name of your state machine:
+HelloWorld-StateMachine 
+If you did not specify the name it will be similar to the following:
+MyStateMachine-1234abcdefgh 
+For more information about using Fn::GetAtt, see Fn::GetAtt.
+Examples
+The following examples create a Step Functions state machine.
+Using a Single-Line Property
+JSON
+{  
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Description":"An example template for a Step Functions state machine.",
+   "Resources":{  
+      "MyStateMachine":{  
+         "Type":"AWS::StepFunctions::StateMachine",
+         "Properties":{  
+            "StateMachineName":"HelloWorld-StateMachine",
+            "StateMachineType":"STANDARD",
+            "DefinitionString":"{\"StartAt\": \"HelloWorld\", 
+            \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\": 
+            \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
+            "RoleArn":"arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;"
+         }
+      }
+   }
+}
+Using the Fn::Join Intrinsic Function
+JSON
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Description" : "An example template for a Step Functions state machine.",
+    "Resources": {
+       "MyStateMachine": {
+          "Type": "AWS::StepFunctions::StateMachine",
+             "Properties": {
+                "StateMachineName" : "HelloWorld-StateMachine",
+                "StateMachineType":"STANDARD",
+                "DefinitionString" : {
+                   "Fn::Join": [
+                      "\n",
+                      [
+                         "{",
+                         "    \"StartAt\": \"HelloWorld\",",
+                         "    \"States\" : {",
+                         "        \"HelloWorld\" : {",
+                         "            \"Type\" : \"Task\", ",
+                         "            \"Resource\" : \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\",",
+                         "            \"End\" : true",
+                         "        }",
+                         "    }",
+                         "}"
+                      ]
+                   ]
+                },
+          "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+            "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ] 
+            }
+        }
+    }
+}
+Including Tags
+YAML
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An example template for a Step Functions state machine.
+Resources:
+  MyStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      StateMachineName: HelloWorld-StateMachine
+      DefinitionString: |-
+        {
+          "StartAt": "HelloWorld",
+          "States": {
+            "HelloWorld": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+              "End": true
+            }
+          }
+        }
+      RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
+Using DefinitionSubstitutions
+In this example template, HelloFunction: is defined for the DefinitionSubstitutions property. In the hello_world.json definition file, that follows${HelloFunction} will be replaced by arn:aws:lambda:us-east-1:111122223333:function:HelloFunction.
+YAML
+AWSTemplateFormatVersion: "2010-09-09"
+Description: An example template for a Step Functions state machine.
+  Resources:
+    MyStateMachine:
+      Type: AWS::StepFunctions::StateMachine
+      Properties:
+        StateMachineName: HelloWorld-StateMachine
+        DefinitionS3Location:
+          Bucket: example_bucket
+          Key: hello_world.json
+        DefinitionSubstitutions:
+          HelloFunction: arn:aws:lambda:us-east-1:111122223333:function:HelloFunction
+        RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+hello_world.json
+A definition file where ${HelloFunction} will be replaced by arn:aws:lambda:us-east-1:111122223333:function:HelloFunction. from the preceding example template.
+JSON
+{
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Task",
+      "Resource": "${HelloFunction}",
+      "End": true
+    }
+  }
+}

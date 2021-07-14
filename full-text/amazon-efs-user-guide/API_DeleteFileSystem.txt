@@ -1,0 +1,57 @@
+DeleteFileSystem
+Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and you can't access any contents of the deleted file system.
+You can't delete a file system that is in use. That is, if the file system has any mount targets, you must first delete them. For more information, see DescribeMountTargets and DeleteMountTarget. 
+Note
+The DeleteFileSystem call returns while the file system state is still deleting. You can check the file system deletion status by calling the DescribeFileSystems operation, which returns a list of file systems in your account. If you pass file system ID or creation token for the deleted file system, the DescribeFileSystems returns a 404 FileSystemNotFound error.
+This operation requires permissions for the elasticfilesystem:DeleteFileSystem action.
+Request Syntax
+DELETE /2015-02-01/file-systems/FileSystemId HTTP/1.1
+URI Request Parameters
+The request uses the following URI parameters.
+ FileSystemId  
+The ID of the file system you want to delete.
+Length Constraints: Maximum length of 128.
+Pattern: ^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$ 
+Required: Yes
+Request Body
+The request does not have a request body.
+Response Syntax
+HTTP/1.1 204
+Response Elements
+If the action is successful, the service sends back an HTTP 204 response with an empty HTTP body.
+Errors
+BadRequest 
+Returned if the request is malformed or contains an error such as an invalid parameter value or a missing required parameter.
+HTTP Status Code: 400
+FileSystemInUse 
+Returned if a file system has mount targets.
+HTTP Status Code: 409
+FileSystemNotFound 
+Returned if the specified FileSystemId value doesn't exist in the requester's AWS account.
+HTTP Status Code: 404
+InternalServerError 
+Returned if an error occurred on the server side.
+HTTP Status Code: 500
+Example
+Delete a File System
+The following example sends a DELETE request to the file-systems endpoint (elasticfilesystem.us-west-2.amazonaws.com/2015-02-01/file-systems/fs-01234567) to delete a file system whose ID is fs-01234567. 
+Sample Request
+DELETE /2015-02-01/file-systems/fs-01234567 HTTP/1.1
+Host: elasticfilesystem.us-west-2.amazonaws.com
+x-amz-date: 20140622T233021Z
+Authorization: <...>
+Sample Response
+HTTP/1.1 204 No Content
+x-amzn-RequestId: a2d125b3-7ebd-4d6a-ab3d-5548630bff33
+Content-Length: 0
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

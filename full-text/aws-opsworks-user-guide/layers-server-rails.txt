@@ -1,0 +1,43 @@
+Rails App Server Layer Reference
+Note
+This layer is available only for Linux-based stacks.
+The Rails App Server layer supports a Ruby on Rails application server.
+Short name: rails-app
+Compatibility: A Rails App Server layer is compatible with the following layers: custom, db-master, memcached, monitoring-master, php-app.
+Ports: A Rails App Server layer allows public access to ports 22(SSH), 80 (HTTP), 443 (HTTPS), and all ports from load balancers.
+Autoassign Elastic IP addresses: Off by default
+Default EBS volume: No
+Default security group: AWS-OpsWorks-Rails-App-Server
+Configuration: To configure a Rails App Server layer, you must specify the following:
+ Ruby version
+ Rails stack
+ Rubygems version
+ Whether to install and manage Bundler
+ The Bundler version
+Setup recipes:
+ opsworks_initial_setup
+ ssh_host_keys
+ ssh_users
+ mysql::client
+ dependencies
+ ebs
+ opsworks_ganglia::client
+ apache2 apache2::mod_deflate
+ passenger_apache2
+ passenger_apache2::mod_rails
+ passenger_apache2::rails 
+Configure recipes:
+ opsworks_ganglia::configure-client
+ ssh_users
+ agent_version
+ rails::configure 
+Deploy recipes:
+ deploy::default
+ deploy::rails
+Undeploy recipes:
+ deploy::rails-undeploy 
+Shutdown recipes:
+ opsworks_shutdown::default
+ apache2::stop 
+Installation:
+ AWS OpsWorks Stacks uses the instance's package installer to install Apache2 with mod_passenger, mod_rails, and the associated log files to their default locations. For more information about installation, see Phusion Passenger. For more information about logging, see Log Files.

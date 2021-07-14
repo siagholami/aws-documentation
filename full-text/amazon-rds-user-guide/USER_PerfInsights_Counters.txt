@@ -1,0 +1,1178 @@
+Customizing the Performance Insights Dashboard
+With counter metrics, you can customize the Performance Insights dashboard to include up to 10 additional graphs. These graphs that show a selection of dozens of operating system and database performance metrics. This information can be correlated with database load to help identify and analyze performance problems.
+Topics
+ Performance Insights Operating System Counters
+ Performance Insights Counters for Amazon RDS for MariaDB and MySQL
+ Performance Insights Counters for Amazon RDS for Microsoft SQL Server
+ Performance Insights Counters for Amazon RDS for Oracle
+ Performance Insights Counters for Amazon RDS for PostgreSQL
+Performance Insights Operating System Counters
+The following operating system counters are available with Performance Insights for Aurora PostgreSQL. You can find definitions for these metrics in Viewing Enhanced Monitoring by Using CloudWatch Logs. 
+
+
+
+Counter
+Type
+Metric
+
+
+
+
+active
+memory
+os.memory.active
+
+
+buffers
+memory
+os.memory.buffers
+
+
+cached
+memory
+os.memory.cached
+
+
+dirty
+memory
+os.memory.dirty
+
+
+free
+memory
+os.memory.free
+
+
+hugePagesFree
+memory
+os.memory.hugePagesFree
+
+
+hugePagesRsvd
+memory
+os.memory.hugePagesRsvd
+
+
+hugePagesSize
+memory
+os.memory.hugePagesSize
+
+
+hugePagesSurp
+memory
+os.memory.hugePagesSurp
+
+
+hugePagesTotal
+memory
+os.memory.hugePagesTotal
+
+
+inactive
+memory
+os.memory.inactive
+
+
+mapped
+memory
+os.memory.mapped
+
+
+pageTables
+memory
+os.memory.pageTables
+
+
+slab
+memory
+os.memory.slab
+
+
+total
+memory
+os.memory.total
+
+
+writeback
+memory
+os.memory.writeback
+
+
+guest
+cpuUtilization
+os.cpuUtilization.guest
+
+
+idle
+cpuUtilization
+os.cpuUtilization.idle
+
+
+irq
+cpuUtilization
+os.cpuUtilization.irq
+
+
+nice
+cpuUtilization
+os.cpuUtilization.nice
+
+
+steal
+cpuUtilization
+os.cpuUtilization.steal
+
+
+system
+cpuUtilization
+os.cpuUtilization.system
+
+
+total
+cpuUtilization
+os.cpuUtilization.total
+
+
+user
+cpuUtilization
+os.cpuUtilization.user
+
+
+wait
+cpuUtilization
+os.cpuUtilization.wait
+
+
+avgQueueLen
+diskIO
+os.diskIO.avgQueueLen
+
+
+avgReqSz
+diskIO
+os.diskIO.avgReqSz
+
+
+await
+diskIO
+os.diskIO.await
+
+
+readIOsPS
+diskIO
+os.diskIO.readIOsPS
+
+
+readKb
+diskIO
+os.diskIO.readKb
+
+
+readKbPS
+diskIO
+os.diskIO.readKbPS
+
+
+rrqmPS
+diskIO
+os.diskIO.rrqmPS
+
+
+tps
+diskIO
+os.diskIO.tps
+
+
+util
+diskIO
+os.diskIO.util
+
+
+writeIOsPS
+diskIO
+os.diskIO.writeIOsPS
+
+
+writeKb
+diskIO
+os.diskIO.writeKb
+
+
+writeKbPS
+diskIO
+os.diskIO.writeKbPS
+
+
+wrqmPS
+diskIO
+os.diskIO.wrqmPS
+
+
+blocked
+tasks
+os.tasks.blocked
+
+
+running
+tasks
+os.tasks.running
+
+
+sleeping
+tasks
+os.tasks.sleeping
+
+
+stopped
+tasks
+os.tasks.stopped
+
+
+total
+tasks
+os.tasks.total
+
+
+zombie
+tasks
+os.tasks.zombie
+
+
+one
+loadAverageMinute
+os.loadAverageMinute.one
+
+
+fifteen
+loadAverageMinute
+os.loadAverageMinute.fifteen
+
+
+five
+loadAverageMinute
+os.loadAverageMinute.five
+
+
+cached
+swap
+os.swap.cached
+
+
+free
+swap
+os.swap.free
+
+
+in
+swap
+os.swap.in
+
+
+out
+swap
+os.swap.out
+
+
+total
+swap
+os.swap.total
+
+
+maxFiles
+fileSys
+os.fileSys.maxFiles
+
+
+usedFiles
+fileSys
+os.fileSys.usedFiles
+
+
+usedFilePercent
+fileSys
+os.fileSys.usedFilePercent
+
+
+usedPercent
+fileSys
+os.fileSys.usedPercent
+
+
+used
+fileSys
+os.fileSys.used
+
+
+total
+fileSys
+os.fileSys.total
+
+
+rx
+network
+os.network.rx
+
+
+tx
+network
+os.network.tx
+
+
+numVCPUs
+general
+os.general.numVCPUs
+
+
+
+Performance Insights Counters for Amazon RDS for MariaDB and MySQL
+The following database counters are available with Performance Insights for Amazon RDS for MariaDB and MySQL.
+Topics
+ Native Counters for RDS MariaDB and RDS MySQL
+ Non-Native Counters for Amazon RDS for MariaDB and MySQL
+Native Counters for RDS MariaDB and RDS MySQL
+You can find definitions for these native metrics in Server Status Variables in the MySQL documentation.
+
+
+
+Counter
+Type
+Unit
+Metric
+
+
+
+
+Com_analyze
+SQL
+Queries per second
+db.SQL.Com_analyze
+
+
+Com_optimize
+SQL
+Queries per second
+db.SQL.Com_optimize
+
+
+Com_select
+SQL
+Queries per second
+db.SQL.Com_select
+
+
+Innodb_rows_deleted
+SQL
+Rows per second
+db.SQL.Innodb_rows_deleted
+
+
+Innodb_rows_inserted
+SQL
+Rows per second
+db.SQL.Innodb_rows_inserted
+
+
+Innodb_rows_read
+SQL
+Rows per second
+db.SQL.Innodb_rows_read
+
+
+Innodb_rows_updated
+SQL
+Rows per second
+db.SQL.Innodb_rows_updated
+
+
+Select_full_join
+SQL
+Queries per second
+db.SQL.Select_full_join
+
+
+Select_full_range_join
+SQL
+Queries per second
+db.SQL.Select_full_range_join
+
+
+Select_range
+SQL
+Queries per second
+db.SQL.Select_range
+
+
+Select_range_check
+SQL
+Queries per second
+db.SQL.Select_range_check
+
+
+Select_scan
+SQL
+Queries per second
+db.SQL.Select_scan
+
+
+Slow_queries
+SQL
+Queries per second
+db.SQL.Slow_queries
+
+
+Sort_merge_passes
+SQL
+Queries per second
+db.SQL.Sort_merge_passes
+
+
+Sort_range
+SQL
+Queries per second
+db.SQL.Sort_range
+
+
+Sort_rows
+SQL
+Queries per second
+db.SQL.Sort_rows
+
+
+Sort_scan
+SQL
+Queries per second
+db.SQL.Sort_scan
+
+
+Questions
+SQL
+Queries per second
+db.SQL.Questions
+
+
+Innodb_row_lock_time
+Locks
+Milliseconds (average)
+db.Locks.Innodb_row_lock_time
+
+
+Table_locks_immediate
+Locks
+Requests per second
+db.Locks.Table_locks_immediate
+
+
+Table_locks_waited
+Locks
+Requests per second
+db.Locks.Table_locks_waited
+
+
+Aborted_clients
+Users
+Connections
+db.Users.Aborted_clients
+
+
+Aborted_connects
+Users
+Connections
+db.Users.Aborted_connects
+
+
+Threads_created
+Users
+Connections
+db.Users.Threads_created
+
+
+Threads_running
+Users
+Connections
+db.Users.Threads_running
+
+
+Innodb_data_writes
+I/O
+Operations per second
+db.IO.Innodb_data_writes
+
+
+Innodb_dblwr_writes
+I/O
+Operations per second
+db.IO.Innodb_dblwr_writes
+
+
+Innodb_log_write_requests
+I/O
+Operations per second
+db.IO.Innodb_log_write_requests
+
+
+Innodb_log_writes
+I/O
+Operations per second
+db.IO.Innodb_log_writes
+
+
+Innodb_pages_written
+I/O
+Pages per second
+db.IO.Innodb_pages_written
+
+
+Created_tmp_disk_tables
+Temp
+Tables per second
+db.Temp.Created_tmp_disk_tables
+
+
+Created_tmp_tables
+Temp
+Tables per second
+db.Temp.Created_tmp_tables
+
+
+Innodb_buffer_pool_pages_data
+Cache
+Pages
+db.Cache.Innodb_buffer_pool_pages_data
+
+
+Innodb_buffer_pool_pages_total
+Cache
+Pages
+db.Cache.Innodb_buffer_pool_pages_total
+
+
+Innodb_buffer_pool_read_requests
+Cache
+Pages per second
+db.Cache.Innodb_buffer_pool_read_requests
+
+
+Innodb_buffer_pool_reads
+Cache
+Pages per second
+db.Cache.Innodb_buffer_pool_reads
+
+
+Opened_tables
+Cache
+Tables
+db.Cache.Opened_tables
+
+
+Opened_table_definitions
+Cache
+Tables
+db.Cache.Opened_table_definitions
+
+
+Qcache_hits
+Cache
+Queries
+db.Cache.Qcache_hits
+
+
+
+Non-Native Counters for Amazon RDS for MariaDB and MySQL
+Non-native counter metrics are counters defined by Amazon RDS. A non-native metric can be a metric that you get with a specific query. A non-native metric also can be a derived metric, where two or more native counters are used in calculations for ratios, hit rates, or latencies.
+
+
+
+Counter
+Type
+Metric
+Description
+Definition
+
+
+
+
+innodb_buffer_pool_hits
+Cache
+db.Cache.innodb_buffer_pool_hits
+The number of reads that InnoDB could satisfy from the buffer pool.
+innodb_buffer_pool_read_requests - innodb_buffer_pool_reads
+
+
+innodb_buffer_pool_hit_rate
+Cache
+db.Cache.innodb_buffer_pool_hit_rate
+The percentage of reads that InnoDB could satisfy from the buffer pool.
+100 * innodb_buffer_pool_read_requests / (innodb_buffer_pool_read_requests  innodb_buffer_pool_reads)
+
+
+innodb_buffer_pool_usage
+Cache
+db.Cache.innodb_buffer_pool_usage
+The percentage of the InnoDB buffer pool that contains data (pages).  When using compressed tables, this value can vary. For more information, see the information about Innodb_buffer_pool_pages_data and Innodb_buffer_pool_pages_total in Server Status Variables in the MySQL documentation.
+Innodb_buffer_pool_pages_data / Innodb_buffer_pool_pages_total * 100.0
+
+
+query_cache_hit_rate
+Cache
+db.Cache.query_cache_hit_rate
+MySQL result set cache (query cache) hit ratio.
+Qcache_hits / (QCache_hits  Com_select) * 100
+
+
+innodb_datafile_writes_to_disk
+I/O
+db.IO.innodb_datafile_writes_to_disk
+The number of InnoDB data file writes to disk, excluding double write and redo logging write operations.
+Innodb_data_writes - Innodb_log_writes - Innodb_dblwr_writes
+
+
+innodb_rows_changed
+SQL
+db.SQL.innodb_rows_changed
+The total InnoDB row operations.
+db.SQL.Innodb_rows_inserted  db.SQL.Innodb_rows_deleted  db.SQL.Innodb_rows_updated
+
+
+active_transactions
+Transactions
+db.Transactions.active_transactions
+The total active transactions.
+SELECT COUNT(1) AS active_transactions FROM INFORMATION_SCHEMA.INNODB_TRX
+
+
+innodb_deadlocks
+Locks
+db.Locks.innodb_deadlocks
+The total number of deadlocks.
+SELECT COUNT AS innodb_deadlocks FROM INFORMATION_SCHEMA.INNODB_METRICS WHERE NAME='lock_deadlocks'
+
+
+innodb_lock_timeouts
+Locks
+db.Locks.innodb_lock_timeouts
+The total number of deadlocks that timed out.
+SELECT COUNT AS innodb_lock_timeouts FROM INFORMATION_SCHEMA.INNODB_METRICS WHERE NAME='lock_timeouts'
+
+
+innodb_row_lock_waits
+Locks
+db.Locks.innodb_row_lock_waits
+The total number of row locks that resulted in a wait.
+SELECT COUNT AS innodb_row_lock_waits FROM INFORMATION_SCHEMA.INNODB_METRICS WHERE NAME='lock_row_lock_waits'
+
+
+
+Performance Insights Counters for Amazon RDS for Microsoft SQL Server
+The following database counters are available with Performance Insights for RDS for Microsoft SQL Server.
+Native Counters for RDS for Microsoft SQL Server
+You can find definitions for these native metrics in Use SQL Server Objects in the Microsoft SQL Server documentation.
+
+
+
+Counter
+Type
+Unit
+Metric
+
+
+
+
+Forwarded Records
+Access Methods
+Records per second
+db.Access Methods.Forwarded Records
+
+
+Page Splits
+Access Methods
+Splits per second
+db.Access Methods.Page Splits
+
+
+Buffer cache hit ratio
+Buffer Manager
+Ratio
+db.Buffer Manager.Buffer cache hit ratio
+
+
+Page life expectancy
+Buffer Manager
+Expectancy in seconds
+db.Buffer Manager.Page life expectancy
+
+
+Page lookups
+Buffer Manager
+Lookups per second
+db.Buffer Manager.Page lookups
+
+
+Page reads
+Buffer Manager
+Reads per second
+db.Buffer Manager.Page reads
+
+
+Page writes
+Buffer Manager
+Writes per second
+db.Buffer Manager.Page writes
+
+
+Active Transactions
+Databases
+Transactions
+db.Databases.Active Transactions (_Total)
+
+
+Log Bytes Flushed
+Databases
+Bytes flushed per second
+db.Databases.Log Bytes Flushed (_Total)
+
+
+Log Flush Waits
+Databases
+Waits per second
+db.Databases.Log Flush Waits (_Total)
+
+
+Log Flushes
+Databases
+Flushes per second
+db.Databases.Log Flushes (_Total)
+
+
+Write Transactions
+Databases
+Transactions per second
+db.Databases.Write Transactions (_Total)
+
+
+Processes blocked
+General Statistics
+Processes blocked
+db.General Statistics.Processes blocked
+
+
+User Connections
+General Statistics
+Connections
+db.General Statistics.User Connections
+
+
+Latch Waits
+Latches
+Waits per second
+db.Latches.Latch Waits
+
+
+Number of Deadlocks
+Locks
+Deadlocks per second
+db.Locks.Number of Deadlocks (_Total)
+
+
+Memory Grants Pending
+Memory Manager
+Memory grants
+db.Memory Manager.Memory Grants Pending
+
+
+Batch Requests
+SQL Statistics
+Requests per second
+db.SQL Statistics.Batch Requests
+
+
+SQL Compilations
+SQL Statistics
+Compilations per second
+db.SQL Statistics.SQL Compilations
+
+
+SQL Re-Compilations
+SQL Statistics
+Re-compilations per second
+db.SQL Statistics.SQL Re-Compilations
+
+
+
+Performance Insights Counters for Amazon RDS for Oracle
+The following database counters are available with Performance Insights for RDS for Oracle.
+Native Counters for RDS for Oracle
+You can find definitions for these native metrics in Statistics Descriptions in the Oracle documentation.
+Note
+For the CPU used by this session counter metric, the unit has been transformed from the native centiseconds to active sessions to make the value easier to use. For example, CPU send in the DB Load chart represents the demand for CPU. The counter metric CPU used by this session represents the amount of CPU used by Oracle sessions. You can compare CPU send to the CPU used by this session counter metric. When demand for CPU is higher than CPU used, sessions are waiting for CPU time.
+
+
+
+Counter
+Type
+Unit
+Metric
+
+
+
+
+CPU used by this session
+User
+Active sessions
+db.User.CPU used by this session
+
+
+SQL*Net roundtrips to/from client
+User
+Roundtrips per second
+db.User.SQL*Net roundtrips to/from client
+
+
+Bytes received via SQL*Net from client
+User
+Bytes per second
+db.User.bytes received via SQL*Net from client
+
+
+User commits
+User
+Commits per second
+db.User.user commits
+
+
+Logons cumulative
+User
+Logons per second
+db.User.logons cumulative
+
+
+User calls
+User
+Calls per second
+db.User.user calls
+
+
+Bytes sent via SQL*Net to client
+User
+Bytes per second
+db.User.bytes sent via SQL*Net to client
+
+
+User rollbacks
+User
+Rollbacks per second
+db.User.user rollbacks
+
+
+Redo size
+Redo
+Bytes per second
+db.Redo.redo size
+
+
+Parse count (total)
+SQL
+Parses per second
+db.SQL.parse count (total)
+
+
+Parse count (hard)
+SQL
+Parses per second
+db.SQL.parse count (hard)
+
+
+Table scan rows gotten
+SQL
+Rows per second
+db.SQL.table scan rows gotten
+
+
+Sorts (memory)
+SQL
+Sorts per second
+db.SQL.sorts (memory)
+
+
+Sorts (disk)
+SQL
+Sorts per second
+db.SQL.sorts (disk)
+
+
+Sorts (rows)
+SQL
+Sorts per second
+db.SQL.sorts (rows)
+
+
+Physical read bytes
+Cache
+Bytes per second
+db.Cache.physical read bytes
+
+
+DB block gets
+Cache
+Blocks per second
+db.Cache.db block gets
+
+
+DBWR checkpoints
+Cache
+Checkpoints per minute
+db.Cache.DBWR checkpoints
+
+
+Physical reads
+Cache
+Reads per second
+db.Cache.physical reads
+
+
+Consistent gets from cache
+Cache
+Gets per second
+db.Cache.consistent gets from cache
+
+
+DB block gets from cache
+Cache
+Gets per second
+db.Cache.db block gets from cache
+
+
+Consistent gets
+Cache
+Gets per second
+db.Cache.consistent gets
+
+
+
+Performance Insights Counters for Amazon RDS for PostgreSQL
+The following database counters are available with Performance Insights for Amazon RDS for PostgreSQL.
+Topics
+ Native Counters for Amazon RDS for PostgreSQL
+ Non-Native Counters for Amazon RDS for PostgreSQL
+Native Counters for Amazon RDS for PostgreSQL
+You can find definitions for these native metrics in Viewing Statistics in the PostgreSQL documentation.
+
+
+
+Counter
+Type
+Unit
+Metric
+
+
+
+
+blks_hit
+Cache
+Blocks per second
+db.Cache.blks_hit
+
+
+buffers_alloc
+Cache
+Blocks per second
+db.Cache.buffers_alloc
+
+
+buffers_checkpoint
+Checkpoint
+Blocks per second
+db.Checkpoint.buffers_checkpoint
+
+
+checkpoint_sync_time
+Checkpoint
+Milliseconds per checkpoint
+db.Checkpoint.checkpoint_sync_time
+
+
+checkpoint_write_time
+Checkpoint
+Milliseconds per checkpoint
+db.Checkpoint.checkpoint_write_time
+
+
+checkpoints_req
+Checkpoint
+Checkpoints per minute
+db.Checkpoint.checkpoints_req
+
+
+checkpoints_timed
+Checkpoint
+Checkpoints per minute
+db.Checkpoint.checkpoints_timed
+
+
+maxwritten_clean
+Checkpoint
+Bgwriter clean stops per minute
+db.Checkpoint.maxwritten_clean
+
+
+deadlocks
+Concurrency
+Deadlocks per minute
+db.Concurrency.deadlocks
+
+
+blk_read_time
+I/O
+Milliseconds
+db.IO.blk_read_time
+
+
+blks_read
+I/O
+Blocks per second
+db.IO.blks_read
+
+
+buffers_backend
+I/O
+Blocks per second
+db.IO.buffers_backend
+
+
+buffers_backend_fsync
+I/O
+Blocks per second
+db.IO.buffers_backend_fsync
+
+
+buffers_clean
+I/O
+Blocks per second
+db.IO.buffers_clean
+
+
+tup_deleted
+SQL
+Tuples per second
+db.SQL.tup_deleted
+
+
+tup_fetched
+SQL
+Tuples per second
+db.SQL.tup_fetched
+
+
+tup_inserted
+SQL
+Tuples per second
+db.SQL.tup_inserted
+
+
+tup_returned
+SQL
+Tuples per second
+db.SQL.tup_returned
+
+
+tup_updated
+SQL
+Tuples per second
+db.SQL.tup_updated
+
+
+temp_bytes
+Temp
+Bytes per second
+db.Temp.temp_bytes
+
+
+temp_files
+Temp
+Files per minute
+db.Temp.temp_files
+
+
+active_transactions
+Transactions
+Transactions
+db.Transactions.active_transactions
+
+
+blocked_transactions
+Transactions
+Transactions
+db.Transactions.blocked_transactions
+
+
+max_used_xact_ids
+Transactions
+Transactions
+db.Transactions.max_used_xact_ids
+
+
+xact_commit
+Transactions
+Commits per second
+db.Transactions.xact_commit
+
+
+xact_rollback
+Transactions
+Rollbacks per second
+db.Transactions.xact_rollback
+
+
+numbackends
+User
+Connections
+db.User.numbackends
+
+
+archived_count
+Write-ahead log (WAL)
+Files per minute
+db.WAL.archived_count
+
+
+archive_failed_count
+WAL
+Files per minute
+db.WAL.archive_failed_count
+
+
+
+Non-Native Counters for Amazon RDS for PostgreSQL
+Non-native counter metrics are counters defined by Amazon RDS. A non-native metric can be a metric that you get with a specific query. A non-native metric also can be a derived metric, where two or more native counters are used in calculations for ratios, hit rates, or latencies.
+
+
+
+Counter
+Type
+Metric
+Description
+Definition
+
+
+
+
+checkpoint_sync_latency
+Checkpoint
+db.Checkpoint.checkpoint_sync_latency
+The total amount of time that has been spent in the portion of checkpoint processing where files are synchronized to disk.
+checkpoint_sync_time / (checkpoints_timed  checkpoints_req)
+
+
+checkpoint_write_latency
+Checkpoint
+db.Checkpoint.checkpoint_write_latency
+The total amount of time that has been spent in the portion of checkpoint processing where files are written to disk.
+checkpoint_write_time / (checkpoints_timed  checkpoints_req)
+
+
+read_latency
+I/O
+db.IO.read_latency
+The time spent reading data file blocks by backends in this instance.
+blk_read_time / blks_read
+
+

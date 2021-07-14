@@ -1,0 +1,9 @@
+Viewing and Monitoring Channels
+You can view the configuration of an idle or running channel at any time. 
+You can monitor activity on channels from the AWS Elemental MediaLive console, from Amazon CloudWatch Events, or from Amazon CloudWatch Logs.
+Topics
+ Viewing a Channel Configuration
+ Monitoring a Channel Using the AWS Elemental MediaLive Console
+ Monitoring a Channel Using Amazon CloudWatch Events
+ Monitoring Using Amazon CloudWatch Logs
+ Logging MediaLive API Calls with AWS CloudTrail

@@ -1,0 +1,13 @@
+Deleting a Reservation
+When a reservation has expired, you can delete the reservation from the list.
+To delete an expired reservation (console)
+
+
+Open the MediaLive console at https://console.aws.amazon.com/medialive/.
+
+
+In the navigation pane, choose Reservations. 
+
+
+Choose the item or items, and then choose Delete.
+

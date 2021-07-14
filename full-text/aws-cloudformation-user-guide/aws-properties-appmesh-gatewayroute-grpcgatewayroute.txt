@@ -1,0 +1,25 @@
+AWS::AppMesh::GatewayRoute GrpcGatewayRoute
+An object that represents a gRPC gateway route.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Action](#cfn-appmesh-gatewayroute-grpcgatewayroute-action)" : GrpcGatewayRouteAction,
+  "[Match](#cfn-appmesh-gatewayroute-grpcgatewayroute-match)" : GrpcGatewayRouteMatch
+}
+YAML
+[Action](#cfn-appmesh-gatewayroute-grpcgatewayroute-action): 
+    GrpcGatewayRouteAction
+  [Match](#cfn-appmesh-gatewayroute-grpcgatewayroute-match): 
+    GrpcGatewayRouteMatch
+Properties
+Action 
+An object that represents the action to take if a match is determined.
+Required: Yes
+Type: GrpcGatewayRouteAction
+Update requires: No interruption
+Match 
+An object that represents the criteria for determining a request match.
+Required: Yes
+Type: GrpcGatewayRouteMatch
+Update requires: No interruption

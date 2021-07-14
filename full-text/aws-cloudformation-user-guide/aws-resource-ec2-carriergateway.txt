@@ -1,0 +1,46 @@
+AWS::EC2::CarrierGateway
+Creates a carrier gateway. For more information about carrier gateways, see Carrier gateways in the AWS Wavelength Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::CarrierGateway",
+  "Properties" : {
+      "[Tags](#cfn-ec2-carriergateway-tags)" : Tags,
+      "[VpcId](#cfn-ec2-carriergateway-vpcid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::CarrierGateway
+Properties: 
+  [Tags](#cfn-ec2-carriergateway-tags): 
+    Tags
+  [VpcId](#cfn-ec2-carriergateway-vpcid): String
+Properties
+Tags 
+The tags assigned to the carrier gateway.
+Required: No
+Type: Tags
+Update requires: No interruption
+VpcId 
+The ID of the VPC associated with the carrier gateway.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the carrier gateway ID. For example: cagw-05a8da9a199afb1c7.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+CarrierGatewayId 
+The ID of the carrier gateway.
+OwnerId 
+The AWS account ID of the owner of the carrier gateway.
+State 
+The state of the carrier gateway.
+See also
+
+Carrier gateways in Amazon Virtual Private Cloud User Guide
+CreateCarrierGateway in the Amazon EC2 API Reference

@@ -1,0 +1,36 @@
+Working with Deployments
+Topics
+ Create Deployment
+ Deployment Status Table
+ Individual Deployment Nodes
+ Making a Cloud Canvas Deployment Active
+ Testing Different Mappings
+ Using Protected Deployments
+ Deleting Cloud Canvas Deployments and Their Resources
+A deployment is an independent copy of the AWS resources that your game uses. Deployments are useful for maintaining a safe separation among game lifecycle phases such as development, test, and production. In the resource manager navigation pane, the Deployments node shows you the status of your project’s deployments. You can also use it to create a new deployment. 
+
+Note: If the Deployments node is selected when no AWS profile is configured, Lumberyard prompts you to provide a profile. The status of the project’s deployments cannot be displayed unless a profile is provided. For more information, see Managing Cloud Canvas Profiles. 
+Create Deployment
+Click Create deployment to start the creation of a deployment: 
+
+When uploading resources for the first time, you may see this version of the dialog: 
+
+Provide a name for Deployment name. Lumberyard appends this name to the project stack name to create an AWS CloudFormation stack for the deployment. 
+To start the deployment creation process, click OK. In the resource manager navigation pane, a node for the deployment appears under Deployments. In the detail pane, the Viewing the Cloud Canvas Progress Log provides details about the creation process.
+Deployment Status Table
+The Deployment status table shows the status of the AWS CloudFormation stack for each deployment. Deployment shows the deployment name. For descriptions of the remaining fields in this table, see Stack Resources Table in the Working with Project Stacks  section. 
+Individual Deployment Nodes
+The child nodes of the Deployment node each represent one of the Lumberyard project’s deployments. When a Deployment node is selected, the detail pane shows the current status of the selected deployment. 
+
+Note
+If a Deployment node is selected when no AWS profile is configured, Lumberyard prompts you to provide a profile. The status of the project’s deployments cannot be displayed unless a profile is provided. For more information, see Managing Cloud Canvas Profiles. 
+Individual Deployment Status Table
+The  deployment status table shows the status of the AWS CloudFormation stack for the selected deployment. For descriptions of the contents of this table, see Project Stack Status Table in the Working with Project Stacks  section. 
+Upload All Resources
+Click Upload all resources to start the process of modifying, creating, or deleting resources in the current AWS deployment so that they match your local definitions for all resource groups. 
+Delete Deployment
+Click Delete deployment to start the process of deleting the deployment’s resources from AWS. The resources defined by all resource groups will be deleted. 
+
+For more information about deleting deployments, see Deleting Cloud Canvas Deployments and Their Resources.
+Stack Resources Table
+The Stack resources table shows the status of each of the resources defined by all the resource groups for the selected deployment. For descriptions of the fields in this table, see Stack Resources Table in the Working with Project Stacks  section. 

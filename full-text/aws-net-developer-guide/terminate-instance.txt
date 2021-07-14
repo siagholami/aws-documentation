@@ -1,0 +1,63 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Terminating an Amazon EC2 instance
+When you no longer need one or more of your Amazon EC2 instances, you can terminate them.
+This example shows you how to use the AWS SDK for .NET to terminate EC2 instances. It takes an instance ID as input.
+SDK references
+NuGet packages:
+ AWSSDK.EC2
+Programming elements:
+ Namespace Amazon.EC2
+Class AmazonEC2Client
+ Namespace Amazon.EC2.Model
+Class TerminateInstancesRequest
+Class TerminateInstancesResponse
+```
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Amazon.EC2;
+using Amazon.EC2.Model;
+namespace EC2TerminateInstance
+{
+  class Program
+  {
+    static async Task Main(string[] args)
+    {
+      if((args.Length == 1) && (args[0].StartsWith("i-")))
+      {
+        // Terminate the instance
+        var ec2Client = new AmazonEC2Client();
+        await TerminateInstance(ec2Client, args[0]);
+      }
+      else
+      {
+        Console.WriteLine("\nCommand-line argument missing or incorrect.");
+        Console.WriteLine("\nUsage: EC2TerminateInstance instance-ID");
+        Console.WriteLine("  instance-ID - The EC2 instance you want to terminate.");
+        return;
+      }
+    }
+//
+// Method to terminate an EC2 instance
+private static async Task TerminateInstance(IAmazonEC2 ec2Client, string instanceID)
+{
+  var request = new TerminateInstancesRequest{
+    InstanceIds = new List<string>() { instanceID }};
+  TerminateInstancesResponse response =
+    await ec2Client.TerminateInstancesAsync(new TerminateInstancesRequest{
+      InstanceIds = new List<string>() { instanceID }
+    });
+  foreach (InstanceStateChange item in response.TerminatingInstances)
+  {
+    Console.WriteLine("Terminated instance: "  item.InstanceId);
+    Console.WriteLine("Instance state: "  item.CurrentState.Name);
+  }
+}
+
+}
+}
+```
+After you run the example, it's a good idea to sign in to the Amazon EC2 console to verify that the EC2 instance has been terminated.

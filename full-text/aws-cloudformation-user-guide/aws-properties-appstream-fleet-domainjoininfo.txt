@@ -1,0 +1,24 @@
+AWS::AppStream::Fleet DomainJoinInfo
+The name of the directory and organizational unit (OU) to use to join a fleet to a Microsoft Active Directory domain.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DirectoryName](#cfn-appstream-fleet-domainjoininfo-directoryname)" : String,
+  "[OrganizationalUnitDistinguishedName](#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname)" : String
+}
+YAML
+[DirectoryName](#cfn-appstream-fleet-domainjoininfo-directoryname): String
+  [OrganizationalUnitDistinguishedName](#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname): String
+Properties
+DirectoryName 
+The fully qualified name of the directory (for example, corp.example.com).
+Required: No
+Type: String
+Update requires: No interruption
+OrganizationalUnitDistinguishedName 
+The distinguished name of the organizational unit for computer accounts.
+Required: No
+Type: String
+Maximum: 2000
+Update requires: No interruption

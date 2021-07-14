@@ -1,0 +1,30 @@
+AWS::AmazonMQ::Broker MaintenanceWindow
+The parameters that determine the WeeklyStartTime to apply pending updates or patches to the broker.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DayOfWeek](#cfn-amazonmq-broker-maintenancewindow-dayofweek)" : String,
+  "[TimeOfDay](#cfn-amazonmq-broker-maintenancewindow-timeofday)" : String,
+  "[TimeZone](#cfn-amazonmq-broker-maintenancewindow-timezone)" : String
+}
+YAML
+[DayOfWeek](#cfn-amazonmq-broker-maintenancewindow-dayofweek): String
+  [TimeOfDay](#cfn-amazonmq-broker-maintenancewindow-timeofday): String
+  [TimeZone](#cfn-amazonmq-broker-maintenancewindow-timezone): String
+Properties
+DayOfWeek 
+The day of the week.
+Required: Yes
+Type: String
+Update requires: No interruption
+TimeOfDay 
+The time, in 24-hour format.
+Required: Yes
+Type: String
+Update requires: No interruption
+TimeZone 
+The time zone, UTC by default, in either the Country/City format, or the UTC offset format.
+Required: Yes
+Type: String
+Update requires: No interruption

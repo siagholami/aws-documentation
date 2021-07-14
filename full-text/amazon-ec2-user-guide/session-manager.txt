@@ -1,0 +1,23 @@
+Connecting to your Linux instance using Session Manager
+Session Manager is a fully managed AWS Systems Manager capability that lets you manage your Amazon EC2 instances through an interactive one-click browser-based shell or through the AWS CLI. You can use Session Manager to start a session with an instance in your account. After the session is started, you can run bash commands as you would through any other connection type. For more information about Session Manager, see AWS Systems Manager Session Manager in the AWS Systems Manager User Guide.
+Before attempting to connect to an instance using Session Manager, ensure that the necessary setup steps have been completed. For more information and instructions, see  Getting Started with Session Manager.
+To connect to a Linux instance using Session Manager using the Amazon EC2 console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Instances.
+
+
+Select the instance and choose Connect.
+
+
+For Connection method, choose Session Manager.
+
+
+Choose Connect.
+
+
+Troubleshooting
+If you receive an error that you’re not authorized to perform one or more Systems Manager actions (ssm:command-name), then you must update your policies to allow you to start sessions from the Amazon EC2 console. For more information, see  Quickstart Default IAM Policies for Session Manager in the AWS Systems Manager User Guide.

@@ -1,0 +1,38 @@
+Getting Started Library
+AWS Service Catalog provides a Getting Started Library of well-architected product templates so you can get started quickly. You can copy any of the products in our Getting Started Library portfolios to your own account, then customize them to suit your needs. 
+Topics
+ Prerequisites
+ Reference Architectures
+ High Reliability Architectures
+ Learn More
+Prerequisites
+Before you use the templates in our Getting Started Library, make sure you have the following: 
+ The required permissions to use AWS CloudFormation templates. For more information, see Controlling Access with AWS Identity and Access Management.
+ The required administrator permissions to manage AWS Service Catalog. For more information, see Identity and Access Management in AWS Service Catalog.
+Reference Architectures
+Our Reference Architectures portfolio is a general repository available to all AWS Service Catalog administrators. It contains well-architected, best practice templates for common AWS services, including: 
+ Compute - with Amazon EC2
+ Storage - with Amazon S3
+ Networking - with Amazon VPC
+ Database - with Amazon RDS
+To view the Reference Architectures portfolio in the administrator console
+
+
+In the AWS Service Catalog console, choose Portfolios.
+
+
+On the Portfolios page, choose the Getting Started library tab.
+
+
+Choose the Reference Architectures portfolio.
+
+
+You can browse the list of available product templates, copy them to your own portfolio, and customize them.
+
+
+You can view the repository of AWS Service Catalog Reference Architectures on GitHub here: Sample AWS CloudFormation templates and architecture for AWS Service Catalog. 
+High Reliability Architectures
+Our High Reliability Architectures portfolio is a repository of well-architected, multi-region blueprints. Each blueprint provides prescriptive implementation guidance for AWS services commonly used to build multi-region workloads. Examples include patterns for managing infrastructure changes and data storage backup and recovery for user identity, key-value, and object data across multiple regions. 
+Learn More
+
+For more information about the well-architected framework, see AWS Well-Architected.

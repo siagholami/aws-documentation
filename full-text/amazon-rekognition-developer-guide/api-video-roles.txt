@@ -1,0 +1,107 @@
+Configuring Amazon Rekognition Video
+To use the Amazon Rekognition Video API with stored videos, you have to configure the IAM user and an IAM service role to access your Amazon SNS topics. You also have to subscribe an Amazon SQS queue to your Amazon SNS topics. 
+Note
+If you're using these instructions to set up the Analyzing a Video Stored in an Amazon S3 Bucket with Java or Python (SDK) example, you don't need to do steps 3, 4, 5, and 6. The example includes code to create and configure the Amazon SNS topic and Amazon SQS queue.
+The examples in this section create a new Amazon SNS topic by using the instructions that give Amazon Rekognition Video access to multiple topics. If you want to use an existing Amazon SNS topic, use Giving Access to an Existing Amazon SNS Topic for step 3.
+To configure Amazon Rekognition Video
+
+Set up an AWS account to access Amazon Rekognition Video. For more information, see Step 1: Set Up an AWS Account and Create an IAM User.
+
+Ensure the user has at least the following permissions:
+    AmazonSQSFullAccess
+    AmazonRekognitionFullAccess
+    AmazonS3FullAccess
+    AmazonSNSFullAccess
+
+
+Install and configure the required AWS SDK. For more information, see Step 2: Set Up the AWS CLI and AWS SDKs. 
+
+
+Create an Amazon SNS topic by using the Amazon SNS console. Prepend the topic name with AmazonRekognition. Note the topic Amazon Resource Name (ARN). Ensure the topic is in the same region as the AWS endpoint that you are using.
+
+
+Create an Amazon SQS standard queue by using the Amazon SQS console. Note the queue ARN.
+
+
+Subscribe the queue to the topic you created in step 3.
+
+
+Give permission to the Amazon SNS topic to send messages to the Amazon SQS queue.
+
+
+Create an IAM service role to give Amazon Rekognition Video access to your Amazon SNS topics. Note the Amazon Resource Name (ARN) of the service role. For more information, see Giving Access to Multiple Amazon SNS Topics.
+
+
+ Add the following inline policy to the IAM user that you created in step 1: 
+
+
+{
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "MySid",
+               "Effect": "Allow",
+               "Action": "iam:PassRole",
+               "Resource": "arn:Service role ARN from step 7"
+           }
+       ]
+   }
+Give the inline policy a name of your choosing.
+
+You can now run the examples in Analyzing a Video Stored in an Amazon S3 Bucket with Java or Python (SDK) and Analyzing a Video with the AWS Command Line Interface.
+
+Giving Access to Multiple Amazon SNS Topics
+You use an IAM service role to give Amazon Rekognition Video access to Amazon SNS topics that you create. IAM provides the Rekognition use case for creating an Amazon Rekognition Video service role.
+You can give Amazon Rekognition Video access to multiple Amazon SNS topics by using the AmazonRekognitionServiceRole permissions policy and prepending the topic names with AmazonRekognition—for example, AmazonRekognitionMyTopicName. 
+To give Amazon Rekognition Video access to multiple Amazon SNS topics
+
+
+Create an IAM service role. Use the following information to create the IAM service role:
+
+
+Choose Rekognition for the service name.
+
+
+Choose Rekognition for the service role use case. You should see the AmazonRekognitionServiceRole permissions policy listed. AmazonRekognitionServiceRole gives Amazon Rekognition Video access to Amazon SNS topics that are prefixed with AmazonRekognition.
+
+
+Give the service role a name of your choosing.
+
+
+Note the ARN of the service role. You need it to start video analysis operations.
+
+
+Giving Access to an Existing Amazon SNS Topic
+You can create a permissions policy that allows Amazon Rekognition Video access to an existing Amazon SNS topic.
+To give Amazon Rekognition Video access to an existing Amazon SNS topic
+
+ Create a new permissions policy with the IAM JSON policy editor, and use the following policy. Replace topicarn with the Amazon Resource Name (ARN) of the desired Amazon SNS topic.
+
+{
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Effect": "Allow",
+               "Action": [
+                   "sns:Publish"
+               ],
+               "Resource": "topicarn"
+           }
+       ]
+   }
+
+
+Create an IAM service role, or update an existing IAM service role. Use the following information to create the IAM service role:
+
+
+Choose Rekognition for the service name.
+
+
+Choose Rekognition for the service role use case.
+
+
+Attach the permissions policy you created in step 1.
+
+
+Note the ARN of the service role. You need it to start video analysis operations.
+

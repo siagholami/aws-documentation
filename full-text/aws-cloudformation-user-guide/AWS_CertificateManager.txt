@@ -1,0 +1,3 @@
+AWS Certificate Manager resource type reference
+Resource types
+ AWS::CertificateManager::Certificate

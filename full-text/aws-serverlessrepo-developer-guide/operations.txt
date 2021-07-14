@@ -1,0 +1,31 @@
+Operations
+The AWS Serverless Application Repository REST API includes the following operations.
+ CreateApplication
+Creates an application, optionally including an AWS SAM file to create the first application version in the same call.
+ CreateApplicationVersion
+Creates an application version.
+ CreateCloudFormationChangeSet
+Creates an AWS CloudFormation change set for the given application.
+ CreateCloudFormationTemplate
+Creates an AWS CloudFormation template.
+ DeleteApplication
+Deletes the specified application.
+ GetApplication
+Gets the specified application.
+ GetApplicationPolicy
+Retrieves the policy for the application.
+ GetCloudFormationTemplate
+Gets the specified AWS CloudFormation template.
+ ListApplicationDependencies
+Retrieves the list of applications nested in the containing application.
+ ListApplications
+Lists applications owned by the requester.
+ ListApplicationVersions
+Lists versions for the specified application.
+ PutApplicationPolicy
+Sets the permission policy for an application. For the list of actions supported for this operation, see Application Permissions .
+ UnshareApplication
+Unshares an application from an AWS Organization.
+This operation can be called only from the organization's master account.
+ UpdateApplication
+Updates the specified application.

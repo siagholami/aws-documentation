@@ -1,0 +1,192 @@
+Tutorial: Create a pipeline that publishes your serverless application to the AWS Serverless Application Repository
+You can use AWS CodePipeline to continuously deliver your AWS SAM serverless application to the AWS Serverless Application Repository.
+This tutorial shows how to create and configure a pipeline to build your serverless application that is hosted in GitHub and publish it to the AWS Serverless Application Repository automatically. The pipeline uses GitHub as the source provider and CodeBuild as the build provider. To publish your serverless application to the AWS Serverless Application Repository, you deploy an application (from the AWS Serverless Application Repository) and associate the Lambda function created by that application as an Invoke action provider in your pipeline. Then you can continuously deliver application updates to the AWS Serverless Application Repository, without writing any code.
+Important
+Many of the actions you add to your pipeline in this procedure involve AWS resources that you need to create before you create the pipeline. AWS resources for your source actions must always be created in the same AWS Region where you create your pipeline. For example, if you create your pipeline in the US East (Ohio) Region, your CodeCommit repository must be in the US East (Ohio) Region. 
+You can add cross-region actions when you create your pipeline. AWS resources for cross-region actions must be in the same AWS Region where you plan to execute the action. For more information, see Add a cross-Region action in CodePipeline.
+Before you begin
+In this tutorial, we assume the following. 
+ You are familiar with AWS Serverless Application Model (AWS SAM) and the AWS Serverless Application Repository.
+ You have a serverless application hosted in GitHub that you have published to the AWS Serverless Application Repository using the AWS SAM CLI. To publish an example application to the AWS Serverless Application Repository, see Quick Start: Publishing Applications in the AWS Serverless Application Repository Developer Guide. To publish your own application to the AWS Serverless Application Repository, see Publishing Applications Using the AWS SAM CLI in the AWS Serverless Application Model Developer Guide.
+Step 1: Create a buildspec.yml file
+Create a buildspec.yml file with the following contents, and add it to your serverless application's GitHub repository. Replace template.yml with your application's AWS SAM template and bucketname with the S3 bucket where your packaged application is stored.
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        python: 3.8
+  build:
+    commands:
+      - pip install --upgrade pip
+      - pip install pipenv --user
+      - pipenv install awscli aws-sam-cli
+      - pipenv run sam package --template-file template.yml --s3-bucket bucketname --output-template-file packaged-template.yml
+artifacts:
+  files:
+    - packaged-template.yml
+Step 2: Create and configure your pipeline
+Follow these steps to create your pipeline in the AWS Region where you want to publish your serverless application.
+
+
+Sign in to the AWS Management Console and open the CodePipeline console at https://console.aws.amazon.com/codepipeline/.
+
+
+If necessary, switch to the AWS Region where you want to publish your serverless application.
+
+
+Choose Create pipeline. On the Choose pipeline settings page, in Pipeline name, enter the name for your pipeline.
+
+
+In Service role, choose New service role to allow CodePipeline to create a service role in IAM.
+
+
+Leave the settings under Advanced settings at their defaults, and then choose Next.
+
+
+On the Add source stage page, in Source provider, choose GitHub, and then choose Connect to GitHub.
+
+
+In the browser window, choose Authorize aws-codesuite. This allows your pipeline to make your repository a source, and to use webhooks that detect when new code is pushed to the repository.
+
+
+In Repository, choose your GitHub source repository.
+
+
+In Branch, choose your GitHub branch.
+
+
+Choose Next.
+
+
+On the Add build stage page, add a build stage:
+
+
+In Build provider, choose AWS CodeBuild. For Region, use the pipeline Region.
+
+
+Choose Create project.
+
+
+In Project name, enter a name for this build project.
+
+
+In Environment image, choose Managed image. For Operating system, choose Ubuntu.
+
+
+For Runtime and Runtime version, choose the runtime and version required for your serverless application.
+
+
+For Service role, choose New service role.
+
+
+For Build specifications, choose Use a buildspec file.
+
+
+Choose Continue to CodePipeline. This opens the CodePipeline console and creates a CodeBuild project that uses the buildspec.yml in your repository for configuration. The build project uses a service role to manage AWS service permissions. This step might take a couple of minutes.
+
+
+Choose Next.
+
+
+On the Add deploy stage page, choose Skip deploy stage, and then accept the warning message by choosing Skip again. Choose Next.
+
+
+Choose Create pipeline. You should see a diagram that shows the source and build stages.
+
+
+Grant the CodeBuild service role permission to access the S3 bucket where your packaged application is stored.
+
+
+In the Build stage of your new pipeline, choose CodeBuild.
+
+
+Choose the Build details tab.
+
+
+In Environment, choose the CodeBuild service role to open the IAM console.
+
+
+Expand the selection for CodeBuildBasePolicy, and choose Edit policy.
+
+
+Choose JSON.
+
+
+Add a new policy statement with the following contents. The statement allows CodeBuild to put objects into the S3 bucket where your packaged application is stored. Replace bucketname with the name of your S3 bucket.
+{
+              "Effect": "Allow",
+              "Resource": [
+                  "arn:aws:s3:::bucketname/*"
+              ],
+              "Action": [
+                  "s3:PutObject"
+              ]
+          }
+
+
+Choose Review policy.
+
+
+Choose Save changes.
+
+
+Step 3: Deploy the publish application
+Follow these steps to deploy the application that contains the Lambda function that performs the publish to the AWS Serverless Application Repository. This application is aws-serverless-codepipeline-serverlessrepo-publish.
+Note
+You must deploy the application to the same AWS Region as your pipeline.
+
+
+Go to the application page, and choose Deploy.
+
+
+Select I acknowledge that this app creates custom IAM roles. 
+
+
+Choose Deploy.
+
+
+Choose View AWS CloudFormation Stack to open the AWS CloudFormation console.
+
+
+Expand the Resources section. You see ServerlessRepoPublish, which is of the type AWS::Lambda::Function. Make a note of the physical ID of this resource for the next step. You use this physical ID when you create the new publish action in CodePipeline.
+
+
+Step 4: Create the publish action
+Follow these steps to create the publish action in your pipeline.
+
+
+Open the CodePipeline console at https://console.aws.amazon.com/codepipeline/.
+
+
+In the left navigation section, choose the pipeline that you want to edit.
+
+
+Choose Edit.
+
+
+After the last stage of your current pipeline, choose  Add stage. In Stage name enter a name, such as Publish, and choose Add stage.
+
+
+In the new stage, choose  Add action group.
+
+
+Enter an action name. From Action provider, in Invoke, choose AWS Lambda.
+
+
+From Input artifacts, choose BuildArtifact.
+
+
+From Function name, choose the physical ID of the Lambda function that you noted in the previous step.
+
+
+Choose Save for the action.
+
+
+Choose Done for the stage.
+
+
+In the upper right, choose Save.
+
+
+To verify your pipeline, make a change to your application in GitHub. For example, change the application's description in the Metadata section of your AWS SAM template file. Commit the change and push it to your GitHub branch. This triggers your pipeline to run. When the pipeline is complete, check that your application has been updated with your change in the AWS Serverless Application Repository.
+

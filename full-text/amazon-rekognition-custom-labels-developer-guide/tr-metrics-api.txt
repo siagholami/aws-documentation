@@ -1,0 +1,19 @@
+Accessing Amazon Rekognition Custom Labels Training Results (SDK)
+The Amazon Rekognition API provides metrics beyond those provided in the console. 
+Like the console, the API provides access to the following metrics as summary information for the training results and as training results for each label:
+ Precision
+ Recall
+ Overall Model Performance
+The average threshold for all labels and the threshold for individual labels is returned.
+The API also provides the following metrics for classification and image detection (object location on image).
+ Confusion Matrix for image classification.
+ Mean Average Precision (mAP) for image detection.
+ Mean Average Recall (mAR) for image detection.
+The API also provides true positive, false positive, false negative, and true negative values. For more information, see Metrics for Evaluating Your Model.
+The aggregate F1 score metric is returned directly by the API. Other metrics are accessible from a Summary File and Evaluation Manifest Snapshot files stored in an Amazon S3 bucket. 
+For example code, see Accessing the Summary File and Evaluation Manifest Snapshot (SDK).
+Topics
+ Summary File
+ Evaluation Manifest Snapshot
+ Accessing the Summary File and Evaluation Manifest Snapshot (SDK)
+ Reference: Training Results Summary File

@@ -1,0 +1,26 @@
+AWS::KinesisFirehose::DeliveryStream HttpEndpointRequestConfiguration
+The configuration of the HTTP endpoint request.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CommonAttributes](#cfn-kinesisfirehose-deliverystream-httpendpointrequestconfiguration-commonattributes)" : [ HttpEndpointCommonAttribute, ... ],
+  "[ContentEncoding](#cfn-kinesisfirehose-deliverystream-httpendpointrequestconfiguration-contentencoding)" : String
+}
+YAML
+[CommonAttributes](#cfn-kinesisfirehose-deliverystream-httpendpointrequestconfiguration-commonattributes): 
+    - HttpEndpointCommonAttribute
+  [ContentEncoding](#cfn-kinesisfirehose-deliverystream-httpendpointrequestconfiguration-contentencoding): String
+Properties
+CommonAttributes 
+Describes the metadata sent to the HTTP endpoint destination.
+Required: No
+Type: List of HttpEndpointCommonAttribute
+Maximum: 50
+Update requires: No interruption
+ContentEncoding 
+Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. For more information, see Content-Encoding in MDN Web Docs, the official Mozilla documentation. 
+Required: No
+Type: String
+Allowed values: GZIP | NONE
+Update requires: No interruption

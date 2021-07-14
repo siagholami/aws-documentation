@@ -1,0 +1,46 @@
+AWS::Greengrass::FunctionDefinitionVersion Environment
+The environment configuration for a Lambda function on the AWS IoT Greengrass core.
+ In an AWS CloudFormation template, Environment is a property of the  FunctionConfiguration  property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AccessSysfs](#cfn-greengrass-functiondefinitionversion-environment-accesssysfs)" : Boolean,
+  "[Execution](#cfn-greengrass-functiondefinitionversion-environment-execution)" : Execution,
+  "[ResourceAccessPolicies](#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies)" : [ ResourceAccessPolicy, ... ],
+  "[Variables](#cfn-greengrass-functiondefinitionversion-environment-variables)" : Json
+}
+YAML
+[AccessSysfs](#cfn-greengrass-functiondefinitionversion-environment-accesssysfs): Boolean
+  [Execution](#cfn-greengrass-functiondefinitionversion-environment-execution): 
+    Execution
+  [ResourceAccessPolicies](#cfn-greengrass-functiondefinitionversion-environment-resourceaccesspolicies): 
+    - ResourceAccessPolicy
+  [Variables](#cfn-greengrass-functiondefinitionversion-environment-variables): Json
+Properties
+AccessSysfs 
+Indicates whether the function is allowed to access the /sys directory on the core device, which allows the read device information from /sys.
+This property applies only to Lambda functions that run in a Greengrass container.
+Required: No
+Type: Boolean
+Update requires: Replacement
+Execution 
+Settings for the Lambda execution environment in AWS IoT Greengrass.
+Required: No
+Type: Execution
+Update requires: Replacement
+ResourceAccessPolicies 
+A list of the resources in the group that the function can access, with the corresponding read-only or read-write permissions. The maximum is 10 resources.
+This property applies only to Lambda functions that run in a Greengrass container.
+Required: No
+Type: List of ResourceAccessPolicy
+Update requires: Replacement
+Variables 
+Environment variables for the Lambda function.
+Required: No
+Type: Json
+Update requires: Replacement
+See also
+
+FunctionConfigurationEnvironment in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

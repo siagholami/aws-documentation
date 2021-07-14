@@ -1,0 +1,5 @@
+Back Up and Restore an AWS OpsWorks for Chef Automate Server
+This section describes how to back up and restore an AWS OpsWorks for Chef Automate server, and how to delete backups.
+Topics
+ Back Up an AWS OpsWorks for Chef Automate Server
+ Restore an AWS OpsWorks for Chef Automate Server from a Backup

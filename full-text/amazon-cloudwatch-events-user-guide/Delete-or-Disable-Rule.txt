@@ -1,0 +1,24 @@
+Deleting or Disabling a CloudWatch Events Rule
+Use the following steps to delete or disable a CloudWatch Events rule.
+To delete or disable a rule
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Rules.
+
+
+Managed rules have a box icon next to their names. For more information, see Amazon CloudWatch Events Managed Rules.
+
+
+Do one of the following:
+
+
+To delete a rule, select the button next to the rule and choose Actions, Delete, Delete.
+If the rule is a managed rule, you must type the name of the rule to acknowledge that it is a managed rule, and that deleting it may stop functionality in the service that created the rule. To continue, type the rule name and choose Force delete.
+
+
+To temporarily disable a rule, select the button next to the rule and choose Actions, Disable, Disable.
+You cannot disable a managed rule.
+

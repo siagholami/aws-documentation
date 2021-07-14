@@ -1,0 +1,6 @@
+AWS Glue Access Control Policy Examples
+This section contains examples of both identity-based (IAM) access control policies and AWS Glue resource policies.
+Topics
+ AWS Glue Identity-Based (IAM) Access Control Policy Examples
+ AWS Glue Identity-Based (IAM) Access Control Policy with Tags Examples
+ AWS Glue Resource-Based Access Control Policy Examples

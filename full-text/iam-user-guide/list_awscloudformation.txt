@@ -1,0 +1,104 @@
+Actions, resources, and condition keys for AWS CloudFormation
+AWS CloudFormation (service prefix: cloudformation) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by AWS CloudFormation
+ Resource types defined by AWS CloudFormation
+ Condition keys for AWS CloudFormation
+Actions defined by AWS CloudFormation
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+[See the AWS documentation website for more details]
+Resource types defined by AWS CloudFormation
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ stack 
+arn:${Partition}:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}
+ aws:ResourceTag/${TagKey} 
+
+
+ stackset 
+arn:${Partition}:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}
+ aws:ResourceTag/${TagKey} 
+
+
+ changeset 
+arn:${Partition}:cloudformation:${Region}:${Account}:changeSet/${ChangeSetName}:${Id}
+
+
+
+
+Condition keys for AWS CloudFormation
+AWS CloudFormation defines the following condition keys that can be used in the Condition element of an IAM policy. You can use these keys to further refine the conditions under which the policy statement applies. For details about the columns in the following table, see The condition keys table.
+To view the global condition keys that are available to all services, see Available global condition keys.
+
+
+
+
+Condition keys
+Description
+Type
+
+
+
+
+ aws:RequestTag/${TagKey} 
+
+String
+
+
+ aws:ResourceTag/${TagKey} 
+
+String
+
+
+ aws:TagKeys 
+
+String
+
+
+ cloudformation:ChangeSetName 
+An AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete.
+String
+
+
+ cloudformation:ImportResourceTypes 
+The template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they want to import a resource into a stack.
+String
+
+
+ cloudformation:ResourceTypes 
+The template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they create or update a stack.
+String
+
+
+ cloudformation:RoleArn 
+The ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets.
+ARN
+
+
+ cloudformation:StackPolicyUrl 
+An Amazon S3 stack policy URL. Use to control which stack policies IAM users can associate with a stack during a create or update stack action.
+String
+
+
+ cloudformation:TemplateUrl 
+An Amazon S3 template URL. Use to control which templates IAM users can use when they create or update stacks.
+String
+
+

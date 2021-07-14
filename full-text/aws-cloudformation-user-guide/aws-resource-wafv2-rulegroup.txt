@@ -1,0 +1,309 @@
+AWS::WAFv2::RuleGroup
+Note
+This is the latest version of AWS WAF, named AWS WAFV2, released in November, 2019. For information, including how to migrate your AWS WAF resources from the prior release, see the AWS WAF Developer Guide. 
+Use an AWS::WAFv2::RuleGroup to define a collection of rules for inspecting and controlling web requests. You use a rule group in an AWS::WAFv2::WebACL by providing its Amazon Resource Name (ARN) to the rule statement RuleGroupReferenceStatement, when you add rules to the web ACL. 
+When you create a rule group, you define an immutable capacity limit. If you update a rule group, you must stay within the capacity. This allows others to reuse the rule group with confidence in its capacity requirements. 
+Note
+You can only use up to 3 levels of nested rule statements when you manage your web ACLs and rule groups using AWS CloudFormation. This limitation doesn't exist when you use the API and SDKs. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::WAFv2::RuleGroup",
+  "Properties" : {
+      "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
+      "[Description](#cfn-wafv2-rulegroup-description)" : String,
+      "[Name](#cfn-wafv2-rulegroup-name)" : String,
+      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
+      "[Scope](#cfn-wafv2-rulegroup-scope)" : String,
+      "[Tags](#cfn-wafv2-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : VisibilityConfig
+    }
+}
+YAML
+Type: AWS::WAFv2::RuleGroup
+Properties: 
+  [Capacity](#cfn-wafv2-rulegroup-capacity): Integer
+  [Description](#cfn-wafv2-rulegroup-description): String
+  [Name](#cfn-wafv2-rulegroup-name): String
+  [Rules](#cfn-wafv2-rulegroup-rules): 
+    - Rule
+  [Scope](#cfn-wafv2-rulegroup-scope): String
+  [Tags](#cfn-wafv2-rulegroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig): 
+    VisibilityConfig
+Properties
+Capacity 
+The web ACL capacity units (WCUs) required for this rule group.
+When you create your own rule group, you define this, and you cannot change it after creation. When you add or modify the rules in a rule group, AWS WAF enforces this limit. You can check the capacity for a set of rules using CheckCapacity.
+AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group. The WCU limit for web ACLs is 1,500. 
+Required: Yes
+Type: Integer
+Update requires: No interruption
+Description 
+A friendly description of the rule group. You cannot change the description of a rule group after you create it.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Pattern: ^[\w=:#@/\-,\.][\w=:#@/\-,\.\s][\w=:#@/\-,\.]$
+Update requires: No interruption
+Name 
+A friendly name of the rule group. You cannot change the name of a rule group after you create it.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[\w\-]$
+Update requires: No interruption
+Rules 
+The Rule statements used to identify the web requests that you want to allow, block, or count. Each rule includes one top-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them. 
+Required: No
+Type: List of Rule
+Update requires: No interruption
+Scope 
+Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage. Valid Values are CLOUDFRONT and REGIONAL.
+For CLOUDFRONT, you must create your WAFv2 resources in the US East (N. Virginia) Region, us-east-1.
+Required: Yes
+Type: String
+Update requires: No interruption
+Tags 
+Key:value pairs associated with an AWS resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
+To modify tags on existing resources, use the AWS WAF console or the APIs. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation. 
+Required: No
+Type: List of Tag
+Update requires: No interruption
+VisibilityConfig 
+Defines and enables Amazon CloudWatch metrics and web request sample collection. 
+Required: Yes
+Type: VisibilityConfig
+Update requires: No interruption
+Return values
+Ref
+The Ref for the resource, containing the resource name, physical ID, and scope, formatted as follows: name|id|scope.
+For example: my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL
+Fn::GetAtt
+
+Arn 
+The Amazon Resource Name (ARN) of the rule group.
+Id 
+The ID of the rule group.
+Examples
+Create a rule group
+The following shows an example rule group specification. 
+JSON
+"Description": "Create RuleGroups",
+  "Resources": {
+      "SampleRuleGroup": {
+          "Type": "AWS::WAFv2::RuleGroup",
+          "Properties": {
+              "Name": "SampleRuleGroup",
+              "Scope": "REGIONAL",
+              "Description": "SampleRuleGroup",
+              "VisibilityConfig": {
+                  "SampledRequestsEnabled": true,
+                  "CloudWatchMetricsEnabled": true,
+                  "MetricName": "SampleRuleGroupMetrics"
+              },
+              "Capacity": 1000,
+              "Rules": [
+                  {
+                      "Name": "RuleOne",
+                      "Priority": 1,
+                      "Action": {
+                          "Allow": {}
+                      },
+                      "VisibilityConfig": {
+                          "SampledRequestsEnabled": true,
+                          "CloudWatchMetricsEnabled": true,
+                          "MetricName": "RuleOneMetric"
+                      },
+                      "Statement": {
+                          "ByteMatchStatement": {
+                              "FieldToMatch": {
+                                  "AllQueryArguments": {}
+                              },
+                              "PositionalConstraint": "CONTAINS",
+                              "SearchString": "testagent",
+                              "TextTransformations": [
+                                  {
+                                      "Priority": 1,
+                                      "Type": "HTML_ENTITY_DECODE"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "Name": "RuleTwo",
+                      "Priority": 2,
+                      "Action": {
+                          "Block": {}
+                      },
+                      "VisibilityConfig": {
+                          "SampledRequestsEnabled": true,
+                          "CloudWatchMetricsEnabled": true,
+                          "MetricName": "RuleTwoMetric"
+                      },
+                      "Statement": {
+                          "ByteMatchStatement": {
+                              "FieldToMatch": {
+                                  "SingleHeader": {
+                                      "Name": "haystack"
+                                  }
+                              },
+                              "PositionalConstraint": "CONTAINS",
+                              "SearchString": "badbot",
+                              "TextTransformations": [
+                                  {
+                                      "Priority": 0,
+                                      "Type": "NONE"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "Name": "RuleThree",
+                      "Priority": 3,
+                      "Action": {
+                          "Count": {}
+                      },
+                      "VisibilityConfig": {
+                          "SampledRequestsEnabled": true,
+                          "CloudWatchMetricsEnabled": true,
+                          "MetricName": "RuleThreeMetric"
+                      },
+                      "Statement": {
+                          "ByteMatchStatement": {
+                              "FieldToMatch": {
+                                  "Body": {}
+                              },
+                              "PositionalConstraint": "CONTAINS",
+                              "SearchString": "RegionOne",
+                              "TextTransformations": [
+                                  {
+                                      "Priority": 0,
+                                      "Type": "HTML_ENTITY_DECODE"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  {
+                      "Name": "RuleFour",
+                      "Priority": 4,
+                      "Action": {
+                          "Allow": {}
+                      },
+                      "VisibilityConfig": {
+                          "SampledRequestsEnabled": true,
+                          "CloudWatchMetricsEnabled": true,
+                          "MetricName": "RuleFourMetric"
+                      },
+                      "Statement": {
+                          "SizeConstraintStatement": {
+                              "ComparisonOperator": "GT",
+                              "Size": 1000,
+                              "FieldToMatch": {
+                                  "UriPath": {}
+                              },
+                              "TextTransformations": [
+                                  {
+                                      "Priority": 0,
+                                      "Type": "NONE"
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              ]
+          }
+      }
+  }
+YAML
+Description: Create RuleGroups
+  Resources:
+    SampleRuleGroup:
+      Type: 'AWS::WAFv2::RuleGroup'
+      Properties:
+        Name: SampleRuleGroup
+        Scope: REGIONAL
+        Description: SampleRuleGroup
+        VisibilityConfig:
+          SampledRequestsEnabled: true
+          CloudWatchMetricsEnabled: true
+          MetricName: SampleRuleGroupMetrics
+        Capacity: 1000
+        Rules:
+          - Name: RuleOne
+            Priority: 1
+            Action:
+              Allow: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleOneMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  AllQueryArguments:
+                    {}
+                PositionalConstraint: CONTAINS
+                SearchString: testagent
+                TextTransformations:
+                  - Priority: 1
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleTwo
+            Priority: 2
+            Action:
+              Block: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleTwoMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  SingleHeader:
+                    Name: haystack
+                PositionalConstraint: CONTAINS
+                SearchString: badbot
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE
+          - Name: RuleThree
+            Priority: 3
+            Action:
+              Count: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleThreeMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  Body: {}
+                PositionalConstraint: CONTAINS
+                SearchString: RegionOne
+                TextTransformations:
+                  - Priority: 0
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleFour
+            Priority: 4
+            Action:
+              Allow: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleFourMetric
+            Statement:
+              SizeConstraintStatement:
+                ComparisonOperator: GT
+                Size: 1000
+                FieldToMatch:
+                  UriPath: {}
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE

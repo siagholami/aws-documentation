@@ -1,0 +1,27 @@
+Contact block: Check contact attributes
+Contact flow types
+You can use this block in the following contact flow types:
+ All flows
+Description
+
+Branches based on a comparison to the value of a contact attribute.
+Supported comparisons include: Equals, Is Greater Than, Is Less Than, Starts With, Contains.
+
+Properties
+
+Configuration tips
+If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed. 
+For example, in the following image Amazon Connect compares the greater than 60 condition first and compares greater than 2 last. 
+
+Configured
+When this block is configured, it looks similar to the following image:
+
+Sample flows
+See these sample flows for scenarios that use this block:
+ Sample inbound flow (first contact experience)
+  Sample interruptible queue flow with callback
+Scenarios
+See these topics for scenarios that use this block:
+ How to reference contact attributes
+ How to use the Channel contact attribute
+ How to use contact attributes to personalize the customer experience

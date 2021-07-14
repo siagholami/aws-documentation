@@ -1,0 +1,33 @@
+Math functions
+Topics
+ Mathematical operator symbols
+ ABS function
+ ACOS function
+ ASIN function
+ ATAN function
+ ATAN2 function
+ CBRT function
+ CEILING (or CEIL) function
+ COS function
+ COT function
+ DEGREES function
+ DEXP function
+ DLOG1 function
+ DLOG10 function
+ EXP function
+ FLOOR function
+ LN function
+ LOG function
+ MOD function
+ PI function
+ POWER function
+ RADIANS function
+ RANDOM function
+ ROUND function
+ SIN function
+ SIGN function
+ SQRT function
+ TAN function
+ TO_HEX function
+ TRUNC function
+This section describes the mathematical operators and functions supported in Amazon Redshift. 

@@ -1,0 +1,328 @@
+Amazon QuickSight User Guide
+
+*Copyright © 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon QuickSight?
+Using Data Dashboards in Amazon QuickSight
+Amazon QuickSight Quick Start Guide
+Amazon QuickSight Demos, Walkthroughs, and Articles
+Getting Started with Data Analysis in Amazon QuickSight
+Setting Up Amazon QuickSight
+Signing In to Amazon QuickSight
+Quick Start: Create an Analysis with a Single Visual Using Sample Data
+Tutorial: Create A Multivisual Analysis and a Dashboard Using Sample Data
+Tutorial: Create a Prepared Data Set
+Tutorial: Create an Analysis
+Tutorial: Modify Visuals
+Tutorial: Create a Dashboard
+
+
+Create an Analysis Using Your Own Local Text File Data
+Create an Analysis Using Your Own Amazon S3 Data
+Create an Analysis Using Your Own Database Data
+
+
+Navigating the User Interface
+Working with Data in Amazon QuickSight
+Working with Data Sources in Amazon QuickSight
+Supported Data Sources
+Data Source Limits
+Creating a Data Source
+Creating a Data Source and Data Set from SaaS Sources
+Creating a Data Source Using Presto
+Creating a Data Source Using Apache Spark
+
+
+Editing a Data Source
+Deleting a Data Source
+
+
+Working with Data Sets
+Importing Data into SPICE
+Creating Data Sets
+Creating Data Sets Using New Data Sources
+Creating a Data Set Using a Local Text File
+Creating a Data Set Using a Microsoft Excel File
+Creating a Data Set Using Amazon S3 Files
+Data Sets Based on Multiple Amazon S3 Files
+Data Sets Using S3 Files in Another AWS Account
+Supported Formats for Amazon S3 Manifest Files
+Creating a Data Set Using Amazon Athena Data
+Creating a Data Set from Salesforce
+Creating Data Sets from New Database Data Sources
+Required Permissions for Database Credentials
+Network and Database Configuration Requirements
+Creating a Data Set from a Database
+
+
+Creating a Data Set Using an Existing Data Source
+
+
+Editing a Data Set
+Duplicating a Data Set
+Refreshing Data
+Changing a Data Set
+Sharing Data Sets
+Restricting Access to a Data Set by Using Row-Level Security
+Deleting a Data Set
+
+
+Preparing Data
+Preparing Data Sets
+Preparing a Data Set Based on File Data
+Preparing a Data Set Based on Salesforce Data
+Preparing a Data Set Based on Database Data
+
+
+Choosing File Upload Settings
+Joining Tables
+Using a SQL Query
+Selecting Fields
+Changing a Field Name
+Changing a Field Data Type
+Using Unsupported or Custom Dates
+Working with Calculated Fields
+Adding a Filter
+Viewing Filters
+Adding a Filter
+Adding a Text Filter
+Adding a Numeric Filter
+Adding a Date Filter
+
+
+Editing a Filter
+Deleting a Filter
+
+
+Adding Geospatial Data
+Changing a Geospatial Grouping
+Geospatial Troubleshooting
+
+
+Working with Analyses
+Creating an Analysis
+Saving Changes to an Analysis
+Renaming an Analysis
+Adding a Title and Description to an Analysis
+Viewing Analysis Details
+Deleting an Analysis
+Export Data from an Analysis to a CSV File
+Adding a Data Set to an Analysis
+Add or Edit a Data Set
+Replacing Data Sets
+
+
+Modifying Data Set Fields in an Analysis
+Setting a Field as a Dimension or Measure
+Changing a Field Data Type
+
+
+Adding a Calculated Field to an Analysis
+Parameters in Amazon QuickSight
+Setting Up Parameters in Amazon QuickSight
+Connecting to Parameters in Amazon QuickSight
+Using Filters with Parameters in Amazon QuickSight
+Using Calculated Fields with Parameters in Amazon QuickSight
+Using Custom URL Actions with Parameters in Amazon QuickSight
+Using Parameters in a URL
+
+
+
+
+SPICE Data in an Analysis
+Sharing Analyses
+Working with Amazon QuickSight Visuals
+Creating an Amazon QuickSight Visual
+Renaming an Amazon QuickSight Visual
+Deleting an Amazon QuickSight Visual
+Exporting Data from an Amazon QuickSight Visual to a CSV File
+Changing Visual Layout in Amazon QuickSight
+Viewing Visual Data in Amazon QuickSight
+Viewing Visual Details
+Scrolling Through Visual Data
+Focusing on Visual Elements
+Excluding Visual Elements
+
+
+Formatting a Visual in Amazon QuickSight
+Changing the Fields Used by a Visual in Amazon QuickSight
+Using Visual Field Controls
+Adding or Removing a Field
+Changing the Field Associated with a Visual Element
+Changing Field Aggregation
+Changing Date Field Granularity
+
+
+Changing Visual Colors in Amazon QuickSight
+Sorting Visual Data in Amazon QuickSight
+Filtering Visual Data in Amazon QuickSight
+Viewing Filters
+Adding a Filter
+Adding a Text Filter
+Adding a Numeric Filter
+Adding a Date Filter
+Adding a Compound Filter with And/Or Operators
+
+
+Editing a Filter
+Deleting a Filter
+Parameterize a Filter
+
+
+Adding Drill-Downs to Visual Data in Amazon QuickSight
+Adding Custom URL Actions to Visuals in Amazon QuickSight
+Working with Visual Types in Amazon QuickSight
+Using AutoGraph
+Using Bar Charts
+Using Combo Charts
+Using Geospatial Charts (Maps)
+Using Heat Maps
+Using KPIs
+Using Line Charts
+Using Pie Charts
+Using Pivot Table
+Modifying Pivot Table Visuals
+Changing the Pivot Table Format
+Expanding and Collapsing Pivot Table Clusters
+Sorting Pivot Tables
+Working with Table Calculations
+
+
+
+
+Using Scatter Plots
+Using Tabular Reports
+Using Tree Maps
+
+
+Working with Stories
+Working with Dashboards
+Publishing a Dashboard
+Copying a Dashboard
+Deleting a Dashboard
+Sharing Dashboards
+Sending Reports by Email
+Subscribing to Reports
+Calculated Field Function and Operator Reference for Amazon QuickSight
+Embedding and Other SDKs
+Embedding Amazon QuickSight Dashboards
+Creating Embedded Dashboards with the Amazon QuickSight SDK
+HTML Example of Embedding a Dashboard with Amazon QuickSight
+Java Example of Embedding a Dashboard with Amazon QuickSight
+JavaScript (Node.js) Example of Embedding a Dashboard with Amazon QuickSight
+Python3 Example of Embedding a Dashboard with Amazon QuickSight
+.NET/C# Example of Embedding a Dashboard with Amazon QuickSight
+
+
+Functionality of Embedded Amazon QuickSight Dashboards
+Pricing and Licensing for Embedded Dashboards with Amazon QuickSight
+Security and User Provisioning for Embedded Dashboards in Amazon QuickSight
+Limitations for Embedded Dashboards in Amazon QuickSight
+Scenarios for Embedding Dashboards with Amazon QuickSight
+
+
+Using Amazon QuickSight with the AWS SDKs
+Permissions for Using Amazon QuickSight from the AWS SDKs
+Amazon QuickSight and the AWS CLI
+Amazon QuickSight Java SDK
+Amazon QuickSight JavaScript (Node.js) SDK
+Amazon QuickSight Python3 SDK
+Amazon QuickSight .NET/C# SDK
+Terminology
+
+
+Troubleshooting Amazon QuickSight
+I Can't Connect to My Data Source
+I Need to Validate the Connection to My Data Source, or Change Data Source Settings
+I Can't Connect to Amazon Athena
+I Can't Connect Although My Data Source Connection Options Look Right (SSL)
+I Can't Connect to MySQL (Issues with SSL and Authorization)
+I Can't Connect to Amazon S3
+I Can't Connect to RDS
+
+
+My Rows Were Skipped During Data Preparation
+My SPICE Data Doesn't Sort Alphabetically
+I Can't Add a Visual to My Analysis
+I Get a Feedback Bar Across My Printed Docs
+Troubleshooting Issues When Using Athena with Amazon QuickSight
+Insufficient Permissions When Using Athena with Amazon QuickSight
+Table Not Found When Using Athena with Amazon QuickSight
+Column Not Found When Using Athena with Amazon QuickSight
+Staging Bucket No Longer Exists When Using Athena with Amazon QuickSight
+Query Timeout When Using Athena with Amazon QuickSight
+Invalid Data When Using Athena with Amazon QuickSight
+Table Incompatible When Using AWS Glue with Athena in Amazon QuickSight
+
+
+Administration
+Different Editions of Amazon QuickSight
+AWS Regions and IP Address Ranges
+Supported Browsers
+Signing Up for Amazon QuickSight
+Access and Authentication in Amazon QuickSight
+Managing User Accounts in Amazon QuickSight Enterprise Edition
+Enabling Single Sign-On Access to Amazon QuickSight Using SAML 2.0
+Setting Up SAML
+
+
+Provisioning Users for Amazon QuickSight
+Using Multi-Factor Authentication (MFA) with Amazon QuickSight
+
+
+Adding Domains for Embedded Dashboard Users
+Upgrading Your Amazon QuickSight Subscription from Standard Edition to Enterprise Edition
+Canceling Your Amazon QuickSight Subscription and Closing the Account
+
+
+Managing User Access Inside Amazon QuickSight
+Managing User Accounts in Amazon QuickSight Standard Edition
+Managing User Accounts in Amazon QuickSight Enterprise Edition
+
+
+Managing Amazon QuickSight Usage
+Managing Subscriptions
+Managing SPICE Capacity
+
+
+Working with AWS Services
+Working with AWS Data Sources
+Allowing Autodiscovery of AWS Resources
+Authorizing Connections from Amazon QuickSight to AWS Data Stores
+Authorizing Connections from Amazon QuickSight to Amazon RDS DB Instances
+Authorizing Connections from Amazon QuickSight to Amazon Redshift Clusters
+Authorizing Connections from Amazon QuickSight to Amazon EC2 Instances
+
+
+Exploring Your AWS Data in Amazon QuickSight
+Exploring Amazon S3 Analytics Data
+
+
+Managing Amazon QuickSight Permissions to AWS Resources
+
+
+Working with AWS Identity and Access Management (IAM) Users, Roles, and Policies
+Working with IAM Actions and Permissions for Amazon QuickSight Users
+Setting Your IAM Policy
+
+
+Working with Amazon VPC
+Logging Operations with AWS CloudTrail
+Tracking Non-API Events by Using CloudTrail Logs
+
+
+
+
+AWS Glossary
+Document History
+Attributions

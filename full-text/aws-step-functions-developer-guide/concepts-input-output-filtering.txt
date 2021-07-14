@@ -1,0 +1,19 @@
+Input and Output Processing in Step Functions
+A Step Functions execution receives a JSON file as input and passes that input to the first state in the workflow. Individual states receive JSON as input and usually pass JSON as output to the next state. Understanding how this information flows from state to state, and learning how to filter and manipulate this data, is key to effectively designing and implementing workflows in AWS Step Functions. 
+In the Amazon States Language, these fields filter and control the flow of JSON from state to state:
+ InputPath
+ OutputPath
+ ResultPath
+ Parameters
+The following diagram shows how JSON information moves through a task state. InputPath selects which parts of the JSON input to pass to the task of the Task state (for example, an AWS Lambda function). ResultPath then selects what combination of the state input and the task result to pass to the output. OutputPath can filter the JSON output to further limit the information that's passed to the output.
+
+InputPath, Parameters, ResultPath, and OutputPath each manipulate JSON as it moves through each state in your workflow.
+Each can use paths to select portions of the JSON from the input or the result. A path is a string, beginning with $, that identifies nodes within JSON text. Step Functions paths use JsonPath syntax.
+Topics
+ Paths
+ InputPath and Parameters
+ ItemsPath
+ ResultPath
+ OutputPath
+ InputPath, ResultPath and OutputPath Example
+ The Context Object

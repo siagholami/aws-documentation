@@ -1,0 +1,18 @@
+Creating Databases in Athena
+A database in Athena is a logical grouping for tables you create in it. Creating a database in the Athena console Query Editor is straightforward.
+To create a database using the Athena Query Editor
+
+
+Open the Athena console at https://console.aws.amazon.com/athena/.
+
+
+On the Query Editor tab, enter the Hive data definition language (DDL) command CREATE DATABASE myDataBase. Replace myDatabase with the name of the database that you want to create.
+
+
+
+Choose Run Query or press CtrlENTER.
+
+
+To make your database the current database, select it from from the Database menu.
+
+

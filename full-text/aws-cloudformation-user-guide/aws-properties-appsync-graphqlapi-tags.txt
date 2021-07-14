@@ -1,0 +1,5 @@
+AWS::AppSync::GraphQLApi Tags
+An arbitrary set of tags (key-value pairs) for this GraphQL API.
+Required: No
+Type: List of Tag
+Update requires: No interruption

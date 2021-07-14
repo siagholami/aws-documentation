@@ -1,0 +1,3 @@
+AccessAnalyzer resource type reference
+Resource types
+ AWS::AccessAnalyzer::Analyzer

@@ -1,0 +1,6 @@
+SerDe Reference
+Athena supports several SerDe libraries for parsing data from different data formats, such as CSV, JSON, Parquet, and ORC. Athena does not support custom SerDes.
+Topics
+ Using a SerDe
+ Supported SerDes and Data Formats
+ Compression Formats

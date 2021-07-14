@@ -1,0 +1,54 @@
+Viewing Amazon ECS metrics
+After you have enabled CloudWatch metrics for Amazon ECS, you can view those metrics on the Amazon ECS and CloudWatch consoles. The Amazon ECS console provides a 24-hour maximum, minimum, and average view of your cluster and service metrics. The CloudWatch console provides a fine-grained and customizable display of your resources, as well as the number of running tasks in a service.
+Topics
+ Viewing cluster metrics using the Amazon ECS console
+ Viewing service metrics using the Amazon ECS console
+ Viewing Amazon ECS metrics using the CloudWatch console
+Viewing cluster metrics using the Amazon ECS console
+Cluster and service metrics are available on the Amazon ECS console. The view provided for cluster metrics shows the average, minimum, and maximum values for the previous 24-hour period, with data points available in 5-minute intervals. For more information about cluster metrics, see Cluster reservation and Cluster utilization.
+To view cluster metrics on the console
+
+
+Open the Amazon ECS console at https://console.aws.amazon.com/ecs/.
+
+
+Select the cluster that you want to view metrics for.
+
+
+On the Cluster: cluster-name page, choose Metrics.
+
+
+Viewing service metrics using the Amazon ECS console
+Amazon ECS service CPU and memory utilization metrics are available on the Amazon ECS console. The view provided for service metrics shows the average, minimum, and maximum values for the previous 24-hour period, with data points available in 5-minute intervals. For more information, see Service utilization.
+To view service metrics in the console
+
+
+Open the Amazon ECS console at https://console.aws.amazon.com/ecs/.
+
+
+Select the cluster that contains the service that you want to view metrics for.
+
+
+On the Cluster: cluster-name page, choose Services.
+
+
+Choose the service that you want to view metrics for.
+
+
+On the Service: service-name page, choose Metrics.
+
+
+Viewing Amazon ECS metrics using the CloudWatch console
+Amazon ECS cluster and service metrics can also be viewed on the CloudWatch console. The console provides the most detailed view of Amazon ECS metrics, and you can tailor the views to suit your needs. You can view Cluster reservation, Cluster utilization, Service utilization, and the Service RUNNING task count. For more information, see the Amazon CloudWatch User Guide.
+To view metrics in the CloudWatch console
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the Metrics section in the navigation pane, choose ECS.
+
+
+Choose the metrics to view. Cluster metrics are scoped as ECS > ClusterName and service utilization metrics are scoped as ECS > ClusterName, ServiceName. The following example shows cluster CPU and memory utilization.
+
+

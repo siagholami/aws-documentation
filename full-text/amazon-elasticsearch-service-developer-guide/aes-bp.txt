@@ -1,0 +1,20 @@
+Amazon Elasticsearch Service Best Practices
+This chapter addresses some best practices for operating Amazon Elasticsearch Service domains and provides general guidelines that apply to many use cases. Production domains should adhere to the following standards:
+ Apply a restrictive resource-based access policy to the domain (or enable fine-grained access control), and follow the principle of least privilege when granting access to the configuration API and the Elasticsearch APIs.
+ Configure at least one replica, the Elasticsearch default, for each index.
+ Use three dedicated master nodes.
+ Deploy the domain across three Availability Zones. This configuration lets Amazon ES distribute replica shards to different Availability Zones than their corresponding primary shards. For a list of Regions that have three Availability Zones and some other considerations, see Configuring a Multi-AZ Domain.
+ Upgrade to the latest Elasticsearch versions as they become available on Amazon Elasticsearch Service.
+ Update to the latest service software as it becomes available.
+ Size the domain appropriately for your workload. For storage volume, shard size, and data node recommendations, see Sizing Amazon ES Domains and Petabyte Scale for Amazon Elasticsearch Service. For dedicated master node recommendations, see Dedicated Master Nodes.
+ Have no more than 1,000 shards on any data node. This limit is the default in Elasticsearch 7.x and later. For a more nuanced guideline, see Choosing the Number of Shards.
+ Use the latest-generation instances available on the service. For example, use I3 instances rather than I2 instances.
+ Don't use burstable instances for production domains. For example, don't use T2 instances as data nodes or dedicated master nodes.
+ If appropriate for your network configuration, create the domain within a VPC.
+ If your domain stores sensitive data, enable encryption of data at rest and node-to-node encryption.
+For more information, see the remaining topics in this chapter.
+Topics
+ Sizing Amazon ES Domains
+ Petabyte Scale for Amazon Elasticsearch Service
+ Dedicated Master Nodes
+ Recommended CloudWatch Alarms

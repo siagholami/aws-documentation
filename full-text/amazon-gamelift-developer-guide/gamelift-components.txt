@@ -1,0 +1,30 @@
+Tools and Resources
+Amazon GameLift provides a collection of tools and resources for you to use.
+Core Tools
+Use these tools to work with Amazon GameLift. 
+Amazon GameLift SDKs
+The Amazon GameLift SDKs contain the libraries needed to communicate with the Amazon GameLift service from your game clients, game servers and game services. Versions of these SDKs are available with Lumberyard or you can download the latest versions separately. See details in Amazon GameLift SDKs. 
+Realtime Client SDK for Amazon GameLift 
+For games using Realtime Servers, The Realtime Client SDK enables a game client to connect to a deployed Realtime server, join a game session, and keep its game state in sync with other players in the game. Download the SDK and learn more about making API calls with the Realtime Servers Client API (C#) Reference. 
+AWS console for Amazon GameLift 
+Use the AWS Management Console for Amazon GameLift to manage your game deployments, configure resources, and track player usage and performance metrics. The Amazon GameLift console provides a GUI alternative to managing resources programmatically with the AWS SDK.
+AWS CLI for Amazon GameLift
+Use this command line tool to make calls to the AWS SDK, including the Amazon GameLift API. Get the AWS Command Line Interface download and install it using these instructions. You can also view the complete AWS CLI Command Reference for all AWS services, including Amazon GameLift. 
+Amazon GameLift Local
+This client-side debugging tool emulates a subset of the Amazon GameLift API on your local development machine. You can test iterative code changes without needing to upload and run your game server on Amazon GameLift instances. Amazon GameLift Local can be used on Windows and Linux devices to test game clients and servers that use the Amazon GameLift SDKs. Amazon GameLift Local is available in the Server SDK download. See details in Testing Your Integration. 
+Additional Resources
+Use these resources to learn and experiment with Amazon GameLift for your multiplayer games. 
+Five-click sample
+Get a sample multiplayer game (client and custom game server) up and running on Amazon GameLift in under an hour. This sample gives you a jump start so you can quickly start experimenting with Amazon GameLift tools, set up fleets and deploy the game server for hosting. adjust autoscaling, and track game activity and performance. You can find the sample in the Amazon GameLift console; from the GameLift intro page click "Test Amazon GameLift", or from any other console page select "Sample game" in the Amazon GameLift navigation menu.
+Amazon GameLift forum
+Use the Amazon GameLift forum to exchange ideas and knowledge, pick up tips, and get help with issues.
+GameTech blog
+Watch the game development blog to keep up with new features about Amazon GameLift, Amazon Lumberyard, learn more about game development with AWS, and get expert tips from the teams.
+AWS Samples on GitHub
+Find a large collection of code samples for all AWS services posted in AWS Samples.
+Getting Started tutorials
+Use the tutorials to walk through the process of getting a sample multiplayer game up and running on Amazon GameLift. Once you complete the series, you can use the game to explore other Amazon GameLift features and tools, such as auto-scaling and performance metrics.
+Amazon GameLift product information
+Check these pages for detailed descriptions of Amazon GameLift, including service overview, FAQ, and pricing details.
+Amazon Lumberyard game engine
+Amazon Lumberyard comes with the Amazon GameLift SDKs built in, and integration is handled automatically. It is bundled with a sample multiplayer game that illustrates how to use Lumberyard to integrate a game with Amazon GameLift. Find more information about this sample project in the Lumberyard User Guide.

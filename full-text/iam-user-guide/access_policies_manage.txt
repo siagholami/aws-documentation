@@ -1,0 +1,16 @@
+Managing IAM policies
+IAM gives you the tools to create and manage all types of IAM policies (managed policies and inline policies). To add permissions to an IAM identity (IAM user, group, or role), you create a policy and then attach the policy to the identity. You can attach multiple policies to an identity, and each policy can contain multiple permissions.
+Consult these resources for details:
+ For more information about the different types of IAM policies, see Policies and permissions in IAM. 
+ For general information about using policies within IAM, see Access management for AWS resources.
+ For information about how permissions are evaluated when multiple policies are in effect for a given IAM identity, see Policy evaluation logic.
+ The number and size of IAM resources in an AWS account are limited. For more information, see IAM and STS quotas.
+Topics
+ Creating IAM policies
+ Validating IAM policy grammar
+ Testing IAM policies with the IAM policy simulator
+ Adding and removing IAM identity permissions
+ Versioning IAM policies
+ Editing IAM policies
+ Deleting IAM policies
+ Refining permissions in AWS using last accessed information

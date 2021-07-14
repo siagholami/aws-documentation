@@ -1,0 +1,95 @@
+ListRobots
+Returns a list of robots. You can optionally provide filters to retrieve specific robots.
+Request Syntax
+```
+POST /listRobots HTTP/1.1
+Content-type: application/json
+{
+   "filters": [ 
+      { 
+         "name": "string",
+         "values": [ "string" ]
+      }
+   ],
+   "maxResults": number,
+   "nextToken": "string"
+}
+```
+URI Request Parameters
+The request does not use any URI parameters.
+Request Body
+The request accepts the following data in JSON format.
+ filters  
+Optional filters to limit results.
+The filter names status and fleetName are supported. When filtering, you must use the complete value of the filtered item. You can use up to three filters, but they must be for the same named item. For example, if you are looking for items with the status Registered or the status Available.
+Type: Array of Filter objects
+Array Members: Fixed number of 1 item.
+Required: No
+ maxResults  
+When this parameter is used, ListRobots only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another ListRobots request with the returned nextToken value. This value can be between 1 and 200. If this parameter is not used, then ListRobots returns up to 200 results and a nextToken value if applicable. 
+Type: Integer
+Required: No
+ nextToken  
+The nextToken value returned from a previous paginated ListRobots request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 2048.
+Pattern: [a-zA-Z0-9_.\-\/=]* 
+Required: No
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "nextToken": "string",
+   "robots": [ 
+      { 
+         "architecture": "string",
+         "arn": "string",
+         "createdAt": number,
+         "fleetArn": "string",
+         "greenGrassGroupId": "string",
+         "lastDeploymentJob": "string",
+         "lastDeploymentTime": number,
+         "name": "string",
+         "status": "string"
+      }
+   ]
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ nextToken  
+The nextToken value to include in a future ListRobots request. When the results of a ListRobot request exceed maxResults, this value can be used to retrieve the next page of results. This value is null when there are no more results to return. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 2048.
+Pattern: [a-zA-Z0-9_.\-\/=]* 
+ robots  
+A list of robots that meet the criteria of the request.
+Type: Array of Robot objects
+Array Members: Minimum number of 0 items. Maximum number of 1000 items.
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+InternalServerException 
+AWS RoboMaker experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidParameterException 
+A parameter specified in a request is not valid, is unsupported, or cannot be used. The returned message provides an explanation of the error value.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The specified resource does not exist.
+HTTP Status Code: 400
+ThrottlingException 
+AWS RoboMaker is temporarily unable to process the request. Try your call again.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V2 

@@ -1,0 +1,12 @@
+What is AWS CodePipeline?
+AWS CodePipeline is a continuous delivery service you can use to model, visualize, and automate the steps required to release your software. You can quickly model and configure the different stages of a software release process. CodePipeline automates the steps required to release your software changes continuously. For information about pricing for CodePipeline, see Pricing.
+Topics
+ Continuous delivery and continuous integration
+ What can I do with CodePipeline?
+ A quick look at CodePipeline
+ How do I get started with CodePipeline?
+ We want to hear from you
+ CodePipeline concepts
+ DevOps pipeline example
+ How pipeline executions work
+ Input and output artifacts

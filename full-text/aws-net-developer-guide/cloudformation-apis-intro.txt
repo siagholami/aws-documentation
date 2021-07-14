@@ -1,0 +1,17 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Accessing AWS CloudFormation with the AWS SDK for .NET
+The AWS SDK for .NET supports AWS CloudFormation, which creates and provisions AWS infrastructure deployments predictably and repeatedly.
+APIs
+The AWS SDK for .NET provides APIs for AWS CloudFormation clients. The APIs enable you to work with AWS CloudFormation features such as templates and stacks. This section contains a small number of examples that show you the patterns you can follow when working with these APIs. To view the full set of APIs, see the AWS SDK for .NET API Reference (and scroll to "Amazon.CloudFormation").
+The AWS CloudFormation APIs are provided by the AWSSDK.CloudFormation package.
+Prerequisites
+Before you begin, be sure you have set up your environment. Also review the information in Setting up your project and SDK features.
+Topics
+Topics
+ APIs
+ Prerequisites
+ Topics
+ Listing AWS resources

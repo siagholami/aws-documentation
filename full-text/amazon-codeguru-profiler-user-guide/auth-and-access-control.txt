@@ -1,0 +1,12 @@
+Identity and access management in CodeGuru Profiler
+AWS Identity and Access Management (IAM) is an AWS service that helps an administrator securely control access to AWS resources. IAM administrators control who can be authenticated (signed in) and authorized (have permissions) to use CodeGuru Profiler resources. IAM is an AWS service that you can use with no additional charge.
+Topics
+ Audience in CodeGuru Profiler
+ Authenticating with identities in CodeGuru Profiler
+ Managing access using policies
+ Overview of managing access permissions to your CodeGuru Profiler resources
+ Using identity-based policies for CodeGuru Profiler
+ Resource-based policies in CodeGuru Profiler
+ Amazon CodeGuru Profiler permissions reference
+ Troubleshooting CodeGuru Profiler identity and access
+ Using service-linked roles for CodeGuru Profiler

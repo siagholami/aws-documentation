@@ -1,0 +1,239 @@
+Danish (da-DK)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Danish voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+b
+b
+voiced bilabial plosive
+bat
+p
+
+
+d
+d
+voiced alveolar plosive
+da
+t
+
+
+ð
+D
+voiced dental fricative
+mad, thriller
+T
+
+
+f
+f
+voiceless labiodental fricative
+fat
+f
+
+
+g
+g
+voiced velar plosive
+gat
+k
+
+
+h
+h
+voiceless glottal fricative
+hat
+k
+
+
+j
+j
+palatal approximant
+jo
+i
+
+
+k
+k
+voiceless velar plosive
+kat
+k
+
+
+l
+l
+alveolar lateral approximant
+ladt
+t
+
+
+m
+m
+bilabial nasal
+mat
+p
+
+
+n
+n
+alveolar nasal
+nay
+t
+
+
+ŋ
+N
+velar nasal
+lang
+k
+
+
+p
+p
+voiceless bilabial plosive
+pande
+p
+
+
+r
+r
+alveolar trill
+thriller, story
+r
+
+
+ʁ
+R
+voiced uvular fricative
+rat
+k
+
+
+s
+s
+voiceless alveolar fricative
+sat
+s
+
+
+t
+t
+voiceless alveolar plosive
+tal
+t
+
+
+v
+v
+voiced labiodental fricative
+vat
+f
+
+
+w
+w
+labial-velar approximant
+hav, weekend
+X
+
+
+Vowels
+
+
+
+
+
+
+ø
+2
+close-mid front rounded vowel
+øst
+o
+
+
+ø:
+2:
+long close-mid front rounded vowel
+øse
+o
+
+
+ɐ
+6
+near-open central vowel
+mor
+a
+
+
+œ
+9
+open-mid front rounded vowel
+skøn, grønt
+O
+
+
+œ:
+9:
+long open-mid front rounded vowel
+høne, gøre
+O
+
+
+ə
+@
+mid central vowel
+ane
+@
+
+
+æː
+{:
+long near-open front unrounded vowel
+male
+a
+
+
+a
+a
+open front unrounded vowel
+man
+a
+
+
+æ
+{
+near-open front unrounded vowel
+adresse
+a
+
+
+ɑ
+A
+open back unrounded vowel
+lak, tak
+a
+
+
+ɑ:
+A:
+long open back unrounded vowel
+rase
+a
+
+

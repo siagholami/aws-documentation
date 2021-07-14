@@ -1,0 +1,18 @@
+Beard
+Indicates whether or not the face has a beard, and the confidence level in the determination.
+Contents
+Confidence 
+Level of confidence in the determination.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 100.
+Required: No
+Value 
+Boolean value that indicates whether the face has beard or not.
+Type: Boolean
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

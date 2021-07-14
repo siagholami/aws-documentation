@@ -1,0 +1,18 @@
+AWS::ECS::TaskSet NetworkConfiguration
+The network configuration for a task.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AwsVpcConfiguration](#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration)" : AwsVpcConfiguration
+}
+YAML
+[AwsVpcConfiguration](#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration): 
+    AwsVpcConfiguration
+Properties
+AwsVpcConfiguration 
+The VPC subnets and security groups associated with a task.
+All specified subnets and security groups must be from the same VPC.
+Required: No
+Type: AwsVpcConfiguration
+Update requires: Replacement

@@ -1,0 +1,41 @@
+
+
+DataSourceSummary
+Summary information for a Amazon Kendra data source. Returned in a call to DescribeDataSource.
+Contents
+CreatedAt 
+The UNIX datetime that the data source was created.
+Type: Timestamp
+Required: No
+Id 
+The unique identifier for the data source.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 100.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+Required: No
+Name 
+The name of the data source.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1000.
+Pattern: [a-zA-Z0-9][a-zA-Z0-9_-]* 
+Required: No
+Status 
+The status of the data source. When the status is ATIVE the data source is ready to use.
+Type: String
+Valid Values:CREATING | DELETING | FAILED | UPDATING | ACTIVE 
+Required: No
+Type 
+The type of the data source.
+Type: String
+Valid Values:S3 | SHAREPOINT | DATABASE | SALESFORCE | ONEDRIVE | SERVICENOW 
+Required: No
+UpdatedAt 
+The UNIX datetime that the data source was lasted updated. 
+Type: Timestamp
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

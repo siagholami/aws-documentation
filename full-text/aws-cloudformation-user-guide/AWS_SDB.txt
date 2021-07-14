@@ -1,0 +1,3 @@
+Amazon SimpleDB resource type reference
+Resource types
+ AWS::SDB::Domain

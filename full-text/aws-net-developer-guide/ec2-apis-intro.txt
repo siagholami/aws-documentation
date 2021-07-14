@@ -1,0 +1,23 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Working with Amazon EC2
+The AWS SDK for .NET supports Amazon EC2, which is a web service that provides resizable computing capacity. You use this computing capacity to build and host your software systems.
+APIs
+The AWS SDK for .NET provides APIs for Amazon EC2 clients. The APIs enable you to work with EC2 features such as security groups and key pairs. The APIs also enable you to control Amazon EC2 instances. This section contains a small number of examples that show you the patterns you can follow when working with these APIs. To view the full set of APIs, see the AWS SDK for .NET API Reference (and scroll to "Amazon.EC2").
+The Amazon EC2 APIs are provided by the AWSSDK.EC2 NuGet package.
+Prerequisites
+Before you begin, be sure you have set up your environment. Also review the information in Setting up your project and SDK features.
+About the examples
+The examples in this section show you how to work with Amazon EC2 clients and manage Amazon EC2 instances.
+The EC2 Spot Instance tutorial shows you how to request Amazon EC2 Spot Instances. Spot Instances enable you to access unused EC2 capacity for less than the On-Demand price.
+Topics
+ APIs
+ Prerequisites
+ About the examples
+ Security groups
+ Key pairs
+ Regions and Availability Zones
+ EC2 instances
+ Spot Instance tutorial

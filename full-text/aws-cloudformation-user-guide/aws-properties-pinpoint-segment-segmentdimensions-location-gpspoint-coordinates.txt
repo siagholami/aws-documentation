@@ -1,0 +1,23 @@
+AWS::Pinpoint::Segment Coordinates
+Specifies the GPS coordinates of a location.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Latitude](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-latitude)" : Double,
+  "[Longitude](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-longitude)" : Double
+}
+YAML
+[Latitude](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-latitude): Double
+  [Longitude](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-longitude): Double
+Properties
+Latitude 
+The latitude coordinate of the location.
+Required: Yes
+Type: Double
+Update requires: No interruption
+Longitude 
+The longitude coordinate of the location.
+Required: Yes
+Type: Double
+Update requires: No interruption

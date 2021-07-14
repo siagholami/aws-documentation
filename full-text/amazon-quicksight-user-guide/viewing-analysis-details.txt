@@ -1,0 +1,2 @@
+Viewing Analysis Details
+To view an analysis, locate the analysis on the All analyses tab of the Amazon QuickSight start page. Then choose the analysis.

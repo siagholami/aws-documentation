@@ -1,0 +1,75 @@
+Test communications (device syncs disabled)
+
+
+Make sure that your computer and the AWS IoT Greengrass core device are connected to the internet using the same network.
+
+
+On the AWS IoT Greengrass core device, run the following command to find its IP address.
+hostname -I
+
+
+On your computer, run the following command using the IP address of the core. You can use Ctrl  C to stop the ping command.
+ping IP-address
+Output similar to the following indicates successful communication between the computer and the AWS IoT Greengrass core device (0% packet loss):
+
+Note
+If you're unable to ping an EC2 instance that's running AWS IoT Greengrass, make sure that the inbound security group rules for the instance allow ICMP traffic for Echo request messages. For more information, see  Adding rules to a security group in the Amazon EC2 User Guide for Linux Instances.
+On Windows host computers, in the Windows Firewall with Advanced Security app, you might also need to enable an inbound rule that allows inbound echo requests (for example, File and Printer Sharing (Echo Request - ICMPv4-In)), or create one.
+
+
+Get your AWS IoT endpoint.
+
+
+In the AWS IoT console, in the navigation pane, choose Settings.
+
+
+Under Settings, make a note of the value of Endpoint. You use this value to replace the AWS_IOT_ENDPOINT placeholder in the commands in the following steps.
+
+Note
+Make sure that your endpoints correspond to your certificate type.
+
+
+On your computer (not the AWS IoT Greengrass core device), open two command-line (terminal or command prompt) windows. One window represents the GG_Switch device and the other represents the GG_TrafficLight device.
+
+
+From the GG_Switch device window, run the following commands.
+
+Replace path-to-certs-folder with the path to the folder that contains the certificates, keys, and Python files.
+Replace AWS_IOT_ENDPOINT with your endpoint.
+Replace the two switch instances with the hash in the file name for your GG_Switch device.
+
+cd path-to-certs-folder
+  python lightController.py --endpoint AWS_IOT_ENDPOINT --rootCA root-ca-cert.pem --cert switch.cert.pem --key switch.private.key --thingName GG_TrafficLight --clientId GG_Switch
+
+
+From the GG_TrafficLight device window, run the following commands.
+
+Replace path-to-certs-folder with the path to the folder that contains the certificates, keys, and Python files.
+Replace AWS_IOT_ENDPOINT with your endpoint.
+Replace the two light instances with the hash in the file name for your GG_TrafficLight device.
+
+cd path-to-certs-folder
+  python trafficLight.py --endpoint AWS_IOT_ENDPOINT --rootCA root-ca-cert.pem --cert light.cert.pem --key light.private.key --thingName GG_TrafficLight --clientId GG_TrafficLight
+Every 20 seconds, the switch updates the shadow state to G, Y, and R, and the light displays its new state, as shown next.
+GG_Switch output:
+
+GG_TrafficLight output:
+
+
+
+When executed for the first time, each device script runs the AWS IoT Greengrass discovery service to connect to the AWS IoT Greengrass core (through the internet). After a device has discovered and successfully connected to the AWS IoT Greengrass core, future operations can be executed locally.
+Note
+ The lightController.py and trafficLight.py scripts store connection information in the groupCA folder, which is created in the same folder as the scripts. If you receive connection errors, make sure that the IP address in the ggc-host file matches the single IP address endpoint that you configured for your core in this step.
+
+
+In the AWS IoT console, choose your AWS IoT Greengrass group, choose Devices, and then choose GG_TrafficLight.
+
+
+
+Choose Shadow. After the GG_Switch changes states, there should not be any updates to this shadow topic in Shadow State. That's because the GG_TrafficLight is set to LOCAL SHADOW ONLY as opposed to SHADOW SYNCING TO CLOUD.
+
+
+Press Ctrl  C in the GG_Switch (lightController.py) device window. You should see that the GG_TrafficLight (trafficLight.py) window stops receiving state change messages.
+
+
+Keep these windows open so you can run the commands in the next section.

@@ -1,0 +1,5 @@
+STL_SSHCLIENT_ERROR
+Records all errors seen by the SSH client. 
+This view is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]

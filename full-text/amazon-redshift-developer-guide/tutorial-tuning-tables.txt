@@ -1,0 +1,18 @@
+Tutorial: Tuning table design
+In this tutorial, you will learn how to optimize the design of your tables. You will start by creating tables based on the Star Schema Benchmark (SSB) schema without sort keys, distribution styles, and compression encodings. You will load the tables with test data and test system performance. Next, you will apply best practices to recreate the tables using sort keys and distribution styles. You will load the tables with test data using automatic compression and then you will test performance again so that you can compare the performance benefits of well-designed tables.
+Estimated time: 60 minutes
+Estimated cost: $1.00 per hour for the cluster
+Prerequisites
+You will need your AWS credentials (access key ID and secret access key) to load test data from Amazon S3. If you need to create new access keys, go to Administering Access Keys for IAM Users.
+Steps
+
+Step 1: Create a test data set 
+Step 2: Test system performance to establish a baseline
+Step 3: Select sort keys 
+Step 4: Select distribution styles
+Step 5: Review compression encodings 
+Step 6: Recreate the test data set
+Step 7: Retest system performance after tuning
+Step 8: Evaluate the results 
+Step 9: Clean up your resources
+Summary 

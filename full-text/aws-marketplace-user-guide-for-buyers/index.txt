@@ -1,0 +1,63 @@
+AWS Marketplace Buyer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Marketplace?
+Getting started
+Buying products
+Launching software
+Software and services on AWS Marketplace
+Supported regions
+Product categories
+Product types
+Container products
+Finding and subscribing to container products
+Launching a product
+
+
+Desktop products
+Machine learning products
+SaaS products
+Server products
+AMI subscriptions
+Metering-enabled AMI products
+Cost allocation tagging
+Private image build
+Completing prerequisite steps
+Building a private image
+
+
+
+
+Data products
+Paying for products
+Private marketplaces
+Creating and managing a private marketplace
+Private offers
+Subscribing to a SaaS private offer
+Subscribing to an AMI private offer
+Modifying or unsubscribing from a private offer
+Integrating AWS Marketplace with procurement systems
+Setting up Coupa integration
+Free trials
+Using AWS free usage tier with AWS Marketplace
+Adding AWS Marketplace subscriptions to AWS Service Catalog
+Product reviews
+Getting support
+Security on AWS Marketplace
+Controlling access to AWS Marketplace subscriptions
+Signing in as an IAM user
+Finding the account number for customer support
+Creating a private marketplace IT administrator
+Document history
+AWS glossary

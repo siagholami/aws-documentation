@@ -1,0 +1,27 @@
+AWS::ApplicationInsights::Application LogPatternSet
+The AWS::ApplicationInsights::Application LogPatternSet property type specifies the log pattern set.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[LogPatterns](#cfn-applicationinsights-application-logpatternset-logpatterns)" : [ LogPattern, ... ],
+  "[PatternSetName](#cfn-applicationinsights-application-logpatternset-patternsetname)" : String
+}
+YAML
+[LogPatterns](#cfn-applicationinsights-application-logpatternset-logpatterns): 
+    - LogPattern
+  [PatternSetName](#cfn-applicationinsights-application-logpatternset-patternsetname): String
+Properties
+LogPatterns 
+A list of objects that define the log patterns that belong to LogPatternSet.
+Required: Yes
+Type: List of LogPattern
+Update requires: No interruption
+PatternSetName 
+The name of the log pattern. A log pattern name can contain up to 30 characters, and it cannot be empty. The characters can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 30
+Pattern: [a-zA-Z0-9\.\-_]*
+Update requires: No interruption

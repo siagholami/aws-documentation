@@ -1,0 +1,22 @@
+Limitations and quotas in AWS Control Tower
+This chapter covers the AWS service limitations and quotas that you should keep in mind as you use AWS Control Tower. If you're unable to set up your landing zone due to a service quota issue, contact AWS Support.
+Limitations in AWS Control Tower
+This section describes known limitations and unsupported use cases in AWS Control Tower.
+ Nested OUs are not displayed in the AWS Control Tower console.
+ Creation of nested OUs from the AWS Control Tower console is not supported.
+ Email addresses of shared accounts in the Core OU can be changed, but you must update your landing zone to see these changes in the AWS Control Tower console.
+ A limit of 5 SCPs per OU applies to OUs in your AWS Control Tower landing zone.
+Quotas for Integrated Services
+Each AWS service has its own quotas and limits. You can find the quotas for each service in its documentation. For more information, see the related links:
+ AWS CloudFormation – AWS CloudFormation Quotas
+ AWS CloudTrail – Quotas in AWS CloudTrail
+ Amazon CloudWatch – CloudWatch Quotas 
+ AWS Config – AWS Config Quotas
+ AWS Identity and Access Management – Quotas for IAM Entities and Objects
+ AWS Lambda – AWS Lambda Quotas
+ AWS Organizations – Quotas for AWS Organizations
+ Amazon Simple Storage Service – Bucket Restrictions and Quotas
+ AWS Service Catalog – AWS Service Catalog Default Service Quotas
+ AWS Single Sign-On – Quotas in AWS SSO
+ Amazon Simple Notification Service – Amazon Simple Notification Service (Amazon SNS) Quotas
+ AWS Step Functions – Quotas

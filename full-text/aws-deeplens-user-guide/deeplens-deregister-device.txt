@@ -1,0 +1,30 @@
+Deregistering Your AWS DeepLens Device
+Deregistering your AWS DeepLens disassociates your AWS account and credentials from the device. Before you deregister your device, delete the photos or videos that are stored on it.
+To deregister your AWS DeepLens
+
+
+Open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/home?region=us-east-1#firstrun/.
+
+
+From the primary navigation pane, choose Devices, then choose the device that you want to deregister.
+
+
+Next to the Current project on the selected device page, choose Remove current project from device.
+Important
+Delete the  photos or videos that are stored on the device, using SSH and the SSH password that you set when you registered the device to log on to the device. Navigate to the folder where the photos or videos are stored and delete them. 
+
+
+When prompted, choose Yes to confirm.
+
+
+Next to Device Settings, choose Deregister.
+
+
+When prompted, choose Deregister to confirm.
+
+
+Your AWS DeepLens is now deregistered. To use it again, repeat each of these steps:
+ Register Your AWS DeepLens Device
+ Connect to Your AWS DeepLens Device's Wi-Fi Network
+ Set Up Your AWS DeepLens Device
+ Verify Your AWS DeepLens Device Registration Status

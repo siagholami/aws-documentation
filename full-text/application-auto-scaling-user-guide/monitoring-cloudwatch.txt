@@ -1,0 +1,149 @@
+Building Dashboards with CloudWatch
+You can monitor how your application uses resources by using Amazon CloudWatch, which generates metrics about your usage and performance. CloudWatch collects raw data from your AWS resources and the applications that you run on AWS, and processes it into readable, near real time metrics. The metrics are kept for 15 months so that you can access historical information to gain a better perspective on how your application is performing. For more information, see the Amazon CloudWatch User Guide.
+CloudWatch dashboards are customizable home pages in the CloudWatch console that you can use to monitor your resources in a single view, even those resources that are spread across different Regions. You can use CloudWatch dashboards to create customized views of selected metrics for your AWS resources. You can select the color used for each metric on each graph, so you can more easily track the same metric across multiple graphs. 
+To create a CloudWatch dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboard, and then choose Create new dashboard. 
+
+
+Enter a name for the dashboard, such as the name of the service for which you want to view CloudWatch data. 
+
+
+Choose Create dashboard. 
+
+
+Choose a type of widget to add to your dashboard, such as a line graph. Then choose Configure, and choose the metric that you want to add to your dashboard. For more information, see Add or Remove a Graph from a CloudWatch Dashboard in the Amazon CloudWatch User Guide
+
+
+By default, the metrics that you create in the CloudWatch dashboards are averages.
+Metrics and Dimensions
+When you interact with the services that integrate with Application Auto Scaling, they send the metrics shown in the following table to CloudWatch. In CloudWatch, metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace. 
+These metrics can help you discover your application's capacity requirements. You can use this information to set your capacity statically, or to set up automatic scaling. If your application’s workload is not constant, this indicates that you should consider using automatic scaling. 
+
+
+
+Metric Name
+Namespace
+Dimensions
+Applies To
+
+
+
+
+CPUUtilization
+AWS/ECS
+ClusterName, ServiceName
+ECS
+
+
+MemoryUtilization
+AWS/ECS
+ClusterName, ServiceName
+ECS
+
+
+CPUUtilization
+AWS/EC2Spot
+FleetRequestId
+Spot Fleet
+
+
+NetworkIn
+AWS/EC2Spot
+FleetRequestId
+Spot Fleet
+
+
+NetworkOut
+AWS/EC2Spot
+FleetRequestId
+Spot Fleet
+
+
+RequestCountPerTarget
+AWS/ApplicationELB
+TargetGroup
+ECS, Spot Fleet
+
+
+YARNMemoryAvailablePercentage
+AWS/ElasticMapReduce
+ClusterId
+EMR
+
+
+AvailableCapacity
+AWS/AppStream
+Fleet
+AppStream
+
+
+CapacityUtilization
+AWS/AppStream
+Fleet
+AppStream
+
+
+ProvisionedReadCapacityUnits
+AWS/DynamoDB
+TableName, GlobalSecondaryIndexName
+DynamoDB
+
+
+ProvisionedWriteCapacityUnits
+AWS/DynamoDB
+TableName, GlobalSecondaryIndexName
+DynamoDB
+
+
+ConsumedReadCapacityUnits
+AWS/DynamoDB
+TableName, GlobalSecondaryIndexName
+DynamoDB
+
+
+ConsumedWriteCapacityUnits
+AWS/DynamoDB
+TableName, GlobalSecondaryIndexName
+DynamoDB
+
+
+CPUUtilization
+AWS/RDS
+DBClusterIdentifier, Role (READER)
+Aurora
+
+
+DatabaseConnections
+AWS/RDS
+DBClusterIdentifier, Role (READER)
+Aurora
+
+
+InvocationsPerInstance
+AWS/SageMaker
+EndpointName, VariantName
+SageMaker
+
+
+InferenceUtilization
+AWS/Comprehend
+EndpointArn
+Comprehend
+
+
+ProvisionedConcurrencyUtilization
+AWS/Lambda
+FunctionName, Resource
+Lambda
+
+
+
+While CloudWatch allows you to choose any statistic and period for each metric, not all combinations are useful. For example, the Average, Minimum, and Maximum statistics for CPU utilization are useful, but the Sum statistic is not. For more information, refer to the service's documentation by following the links provided in the preceding table.
+A commonly used measure of application performance is average CPU utilization. If there is an increase in CPU utilization and you have insufficient capacity to handle it, the application might become unresponsive. On the other hand, if you have too much capacity and resources are running when utilization is low, this increases the costs for using that service.
+Depending on the service, you also have metrics that track the amount of provisioned throughput that is available. For example, for the number of invocations that are being processed on a function alias or version with provisioned concurrency, Lambda emits the ProvisionedConcurrencyUtilization metric. If you are starting a large job and invoke the same function many times simultaneously, the job might experience latency when it exceeds the amount of provisioned concurrency available. On the other hand, if you have more provisioned concurrency than you need, your costs might be higher than they should be.
+If you do not see these metrics in the CloudWatch console, make sure that you have completed the setup of the resource. Metrics do not appear before the resource has been set up completely. Also, if a metric hasn't published data in the past 14 days, you can't find it when searching for metrics to add to a graph on a CloudWatch dashboard. For information about how to add any metric manually, see Graph Metrics Manually on a CloudWatch Dashboard in the Amazon CloudWatch User Guide.

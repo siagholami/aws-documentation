@@ -1,0 +1,23 @@
+AWS::AmazonMQ::Broker ConfigurationId
+A list of information about the configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Id](#cfn-amazonmq-broker-configurationid-id)" : String,
+  "[Revision](#cfn-amazonmq-broker-configurationid-revision)" : Integer
+}
+YAML
+[Id](#cfn-amazonmq-broker-configurationid-id): String
+  [Revision](#cfn-amazonmq-broker-configurationid-revision): Integer
+Properties
+Id 
+The unique ID that Amazon MQ generates for the configuration.
+Required: Yes
+Type: String
+Update requires: No interruption
+Revision 
+The revision number of the configuration.
+Required: Yes
+Type: Integer
+Update requires: No interruption

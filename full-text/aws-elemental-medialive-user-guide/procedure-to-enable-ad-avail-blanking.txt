@@ -1,0 +1,29 @@
+Enabling Blanking
+Follow this procedure if you want to enable the ad avail blanking feature.
+To enable blanking
+
+
+In the channel that you are creating, in the navigation pane, choose General settings. 
+
+
+In Avail configuration, set Avail settings, if you have not already done so: 
+    SCTE-35 splice insert (default): Select this mode if the input uses splice inserts to indicate ad avails. The input might also contain messages for others events such as chapters or programs. 
+    SCTE-35 time signal APOS: Select this mode if the input contains time signals of segmentation type Placement opportunity. The input might also contain messages for other events such as chapters or programs. 
+The mode identifies which of all possible events are treated as triggers for ad avails and as triggers for blackouts. In turn, these triggers affect how manifests are decorated, when video is blanked, and when video is blacked out. 
+
+
+For Ad avail offset, set a value, if desired. See the help for this field.
+
+
+In web_delivery_allowed_flag and no_regional_blackout_flag, choose appropriate values. For information about these fields, see Triggers for Ad Avail Blanking.
+    Follow (default): Observe the restriction and blank the content for the ad avail event.
+    Ignore: Ignore the restriction and do not blank the content for the ad avail event.
+Warning
+Never set both fields to Ignore.
+
+
+In Avail blanking, in State, choose Enabled.
+
+In Avail blanking image, choose the appropriate value:
+    Disable: To use a plain black image for blanking.
+    Avail blanking image: To use a special image for blanking. In the URL field, type the path to a file in an S3 bucket. The file must be of type .bmp or .png. Also enter the user name and Systems Manager password parameter for accessing the S3 bucket. See About the Feature for Creating Password Parameters.

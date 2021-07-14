@@ -1,0 +1,9 @@
+Security in Amazon EventBridge
+This section provides information about Amazon EventBridge security and authentication.
+Topics
+ Data Protection in Amazon EventBridge
+ Tag-based Policies
+ Identity and Access Management in Amazon EventBridge
+ Logging and Monitoring in Amazon EventBridge
+ Resilience in Amazon EventBridge
+Amazon EventBridge uses IAM to control access to other AWS services and resources. For an overview of how IAM works, see Overview of Access Management in the IAM User Guide. For an overview of security credentials, see AWS Security Credentials in the Amazon Web Services General Reference.

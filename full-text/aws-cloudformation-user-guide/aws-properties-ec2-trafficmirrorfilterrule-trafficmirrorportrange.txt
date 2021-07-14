@@ -1,0 +1,23 @@
+AWS::EC2::TrafficMirrorFilterRule TrafficMirrorPortRange
+Describes the Traffic Mirror port range.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FromPort](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-fromport)" : Integer,
+  "[ToPort](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-toport)" : Integer
+}
+YAML
+[FromPort](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-fromport): Integer
+  [ToPort](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorportrange-toport): Integer
+Properties
+FromPort 
+The start of the Traffic Mirror port range. This applies to the TCP and UDP protocols.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+ToPort 
+The end of the Traffic Mirror port range. This applies to the TCP and UDP protocols.
+Required: Yes
+Type: Integer
+Update requires: No interruption

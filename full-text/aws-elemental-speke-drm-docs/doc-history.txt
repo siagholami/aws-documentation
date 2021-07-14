@@ -1,0 +1,67 @@
+Document History
+The following table describes the changes to the SPEKE documentation.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Support matrix - AWS Elemental Delta
+Added an AWS Elemental Delta support matrix.
+February 7, 2019
+
+
+Updates to DRM platform providers
+Added links and new partner information to the DRM platform provider list.
+January 24, 2019
+
+
+Include third-party encryptors
+Updated the architecture and descriptions to account for third-party encryptors.
+November 20, 2018
+
+
+Content Key Encryption
+Added the option to encrypt content keys. Prior to this, Secure Packager and Encoder Key Exchange supported clear key delivery only.
+October 30, 2018
+
+
+Support matrix - AWS Elemental Live
+Added an AWS Elemental Live support matrix.
+September 27, 2018
+
+
+Standard payload components 
+Added a section that defines the main elements in the JSON payload.
+September 27, 2018
+
+
+KID override
+Added a section about KID overrides by a key provider.
+September 27, 2018
+
+
+Corrected links to DASH-IF site 
+Corrected links to the DASH IF site for the CPIX specification and for the system IDs page.
+September 27, 2018
+
+
+Release copy for AWS Elemental Live
+Updated the SPEKE documentation to include AWS Elemental products.
+July 20, 2018
+
+
+CMAF
+Updated the support matrix tables for services to include the Common Media Application Format (CMAF).
+June 27, 2018
+
+
+First release
+First release of Secure Packager and Encoder Key Exchange (SPEKE), a specification for communication between a content encryptor and a DRM key provider. The DRM key provider exposes a Secure Packager and Encoder Key Exchange API to handle incoming key requests.
+November 27, 2017
+
+

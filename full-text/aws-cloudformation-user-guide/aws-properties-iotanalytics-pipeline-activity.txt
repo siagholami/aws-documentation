@@ -1,0 +1,89 @@
+AWS::IoTAnalytics::Pipeline Activity
+An activity that performs a transformation on a message.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes)" : AddAttributes,
+  "[Channel](#cfn-iotanalytics-pipeline-activity-channel)" : Channel,
+  "[Datastore](#cfn-iotanalytics-pipeline-activity-datastore)" : Datastore,
+  "[DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich)" : DeviceRegistryEnrich,
+  "[DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich)" : DeviceShadowEnrich,
+  "[Filter](#cfn-iotanalytics-pipeline-activity-filter)" : Filter,
+  "[Lambda](#cfn-iotanalytics-pipeline-activity-lambda)" : Lambda,
+  "[Math](#cfn-iotanalytics-pipeline-activity-math)" : Math,
+  "[RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes)" : RemoveAttributes,
+  "[SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes)" : SelectAttributes
+}
+YAML
+[AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes): 
+    AddAttributes
+  [Channel](#cfn-iotanalytics-pipeline-activity-channel): 
+    Channel
+  [Datastore](#cfn-iotanalytics-pipeline-activity-datastore): 
+    Datastore
+  [DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich): 
+    DeviceRegistryEnrich
+  [DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich): 
+    DeviceShadowEnrich
+  [Filter](#cfn-iotanalytics-pipeline-activity-filter): 
+    Filter
+  [Lambda](#cfn-iotanalytics-pipeline-activity-lambda): 
+    Lambda
+  [Math](#cfn-iotanalytics-pipeline-activity-math): 
+    Math
+  [RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes): 
+    RemoveAttributes
+  [SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes): 
+    SelectAttributes
+Properties
+AddAttributes 
+Adds other attributes based on existing attributes in the message.
+Required: No
+Type: AddAttributes
+Update requires: No interruption
+Channel 
+Determines the source of the messages to be processed.
+Required: No
+Type: Channel
+Update requires: No interruption
+Datastore 
+Specifies where to store the processed message data.
+Required: No
+Type: Datastore
+Update requires: No interruption
+DeviceRegistryEnrich 
+Adds data from the AWS IoT device registry to your message.
+Required: No
+Type: DeviceRegistryEnrich
+Update requires: No interruption
+DeviceShadowEnrich 
+Adds information from the AWS IoT Device Shadows service to a message.
+Required: No
+Type: DeviceShadowEnrich
+Update requires: No interruption
+Filter 
+Filters a message based on its attributes.
+Required: No
+Type: Filter
+Update requires: No interruption
+Lambda 
+Runs a Lambda function to modify the message.
+Required: No
+Type: Lambda
+Update requires: No interruption
+Math 
+Computes an arithmetic expression using the message's attributes and adds it to the message.
+Required: No
+Type: Math
+Update requires: No interruption
+RemoveAttributes 
+Removes attributes from a message.
+Required: No
+Type: RemoveAttributes
+Update requires: No interruption
+SelectAttributes 
+Creates a new message using only the specified attributes from the original message.
+Required: No
+Type: SelectAttributes
+Update requires: No interruption

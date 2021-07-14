@@ -1,0 +1,91 @@
+Amazon MQ Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon MQ?
+Setting Up Amazon MQ
+Getting Started with Amazon MQ
+Amazon MQ Tutorials
+Tutorial: Creating and Configuring an Amazon MQ Broker
+Accessing the ActiveMQ Web Console of a Broker without Public Accessibility
+
+
+Tutorial: Creating and Configuring an Amazon MQ Network of Brokers
+Tutorial: Editing Broker Engine Version, Instance Type, CloudWatch Logs, and Maintenance Preferences
+Tutorial: Creating and Applying Amazon MQ Broker Configurations
+Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions
+Tutorial: Connecting a Java Application to Your Amazon MQ Broker
+Tutorial: Listing Amazon MQ Brokers and Viewing Broker Details
+Tutorial: Creating and Managing Amazon MQ Broker Users
+Tutorial: Rebooting an Amazon MQ Broker
+Tutorial: Deleting an Amazon MQ Broker
+Tutorial: Accessing CloudWatch Metrics for Amazon MQ
+How Amazon MQ Works
+Amazon MQ Basic Elements
+Broker
+Configuration
+Engine
+Storage
+User
+
+
+Amazon MQ Broker Architecture
+Amazon MQ Single-Instance Broker
+Amazon MQ Active/Standby Broker for High Availability
+Amazon MQ Network of Brokers
+Amazon MQ Broker Configuration Lifecycle
+
+
+Amazon MQ Broker Configuration Parameters
+Elements Permitted in Amazon MQ Configurations
+Elements and Their Attributes Permitted in Amazon MQ Configurations
+Elements, Child Collection Elements, and Their Child Elements Permitted in Amazon MQ Configurations
+Amazon MQ Child Element Attributes
+
+
+
+
+Working Examples of Using Java Message Service (JMS) with ActiveMQ
+Tagging resources
+Migrating to Amazon MQ
+Migrating to Amazon MQ without Service Interruption
+Migrating to Amazon MQ with Service Interruption
+Best Practices for Amazon MQ
+Connecting to Amazon MQ
+Ensuring Effective Amazon MQ Performance
+Avoid Slow Restarts by Recovering Prepared XA Transactions
+Quotas in Amazon MQ
+Security in Amazon MQ
+Data Protection in Amazon MQ
+Identity and Access Management for Amazon MQ
+How Amazon MQ Works with IAM
+Amazon MQ Identity-Based Policy Examples
+API Authentication and Authorization for Amazon MQ
+Troubleshooting Amazon MQ Identity and Access
+
+
+Logging and Monitoring Amazon MQ Brokers
+Monitoring Amazon MQ Brokers Using Amazon CloudWatch
+Logging Amazon MQ API Calls Using AWS CloudTrail
+Configuring Amazon MQ to Publish General and Audit Logs to Amazon CloudWatch Logs
+
+
+Messaging Authentication and Authorization for ActiveMQ
+Compliance Validation for Amazon MQ
+Resilience in Amazon MQ
+Infrastructure Security in Amazon MQ
+Security Best Practices for Amazon MQ
+Related Resources
+Amazon MQ Release Notes
+Amazon MQ Document History
+AWS glossary

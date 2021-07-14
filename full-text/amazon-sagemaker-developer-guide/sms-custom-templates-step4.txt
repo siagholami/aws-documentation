@@ -1,0 +1,4 @@
+Custom Workflows via the API
+When you have created your custom UI template (Step 2) and processing Lambda functions (Step 3), you should place the template in an Amazon S3 bucket with a file name format of: <FileName>.liquid.html.
+Use the  CreateLabelingJob action to configure your task. You'll use the location of a custom template (Step 2: Creating your custom labeling task template) stored in a <filename>.liquid.html file on S3 as the value for the UiTemplateS3Uri field in the  UiConfig object within the  HumanTaskConfig object.
+For the AWS Lambda tasks described in Step 3: Processing with AWS Lambda, the post-annotation task's ARN will be used as the value for the AnnotationConsolidationLambdaArn field, and the pre-annotation task will be used as the value for the PreHumanTaskLambdaArn. 

@@ -1,0 +1,131 @@
+Document History
+The following table describes significant changes to this documentation since January 2018. In addition to major changes listed here, we also update the documentation frequently to improve the descriptions and examples, and to address the feedback that you send to us. To be notified about significant changes, use the link in the upper right corner to subscribe to the RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+New and updated Java implementation examples
+See Using the ACM Private CA API (Java Examples).
+September 9, 2020
+
+
+New region support
+Endpoints added for Africa (Cape Town) and Europe (Milan). For a complete list of ACM PCA endpoints, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+August 27, 2020
+
+
+Cross-account private CA access supported
+AWS Certificate Manager users can be authorized to issue certificates using private CAs that they do not own. For more information, see Cross-Account Access to Private CAs.
+August 17, 2020
+
+
+VPC endpoints (PrivateLink) support
+Added support for use of VPC endpoints (AWSPrivateLink) for enhanced network security. For more information, see ACM Private CA VPC Endpoints (AWS PrivateLink).
+March 26, 2020
+
+
+Dedicated security section added
+Security documentation for AWS has been consolidated into a dedicated security section. For information about security, see Security in AWS Certificate Manager Private Certificate Authority.
+March 26, 2020
+
+
+Template ARN added to audit reports.
+For more information, see Creating an Audit Report for Your Private CA.
+March 6, 2020
+
+
+CloudFormation support
+Support added for AWS CloudFormation. For more information, see ACMPCA Resource Type Reference in the AWS CloudFormation User Guide.
+January 22, 2020
+
+
+CloudWatch Events integration
+Integration with CloudWatch Events for asynchronous events, including CA creation, certificate issuance, and CRL creation. For more information, see Using CloudWatch Events.
+December 23, 2019
+
+
+FIPS endpoints
+FIPS endpoints added for AWS GovCloud (US-East) and AWS GovCloud (US-West). For a complete list of ACM PCA endpoints, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+December 13, 2019
+
+
+Tag-based permissions
+Tag-based permissions supported using the new APIs TagResource, UntagResource, and ListTagsForResource. For general information about tag-based controls, see Controlling Access to and for IAM Users and Roles Using IAM Resource Tags.
+November 5, 2019
+
+
+Name constraints enforcement
+Added support for enforcing subject name constraints on imported CA certificates. For more information, see Enforcing Name Constraints on a Private CA.
+October 28, 2019
+
+
+New certificate templates
+New certificate templates added, including templates for code signing with AWS Signer. For more information, see Using Templates.
+October 1, 2019
+
+
+Planning your CA
+New section added on planning your PKI using ACM PCA. For more information, see Planning Your ACM Private CA Deployment.
+September 30, 2019
+
+
+Added region support
+Added region support for the AWS Asia Pacific (Hong Kong) Region. For a complete list of supported regions, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+July 24, 2019
+
+
+Added complete private CA hierarchy support
+Support for creating and hosting root CAs removes need for an external parent.
+June 20, 2019
+
+
+Added region support
+Added region support for the AWS GovCloud (US-West and US-East) Regions. For a complete list of supported regions, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+May 8, 2019
+
+
+Added region support
+Added region support for the AWS Asia Pacific (Mumbai and Seoul), US West (N. California), and EU (Paris and Stockholm) Regions. For a complete list of supported regions, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+April 4, 2019
+
+
+Testing certificate renewal workflow
+Customers can now manually test the configuration of their ACM managed renewal workflow. For more information, see Testing ACM's Managed Renewal Configuration.
+March 14, 2019
+
+
+Added region support
+Added region support for the AWS EU (London) Region. For a complete list of supported regions, see AWS Certificate Manager Private Certificate Authority Endpoints and Quotas.
+August 1, 2018
+
+
+Restore deleted CAs
+Private CA restore allows customers to restore certificate authorities (CAs) for up to 30 days after they have been deleted. For more information, see Restoring Your Private CA.
+June 20, 2018
+
+
+
+Earlier Updates
+The following table describes the documentation release history of AWS Certificate Manager Private Certificate Authority before June 2018.
+
+
+
+
+Change
+Description
+Date
+
+
+
+
+New guide
+This release introduces AWS Certificate Manager Private Certificate Authority.
+April 04, 2018
+
+

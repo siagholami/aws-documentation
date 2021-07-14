@@ -1,0 +1,15 @@
+How do I change the language of the AWS Management Console?
+You can change the display language of the AWS Management Console. Several languages are supported.
+To change the console language
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+Scroll down until you see the bar at the bottom of the window, and then choose the language on the left side of the bar. 
+
+
+
+Choose the language that you want from the menu. This will change the langauge for the entire AWS Management Console.
+
+

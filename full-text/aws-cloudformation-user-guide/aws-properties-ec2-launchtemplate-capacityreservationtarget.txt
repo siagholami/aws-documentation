@@ -1,0 +1,17 @@
+AWS::EC2::LaunchTemplate CapacityReservationTarget
+Specifies a target Capacity Reservation.
+CapacityReservationTarget is a property of the  Amazon EC2 LaunchTemplate LaunchTemplateData property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CapacityReservationId](#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid)" : String
+}
+YAML
+[CapacityReservationId](#cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid): String
+Properties
+CapacityReservationId 
+The ID of the Capacity Reservation in which to run the instance.
+Required: No
+Type: String
+Update requires: No interruption

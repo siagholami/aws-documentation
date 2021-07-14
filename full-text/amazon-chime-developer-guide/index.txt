@@ -1,0 +1,42 @@
+Amazon Chime Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon Chime?
+User management
+Invite multiple users
+Download user list
+Log out multiple users
+Update user personal PINs
+Amazon Chime chatbots
+Use chatbots with Amazon Chime
+Step 1: Integrate a chatbot with Amazon Chime
+Step 2: Configure the outbound endpoint for an Amazon Chime chatbot
+Step 3: Add the chatbot to an Amazon Chime chat room
+Authenticate chatbot requests
+Update chatbots
+
+
+Amazon Chime events sent to chatbots
+Proxy phone sessions
+Webhooks for Amazon Chime
+Using the Amazon Chime SDK
+Integrating with a client library
+Creating meetings with the Amazon Chime SDK
+Amazon Chime SDK media Regions
+
+
+SIP integration using an Amazon Chime Voice Connector
+Amazon Chime SDK event notifications
+Document history
+AWS glossary

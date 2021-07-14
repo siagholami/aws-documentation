@@ -1,0 +1,10 @@
+Compliance validation for Firewall Manager
+Third-party auditors assess the security and compliance of Firewall Manager as part of multiple AWS compliance programs, such as SOC, PCI, FedRAMP, HIPAA, and others. 
+For a list of AWS services in scope of specific compliance programs, see AWS Services in Scope by Compliance Program. For general information, see AWS Compliance Programs.
+You can download third-party audit reports using AWS Artifact. For more information, see Downloading Reports in AWS Artifact. 
+Your compliance responsibility when using Firewall Manager is determined by the sensitivity of your data, your organization’s compliance objectives, and applicable laws and regulations. If your use of Firewall Manager is subject to compliance with standards like HIPAA, PCI, or FedRAMP, AWS provides resources to help:
+ Security and Compliance Quick Start Guides – These deployment guides discuss architectural considerations and provide steps for deploying security- and compliance-focused baseline environments on AWS.
+ Architecting for HIPAA Security and Compliance Whitepaper  – This technical paper describes how companies can use AWS to create HIPAA-compliant applications.
+ AWS Compliance Resources – This collection of workbooks and guides might apply to your industry and location.
+ AWS Security Hub – This AWS service provides a comprehensive view of your security state within AWS that helps you check your compliance with security industry standards and best practices.
+ AWS Well-Architected Framework – The AWS Well-Architected Framework helps you build secure cloud applications. 

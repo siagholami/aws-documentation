@@ -1,0 +1,26 @@
+AWS::AppStream::ImageBuilder VpcConfig
+The VPC configuration for the image builder.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SecurityGroupIds](#cfn-appstream-imagebuilder-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[SubnetIds](#cfn-appstream-imagebuilder-vpcconfig-subnetids)" : [ String, ... ]
+}
+YAML
+[SecurityGroupIds](#cfn-appstream-imagebuilder-vpcconfig-securitygroupids): 
+    - String
+  [SubnetIds](#cfn-appstream-imagebuilder-vpcconfig-subnetids): 
+    - String
+Properties
+SecurityGroupIds 
+The identifiers of the security groups for the image builder.
+Required: No
+Type: List of String
+Maximum: 5
+Update requires: No interruption
+SubnetIds 
+The identifier of the subnet to which a network interface is attached from the image builder instance. An image builder instance can use one subnet.
+Required: No
+Type: List of String
+Update requires: No interruption

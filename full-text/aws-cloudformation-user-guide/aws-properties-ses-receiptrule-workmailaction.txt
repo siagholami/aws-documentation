@@ -1,0 +1,28 @@
+AWS::SES::ReceiptRule WorkmailAction
+When included in a receipt rule, this action calls Amazon WorkMail and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS). It usually isn't necessary to use this action directly, because Amazon WorkMail adds the rule automatically during its setup procedure.
+For information using a receipt rule to call Amazon WorkMail, see the Amazon SES Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[OrganizationArn](#cfn-ses-receiptrule-workmailaction-organizationarn)" : String,
+  "[TopicArn](#cfn-ses-receiptrule-workmailaction-topicarn)" : String
+}
+YAML
+[OrganizationArn](#cfn-ses-receiptrule-workmailaction-organizationarn): String
+  [TopicArn](#cfn-ses-receiptrule-workmailaction-topicarn): String
+Properties
+OrganizationArn 
+The Amazon Resource Name (ARN) of the Amazon WorkMail organization. Amazon WorkMail ARNs use the following format:
+arn:aws:workmail:<region>:<awsAccountId>:organization/<workmailOrganizationId> 
+You can find the ID of your organization by using the ListOrganizations operation in the Amazon WorkMail API. Amazon WorkMail organization IDs begin with "m-", followed by a string of alphanumeric characters.
+For information about Amazon WorkMail organizations, see the Amazon WorkMail Administrator Guide.
+Required: Yes
+Type: String
+Update requires: No interruption
+TopicArn 
+The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the WorkMail action is called. You can find the ARN of a topic by using the ListTopics operation in the Amazon SNS API.
+For more information about Amazon SNS topics, see the Amazon SNS Developer Guide.
+Required: No
+Type: String
+Update requires: No interruption

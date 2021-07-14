@@ -1,0 +1,67 @@
+AWS::Backup::BackupPlan BackupRuleResourceType
+Specifies an object containing properties used to schedule a task to back up a selection of resources.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
+  "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ CopyActionResourceType, ... ],
+  "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : LifecycleResourceType,
+  "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
+  "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
+  "[ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression)" : String,
+  "[StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes)" : Double,
+  "[TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault)" : String
+}
+YAML
+[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
+  [CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions): 
+    - CopyActionResourceType
+  [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
+    LifecycleResourceType
+  [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
+  [RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename): String
+  [ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression): String
+  [StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes): Double
+  [TargetBackupVault](#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault): String
+Properties
+CompletionWindowMinutes 
+A value in minutes after a backup job is successfully started before it must be completed or it is canceled by AWS Backup.
+Required: No
+Type: Double
+Update requires: No interruption
+CopyActions 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: List of CopyActionResourceType
+Update requires: No interruption
+Lifecycle 
+The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup transitions and expires backups automatically according to the lifecycle that you define.
+Required: No
+Type: LifecycleResourceType
+Update requires: No interruption
+RecoveryPointTags 
+To help organize your resources, you can assign your own metadata to the resources that you create. Each tag is a key-value pair.
+Required: No
+Type: Json
+Update requires: No interruption
+RuleName 
+A display name for a backup rule.
+Required: Yes
+Type: String
+Update requires: No interruption
+ScheduleExpression 
+A CRON expression specifying when AWS Backup initiates a backup job.
+Required: No
+Type: String
+Update requires: No interruption
+StartWindowMinutes 
+An optional value that specifies a period of time in minutes after a backup is scheduled before a job is canceled if it doesn't start successfully.
+Required: No
+Type: Double
+Update requires: No interruption
+TargetBackupVault 
+The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,17 @@
+Alternative
+A list of possible transcriptions for the audio.
+Contents
+Items 
+One or more alternative interpretations of the input audio. 
+Type: Array of Item objects
+Required: No
+Transcript 
+The text that was transcribed from the audio.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

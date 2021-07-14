@@ -1,0 +1,12 @@
+Troubleshoot a Slow Cluster
+This section walks you through the process of troubleshooting a cluster that is still running, but is taking a long time to return results. For more information about what to do if the cluster has terminated with an error code, see Troubleshoot a Failed Cluster 
+Amazon EMR enables you to specify the number and kind of instances in the cluster. These specifications are the primary means of affecting the speed with which your data processing completes. One thing you might consider is re-running the cluster, this time specifying EC2 instances with greater resources, or specifying a larger number of instances in the cluster. For more information, see Configure Cluster Hardware and Networking. 
+The following topics walk you through the process of identifying alternative causes of a slow cluster. 
+Topics
+ Step 1: Gather Data About the Issue
+ Step 2: Check the Environment
+ Step 3: Examine the Log Files
+ Step 4: Check Cluster and Instance Health
+ Step 5: Check for Arrested Groups
+ Step 6: Review Configuration Settings
+ Step 7: Examine Input Data

@@ -1,0 +1,19 @@
+Creating a Non-Administrator User
+This section describes how to create non-administrator users ("regular users") by using IAM to create groups, attach policies to each group, and add the users to the group. 
+If you are new to AWS or if you have been using AWS for only a few weeks, we recommend that you read this entire section. 
+If you have more experience using other AWS services, read Step 1: Identify Requirements for Permissions for Users. Then, based on your decisions, modify or create policies and groups in the usual way. 
+Summary of Steps
+ To create IAM users with access to AWS Elemental MediaLive, you must perform several steps: 
+ Identify the permissions that users need for MediaLive and other services.
+ Identify the different sets of users that you need. Each set will become an IAM group.
+ Identify the managed and custom policies that will provide the access required for the sets of users. Create the custom policies.
+ Create the groups that you have identified, and attach the managed and custom policies.
+ Create each user and add them to the appropriate group.
+Topics
+ Step 1: Identify Requirements for Permissions for Users
+ Summary of Step 1 Access Requirements
+ Step 2: Identify Categories of Users
+ Step 3: Create the Custom Policies
+ Step 4: Create the Groups
+ Step 5: Create or Modify each IAM User
+ Step 6: Setting Up Required Data

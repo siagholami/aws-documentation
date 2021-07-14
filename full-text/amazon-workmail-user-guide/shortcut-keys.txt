@@ -1,0 +1,36 @@
+Using shortcut keys with Amazon WorkMail
+Shortcut keys are globally applicable and not specific to screen reader software. Keyboard shortcuts are disabled by default. To enable keyboard shortcuts, see Working with general and email settings.
+Note
+For Mac, use Cmd instead of Ctrl.
+Keyboard shortcuts for creating new items
+ CtrlShiftA - New appointment
+ CtrlShiftB - New meeting request
+ CtrlShiftX - New item
+ CtrlShiftC - New contact
+ CtrlShiftD - New distribution list
+ CtrlShiftF - New folder
+ CtrlShiftM - New message (email)
+Keyboard shortcuts for basic navigation
+ Ctrl0-9 - Switch between context such as inbox, calendar, etc.
+ CtrlShift1-9 - Switch between different views
+ CtrlShiftArrow keys - Switch between tabs
+ CtrlShiftL - Close tab
+ AltS - Open shared folder or store
+Keyboard shortcuts applicable to all views
+ F5 - Refresh
+ Enter - Open selected items
+ Delete - Delete selected items
+ CtrlA - Select all items
+ CtrlP - Print selected items
+ CtrlM - Open copy and move dialog
+ CtrlShiftG - Print list
+Items
+ CtrlP - Print item
+ CtrlS - Save an item, such as a message, contact, etc.
+ CtrlEnter - Send an item, such as a message, meeting request, etc.
+Email
+ CtrlR - Reply
+ CtrlF - Forward
+ CtrlShiftU - Toggle between read and unread
+ CtrlShiftH - Toggle red flag and complete
+ CtrlShiftY - Reply all

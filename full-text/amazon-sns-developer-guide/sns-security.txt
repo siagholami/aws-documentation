@@ -1,0 +1,10 @@
+Amazon SNS security
+This section provides information about Amazon SNS security, authentication and access control, and the Amazon SNS Access Policy Language.
+Topics
+ Data protection in Amazon SNS
+ Identity and access management in Amazon SNS
+ Logging and monitoring in Amazon SNS
+ Compliance validation for Amazon SNS
+ Resilience in Amazon SNS
+ Infrastructure security in Amazon SNS
+ Amazon SNS security best practices

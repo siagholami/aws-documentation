@@ -1,0 +1,35 @@
+Amazon WorkDocs Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon WorkDocs?
+Getting started
+Connect to Amazon WorkDocs with IAM user credentials and query for users
+Connect to Amazon WorkDocs by assuming a role and browse a user’s root folder
+Upload a document
+Download a document
+Subscribe to notifications
+Creating a new user
+Adding permissions to user on a resource
+Authentication and access control for administrative applications
+Grant permission to the Amazon WorkDocs API for a developer on the AWS account
+Grant permission to Amazon WorkDocs API for third-party developer AWS account
+Grant permission to a developer to assume an IAM role given by a Amazon WorkDocs customer
+Restricting access to a specific Amazon WorkDocs instance
+Managing notifications for an IAM user or a role
+Authentication and access control for user applications
+Amazon WorkDocs Content Manager
+Constructing Amazon WorkDocs Content Manager
+Downloading a document
+Uploading a document
+AWS Glossary

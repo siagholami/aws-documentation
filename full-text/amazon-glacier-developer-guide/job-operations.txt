@@ -1,0 +1,7 @@
+Job Operations
+The following are the job operations available in S3 Glacier.
+Topics
+ Describe Job (GET JobID)
+ Get Job Output (GET output)
+ Initiate Job (POST jobs)
+ List Jobs (GET jobs)

@@ -1,0 +1,55 @@
+Finding the Texture Name
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+You can specify texture names for nodes in the Script Canvas editor. The texture name is generally the path that starts at the top asset directory.
+To find the texture name
+
+
+In Lumberyard Editor, choose Tools, Asset Browser. 
+
+
+From the Asset Browser, navigate to the texture file.
+
+
+Right-click the texture file and choose Copy Path to Clipboard. This copies the path to the file.
+
+
+Delete parts of the path to get the texture name.
+
+
+Examples 
+
+
+
+Asset Location
+Copied Path
+Path to Delete
+Texture Name to Reference
+
+
+
+
+Project
+lumberyard_version\dev\SamplesProject\textures\defaults\white.tif
+lumberyard_version\dev\SamplesProject\
+textures\defaults\white.tif
+
+
+Gem
+lumberyard_version\dev\Gems\Rain\Assets\Textures\Rain\rainfall.tif
+lumberyard_version\dev\Gems\Rain\Assets\
+Textures\Rain\rainfall.tif
+
+
+Editor
+lumberyard_version\dev\Editor\Plugins\ParticleEditorPlugin\defaults\feather01.tif
+lumberyard_version\dev\
+Editor\Plugins\ParticleEditorPlugin\defaults\feather01.tif
+
+
+Engine
+lumberyard_version\dev\Engine\textures\skys\night\half_moon.tif
+lumberyard_version\dev\Engine\
+textures\skys\night\half_moon.tif
+
+

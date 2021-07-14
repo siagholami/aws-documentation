@@ -1,0 +1,19 @@
+AWS::CodeBuild::Project GitSubmodulesConfig
+GitSubmodulesConfig is a property of the AWS CodeBuild Project Source property type that specifies information about the Git submodules configuration for the build project. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FetchSubmodules](#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules)" : Boolean
+}
+YAML
+[FetchSubmodules](#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules): Boolean
+Properties
+FetchSubmodules 
+ Set to true to fetch Git submodules for your AWS CodeBuild build project. 
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+See also
+
+ GitSubmodulesConfig in the AWS CodeBuild API Reference 

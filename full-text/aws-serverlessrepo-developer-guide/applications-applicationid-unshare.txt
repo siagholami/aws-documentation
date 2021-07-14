@@ -1,0 +1,265 @@
+Applications applicationId Unshare
+URI
+/applications/applicationId/unshare
+HTTP Methods
+POST
+Operation ID: UnshareApplication
+Unshares an application from an AWS Organization.
+This operation can be called only from the organization's master account.
+Path Parameters 
+
+
+
+Name
+Type
+Required
+Description
+
+
+
+
+applicationId
+String
+True
+The Amazon Resource Name (ARN) of the application.
+
+
+
+Responses 
+
+
+
+Status Code
+Response Model
+Description
+
+
+
+
+204
+None
+Success
+
+
+400
+
+One of the parameters in the request is invalid.
+
+
+403
+
+The client is not authenticated.
+
+
+404
+
+The resource (for example, an access policy statement) specified in the request doesn't exist.
+
+
+429
+
+The client is sending more than the allowed number of requests per unit of time.
+
+
+500
+
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+
+Schemas
+Request Bodies
+Example POST
+{
+  "organizationId": "string"
+}
+Response Bodies
+Example BadRequestException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example ForbiddenException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example NotFoundException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example TooManyRequestsException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example InternalServerErrorException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Properties
+BadRequestException
+One of the parameters in the request is invalid.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+One of the parameters in the request is invalid.
+
+
+errorCode
+string
+False
+400
+
+
+
+ForbiddenException
+The client is not authenticated.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The client is not authenticated.
+
+
+errorCode
+string
+False
+403
+
+
+
+InternalServerErrorException
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+errorCode
+string
+False
+500
+
+
+
+NotFoundException
+The resource (for example, an access policy statement) specified in the request doesn't exist.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The resource (for example, an access policy statement) specified in the request doesn't exist.
+
+
+errorCode
+string
+False
+404
+
+
+
+TooManyRequestsException
+The client is sending more than the allowed number of requests per unit of time.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The client is sending more than the allowed number of requests per unit of time.
+
+
+errorCode
+string
+False
+429
+
+
+
+UnshareApplicationInput
+Unshare application request.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+organizationId
+string
+True
+The AWS Organization ID to unshare the application from.
+
+
+
+See Also
+For more information about using this API in one of the language-specific AWS SDKs and references, see the following:
+UnshareApplication
+
+AWS Command Line Interface
+AWS SDK for .NET
+AWS SDK for C
+AWS SDK for Go
+AWS SDK for Java
+AWS SDK for JavaScript
+AWS SDK for PHP V3
+AWS SDK for Python
+AWS SDK for Ruby V3

@@ -1,0 +1,10 @@
+Hiding Amazon EC2 Auto Scaling Alarms
+When you view your alarms in the AWS Management Console, you can hide the alarms related to Amazon EC2 Auto Scaling. This feature is available only in the AWS Management Console.
+To temporarily hide Amazon EC2 Auto Scaling alarms
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Alarms and select Hide all AutoScaling alarms.
+

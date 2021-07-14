@@ -1,0 +1,322 @@
+Transit gateway route tables
+Use transit gateway route tables to configure routing for your transit gateway attachments.
+Create a transit gateway route table
+To create a transit gateway route table using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Choose Create Transit Gateway Route Table.
+
+
+(Optional) For Name tag, type a name for the transit gateway route table. This creates a tag with the tag key "Name", where the tag value is the name that you specify.
+
+
+For Transit Gateway ID, select the transit gateway for the route table.
+
+
+Choose Create Transit Gateway Route Table.
+
+
+To create a transit gateway route table using the AWS CLI
+Use the create-transit-gateway-route-table command.
+Associate a transit gateway route table
+You can associate a transit gateway route table with a transit gateway attachment.
+To associate a transit gateway route table using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table.
+
+
+In the lower part of the page, choose the Associations tab.
+
+
+Choose Create association.
+
+
+Choose the attachment to associate and then choose Create association.
+
+
+To associate a transit gateway route table using the AWS CLI
+Use the associate-transit-gateway-route-table command.
+Delete an association for a transit gateway route table
+You can disassociate a transit gateway route table from a transit gateway attachment.
+To disassociate a transit gateway route table using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table.
+
+
+In the lower part of the page, choose the Associations tab.
+
+
+Choose the attachment to disassociate and then choose Delete association.
+
+
+When prompted for confirmation, choose Delete association.
+
+
+To disassociate a transit gateway route table using the AWS CLI
+Use the disassociate-transit-gateway-route-table command.
+View transit gateway route tables
+To view transit gateway route tables using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+To find a specific route table or set of tables, enter all or part of the name, keyword, or attribute in the filter field.
+
+
+Choose a route table to display the settings for it.
+To view transit gateway route tables using the AWS CLI
+Use the describe-transit-gateway-route-tables command.
+Propagate a route to a transit gateway route table
+Use route propagation to add a route from a route table to an attachment.
+To propagate a route to a transit gateway attachment route table
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table for which to create a propagation.
+
+
+Choose Actions, Create propagation.
+
+
+On the Create propagation page, choose the attachment.
+
+
+Choose Create propagation.
+
+
+Choose Close.
+
+
+To enable route propagation using the AWS CLI
+Use the enable-transit-gateway-route-table-propagation command.
+Disable route propagation
+Remove a propagated route from a route table attachment.
+To disable route propagation using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table to delete the propagation from.
+
+
+On the lower part of the page, choose the Propagations tab.
+
+
+Select the attachment and then choose Delete propagation.
+
+
+When prompted for confirmation, choose Delete propagation.
+
+
+To disable route propagation using the AWS CLI
+Use the disable-transit-gateway-route-table-propagation command.
+View route table propagations
+To view route propagations using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table to view propagations for.
+
+
+On the lower part of the page, choose the Propagations tab.
+
+
+To view route propagations using the AWS CLI
+Use the get-transit-gateway-route-table-propagations command.
+Create a static route
+You can create a static route for a VPC, VPN, or transit gateway peering attachment, or you can create a blackhole route that drops traffic that matches the route.
+To create a static route using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table for which to create a route.
+
+
+Choose Actions, Create route.
+
+
+On the Create route page, enter the CIDR block for which to create the route.
+
+
+Choose the attachment for the route.
+
+
+Choose Create route.
+
+
+To create a blackhole route using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table for which to create a route.
+
+
+Choose Actions, Create route.
+
+
+On the Create route page, enter the CIDR block for which to create the route, and then choose Blackhole.
+
+
+Choose Create route.
+
+
+To create a static route or blackhole route using the AWS CLI
+Use the create-transit-gateway-route command.
+Delete a static route
+You can create a static route for an attached VPC or VPN connection, or you can create a blackhole route that drops traffic that matches the route.
+To delete a static route using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table for which to delete the route, and choose Routes.
+
+
+Choose the route to delete.
+
+
+Choose Delete route.
+
+
+In the confirmation box, choose Delete route.
+
+
+To delete a static route using the AWS CLI
+Use the delete-transit-gateway-route command.
+Export route tables to Amazon S3
+You can export the routes in your transit gateway route tables to an Amazon S3 bucket. The routes are saved to the specified Amazon S3 bucket in a JSON file.
+To export transit gateway route tables using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Choose the route table that includes the routes to export.
+
+
+Choose Actions, Export routes.
+
+
+On the Export routes page, for S3 bucket name, type the name of the S3 bucket.
+
+
+To filter the routes exported, specify filter parameters in the Filters section of the page.
+
+
+Choose Export routes.
+
+
+To access the exported routes, open the Amazon S3 console at https://console.aws.amazon.com/s3/, and navigate to the bucket that you specified. The file name includes the AWS account ID, AWS Region, route table ID, and a timestamp. Select the file and choose Download. The following is an example of a JSON file that contains information about two propagated routes for VPC attachments.
+{
+  "filter": [
+    {
+      "name": "route-search.subnet-of-match",
+      "values": [
+        "0.0.0.0/0",
+        "::/0"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "destinationCidrBlock": "10.0.0.0/16",
+      "transitGatewayAttachments": [
+        {
+          "resourceId": "vpc-0123456abcd123456",
+          "transitGatewayAttachmentId": "tgw-attach-1122334455aabbcc1",
+          "resourceType": "vpc"
+        }
+      ],
+      "type": "propagated",
+      "state": "active"
+    },
+    {
+      "destinationCidrBlock": "10.2.0.0/16",
+      "transitGatewayAttachments": [
+        {
+          "resourceId": "vpc-abcabc123123abca",
+          "transitGatewayAttachmentId": "tgw-attach-6677889900aabbcc7",
+          "resourceType": "vpc"
+        }
+      ],
+      "type": "propagated",
+      "state": "active"
+    }
+  ]
+}
+Delete a transit gateway route table
+To delete a transit gateway route table using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Route Tables.
+
+
+Select the route table to delete.
+
+
+Choose Actions, Delete route table.
+
+
+Choose Delete again to confirm the deletion.
+
+
+To delete a transit gateway route table using the AWS CLI
+Use the delete-transit-gateway-route-table command.

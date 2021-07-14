@@ -1,0 +1,96 @@
+UITooltipDisplayComponent
+Controls the display behavior of a tooltip.
+UiTooltipDisplayBus
+Services messages for the UiTooltipDisplayComponent.
+GetAutoPosition
+Returns whether the tooltip display element is auto positioned.
+Syntax
+bool GetAutoPosition()
+GetAutoPositionMode
+Returns the auto position mode.
+Syntax
+AutoPositionMode GetAutoPositionMode()
+Following are possible values for AutoPositionMode.
+enum AutoPositionMode
+    {
+        OffsetFromMouse,
+        OffsetFromElement
+    };
+GetAutoSize
+Returns whether the tooltip display element should be resized so that the text element size matches the size of the string.
+Syntax
+bool GetAutoSize()
+GetDelayTime
+Returns the amount of time to wait before showing the tooltip display element after the trigger condition has occurred.
+Syntax
+float GetDelayTime()
+GetDisplayTime
+Returns the amount of time the tooltip display element is to remain visible.
+Syntax
+float GetDisplayTime()
+GetOffset
+Returns the offset from the tooltip display element's pivot to the mouse position.
+Syntax
+const AZ::Vector2& GetOffset()
+GetTextEntity
+Returns the entity ID of the text element that is used for resizing.
+Syntax
+AZ::EntityId GetTextEntity()
+GetTriggerMode
+Returns the trigger mode describing the condition under which the tooltip will be displayed.
+Minimum Lumberyard Version: 1.24
+Syntax
+TriggerMode GetTriggerMode()
+Following are possible values for TriggerMode.
+enum TriggerMode
+    {
+        OnHover,
+        OnPress,
+        OnClick
+    };
+SetAutoPosition
+Sets whether the tooltip display element is auto positioned.
+Syntax
+void SetAutoPosition(bool autoPosition)
+SetAutoPositionMode
+Sets the auto position mode.
+Syntax
+void SetAutoPositionMode(AutoPositionMode autoPositionMode)
+Following are possible values for AutoPositionMode.
+enum AutoPositionMode
+    {
+        OffsetFromMouse,
+        OffsetFromElement
+    };
+SetAutoSize
+Sets whether the tooltip display element should be resized so that the text element size matches the size of the string.
+Syntax
+void SetAutoSize(bool autoSize)
+SetDelayTime
+Sets the amount of time to wait before showing the tooltip display element after the trigger condition has occurred.
+Syntax
+void SetDelayTime(float delayTime)
+SetDisplayTime
+Sets the amount of time the tooltip display element is to remain visible.
+Syntax
+void SetDisplayTime(float displayTime)
+SetOffset
+Sets the offset from the tooltip display element's pivot to the mouse position.
+Syntax
+void SetOffset(const AZ::Vector2& offset)
+SetTextEntity
+Sets the entity ID of the text element that is used for resizing. The text element must be a child of this entity.
+Syntax
+void SetTextEntity(AZ::EntityId textEntity)
+SetTriggerMode
+Sets the trigger condition for displaying the tooltip after the set amount of delay time has elapsed.
+Minimum Lumberyard Version: 1.24
+Syntax
+void SetTriggerMode(TriggerMode triggerMode)
+Following are possible values for TriggerMode.
+enum TriggerMode
+    {
+        OnHover,
+        OnPress,
+        OnClick
+    };

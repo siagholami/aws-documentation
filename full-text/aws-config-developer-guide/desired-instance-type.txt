@@ -1,0 +1,11 @@
+desired-instance-type
+Checks whether your EC2 instances are of the specified instance types.
+For a list of supported Amazon EC2 instance types, see Instance Types in the Amazon EC2 User Guide for Linux Instances.
+Identifier: DESIRED_INSTANCE_TYPE
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+instanceType 
+ Comma-separated list of EC2 instance types (for example, "t2.small, m4.large, i2.xlarge").
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

@@ -1,0 +1,29 @@
+Managing clusters using the Amazon Redshift CLI and API
+You can use the following Amazon Redshift CLI operations to manage clusters.
+ cancel-resize
+ create-cluster
+ delete-cluster
+ describe-clusters
+ describe-cluster-versions
+ describe-node-configuration-options
+ describe-orderable-cluster-options
+ describe-resize
+ modify-cluster
+ pause-cluster
+ reboot-cluster
+ resize-cluster
+ resume-cluster
+You can use the following Amazon Redshift API operations to manage clusters.
+ CancelResize
+ CreateCluster
+ DeleteCluster
+ DescribeClusters
+ DescribeClusterVersions
+ DescribeNodeConfigurationOptions
+ DescribeResize
+ DescribeOrderableClusterOptions
+ ModifyCluster
+ PauseCluster
+ RebootCluster
+ ResizeCluster
+ ResumeCluster

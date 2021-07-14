@@ -1,0 +1,23 @@
+Presto Functions in Amazon Athena
+The Athena query engine is based on Presto 0.172. For more information about these functions, see Presto 0.172 Functions and Operators and the specific sections from Presto documentation referenced below.
+Athena does not support all of Presto's features. For information, see Considerations and Limitations.
+ Logical Operators
+ Comparison Functions and Operators
+ Conditional Expressions
+ Conversion Functions
+ Mathematical Functions and Operators
+ Bitwise Functions
+ Decimal Functions and Operators
+ String Functions and Operators
+ Binary Functions
+ Date and Time Functions and Operators
+ Regular Expression Functions
+ JSON Functions and Operators
+ URL Functions
+ Aggregate Functions
+ Window Functions
+ Color Functions
+ Array Functions and Operators
+ Map Functions and Operators
+ Lambda Expressions and Functions
+ Teradata Functions

@@ -1,0 +1,69 @@
+CreateSolutionVersion
+Trains or retrains an active solution. A solution is created using the CreateSolution operation and must be in the ACTIVE state before calling CreateSolutionVersion. A new version of the solution is created every time you call this operation.
+Status 
+A solution version can be in one of the following states:
+ CREATE PENDING > CREATE IN_PROGRESS > ACTIVE -or- CREATE FAILED
+To get the status of the version, call DescribeSolutionVersion. Wait until the status shows as ACTIVE before calling CreateCampaign.
+If the status shows as CREATE FAILED, the response includes a failureReason key, which describes why the job failed.
+Related APIs
+  ListSolutionVersions 
+  DescribeSolutionVersion 
+  ListSolutions 
+  CreateSolution 
+  DescribeSolution 
+  DeleteSolution 
+Request Syntax
+{
+   "solutionArn": "string",
+   "trainingMode": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ solutionArn  
+The Amazon Resource Name (ARN) of the solution containing the training configuration information.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: Yes
+ trainingMode  
+The scope of training to be performed when creating the solution version. The FULL option trains the solution version based on the entirety of the input solution's training data, while the UPDATE option processes only the data that has changed in comparison to the input solution. Choose UPDATE when you want to incrementally update your solution version instead of creating an entirely new one.
+The UPDATE option can only be used when you already have an active solution version created from the input solution using the FULL option and the input solution was trained with the User-Personalization Recipe or the HRNN-Coldstart Recipe recipe.
+Type: String
+Valid Values:FULL | UPDATE 
+Required: No
+Response Syntax
+{
+   "solutionVersionArn": "string"
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ solutionVersionArn  
+The ARN of the new solution version.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Errors
+InvalidInputException 
+Provide a valid value for the field or parameter.
+HTTP Status Code: 400
+LimitExceededException 
+The limit on the number of requests per second has been exceeded.
+HTTP Status Code: 400
+ResourceInUseException 
+The specified resource is in use.
+HTTP Status Code: 400
+ResourceNotFoundException 
+Could not find the specified resource.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

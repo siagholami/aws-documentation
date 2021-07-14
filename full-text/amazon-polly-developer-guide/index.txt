@@ -1,0 +1,145 @@
+Amazon Polly Developer Guide
+
+*Copyright © 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Polly?
+Amazon Polly: How It Works
+Common Questions
+Getting Started with Amazon Polly
+Step 1: Set Up an AWS Account and Create a User
+Step 2: Getting Started Using the Console
+Step 3: Getting Started Using the AWS CLI
+Step 3.1: Set Up the AWS Command Line Interface (AWS CLI)
+Step 3.2: Getting Started Exercise Using the AWS CLI
+
+
+What's Next?
+Speech Marks
+Speech Mark Types
+Visemes and Amazon Polly
+
+
+Using Speech Marks
+Speech Mark Examples
+
+
+Requesting Speech Marks Using the Amazon Polly Console
+Phoneme/Viseme Tables for Supported Languages
+Danish (da-DK)
+Dutch (nl-NL)
+English, Australian (en-AU)
+English, Indian (en-IN)
+English, British (en-GB)
+English, American (en-US)
+English, Welsh (en-GB-WSL)
+French (fr-FR)
+French, Canadian (fr-CA)
+German (de-DE)
+Icelandic (is-IS)
+Italian (it-IT)
+Japanese (ja-JP)
+Korean (ko-KR)
+Norwegian (nb-NO)
+Polish (pl-PL)
+Portuguese (pt-PT)
+Portuguese, Brazilian (pt-BR)
+Romanian (ro-RO)
+Russian (ru-RU)
+Spanish (es-ES)
+Spanish, US (es-US)
+Swedish (sv-SE)
+Turkish (tr-TR)
+Welsh (cy-GB)
+
+
+Using SSML
+Using SSML with the Amazon Polly Console
+Using SSML with the AWS CLI
+SSML Tags in Amazon Polly
+Phonetic Tables Used by Amazon Polly
+
+
+Managing Lexicons
+Applying Multiple Lexicons
+Managing Lexicons Using the Amazon Polly Console
+Managing Lexicons Using the AWS CLI
+Using the PutLexicon Operation
+Using the GetLexicon Operation
+Using the ListLexicons Operations
+Using the DeleteLexicon Operation
+
+
+Code and Application Examples
+Sample Code
+Java Samples
+DeleteLexicon
+DescribeVoices
+GetLexicon
+ListLexicons
+PutLexicon
+Speech Marks
+SynthesizeSpeech
+
+
+Python Samples
+PutLexicon
+GetLexicon
+ListLexicon
+DeleteLexicon
+
+
+
+
+Example Applications
+Python Example (HTML5 Client and Python Server)
+Python Example: HTML5 User Interface (index.html)
+Python Example: Python Server Code (server.py)
+
+
+Java Example
+iOS Example
+Android Example
+
+
+WordPress Plugin for Amazon Polly
+Installing the Plugin
+Storing Audio Files
+Amazon Polly Reference
+Available Voices
+Languages Supported by Amazon Polly
+Limits in Amazon Polly
+Logging Amazon Polly API Calls with AWS CloudTrail
+Integrating CloudWatch with Amazon Polly
+Amazon Polly API Reference
+Actions
+DeleteLexicon
+DescribeVoices
+GetLexicon
+ListLexicons
+PutLexicon
+SynthesizeSpeech
+
+
+Data Types
+Lexicon
+LexiconAttributes
+LexiconDescription
+Voice
+
+
+Authentication and Access Control for Amazon Polly
+Overview of Managing Access Permissions to Your Amazon Polly Resources
+Using Identity-Based Policies (IAM Policies) for Amazon Polly
+Amazon Polly API Permissions: Actions, Permissions, and Resources Reference
+Document History for Amazon Polly
+AWS Glossary

@@ -1,0 +1,28 @@
+AWS::KinesisAnalyticsV2::Application ApplicationCodeConfiguration
+Describes code configuration for a Flink-based Kinesis Data Analytics application.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)" : CodeContent,
+  "[CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)" : String
+}
+YAML
+[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent): 
+    CodeContent
+  [CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype): String
+Properties
+CodeContent 
+The location and type of the application code.
+Required: Yes
+Type: CodeContent
+Update requires: No interruption
+CodeContentType 
+Specifies whether the code content is in text or zip format.
+Required: Yes
+Type: String
+Allowed values: PLAINTEXT | ZIPFILE
+Update requires: No interruption
+See also
+
+ApplicationCodeConfiguration in the Amazon Kinesis Data Analytics API Reference 

@@ -1,0 +1,46 @@
+AWS::LakeFormation::Permissions
+The AWS::LakeFormation::Permissions resource represents the permissions that a principal has on an AWS Glue Data Catalog resource (such as AWS Glue database or AWS Glue tables). When you upload a permissions stack, the permissions are granted to the principal and when you remove the stack, the permissions are revoked from the principal. If you remove a stack, and the principal does not have the permissions referenced in the stack then AWS Lake Formation will throw an error because you can’t call revoke on non-existing permissions. To successfully remove the stack, you’ll need to regrant those permissions and then remove the stack. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::LakeFormation::Permissions",
+  "Properties" : {
+      "[DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal)" : DataLakePrincipal,
+      "[Permissions](#cfn-lakeformation-permissions-permissions)" : [ String, ... ],
+      "[PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption)" : [ String, ... ],
+      "[Resource](#cfn-lakeformation-permissions-resource)" : Resource
+    }
+}
+YAML
+Type: AWS::LakeFormation::Permissions
+Properties: 
+  [DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal): 
+    DataLakePrincipal
+  [Permissions](#cfn-lakeformation-permissions-permissions): 
+    - String
+  [PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption): 
+    - String
+  [Resource](#cfn-lakeformation-permissions-resource): 
+    Resource
+Properties
+DataLakePrincipal 
+The AWS Lake Formation principal.
+Required: Yes
+Type: DataLakePrincipal
+Update requires: No interruption
+Permissions 
+The permissions granted or revoked.
+Required: No
+Type: List of String
+Update requires: No interruption
+PermissionsWithGrantOption 
+Indicates whether to grant the ability to grant permissions (as a subset of permissions granted).
+Required: No
+Type: List of String
+Update requires: No interruption
+Resource 
+A structure for the resource.
+Required: Yes
+Type: Resource
+Update requires: No interruption

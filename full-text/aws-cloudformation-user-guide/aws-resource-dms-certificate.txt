@@ -1,0 +1,69 @@
+AWS::DMS::Certificate
+The AWS::DMS::Certificate resource creates an SSL certificate that encrypts connections between AWS DMS endpoints and the replication instance.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::DMS::Certificate",
+  "Properties" : {
+      "[CertificateIdentifier](#cfn-dms-certificate-certificateidentifier)" : String,
+      "[CertificatePem](#cfn-dms-certificate-certificatepem)" : String,
+      "[CertificateWallet](#cfn-dms-certificate-certificatewallet)" : String
+    }
+}
+YAML
+Type: AWS::DMS::Certificate
+Properties: 
+  [CertificateIdentifier](#cfn-dms-certificate-certificateidentifier): String
+  [CertificatePem](#cfn-dms-certificate-certificatepem): String
+  [CertificateWallet](#cfn-dms-certificate-certificatewallet): String
+Properties
+CertificateIdentifier 
+A customer-assigned name for the certificate. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.
+Required: No
+Type: String
+Update requires: Replacement
+CertificatePem 
+The contents of a .pem file, which contains an X.509 certificate.
+Required: No
+Type: String
+Update requires: Replacement
+CertificateWallet 
+The location of an imported Oracle Wallet certificate for use with SSL.
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the Amazon Resource Name (ARN) of the certificate. 
+For more information about using the Ref function, see Ref.
+Examples
+
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Certificate test",
+    "Resources": {
+        "BasicCertificate": {
+            "Type": "AWS::DMS::Certificate",
+            "Properties": {
+                "CertificatePem": "-----BEGIN CERTIFICATE-----\n MIID/DCCAuSgAwIBAgIBUDANBgkqhkiG9w0BAQsFADCBijELMAkGA1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==\n -----END CERTIFICATE-----\n"
+            }
+        }
+    }
+}
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Certificate test"
+Resources: 
+  BasicCertificate: 
+    Properties: 
+      CertificatePem: |-
+          -----BEGIN CERTIFICATE-----
+           MIID/DCCAuSgAwIBAgABCDEFgkqhkiG9w0BAQsFADCBijEXAMPLE1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==
+           -----END CERTIFICATE-----
+    Type: "AWS::DMS::Certificate"
+See also
+
+ImportCertificate in the AWS Database Migration Service API Reference 
+AWS CloudFormation Stacks Updates 

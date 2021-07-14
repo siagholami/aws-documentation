@@ -1,0 +1,61 @@
+AWS::SES::ConfigurationSet
+Specifies a configuration set. Configuration sets let you create groups of rules that you can apply to the emails you send using Amazon SES. For more information about using configuration sets, see Using Amazon SES Configuration Sets in the Amazon SES Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::SES::ConfigurationSet",
+  "Properties" : {
+      "[Name](#cfn-ses-configurationset-name)" : String
+    }
+}
+YAML
+Type: AWS::SES::ConfigurationSet
+Properties: 
+  [Name](#cfn-ses-configurationset-name): String
+Properties
+Name 
+The name of the configuration set. The name must:
+ Only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).
+ Contain 64 characters or fewer.
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name.
+For more information about using the Ref function, see Ref.
+Examples
+
+Specifies a configuration set.
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS SES ConfigurationSet Sample Template",
+    "Parameters": {
+        "ConfigSetName": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ConfigSet": {
+            "Type": "AWS::SES::ConfigurationSet",
+            "Properties": {
+                "Name": {
+                    "Ref": "ConfigSetName"
+                }
+            }
+        }
+    }
+}
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Description: "AWS SES ConfigurationSet Sample Template"
+Parameters:
+  ConfigSetName:
+    Type: String
+Resources:
+  ConfigSet:
+    Type: AWS::SES::ConfigurationSet
+    Properties:
+      Name: !Ref ConfigSetName

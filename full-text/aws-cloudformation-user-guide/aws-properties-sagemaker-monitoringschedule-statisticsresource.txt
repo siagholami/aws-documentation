@@ -1,0 +1,16 @@
+AWS::SageMaker::MonitoringSchedule StatisticsResource
+The baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3Uri](#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri)" : String
+}
+YAML
+[S3Uri](#cfn-sagemaker-monitoringschedule-statisticsresource-s3uri): String
+Properties
+S3Uri 
+The S3 URI for the statistics resource.
+Required: No
+Type: String
+Update requires: No interruption

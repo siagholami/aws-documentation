@@ -1,0 +1,294 @@
+Japanese (ja-JP)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Japanese voice supported by Amazon Polly.
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ɾ
+4
+alveolar flap
+練習, renshuu
+t
+
+
+ʔ
+?
+glottal stop
+あつっ, atsu'
+
+
+
+b
+b
+voiced bilabial plosive
+舞踊, buyou
+p
+
+
+β
+B
+voiced bilabial fricative
+ヴィンテージ, vinteeji
+B
+
+
+c
+c
+voiceless palatal plosive
+ききょう, kikyou
+k
+
+
+ç
+C
+voiceless palatal fricative
+人, hito
+k
+
+
+d
+d
+voiced alveolar plosive
+濁点, dakuten
+t
+
+
+d͡ʑ
+dz\
+voiced alveolo-palatal affricate
+純, jun
+J
+
+
+ɡ
+g
+voiced velar plosive
+ご飯, gohan
+k
+
+
+h
+h
+voiceless glottal fricative
+本, hon
+k
+
+
+j
+j
+palatal approximant
+屋根, yane
+i
+
+
+ɟ
+J\
+voiced palatal plosive
+行儀, gyougi
+J
+
+
+k
+k
+voiceless velar plosive
+漢字, kanji
+k
+
+
+ɺ
+l\
+alveolar lateral flap
+釣り, tsuri
+r
+
+
+ɺj
+l\j
+alveolar lateral flap, palatal approximant
+流行, ryuukou
+r
+
+
+m
+m
+bilabial nasal
+飯, meshi
+p
+
+
+n
+n
+alveolar nasal
+猫, neko
+t
+
+
+ɲ
+J
+palatal nasal
+日本, nippon
+J
+
+
+ɴ
+N\
+uvular nasal
+缶, kan
+k
+
+
+p
+p
+voiceless bilabial plosive
+パン, pan
+p
+
+
+ɸ
+p\
+voiceless bilabial fricative
+福, huku
+f
+
+
+s
+s
+voiceless alveolar fricative
+層, sou
+s
+
+
+ɕ
+s\
+voiceless alveolo-palatal fricative
+書簡, shokan
+J
+
+
+t
+t
+voiceless alveolar plosive
+手紙, tegami
+t
+
+
+t͡s
+ts
+voiceless alveolar affricate
+釣り, tsuri
+s
+
+
+t͡ɕ
+ts\
+voiceless alveolo-palatal affricate
+吉, kichi
+J
+
+
+w
+w
+labial-velar approximant
+電話, denwa
+u
+
+
+z
+z
+voiced alveolar fricative
+座敷, zashiki
+s
+
+
+Vowels
+
+
+
+
+
+
+äː
+a:_"
+long open central unrounded vowel
+羽蟻, haari
+a
+
+
+ä
+a_"
+open central unrounded vowel
+仮名, kana
+a
+
+
+eː
+e:_o
+long mid front unrounded vowel
+学生, gakusei
+@
+
+
+e
+e_o
+mid front unrounded vowel
+歴, reki
+@
+
+
+i
+i
+close front unrounded vowel
+気, ki
+i
+
+
+iː
+i:
+long close front unrounded vowel
+詩歌, shiika
+i
+
+
+ɯ
+M
+close back unrounded vowel
+運, un
+i
+
+
+ɯː
+M:
+long close back unrounded vowel
+宗教, shuukyou
+i
+
+
+oː
+o:_o
+long mid back rounded vowel
+購読, koodoku
+o
+
+
+o
+o_o
+mid back rounded vowel
+読者, dokusha
+o
+
+

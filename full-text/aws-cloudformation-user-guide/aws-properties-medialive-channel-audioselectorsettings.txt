@@ -1,0 +1,26 @@
+AWS::MediaLive::Channel AudioSelectorSettings
+Information about the audio to extract from the input.
+The parent of this entity is AudioSelector.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection)" : AudioLanguageSelection,
+  "[AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection)" : AudioPidSelection
+}
+YAML
+[AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection): 
+    AudioLanguageSelection
+  [AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection): 
+    AudioPidSelection
+Properties
+AudioLanguageSelection 
+The language code of the audio to select.
+Required: No
+Type: AudioLanguageSelection
+Update requires: No interruption
+AudioPidSelection 
+The PID of the audio to select.
+Required: No
+Type: AudioPidSelection
+Update requires: No interruption

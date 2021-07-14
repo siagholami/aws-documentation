@@ -1,0 +1,136 @@
+AWS::Pinpoint::Campaign
+A campaign is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application. The AWS::Pinpoint::Campaign resource defines the configuration and other settings for a campaign.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Pinpoint::Campaign",
+  "Properties" : {
+      "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ WriteTreatmentResource, ... ],
+      "[ApplicationId](#cfn-pinpoint-campaign-applicationid)" : String,
+      "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : CampaignHook,
+      "[Description](#cfn-pinpoint-campaign-description)" : String,
+      "[HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent)" : Integer,
+      "[IsPaused](#cfn-pinpoint-campaign-ispaused)" : Boolean,
+      "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
+      "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
+      "[Name](#cfn-pinpoint-campaign-name)" : String,
+      "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
+      "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
+      "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
+      "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
+      "[TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription)" : String,
+      "[TreatmentName](#cfn-pinpoint-campaign-treatmentname)" : String
+    }
+}
+YAML
+Type: AWS::Pinpoint::Campaign
+Properties: 
+  [AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments): 
+    - WriteTreatmentResource
+  [ApplicationId](#cfn-pinpoint-campaign-applicationid): String
+  [CampaignHook](#cfn-pinpoint-campaign-campaignhook): 
+    CampaignHook
+  [Description](#cfn-pinpoint-campaign-description): String
+  [HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent): Integer
+  [IsPaused](#cfn-pinpoint-campaign-ispaused): Boolean
+  [Limits](#cfn-pinpoint-campaign-limits): 
+    Limits
+  [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
+    MessageConfiguration
+  [Name](#cfn-pinpoint-campaign-name): String
+  [Schedule](#cfn-pinpoint-campaign-schedule): 
+    Schedule
+  [SegmentId](#cfn-pinpoint-campaign-segmentid): String
+  [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
+  [Tags](#cfn-pinpoint-campaign-tags): Json
+  [TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription): String
+  [TreatmentName](#cfn-pinpoint-campaign-treatmentname): String
+Properties
+AdditionalTreatments 
+An array of requests that defines additional treatments for the campaign, in addition to the default treatment for the campaign.
+Required: No
+Type: List of WriteTreatmentResource
+Update requires: No interruption
+ApplicationId 
+The unique identifier for the Amazon Pinpoint application that the campaign is associated with.
+Required: Yes
+Type: String
+Update requires: Replacement
+CampaignHook 
+Specifies the AWS Lambda function to use as a code hook for a campaign.
+Required: No
+Type: CampaignHook
+Update requires: No interruption
+Description 
+A custom description of the campaign.
+Required: No
+Type: String
+Update requires: No interruption
+HoldoutPercent 
+The allocated percentage of users (segment members) who shouldn't receive messages from the campaign.
+Required: No
+Type: Integer
+Update requires: No interruption
+IsPaused 
+Specifies whether to pause the campaign. A paused campaign doesn't run unless you resume it by changing this value to false.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Limits 
+The messaging limits for the campaign.
+Required: No
+Type: Limits
+Update requires: No interruption
+MessageConfiguration 
+The message configuration settings for the campaign.
+Required: Yes
+Type: MessageConfiguration
+Update requires: No interruption
+Name 
+The name of the campaign.
+Required: Yes
+Type: String
+Update requires: No interruption
+Schedule 
+The schedule settings for the campaign.
+Required: Yes
+Type: Schedule
+Update requires: No interruption
+SegmentId 
+The unique identifier for the segment to associate with the campaign.
+Required: Yes
+Type: String
+Update requires: No interruption
+SegmentVersion 
+The version of the segment to associate with the campaign.
+Required: No
+Type: Integer
+Update requires: No interruption
+Tags 
+A string-to-string map of key-value pairs that defines the tags to associate with the campaign. Each tag consists of a required tag key and an associated tag value.
+Required: No
+Type: Json
+Update requires: No interruption
+TreatmentDescription 
+A custom description of the default treatment for the campaign.
+Required: No
+Type: String
+Update requires: No interruption
+TreatmentName 
+A custom name of the default treatment for the campaign, if the campaign has multiple treatments. A treatment is a variation of a campaign that's used for A/B testing.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns a string that combines the unique identifier (ApplicationId) for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The Amazon Resource Name (ARN) of the campaign.
+CampaignId 
+The unique identifier for the campaign.

@@ -1,0 +1,102 @@
+AWS::EC2::VPNConnection
+Specifies a VPN connection between a virtual private gateway and a VPN customer gateway or a transit gateway and a VPN customer gateway.
+To specify a VPN connection between a transit gateway and customer gateway, use the TransitGatewayId and CustomerGatewayId properties.
+To specify a VPN connection between a virtual private gateway and customer gateway, use the VpnGatewayId and CustomerGatewayId properties.
+For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::VPNConnection",
+  "Properties" : {
+      "[CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid)" : String,
+      "[StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly)" : Boolean,
+      "[Tags](#cfn-ec2-vpnconnection-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid)" : String,
+      "[Type](#cfn-ec2-vpnconnection-type)" : String,
+      "[VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid)" : String,
+      "[VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications)" : [ VpnTunnelOptionsSpecification, ... ]
+    }
+}
+YAML
+Type: AWS::EC2::VPNConnection
+Properties: 
+  [CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid): String
+  [StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly): Boolean
+  [Tags](#cfn-ec2-vpnconnection-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid): String
+  [Type](#cfn-ec2-vpnconnection-type): String
+  [VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid): String
+  [VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications): 
+    - VpnTunnelOptionsSpecification
+Properties
+CustomerGatewayId 
+The ID of the customer gateway at your end of the VPN connection.
+Required: Yes
+Type: String
+Update requires: Replacement
+StaticRoutesOnly 
+Indicates whether the VPN connection uses static routes only. Static routes must be used for devices that don't support BGP.
+If you are creating a VPN connection for a device that does not support Border Gateway Protocol (BGP), you must specify true.
+Required: No
+Type: Boolean
+Update requires: Replacement
+Tags 
+Any tags assigned to the VPN connection.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+TransitGatewayId 
+The ID of the transit gateway associated with the VPN connection.
+You must specify either TransitGatewayId or VpnGatewayId, but not both.
+Required: Conditional
+Type: String
+Update requires: Replacement
+Type 
+The type of VPN connection.
+Required: Yes
+Type: String
+Allowed values: ipsec.1
+Update requires: Replacement
+VpnGatewayId 
+The ID of the virtual private gateway at the AWS side of the VPN connection.
+You must specify either TransitGatewayId or VpnGatewayId, but not both.
+Required: Conditional
+Type: String
+Update requires: Replacement
+VpnTunnelOptionsSpecifications 
+The tunnel options for the VPN connection.
+Required: No
+Type: List of VpnTunnelOptionsSpecification
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the VPN connection.
+For more information about using the Ref function, see Ref.
+Examples
+VPN Connection
+The following example specifies a VPN connection between myVPNGateway and MyCustomerGateway.
+JSON
+"myVPNConnection" : {
+   "Type" : "AWS::EC2::VPNConnection",
+   "Properties" : {
+      "Type" : "ipsec.1",
+      "StaticRoutesOnly" : "true",
+      "CustomerGatewayId" : {"Ref" : "myCustomerGateway"},
+      "VpnGatewayId" : {"Ref" : "myVPNGateway"}
+   }
+}
+YAML
+myVPNConnection: 
+      Type: AWS::EC2::VPNConnection
+      Properties: 
+        Type: ipsec.1
+        StaticRoutesOnly: true
+        CustomerGatewayId: 
+          !Ref myCustomerGateway
+        VpnGatewayId: 
+          !Ref myVPNGateway
+See also
+
+VPNConnection in the Amazon EC2 API Reference

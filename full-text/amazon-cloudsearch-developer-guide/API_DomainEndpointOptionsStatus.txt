@@ -1,0 +1,10 @@
+DomainEndpointOptionsStatus
+Description
+The configuration and status of the domain's endpoint options.
+Contents
+Options
+The current configuration.
+Type: DomainEndpointOptions
+Status
+The status of the configuration option.
+Type: OptionStatus

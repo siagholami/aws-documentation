@@ -1,0 +1,55 @@
+Transit gateway VPN attachments
+To attach a VPN connection to your transit gateway, you must specify the customer gateway. For more information about the requirements for a customer gateway device, see Requirements for your customer gateway device in the AWS Site-to-Site VPN User Guide.
+For static VPNs, add the static routes to the transit gateway route table.
+Create a transit gateway attachment to a VPN
+To create a VPN attachment using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Attachments.
+
+
+Choose Create Transit Gateway Attachment.
+
+
+For Transit Gateway ID, choose the transit gateway for the attachment. You can choose a transit gateway that you own.
+
+
+For Attachment type, choose VPN.
+
+
+For Customer Gateway, do one of the following:
+    To use an existing customer gateway, choose Existing, and then select the gateway to use.
+If your customer gateway is behind a network address translation (NAT) device that's enabled for NAT traversal (NAT-T), use the public IP address of your NAT device, and adjust your firewall rules to unblock UDP port 4500.
+    To create a customer gateway, choose New, then for IP Address, type a static public IP address and BGP ASN.
+For Routing options, choose whether to use Dynamic or Static. For more information, see Site-to-Site VPN Routing Options in the AWS Site-to-Site VPN User Guide.
+
+
+For Tunnel Options, see Site-to-Site VPN Tunnel Options for your Site-to-Site VPN Connection in the AWS Site-to-Site VPN User Guide.
+
+
+Choose Create attachment.
+
+
+To create a VPN attachment using the AWS CLI
+Use the create-vpn-connection command.
+View your VPN attachments
+To view your VPN attachments using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+On the navigation pane, choose Transit Gateway Attachments.
+
+
+Choose the search bar, select Resource type from the menu, and then select VPN.
+
+
+The VPN attachments are displayed. Choose an attachment to view its details or to add tags.
+
+
+To view your VPN attachments using the AWS CLI
+Use the describe-transit-gateway-attachments command.

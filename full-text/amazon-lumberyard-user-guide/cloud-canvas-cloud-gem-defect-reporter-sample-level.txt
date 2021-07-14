@@ -1,0 +1,146 @@
+Using the Defect Reporter Cloud Gem Sample Level
+You can use the DefectReporterSample level that is included with Lumberyard to generate sample defect reports. The sample includes a number of preset data collection fields. For information on creating custom fields for the sample level, see Creating Custom Data Collection Fields.
+Prerequisites
+This tutorial assumes the following:
+ You have used the Project Configurator to set CloudGemDefectReportSample as your default project.
+ You used the Cloud Canvas Resource Manager or the lmbr_aws command line tool to create the following:
+   A project stack for your project.
+   A deployment for your project that has the CloudGemDefectReporter and CloudGemMetric cloud gems enabled.
+If you don't meet the prerequisites, see Choosing a Game Project to Open to set CloudGemDefectReportSample as your default project. For information on how to create a project stack and a deployment stack, see Tutorial: Getting Started with Cloud Canvas.
+Workflow Steps
+You can use the DefectReporterSample level to do the following:
+
+
+Generate report data.
+
+
+View and annotate the reports.
+
+
+Submit the reports.
+
+
+After you submit the reports, you can view them in the Using the Defect Reporter Cloud Gem Portal.
+To use the Defect Reporter cloud gem sample level
+
+
+In Lumberyard Editor, choose File, Open.
+
+
+In the Open a Level dialog box, expand Levels.
+
+
+Choose DefectReporterSample, and then click Open.
+
+
+Press CtrlG to start the level. The sample level looks similar to the following image.
+
+
+
+To generate a defect report, press F1. A status box in the lower left of the screen informs you that data collection is in progress.
+
+
+
+Data collection takes a few moments. When it is completed, the status box informs you that the report is available to view and annotate.
+
+
+
+Press F1 to generate a few more reports.
+
+
+To view and annotate the reports, click the status box or press F5. This opens the Defect Report Editor.
+
+
+
+The Defect Report Editor has the following fields:
+
+
+Metrics Data – Shows the data that was collected automatically. Use the scroll bar to see more data.
+
+
+Attachments – Lists the attachments that were captured as part of the data gathering process.
+
+
+Custom Field – Provides an area to gather custom data. You can create custom fields in the Cloud Gem Portal. For more information, see Creating Custom Data Collection Fields.
+
+
+Error Message – A text box in which you can enter information regarding the error. The box can be empty or contain a relevant error message. You can add your own comments to the box. The box holds a maximum of 180 characters.
+
+
+
+Screenshot – Shows a screenshot of the level at the time that the error occurred. 
+
+
+To switch reports, click the navigation arrows at the bottom of the editor.
+
+
+
+To manage the reports, use the buttons under the screenshot.
+
+
+
+Delete – Deletes the report.
+
+
+Cancel – Closes the report editor. If you reopen the editor, you can continue editing any reports that you have not yet submitted.
+
+
+Submit – Submits the report that is currently displayed in the editor.
+
+
+Submit All – Submits all reports in the editor.
+
+
+For this tutorial, click Submit All to submit the reports that you generated.
+
+
+The editor informs you of the success or failure of the operation. 
+
+
+
+Click Close to close the Defect Report Editor. When you have more than one issue but submit just one, the Defect Reporter remains open.
+
+
+Press ESC to stop the sample level.
+
+
+The reports are available in the Cloud Gem Portal in about 10 minutes. To accelerate the process, do one of the following:
+ 
+To use the Game Metrics Cloud Gem Portal
+
+
+From the Cloud Gem Portal, click Game Metrics.
+
+
+Click the Settings tab.
+
+
+In the Extra Actions section, click the three options Consume, Unleash Amoeba, and Crawl, in that order.
+
+
+Wait until the area under the Crawl button shows the following message:
+The AWS GLUE data crawler is READY. 
+ 
+
+
+To use the lmbr_aws command and the Game Metrics Cloud Gem Portal
+
+
+In the lumberyard_version\dev directory, enter the following command:
+lmbr_aws metric consume
+
+
+From the Cloud Gem Portal, click Game Metrics.
+
+
+Click the Settings tab.
+
+
+In the Extra Actions section, click the two options Unleash Amoeba and Crawl, in that order.
+
+
+Wait until the area under the Crawl button shows the following message:
+The AWS GLUE data crawler is READY. 
+
+
+To view and manage the reports, see the Using the Defect Reporter Cloud Gem Portal.

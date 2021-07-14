@@ -1,0 +1,20 @@
+Summary
+In this tutorial, you uploaded data files to Amazon S3 and then used COPY commands to load the data from the files into Amazon Redshift tables.
+You loaded data using the following formats:
+ Character-delimited
+ CSV
+ Fixed-width
+You used the STL_LOAD_ERRORS system table to troubleshoot load errors, and then used the REGION, MANIFEST, MAXERROR, ACCEPTINVCHARS, DATEFORMAT, and NULL AS options to resolve the errors.
+You applied the following best practices for loading data: 
+ Use a COPY command to load data
+ Split your load data into multiple files
+ Use a single COPY command to load from multiple files
+ Compress your data files
+ Use a manifest file
+ Verify data files before and after a load
+For more information about Amazon Redshift best practices, see the following links: 
+ Amazon Redshift best practices for loading data
+ Amazon Redshift best practices for designing tables 
+ Amazon Redshift best practices for designing queries 
+Next step
+For your next step, if you haven't done so already, we recommend taking Tutorial: Tuning table design. 

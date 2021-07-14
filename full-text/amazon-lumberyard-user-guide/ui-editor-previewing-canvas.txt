@@ -1,0 +1,27 @@
+Previewing Canvases
+You can preview your game UI canvas to visualize how it might look at different screen resolutions and to see how the interactive elements change states.
+Topics
+ Setting Canvas Size in Preview
+ Previewing Canvas Behavior
+The UI Editor Preview consists of the following:
+
+
+Toolbar – Tools to view the current Viewport size, Preview canvas size (selectable), and Canvas scale.
+
+
+Viewport – Display of the UI canvas as it would appear at the selected resolution. 
+
+
+Animation List – List of the animation sequences in the canvas, which you can control using the playback toolbar. Close this pane to increase the viewport size. Use the View menu to restore it.
+
+
+Action Log – Record of actions triggered by the canvas's interactable elements. Close this pane to increase the viewport size. Use the View menu to restore it.
+
+
+
+To open UI canvas *Preview*
+Do one of the following:
+ From the UI Editor toolbar, click Preview.
+ From the UI Editor menu, click Preview, Preview.
+ Press CtrlP.
+To exit the canvas preview, click End Preview.

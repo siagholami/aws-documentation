@@ -1,0 +1,13 @@
+Examples
+The following are examples of this object type.
+Topics
+ Launch an Amazon EMR cluster with hadoopVersion
+ Launch an Amazon EMR cluster with release label emr-4.x or greater
+ Install additional software on your Amazon EMR cluster
+ Disable server-side encryption on 3.x releases
+ Disable server-side encryption on 4.x releases
+ Configure Hadoop KMS ACLs and create encryption zones in HDFS
+ Specify custom IAM roles
+ Use EmrCluster Resource in AWS SDK for Java
+ Configure an Amazon EMR cluster in a private subnet
+ Attach EBS volumes to cluster nodes

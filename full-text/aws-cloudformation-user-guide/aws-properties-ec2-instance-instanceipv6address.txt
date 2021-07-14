@@ -1,0 +1,17 @@
+AWS::EC2::Instance InstanceIpv6Address
+Specifies the IPv6 address for the instance.
+InstanceIpv6Address is a property of the AWS::EC2::Instance resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Ipv6Address](#cfn-ec2-instance-instanceipv6address-ipv6address)" : String
+}
+YAML
+[Ipv6Address](#cfn-ec2-instance-instanceipv6address-ipv6address): String
+Properties
+Ipv6Address 
+The IPv6 address.
+Required: Yes
+Type: String
+Update requires: No interruption

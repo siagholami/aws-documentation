@@ -1,0 +1,16 @@
+Setting Up a PowerShell Development Environment
+To set up your development environment for writing PowerShell scripts, do the following:
+
+
+Install the correct version of PowerShell – Lambda's support for PowerShell is based on the cross-platform PowerShell Core 6.0 release. This means that you can develop your PowerShell Lambda functions on Windows, Linux, or Mac. If you don’t have this version of PowerShell installed, you can find instructions in Installing PowerShell Core.
+
+
+Install the .NET Core 3.1 SDK – Because PowerShell Core is built on top of .NET Core, the Lambda support for PowerShell uses the same .NET Core 3.1 Lambda runtime for both .NET Core and PowerShell Lambda functions. The .NET Core 3.1 SDK is used by the new Lambda PowerShell publishing cmdlets to create the Lambda deployment package. The .NET Core 3.1 SDK is available at .NET downloads on the Microsoft website. Be sure to install the SDK and not the runtime installation.
+
+
+Install the AWSLambdaPSCore module – You can install this either from the  PowerShell Gallery, or you can install it by using the following PowerShell Core shell command:
+
+
+Install-Module AWSLambdaPSCore -Scope CurrentUser
+
+(Optional) Install AWS Tools for PowerShell – You can install either the modularized AWS.Tools or single-module AWSPowerShell.NetCore version in PowerShell Core 6.0 to use the Lambda API within your PowerShell environment\. For instructions, see Installing the AWS Tools for PowerShell

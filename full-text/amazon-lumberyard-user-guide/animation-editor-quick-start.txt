@@ -1,0 +1,222 @@
+Getting Started with the Animation Editor
+
+This feature is in preview release and is subject to change. 
+See the following procedures to get started with the Animation Editor. 
+In this procedure, you do the following:
+ Import your actor file and create a motion set to specify the motions that you want for your character.
+ Create a basic animation graph using nodes.
+ Create a blend tree to combine the motions and use a slider to control character movement from idle to walking and then running.
+You can use the Samples Project to find the files used in this procedure. For more information, see Samples Project. 
+The files for this procedure are located in the following directory: 
+lumberyard_version\dev\SamplesProject\AnimationSamples\Simple_JackLocomotion
+Topics
+ Step 1: Creating a Motion Set
+ Step 2: Creating an Animation Graph
+ Step 3: Blending the Animations
+Step 1: Creating a Motion Set
+In the following procedure, you import your character, Jack the robot, select the motions that you want, and then add those motions to a motion set. 
+To create a motion set
+
+
+In Lumberyard Editor, choose Tools, Animation Editor. 
+
+
+In Animation Editor, choose Layouts, AnimGraph. 
+
+
+In the Animation Editor, choose File, Open Actor and navigate to the AnimationSamples\Simple_JackLocomotion directory.
+
+
+Select the JackBind_ZUp.fbx file and then click OK. 
+
+
+Your character Jack appears in the Animation Editor.
+
+
+
+On the Motion Sets tab, under Motion Set Management, click the  icon to add a motion set.
+
+
+Select the MotionSet0 node.
+
+
+In the Motion Set pane, click the folder icon to add motions.
+
+
+Navigate to the AnimationSamples/Simple_JackLocomotion directory, and select the following files:
+    Jack_Idle_ZUp.fbx
+    Jack_Strafe_Run_Forwards_ZUp.fbx
+    Jack_Strafe_Walk_Forwards_ZUp.fbx
+
+
+Click OK.
+
+
+In the Motion Set Management pane, click the Save icon.
+
+
+Navigate to the /SamplesProject/AnimationSamples/Simple_JackLocomotion directory. For the file name, type quickstart and then click Save to save the quickstart.motionset file.
+
+
+
+Step 2: Creating an Animation Graph
+In the following procedure, create an animation graph and nodes. 
+To create an animation graph
+
+
+On the Anim Graph tab, click the  icon to create an animation graph.
+
+
+Click the Save icon. 
+
+
+Navigate to the /SamplesProject/AnimationSamples/Simple_JackLocomotion directory. For the file name, enter quickstart and then click Save to save the quickstart.animgraph file.
+
+
+On the Anim Graph tab, right-click the grid, and then select Create Node, Sources, Motion.
+
+
+
+Select the Motion0 node and in the Attributes pane, click Select motions. In the dialog box, select Jack_Idle_ZUp.fbx and then choose OK.
+
+
+Right-click the grid and then choose Create Node, Sources, Blend Tree.
+
+
+From the Motion0 node, click and drag a line to the BlendTree0 node. A transition line with an arrow connects the nodes.
+
+
+From the BlendTree0 node, click and drag a line to the Motion0 node. 
+
+
+
+In the Parameters pane, click the  icon to create a parameter.
+
+
+Leave the Value type parameter to the default, Float (slider).
+
+
+For Name, rename Parameter0 to speed.
+
+
+Click Create.
+
+
+In the animation graph, select the transition line that starts from the Motion0 node and connects to the BlendTree0 node.
+
+
+In the Attributes pane, click Add condition. 
+
+
+In the Select a Condition dialog box, select Parameter Condition and then click Add Condition. 
+
+
+In the Attributes pane, under Parameter Condition, click Select parameter and select speed. 
+
+
+For Test Function, leave the default value of param > testValue. This means that if the speed is greater than zero, the idle motion transitions to the blend tree, and the character starts to move. 
+
+
+
+In the animation graph, select the transition line that starts from the BlendTree0 node and connects to the Motion0 node. 
+
+
+In the Attributes pane, click Add condition.
+
+
+In the Select a Condition dialog box, select Parameter Condition and then click Add Condition.
+
+
+In the Attributes pane, under Parameter Condition, click Select parameter. Select speed and then click OK.
+
+
+For Test Function, select param == testValue. This means that if the speed is equal to zero, the motion transitions back to idle, and the character stops moving.
+
+
+
+Step 3: Blending the Animations
+In the following procedure, you use the blend tree node to build your blend tree, which blends the walk and run animations together.
+To blend the animations
+
+
+In the animation graph, double-click the BlendTree0 node.
+
+
+Right-click the grid and choose Create Node, Sources, Motion. 
+
+
+Select the Motion1 node. 
+
+
+In the Attributes pane, choose Select motions. 
+
+
+In the Motion Selection Window, select jack_strafe_walk_forwards_zup and then click OK.
+The attributes for the Motion1 node should look like this:
+
+
+
+In the animation graph, right-click the grid and choose Create Node, Sources, Motion. 
+
+
+Select the Motion2 node.
+
+
+In the Attributes pane, click Select motions. 
+
+
+In the dialog box, select jack_strafe_run_forwards_zup and then click OK.
+The attributes for the Motion2 node should look like this:
+
+
+
+Right-click the grid and choose Create Node, Blending, Blend Two. 
+
+
+Select the BlendTwo0 node.
+
+
+In the Attributes pane, for Sync Mode, select Full Clip Based.
+
+
+For Motion1 node, select the Output Pose box and drag the connector to the Pose 1 input of the BlendTwo0 node.
+
+
+For Motion2 node, select the Output Pose box and drag the connector to the Pose 2 input of the BlendTwo0 node.
+
+
+For the BlendTwo0 node, select the Output Pose box and drag the connector to the Input Pose of the FinalNode0 node.
+
+
+Your blend tree should look like the following:
+
+
+
+Right-click the grid and choose Create Node, Sources, Parameters.
+
+
+Right-click the grid and choose Create Node, Math, Smoothing.
+
+
+For Parameters0 node, select the speed output box and drag the connector to the Dest input box of the Smoothing0 node.
+
+
+For the Smoothing0 node, select the Result output box and drag the connector to the Weight input box of the BlendTwo0 node.
+
+
+Your blend tree should look like the following:
+
+
+
+In the Animation Editor, choose File, Save All. Then in the dialog box, click OK.
+
+
+Navigate to the /SamplesProject/AnimationSamples/Simple_JackLocomotion directory. For the file name, enter quickstart and then click Save to save the workspace.
+
+
+In the Anim Graph tab, click the Play button. The character should now be animated in the idle mode.
+
+
+In the Parameters pane, move the speed slide control to the right to make Jack walk. Move the slider further to the right to make Jack run. 
+
+

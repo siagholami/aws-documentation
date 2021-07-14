@@ -1,0 +1,39 @@
+Update polling pipelines to the recommended change detection method
+If you have a pipeline that uses polling to react to source changes, you can update it to use the recommended detection method (webhooks for pipelines with a GitHub source and Amazon CloudWatch Events for pipelines with a CodeCommit or Amazon S3 source).
+
+
+
+How to migrate pipelines to the recommended change detection method
+Source
+Recommended detection method
+Console
+CLI
+AWS CloudFormation
+
+
+
+
+Amazon S3
+Amazon CloudWatch Events (recommended) and an AWS CloudTrail trail.
+See Update pipelines for push events (CodeCommit or Amazon S3 source) (console).
+See Update pipelines for push events (Amazon S3 source) (CLI).
+See Update pipelines for push events (Amazon S3 source) (AWS CloudFormation template).
+
+
+
+AWS CodeCommit
+Amazon CloudWatch Events (recommended).
+See Update pipelines for push events (CodeCommit or Amazon S3 source) (console).
+See Update pipelines for push events (CodeCommit source) (CLI).
+See Update pipelines for push events (CodeCommit source) (AWS CloudFormation template).
+
+
+
+GitHub
+Webhooks (recommended).[See the AWS documentation website for more details]
+See Update pipelines for push events (GitHub source) (console).
+See Update pipelines for push events (GitHub source) (CLI).
+See Update pipelines for push events (GitHub source) (AWS CloudFormation template).
+
+
+

@@ -1,0 +1,54 @@
+Enable Frost
+Display spots of frost on the screen.
+To disable the effect, see Disable Frost.
+Contents
+ Inputs
+ Outputs
+
+Example 
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Amount
+Number
+Amount of frost. Default value: 0
+
+
+Center Amount
+Number
+Amount of frost at the center of the screen. Default value: 1
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

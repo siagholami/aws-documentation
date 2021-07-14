@@ -1,0 +1,9 @@
+Working with files in AWS CodeCommit repositories
+In CodeCommit, a file is a version-controlled, self-contained piece of information available to you and other users of the repository and branch where the file is stored. You can organize your repository files with a directory structure, just as you would on a computer. Unlike your computer, CodeCommit automatically tracks every change to a file. You can compare versions of a file and store different versions of a file in different repository branches.
+To add or edit a file in a repository, you can use a Git client. You can also use the CodeCommit console, the AWS CLI, or the CodeCommit API.
+
+For information about working with other aspects of your repository in CodeCommit, see Working with repositories, Working with pull requests, Working with branches, Working with commits, and Working with user preferences. 
+Topics
+ Browse files in an AWS CodeCommit repository
+ Create or add a file to an AWS CodeCommit repository
+ Edit the contents of a file in an AWS CodeCommit repository

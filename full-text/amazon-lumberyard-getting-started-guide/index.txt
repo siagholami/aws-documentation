@@ -1,0 +1,118 @@
+Lumberyard Getting Started Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+Introduction to Lumberyard Editor
+1: Understanding the Lumberyard Interface
+Identifying the Basic Tools
+1: Main Menu
+2: Top Toolbar
+3: Entity Outliner
+4: Asset Browser
+5a: Perspective Viewport
+5b: Perspective Header
+5c: Bottom Toolbar
+6: Entity Inspector
+7: Console
+
+
+Navigating in the Viewport
+Manipulating Objects
+Selecting an Object
+Moving an Object
+Snapping to Grid
+
+
+Rotating an Object
+Snapping to Angle
+
+
+Scaling an Object
+
+
+Configuring Auto Backup
+2: Building the Environment
+Creating a Level
+Importing a Heightmap
+Importing a Megaterrain Texture
+Placing the Player Character
+3: Gathering Your Building Blocks
+Creating an Entity
+Adding a Mesh Component
+Adding Collider and Physics Components
+Using the Asset Browser to Create an Entity
+Duplicating an Entity
+Parenting Entities
+4: Using Slices to Build the Maze
+Creating a Doorway Slice
+Instantiating Prebuilt Slices
+Aligning the Slices
+Locking Wall and Doorway Slices
+Placing Lamp Post Slices
+Saving Slice Changes
+5: Adding Enemy AI Characters
+Setting up the AI Trigger Area
+Defining the AI Navigation Area
+Creating AI Spawn Points
+Adding Patrol Waypoints
+Adding a Second AI Character
+Organizing Your AI Entities
+Adding the Particle Manager
+6: Scripting Gameplay
+Adding the Entry Door
+Placing the Door Entity
+Adding Physics and Mesh Collider Components
+Creating the Trigger Volume
+Adding Open and Close Scripts
+Defining the Door as the Target
+Adding Door Sounds
+
+
+Adding the Exit Door
+Duplicating and Renaming the Door Entity
+Modifying Conditions to Open Exit Door
+Creating a New Trigger Area
+
+
+Adding a Pickup Item
+Adding a Timer
+Creating the Timer Parent and Child Entities
+Adding Components to TimerStart
+Adding Lua Script Components
+Adding and Configuring the Timer's Stop Trigger
+
+
+7: Applying Physics to Stacked Crates
+Placing Crates and Configuring Physics
+Stacking the Crates and Barrels to Make a Wall
+8: Sculpting the Terrain
+Creating Texture Layers
+Painting Pavement, Grass, Dirt, and Rocks
+Drawing a Road
+Placing Trees
+Adding Shrubs and Grass
+Inserting Rocks and Undergrowth
+Customizing Your Landscape (Optional)
+9: Enhancing Your Level with Details
+Adding Decals to the Maze
+Using the Particle System to Add Steam
+Adding Ambient Particles
+Adding a Distance Mesh
+10: Lighting the Environment
+Placing a Global Environment Probe
+Changing the Time of Day
+Creating a Light Source
+11: Setting Up the UI
+12: Exporting Your Game
+Accessing Documentation
+Contacting Support

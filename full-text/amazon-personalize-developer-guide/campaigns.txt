@@ -1,0 +1,33 @@
+Creating a Campaign
+A campaign is used to make recommendations for your users. You create a campaign by deploying a solution version. For an example using the AWS CLI, see Step 3: Create a Campaign (Deploy the Solution).
+To create a campaign with the SDK, call the CreateCampaign API and pass the following:
+ A name for the campaign.
+ The Amazon Resource Name (ARN) of the solution version to deploy.
+ The minimum provisioned transactions per second (minProvisionedTPS) that Amazon Personalize will support. For more information on minProvisionedTPS, see the CreateCampaign API.
+Create a campaign using the AWS Python SDK
+
+
+Create a solution version to deploy. For more information, see Creating a Solution.
+
+
+Use the following code to create a campaign for a solution version trained using the User-Personalization recipe with the optional default explorationWeight and explorationItemAgeCutOff for itemExplorationConfig. For more information, see User-Personalization
+
+
+```
+   import boto3
+personalize = boto3.client('personalize')
+create_campaign_response = personalize.create_campaign(
+       name = 'campaign name',
+       solutionVersionArn = 'solution version arn',
+       minProvisionedTPS = 1,
+       campaignConfig = {"itemExplorationConfig": {"explorationWeight": "0.3", "explorationItemAgeCutOff": "30"}}
+   )
+arn = response['campaignArn']
+description = personalize.describe_campaign(campaignArn = arn)['campaign']
+   print('Name: '  description['name'])
+   print('ARN: '  description['campaignArn'])
+   print('Status: '  description['status'])
+   ```
+The campaign isn't ready for use until its status is active. To get the current status, call DescribeCampaign and check that the status field is ACTIVE.
+Amazon Personalize provides operations for managing campaigns such as ListCampaigns to list the campaigns you have created. You can delete a campaign by calling DeleteCampaign. If you delete a campaign, the solution versions that are part of the campaign are not deleted.
+After you have created your campaign, use it to make recommendations. For more information, see Getting Recommendations.

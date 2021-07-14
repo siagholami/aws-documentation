@@ -1,0 +1,14 @@
+Automatically Scale Amazon SageMaker Models
+Amazon SageMaker supports automatic scaling (autoscaling) for your hosted models. Autoscaling dynamically adjusts the number of instances provisioned for a model in response to changes in your workload. When the workload increases, autoscaling brings more instances online. When the workload decreases, autoscaling removes unnecessary instances so that you don't pay for provisioned instances that you aren't using.
+Topics
+ Prerequisites
+ Configure model autoscaling with the console
+ Register a model
+ Define a scaling policy
+ Apply a scaling policy
+ Edit a scaling policy
+ Delete a scaling policy
+ Query Endpoint Autoscaling History
+ Update or delete endpoints that use automatic scaling
+ Load testing your autoscaling configuration
+ Use AWS CloudFormation to update autoscaling policies

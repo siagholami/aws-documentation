@@ -1,0 +1,34 @@
+AWS::DLM::LifecyclePolicy RetainRule
+Specifies the retention rule for a lifecycle policy. You can retain snapshots based on either a count or a time interval.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Count](#cfn-dlm-lifecyclepolicy-retainrule-count)" : Integer,
+  "[Interval](#cfn-dlm-lifecyclepolicy-retainrule-interval)" : Integer,
+  "[IntervalUnit](#cfn-dlm-lifecyclepolicy-retainrule-intervalunit)" : String
+}
+YAML
+[Count](#cfn-dlm-lifecyclepolicy-retainrule-count): Integer
+  [Interval](#cfn-dlm-lifecyclepolicy-retainrule-interval): Integer
+  [IntervalUnit](#cfn-dlm-lifecyclepolicy-retainrule-intervalunit): String
+Properties
+Count 
+The number of snapshots to retain for each volume, up to a maximum of 1000.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 1000
+Update requires: No interruption
+Interval 
+The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+Required: No
+Type: Integer
+Minimum: 1
+Update requires: No interruption
+IntervalUnit 
+The unit of time for time-based retention.
+Required: No
+Type: String
+Allowed values: DAYS | MONTHS | WEEKS | YEARS
+Update requires: No interruption

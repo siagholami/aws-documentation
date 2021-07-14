@@ -1,0 +1,12 @@
+View a CTR in the UI
+
+
+Do a contact search. A list of contact IDs will be returned.
+
+
+Choose an ID to view the CTR for the contact.
+
+
+The following image shows part of a CTR in the UI, for a chat conversation. Note the following:
+ For chats, the initiation method is always API.
+ The chat transcript is visible in the UI.

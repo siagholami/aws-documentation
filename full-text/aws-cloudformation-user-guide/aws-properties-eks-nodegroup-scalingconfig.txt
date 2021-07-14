@@ -1,0 +1,33 @@
+AWS::EKS::Nodegroup ScalingConfig
+An object representing the scaling configuration details for the Auto Scaling group that is associated with your node group. If you specify a value for any property, then you must specify values for all of the properties.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DesiredSize](#cfn-eks-nodegroup-scalingconfig-desiredsize)" : Double,
+  "[MaxSize](#cfn-eks-nodegroup-scalingconfig-maxsize)" : Double,
+  "[MinSize](#cfn-eks-nodegroup-scalingconfig-minsize)" : Double
+}
+YAML
+[DesiredSize](#cfn-eks-nodegroup-scalingconfig-desiredsize): Double
+  [MaxSize](#cfn-eks-nodegroup-scalingconfig-maxsize): Double
+  [MinSize](#cfn-eks-nodegroup-scalingconfig-minsize): Double
+Properties
+DesiredSize 
+The current number of worker nodes that the managed node group should maintain.
+Required: No
+Type: Double
+Minimum: 1
+Update requires: No interruption
+MaxSize 
+The maximum number of worker nodes that the managed node group can scale out to. Managed node groups can support up to 100 nodes by default.
+Required: No
+Type: Double
+Minimum: 1
+Update requires: No interruption
+MinSize 
+The minimum number of worker nodes that the managed node group can scale in to. This number must be greater than zero.
+Required: No
+Type: Double
+Minimum: 1
+Update requires: No interruption

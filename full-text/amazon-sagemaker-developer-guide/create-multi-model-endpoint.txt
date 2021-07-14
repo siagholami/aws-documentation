@@ -1,0 +1,5 @@
+Create a Multi-Model Endpoint
+You can use AWS SDK for Python (Boto) or Amazon SageMaker to create a multi-model endpoint.
+Topics
+ Create a Multi-Model Endpoint (AWS SDK for Python (Boto))
+ Create a Multi-Model Endpoint (Console)

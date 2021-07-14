@@ -1,0 +1,206 @@
+Amazon S3 Glacier API Permissions: Actions, Resources, and Conditions Reference
+When you are setting up Access Control and writing a permissions policy that you can attach to an IAM identity (identity-based policies) or a resource (resource-based policies), you can use the following table as a reference. The table lists each S3 Glacier API operation, the corresponding actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions.
+You specify the actions in the policy's Action element, and you specify the resource value in the policy's Resource element. Also, you can use the IAM policy language Condition element to specify when a policy should take effect.
+To specify an action, use the glacier: prefix followed by the API operation name (for example, glacier:CreateVault). For most S3 Glacier actions, Resource is the vault on which you want to grant the permissions. You specify a vault as the Resource value by using the vault ARN. To express conditions, you use predefined condition keys. For more information, see Overview of Managing Access Permissions to Your Amazon S3 Glacier Resources.
+The following table lists actions that can be used with identity-based policies and resource-based policies. 
+Note
+Some actions can only be used with identity-based policies. These actions are marked by a red asterisk (*) after the name of the API operation in the first column.
+Use the scroll bars to see the rest of the table.
+Amazon S3 Glacier API and Required Permissions for Actions 
+
+
+
+S3 Glacier API Operations
+Required Permissions (API Actions)
+Resources
+Condition Keys
+
+
+
+
+Abort Multipart Upload (DELETE uploadID)
+glacier:AbortMultipartUpload
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Abort Vault Lock (DELETE lock-policy)
+glacier:AbortVaultLock
+
+
+
+
+Add Tags To Vault (POST tags add)
+glacier:AddTagsToVault
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Complete Multipart Upload (POST uploadID)
+glacier:CompleteMultipartUpload
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Complete Vault Lock (POST lockId)
+glacier:CompleteVaultLock
+
+glacier:ResourceTag/TagKey
+
+
+Create Vault (PUT vault) *
+glacier:CreateVault
+
+
+
+
+Delete Archive (DELETE archive)
+glacier:DeleteArchive
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ArchiveAgeInDays glacier:ResourceTag/TagKey
+
+
+Delete Vault (DELETE vault)
+glacier:DeleteVault
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Delete Vault Access Policy (DELETE access-policy)
+glacier:DeleteVaultAccessPolicy
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Delete Vault Notifications (DELETE notification-configuration)
+glacier:DeleteVaultNotifications
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Describe Job (GET JobID)
+glacier:DescribeJob
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Describe Vault (GET vault)
+glacier:DescribeVault
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Get Data Retrieval Policy (GET policy) *
+glacier:GetDataRetrievalPolicy
+arn:aws:glacier:region:account-id:policies/retrieval-limit-policy
+
+
+
+Get Job Output (GET output)
+glacier:GetJobOutput
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Get Vault Access Policy (GET access-policy)
+glacier:GetVaultAccessPolicy
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Get Vault Lock (GET lock-policy)
+glacier:GetVaultLock
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Get Vault Notifications (GET notification-configuration)
+glacier:GetVaultNotifications
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+Initiate Job (POST jobs)
+glacier:InitiateJob
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ArchiveAgeInDays glacier:ResourceTag/TagKey
+
+
+Initiate Multipart Upload (POST multipart-uploads)
+glacier:InitiateMultipartUpload
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Initiate Vault Lock (POST lock-policy)
+glacier:InitiateVaultLock
+
+glacier:ResourceTag/TagKey
+
+
+List Jobs (GET jobs)
+glacier:ListJobs
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+List Multipart Uploads (GET multipart-uploads)
+glacier:ListMultipartUploads
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+List Parts (GET uploadID)
+glacier:ListParts
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+List Tags For Vault (GET tags)
+glacier:ListTagsForVault
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+
+
+
+List Vaults (GET vaults)
+glacier:ListVaults
+
+
+
+
+Remove Tags From Vault (POST tags remove)
+glacier:RemoveTagsFromVault
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Set Data Retrieval Policy (PUT policy) *
+glacier:SetDataRetrievalPolicy
+arn:aws:glacier:region:account-id:policies/retrieval-limit-policy
+
+
+
+Set Vault Access Policy (PUT access-policy)
+glacier:SetVaultAccessPolicy
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Set Vault Notification Configuration (PUT notification-configuration)
+glacier:SetVaultNotifications
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Upload Archive (POST archive)
+glacier:UploadArchive
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+
+Upload Part (PUT uploadID)
+glacier:UploadMultipartPart
+arn:aws:glacier:region:account-id:vaults/vault-name arn:aws:glacier:region:account-id:vaults/example* arn:aws:glacier:region:account-id:vaults/*
+glacier:ResourceTag/TagKey
+
+

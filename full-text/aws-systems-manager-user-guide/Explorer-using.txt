@@ -1,0 +1,7 @@
+Using Systems Manager Explorer
+This section includes information about how to customize Systems Manager Explorer by changing the widget layout and by changing the data that displays in the dashboard.
+Topics
+ Editing default rules for OpsItems
+ Editing Systems Manager Explorer data sources
+ Customizing the display and using filters
+ Deleting a Systems Manager Explorer Resource Data Sync

@@ -1,0 +1,30 @@
+AWS::GameLift::MatchmakingConfiguration GameProperty
+A set of key-value pairs that contain information about a game session. When included in a game session request, these properties communicate details to be used when setting up the new game session. For example, a property might specify a game mode, level, or map. Game properties are passed to the game server process when initiating a new game session. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-gamelift-matchmakingconfiguration-gameproperty-key)" : String,
+  "[Value](#cfn-gamelift-matchmakingconfiguration-gameproperty-value)" : String
+}
+YAML
+[Key](#cfn-gamelift-matchmakingconfiguration-gameproperty-key): String
+  [Value](#cfn-gamelift-matchmakingconfiguration-gameproperty-value): String
+Properties
+Key 
+The game property identifier.
+Required: Yes
+Type: String
+Maximum: 32
+Update requires: No interruption
+Value 
+The game property value.
+Required: Yes
+Type: String
+Maximum: 96
+Update requires: No interruption
+See also
+
+ Create GameLift Resources Using AWS CloudFormation in the Amazon GameLift Developer Guide
+Design a FlexMatch Matchmaker in the Amazon GameLift Developer Guide 
+GameProperty in the Amazon GameLift API Reference 

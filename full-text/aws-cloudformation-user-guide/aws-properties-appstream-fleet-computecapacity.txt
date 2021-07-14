@@ -1,0 +1,16 @@
+AWS::AppStream::Fleet ComputeCapacity
+The desired capacity for a fleet.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances)" : Integer
+}
+YAML
+[DesiredInstances](#cfn-appstream-fleet-computecapacity-desiredinstances): Integer
+Properties
+DesiredInstances 
+The desired number of streaming instances.
+Required: Yes
+Type: Integer
+Update requires: No interruption

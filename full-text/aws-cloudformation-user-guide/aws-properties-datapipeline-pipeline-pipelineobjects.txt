@@ -1,0 +1,37 @@
+AWS::DataPipeline::Pipeline PipelineObject
+PipelineObject is property of the AWS::DataPipeline::Pipeline resource that contains information about a pipeline object. This can be a logical, physical, or physical attempt pipeline object. The complete set of components of a pipeline defines the pipeline.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields)" : [ Field, ... ],
+  "[Id](#cfn-datapipeline-pipeline-pipelineobjects-id)" : String,
+  "[Name](#cfn-datapipeline-pipeline-pipelineobjects-name)" : String
+}
+YAML
+[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields): 
+    - Field
+  [Id](#cfn-datapipeline-pipeline-pipelineobjects-id): String
+  [Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
+Properties
+Fields 
+Key-value pairs that define the properties of the object.
+Required: Yes
+Type: List of Field
+Update requires: No interruption
+Id 
+The ID of the object.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1024
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*
+Update requires: No interruption
+Name 
+The name of the object.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1024
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*
+Update requires: No interruption

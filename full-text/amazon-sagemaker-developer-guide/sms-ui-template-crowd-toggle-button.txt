@@ -1,0 +1,48 @@
+crowd-toggle-button
+A button that acts as an ON/OFF switch, toggling a state. The following example shows different ways you can use to use the <crowd-toggle-button> HTML element. Copy the following code and save it in a file with the extenion .html. Open the file in any browser to preview and interact with this template. 
+```
+
+Toggle button without value
+
+Toggle button with value
+
+Toggle button disabled
+
+Toggle button marked invalid
+
+Toggle button marked required
+
+
+```
+Attributes
+The following attributes are supported by this element.
+checked
+A Boolean switch that, if present, displays the button switched to the ON position.
+disabled
+A Boolean switch that, if present, displays the button as disabled and prevents toggling.
+invalid
+When in an off position, a button using this attribute, will display in an alert color. The standard is red, but may be changed in CSS. When toggled on, the button will display in the same color as other buttons in the on position.
+name
+A string that is used to identify the answer submitted by the worker. This value matches a key in the JSON object that specifies the answer.
+required
+A Boolean switch that, if present, requires the worker to provide input.
+value
+A value used in the output as the property name for the element's Boolean state. Defaults to "on" if not provided.
+Element Hierarchy
+This element has the following parent and child elements.
+ Parent elements: crowd-form
+ Child elements: none
+Output
+This element outputs the name as the name of an object, containing the value as a property name and the element's state as Boolean value for the property. If no value for the element is specified, the property name defaults to "on."
+Example Sample output for this element 
+[
+  {
+    "theToggler": {
+      "on": true
+    }
+  }
+]
+See Also
+For more information, see the following.
+ Use Amazon SageMaker Ground Truth to Label Data
+ Crowd HTML Elements Reference

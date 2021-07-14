@@ -1,0 +1,2 @@
+Using the NoSQL Workbench for DynamoDB
+You can also access DynamoDB, by downloading and using the NoSQL Workbench for DynamoDB GUI Client.

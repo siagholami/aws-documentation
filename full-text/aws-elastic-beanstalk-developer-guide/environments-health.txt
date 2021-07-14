@@ -1,0 +1,10 @@
+Monitoring an environment
+When you are running a production website, it is important to know that your application is available and responding to requests. To assist with monitoring your application’s responsiveness, Elastic Beanstalk provides features that monitor statistics about your application and create alerts that trigger when thresholds are exceeded.
+Topics
+ Monitoring environment health in the AWS management console
+ Basic health reporting
+ Enhanced health reporting and monitoring
+ Manage alarms
+ Viewing an Elastic Beanstalk environment's event stream
+ Listing and connecting to server instances
+ Viewing logs from Amazon EC2 instances in your Elastic Beanstalk environment

@@ -1,0 +1,13 @@
+ALTER DATABASE SET DBPROPERTIES
+Creates one or more properties for a database. The use of DATABASE and SCHEMA are interchangeable; they mean the same thing.
+Synopsis
+ALTER (DATABASE|SCHEMA) database_name
+  SET DBPROPERTIES ('property_name'='property_value' [, ...] )
+Parameters
+SET DBPROPERTIES ('property_name'='property_value' [, ...]
+Specifies a property or properties for the database named property_name and establishes the value for each of the properties respectively as property_value. If property_name already exists, the old value is overwritten with property_value.
+Examples
+ALTER DATABASE jd_datasets
+  SET DBPROPERTIES ('creator'='John Doe', 'department'='applied mathematics');
+ALTER SCHEMA jd_datasets
+  SET DBPROPERTIES ('creator'='Jane Doe');

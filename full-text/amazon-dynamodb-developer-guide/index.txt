@@ -1,0 +1,630 @@
+Amazon DynamoDB Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon DynamoDB?
+Amazon DynamoDB: How It Works
+Core Components of Amazon DynamoDB
+DynamoDB API
+Naming Rules and Data Types
+Read Consistency
+Read/Write Capacity Mode
+Partitions and Data Distribution
+
+
+From SQL to NoSQL
+Relational (SQL) or NoSQL?
+Characteristics of Databases
+Creating a Table
+Getting Information About a Table
+Writing Data to a Table
+Key Differences When Reading Data from a Table
+Reading an Item Using Its Primary Key
+Querying a Table
+Scanning a Table
+
+
+Managing Indexes
+Creating an Index
+Querying and Scanning an Index
+
+
+Modifying Data in a Table
+Deleting Data from a Table
+Removing a Table
+
+
+Additional Amazon DynamoDB Resources
+Setting Up DynamoDB
+Setting Up DynamoDB Local (Downloadable Version)
+Deploying DynamoDB Locally on Your Computer
+DynamoDB Local Usage Notes
+
+
+Setting Up DynamoDB (Web Service)
+Accessing DynamoDB
+Using the Console
+Working with User Preferences
+
+
+Using the AWS CLI
+Using the API
+Using the NoSQL Workbench for DynamoDB
+IP Address Ranges
+Getting Started with DynamoDB
+Basic Concepts in DynamoDB
+Prerequisites - Getting Started Tutorial
+Step 1: Create a Table
+Step 2: Write Data to a Table Using the Console or AWS CLI
+Step 3: Read Data from a Table
+Step 4: Update Data in a Table
+Step 5: Query Data in a Table
+Step 6: Create a Global Secondary Index
+Step 7: Query the Global Secondary Index
+Step 8: (Optional) Clean Up Resources
+Getting Started with DynamoDB: Next Steps
+Getting Started with DynamoDB and AWS SDKs
+Getting Started with Java and DynamoDB
+Step 1: Create a Table using Java and DynamoDB
+Step 2: Load Sample Data with Java and DynamoDB
+Step 3: Create, Read, Update, and Delete an Item
+Step 4: Query and Scan the Data
+Step 5: (Optional) Delete the Table
+Summary
+
+
+Getting Started with JavaScript and DynamoDB
+Step 1: Create a DynamoDB Table with JavaScript
+Step 2: Load Sample Data with JavaScript into DynamoDB
+Step 3: Create, Read, Update, and Delete an Item
+Step 4: Query and Scan the Data with JavaScript and DynamoDB
+Step 5: Delete the Table with JavaScript
+Summary and Review of JavaScript and DynamoDB Tutorial
+
+
+Getting Started with Node.js and DynamoDB
+Step 1: Create a Table with in DynamoDB with AWS SDK for JavaScript
+Step 2: Load Sample Data in DynamoDB with AWS SDK for JavaScript
+Step 3: Create, Read, Update, and Delete an Item
+Step 4: Query and Scan Data with AWS SDK for JavaScript in DynamoDB
+Step 5: (Optional): Delete the Table using AWS SDK for JavaScript
+Summary
+
+
+Getting Started with .NET and DynamoDB
+.NET and DynamoDB Tutorial Prerequisites
+Step 1: Create a DynamoDB Client
+Step 2: Create a DynamoDB Table Using the Low-Level API
+Step 3: Load Sample Data into the DynamoDB Table
+Step 4: Add a Movie to the DynamoDB Table
+Step 5: Read and Display a Record from the DynamoDB Table
+Step 6: Update the New Movie Record in the DynamoDB Table
+Step 7: Conditionally Delete
+Step 8: Query a DynamoDB Table with .NET
+Step 9: Scan the Movies Table with .NET
+Step 10: Delete the Movies Table with .NET
+
+
+PHP and DynamoDB
+Step 1: Create a Table
+Step 2: Load Sample Data
+Step 3: Create, Read, Update, and Delete an Item
+Step 4: Query and Scan the Data
+Step 5: (Optional) Delete the Table
+Summary
+
+
+Getting Started Developing with Python and DynamoDB
+Step 1: Create a Table with Python
+Step 2: Load Sample Data
+Step 3: Create, Read, Update, and Delete an Item with Python
+Step 4: Query and Scan the Data
+Step 5: (Optional) Delete the Table
+Summary
+
+
+Ruby and DynamoDB
+Step 1: Create a Table
+Step 2: Load Sample Data
+Step 3: Create, Read, Update, and Delete an Item
+Step 4: Query and Scan the Data
+Step 5: (Optional) Delete the Table
+Summary
+
+
+Programming with DynamoDB and the AWS SDKs
+Overview of AWS SDK Support for DynamoDB
+Programmatic Interfaces
+Low-Level Interfaces
+Document Interfaces
+Object Persistence Interface
+
+
+DynamoDB Low-Level API
+Error Handling with DynamoDB
+Higher-Level Programming Interfaces for DynamoDB
+Java: DynamoDBMapper
+Supported Data Types
+Java Annotations for DynamoDB
+DynamoDBMapper Class
+Optional Configuration Settings for DynamoDBMapper
+Example: CRUD Operations
+Example: Batch Write Operations
+Example: Query and Scan
+Example: Transaction Operations
+Optimistic Locking with Version Number
+Mapping Arbitrary Data
+
+
+.NET: Document Model
+Supported Data Types
+Working with Items in DynamoDB Using the AWS SDK for .NET Document Model
+Example: CRUD Operations Using the AWS SDK for .NET Document Model
+Example: Batch Operations Using the AWS SDK for .NET Document Model API
+Querying Tables in DynamoDB Using the AWS SDK for .NET Document Model
+Table.Query Method in the AWS SDK for .NET
+Table.Scan Method in the AWS SDK for .NET
+
+
+
+
+.NET: Object Persistence Model
+DynamoDB Attributes
+DynamoDBContext Class
+Optimistic Locking Using a Version Number with DynamoDB Using the AWS SDK for .NET Object Persistence Model
+Mapping Arbitrary Data with DynamoDB Using the AWS SDK for .NET Object Persistence Model
+Batch Operations Using the AWS SDK for .NET Object Persistence Model
+Example: CRUD Operations Using the AWS SDK for .NET Object Persistence Model
+Example: Batch Write Operation Using the AWS SDK for .NET Object Persistence Model
+Example: Query and Scan in DynamoDB Using the AWS SDK for .NET Object Persistence Model
+
+
+
+
+Running the Code Examples in This Developer Guide
+Creating Tables and Loading Data for Code Examples in DynamoDB
+Step 1: Create Example Tables
+Step 2: Load Data into Tables
+Step 3: Query the Data
+Step 4: (Optional) Clean Up
+Summary
+
+
+Java Code Examples
+.NET Code Examples
+
+
+Working with Tables, Items, Queries, Scans, and Indexes
+Working with Tables and Data in DynamoDB
+Basic Operations on DynamoDB Tables
+Considerations When Changing Read/Write Capacity Mode
+Managing Settings on DynamoDB Provisioned Capacity Tables
+DynamoDB Item Sizes and Formats
+Managing Throughput Capacity Automatically with DynamoDB Auto Scaling
+Using the AWS Management Console with DynamoDB Auto Scaling
+Using the AWS CLI to Manage DynamoDB Auto Scaling
+Using the AWS SDK to Configure Auto Scaling on Amazon DynamoDB Tables
+
+
+Adding Tags and Labels to Resources
+Tagging Restrictions in DynamoDB
+Tagging Resources in DynamoDB
+Cost Allocation Reports
+
+
+Working with DynamoDB Tables in Java
+Example: Create, Update, Delete, and List Tables Using the AWS SDK for Java Document API
+
+
+Working with DynamoDB Tables in .NET
+Example: Create, Update, Delete, and List Tables Using the AWS SDK for .NET Low-Level API
+
+
+
+
+Working with Items and Attributes
+Using Expressions in DynamoDB
+Specifying Item Attributes When Using Expressions
+Projection Expressions
+Expression Attribute Names in DynamoDB
+Expression Attribute Values
+Condition Expressions
+Comparison Operator and Function Reference
+
+
+Update Expressions
+
+
+Expiring Items By Using DynamoDB Time to Live (TTL)
+How It Works: DynamoDB Time to Live (TTL)
+Using DynamoDB Time to Live (TTL)
+Enabling Time to Live (TTL)
+
+
+Working with Items: Java
+Example: CRUD Operations Using the AWS SDK for Java Document API
+Example: Batch Operations Using AWS SDK for Java Document API
+Example: Handling Binary Type Attributes Using the AWS SDK for Java Document API
+
+
+Working with Items: .NET
+Example: CRUD Operations Using the AWS SDK for .NET Low-Level API
+Example: Batch Operations Using the AWS SDK for .NET Low-Level API
+Example: Handling Binary Type Attributes Using the AWS SDK for .NET Low-Level API
+
+
+
+
+Working with Queries in DynamoDB
+Paginating Table Query Results
+Querying Tables and Indexes: Java
+Querying Tables and Indexes: .NET
+
+
+Working with Scans in DynamoDB
+Scanning Tables and Indexes: Java
+Scanning Tables and Indexes: .NET
+
+
+Improving Data Access with Secondary Indexes
+Using Global Secondary Indexes in DynamoDB
+Managing Global Secondary Indexes
+Detecting and Correcting Index Key Violations
+
+
+Working with Global Secondary Indexes: Java
+Example: Global Secondary Indexes Using the AWS SDK for Java Document API
+
+
+Working with Global Secondary Indexes: .NET
+Example: Global Secondary Indexes Using the AWS SDK for .NET Low-Level API
+
+
+
+
+Local Secondary Indexes
+Working with Local Secondary Indexes: Java
+Example: Local Secondary Indexes Using the Java Document API
+
+
+Working with Local Secondary Indexes: .NET
+Example: Local Secondary Indexes Using the AWS SDK for .NET Low-Level API
+
+
+Working with Local Secondary Indexes: AWS CLI
+
+
+
+
+Capturing Table Activity with DynamoDB Streams
+DynamoDB Streams and Time to Live
+Using the DynamoDB Streams Kinesis Adapter to Process Stream Records
+Walkthrough: DynamoDB Streams Kinesis Adapter
+Complete Program: DynamoDB Streams Kinesis Adapter
+
+
+
+
+DynamoDB Streams Low-Level API: Java Example
+Cross-Region Replication
+DynamoDB Streams and AWS Lambda Triggers
+Tutorial: Process New Items with DynamoDB Streams and Lambda
+Best Practices with Lambda
+
+
+
+
+On-Demand Backup and Restore for DynamoDB
+Back Up and Restore DynamoDB Tables: How It Works
+Backing Up a DynamoDB Table
+Restoring a DynamoDB Table from a Backup
+Deleting a DynamoDB Table Backup
+Using IAM with DynamoDB Backup and Restore
+Point-in-Time Recovery for DynamoDB
+Point-in-Time Recovery: How It Works
+Before You Begin Using Point-in-Time Recovery
+Restoring a DynamoDB Table to a Point in Time
+Global Tables: Multi-Region Replication with DynamoDB
+Determining the Version of Global Tables You Are Using
+Version 2019.11.21 (Current)
+Global Tables: How It Works
+Best Practices and Requirements for Managing Global Tables
+Tutorial: Creating a Global Table
+Monitoring Global Tables
+Using IAM with Global Tables
+Updating Global Tables to Version 2019.11.21 (Current)
+
+
+Version 2017.11.29
+Global Tables: How It Works
+Best Practices and Requirements for Managing Global Tables
+Creating a Global Table
+Monitoring Global Tables
+Using IAM with Global Tables
+
+
+Managing Complex Workflows with DynamoDB Transactions
+Amazon DynamoDB Transactions: How It Works
+Using IAM with DynamoDB Transactions
+DynamoDB Transactions Example
+In-Memory Acceleration with DynamoDB Accelerator (DAX)
+DAX: How It Works
+DAX Cluster Components
+Creating a DAX Cluster
+Creating a DAX Cluster Using the AWS CLI
+Step 1: Create an IAM Service Role for DAX to Access DynamoDB Using the AWS CLI
+Step 2: Create a Subnet Group
+Step 3: Create a DAX Cluster Using the AWS CLI
+Step 4: Configure Security Group Inbound Rules Using the AWS CLI
+
+
+Creating a DAX Cluster Using the AWS Management Console
+Step 1: Create a Subnet Group Using the AWS Management Console
+Step 2: Create a DAX Cluster Using the AWS Management Console
+Step 3: Configure Security Group Inbound Rules Using the AWS Management Console
+
+
+
+
+DAX and DynamoDB Consistency Models
+Developing with the DynamoDB Accelerator (DAX) Client
+Tutorial: Running a Sample Application Using DynamoDB Accelerator (DAX)
+Step 1: Launch an Amazon EC2 Instance
+Step 2: Create an IAM User and Policy
+Step 3: Configure an Amazon EC2 Instance
+Step 4: Run a Sample Application
+DAX SDK for Go
+Java and DAX
+TryDax.java
+TryDaxHelper.java
+TryDaxTests.java
+.NET and DAX
+01-CreateTable.cs
+02-Write-Data.cs
+03-GetItem-Test.cs
+04-Query-Test.cs
+05-Scan-Test.cs
+06-DeleteTable.cs
+Node.js and DAX
+01-create-table.js
+02-write-data.js
+03-getitem-test.js
+04-query-test.js
+05-scan-test.js
+06-delete-table.js
+Python and DAX
+01-create-table.py
+02-write-data.py
+03-getitem-test.py
+04-query-test.py
+05-scan-test.py
+06-delete-table.py
+
+
+
+
+Modifying an Existing Application to Use DAX
+Querying Global Secondary Indexes
+
+
+Managing DAX Clusters
+Monitoring DAX
+Monitoring Tools
+Monitoring with Amazon CloudWatch
+Viewing DAX Metrics and Dimensions
+Creating CloudWatch Alarms to Monitor DAX
+
+
+Logging DAX Operations Using AWS CloudTrail
+
+
+DAX Access Control
+DAX Encryption at Rest
+Using Service-Linked IAM Roles for DAX
+Accessing DAX Across AWS Accounts
+DAX Cluster Sizing Guide
+DAX API Reference
+NoSQL Workbench for DynamoDB GUI Client
+Download NoSQL Workbench
+Building Data Models with NoSQL Workbench
+Creating a New Data Model
+Importing an Existing Data Model
+Exporting a Data Model
+Editing an Existing Data Model
+
+
+Visualizing Data Access Patterns
+Adding Sample Data to a Data Model
+Viewing Data Access Patterns
+Viewing All Tables in a Data Model Using Aggregate View
+Committing a Data Model to DynamoDB
+
+
+Exploring Datasets and Building Operations with NoSQL Workbench
+Exploring Datasets
+Building Complex Operations
+
+
+Sample Data Models for NoSQL Workbench
+Release History for NoSQL Workbench
+Analyzing Data Access Using CloudWatch Contributor Insights for DynamoDB
+CloudWatch Contributor Insights for DynamoDB: How It Works
+Getting Started with CloudWatch Contributor Insights for DynamoDB
+Using IAM with CloudWatch Contributor Insights for DynamoDB
+Security and Compliance in Amazon DynamoDB
+Data Protection in DynamoDB
+DynamoDB Encryption at Rest
+Encryption at Rest: How It Works
+DynamoDB Encryption at Rest Usage Notes
+Managing Encrypted Tables in DynamoDB
+
+
+Data Protection in DynamoDB Accelerator
+Internetwork Traffic Privacy
+
+
+Identity and Access Management
+Identity and Access Management in Amazon DynamoDB
+Overview of Managing Access Permissions to Your Amazon DynamoDB Resources
+Using Identity-Based Policies (IAM Policies) for Amazon DynamoDB
+DynamoDB API Permissions: Actions, Resources, and Conditions Reference
+Using IAM Policy Conditions for Fine-Grained Access Control
+Using Web Identity Federation
+Preparing to Use Web Identity Federation
+Writing Your App to Use Web Identity Federation
+
+
+
+
+Identity and Access Management in DynamoDB Accelerator
+
+
+Logging and Monitoring
+Logging and Monitoring in DynamoDB
+Monitoring Tools
+Monitoring with Amazon CloudWatch
+DynamoDB Metrics and Dimensions
+Creating CloudWatch Alarms to Monitor DynamoDB
+
+
+Logging DynamoDB Operations by Using AWS CloudTrail
+
+
+Logging and Monitoring in DynamoDB Accelerator
+
+
+Compliance Validation by Industry for DynamoDB
+Resilience and Disaster Recovery in Amazon DynamoDB
+Infrastructure Security in Amazon DynamoDB
+Using Amazon VPC Endpoints to Access DynamoDB
+Tutorial: Using a VPC Endpoint for DynamoDB
+
+
+
+
+Configuration and Vulnerability Analysis in Amazon DynamoDB
+Security Best Practices for Amazon DynamoDB
+DynamoDB Preventative Security Best Practices
+DynamoDB Detective Security Best Practices
+
+
+Best Practices for Designing and Architecting with DynamoDB
+NoSQL Design for DynamoDB
+Best Practices for Designing and Using Partition Keys Effectively
+Designing Partition Keys to Distribute Your Workload Evenly
+Using Write Sharding to Distribute Workloads Evenly
+Distributing Write Activity Efficiently During Data Upload
+
+
+Best Practices for Using Sort Keys to Organize Data
+Best Practices for Using Secondary Indexes in DynamoDB
+General Guidelines for Secondary Indexes in DynamoDB
+Take Advantage of Sparse Indexes
+Using Global Secondary Indexes for Materialized Aggregation Queries
+Overloading Global Secondary Indexes
+Using Global Secondary Index Write Sharding for Selective Table Queries
+Using Global Secondary Indexes to Create an Eventually Consistent Replica
+
+
+Best Practices for Storing Large Items and Attributes
+Best Practices for Handling Time Series Data in DynamoDB
+Best Practices for Managing Many-to-Many Relationships
+Best Practices for Implementing a Hybrid Database System
+Best Practices for Modeling Relational Data in DynamoDB
+First Steps for Modeling Relational Data in DynamoDB
+Example of Modeling Relational Data in DynamoDB
+
+
+Best Practices for Querying and Scanning Data
+Best Practices for Using Global Tables
+DynamoDB Integration with Other AWS Services
+Configuring AWS Credentials in Your Files Using Amazon Cognito
+Loading Data From DynamoDB Into Amazon Redshift
+Processing DynamoDB Data With Apache Hive on Amazon EMR
+Tutorial: Working with Amazon DynamoDB and Apache Hive
+Step 1: Create an Amazon EC2 Key Pair
+Step 2: Launch an Amazon EMR Cluster
+Step 3: Connect to the Master Node
+Step 4: Load Data into HDFS
+Step 5: Copy Data to DynamoDB
+Step 6: Query the Data in the DynamoDB Table
+Step 7: (Optional) Clean Up
+
+
+Creating an External Table in Hive
+Processing HiveQL Statements
+Querying Data in DynamoDB
+Copying Data to and from Amazon DynamoDB
+Copying Data Between DynamoDB and a Native Hive Table
+Copying Data Between DynamoDB and Amazon S3
+Copying Data Between DynamoDB and HDFS
+Using Data Compression
+Reading Non-Printable UTF-8 Character Data
+
+
+Performance Tuning
+DynamoDB Provisioned Throughput
+Adjusting the Mappers
+Additional Topics
+
+
+
+
+Service, Account, and Table Quotas in Amazon DynamoDB
+Low-Level API Reference
+DynamoDB Appendix
+Troubleshooting SSL/TLS connection establishment issues
+Example Tables and Data
+Creating Example Tables and Uploading Data
+Creating Example Tables and Uploading Data Using the AWS SDK for Java
+Creating Example Tables and Uploading Data Using the AWS SDK for .NET
+
+
+DynamoDB Example Application Using the AWS SDK for Python (Boto): Tic-Tac-Toe
+Step 1: Deploy and Test Locally
+Step 2: Examine the Data Model and Implementation Details
+Step 3: Deploy in Production Using the DynamoDB Service
+Step 4: Clean Up Resources
+
+
+Exporting and Importing DynamoDB Data Using AWS Data Pipeline
+Amazon DynamoDB Storage Backend for Titan
+Reserved Words in DynamoDB
+Legacy Conditional Parameters
+AttributesToGet
+AttributeUpdates
+ConditionalOperator
+Expected
+KeyConditions
+QueryFilter
+ScanFilter
+Writing Conditions With Legacy Parameters
+
+
+Previous Low-Level API Version (2011-12-05)
+BatchGetItem
+BatchWriteItem
+CreateTable
+DeleteItem
+DeleteTable
+DescribeTables
+GetItem
+ListTables
+PutItem
+Query
+Scan
+UpdateItem
+UpdateTable
+
+
+Document History for DynamoDB

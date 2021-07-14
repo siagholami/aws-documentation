@@ -1,0 +1,39 @@
+Other Components
+You can add either or both of the fader and mask components to an element.
+Topics
+ Fader
+ Mask
+ Flipbook Animation
+Fader
+You can use a Fader component to simultaneously adjust the transparency of an element and its children. 
+To see in-game examples of completed canvases with a Fader component
+
+
+Open the Samples Project.
+
+
+When Lumberyard Editor has started, choose File, Open and open the UiFeatures level.
+
+
+Press CtrlG to play the game.
+
+
+Choose Components, Other Components, Fader. You can view an example of a direct fade and an animated fade.
+
+
+Press Esc to exit the game.
+
+
+To view these same canvases in the *UI Editor*
+ Navigate to the \Gems\LyShineExamples\Assets\UI\Canvases\LyShineExamples\Comp\Fader directory.
+You can open the following canvases:
+ AnimFade.uicanvas
+ DirectFade.uicanvas
+To edit a fader component
+
+
+In the Properties pane of the UI Editor, expand Fader.
+
+
+For the Fade multiplier, use the slider to select a number between 0 (invisible) and 1 (opaque) and press Enter.
+

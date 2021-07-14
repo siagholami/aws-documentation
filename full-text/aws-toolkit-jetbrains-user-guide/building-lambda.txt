@@ -1,0 +1,8 @@
+Working with AWS Lambda by using the AWS Toolkit for JetBrains
+The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS Lambda functions in an AWS account.
+Topics
+ Creating a function
+ Running (invoking) or debugging a local function
+ Running (invoking) a remote function
+ Changing (updating) function settings
+ Deleting a function

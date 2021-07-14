@@ -1,0 +1,17 @@
+Migrate contact flows to a different instance
+Amazon Connect lets you efficiently migrate contact flows to another instance. For example, you might want to expand into new Regions, or move contact flows from your development environment to your production environment. 
+To migrate a few contact flows, use the import/export feature in the contact flow designer. 
+To migrate hundreds of contact flows, use the following procedure:
+
+
+Source instance
+    ListContactFlow: Retrieve the Amazon Resource Number (ARN) for the contact flows that you want to migrate.
+    DescribeContactFlow: Get information about each contact flow that you want to migrate.
+
+
+Destination instance
+    CreateContactFlow: Create the contact flows.
+    UpdateContactFlowContent: Update the contact flow content.
+
+
+You can update the information in the contact flows that you migrate. For more information, see Amazon Connect Flow Language. 

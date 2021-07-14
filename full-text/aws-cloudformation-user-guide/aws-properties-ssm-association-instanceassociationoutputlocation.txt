@@ -1,0 +1,17 @@
+AWS::SSM::Association InstanceAssociationOutputLocation
+InstanceAssociationOutputLocation is a property of the AWS::SSM::Association resource that specifies an Amazon S3 bucket where you want to store the results of this association request.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location)" : S3OutputLocation
+}
+YAML
+[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location): 
+    S3OutputLocation
+Properties
+S3Location 
+S3OutputLocation is a property of the InstanceAssociationOutputLocation property that specifies an Amazon S3 bucket where you want to store the results of this request. 
+Required: No
+Type: S3OutputLocation
+Update requires: No interruption

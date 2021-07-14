@@ -1,0 +1,51 @@
+Load Definition File
+Loads a time of day preset XML file file_name.xml and then updates the sky. For example, the preset file can be named Time_Of_Day.xml.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node to load the time of day preset .xml file.
+
+
+File Name
+String
+Path to the time of day preset .xml file.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+
+Success
+Boolean
+Returns true if the file loads successfully.
+
+

@@ -1,0 +1,6 @@
+Amazon Kinesis Example
+Amazon Kinesis is a platform for streaming data on AWS, offering powerful services to load and analyze streaming data, and also providing the ability for you to build custom streaming data applications for specialized needs.
+
+The JavaScript API for Kinesis is exposed through the AWS.Kinesis client class. For more information about using the Kinesis client class, see Class: AWS.Kinesis in the API reference.
+Topics
+ Capturing Webpage Scroll Progress with Amazon Kinesis

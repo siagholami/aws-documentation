@@ -1,0 +1,2 @@
+Data products
+You can use AWS Marketplace to find and subscribe to data products available through AWS Data Exchange. For more information, see Subscribing to Data Products on AWS Data Exchange in the AWS Data Exchange User Guide.

@@ -1,0 +1,37 @@
+Delete a trigger from a CodeDeploy deployment group
+Because there is a limit of 10 triggers per deployment group, you might want to delete triggers if they are no longer being used. You cannot undo the deletion of a trigger, but you can re-create one.
+Delete a trigger from a deployment group (console)
+
+
+Sign in to the AWS Management Console and open the CodeDeploy console at https://console.aws.amazon.com/codedeploy.
+Note
+Sign in with the same account or IAM user information that you used in Getting started with CodeDeploy.
+
+
+In the navigation pane, expand Deploy, and then choose Applications.
+
+
+On the Applications page, choose the name of the application associated with the deployment group where you want to delete a trigger.
+
+
+On the Application details page, choose the deployment group where you want to delete a trigger.
+
+
+Choose Edit. 
+
+
+Expand Advanced - optional. 
+
+
+In the Triggers area, choose the trigger you want to delete, then choose Delete trigger. 
+
+
+Choose Save changes. 
+
+
+Delete a trigger from a deployment group (CLI)
+To use the CLI to delete a trigger, call the update-deployment-group command, with empty trigger configuration parameters, specifying:
+ The name of the application associated with the deployment group. To view a list of application names, call the list-applications command.
+ The name of the deployment group associated with the application. To view a list of deployment group names, call the list-deployment-groups command.
+For example:
+aws deploy update-deployment-group --application-name application-name --current-deployment-group-name deployment-group-name --trigger-configurations

@@ -1,0 +1,31 @@
+Create Slot Types
+Create the slot types, or parameter values, that the OrderPizza intent uses.
+To create slot types
+
+
+In the left menu, choose the plus sign () next to Slot types.
+
+
+In the Add slot type dialog box, add the following: 
+    Slot type name – Crusts
+    Description – Available crusts
+    Choose Restrict to Slot values and Synonyms
+    Value – Type thick. Press tab and in the Synonym field type stuffed. Choose the plus sign (). Type thin and then choose the plus sign () again.
+
+
+The dialog should look like this:
+
+
+
+Choose Add slot to intent.
+
+
+On the Intent page, choose Required. Change the name of the slot from slotOne to crust. Change the prompt to What kind of crust would you like?
+
+
+Repeat Step 1 through Step 4 using the values in the following table:  
+[See the AWS documentation website for more details]
+
+
+Next Step
+Configure the Intent

@@ -1,0 +1,17 @@
+AWS::MediaLive::Channel AudioPidSelection
+Used to extract audio by The PID.
+The parent of this entity is AudioSelectorSettings.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Pid](#cfn-medialive-channel-audiopidselection-pid)" : Integer
+}
+YAML
+[Pid](#cfn-medialive-channel-audiopidselection-pid): Integer
+Properties
+Pid 
+Select the audio by this PID.
+Required: No
+Type: Integer
+Update requires: No interruption

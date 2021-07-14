@@ -1,0 +1,6 @@
+Managing Amazon QuickSight Usage
+If your Amazon QuickSight user account has administrative privileges, you can manage user account subscriptions and SPICE capacity.
+Use the following topics to manage subscriptions and SPICE capacity.
+Topics
+ Managing Subscriptions
+ Managing SPICE Capacity

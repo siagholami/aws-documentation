@@ -1,0 +1,30 @@
+AWS::SageMaker::Workteam CognitoMemberDefinition
+Identifies a Amazon Cognito user group. A user group can be used in on or more work teams.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CognitoClientId](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitoclientid)" : String,
+  "[CognitoUserGroup](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitousergroup)" : String,
+  "[CognitoUserPool](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitouserpool)" : String
+}
+YAML
+[CognitoClientId](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitoclientid): String
+  [CognitoUserGroup](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitousergroup): String
+  [CognitoUserPool](#cfn-sagemaker-workteam-cognitomemberdefinition-cognitouserpool): String
+Properties
+CognitoClientId 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: No interruption
+CognitoUserGroup 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: No interruption
+CognitoUserPool 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: Replacement

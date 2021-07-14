@@ -1,0 +1,49 @@
+Implementing Connected Features with Cloud Canvas
+Topics
+ Features
+ Example Uses
+ Tools
+ Knowledge Prerequisites
+ Cloud Canvas Overview
+ Cloud Gems
+ Cloud Canvas Gameplay Design and Engineering Guide
+ Cloud Canvas Software Engineering Guide
+ Administering Cloud Canvas
+ Using the Cloud Canvas Command Line
+Deeply integrated with AWS, Cloud Canvas is a suite of tools and solutions (cloud gems, resource groups, script canvas nodes) designed to achieve two main goals:
+
+
+Make it easy for you to build cloud-connected features, so you can focus on innovation rather than on undifferentiated backend infrastructure.
+
+
+Make it possible for you to create fantastic new experiences made possible by the availability of the on-demand, global storage and compute provided by AWS.
+
+
+With Cloud Canvas, you can add a cloud-connected feature to your game in as little as 30 minutes. A single engineer can do this, freeing up the rest of your team to think about innovation and player experience.
+Features
+Cloud Canvas offers a wide range of helpful features:
+ Cloud gems that provide cloud-connected features such as Message of the Day, Leaderboards, and Dynamic Content. These cloud gems can be used in a few clicks as is, or as samples to fuel your custom developments and ideas. 
+ The Cloud Gem Framework, on top of which cloud gems are built, allows you to add pre-packaged, cloud-connected features in a few clicks. You can use the Cloud Gem Framework to build your own cloud gems.
+ Tools to enable a team to build a game with cloud-connected features.
+ A CloudGemAWSScriptBehaviors gem that exposes AWS services such as Amazon S3, Amazon Cognito, AWS Lambda, and HTTP utilities to script. 
+ Tools to manage AWS resources and permissions that determine how game developers and players access them.
+ Management of AWS deployments so that development, test, and live resources are maintained separately.
+ Methods for players to be authenticated (anonymous and authenticated). Players can be authenticated from a variety of devices and access their game data by logging in with an Amazon, Facebook, or Google account.
+Example Uses
+Consider the many ways you can use Amazon Web Services for connected games:
+ Store and query game data such as player state, high scores, or world dynamic content: Amazon S3 and DynamoDB
+ Trigger events in real time and queue data for background processing: Amazon SQS and Amazon SNS
+ Execute custom game logic in the cloud without having to set up or manage servers: AWS Lambda
+ Employ a daily gift system that tracks player visits and rewards frequent visits: Amazon Cognito, Amazon S3, DynamoDB, AWS Lambda
+ Present a message of the day or news ticker that provides updates on in-game events: Amazon Cognito, Amazon S3, AWS Lambda 
+For tutorials on Cloud Canvas, see Tutorial: Getting Started with Cloud Canvas and Lumberyard Tutorials.
+Tools
+You can access Cloud Canvas functionality by using any of the following:
+  Cloud Gem Portal – A web application that makes backend administration and management accessible to everyone. 
+  Cloud Canvas C APIs – For software development.
+ Using the Cloud Canvas Command Line – For managing resource groups, mappings, deployments, and projects. 
+  Cloud Canvas Tools in Lumberyard Editor – For managing AWS resources, deployments, and credentials, and for navigating directly to the AWS consoles supported by Cloud Canvas. 
+Knowledge Prerequisites
+You need the following to take advantage of Cloud Canvas:
+ An understanding of AWS CloudFormation Templates – Cloud Canvas uses the AWS CloudFormation service to create and manage AWS resources. Our goal is for Cloud Canvas to minimize what you need to know about AWS CloudFormation and AWS in general. 
+ Familiarity with JSON – Cloud Canvas leverages JSON for storing configuration data, including AWS CloudFormation Templates. Currently, you'll need to be familiar with this text format to work with the Cloud Canvas resource management system. A JSON tutorial can be found here. 

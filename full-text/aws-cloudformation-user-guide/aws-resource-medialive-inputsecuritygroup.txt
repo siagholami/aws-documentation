@@ -1,0 +1,41 @@
+AWS::MediaLive::InputSecurityGroup
+The AWS::MediaLive::InputSecurityGroup is a MediaLive resource type that creates an input security group.
+A MediaLive input security group is associated with a MediaLive input. The input security group is an "allow list" of IP addresses that controls whether an external IP address can push content to the associated MediaLive input.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::MediaLive::InputSecurityGroup",
+  "Properties" : {
+      "[Tags](#cfn-medialive-inputsecuritygroup-tags)" : Json,
+      "[WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules)" : [ InputWhitelistRuleCidr, ... ]
+    }
+}
+YAML
+Type: AWS::MediaLive::InputSecurityGroup
+Properties: 
+  [Tags](#cfn-medialive-inputsecuritygroup-tags): Json
+  [WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules): 
+    - InputWhitelistRuleCidr
+Properties
+Tags 
+A collection of tags for this input security group. Each tag is a key-value pair.
+Required: No
+Type: Json
+Update requires: No interruption
+WhitelistRules 
+The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+Required: No
+Type: List of InputWhitelistRuleCidr
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the name of the input security group.
+For example: { "Ref": "myInputSecurityGroup" }
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The ARN of the MediaLive input security group. For example: arn:aws:medialive:us-west-1:111122223333:medialive:inputSecurityGroup:1234567

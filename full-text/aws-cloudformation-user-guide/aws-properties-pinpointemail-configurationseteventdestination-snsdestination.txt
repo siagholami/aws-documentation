@@ -1,0 +1,16 @@
+AWS::PinpointEmail::ConfigurationSetEventDestination SnsDestination
+An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification when certain email events occur.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[TopicArn](#cfn-pinpointemail-configurationseteventdestination-snsdestination-topicarn)" : String
+}
+YAML
+[TopicArn](#cfn-pinpointemail-configurationseteventdestination-snsdestination-topicarn): String
+Properties
+TopicArn 
+The Amazon Resource Name (ARN) of the Amazon SNS topic that you want to publish email events to. For more information about Amazon SNS topics, see the Amazon SNS Developer Guide.
+Required: Yes
+Type: String
+Update requires: No interruption

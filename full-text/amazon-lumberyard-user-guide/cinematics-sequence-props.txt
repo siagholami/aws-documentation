@@ -1,0 +1,16 @@
+Setting Sequence Properties
+You can set properties in the Track View to control how the track view sequence appears. For example, you can specify Autostart so that the track view sequence starts playing as soon as the game starts.
+To set sequence properties
+
+
+In the Track View, select the applicable sequence and click the Edit Sequence  icon.
+
+
+In the Sequence Properties dialog box, you can specify the following properties.
+
+Scene Properties 
+[See the AWS documentation website for more details]
+
+
+When you are finished, click OK.
+

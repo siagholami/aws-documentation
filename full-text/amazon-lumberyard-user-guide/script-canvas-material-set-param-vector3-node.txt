@@ -1,0 +1,56 @@
+Set Param Vector3
+Sets a material parameter with a Vector3 value.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Material
+Material
+The material to modify.
+
+
+Param Name
+String
+The name of the material parameter to set. For more information, see Finding the Material Parameter Name.
+
+
+Vector3
+Vector3
+The new value to apply.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

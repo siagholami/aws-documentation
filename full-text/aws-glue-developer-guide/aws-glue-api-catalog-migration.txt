@@ -1,0 +1,41 @@
+Importing an Athena Catalog to AWS Glue
+The Migration API describes AWS Glue data types and operations having to do with migrating an Athena Data Catalog to AWS Glue.
+Data Types
+
+CatalogImportStatus Structure
+
+CatalogImportStatus Structure
+A structure containing migration status information.
+Fields
+ ImportCompleted – Boolean.
+True if the migration has completed, or False otherwise.
+ ImportTime – Timestamp.
+The time that the migration was started.
+ ImportedBy – UTF-8 string, not less than 1 or more than 255 bytes long, matching the Single-line string pattern.
+The name of the person who initiated the migration.
+Operations
+
+ImportCatalogToGlue Action (Python: import_catalog_to_glue)
+GetCatalogImportStatus Action (Python: get_catalog_import_status)
+
+ImportCatalogToGlue Action (Python: import_catalog_to_glue)
+Imports an existing Amazon Athena Data Catalog to AWS Glue
+Request
+ CatalogId – Catalog id string, not less than 1 or more than 255 bytes long, matching the Single-line string pattern.
+The ID of the catalog to import. Currently, this should be the AWS account ID.
+Response
+ No Response parameters.
+Errors
+ InternalServiceException
+ OperationTimeoutException
+GetCatalogImportStatus Action (Python: get_catalog_import_status)
+Retrieves the status of a migration operation.
+Request
+ CatalogId – Catalog id string, not less than 1 or more than 255 bytes long, matching the Single-line string pattern.
+The ID of the catalog to migrate. Currently, this should be the AWS account ID.
+Response
+ ImportStatus – A CatalogImportStatus object.
+The status of the specified catalog migration.
+Errors
+ InternalServiceException
+ OperationTimeoutException

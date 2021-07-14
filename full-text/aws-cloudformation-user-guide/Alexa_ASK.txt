@@ -1,0 +1,3 @@
+ASK resource type reference
+Resource types
+ Alexa::ASK::Skill

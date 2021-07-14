@@ -1,0 +1,51 @@
+View Video Streams on Your AWS DeepLens Device
+In addition to viewing your AWS DeepLens output streams in a browser, you can use mplayer to view the streams directly from your AWS DeepLens device after connecting it to a monitor, a keyboard, and a mouse. This is especially useful when your AWS DeepLens device is not online.
+Instead of connecting to the device directly using a monitor, a keyboard, and a mouse, you can also use ssh to connect to the device, if SSH access is enabled on the device when it is registered. You can then use mplayer on your work computer to view the streams. Make sure that mplayer is installed on your computer before viewing the output streams from your AWS DeepLens device. For more information about the installation, see mplayer download. 
+Topics
+ View Live Streams on Your AWS DeepLens Device
+ View Project Streams on Your AWS DeepLens Device
+View Live Streams on Your AWS DeepLens Device
+To view an unprocessed device stream on your AWS DeepLens device
+
+
+Plug your AWS DeepLens device into a power outlet and turn it on.
+
+
+Connect a USB mouse and keyboard to your AWS DeepLens.
+
+
+Use the micro HDMI cable to connect your AWS DeepLens to a monitor. A login screen appears on the monitor.
+
+
+Sign in to the device using the SSH password that you set when you registered the device.
+
+
+To see the video stream from your AWS DeepLens, start your terminal and run the following command:
+
+
+mplayer -demuxer lavf /opt/awscam/out/ch1_out.h264
+
+To stop viewing the video stream and end your terminal session, press CtrlC.
+
+View Project Streams on Your AWS DeepLens Device
+To view a project stream on your AWS DeepLens device
+
+
+Plug your AWS DeepLens device to a power outlet and turn it on.
+
+
+Connect a USB mouse and keyboard to your AWS DeepLens.
+
+
+Use the micro HDMI cable to connect your AWS DeepLens to a monitor. A login screen appears on the monitor.
+
+
+Sign in to the device using the SSH password you set when you registered the device.
+
+
+To see the video stream from your AWS DeepLens, start your terminal and run the following command:
+
+
+mplayer -demuxer lavf -lavfdopts format=mjpeg:probesize=32 /tmp/results.mjpeg
+
+To stop viewing the video stream and end your terminal session, press CtrlC.

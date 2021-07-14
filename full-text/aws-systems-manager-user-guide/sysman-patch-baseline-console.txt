@@ -1,0 +1,7 @@
+Working with custom patch baselines
+Patch Manager includes a predefined patch baseline for each operating system supported by Patch Manager. You can use these patch baselines (you can't customize them), or you can create your own. 
+The following procedures describe how to create, update, and delete your own custom patch baselines. To learn more about patch baselines, see About predefined and custom patch baselines.
+Topics
+ Creating a custom patch baseline (Windows)
+ Creating a custom patch baseline (Linux)
+ Updating or deleting a custom patch baseline (console)

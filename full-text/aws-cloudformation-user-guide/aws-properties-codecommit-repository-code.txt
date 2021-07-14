@@ -1,0 +1,24 @@
+AWS::CodeCommit::Repository Code
+Information about code to be committed.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BranchName](#cfn-codecommit-repository-code-branchname)" : String,
+  "[S3](#cfn-codecommit-repository-code-s3)" : S3
+}
+YAML
+[BranchName](#cfn-codecommit-repository-code-branchname): String
+  [S3](#cfn-codecommit-repository-code-s3): 
+    S3
+Properties
+BranchName 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Update requires: Replacement
+S3 
+Information about the Amazon S3 bucket that contains a ZIP file of code to be committed to the repository.
+Required: Yes
+Type: S3
+Update requires: No interruption

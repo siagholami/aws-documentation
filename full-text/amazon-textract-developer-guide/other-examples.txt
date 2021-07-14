@@ -1,0 +1,35 @@
+Other Examples
+These are links to other code examples that you can use with Amazon Textract.
+
+
+
+Example
+Description
+
+
+
+
+Amazon Textract Code Samples
+Show various ways in which you can use Amazon Textract.
+
+
+Large scale document processing with Amazon Textract
+Shows a serverless reference architecture that processes documents at a large scale.
+
+
+Amazon Textract Parser
+Shows how to parse the Block objects returned by Amazon Textract operations.
+
+
+Amazon Textract Documentation Code Examples
+Code examples used in this guide.
+
+
+Textractor
+Shows how to convert Amazon Textract output into multiple formats.
+
+
+Generate Searchable PDF documents with Amazon Textract
+Shows how to create a searchable PDF document from different types of input documents such as JPG/PNG format images and scanned PDF documents.
+
+

@@ -1,0 +1,75 @@
+Making a Custom Lambda Function Available to Script Canvas
+You can make custom Lambda function available to Script Canvas with the following steps:
+
+
+Use the Project Configurator to add Cloud Gem AWS Script Behaviors to your project. For information on adding gems to your game project, see Enabling Gems.
+
+
+In Lumberyard Editor, use the Cloud Canvas Resource Manager to add a Lambda resource to the CloudGemAWSScriptBehaviors resource group. When you perform this step, Lumberyard creates a directory named after your function and a placeholder main.py code file for you. The code directory and file look like the following:
+
+
+lumberyard_version\dev\Gems\CloudGemAWSScriptBehaviors\AWS\lambda-code\your_function_name\main.py
+
+
+Add your function code to the main.py file.
+
+
+Use the Cloud Canvas Resource Manager to upload the resources to AWS. After you complete this step, your Lambda function becomes available to Script Canvas.
+
+
+This topic shows you how to perform the second and fourth steps: use the Cloud Canvas Resource Manager to add a custom Lambda function to the CloudGemAWSScriptBehaviors resource group, and upload your Lambda function to AWS.
+Topics
+ Adding a Lambda Function Resource
+ Uploading Your Custom Lambda Function to AWS
+Adding a Lambda Function Resource
+With Lumberyard Editor, you can add a Lambda function resource to the CloudGemAWSScriptBehaviors resource group.
+To add a custom Lambda function to the CloudGemAWSScriptBehaviors resource group
+
+
+In Lumberyard Editor, choose AWS, Cloud Canvas, Resource Manager.
+
+
+Under Resource Groups, select CloudGemAWSScriptBehaviors.
+
+
+
+Click Add resource, and then choose Lambda function.
+
+
+
+In the Add a Lambda function dialog box, specify the following values.
+    Name – The name of the Lambda function.
+    Handler – Specifies the code source for the function in the format python_filename.function_name. To use the main.py file that Lumberyard creates for you, specify main.function_name. For example, for a function named MyCustomAWSLambdaFunction, enter main.MyCustomAWSLambdaFunction.
+For more information about Lambda function handlers, see Lambda Function Handler (Python) in the AWS Lambda Developer Guide.
+    Player invokable – Choose Yes. This option gives the player the permission to invoke the Lambda function.
+
+
+
+These properties are added to the resource-template.json file in the lumberyard_version\dev\Gems\CloudGemAWSScriptBehaviors\AWS directory.
+
+Click OK. Now you are ready to add code to the main.py file that Lumberyard created for you at the following location:
+
+lumberyard_version\dev\Gems\CloudGemAWSScriptBehaviors\AWS\lambda-code\your_function_name\main.py
+Uploading Your Custom Lambda Function to AWS
+After you add your Lambda function code to the main.py file, you are ready to upload it to AWS to make it available to Script Canvas.
+To upload your Lambda function code to AWS
+
+
+In Lumberyard Editor, choose AWS, Cloud Canvas, Resource Manager.
+
+
+Under Resource Groups, select CloudGemAWSScriptBehaviors.
+
+
+In Cloud Canvas Resource Manager, click Upload resources to upload your Lambda function to AWS.
+
+
+In the Upload group resources dialog box, click Yes to approve any changes to security, if you agree.
+
+
+
+Cloud Canvas Resource Manager notifies you when the Lambda resources have been created in AWS.
+
+Now when you use Node Inspector to add an AWSLambda Variable node to a Script Canvas graph, your Lambda function becomes available in the functionName box.
+
+For more information, see Invoking an AWS Lambda Function from Script Canvas.

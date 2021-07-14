@@ -1,0 +1,6 @@
+Amazon Transcribe Medical
+Contents
+ What Is Amazon Transcribe Medical?
+ How Amazon Transcribe Medical Works
+ Getting Started with Amazon Transcribe Medical
+ Establish a Bi-Directional Connection Using the WebSocket Protocol

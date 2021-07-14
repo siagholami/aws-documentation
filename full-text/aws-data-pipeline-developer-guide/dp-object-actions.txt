@@ -1,0 +1,5 @@
+Actions
+The following are the AWS Data Pipeline action objects:
+Topics
+ SnsAlarm
+ Terminate

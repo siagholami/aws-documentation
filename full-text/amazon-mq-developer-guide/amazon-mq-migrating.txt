@@ -1,0 +1,6 @@
+Migrating to Amazon MQ
+Use the following topics to get started with migrating your on-premises message broker to Amazon MQ.
+Topics
+ Migrating to Amazon MQ without Service Interruption
+ Migrating to Amazon MQ with Service Interruption
+For detailed information and examples, see Migrating from RabbitMQ to Amazon MQ in the AWS Compute Blog.

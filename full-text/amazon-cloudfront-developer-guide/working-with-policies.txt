@@ -1,0 +1,30 @@
+Working with policies
+With CloudFront policies, you can control the values that are included in the cache key for objects that are cached at CloudFront edge locations. These values can include HTTP request query strings, headers, and cookies. The cache key determines whether a viewer request results in a cache hit (the object is served to the viewer from a CloudFront edge location).
+When there’s a cache miss (the requested object is not cached at the edge location), CloudFront sends a request to the origin to retrieve the object. This is called an origin request. You can separately control which of these values (query strings, headers, and cookies) are included in the origin request.
+You control the cache key with a cache policy and the origin request with an origin request policy. By controlling the cache key and the origin request separately, you can forward request values to your origin without duplicating cached content when the content doesn’t differ based on those values.
+For more information, see the following.
+Contents
+ Controlling the cache key
+   Understanding cache policies
+     Policy information
+     Time to live (TTL) settings
+     Cache key settings
+   Creating cache policies
+   Using the managed cache policies
+     Attaching a managed cache policy
+     Understanding the managed cache policies
+   Understanding the cache key
+     The default cache key
+     Customizing the cache key
+ Controlling origin requests
+   Understanding origin request policies
+     Policy information
+     Origin request settings
+   Creating origin request policies
+   Using the managed origin request policies
+     Attaching a managed origin request policy
+     Understanding the managed origin request policies
+ Using the CloudFront HTTP headers
+   Headers for determining the viewer’s device type
+   Headers for determining the viewer’s location
+   Other CloudFront headers

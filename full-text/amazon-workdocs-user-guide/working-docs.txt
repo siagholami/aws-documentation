@@ -1,0 +1,9 @@
+Working with files and folders
+Create folders, upload and download files, edit files, and delete folders and files in Amazon WorkDocs. You can also lock a file while you are editing it.
+Topics
+ Organizing and editing files and folders
+ Uploading and downloading files
+ Locking and unlocking files
+ Viewing file versions
+ Viewing files offline
+ Searching files and folders

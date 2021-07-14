@@ -1,0 +1,54 @@
+Math activity operators and functions
+You can use the following operators in a math activity:
+
+
+
+
+
+
+
+
+
+
+addition
+
+
+-
+subtraction
+
+
+*
+multiplication
+
+
+/
+division
+
+
+%
+modulo
+
+
+
+You can use the following functions in a math activity:
+ abs(Decimal)
+ acos(Decimal)
+ asin(Decimal)
+ atan(Decimal)
+ atan2(Decimal, Decimal)
+ ceil(Decimal)
+ cos(Decimal)
+ cosh(Decimal)
+ exp(Decimal)
+ ln(Decimal)
+ log(Decimal)
+ mod(Decimal, Decimal)
+ power(Decimal, Decimal)
+ round(Decimal)
+ sign(Decimal)
+ sin(Decimal)
+ sinh(Decimal)
+ sqrt(Decimal)
+ tan(Decimal)
+ tanh(Decimal)
+ trunc(Decimal, Integer)

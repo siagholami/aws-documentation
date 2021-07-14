@@ -1,0 +1,5 @@
+Amazon EventBridge resource type reference
+Resource types
+ AWS::Events::EventBus
+ AWS::Events::EventBusPolicy
+ AWS::Events::Rule

@@ -1,0 +1,4 @@
+Amazon Forecast Query Service
+The following data types are supported by Amazon Forecast Query Service:
+  DataPoint 
+  Forecast 

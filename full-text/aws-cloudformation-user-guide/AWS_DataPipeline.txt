@@ -1,0 +1,3 @@
+AWS Data Pipeline resource type reference
+Resource types
+ AWS::DataPipeline::Pipeline

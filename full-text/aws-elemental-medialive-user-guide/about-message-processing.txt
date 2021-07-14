@@ -1,0 +1,8 @@
+About Message Processing
+MediaLive works with the SCTE-35 messages in MPEG-2 transport stream (TS) inputs. These messages might or might not include segmentation descriptors. 
+Topics
+ Supported Features by Input Type
+ Supported Output Features
+ Processing Features – Default Behavior
+ Scope of Processing by Feature
+ Supported Features by Output Type

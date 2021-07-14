@@ -1,0 +1,132 @@
+AWS Marketplace Seller Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Marketplace?
+Getting started as a seller
+Seller registration process
+Seller toolkit
+AWS Marketplace Commerce Analytics Service
+AWS Marketplace Enhanced Data Sharing Program
+AWS Marketplace Field Demonstration Program
+Product Support Connection
+
+
+Preparing your product
+Product pricing
+Refunds
+
+
+Private offers
+Flexible payment scheduler
+Consulting partner private offers
+ISV setup
+Consulting partner setup
+
+
+Private offer upgrades and renewals
+
+
+Standardized license terms
+Categories and metadata
+Search engine optimization
+AWS Marketplace for Desktop Applications (AMDA)
+AMI-based products
+Best practices for building AMIs
+Metering service
+AMI-based delivery using AWS CloudFormation
+Adding serverless application components
+
+
+Private images
+AMI product checklist
+Container-based products
+Getting started with container products
+Pricing container products
+AWS Marketplace Metering Service integration
+Custom metering
+Integrating your container product with the AWS Marketplace Metering Service using the AWS SDK for Java
+
+
+Hourly metering
+Integrating your container product with the AWS Marketplace Metering Service using the AWS SDK for Java
+
+
+
+
+Machine learning products
+Putting your algorithms and model packages on the AWS Marketplace
+Best practices for sample input data and sample notebooks
+Software as a service (SaaS)–based products
+Getting started
+SaaS subscriptions
+SaaS contracts
+SaaS contracts with consumption
+
+
+Plan your SaaS product
+SaaS product guidelines
+Pricing SaaS products
+Pricing for SaaS subscriptions
+Pricing for SaaS contracts
+
+
+SaaS customer onboarding
+Amazon SNS notifications for SaaS products
+Accessing the AWS Marketplace Metering and Entitlement Service APIs
+Metering for usage
+Checking entitlements
+SaaS product integration checklist
+
+
+Reporting
+Code examples
+Using AWS PrivateLink with AWS Marketplace
+Data products
+Submitting your product for publication
+Marketing your product
+Seller reports and data feeds
+Seller reports
+Daily business report
+Daily customer subscriber report
+Disbursement report
+Monthly billed revenue report
+Sales compensation report
+US sales and use tax report
+Daily ref tag
+Weekly ref tag
+
+
+Data feeds
+Account data feed
+Address data feed
+Billing event data feed
+Legacy mapping data feed
+Offer data feed
+Offer product data feed
+Offer target data feed
+Product data feed
+Tax item data feed
+
+
+AWS Marketplace security
+Controlling access to AWS Marketplace Management Portal
+Policies and permissions for AWS Marketplace sellers
+AWS Marketplace Commerce Analytics Service account permissions
+AWS Marketplace Product Support Connection account permissions
+Amazon SQS permissions
+AWS Marketplace metering and entitlement API permissions
+AMI security policies
+Logging AWS Marketplace API calls with AWS CloudTrail
+Document history
+AWS glossary

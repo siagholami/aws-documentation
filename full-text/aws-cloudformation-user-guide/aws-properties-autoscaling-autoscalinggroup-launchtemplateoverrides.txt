@@ -1,0 +1,27 @@
+AWS::AutoScaling::AutoScalingGroup LaunchTemplateOverrides
+LaunchTemplateOverrides is a subproperty of LaunchTemplate that describes an override for a launch template. Currently, the only supported override is instance type.
+The maximum number of instance type overrides that can be associated with an Auto Scaling group is 20.
+Every Auto Scaling group has three size parameters (DesiredCapacity, MaxSize, and MinSize). Usually, you set these sizes based on a specific number of instances. However, if you configure a mixed instances policy that defines weights for the instance types, you must specify these sizes with the same units that you use for weighting instances. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[InstanceType](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)" : String,
+  "[WeightedCapacity](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)" : String
+}
+YAML
+[InstanceType](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype): String
+  [WeightedCapacity](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity): String
+Properties
+InstanceType 
+The instance type. You must use an instance type that is supported in your requested Region and Availability Zones. For more information, see Available Instance Types in the Amazon EC2 User Guide for Linux Instances. 
+Required: No
+Type: String
+Update requires: No interruption
+WeightedCapacity 
+The number of capacity units, which gives the instance type a proportional weight to other instance types. For example, larger instance types are generally weighted more than smaller instance types. These are the same units that you chose to set the desired capacity in terms of instances, or a performance attribute such as vCPUs, memory, or I/O.
+For more information, see Instance Weighting for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
+Valid Range: Minimum value of 1. Maximum value of 999.
+Required: No
+Type: String
+Update requires: No interruption

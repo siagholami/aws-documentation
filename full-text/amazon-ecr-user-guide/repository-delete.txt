@@ -1,0 +1,21 @@
+Deleting a repository
+If you are done using a repository, you can delete it. When you delete a repository in the AWS Management Console, all of the images contained in the repository are also deleted; this cannot be undone.
+To delete a repository
+
+
+Open the Amazon ECR console at https://console.aws.amazon.com/ecr/repositories.
+
+
+From the navigation bar, choose the Region that contains the repository to delete.
+
+
+In the navigation pane, choose Repositories.
+
+
+On the Repositories page, select the repository to delete and choose Delete.
+
+
+In the Delete repository_name window, verify that the selected repositories should be deleted and choose Delete.
+Important
+Any images in the selected repositories are also deleted.
+

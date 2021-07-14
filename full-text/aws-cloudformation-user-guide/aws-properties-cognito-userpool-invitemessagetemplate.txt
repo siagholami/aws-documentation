@@ -1,0 +1,40 @@
+AWS::Cognito::UserPool InviteMessageTemplate
+The message template to be used for the welcome message to new users.
+See also Customizing User Invitation Messages.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage)" : String,
+  "[EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject)" : String,
+  "[SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage)" : String
+}
+YAML
+[EmailMessage](#cfn-cognito-userpool-invitemessagetemplate-emailmessage): String
+  [EmailSubject](#cfn-cognito-userpool-invitemessagetemplate-emailsubject): String
+  [SMSMessage](#cfn-cognito-userpool-invitemessagetemplate-smsmessage): String
+Properties
+EmailMessage 
+The message template for email messages.
+Required: No
+Type: String
+Minimum: 6
+Maximum: 20000
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*\{####\}[\p{L}\p{M}\p{S}\p{N}\p{P}\s*]*
+Update requires: No interruption
+EmailSubject 
+The subject line for email messages.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 140
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}\s]
+Update requires: No interruption
+SMSMessage 
+The message template for SMS messages.
+Required: No
+Type: String
+Minimum: 6
+Maximum: 140
+Pattern: .*\{####\}.*
+Update requires: No interruption

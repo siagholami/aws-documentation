@@ -1,0 +1,43 @@
+Other AWS services that use X.509 public key certificates
+The following AWS services also include features that allow you to manage and implement X.509 public key certificates for use as SSL/TLS certificates or for code signing.
+
+
+
+
+Service
+Description
+Topic
+
+
+
+
+Amazon API Gateway
+Establish a custom API and manage the API domain information.
+Set Up Custom Domain Name for an API Gateway
+
+
+AWS CloudFormation
+Automatically provision AWS resources, including ACM certificates.
+Request an ACM Certificate
+
+
+Amazon CloudFront
+Distribute dynamic and static web content to end users as efficiently as possible.
+Choosing How CloudFront Serves HTTPS Requests
+
+
+Code Signing for AWS IoT
+Cryptographically sign code using a certificate such as those provisioned by ACM.
+What is Code Signing for AWS IoT?
+
+
+Elastic Beanstalk
+Easily deploy applications in the AWS Cloud with automated infrastructure provisioning.
+Configure Your Load Balancer to Terminate HTTPS
+
+
+Elastic Load Balancing
+Distribute incoming application traffic across multiple Amazon EC2 instances as efficiently as possible.
+HTTPS Listener for Your Application Load Balancer
+
+

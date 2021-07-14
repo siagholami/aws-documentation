@@ -1,0 +1,189 @@
+Amazon Transcribe Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Transcribe?
+How Amazon Transcribe Works
+Speech Input
+Transcribing Numbers
+Alternative Transcriptions
+Identifying Speakers
+Transcribing Streaming Audio
+Channel Identification
+Custom Vocabularies
+Automatic Content Redaction
+Job Queuing
+Getting Started with Amazon Transcribe
+Step 1: Set up an AWS Account and Create an Administrator User
+Step 2: Set up the AWS Command Line Interface (AWS CLI)
+Step 3: Getting Started Using the Console
+Step 4: Getting Started Using the API
+Getting Started (AWS Command Line Interface)
+Getting Started (AWS SDK for Python (Boto))
+
+
+Step 5: Getting Started With Streaming Audio
+Improving Domain-Specific Transcription Accuracy with Custom Language Models
+Step 1: Preparing the Data
+Step 2: Providing Amazon Transcribe with Data Permissions
+Step 3: Creating a Custom Language Model
+Step 4: Transcribing with a Custom Language Model
+Step 5: Viewing and Updating Your Custom Language Models
+Streaming Transcription
+Event Stream Encoding
+Using Amazon Transcribe Streaming with WebSockets
+Using Amazon Transcribe Streaming With HTTP/2
+HTTP/2 Streaming Retry Client
+Using the HTTP/2 Retry Client
+
+
+Amazon Transcribe Medical
+What Is Amazon Transcribe Medical?
+How Amazon Transcribe Medical Works
+Streaming Transcription Overview
+Batch Transcription Overview
+Transcribing Numbers
+Transcribing Medical Terms and Measurements
+Alternative Transcriptions
+Identifying Speakers
+Channel Identification
+Medical Custom Vocabularies
+
+
+Getting Started with Amazon Transcribe Medical
+Set Up an AWS Account and Create an Administrator User
+Getting Started With Console Streaming
+Getting Started With Batch Transcription
+
+
+Establish a Bi-Directional Connection Using the WebSocket Protocol
+Event Stream Encoding
+
+
+Identifying Speakers
+Identifying Speakers in Audio Files
+Identifying Speakers in Real-time Streams
+
+
+Guidelines and Quotas
+Amazon Transcribe Medical and interface VPC endpoints (AWS PrivateLink)
+Use Vocabulary Filtering to Filter Unwanted Words
+Step 1: Creating a List of Unwanted Words
+Step 2: Creating a Vocabulary Filter
+Step 3: Filtering Transcriptions
+Filtering Batch Transcriptions
+Filtering Streaming Transcriptions
+
+
+Identifying Speakers
+Identifying Speakers In Audio Files
+Identifying Speakers in Real-time Streams
+Security in Amazon Transcribe
+Data Protection in Amazon Transcribe
+Encryption at Rest
+Encryption in Transit
+Key Management
+Opting Out of Using Your Data for Service Improvement
+Amazon Transcribe and interface VPC endpoints (AWS PrivateLink)
+
+
+Identity and Access Management for Amazon Transcribe
+How Amazon Transcribe Works with IAM
+Amazon Transcribe Identity-Based Policy Examples
+Troubleshooting Amazon Transcribe Identity and Access
+
+
+Logging and Monitoring in Amazon Transcribe
+Monitoring Amazon Transcribe API Calls with AWS CloudTrail
+Using Amazon CloudWatch Events with Amazon Transcribe
+
+
+Compliance Validation for Amazon Transcribe
+Resilience in Amazon Transcribe
+Infrastructure Security in Amazon Transcribe
+Guidelines and Quotas
+Document History for Amazon Transcribe
+API Reference
+Actions
+Amazon Transcribe Service
+CreateLanguageModel
+CreateMedicalVocabulary
+CreateVocabulary
+CreateVocabularyFilter
+DeleteLanguageModel
+DeleteMedicalTranscriptionJob
+DeleteMedicalVocabulary
+DeleteTranscriptionJob
+DeleteVocabulary
+DeleteVocabularyFilter
+DescribeLanguageModel
+GetMedicalTranscriptionJob
+GetMedicalVocabulary
+GetTranscriptionJob
+GetVocabulary
+GetVocabularyFilter
+ListLanguageModels
+ListMedicalTranscriptionJobs
+ListMedicalVocabularies
+ListTranscriptionJobs
+ListVocabularies
+ListVocabularyFilters
+StartMedicalTranscriptionJob
+StartTranscriptionJob
+UpdateMedicalVocabulary
+UpdateVocabulary
+UpdateVocabularyFilter
+
+
+Amazon Transcribe Streaming Service
+StartStreamTranscription
+
+
+
+
+Data Types
+Amazon Transcribe Service
+ContentRedaction
+InputDataConfig
+JobExecutionSettings
+LanguageModel
+Media
+MedicalTranscript
+MedicalTranscriptionJob
+MedicalTranscriptionJobSummary
+MedicalTranscriptionSetting
+ModelSettings
+Settings
+Transcript
+TranscriptionJob
+TranscriptionJobSummary
+VocabularyFilterInfo
+VocabularyInfo
+
+
+Amazon Transcribe Streaming Service
+Alternative
+AudioEvent
+AudioStream
+Item
+Result
+Transcript
+TranscriptEvent
+TranscriptResultStream
+
+
+
+
+Common Errors
+Common Parameters
+AWS glossary

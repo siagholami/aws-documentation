@@ -1,0 +1,137 @@
+Creating a Wwise Project for Runtime Text-to-Speech
+You can use the Audiokinetic Wwise audio system in Amazon Lumberyard to implement Text-to-Speech Cloud Gem features in your game project. To use Wwise to integrate sound into your Lumberyard game, you perform the following major steps:
+
+
+Create a Wwise sound project. 
+
+
+Create a sound in the Wwise project. 
+
+
+Create an event to trigger the sound. 
+
+
+Generate the soundbank file and save the Wwise project. 
+
+
+Integrate the Wwise project with your game project. 
+
+
+For the first four steps, you use the Audiokinetic Wwise authoring tool. For the last step, you use the Audio Controls Editor in Lumberyard Editor.
+Prerequisites
+Audiokinetic Wwise LTX – Audiokinetic Wwise LTX is an exclusive, free version of the Audiokinetic Wwise audio system for PC games that is included with Lumberyard. For installation information, see Setting up Wwise LTX.
+Create a Wwise Sound Project
+To create a Wwise sound project and its associated directories, you use the Wwise authoring tool.
+To create a Wwise sound project
+
+
+Run the Wwise LTX tool.
+
+
+In the Project Launcher dialog box, click New.
+
+
+
+In the New Project dialog box, specify the directory for the sound project files. Lumberyard requires that your sound project files (.wproj file and subdirectories) be placed in the dev\game_project\Sounds\wwise_project\ directory.
+
+
+
+Click OK. Your project appears in the wwwise_project directory that you specified.
+
+
+Create a Sound in the Wwise Project
+To create a sound, you use the Audio tab of the Wwise authoring tool.
+To create a sound in the Wwise project
+
+
+In the Wwise Project Explorer panel, create a directory under Actor-Mixer Hierarchy. Right-click Default Work Unit, and then choose New Child, Virtual Folder.
+
+
+
+Give the directory a name.
+
+
+
+Create a sound object. Right-click the directory that you created, and then choose New Child, Sound SFX.
+
+
+Give the sound a name.
+
+
+
+Create an Event to Trigger the Sound
+After you create a sound, you create an event with which you can trigger the sound from the context of your game.
+To create a sound trigger event
+
+
+Under Actor-Mixer Hierarchy, select your new sound.
+
+
+In the project view Contents Editor pane, click Add Source, and then select Wwise Audio Input.
+
+
+
+Right-click the sound that you created. Choose New Event, Play to create an event that can trigger the sound.
+
+
+
+A new event is created with the default name of Play_{sound-name}_{nn}. You can specify a different name if you want. The event ID appears on the upper right.
+
+Generate the Soundbank File and Save the Wwise Project
+After you have created an event for the sound, you generate a soundbank file and save the sound project.
+To generate the soundbank and save the project
+
+In Wwise LTX, click Generate Soundbank.
+
+
+If the Generate Soundbank button is not available in the version of Wwise that you are using, perform the following steps:
+
+
+Open SoundBank Manager. Choose Layouts, SoundBank, or press F7.
+
+
+In the SoundBanks pane, select the Default Work Unit check box.
+
+
+In the Platforms pane, select Windows.
+
+
+In the Languages pane, select English (US).
+
+
+Click Generate.
+
+
+In the Generating SoundBanks - Completed window, click Close.
+
+
+In the Wwise Project menu, choose Save.
+
+
+Integrate the Wwise Project with Your Game Project
+Now you are ready to use Lumberyard's Audio Controls Editor to integrate your Wwise sound project with your Lumberyard game project.
+To integrate the Wwise sound project with your Lumberyard game project
+
+
+In Lumberyard Editor, choose Tools, Other, Audio Controls Editor. Alternatively, click the headphone  icon.
+
+
+In the left panel of Audio Controls Editor, create a new directory. This example creates a directory called wwise.
+
+
+In the Wwise Controls middleware pane (the default location is on the far right) you should see an item for each event that you created and a .bnk file. The .bnk file is the soundbank file that you generated.
+
+
+
+Drag these items from the Wwise Controls pane to the directory that you created on the left. This step alerts your game to the presence of the Wwise objects.
+
+
+Click the item on the left that was created from the .bnk file. The Inspector panel inspects the object.
+
+
+If the list under Preloaded Soundbanks is empty, drag the .bnk file from the Wwise Controls panel into the list of preloaded soundbanks.
+
+
+
+In the Audio Controls Editor, choose File, Save All.
+

@@ -1,0 +1,33 @@
+AWS::EFS::AccessPoint CreationInfo
+Required if the RootDirectory > Path specified does not exist. Specifies the POSIX IDs and permissions to apply to the access point's RootDirectory > Path. If the access point root directory does not exist, EFS creates it with these settings when a client connects to the access point. When specifying CreationInfo, you must include values for all properties. 
+Important
+If you do not provide CreationInfo and the specified RootDirectory does not exist, attempts to mount the file system using the access point will fail.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[OwnerGid](#cfn-efs-accesspoint-creationinfo-ownergid)" : String,
+  "[OwnerUid](#cfn-efs-accesspoint-creationinfo-owneruid)" : String,
+  "[Permissions](#cfn-efs-accesspoint-creationinfo-permissions)" : String
+}
+YAML
+[OwnerGid](#cfn-efs-accesspoint-creationinfo-ownergid): String
+  [OwnerUid](#cfn-efs-accesspoint-creationinfo-owneruid): String
+  [Permissions](#cfn-efs-accesspoint-creationinfo-permissions): String
+Properties
+OwnerGid 
+Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+Required: Yes
+Type: String
+Update requires: Replacement
+OwnerUid 
+Specifies the POSIX user ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
+Required: Yes
+Type: String
+Update requires: Replacement
+Permissions 
+Specifies the POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
+Required: Yes
+Type: String
+Pattern: ^[0-7]{3,4}$
+Update requires: Replacement

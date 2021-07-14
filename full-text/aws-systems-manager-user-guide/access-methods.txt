@@ -1,0 +1,10 @@
+Accessing Systems Manager
+You can work with Systems Manager in any of the following ways:
+Systems Manager Console
+The AWS Systems Manager console is a browser-based interface to access and use Systems Manager.
+AWS Command Line Tools
+The AWS command line tools let you issue commands at your system's command line to perform Systems Manager and other AWS tasks, and is supported on Windows, Linux, and macOS. Using the CLI can be faster and more convenient than using the console. The command line tools also are useful if you want to build scripts that perform AWS tasks. 
+AWS provides two sets of command line tools: the AWS Command Line Interface (AWS CLI) and the AWS Tools for Windows PowerShell. For information about installing and using the AWS CLI, see the AWS Command Line Interface User Guide. For information about installing and using the Tools for Windows PowerShell, see the AWS Tools for Windows PowerShell User Guide.
+On your Windows Server instances, Windows PowerShell 3.0 or later is required to run certain SSM documents (for example, the legacy AWS-ApplyPatchBaseline document). Verify that your Windows Server instances are running Windows Management Framework 3.0 or later. The framework includes PowerShell.
+AWS SDKs
+AWS provides software development kits (SDKs) that consist of libraries and sample code for various programming languages and platforms (for example, Java, Python, Ruby, .NET, iOS and Android, and others). The SDKs provide a convenient way to create programmatic access to Systems Manager. For information about the AWS SDKs, including how to download and install them, see Tools for Amazon Web Services.

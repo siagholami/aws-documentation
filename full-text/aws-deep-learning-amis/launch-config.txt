@@ -1,0 +1,16 @@
+Launching and Configuring a DLAMI
+If you're here you should already have a good idea of which AMI you want to launch. If not, choose a DLAMI using the AMI selection guidelines found throughout Getting Started or use the full listing of AMIs in the Appendix section, AMI Options. 
+You should also know which instance type and region you're going to choose. If not, browse Selecting the Instance Type for DLAMI. 
+Note
+We will use p2.xlarge as the default instance type in the examples. Just replace this with whichever instance type you have in mind.
+Important
+If you plan to use Elastic Inference, you have Elastic Inference Setup that must be completed prior to launching your DLAMI.
+Topics
+ Step 1: Launch a DLAMI
+ EC2 Console
+ Marketplace Search
+ Step 2: Connect to the DLAMI
+ Step 3: Secure Your DLAMI Instance
+ Step 4: Test Your DLAMI
+ Clean Up
+ Set up a Jupyter Notebook Server

@@ -1,0 +1,31 @@
+Secure Packager and Encoder Key Exchange API Specification Partner and Customer Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Secure Packager and Encoder Key Exchange?
+Are You New to SPEKE?
+Customer Onboarding
+SPEKE API Specification
+Authentication
+SPEKE API
+Customizations and Constraints to the DASH-IF Specification
+Standard Payload Components
+Live Workflow Method Call Examples
+VOD Workflow Method Call Examples
+Content Key Encryption
+Heartbeat
+Overriding the Key Identifier (KID)
+
+
+Document History
+AWS Glossary

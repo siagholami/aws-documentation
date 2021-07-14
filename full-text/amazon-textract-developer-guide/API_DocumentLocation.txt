@@ -1,0 +1,14 @@
+DocumentLocation
+The Amazon S3 bucket that contains the document to be processed. It's used by asynchronous operations such as StartDocumentTextDetection.
+The input document can be an image file in JPEG or PNG format. It can also be a file in PDF format.
+Contents
+S3Object 
+The Amazon S3 bucket that contains the input document.
+Type: S3Object object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

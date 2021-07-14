@@ -1,0 +1,55 @@
+Creating and Managing Particle Emitters
+You can create, edit, and manage emitters for particle effects in the Particle Editor. For more information about emitter attributes and parameters displayed in the Attributes panel, see Particles Attributes Reference.
+Before you can create or edit emitters, you must first set up a particle library. For more information, see Adding Particle Libraries.
+Creating Emitters
+Do the following to create an emitter. You must have already created a library.
+To create new emitters
+
+
+In Lumberyard Editor, choose Tools, Particle Editor.
+
+
+In the Libraries panel, under your selected library, click Add Particle. Alternatively, right-click the library name and then choose Add New, Add Particle.
+
+
+Enter a name for the emitter and press Enter. Do not use special characters in the name.
+
+
+In the Attributes panel, edit the attributes and parameters as needed.
+
+
+Editing Emitters
+Do the following to edit emitter attributes and parameters.
+To edit emitter attributes and parameters
+
+
+In Lumberyard Editor, click Tools, Particle Editor.
+
+
+In the Libraries panel, choose an emitter.
+
+
+In the Attributes panel, adjust the attribute and parameter settings and values to achieve the intended effect.
+
+
+Duplicating Emitters
+Do the following to duplicate an emitter. This will also duplicate any associated child emitters.
+To duplicate emitters
+
+
+In Lumberyard Editor, click Tools, Particle Editor.
+
+
+In the Libraries panel, select the emitter that you want to duplicate. Right-click the emitter and choose Duplicate. Alternatively, press CtrlD.
+
+
+In the dialog box, enter a name for the emitter and click OK.
+
+
+Topics
+ Creating Emitters
+ Editing Emitters
+ Duplicating Emitters
+ Creating Child Emitters
+ Organizing Emitters in a Library
+ Reverting Changes to Emitter Attributes

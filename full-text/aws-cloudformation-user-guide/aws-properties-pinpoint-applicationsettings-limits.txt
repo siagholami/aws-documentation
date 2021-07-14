@@ -1,0 +1,37 @@
+AWS::Pinpoint::ApplicationSettings Limits
+Specifies the default sending limits for campaigns in the application. You can override these limits for a specific campaign.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Daily](#cfn-pinpoint-applicationsettings-limits-daily)" : Integer,
+  "[MaximumDuration](#cfn-pinpoint-applicationsettings-limits-maximumduration)" : Integer,
+  "[MessagesPerSecond](#cfn-pinpoint-applicationsettings-limits-messagespersecond)" : Integer,
+  "[Total](#cfn-pinpoint-applicationsettings-limits-total)" : Integer
+}
+YAML
+[Daily](#cfn-pinpoint-applicationsettings-limits-daily): Integer
+  [MaximumDuration](#cfn-pinpoint-applicationsettings-limits-maximumduration): Integer
+  [MessagesPerSecond](#cfn-pinpoint-applicationsettings-limits-messagespersecond): Integer
+  [Total](#cfn-pinpoint-applicationsettings-limits-total): Integer
+Properties
+Daily 
+The maximum number of messages that a campaign can send to a single endpoint during a 24-hour period. The maximum value is 100.
+Required: No
+Type: Integer
+Update requires: No interruption
+MaximumDuration 
+The maximum amount of time, in seconds, that a campaign can attempt to deliver a message after the scheduled start time for the campaign. The minimum value is 60 seconds.
+Required: No
+Type: Integer
+Update requires: No interruption
+MessagesPerSecond 
+The maximum number of messages that a campaign can send each second. The minimum value is 50. The maximum value is 20,000.
+Required: No
+Type: Integer
+Update requires: No interruption
+Total 
+The maximum number of messages that a campaign can send to a single endpoint during the course of the campaign. The maximum value is 100.
+Required: No
+Type: Integer
+Update requires: No interruption

@@ -1,0 +1,30 @@
+AWS::Batch::JobDefinition MountPoints
+Details on a Docker volume mount point that is used in a job's container properties. This parameter maps to Volumes in the Create a container section of the Docker Remote API and the --volume option to docker run.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath)" : String,
+  "[ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly)" : Boolean,
+  "[SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume)" : String
+}
+YAML
+[ContainerPath](#cfn-batch-jobdefinition-mountpoints-containerpath): String
+  [ReadOnly](#cfn-batch-jobdefinition-mountpoints-readonly): Boolean
+  [SourceVolume](#cfn-batch-jobdefinition-mountpoints-sourcevolume): String
+Properties
+ContainerPath 
+The path on the container at which to mount the host volume.
+Required: No
+Type: String
+Update requires: No interruption
+ReadOnly 
+If this value is true, the container has read-only access to the volume; otherwise, the container can write to the volume. The default value is false.
+Required: No
+Type: Boolean
+Update requires: No interruption
+SourceVolume 
+The name of the volume to mount.
+Required: No
+Type: String
+Update requires: No interruption

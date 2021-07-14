@@ -1,0 +1,3 @@
+Elastic Load Balancing resource type reference
+Resource types
+ AWS::ElasticLoadBalancing::LoadBalancer

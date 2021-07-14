@@ -1,0 +1,23 @@
+AWS::OpsWorks::Stack ElasticIp
+Describes an Elastic IP address.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Ip](#cfn-opsworks-stack-elasticip-ip)" : String,
+  "[Name](#cfn-opsworks-stack-elasticip-name)" : String
+}
+YAML
+[Ip](#cfn-opsworks-stack-elasticip-ip): String
+  [Name](#cfn-opsworks-stack-elasticip-name): String
+Properties
+Ip 
+The IP address.
+Required: Yes
+Type: String
+Update requires: No interruption
+Name 
+The name.
+Required: No
+Type: String
+Update requires: No interruption

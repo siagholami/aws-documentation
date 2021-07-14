@@ -1,0 +1,7 @@
+Seller toolkit
+The AWS Marketplace Management Portal is your primary tool for selling products on AWS Marketplace. The following additional tools can give you more insight into your customer base and help you better understand your sales. 
+ AWS Marketplace Commerce Analytics Service
+ AWS Marketplace Enhanced Data Sharing Program
+ AWS Marketplace Field Demonstration Program
+ Product Support Connection
+ Seller reports and data feeds

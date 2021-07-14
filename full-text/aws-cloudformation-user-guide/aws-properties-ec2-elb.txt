@@ -1,0 +1,176 @@
+AWS::ElasticLoadBalancing::LoadBalancer
+Specifies a Classic Load Balancer.
+You can specify the AvailabilityZones or Subnets property, but not both.
+If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the DependsOn attribute to declare a dependency on the VPC-gateway attachment.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
+  "Properties" : {
+      "[AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy)" : AccessLoggingPolicy,
+      "[AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy)" : [ AppCookieStickinessPolicy, ... ],
+      "[AvailabilityZones](#cfn-ec2-elb-availabilityzones)" : [ String, ... ],
+      "[ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy)" : ConnectionDrainingPolicy,
+      "[ConnectionSettings](#cfn-ec2-elb-connectionsettings)" : ConnectionSettings,
+      "[CrossZone](#cfn-ec2-elb-crosszone)" : Boolean,
+      "[HealthCheck](#cfn-ec2-elb-healthcheck)" : HealthCheck,
+      "[Instances](#cfn-ec2-elb-instances)" : [ String, ... ],
+      "[LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy)" : [ LBCookieStickinessPolicy, ... ],
+      "[Listeners](#cfn-ec2-elb-listeners)" : [ Listeners, ... ],
+      "[LoadBalancerName](#cfn-ec2-elb-elbname)" : String,
+      "[Policies](#cfn-ec2-elb-policies)" : [ Policies, ... ],
+      "[Scheme](#cfn-ec2-elb-scheme)" : String,
+      "[SecurityGroups](#cfn-ec2-elb-securitygroups)" : [ String, ... ],
+      "[Subnets](#cfn-ec2-elb-subnets)" : [ String, ... ],
+      "[Tags](#cfn-elasticloadbalancing-loadbalancer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::ElasticLoadBalancing::LoadBalancer
+Properties: 
+  [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy): 
+    AccessLoggingPolicy
+  [AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy): 
+    - AppCookieStickinessPolicy
+  [AvailabilityZones](#cfn-ec2-elb-availabilityzones): 
+    - String
+  [ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy): 
+    ConnectionDrainingPolicy
+  [ConnectionSettings](#cfn-ec2-elb-connectionsettings): 
+    ConnectionSettings
+  [CrossZone](#cfn-ec2-elb-crosszone): Boolean
+  [HealthCheck](#cfn-ec2-elb-healthcheck): 
+    HealthCheck
+  [Instances](#cfn-ec2-elb-instances): 
+    - String
+  [LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy): 
+    - LBCookieStickinessPolicy
+  [Listeners](#cfn-ec2-elb-listeners): 
+    - Listeners
+  [LoadBalancerName](#cfn-ec2-elb-elbname): String
+  [Policies](#cfn-ec2-elb-policies): 
+    - Policies
+  [Scheme](#cfn-ec2-elb-scheme): String
+  [SecurityGroups](#cfn-ec2-elb-securitygroups): 
+    - String
+  [Subnets](#cfn-ec2-elb-subnets): 
+    - String
+  [Tags](#cfn-elasticloadbalancing-loadbalancer-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+AccessLoggingPolicy 
+Information about where and how access logs are stored for the load balancer.
+Required: No
+Type: AccessLoggingPolicy
+Update requires: No interruption
+AppCookieStickinessPolicy 
+Information about a policy for application-controlled session stickiness.
+Required: No
+Type: List of AppCookieStickinessPolicy
+Update requires: No interruption
+AvailabilityZones 
+The Availability Zones for the load balancer. For load balancers in a VPC, specify Subnets instead.
+Update requires replacement if you did not previously specify an Availability Zone or if you are removing all Availability Zones. Otherwise, update requires no interruption.
+Required: No
+Type: List of String
+Update requires: Some interruptions
+ConnectionDrainingPolicy 
+If enabled, the load balancer allows existing requests to complete before the load balancer shifts traffic away from a deregistered or unhealthy instance.
+For more information, see Configure Connection Draining in the Classic Load Balancers Guide.
+Required: No
+Type: ConnectionDrainingPolicy
+Update requires: No interruption
+ConnectionSettings 
+If enabled, the load balancer allows the connections to remain idle (no data is sent over the connection) for the specified duration.
+By default, Elastic Load Balancing maintains a 60-second idle connection timeout for both front-end and back-end connections of your load balancer. For more information, see Configure Idle Connection Timeout in the Classic Load Balancers Guide.
+Required: No
+Type: ConnectionSettings
+Update requires: No interruption
+CrossZone 
+If enabled, the load balancer routes the request traffic evenly across all instances regardless of the Availability Zones.
+For more information, see Configure Cross-Zone Load Balancing in the Classic Load Balancers Guide.
+Required: No
+Type: Boolean
+Update requires: No interruption
+HealthCheck 
+The health check settings to use when evaluating the health of your EC2 instances.
+Update requires replacement if you did not previously specify health check settings or if you are removing the health check settings. Otherwise, update requires no interruption.
+Required: No
+Type: HealthCheck
+Update requires: Some interruptions
+Instances 
+The IDs of the instances for the load balancer.
+Required: No
+Type: List of String
+Update requires: No interruption
+LBCookieStickinessPolicy 
+Information about a policy for duration-based session stickiness.
+Required: No
+Type: List of LBCookieStickinessPolicy
+Update requires: No interruption
+Listeners 
+The listeners for the load balancer. You can specify at most one listener per port.
+If you update the properties for a listener, AWS CloudFormation deletes the existing listener and creates a new one with the specified properties. While the new listener is being created, clients cannot connect to the load balancer.
+Required: Yes
+Type: List of Listeners
+Update requires: No interruption
+LoadBalancerName 
+The name of the load balancer. This name must be unique within your set of load balancers for the region.
+If you don't specify a name, AWS CloudFormation generates a unique physical ID for the load balancer. For more information, see Name Type. If you specify a name, you cannot perform updates that require replacement of this resource, but you can perform other updates. To replace the resource, specify a new name. 
+Required: No
+Type: String
+Update requires: Replacement
+Policies 
+The policies defined for your Classic Load Balancer. Specify only back-end server policies.
+Required: No
+Type: List of Policies
+Update requires: No interruption
+Scheme 
+The type of load balancer. Valid only for load balancers in a VPC.
+If Scheme is internet-facing, the load balancer has a public DNS name that resolves to a public IP address.
+If Scheme is internal, the load balancer has a public DNS name that resolves to a private IP address.
+Required: No
+Type: String
+Update requires: Replacement
+SecurityGroups 
+The security groups for the load balancer. Valid only for load balancers in a VPC.
+Required: No
+Type: List of String
+Update requires: No interruption
+Subnets 
+The IDs of the subnets for the load balancer. You can specify at most one subnet per Availability Zone.
+Update requires replacement if you did not previously specify a subnet or if you are removing all subnets. Otherwise, update requires no interruption. To update to a different subnet in the current Availability Zone, you must first update to a subnet in a different Availability Zone, then update to the new subnet in the original Availability Zone.
+Required: No
+Type: List of String
+Update requires: Some interruptions
+Tags 
+The tags associated with a load balancer.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the name of the load balancer.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+CanonicalHostedZoneName 
+The name of the Route 53 hosted zone that is associated with the load balancer. Internal-facing load balancers don't use this value, use DNSName instead.
+CanonicalHostedZoneNameID 
+The ID of the Route 53 hosted zone name that is associated with the load balancer.
+DNSName 
+The DNS name for the load balancer.
+SourceSecurityGroup.GroupName 
+The name of the security group that you can use as part of your inbound rules for your load balancer's back-end instances.
+SourceSecurityGroup.OwnerAlias 
+The owner of the source security group.
+See also
+
+Elastic Load Balancing Template Snippets 
+CreateLoadBalancer in the Elastic Load Balancing API Reference (version 2012-06-01) 
+ModifyLoadBalancerAttributes in the Elastic Load Balancing API Reference (version 2012-06-01) 
+ConfigureHealthCheck in the Elastic Load Balancing API Reference (version 2012-06-01) 
+User Guide for Classic Load Balancers 

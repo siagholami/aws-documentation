@@ -1,0 +1,31 @@
+Celebrity
+Provides information about a celebrity recognized by the RecognizeCelebrities operation.
+Contents
+Face 
+Provides information about the celebrity's face, such as its location on the image.
+Type: ComparedFace object
+Required: No
+Id 
+A unique identifier for the celebrity. 
+Type: String
+Pattern: [0-9A-Za-z]* 
+Required: No
+MatchConfidence 
+The confidence, in percentage, that Amazon Rekognition has that the recognized face is the celebrity.
+Type: Float
+Valid Range: Minimum value of 0. Maximum value of 100.
+Required: No
+Name 
+The name of the celebrity.
+Type: String
+Required: No
+Urls 
+An array of URLs pointing to additional information about the celebrity. If there is no additional information about the celebrity, this list is empty.
+Type: Array of strings
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

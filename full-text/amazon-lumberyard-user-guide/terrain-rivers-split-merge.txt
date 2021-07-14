@@ -1,0 +1,14 @@
+Splitting and Merging Rivers
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+You can split a river apart and merge two rivers together.
+To split or merge rivers
+
+
+In the Rollup Bar, on the Objects tab, click Misc, River.
+
+
+Under Spline Parameters, click Edit, and do either of the following in your level:
+    To split a river apart, select the desired point and click Split.
+    To merge two rivers together, select the end point of one river and the start point of another river. Then click Merge.
+

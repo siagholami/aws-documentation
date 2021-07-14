@@ -1,0 +1,31 @@
+SVL views
+SVL views are system views that contain references to STL tables and logs for more detailed information.
+These views provide quicker and easier access to commonly queried data found in those tables.
+Note
+The SVL_QUERY_SUMMARY view only contains information about queries executed by Amazon Redshift, not other utility and DDL commands. For a complete listing and information on all statements executed by Amazon Redshift, including DDL and utility commands, you can query the SVL_STATEMENTTEXT view
+Topics
+ SVL_COMPILE
+ SVL_FEDERATED_QUERY
+ SVL_MULTI_STATEMENT_VIOLATIONS
+ SVL_MV_REFRESH_STATUS
+ SVL_QERROR
+ SVL_QLOG
+ SVL_QUERY_METRICS
+ SVL_QUERY_METRICS_SUMMARY
+ SVL_QUERY_QUEUE_INFO
+ SVL_QUERY_REPORT
+ SVL_QUERY_SUMMARY
+ SVL_S3LIST
+ SVL_S3LOG
+ SVL_S3PARTITION
+ SVL_S3PARTITION_SUMMARY
+ SVL_S3QUERY
+ SVL_S3QUERY_SUMMARY
+ SVL_S3RETRIES
+ SVL_STATEMENTTEXT
+ SVL_STORED_PROC_CALL
+ SVL_STORED_PROC_MESSAGES
+ SVL_TERMINATE
+ SVL_UDF_LOG
+ SVL_USER_INFO
+ SVL_VACUUM_PERCENTAGE

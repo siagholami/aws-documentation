@@ -1,0 +1,7 @@
+Working with AWS Services
+Use this section to help you set up Amazon QuickSight to work with other AWS services, such as AWS Identity and Access Management (IAM) and AWS CloudTrail.
+Topics
+ Working with AWS Data Sources
+ Working with AWS Identity and Access Management (IAM) Users, Roles, and Policies
+ Working with Amazon VPC
+ Logging Operations with AWS CloudTrail

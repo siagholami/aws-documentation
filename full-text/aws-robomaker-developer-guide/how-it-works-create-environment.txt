@@ -1,0 +1,46 @@
+Create a ROS Development Environment
+Before you create a robot application, you need a properly configured development environment. Robot development with AWS RoboMaker depends on a number of open source packages. 
+
+
+
+
+Package
+Version
+Description
+
+
+
+
+Robot Operating System (ROS)
+Kinetic Melodic
+Libraries and tools to help developers create robot applications.
+
+
+Robot Operating System 2 (ROS2)
+Dashing
+A newer version of ROS still under development. For more information about using ROS 2 with AWS RoboMaker, see ROS 2 Dashing (Beta).
+
+
+Colcon
+Latest
+A command line tool for bundling ROS robot and simulation applications.
+
+
+Gazebo
+7 9
+Tool for simulating robots in complex environments.
+
+
+rviz
+Melodic Dashing
+Tool for visualizing sensor data and state information from ROS in 3D.
+
+
+rqt
+Melodic Dashing
+Framework and plugins based on Qt for ROS GUI development.
+
+
+
+You can create your own development environment or update an existing development environment to support AWS RoboMaker. Most developers use Ubuntu or other supported Linux variants. Other operating systems might be compatible. 
+AWS RoboMaker provides a quick and easy way to create a development environment that is already configured for robot development.

@@ -1,0 +1,274 @@
+AWS Elemental MediaPackage User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Elemental MediaPackage?
+Concepts and Terminology
+Supported Inputs and Outputs
+Live Supported Codecs and Input Types
+Live-to-VOD Supported Codecs and Input Types
+VOD Supported Codecs and Input Types
+Creating a SMIL File
+
+
+
+
+How AWS Elemental MediaPackage Works
+Live Content Processing
+General AWS Elemental MediaPackage Live Processing Flow
+Live Input Redundancy AWS Elemental MediaPackage Processing Flow
+
+
+VOD Content Processing
+Live and VOD Manifest Reference
+
+
+Features of AWS Elemental MediaPackage
+Setting Up AWS Elemental MediaPackage
+Signing Up for AWS
+Creating an Admin IAM User
+Creating a Non-Admin IAM User
+Step 1: (Optional) Create a Policy for Amazon CloudFront
+Step 2: (Optional) Create a Policy for AWS Elemental MediaPackage VOD
+Step 3: Create Users
+
+
+Allowing AWS Elemental MediaPackage to Access Other AWS Services
+Step 1: Create a Policy
+Amazon S3 Access for VOD Workflows
+Amazon S3 Access for Live-to-VOD Workflows
+Secrets Manager Access for CDN Authorization
+
+
+Step 2: Create a Role
+Step 3: Modify the Trust Relationship
+
+
+(Optional) Setting Up Encryption
+Getting Started with AWS Elemental MediaPackage
+Getting Started with Live Content Delivery in AWS Elemental MediaPackage
+Prerequisites
+Step 1: Access AWS Elemental MediaPackage
+Step 2: Create a Channel
+Step 3: Create Endpoints
+(Optional) Step 4: Monitor AWS Elemental MediaPackage Activity
+Step 5: Clean Up
+
+
+Getting Started with Live-to-VOD Content Delivery in AWS Elemental MediaPackage
+Prerequisites
+Step 1: Access AWS Elemental MediaPackage
+Step 2: Ingest Live Content
+Step 3: Extract a VOD Asset
+Step 4: (Optional) Output VOD Content
+(Optional) Step 5: Monitor AWS Elemental MediaPackage Activity
+Step 6: Clean Up
+
+
+Getting Started with VOD Content Delivery in AWS Elemental MediaPackage
+Prerequisites
+Step 1: Access AWS Elemental MediaPackage
+Step 2: Create a Packaging Group
+Step 3: Create a Packaging Configuration
+Step 4: Create an Asset
+Step 5: Provide Playback URLs
+(Optional) Step 6: Monitor AWS Elemental MediaPackage Activity
+Step 7: Clean Up
+
+
+Delivering Live Content from AWS Elemental MediaPackage
+Working with Channels in AWS Elemental MediaPackage
+Creating a Channel
+Viewing Channel Details
+Editing a Channel
+Rotating Credentials on an Input URL
+Deleting a Channel
+Adding an Endpoint to a Channel
+
+
+Working with Endpoints in AWS Elemental MediaPackage
+Creating an Endpoint
+Creating an HLS Endpoint
+New Endpoint Fields
+Packager Settings Fields
+Encryption Fields
+Access Control Fields
+Streams to Include Fields
+
+
+Creating a Microsoft Smooth Streaming Endpoint
+New Endpoint Fields
+Packager Settings Fields
+Encryption Fields
+Access Control Fields
+Streams to Include Fields
+
+
+Creating a Common Media Application Format (CMAF) Endpoint
+New Endpoint Fields
+Packager Settings Fields
+HLS Manifest Fields
+Encryption Fields
+Access Control Fields
+Streams to Include Fields
+
+
+Creating a DASH Endpoint
+New Endpoint Fields
+Packager Settings Fields
+Encryption Fields
+Access Control Fields
+Streams to Include Fields
+
+
+
+
+Viewing All Endpoints Associated with a Channel
+Viewing a Single Endpoint
+Editing an Endpoint
+Deleting an Endpoint
+Previewing an Endpoint
+
+
+Delivering VOD Content from AWS Elemental MediaPackage
+Working with Packaging Groups in AWS Elemental MediaPackage
+Creating a Packaging Group
+Viewing Packaging Group Details
+Editing a Packaging Group
+Deleting a Packaging Group
+Adding a Packaging Configuration to a Packaging Group
+
+
+Working with Packaging Configurations in AWS Elemental MediaPackage
+Creating a Packaging Configuration
+Creating an HLS Packaging Configuration
+General Settings Fields
+Manifest Settings Fields
+Stream Selection Fields
+Encryption Fields
+
+
+Creating a DASH Packaging Configuration
+General Settings Fields
+Manifest Settings Fields
+Stream Selection Fields
+Encryption Fields
+
+
+Creating a Microsoft Smooth Packaging Configuration
+General Settings Fields
+Manifest Settings Fields
+Stream Selection Fields
+Encryption Fields
+
+
+Creating a Common Media Application Format (CMAF) Packaging Configuration
+General Settings Fields
+Manifest Settings Fields
+Stream Selection Fields
+Encryption Fields
+
+
+
+
+Viewing Packaging Configuration Details
+Editing a Packaging Configuration
+Deleting a Packaging Configuration
+
+
+Working with Assets in AWS Elemental MediaPackage
+Ingesting an Asset
+Asset Access Fields
+Asset Details Fields
+Packaging Settings Field
+
+
+Viewing Asset Details
+Editing an Asset
+Deleting an Asset
+
+
+Creating Live-to-VOD Assets with AWS Elemental MediaPackage
+Live-to-VOD Requirements
+How Live-to-VOD Works
+Working with Harvest Jobs
+Creating a Harvest Job
+Basic Details
+Start and End Date and Time
+Destination
+
+
+Viewing Harvest Job Details
+Editing a Harvest Job
+Deleting a Harvest Job
+
+
+Features in AWS Elemental MediaPackage
+Content Delivery Network (CDN) Authorization in AWS Elemental MediaPackage
+Content Encryption in AWS Elemental MediaPackage
+Encrypted Content Keys
+Key Rotation Expected Behavior
+
+
+DASH Manifest Options in AWS Elemental MediaPackage
+Multi-period DASH in AWS Elemental MediaPackage
+Compacted DASH Manifests
+DASH Manifest Segment Template Format
+media Attribute in SegmentTemplate
+duration Attribute in the SegmentTemplate
+
+
+
+
+Rendition Groups Reference in AWS Elemental MediaPackage
+SCTE-35 Message Options in AWS Elemental MediaPackage
+Time-shifted Viewing Reference in AWS Elemental MediaPackage
+Security in AWS Elemental MediaPackage
+Data Protection in AWS Elemental MediaPackage
+Implementing DRM with AWS Elemental MediaPackage
+Implementing CDN Authorization with AWS Elemental MediaPackage
+
+
+Identity and Access Management in AWS Elemental MediaPackage
+How AWS Elemental MediaPackage Works with IAM
+AWS Elemental MediaPackage Identity-Based Policy Examples
+IAM Policy Examples for Secrets in AWS Secrets Manager
+Troubleshooting AWS Elemental MediaPackage Identity and Access
+
+
+Logging and Monitoring in AWS Elemental MediaPackage
+Compliance Validation for AWS Elemental MediaPackage
+Resilience in AWS Elemental MediaPackage
+Infrastructure Security in AWS Elemental MediaPackage
+Monitoring AWS Elemental MediaPackage
+Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics
+AWS Elemental MediaPackage Live Content Metrics
+AWS Elemental MediaPackage VOD Content Metrics
+
+
+Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events
+AWS Elemental MediaPackage Events
+Creating Event Notifications
+
+
+Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail
+Tagging AWS Elemental MediaPackage Resources
+Working with Content Delivery Networks (CDNs)
+Using AWS Elemental MediaPackage with Amazon CloudFront
+Using Content Delivery Network (CDN) Authorization
+Quotas in AWS Elemental MediaPackage
+Live Content Quotas
+VOD Content Quotas
+AWS Elemental MediaPackage Related Information
+Document History for User Guide
+AWS Glossary

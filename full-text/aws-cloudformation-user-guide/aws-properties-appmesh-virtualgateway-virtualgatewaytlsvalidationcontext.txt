@@ -1,0 +1,17 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContext
+An object that represents a Transport Layer Security (TLS) validation context.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Trust](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust)" : VirtualGatewayTlsValidationContextTrust
+}
+YAML
+[Trust](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust): 
+    VirtualGatewayTlsValidationContextTrust
+Properties
+Trust 
+A reference to an object that represents a TLS validation context trust.
+Required: Yes
+Type: VirtualGatewayTlsValidationContextTrust
+Update requires: No interruption

@@ -1,0 +1,8 @@
+Update Code dialog box
+The Update Code dialog box in the AWS Toolkit for JetBrains is displayed whenever you update an AWS Lambda function.
+
+The Update Code dialog box contains the following items.
+Handler
+Required. The identifier of the corresponding function handler for Java, Python, Node.js, or C#.
+Source Bucket
+Required. Choose an existing Amazon S3 bucket in the connected AWS account for the AWS Serverless Application Model Command Line Interface (AWS SAM CLI) to use to deploy the function to Lambda. To create an Amazon S3 bucket in the account and have the AWS SAM CLI use that one instead, choose Create, and then follow the on-screen instructions.

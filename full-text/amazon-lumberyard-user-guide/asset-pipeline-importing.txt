@@ -1,0 +1,42 @@
+Importing Assets into Lumberyard
+You can import assets into your Lumberyard game project directory with one of the following.
+Importing Assets Manually into Lumberyard
+You can import assets even if Lumberyard isn't running. You can do this at any time.
+To import assets manually
+
+
+Navigate to your game project directory, such as lumberyard_version/dev/My_Game_Project/Objects.
+
+
+Copy or move the assets to your game project directory. For example, you can add your .cgf files to the specified directory.
+    If Asset Processor is running, it detects the new files and converts them for use in Lumberyard Editor.
+    If Asset Processor isn't running, Asset Processor automatically detects the new files the next time you start Lumberyard Editor.
+
+
+Importing Assets from Lumberyard Editor
+To import assets from Lumberyard Editor
+
+
+In Lumberyard Editor, choose File and then Import. 
+
+
+Navigate to your assets and select the files to add to your game project directory. Then click OK.
+
+
+In the Import Asset(s) dialog box, the Destination Folder path automatically shows the root of your game project directory. You can click Browse to specify a subdirectory in your game project directory.
+Note
+You can import assets to a directory only in the current game project.
+
+
+Select whether you want to Copy Files from their original location or Move Files and then click Import. If you copy the files, Asset Processor doesn't monitor changes to the original files.
+
+
+
+In the Processing asset dialog box, click View status to check the status of your assets.
+
+
+
+Tutorials: Importing Assets into Lumberyard
+To learn more about importing your assets, see the following video tutorials:
+ Tutorials: Importing FBX Files as Actors and Motions
+ Tutorial: Importing FBX Files as Static Meshes

@@ -1,0 +1,2 @@
+AWS::SageMaker::MonitoringSchedule Environment
+Sets the environment variables in the Docker container.

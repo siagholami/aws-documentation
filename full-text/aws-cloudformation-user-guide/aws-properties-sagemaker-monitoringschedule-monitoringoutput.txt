@@ -1,0 +1,17 @@
+AWS::SageMaker::MonitoringSchedule MonitoringOutput
+The output object for a monitoring job.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3Output](#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output)" : S3Output
+}
+YAML
+[S3Output](#cfn-sagemaker-monitoringschedule-monitoringoutput-s3output): 
+    S3Output
+Properties
+S3Output 
+The Amazon S3 storage location where the results of a monitoring job are saved.
+Required: Yes
+Type: S3Output
+Update requires: No interruption

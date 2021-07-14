@@ -1,0 +1,22 @@
+Preparing the Terrain
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+For all water volumes such as lakes, ponds, and reservoirs, the terrain must first be lowered and sculpted to contain the body of water. To create the bottom and walls of your body of water, you need to consider the depth, shape, and edges of your landform geography. 
+For rivers, see Preparing the River Terrain.
+To prepare the terrain for bodies of water
+
+
+In the Rollup Bar, on the Terrain tab, click Modify, Rise/Lower.
+
+
+Adjust the Outside Radius value as needed for the widest point of the water volume.
+
+
+Adjust the Height value to a negative value for the depth of the water volume.
+
+
+Adjust the other terrain brush settings as needed to fine-tune the look of the walls. See Terrain Brush Parameters for more information.
+
+
+In your level, drag to define the shape. Release the mouse button and repeat as needed.
+

@@ -1,0 +1,20 @@
+AWS::KinesisAnalyticsV2::Application SqlApplicationConfiguration
+Describes the inputs, outputs, and reference data sources for a SQL-based Kinesis Data Analytics application.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)" : [ Input, ... ]
+}
+YAML
+[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs): 
+    - Input
+Properties
+Inputs 
+The array of Input objects describing the input streams used by the application.
+Required: No
+Type: List of Input
+Update requires: No interruption
+See also
+
+SqlApplicationConfiguration in the Amazon Kinesis Data Analytics API Reference 

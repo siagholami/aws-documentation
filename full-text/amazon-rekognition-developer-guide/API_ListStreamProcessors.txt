@@ -1,0 +1,69 @@
+ListStreamProcessors
+Gets a list of stream processors that you have created with CreateStreamProcessor. 
+Request Syntax
+{
+   "[MaxResults](#rekognition-ListStreamProcessors-request-MaxResults)": number,
+   "[NextToken](#rekognition-ListStreamProcessors-request-NextToken)": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ MaxResults  
+Maximum number of stream processors you want Amazon Rekognition Video to return in the response. The default is 1000. 
+Type: Integer
+Valid Range: Minimum value of 1.
+Required: No
+ NextToken  
+If the previous response was incomplete (because there are more stream processors to retrieve), Amazon Rekognition Video returns a pagination token in the response. You can use this pagination token to retrieve the next set of stream processors. 
+Type: String
+Length Constraints: Maximum length of 255.
+Required: No
+Response Syntax
+{
+   "[NextToken](#rekognition-ListStreamProcessors-response-NextToken)": "string",
+   "[StreamProcessors](#rekognition-ListStreamProcessors-response-StreamProcessors)": [ 
+      { 
+         "[Name](API_StreamProcessor.md#rekognition-Type-StreamProcessor-Name)": "string",
+         "[Status](API_StreamProcessor.md#rekognition-Type-StreamProcessor-Status)": "string"
+      }
+   ]
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ NextToken  
+If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of stream processors. 
+Type: String
+Length Constraints: Maximum length of 255.
+ StreamProcessors  
+List of stream processors that you have created.
+Type: Array of StreamProcessor objects
+Errors
+AccessDeniedException 
+You are not authorized to perform the action.
+HTTP Status Code: 400
+InternalServerError 
+Amazon Rekognition experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidPaginationTokenException 
+Pagination token in the request is not valid.
+HTTP Status Code: 400
+InvalidParameterException 
+Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+HTTP Status Code: 400
+ProvisionedThroughputExceededException 
+The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon Rekognition.
+HTTP Status Code: 400
+ThrottlingException 
+Amazon Rekognition is temporarily unable to process the request. Try your call again.
+HTTP Status Code: 500
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

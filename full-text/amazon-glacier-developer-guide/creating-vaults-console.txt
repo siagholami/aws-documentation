@@ -1,0 +1,2 @@
+Creating a Vault Using the Amazon S3 Glacier Console
+To create a vault using the Amazon S3 Glacier (S3 Glacier) console, see Step 2: Create a Vault in Amazon S3 Glacier in the Getting Started tutorial. 

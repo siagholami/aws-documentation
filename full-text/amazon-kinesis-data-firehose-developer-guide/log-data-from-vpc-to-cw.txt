@@ -1,0 +1,60 @@
+Step 1: Send Log Data from Amazon VPC to Amazon CloudWatch
+In the first part of this Kinesis Data Firehose tutorial, you create an Amazon CloudWatch log group to receive your Amazon VPC flow logs. Then, you create flow logs for your Amazon VPC and send them to the CloudWatch log group that you created.
+To create a CloudWatch log group to receive your Amazon VPC flow logs
+
+
+Sign in to the AWS Management Console and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Log groups.
+
+
+Choose Actions, and then choose Create log group.
+
+
+Enter the name VPCtoSplunkLogGroup, and choose Create log group.
+
+
+To create a VPC flow log
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Your VPCs. Then choose your VPC from the list by selecting the check box next to it.
+
+
+
+Choose Actions, and then choose Create flow log.
+
+
+In the Filter* list, choose All.
+
+
+Keep the destination set to Send to CloudWatch Logs.
+
+
+For Destination log group*, choose VPCtoSplunkLogGroup, which is the log group that you created in the previous procedure.
+
+
+To set up an IAM role, choose Set Up Permissions. 
+
+
+
+In the new window that appears, keep IAM Role set to Create a new IAM Role. In the Role Name box, enter VPCtoSplunkWritetoCWRole. Then choose Allow.
+
+
+
+Return to the Create flow log browser tab, and refresh the IAM role* box. Then choose VPCtoSplunkWritetoCWRole in the list.
+
+
+Choose Create, and then choose Close.
+
+
+Back on the Amazon VPC dashboard, choose Your VPCs in the navigation pane. Then select the check box next to your VPC.
+
+
+Scroll down and choose the Flow Logs tab, and look for the flow log that you created in the preceding steps. Ensure that its status is Active. If it is not, review the previous steps.
+
+
+Proceed to Step 2: Create a Kinesis Data Firehose Delivery Stream with Splunk as a Destination.

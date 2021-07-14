@@ -1,0 +1,21 @@
+Deleting a VPC endpoint
+If you no longer require an endpoint, you can delete it. Deleting a gateway endpoint also deletes the endpoint routes in the route tables that were used by the endpoint, but doesn't affect any security groups associated with the VPC in which the endpoint resides. Deleting an interface endpoint also deletes the endpoint network interfaces.
+To delete an endpoint
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Endpoints and select your endpoint.
+
+
+Choose Actions, Delete Endpoint. 
+
+
+In the confirmation screen, choose Yes, Delete.
+
+
+To delete a VPC endpoint
+ delete-vpc-endpoints (AWS CLI)
+ Remove-EC2VpcEndpoint (AWS Tools for Windows PowerShell)
+ DeleteVpcEndpoints (Amazon EC2 Query API)

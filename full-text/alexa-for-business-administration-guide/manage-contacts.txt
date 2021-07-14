@@ -1,0 +1,58 @@
+Managing Contacts
+After you create contacts, you can add them to address books. Edit or delete a contact at any time.
+To create a contact
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Calls, Contacts.
+
+
+Choose Create contacts, and enter a name, phone number, and optional description. 
+
+
+To add more contacts, choose Add another contact.
+
+
+Choose Add contacts.
+
+
+To add contacts to address books
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Calls, Contacts.
+
+
+Select the names of the contacts to add to your address book and choose Add to address books.
+
+
+Select the check boxes next to the address book to which to add the contacts and choose Add.
+
+
+To edit a contact
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Calls, Contacts, and select the contacts to edit.
+
+
+Edit the values for Name, Phone number, and Description, and then choose Save.
+
+
+To delete a contact
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Calls, Contacts, and select the check box next to the contacts to delete.
+
+
+Choose Delete contacts, Delete.
+

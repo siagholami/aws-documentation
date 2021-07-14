@@ -1,0 +1,24 @@
+AWS::EMR::Cluster EbsBlockDeviceConfig
+EbsBlockDeviceConfig is a subproperty of the EbsConfiguration property type. EbsBlockDeviceConfig defines the number and type of EBS volumes to associate with all EC2 instances in an EMR cluster.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VolumeSpecification](#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification)" : VolumeSpecification,
+  "[VolumesPerInstance](#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance)" : Integer
+}
+YAML
+[VolumeSpecification](#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification): 
+    VolumeSpecification
+  [VolumesPerInstance](#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance): Integer
+Properties
+VolumeSpecification 
+EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.
+Required: Yes
+Type: VolumeSpecification
+Update requires: No interruption
+VolumesPerInstance 
+Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group
+Required: No
+Type: Integer
+Update requires: No interruption

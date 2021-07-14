@@ -1,0 +1,9 @@
+s3-bucket-replication-enabled
+Checks whether S3 buckets have cross-region replication enabled.
+Identifier: S3_BUCKET_REPLICATION_ENABLED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

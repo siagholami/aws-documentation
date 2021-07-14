@@ -1,0 +1,78 @@
+NICE DCV Administrator Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is NICE DCV?
+NICE DCV Servers
+Setting Up the NICE DCV Server
+Installing the NICE DCV Server
+Installing the NICE DCV Server on Windows
+Prerequisites for Windows NICE DCV Servers on Amazon EC2 Instances
+Installing the NICE DCV Server on Windows
+
+
+Installing the NICE DCV Server on Linux
+Prerequisites for Linux NICE DCV Servers
+Install the NICE DCV Server on Linux
+Post-Installation Checks
+
+
+
+
+Licensing the NICE DCV Server
+Installing an Extended Evaluation License
+Installing a Production License
+
+
+Upgrading the NICE DCV Server
+Managing the NICE DCV Server
+Starting the NICE DCV Server
+Stopping the NICE DCV Server
+Changing the NICE DCV Server TCP Port
+Disconnecting Idle Clients
+Enabling GPU Sharing on a Linux NICE DCV Server
+Changing the TLS Certificate
+Enabling USB Remotization
+Configuring Smart Card Caching
+Enabling Session Storage
+Configuring the Clipboard on a Linux NICE DCV Server
+Enabling Touchscreen and Stylus Support
+Configuring Multi-Channel Audio
+Configuring HTTP Headers
+Configuring NICE DCV Authentication
+Configuring NICE DCV Authorization
+Working with Permissions Files
+
+
+Managing NICE DCV Sessions
+Using the Command Line Tool to Manage NICE DCV Sessions
+Starting NICE DCV Sessions
+Stopping NICE DCV Sessions
+Managing Running NICE DCV Sessions
+Managing NICE DCV Session Storage
+Managing NICE DCV Session Authorization
+Managing the NICE DCV Session Display Layout
+Managing the Session Name
+
+
+Viewing NICE DCV Sessions
+How to...
+Use External Authentication
+Find and Stop Idle Sessions
+Enable Remote X Connections to the X Server
+Troubleshooting NICE DCV
+Using the Log Files
+Common Issues
+NICE DCV Server Parameter Reference
+Modifying Configuration Parameters
+Release Notes and Document History for NICE DCV

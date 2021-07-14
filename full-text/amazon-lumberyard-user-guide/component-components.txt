@@ -1,0 +1,132 @@
+Component Reference
+You can use the Entity Inspector to add the following components to you entities. 
+Note
+Some components are only available through gems. For example, you must enable the Rain gem for your project, so that the Rain component is available.
+For more information, see Add modular features and assets with Gems.
+AI
+
+Behavior Tree
+Navigation
+Navigation Area
+Navigation Seed
+
+Animation
+
+Actor
+AnimGraph
+Anim Graph Net Sync 
+Attachment
+Simple Motion
+
+Audio
+
+Audio Area Environment
+Audio Environment
+Audio Listener
+Audio Preload
+Audio Proxy
+Audio Rtpc
+Audio Switch
+Audio Trigger
+
+Camera
+
+Camera
+Camera Rig
+
+Editor
+
+Comment
+
+Environment
+
+Fog Volume
+Infinite Ocean 
+Lightning
+Lighting Arc
+Rain
+Sky Cloud
+Sky Highlight 
+Snow
+Water Volume 
+
+Gameplay
+
+Input
+Random Timed Spawner
+Simple State
+Spawner
+Tag
+
+Network
+
+Network Binding
+
+PhysX
+The following components support the PhysX system, which is not compatible with the legacy physics system. You can't use components interchangeably between each system.
+For more information, see Simulating physics behavior with the PhysX system.
+ Cloth
+ PhysX Character Controller
+ PhysX Collider
+ PhysX Force Region
+ PhysX Ragdoll
+ PhysX Rigid Body
+ PhysX Shape Collider
+ PhysX Terrain
+Physics (Legacy)
+The components for the legacy physics system are not compatible with the PhysX system. For more information, see Physics in the Amazon Lumberyard Legacy Reference.
+Rendering
+
+Area Light
+Decal
+Environment Probe
+Geom Cache
+High Quality Shadow
+Lens Flare
+Mesh
+OccluderArea
+Particle
+Point Light
+Portal
+Projector Light
+Render to Texture
+VisArea
+
+Scripting
+
+Lua Script
+Script Canvas 
+Trigger Area
+
+Shape
+
+Box Shape
+Capsule Shape
+Compound Shape
+Cylinder Shape
+Polygon Prism Shape
+Sphere Shape
+Spline 
+Tube Shape 
+White Box component 
+White Box Collider component 
+
+Terrain
+
+Legacy Terrain level component
+River
+Road
+
+UI
+
+UI Canvas Asset Ref
+UI Canvas Proxy Ref
+UI Canvas on Mesh
+
+VR
+
+VR Preview
+
+Miscellaneous
+
+Transform

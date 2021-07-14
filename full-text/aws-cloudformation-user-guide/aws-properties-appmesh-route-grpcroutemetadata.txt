@@ -1,0 +1,31 @@
+AWS::AppMesh::Route GrpcRouteMetadata
+An object that represents the match metadata for the route.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Invert](#cfn-appmesh-route-grpcroutemetadata-invert)" : Boolean,
+  "[Match](#cfn-appmesh-route-grpcroutemetadata-match)" : GrpcRouteMetadataMatchMethod,
+  "[Name](#cfn-appmesh-route-grpcroutemetadata-name)" : String
+}
+YAML
+[Invert](#cfn-appmesh-route-grpcroutemetadata-invert): Boolean
+  [Match](#cfn-appmesh-route-grpcroutemetadata-match): 
+    GrpcRouteMetadataMatchMethod
+  [Name](#cfn-appmesh-route-grpcroutemetadata-name): String
+Properties
+Invert 
+Specify True to match anything except the match criteria. The default value is False.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Match 
+An object that represents the data to match from the request.
+Required: No
+Type: GrpcRouteMetadataMatchMethod
+Update requires: No interruption
+Name 
+The name of the route.
+Required: Yes
+Type: String
+Update requires: No interruption

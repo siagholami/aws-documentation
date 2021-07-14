@@ -1,0 +1,24 @@
+[global] section
+Topics
+ cluster_template
+ update_check
+ sanity_check
+Specifies global configuration options related to pcluster.
+[global]
+cluster_template
+Defines the name of the cluster section that is used by default for the cluster. For additional information about cluster sections, see [cluster] section. The cluster name must start with a letter, contain no more than 60 characters, and only contain letters, numbers, and hyphens (-).
+For example, the following setting specifies that the section that starts [cluster default] is used by default.
+cluster_template = default
+Update policy: This setting is not analyzed during an update.
+update_check
+Checks for updates to pcluster.
+The default value is true.
+update_check = true
+Update policy: This setting is not analyzed during an update.
+sanity_check
+Attempts to validate the existence of the resources that are defined in the cluster parameters.
+The default value is true.
+sanity_check = true
+Note
+Prior to AWS ParallelCluster version 2.5.0, sanity_check defaulted to false.
+Update policy: This setting is not analyzed during an update.

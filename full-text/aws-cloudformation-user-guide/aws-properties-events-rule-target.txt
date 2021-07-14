@@ -1,0 +1,253 @@
+AWS::Events::Rule Target
+The Target property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that EventBridge invokes when a rule is triggered. 
+The Targets property of the AWS::Events::Rule resource contains a list of one or more Target property types.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Arn](#cfn-events-rule-target-arn)" : String,
+  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : BatchParameters,
+  "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : EcsParameters,
+  "[HttpParameters](#cfn-events-rule-target-httpparameters)" : HttpParameters,
+  "[Id](#cfn-events-rule-target-id)" : String,
+  "[Input](#cfn-events-rule-target-input)" : String,
+  "[InputPath](#cfn-events-rule-target-inputpath)" : String,
+  "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : InputTransformer,
+  "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : KinesisParameters,
+  "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
+  "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
+  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : SqsParameters
+}
+YAML
+[Arn](#cfn-events-rule-target-arn): String
+  [BatchParameters](#cfn-events-rule-target-batchparameters): 
+    BatchParameters
+  [EcsParameters](#cfn-events-rule-target-ecsparameters): 
+    EcsParameters
+  [HttpParameters](#cfn-events-rule-target-httpparameters): 
+    HttpParameters
+  [Id](#cfn-events-rule-target-id): String
+  [Input](#cfn-events-rule-target-input): String
+  [InputPath](#cfn-events-rule-target-inputpath): String
+  [InputTransformer](#cfn-events-rule-target-inputtransformer): 
+    InputTransformer
+  [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
+    KinesisParameters
+  [RoleArn](#cfn-events-rule-target-rolearn): String
+  [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
+    RunCommandParameters
+  [SqsParameters](#cfn-events-rule-target-sqsparameters): 
+    SqsParameters
+Properties
+Arn 
+The Amazon Resource Name (ARN) of the target.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1600
+Update requires: No interruption
+BatchParameters 
+If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters. For more information, see Jobs in the AWS Batch User Guide.
+Required: No
+Type: BatchParameters
+Update requires: No interruption
+EcsParameters 
+Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task. For more information about Amazon ECS tasks, see Task Definitions  in the Amazon EC2 Container Service Developer Guide.
+Required: No
+Type: EcsParameters
+Update requires: No interruption
+HttpParameters 
+Contains the HTTP parameters to use when the target is a API Gateway REST endpoint.
+If you specify an API Gateway REST API as a target, you can use this parameter to specify headers, path parameter, query string keys/values as part of your target invoking request.
+Required: No
+Type: HttpParameters
+Update requires: No interruption
+Id 
+A name for the target. Use a string that will help you identify the target. Each target associated with a rule must have an Id unique for that rule.
+The Id can include alphanumeric characters, periods (.), hyphens (-), and underscores (_).
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Pattern: [\.\-_A-Za-z0-9]
+Update requires: No interruption
+Input 
+Valid JSON text passed to the target. If you use this property, nothing from the event text itself is passed to the target.
+Required: No
+Type: String
+Maximum: 8192
+Update requires: No interruption
+InputPath 
+When you don't want to pass the entire matched event, InputPath describes which part of the event to pass to the target.
+Required: No
+Type: String
+Maximum: 256
+Update requires: No interruption
+InputTransformer 
+Settings to enable you to provide custom input to a target based on certain event data. You can extract one or more key-value pairs from the event and then use that data to send customized input to the target.
+Required: No
+Type: InputTransformer
+Update requires: No interruption
+KinesisParameters 
+The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream. If you do not include this parameter, the default is to use the eventId as the partition key.
+Required: No
+Type: KinesisParameters
+Update requires: No interruption
+RoleArn 
+The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. If one rule triggers multiple targets, you can use a different IAM role for each target.
+If you're setting an event bus in another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a RoleArn with proper permissions here in this parameter.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1600
+Update requires: No interruption
+RunCommandParameters 
+Parameters used when you are using the rule to invoke Amazon EC2 Run Command.
+Required: No
+Type: RunCommandParameters
+Update requires: No interruption
+SqsParameters 
+Contains the message group ID to use when the target is a FIFO queue.
+If you specify an SQS FIFO queue as a target, the queue must have content-based deduplication enabled.
+Required: No
+Type: SqsParameters
+Update requires: No interruption
+Examples
+Target with KinesisParameters
+The following snippet creates a Kinesis data stream target.
+JSON
+"MyEventsRule": {
+    "Type": "AWS::Events::Rule",
+    "Properties": {
+        "Description": "Events Rule with KinesisParameters",
+        "EventPattern": {
+            "source": [
+                "aws.ec2"
+            ]
+        },
+        "RoleArn": {
+            "Fn::GetAtt": [
+                "EventsInvokeKinesisTargetRole",
+                "Arn"
+            ]
+        },
+        "ScheduleExpression": "rate(5 minutes)",
+        "State": "ENABLED",
+        "Targets": [
+            {
+                "Arn": {
+                    "Fn::GetAtt": [
+                        "MyFirstStream",
+                        "Arn"
+                    ]
+                },
+                "Id": "Id123",
+                "RoleArn": {
+                    "Fn::GetAtt": [
+                        "EventsInvokeKinesisTargetRole",
+                        "Arn"
+                    ]
+                },
+                "KinesisParameters": {
+                    "PartitionKeyPath": "$"
+                }
+            }
+        ]
+    }
+}
+YAML
+MyEventsRule:
+  Type: AWS::Events::Rule
+  Properties:
+    Description: Events Rule with KinesisParameters
+    EventPattern:
+      source:
+        - aws.ec2
+    RoleArn: !GetAtt 
+      - EventsInvokeKinesisTargetRole
+      - Arn
+    ScheduleExpression: rate(5 minutes)
+    State: ENABLED
+    Targets:
+      - Arn: !GetAtt 
+          - MyFirstStream
+          - Arn
+        Id: Id123
+        RoleArn: !GetAtt 
+          - EventsInvokeKinesisTargetRole
+          - Arn
+        KinesisParameters:
+          PartitionKeyPath: $
+Target with EcsParameters
+The following snippet creates an Amazon ECS task target.
+JSON
+"MyEventsRule": {
+  "Type": "AWS::Events::Rule",
+  "Properties": {
+      "Description": "Events Rule with EcsParameters",
+      "EventPattern": {
+          "source": [
+              "aws.ec2"
+          ],
+          "detail-type": [
+              "EC2 Instance State-change Notification"
+          ],
+          "detail": {
+              "state": [
+                  "stopping"
+              ]
+          }
+      },
+      "ScheduleExpression": "rate(15 minutes)",
+      "State": "DISABLED",
+      "Targets": [
+          {
+              "Arn": {
+                  "Fn::GetAtt": [
+                      "MyCluster",
+                      "Arn"
+                  ]
+              },
+              "RoleArn": {
+                  "Fn::GetAtt": [
+                      "ECSTaskRole",
+                      "Arn"
+                  ]
+              },
+              "Id": "Id345",
+              "EcsParameters": {
+                  "TaskCount": 1,
+                  "TaskDefinitionArn": {
+                      "Ref": "MyECSTask"
+                  }
+              }
+          }
+      ]
+  }
+}
+YAML
+MyEventsRule:
+  Type: AWS::Events::Rule
+  Properties:
+    Description: Events Rule with EcsParameters
+    EventPattern:
+      source:
+        - aws.ec2
+      detail-type:
+        - EC2 Instance State-change Notification
+      detail:
+        state:
+          - stopping
+    ScheduleExpression: rate(15 minutes)
+    State: DISABLED
+    Targets:
+      - Arn: !GetAtt 
+          - MyCluster
+          - Arn
+        RoleArn: !GetAtt 
+          - ECSTaskRole
+          - Arn
+        Id: Id345
+        EcsParameters:
+          TaskCount: 1
+          TaskDefinitionArn: !Ref MyECSTask

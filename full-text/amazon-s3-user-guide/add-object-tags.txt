@@ -1,0 +1,38 @@
+How do I add tags to an S3 object?
+Object tagging gives you a way to categorize storage. This topic explains how to use the console to add tags to an S3 object after the object has been uploaded. For information about adding tags to an object when the object is being uploaded, see How do I upload files and folders to an S3 bucket?. 
+Each tag is a key-value pair that adheres to the following rules:
+ You can associate up to 10 tags with an object. Tags associated with an object must have unique tag keys.
+ A tag key can be up to 128 Unicode characters in length and tag values can be up to 255 Unicode characters in length.
+ Key and tag values are case sensitive. 
+For more information about object tags, see Object Tagging in the Amazon Simple Storage Service Developer Guide.
+To add tags to an object
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Bucket name list, choose the name of the bucket that contains the object.
+
+
+
+In the Name list, choose the name of the object you want to add tags to.
+
+
+
+Choose Properties.
+
+
+
+Choose Tags and then choose Add Tag.
+
+
+
+Each tag is a key-value pair. Type a Key and a Value. Then choose Add Tag to add another tag or choose Save. 
+
+
+You can enter up to 10 tags for an object.
+
+More info
+
+How do I view the properties of an object?
+Uploading, downloading, and managing objects

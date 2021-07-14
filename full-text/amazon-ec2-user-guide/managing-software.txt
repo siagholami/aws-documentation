@@ -1,0 +1,15 @@
+Managing software on your Amazon Linux instance
+The base distribution of Amazon Linux contains many software packages and utilities that are required for basic server operations. However, many more software packages are available in various software repositories, and even more packages are available for you to build from source code.
+Topics
+ Updating instance software on your Amazon Linux instance
+ Adding repositories on an Amazon Linux instance
+ Finding software packages on an Amazon Linux instance
+ Installing software packages on an Amazon Linux instance
+ Preparing to compile software on an Amazon Linux instance
+It is important to keep software up-to-date. Many packages in a Linux distribution are updated frequently to fix bugs, add features, and protect against security exploits. For more information, see Updating instance software on your Amazon Linux instance.
+By default, Amazon Linux instances launch with the following repositories enabled:
+ Amazon Linux 2: amzn2-core and amzn2extra-docker
+ Amazon Linux AMI: amzn-main and amzn-updates
+While there are many packages available in these repositories that are updated by Amazon Web Services, there may be a package that you wish to install that is contained in another repository. For more information, see Adding repositories on an Amazon Linux instance. For help finding packages in enabled repositories, see Finding software packages on an Amazon Linux instance. For information about installing software on an Amazon Linux instance, see Installing software packages on an Amazon Linux instance.
+Not all software is available in software packages stored in repositories; some software must be compiled on an instance from its source code. For more information, see Preparing to compile software on an Amazon Linux instance.
+Amazon Linux instances manage their software using the yum package manager. The yum package manager can install, remove, and update software, as well as manage all of the dependencies for each package. Debian-based Linux distributions, like Ubuntu, use the apt-get command and dpkg package manager, so the yum examples in the following sections do not work for those distributions.

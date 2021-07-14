@@ -1,0 +1,46 @@
+Amazon Virtual Private Cloud Network Administrator Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+Welcome
+Your Customer Gateway Device
+Example: Check Point Device with Border Gateway Protocol
+Example: Check Point Device without Border Gateway Protocol
+Example: Cisco ASA Device
+Example: Cisco ASA Device with a Virtual Tunnel Interface and Border Gateway Protocol
+Example: Cisco ASA Device with a Virtual Tunnel Interface (without Border Gateway Protocol)
+Example: Cisco IOS Device
+Example: Cisco IOS Device without Border Gateway Protocol
+Example: SonicWALL Device
+Example: SonicWALL SonicOS Device Without Border Gateway Protocol
+Example: Fortinet Fortigate Device
+Example: Juniper J-Series JunOS Device
+Example: Juniper SRX JunOS Device
+Example: Juniper ScreenOS Device
+Example: Netgate PfSense Device without Border Gateway Protocol
+Example: Palo Alto Networks Device
+Example: Yamaha Device
+Example: Generic Customer Gateway Device Using Border Gateway Protocol
+Example: Generic Customer Gateway Device without Border Gateway Protocol
+Troubleshooting
+Troubleshooting Cisco ASA Customer Gateway Connectivity
+Troubleshooting Cisco IOS Customer Gateway Connectivity
+Troubleshooting Cisco IOS Customer Gateway without Border Gateway Protocol Connectivity
+Troubleshooting Juniper JunOS Customer Gateway Connectivity
+Troubleshooting Juniper ScreenOS Customer Gateway Connectivity
+Troubleshooting Yamaha Customer Gateway Connectivity
+Troubleshooting Generic Device Customer Gateway Connectivity Using Border Gateway Protocol
+Troubleshooting Generic Device Customer Gateway without Border Gateway Protocol Connectivity
+Configuring Windows Server 2008 R2 as a Customer Gateway Device
+Configuring Windows Server 2012 R2 as a Customer Gateway Device
+Document History

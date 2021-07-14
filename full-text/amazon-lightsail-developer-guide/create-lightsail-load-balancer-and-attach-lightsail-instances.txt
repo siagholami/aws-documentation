@@ -1,0 +1,66 @@
+Create a Lightsail load balancer and attach instances to it
+Last updated: June 12, 2019 
+Create a Lightsail load balancer to add redundancy to your application or to handle more web traffic. After the load balancer is created, you can attach the Lightsail instances that you want to balance. To learn more, see Lightsail load balancers
+Prerequisite
+Before you begin, make sure you've prepared your Lightsail instances for load balancing. For more information, see Configure your Lightsail instances for load balancing.
+Create a Lightsail load balancer
+
+
+Sign in to the Lightsail console.
+
+
+Choose the Networking tab.
+
+
+Choose Create load balancer.
+
+
+Confirm the AWS Region where the load balancer will be created, or choose Change region to select a different region.
+Note
+By default, the load balancer will be created with port 80 open to accept HTTP requests. After the load balancer is created, you can create an SSL/TLS certificate and configure HTTPS. For more information, see Create an SSL/TLS certificate for your Lightsail load balancer
+
+
+Enter a name for your load balancer.
+
+
+Resource names:
+    Must be unique within each AWS Region in your Lightsail account.
+    Must contain 2 to 255 characters.
+    Must start and end with an alphanumeric character or number.
+    Can include alphanumeric characters, numbers, periods, dashes, and underscores.
+
+
+Choose one of the following options to add tags to your load balancer:
+    Add key-only tags or Edit key-only tags (if tags have already been added). Enter your new tag into the tag key text box, and press Enter. Choose Save when you’re done entering your tags to add them, or choose Cancel to not add them.
+
+    Create a key-value tag, then enter a key into the Key text box, and a value into the Value text box. Choose Save when you’re done entering your tags, or choose Cancel to not add them.
+Key-value tags can only be added one at a time before saving. To add more than one key-value tag, repeat the previous steps.
+
+Note
+For more information about key-only and key-value tags, see Tags in Amazon Lightsail.
+
+
+Choose Create load balancer.
+
+
+Attach Lightsail instances to your load balancer
+After your load balancer is created, Lightsail takes you to the load balancer management page. If you need to find that page again, choose the Networking tab on the Lightsail home page, and then choose the name of your Lightsail load balancer to manage it.
+Note
+Your Lightsail instance must be running before you can successfully attach it to your load balancer.
+
+
+On the load balancer management page, choose Target instances.
+
+
+Choose an instance in the Target instances drop-down menu.
+
+
+Choose Attach. Attachment can take several minutes.
+
+
+Attach another instance to the load balancer by choosing Attach another, and then repeating the preceding steps.
+Next steps
+After the load balancer is created, and your instances are attached, complete the following next steps to configure your load balancer:
+ Creating an SSL/TLS certificate for your Lightsail load balancer
+ Customizing the health check for your Lightsail load balancer
+If you experience issues with your load balancer, see Troubleshooting Lightsail load balancer issues

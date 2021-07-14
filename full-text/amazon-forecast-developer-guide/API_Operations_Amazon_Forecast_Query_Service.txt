@@ -1,0 +1,3 @@
+Amazon Forecast Query Service
+The following actions are supported by Amazon Forecast Query Service:
+  QueryForecast 

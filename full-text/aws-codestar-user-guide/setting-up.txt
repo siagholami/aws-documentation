@@ -1,0 +1,73 @@
+Setting Up AWS CodeStar
+Before you can start using AWS CodeStar, you must complete the following steps. 
+Topics
+ Step 1: Create an AWS Account
+ Step 2: Create the AWS CodeStar Service Role
+ Step 3: Configure the User's IAM Permissions
+ Step 4: Create an Amazon EC2 Key Pair for AWS CodeStar Projects
+ Step 5: Open the AWS CodeStar Console
+ Next Steps
+Step 1: Create an AWS Account
+Create an AWS account by going to https://aws.amazon.com/ and choosing Sign Up.
+Step 2: Create the AWS CodeStar Service Role
+Create a service role that is used to create and manage AWS resources and IAM permissions. You only need to create the service role once. 
+Important
+You must be signed in as an IAM administrative user (or root account) to create a service role. For more information, see Creating Your First IAM User and Group.
+
+
+Open the AWS CodeStar console at https://console.aws.amazon.com/codestar/.
+
+
+Choose Start project.
+If you do not see Start project and are directed to the projects list page instead, the service role has been created. Skip to Configure Permissions for IAM Users.
+
+
+In Create service role, choose Yes, create role.
+
+
+Exit the wizard. You come back to this later.
+
+
+Step 3: Configure the User's IAM Permissions
+You can use AWS CodeStar as an IAM user, a federated user, the root user, or an assumed role. If you choose an IAM user, AWS CodeStar helps you configure user access by managing IAM permissions for you. For information about what AWS CodeStar can do for IAM users versus federated users, see AWS CodeStar Access Permissions Reference. 
+If you have not set up any IAM users, see IAM user.
+Configure Permissions for IAM Users
+Complete these steps to set up IAM user permissions.
+
+
+To perform this step, sign in to theIAM console as a root user, an IAM administrator user in the account, or an IAM user or federated user with the associated AdministratorAccess managed policy or equivalent. Attach the AWSCodeStarFullAccess managed policy to the IAM user that is used to create the project. 
+
+
+Sign in to the AWS CodeStar console as the IAM user with AWSCodeStarFullAccess attached who will create the project, and then create your project as described in Step 1: Create an AWS CodeStar Project. AWS CodeStar creates Owner, Contributor, and Viewer managed policies for the project. As the project creator, your Owner permissions are applied automatically.
+
+
+After you have created your project, use your permissions to add other IAM users as team members to your project. For information, see Manage Permissions for AWS CodeStar Team Members .
+
+
+If your IAM user has already been added to one or more AWS CodeStar projects, it already has the policies and permissions required to access the service and resources for the projects you belong to. To set up your local computer for working with AWS CodeStar projects, follow the steps in Getting Started. You can also sign in to the AWS CodeStar console and configure your user profile. For more information, see Manage Display Information for Your AWS CodeStar User Profile  and Add a Public Key to Your AWS CodeStar User Profile .
+
+
+Configure Permissions for Federated Users
+To use AWS CodeStar as a federated user, the federated user must have IAM permissions that allow the user to use AWS CodeStar APIs and access any resources used in the projects (such as Amazon EC2 or AWS Lambda). 
+If you have not set up any federated users, see Federated User Access to AWS CodeStar.
+Complete these steps to set up federated user permissions:
+
+
+Sign in to the IAMconsole as a root user, an IAM administrator user in the account, or an IAM user or federated user with the associated AdministratorAccess managed policy or equivalent. Attach the AWSCodeStarFullAccess managed policy to the federated user role that is used to create the project. See Attach the AWSCodeStarFullAccess Managed Policy to the Federated User's Role. 
+
+
+Sign in to the AWS CodeStar console as the IAM user with AWSCodeStarFullAccess attached who will create the project, and then create your project as described in Step 1: Create an AWS CodeStar Project. AWS CodeStar creates Owner, Contributor, and Viewer managed policies for the project. As the federated user project creator, your project Owner permissions are not applied automatically. You might not be able to access all project resources. 
+
+
+To give yourself access to all project resources, sign in to the console either as a root user, an IAM administrator user in the account, or an IAM user or federated user with the associated AdministratorAccess managed policy or equivalent. Attach your project's AWS CodeStar owner managed policy to the role you assume as a federated user. This allows you to manage and view all of the resources created for your project. For information, see Attach Your Project's AWS CodeStar Viewer/Contributor/Owner Managed Policy to the Federated User's Role.
+
+
+Sign in to the console as a root user, an IAM administrator user in the account, or an IAM user or federated user with the associated AdministratorAccess managed policy or equivalent. Grant federated users access to your project by attaching the appropriate AWS CodeStar owner, contributor, or viewer managed policy to the user's role. For information, see Attach Your Project's AWS CodeStar Viewer/Contributor/Owner Managed Policy to the Federated User's Role.
+
+
+Step 4: Create an Amazon EC2 Key Pair for AWS CodeStar Projects
+Many AWS CodeStar projects use AWS CodeDeploy or AWS Elastic Beanstalk to deploy code to Amazon EC2 instances. To access Amazon EC2 instances associated with your project, create an Amazon EC2 key pair for your IAM user. Your IAM user must have permissions to create and manage Amazon EC2 keys (for example, permission to take the ec2:CreateKeyPair and ec2:ImportKeyPair actions). For more information, see Amazon EC2 Key Pairs.
+Step 5: Open the AWS CodeStar Console
+Sign in to the AWS Management Console, and then open the AWS CodeStar console at https://console.aws.amazon.com/codestar/.
+Next Steps
+Congratulations, you have completed the setup! To start working with AWS CodeStar, see Getting Started with AWS CodeStar. 

@@ -1,0 +1,99 @@
+AWS::DocDB::DBClusterParameterGroup
+The AWS::DocDB::DBClusterParameterGroup Amazon DocumentDB (with MongoDB compatibility) resource describes a DBClusterParameterGroup. For more information, see DBClusterParameterGroup in the Amazon DocumentDB Developer Guide.
+Parameters in a cluster parameter group apply to all of the instances in a cluster.
+A cluster parameter group is initially created with the default parameters for the database engine used by instances in the cluster. To provide custom values for any of the parameters, you must modify the group after you create it. After you create a DB cluster parameter group, you must associate it with your cluster. For the new cluster parameter group and associated settings to take effect, you must then reboot the DB instances in the cluster without failover.
+Important
+After you create a cluster parameter group, you should wait at least 5 minutes before creating your first cluster that uses that cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully complete the create action before the cluster parameter group is used as the default for a new cluster. This step is especially important for parameters that are critical when creating the default database for a cluster, such as the character set for the default database defined by the character_set_database parameter.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::DocDB::DBClusterParameterGroup",
+  "Properties" : {
+      "[Description](#cfn-docdb-dbclusterparametergroup-description)" : String,
+      "[Family](#cfn-docdb-dbclusterparametergroup-family)" : String,
+      "[Name](#cfn-docdb-dbclusterparametergroup-name)" : String,
+      "[Parameters](#cfn-docdb-dbclusterparametergroup-parameters)" : Json,
+      "[Tags](#cfn-docdb-dbclusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::DocDB::DBClusterParameterGroup
+Properties: 
+  [Description](#cfn-docdb-dbclusterparametergroup-description): String
+  [Family](#cfn-docdb-dbclusterparametergroup-family): String
+  [Name](#cfn-docdb-dbclusterparametergroup-name): String
+  [Parameters](#cfn-docdb-dbclusterparametergroup-parameters): Json
+  [Tags](#cfn-docdb-dbclusterparametergroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+Description 
+The description for the cluster parameter group.
+Required: Yes
+Type: String
+Update requires: Replacement
+Family 
+The cluster parameter group family name.
+Required: Yes
+Type: String
+Update requires: Replacement
+Name 
+The name of the DB cluster parameter group.
+Constraints:
+ Must not match the name of an existing DBClusterParameterGroup.
+This value is stored as a lowercase string.
+Required: No
+Type: String
+Update requires: Replacement
+Parameters 
+Provides a list of parameters for the cluster parameter group.
+Required: Yes
+Type: Json
+Update requires: No interruption
+Tags 
+The tags to be assigned to the cluster parameter group.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the DBClusterParameterGroup's name, such as sample-db-cluster-param-group.
+For more information about using the Ref function, see Ref.
+Examples
+
+JSON
+{
+   "Type" : "AWS::DocDB::DBClusterParameterGroup",
+   "Properties" : {
+      "Description" : "description",
+      "Family" : "docdb3.6",
+      "Name" : "sampleParameterGroup",
+      "Parameters" :  [
+        "audit_logs": "disabled",
+        "tls": "enabled",
+        "ttl_monitor": "enabled"
+     ],
+      "Tags" : [{ "Key": "String","Value": "String" }]
+   }
+}
+YAML
+Type: "AWS::DocDB::DBClusterParameterGroup"
+Properties:
+   Description: "description"
+   Family: "docdb3.6"
+   Name: "sampleParameterGroup"
+   Parameters: 
+        audit_logs: "disabled"
+        tls: "enabled"
+        ttl_monitor: "enabled"
+   Tags: 
+      - 
+         Key: "String"
+         Value: "String"
+See also
+
+DBClusterParameterGroup 
+CreateDBClusterParameterGroup 
+DeleteDBClusterParameterGroup 
+DescribeDBClusterParameterGroups 
+ModifyDBClusterParameterGroup 

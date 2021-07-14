@@ -1,0 +1,352 @@
+Using the Defect Reporter Cloud Gem Portal
+Use the Defect Reporter Cloud Gem Portal to view and manage defect report submissions. You can use the Defect Reporter Cloud Gem Portal to do the following:
+ View, filter, and manage reports.
+ Perform ANSI SQL queries on report fields.
+ Add comments and bookmark reports.
+ Mark reports as read or unread.
+ View report submissions by time range.
+ Reuse queries and create shareable URLs for them.
+ Configure the display of report details.
+ Create custom data collection fields.
+You can use the DefectReporterSample level to generate sample reports and then view and manage them in the Cloud Gem Portal.
+Prerequisites
+This tutorial assumes the following:
+ You are using version 1.15 or later of Lumberyard.
+ You have used the Project Configurator to set CloudGemDefectReportSample as your default project.
+ You used the Cloud Canvas Resource Manager or the lmbr_aws command line tool to create the following:
+   A project stack for your project.
+   A deployment for your project that has the CloudGemDefectReporter and CloudGemMetric cloud gems enabled.
+ You have opened the Cloud Gem Portal. 
+If you don't meet the prerequisites, see Choosing a Game Project to Open to set CloudGemDefectReportSample as your default project. For information on how to create a project stack and a deployment stack, see Tutorial: Getting Started with Cloud Canvas.
+Opening the Defect Reporter Cloud Gem Portal
+To open the Defect Reporter Cloud Gem Portal
+
+
+In Lumberyard Editor, choose AWS, Cloud Gem Portal.
+
+
+In the Cloud Gem Portal, on the Cloud Gems page, click Defect Reporter.
+
+
+
+Viewing, Filtering, and Managing Reports
+The Overview tab displays the list of defects that occurred.
+
+To view, filter, and manage reports
+
+
+To see partially hidden column names, expand the column or pause your pointer on the column header.
+
+
+
+To sort reports by a specific column, click the column name.
+
+
+To filter the columns that are displayed, click the Columns drop-down menu and select the columns that you want.
+
+
+
+To view only reports that have been read or not yet read, click the Status drop-down menu.
+
+Note
+To mark a report as read or unread, use the Report Detail page for the report.
+
+
+To limit the number of results that are displayed, click the number drop-down menu next to the Search box.
+
+
+
+To filter the results for specific data, enter the parameters of a standard ANSI SQL WHERE clause into the Search Defects box, and then click Search.
+
+
+
+To remove the filter, clear the Search Defects box, and then click Search again.
+
+
+To bookmark a report, click the bookmark icon next to the report.
+
+
+
+The reports that you bookmark appear on the Bookmarks tab.
+Viewing Report Details
+On the Overview tab, click a report to see detailed information on the Report Detail page.
+
+ Text Uploads – Contains links to automatically uploaded .txt files like game logs and DxDiag files. The filenames are automatically generated UUIDs.
+ Image Uploads – Contains links to automatically uploaded image files like screenshots. The filenames are automatically generated UUIDs.
+To view report details
+
+
+To download a text or image file, click the file name.
+Note
+A download link can be provided for game-specific attachments like audio snippets. However, if you want to make such attachments available for presentation in the Cloud Gem Portal, custom code is required.
+
+
+To customize the fields that appear under the Report Information, Player Information, and System Information sections, see the Data Mappings tab.
+
+
+Adding Comments, Bookmarks, and Changing Read Status
+On the upper right of the Report Detail page, you can use the Add Comment, Add to Bookmarks, and Mark as Read options for your report.
+
+After you bookmark a report or mark the report as read, the Remove from Bookmarks and/or Mark as Unread options are available for the report.
+
+ To view the reports that you bookmark, use the Bookmarks tab.
+ To filter for reports that are read or unread, you can use the Status drop-down menu on the Overview or the Bookmarks tab. 
+ To return to the Overview tab, click Back to Defect List.
+Working with Comments
+On the Report Details page, you can add, edit, and delete comments about a report.
+Adding a Comment to a Report
+You can add comments to a report for tracking purposes. 
+Note
+Comments added to a report are separate from the Player text (annotations) that the player submits.
+To add a comment to a report
+
+
+Click Add Comment.
+
+
+
+In the Add Comment dialog box, enter your changes, and then click Add.
+
+
+
+The new comment appears on the details page for the report.
+
+Editing Comments
+You can edit existing comments for a report.
+To edit a comment
+
+
+On the report's detail page, click the gear icon next to the comment.
+
+
+
+In the Edit Comment dialog box, enter your changes, and then click Add.
+
+
+
+Deleting Comments
+To delete a comment
+ Click the trash icon next to the comment.
+
+Viewing Unfiltered Report Data
+To view all the information in a defect report (including information like log and DxDiag content), click the Raw Data tab.
+
+Discovering Defect Submission Trends by Time Range
+On the Dashboard tab, you can see bar graphs of trends that show the number of submitted defects for a specific time range.
+To see trends in report submissions for a preset time range
+ Click the Select Time Period drop-down menu and select a time range.
+
+A bar graph for the selected time range appears.
+
+Viewing and Managing Bookmarked Reports
+On the Bookmarks tab, you can view and manage the reports that you bookmarked.
+Note
+You can bookmark a report on the Overview tab or the Report Detail page for the report.
+
+To view and manage bookmarked reports
+
+
+To see the Report Detail page for the report, click the report entry.
+
+
+To sort a report table by column, click the column name.
+
+
+To filter the bookmarked reports, you can use the Columns and Status options just as you can on the Overview tab.
+
+
+To remove the bookmark from a report (and the report from the Bookmarks tab), click the bookmark icon next to the report.
+
+
+Reusing Searches
+On the Recent Searches tab, you can see the 10 most recent searches.
+
+To reuse searches
+
+
+To run the search again, click the query.
+
+
+
+To copy a shareable URL of the query, click the share icon.
+
+
+
+You can send the URL to other users with credentials to your Cloud Gem Portal to run the same query in a browser.
+Configuring the Report Detail Page
+On the Data Mappings tab, you can manage the fields that appear on your Report Detail page. The configurations are saved locally and do not appear in other browsers or affect other users.
+
+The Data Mappings page has the following columns:
+ Key – The key that identifies the raw data to display in the field (for example, report_status).
+ Display Name– The name of the field as it appears on the Report Detail page.
+ Display Category – The section on the Report Detail page in which the field appears (Report Information, Player Information, or System Information).
+You can add, remove, name, and categorize the fields that appear on the Report Detail page.
+To add a display field to the Report Detail page
+
+
+From the Raw Data page, note the field name that you want to appear on every report's detail page.
+
+
+Click the Data Mappings tab.
+
+
+Click Add Mapping.
+
+
+
+This adds an empty field to the top of the data mappings list.
+
+
+
+For Key, enter the field name that you chose from the Raw Data tab (for example, event_sequence_number).
+
+
+For Display Name, enter the name for the field as you want it to appear on the Report Detail tab (for example, Event Sequence).
+
+
+For Display Category, select one of the Category options (for example, Report Information). 
+    Report Information
+    Player Information
+    System Information
+
+
+
+The next time you display the detail page for a report, the new field is displayed under the category that you chose. 
+Example 
+The following example has added the event_sequence_number field to the Report Information section using the display name Event Sequence.
+
+To remove a field from report configuration
+ Click the trash icon for the field mapping.
+To change the display name for a field
+ Enter the new name in the Display Name box.
+To change the display category for an existing field
+ Click the Display Category drop-down menu.
+Creating Custom Data Collection Fields
+On the Client Configuration tab, you can define a custom defect report field for client users.
+To add a custom client-side data collection field
+
+
+On the Client Configuration tab, click Add New Field.
+
+
+
+In the Add New Field dialog box, for Field Type, select one of the options:
+    Multiple Choice (Checkboxes) – Create a list of check boxes that are independently selectable.
+    Single Choice (Radio Buttons) – Create a list of round option buttons of which only one can be selected. 
+    Text – Create a box into which users can enter text.
+    Object – Create a parent container for nested check boxes, radio buttons, and/or text boxes. You can use this option to gather detailed information about a single theme or feature.
+
+
+
+For Multiple Choice, choose or modify a default Title, or enter your own.
+Note
+Titles are required and must be unique across non-nested data fields.
+
+
+
+For Multiple Choice Options, enter the text for an option, and then click Add Option.
+
+
+
+
+For each additional option:
+    Enter the corresponding text.
+    To delete an option, click the red X icon.
+    To cancel the addition of the custom field and all of its options, click Close. Your changes will not be saved.
+
+
+Click Add Field. The new field appears in the custom field list.
+
+
+
+Click Save Configuration. 
+
+Warning
+Changes not saved to configuration will be lost when your browser session times out.
+
+
+For the Single Choice (Radio Buttons) field type, follow the same procedure as for multiple choice. However, users can choose only one of the options that you provide.
+
+
+
+For the Text custom field type, enter a value for Title. For Character Limit, specify the number of characters that users can enter into the text box.
+
+
+
+Click Add Field. The text field appears in the list of custom fields.
+
+
+
+For the Object custom field type, enter a Title. 
+
+
+
+Click Add Field. The field appears in the list of custom fields as an empty container.
+
+
+
+Click the Add new property () icon to add a nested custom data field to the object container.
+
+
+
+The Add New Field dialog box appears. As before, you can add multiple choice check boxes, single choice radio buttons, and text boxes. Further nesting is not possible, so the Object field type is not available.
+
+
+
+For each additional custom data field that you want to add to the container, click Add new property (). When you are finished, the object container appears in the list of custom fields as its own set of data collection points.
+
+
+
+Click Save Configuration to persist your changes.
+
+
+Creating Default Values for Custom Data Collection Fields
+When you create custom data fields in the Cloud Gem Portal, you can specify values that you want to provide by default.
+To create default values for custom data collection fields
+
+
+On the Client Configuration tab, enter or select the options that you want to be the default, and then click Save Configuration.
+
+
+
+When you run the DefectReporterSample level, the default values that you chose appear in the custom fields section of the report editor.
+
+
+
+Editing and Deleting Custom Data Collection Fields
+To edit or delete a custom data field
+
+
+To edit a field, click the gear icon for the field, make your changes in the Edit Field dialog box, and then click Save Changes.
+
+
+
+To delete a field, click the trash icon for the field and then click Delete Field in the confirmation dialog box.
+
+
+
+Viewing and Testing Custom Data Collection Fields
+After you have created one or more custom data fields, you can view and test them in the DefectReporterSample level.
+To view custom data fields
+
+
+Open Lumberyard Editor and run the DefectReporterSample level.
+
+
+Press F1 a few times to generate some reports and then press F5 to open the Defect Report Editor. The custom data collection fields appear in the lower left corner of the in-game editor.
+
+
+
+To move from one custom field to the next, use the arrows on the upper right of the custom field.
+
+
+
+
+
+For longer fields like nested custom fields, use the scrollbar to move through the feedback items.
+
+
+
+To submit the report for further testing, click Submit. The report should be available in the Cloud Gem Portal in about 10 minutes. For more information about the sample level, see Using the Defect Reporter Cloud Gem Sample Level.
+
+

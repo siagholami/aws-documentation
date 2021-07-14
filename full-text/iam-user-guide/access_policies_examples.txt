@@ -1,0 +1,86 @@
+Example IAM identity-based policies
+A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. AWS evaluates these policies when an IAM principal (user or role) makes a request. Permissions in the policies determine whether the request is allowed or denied. Most policies are stored in AWS as JSON documents that are attached to an IAM identity (user, group of users, or role). Identity-based policies include AWS managed policies, customer managed policies, and inline policies. To learn how to create an IAM policy using these example JSON policy documents, see Creating policies on the JSON tab.
+By default all requests are denied, so you must provide access to the services, actions, and resources that you intend for the identity to access. If you also want to allow access to complete the specified actions in the IAM console, you need to provide additional permissions.
+The following library of policies can help you define permissions for your IAM identities. After you find the policy that you need, choose view this policy to view the JSON for the policy. You can use the JSON policy document as a template for your own policies.
+Note
+If you would like to submit a policy to be included in this reference guide, use the Feedback button at the bottom of this page.
+Example policies: AWS
+
+Allows access during a specific range of dates. (View this policy.)
+Allows enabling and disabling AWS Regions. (View this policy.)
+Allows MFA-authenticated users to manage their own credentials on the My Security Credentials page. (View this policy.)
+Allows specific access when using MFA during a specific range of dates. (View this policy.)
+Allows users to manage their own credentials on the My Security Credentials page. (View this policy.)
+Allows users to manage their own MFA device on the My Security Credentials page. (View this policy.)
+Allows users to manage their own password on the My Security Credentials page. (View this policy.)
+Allows users to manage their own password, access keys, and SSH public keys on the My Security Credentials page. (View this policy.)
+Denies access to AWS based on the requested Region. (View this policy.)
+Denies access to AWS based on the source IP address. (View this policy.)
+
+Example policies: AWS Data Pipeline
+
+Denies access to pipelines that a user did not create (View this policy.)
+
+Example policies: Amazon DynamoDB
+
+Allows access to a specific Amazon DynamoDB table (View this policy.)
+Allows access to specific Amazon DynamoDB columns (View this policy.)
+Allows row-level access to Amazon DynamoDB based on an Amazon Cognito ID (View this policy.)
+
+Example policies: Amazon EC2
+
+Allows an Amazon EC2 instance to attach or detach volumes (View this policy.)
+Allows attaching or detaching Amazon EBS volumes to Amazon EC2 instances based on tags (View this policy.)
+Allows launching Amazon EC2 instances in a specific subnet, programmatically and in the console (View this policy.)
+Allows managing Amazon EC2 security groups associated with a specific VPC, programmatically and in the console (View this policy.)
+Allows starting or stopping Amazon EC2 instances a user has tagged, programmatically and in the console (View this policy.)
+Allows starting or stopping Amazon EC2 instances based on resource and principal tags, programmatically and in the console (View this policy.)
+Allows starting or stopping Amazon EC2 instances when the resource and principal tags match (View this policy.)
+Allows full Amazon EC2 access within a specific Region, programmatically and in the console. (View this policy.)
+Allows starting or stopping a specific Amazon EC2 instance and modifying a specific security group, programmatically and in the console (View this policy.)
+Denies access to specific Amazon EC2 operations without MFA (View this policy.)
+Limits terminating Amazon EC2 instances to a specific IP address range (View this policy.)
+
+Example policies: AWS Identity and Access Management (IAM)
+
+Allows access to the policy simulator API (View this policy.)
+Allows access to the policy simulator console (View this policy.)
+Allows assuming any roles that have a specific tag, programmatically and in the console (View this policy.)
+Allows and denies access to multiple services, programmatically and in the console (View this policy.)
+Allows adding a specific tag to an IAM user with a different specific tag, programmatically and in the console (View this policy.)
+Allows adding a specific tag to any IAM user or role, programmatically and in the console (View this policy.)
+Allows creating a new user only with specific tags (View this policy.)
+Allows generating and retrieving IAM credential reports (View this policy.)
+Allows managing a group's membership, programmatically and in the console (View this policy.)
+Allows managing a specific tag (View this policy.)
+Allows passing an IAM role to a specific service (View this policy.)
+Allows read-only access to the IAM console without reporting (View this policy.)
+Allows read-only access to the IAM console (View this policy.)
+Allows specific users to manage a group, programmatically and in the console (View this policy.)
+Allows setting the account password requirements, programmatically and in the console (View this policy.)
+Allows using the policy simulator API for users with a specific path (View this policy.)
+Allows using the policy simulator console for users with a specific path (View this policy.)
+Allows IAM users to self-manage an MFA device. (View this policy.)
+Allows IAM users to rotate their own credentials, programmatically and in the console. (View this policy.)
+Allows viewing service last accessed information for an AWS Organizations policy in the IAM console. (View this policy.)
+Limits managed policies that can be applied to an IAM user, group, or role (View this policy.)
+
+Example policies: AWS Lambda
+
+Allows an AWS Lambda function to access an Amazon DynamoDB table (View this policy.)
+
+Example policies: Amazon RDS
+
+Allows full Amazon RDS database access within a specific Region. (View this policy.)
+Allows restoring Amazon RDS databases, programmatically and in the console (View this policy.)
+Allows tag owners full access to Amazon RDS resources that they have tagged (View this policy.)
+
+Example policies: Amazon S3
+
+Allows an Amazon Cognito user to access objects in their own Amazon S3 bucket (View this policy.)
+Allows federated users to access their own home directory in Amazon S3, programmatically and in the console (View this policy.)
+Allows full S3 access, but explicitly denies access to the Production bucket if the administrator has not signed in using MFA within the last thirty minutes (View this policy.)
+Allows IAM users to access their own home directory in Amazon S3, programmatically and in the console (View this policy.)
+Allows a user to manage a single Amazon S3 bucket and denies every other AWS action and resource (View this policy.)
+Allows Read and Write access to a specific Amazon S3 bucket (View this policy.)
+Allows Read and Write access to a specific Amazon S3 bucket, programmatically and in the console (View this policy.)

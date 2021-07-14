@@ -1,0 +1,19 @@
+Add Groups
+Use the following procedure to add groups to your AWS SSO store.
+To add a group
+
+
+Open the AWS SSO console.
+
+
+Choose Groups.
+
+
+Choose Create group.
+
+
+In the Create group dialog box, enter a Group name and Description. The description should provide details on what permissions have been or will be assigned to the group.
+
+
+Choose Create.
+

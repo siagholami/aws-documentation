@@ -1,0 +1,8 @@
+How It Works
+AWS RoboMaker is a service that allows you to quickly develop, test, and deploy robot applications. This section provides an overview of robot development. It explains how AWS RoboMaker works. If you are a first-time user of AWS RoboMaker, read the following sections in order.
+Topics
+ Robotics Development with AWS RoboMaker
+ Create a ROS Development Environment
+ Create a Robot Application
+ Develop Simulation and Testing Data
+ Fleet Management and Deployment

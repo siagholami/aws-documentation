@@ -1,0 +1,4 @@
+AWS Step Functions resource type reference
+Resource types
+ AWS::StepFunctions::Activity
+ AWS::StepFunctions::StateMachine

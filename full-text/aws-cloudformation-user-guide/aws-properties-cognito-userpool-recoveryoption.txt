@@ -1,0 +1,26 @@
+AWS::Cognito::UserPool RecoveryOption
+A map containing a priority as a key, and recovery method name as a value.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-cognito-userpool-recoveryoption-name)" : String,
+  "[Priority](#cfn-cognito-userpool-recoveryoption-priority)" : Integer
+}
+YAML
+[Name](#cfn-cognito-userpool-recoveryoption-name): String
+  [Priority](#cfn-cognito-userpool-recoveryoption-priority): Integer
+Properties
+Name 
+Specifies the recovery method for a user.
+Required: No
+Type: String
+Allowed values: admin_only | verified_email | verified_phone_number
+Update requires: No interruption
+Priority 
+A positive integer specifying priority of a method with 1 being the highest priority.
+Required: No
+Type: Integer
+Minimum: 1
+Maximum: 2
+Update requires: No interruption

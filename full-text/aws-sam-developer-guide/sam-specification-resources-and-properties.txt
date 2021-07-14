@@ -1,0 +1,11 @@
+AWS SAM Resource and Property Reference
+This section contains reference information for the AWS SAM resource and property types.
+Topics
+ AWS::Serverless::Api
+ AWS::Serverless::Application
+ AWS::Serverless::Function
+ AWS::Serverless::HttpApi
+ AWS::Serverless::LayerVersion
+ AWS::Serverless::SimpleTable
+ AWS::Serverless::StateMachine
+For reference information for all the AWS resource and property types that are supported by AWS CloudFormation and AWS SAM, see AWS Resource and Property Types Reference in the AWS CloudFormation User Guide.

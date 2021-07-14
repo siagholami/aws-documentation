@@ -1,0 +1,17 @@
+Updating the AWS Toolkit for JetBrains
+After you install the AWS Toolkit for JetBrains, you can check for updates to the toolkit at any time and install them. 
+To do this, with a JetBrains IDE supported by AWS Toolkits already running, do the following.
+
+
+Open Settings / Preferences.
+
+
+Choose Updates. (If no updates are displayed, you might need to choose Check new updates.)
+
+
+
+Follow any on-screen instructions to finish updating the AWS Toolkit for JetBrains.
+
+
+Restart the JetBrains IDE.
+

@@ -1,0 +1,5 @@
+Additional Information for Amazon EFS
+Following, you can find some additional information about Amazon EFS, including features that are still supported but not necessarily recommended.
+Topics
+ Backing Up Amazon EFS File Systems Using AWS Data Pipeline
+ Mounting File Systems Without the EFS Mount Helper

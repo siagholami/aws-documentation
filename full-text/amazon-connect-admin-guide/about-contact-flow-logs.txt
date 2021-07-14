@@ -1,0 +1,8 @@
+Track events as customers interact with contact flows
+Amazon Connect contact flow logs provide you with real-time details about events in your contact flows as customers interact with them. You can also use contact flow logs to help debug your contact flows as you are creating them. If needed, you can always roll back to a previous version of a contact flow.
+Topics
+ Storage for contact flow logs
+ Enable contact flow logs
+ Data in contact flow logs
+ Track customers between contact flows
+ Create alerts for contact flow log events

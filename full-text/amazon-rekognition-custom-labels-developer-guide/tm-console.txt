@@ -1,0 +1,44 @@
+Training a Model (Console)
+You can train a model by using the Amazon Rekognition Custom Labels console.
+To train a model (console)
+
+
+Open the Amazon Rekognition console at https://console.aws.amazon.com/rekognition/.
+
+
+Choose Use Custom Labels.
+
+
+Choose Get started. 
+
+
+In the left navigation pane, choose Projects.
+
+
+On the Projects page, choose the project that contains the dataset you want to train.
+
+
+In the Models section, choose Train new model. The Train Model page is displayed. 
+
+
+In Choose project, choose the model that you want to train. 
+
+
+On the Train model page, do the following:
+
+
+In Choose Project, choose the project you created earlier.
+
+
+In Choose training set, choose the training dataset that you want to use.
+
+
+In Create test set, choose how you want to create the test dataset, and follow the instructions.
+
+
+
+Choose Train to start training the model. The project resources page is shown.
+
+
+Wait until training has finished. You can check the current status in the Status field of the Model section.
+

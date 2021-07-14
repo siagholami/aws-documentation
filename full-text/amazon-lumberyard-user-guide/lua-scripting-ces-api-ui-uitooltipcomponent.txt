@@ -1,0 +1,12 @@
+UITooltipComponent
+You can use a tooltip component to provide the text of a tooltip.
+UiTooltipBus
+Services messages for the UiTooltipComponent.
+GetText
+Returns the tooltip text.
+Syntax
+AZStd::string GetText()
+SetText
+Sets the tooltip text.
+Syntax
+void SetText(const AZStd::string& text)

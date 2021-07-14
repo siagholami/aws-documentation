@@ -1,0 +1,69 @@
+Install Python, pip, and the EB CLI on Windows
+The Python Software Foundation provides installers for Windows that include pip.
+To install Python 3.7 and pip (Windows)
+
+
+Download the Python 3.7 Windows x86-64 executable installer from the downloads page of Python.org.
+
+
+Run the installer.
+
+
+Choose Add Python 3.7 to PATH.
+
+
+Choose Install Now.
+
+
+The installer installs Python in your user folder and adds its executable directories to your user path.
+To install the AWS CLI with pip (Windows)
+
+
+From the Start menu, open a Command Prompt window.
+
+
+Verify that Python and pip are both installed correctly by using the following commands.
+
+
+C:\Windows\System32> python --version
+   Python 3.7.3
+   C:\Windows\System32> pip --version
+   pip 9.0.1 from c:\users\myname\appdata\local\programs\python\python37\lib\site-packages (python 3.7)
+
+Install the EB CLI using pip.
+
+C:\Windows\System32> pip install awsebcli --upgrade --user
+
+Add the executable path, %USERPROFILE%\AppData\roaming\Python\Python37\scripts, to your PATH environment variable. The location might be different, depending on whether you install Python for one user or all users.
+
+To modify your PATH variable (Windows):
+
+
+Press the Windows key, and then enter environment variables.
+
+
+Choose Edit environment variables for your account.
+
+
+Choose PATH, and then choose Edit.
+
+
+Add paths to the Variable value field, separated by semicolons. For example: C:\item1\path;C:\item2\path
+
+
+Choose OK twice to apply the new settings.
+
+
+Close any running Command Prompt windows, and then reopen a Command Prompt window.
+
+
+Restart a new command shell for the new PATH variable to take effect. 
+
+
+Verify that the EB CLI is installed correctly.
+
+
+C:\Windows\System32> eb --version
+   EB CLI 3.14.8 (Python 3.7)
+To upgrade to the latest version, run the installation command again.
+C:\Windows\System32> pip install awsebcli --upgrade --user

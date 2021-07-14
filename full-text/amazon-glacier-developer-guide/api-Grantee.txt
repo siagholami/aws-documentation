@@ -1,0 +1,27 @@
+Grantee
+Contains information about a grantee.
+Contents
+DisplayName
+The screen name of the grantee.
+Type: String
+Required: no
+EmailAddress
+The email address of the grantee.
+Type: String
+Required: no
+ID
+The canonical user ID of the grantee.
+Type: String
+Required: no
+Type
+The type of the grantee.
+Type: String
+Valid Values: AmazonCustomerByEmail | CanonicalUser | Group 
+Required: no
+URI
+The URI of the grantee group.
+Type: String
+Required: no
+More Info
+
+Initiate Job (POST jobs)

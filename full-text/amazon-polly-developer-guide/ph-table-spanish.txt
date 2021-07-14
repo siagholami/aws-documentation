@@ -1,0 +1,337 @@
+Spanish (es-ES)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Spanish voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ɾ
+4
+alveolar flap
+pero, bravo, amor, eterno
+t
+
+
+b
+b
+voiced bilabial plosive
+bestia
+p
+
+
+β
+B
+voiced bilabial fricative
+bebé
+B
+
+
+d
+d
+voiced alveolar plosive
+cuando
+t
+
+
+ð
+D
+voiced dental fricative
+arder
+T
+
+
+f
+f
+voiceless labiodental fricative
+fase, café
+f
+
+
+g
+g
+voiced velar plosive
+gato, lengua, guerra
+k
+
+
+ɣ
+G
+voiced velar fricative
+trigo, Argos
+k
+
+
+j
+j
+palatal approximant
+hacia, tierra, radio, viuda
+i
+
+
+ʝ
+j\
+voiced palatal fricative
+enhielar, sayo, inyectado, desyerba
+J
+
+
+k
+k
+voiceless velar plosive
+caña, laca, quisimos
+k
+
+
+l
+l
+alveolar lateral approximant
+lino, calor, principal
+t
+
+
+ʎ
+L
+palatal lateral approximant
+llave, pollo
+J
+
+
+m
+m
+bilabial nasal
+madre, comer, anfibio
+p
+
+
+n
+n
+alveolar nasal
+nido, anillo, sin
+t
+
+
+ɲ
+J
+palatal nasal
+cabaña, ñoquis
+J
+
+
+ŋ
+N
+velar nasal
+cinco, venga
+k
+
+
+p
+p
+voiceless bilabial plosive
+pozo, topo
+p
+
+
+r
+r
+alveolar trill
+perro, enrachado
+r
+
+
+s
+s
+voiceless alveolar fricative
+saco, casa, puertas
+s
+
+
+t
+t
+voiceless alveolar plosive
+tamiz, átomo
+t
+
+
+t͡ʃ
+tS
+voiceless postalveolar affricate
+chubasco
+S
+
+
+θ
+T
+voiceless dental fricative
+cereza, zorro, lacero, paz
+T
+
+
+w
+w
+labial-velar approximant
+fuego, fuimos, cuota, cuadro
+u
+
+
+x
+x
+voiceless velar fricative
+jamón, general, suje, reloj
+k
+
+
+z
+z
+voiced alveolar fricative
+rasgo, mismo
+s
+
+
+Vowels
+
+
+
+
+
+
+a
+a
+open front unrounded vowel
+tanque
+a
+
+
+e
+e
+close-mid front unrounded vowel
+peso
+e
+
+
+i
+i
+close front unrounded vowel
+cinco
+i
+
+
+o
+o
+close-mid back rounded vowel
+bosque
+o
+
+
+u
+u
+close-mid front unrounded vowel
+publicar
+u
+
+
+e
+e
+close-mid front unrounded vowel
+keçi
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+dede
+e
+
+
+i
+i
+close front unrounded vowel
+bir
+i
+
+
+i:
+i:
+long close front unrounded vowel
+izah
+i
+
+
+ɪ
+I
+near-close near-front unrounded vowel
+keçi
+i
+
+
+ɯ
+M
+close back unrounded vowel
+kıl
+i
+
+
+o
+o
+long close-mid back rounded vowel
+kol
+o
+
+
+o:
+o:
+long close-mid back rounded vowel
+dolar
+o
+
+
+u
+u
+close back rounded vowel
+durum
+u
+
+
+u:
+u:
+long close back rounded vowel
+ruhum
+u
+
+
+ʊ
+U
+near-close near-back rounded vowel
+dolu
+u
+
+
+Y
+y
+close front rounded vowel
+güvenlik
+u
+
+
+ʏ
+Y
+near-close near-front rounded vowel
+aşı
+u
+
+

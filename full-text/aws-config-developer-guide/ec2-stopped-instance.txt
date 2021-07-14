@@ -1,0 +1,10 @@
+ec2-stopped-instance
+Checks whether there are instances stopped for more than the allowed number of days. The instance is NON_COMPLIANT if the state of the ec2 instance has been stopped for longer than the allowed number of days.
+Identifier: EC2_STOPPED_INSTANCE
+Trigger type: Periodic
+AWS Region: All supported AWS Regions except Africa (Cape Town) and Europe (Milan)
+Parameters:
+AllowedDays
+(Optional) The number of days an ec2 instance can be stopped before it is NON_COMPLIANT. The default number of days is 30.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

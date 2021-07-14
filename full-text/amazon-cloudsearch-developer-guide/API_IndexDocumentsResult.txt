@@ -1,0 +1,9 @@
+IndexDocumentsResult
+Description
+The result of an IndexDocuments request. Contains the status of the indexing operation, including the fields being indexed.
+Contents
+FieldNames 
+The names of the fields that are currently being indexed.
+Type: String list 
+ Length constraints: Minimum length of 1. Maximum length of 64. 
+ Required: No 

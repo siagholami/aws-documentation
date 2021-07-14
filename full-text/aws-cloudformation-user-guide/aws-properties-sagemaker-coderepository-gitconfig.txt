@@ -1,0 +1,38 @@
+AWS::SageMaker::CodeRepository GitConfig
+Specifies configuration details for a Git repository in your AWS account.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Branch](#cfn-sagemaker-coderepository-gitconfig-branch)" : String,
+  "[RepositoryUrl](#cfn-sagemaker-coderepository-gitconfig-repositoryurl)" : String,
+  "[SecretArn](#cfn-sagemaker-coderepository-gitconfig-secretarn)" : String
+}
+YAML
+[Branch](#cfn-sagemaker-coderepository-gitconfig-branch): String
+  [RepositoryUrl](#cfn-sagemaker-coderepository-gitconfig-repositoryurl): String
+  [SecretArn](#cfn-sagemaker-coderepository-gitconfig-secretarn): String
+Properties
+Branch 
+The default branch for the Git repository.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Pattern: [^ ~^:?*\[]
+Update requires: Replacement
+RepositoryUrl 
+The URL where the Git repository is located.
+Required: Yes
+Type: String
+Pattern: ^https://([^/])/?(.*)$
+Update requires: Replacement
+SecretArn 
+The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format:
+{"username": UserName, "password": Password} 
+Required: No
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:aws[a-z\-]*:secretsmanager:[a-z0-9\-]*:[0-9]{12}:secret:.*
+Update requires: No interruption

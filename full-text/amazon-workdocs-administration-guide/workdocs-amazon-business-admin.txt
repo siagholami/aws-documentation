@@ -1,0 +1,76 @@
+Managing Amazon WorkDocs for Amazon Business
+If you are an administrator for Amazon WorkDocs for Amazon Business, you can manage users by signing in to https://workdocs.aws/ using your Amazon Business credentials.
+To invite a new user to Amazon WorkDocs for Amazon Business
+
+
+Sign in with your Amazon Business credentials at https://workdocs.aws/.
+
+
+On the Amazon WorkDocs for Amazon Business home page, open the navigation pane on the left.
+
+
+Choose Admin Settings.
+
+
+Choose Add people.
+
+
+For Recipients, enter the email addresses or user names of the users to invite.
+
+
+(Optional) Customize the invitation message.
+
+
+Choose Done.
+
+
+To search for a user on Amazon WorkDocs for Amazon Business
+
+
+Sign in with your Amazon Business credentials at https://workdocs.aws/.
+
+
+On the Amazon WorkDocs for Amazon Business home page, open the navigation pane on the left.
+
+
+Choose Admin Settings.
+
+
+For Search users, enter the first name of the user, and press Enter.
+
+
+To select user roles on Amazon WorkDocs for Amazon Business
+
+
+Sign in with your Amazon Business credentials at https://workdocs.aws/.
+
+
+On the Amazon WorkDocs for Amazon Business home page, open the navigation pane on the left.
+
+
+Choose Admin Settings.
+
+
+Under People, next to the user, select the Role to assign to the user.
+
+
+To delete a user on Amazon WorkDocs for Amazon Business
+
+
+Sign in with your Amazon Business credentials at https://workdocs.aws/.
+
+
+On the Amazon WorkDocs for Amazon Business home page, open the navigation pane on the left.
+
+
+Choose Admin Settings.
+
+
+Under People, choose the ellipsis (...) next to the user.
+
+
+Choose Delete.
+
+
+If prompted, enter a new user to transfer the user's files to, and choose Delete.
+

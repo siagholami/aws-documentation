@@ -1,0 +1,6 @@
+Resources
+The following are the AWS Data Pipeline resource objects:
+Topics
+ Ec2Resource
+ EmrCluster
+ HttpProxy

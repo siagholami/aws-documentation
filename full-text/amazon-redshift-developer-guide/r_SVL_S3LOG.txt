@@ -1,0 +1,11 @@
+SVL_S3LOG
+Use the SVL_S3LOG view to get details about Amazon Redshift Spectrum queries at the segment and node slice level.
+SVL_S3LOG is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample query
+The following example queries SVL_S3LOG for the last query executed.
+select * 
+from svl_s3log 
+where query = pg_last_query_id() 
+order by query,segment,slice;

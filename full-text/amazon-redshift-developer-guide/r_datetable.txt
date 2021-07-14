@@ -1,0 +1,2 @@
+DATE table
+[See the AWS documentation website for more details]

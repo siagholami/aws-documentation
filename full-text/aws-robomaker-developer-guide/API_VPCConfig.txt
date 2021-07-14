@@ -1,0 +1,25 @@
+VPCConfig
+If your simulation job accesses resources in a VPC, you provide this parameter identifying the list of security group IDs and subnet IDs. These must belong to the same VPC. You must provide at least one security group and two subnet IDs.
+Contents
+assignPublicIp 
+A boolean indicating whether to assign a public IP address.
+Type: Boolean
+Required: No
+securityGroups 
+A list of one or more security groups IDs in your VPC.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 5 items.
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Required: No
+subnets 
+A list of one or more subnet IDs in your VPC.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 16 items.
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

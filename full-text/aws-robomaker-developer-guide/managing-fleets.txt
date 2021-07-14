@@ -1,0 +1,6 @@
+Managing Fleets
+A fleet is a group of robots. When you are ready to deploy a robot application to your robots, they must be part of a fleet. 
+Topics
+ Creating a Fleet
+ Registering and Deregistering Robots
+ Deleting a Fleet

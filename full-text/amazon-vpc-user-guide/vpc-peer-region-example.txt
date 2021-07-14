@@ -1,0 +1,18 @@
+Examples: Services using AWS PrivateLink and VPC peering
+An AWS PrivateLink service provider configures instances running services in their VPC, with a Network Load Balancer as the front end. Use intra-region VPC peering (VPCs are in the same Region) and inter-region VPC peering (VPCs are in different Regions) with AWS PrivateLink to allow private access to consumers across VPC peering connections.
+Consumers in remote VPCs cannot use Private DNS names across peering connections. They can however create their own private hosted zones on Route 53, and attach it to their VPCs to use the same Private DNS name. For information about using transit gateway with Amazon Route 53 Resolver, to share PrivateLink interface endpoints between multiple connected VPCs and an on-premises environment, see Integrating AWS Transit Gateway with AWS PrivateLink and Amazon Route 53 Resolver.
+The following are example configurations using AWS PrivateLink and VPC peering.
+Topics
+ Example: Service provider configures the service
+ Example: Service consumer configures access
+ Example: Service provider configures a service to span Regions
+ Example: Service consumer configures access across Regions
+Additional resources
+The following topics can help you configure the components needed for the examples:
+ VPC endpoint services (AWS PrivateLink)
+ Getting Started with Network Load Balancers
+ Working with VPC peering connections
+ Creating an interface endpoint
+For more VPC peering examples, see the following topics in the Amazon VPC Peering Guide:
+ VPC peering configurations
+ Unsupported VPC peering configurations

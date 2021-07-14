@@ -1,0 +1,44 @@
+Step 3: Create Roles
+Any person who is an administrator can perform the procedure to create a role and attach policies to the role. 
+In Step 1: Determine the Access Requirements, someone in your organization identified the roles that you need to create. Create those roles now using IAM. 
+To create a role and attach a policy to it
+
+
+Sign into the AWS Management Console as an administrator, and open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+In the navigation pane, choose Roles.
+
+
+On the Role page, choose Create role.
+
+
+On the Create role page, in the Select type of trusted entity section, choose AWS service (the default).
+
+
+In Choose the service that will use this role, choose EC2. 
+
+
+You choose EC2 because MediaLive is not currently included in this list. Choosing EC2 lets you create a role; in a later step, you will change this role to mention MediaLive instead of EC2.
+
+
+Choose Next: Permissions.
+
+
+In the Attach permissions policies section, select all the policies that apply for this role, and then choose Next: Tags.
+
+
+Add tags if your organization has a policy to create tags for resources. For more information, see Tagging AWS Elemental MediaLive Resources. Then choose Next: Review.
+
+
+Choose Next: Review.
+
+
+For Role name, enter a name. We recommend that you don't use the name MediaLiveAccessRole because it is reserved for the simple option. Instead, use a name that includes medialive and describes this role's purpose. 
+
+
+For Trusted entities, Amazon EC2 (ec2.amazonaws.com) is displayed as the trusted entity, but you will modify that line in the next procedure.
+
+
+Choose Create role.
+

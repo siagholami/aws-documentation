@@ -1,0 +1,18 @@
+AWS IoT Greengrass resource type reference
+Resource types
+ AWS::Greengrass::ConnectorDefinition
+ AWS::Greengrass::ConnectorDefinitionVersion
+ AWS::Greengrass::CoreDefinition
+ AWS::Greengrass::CoreDefinitionVersion
+ AWS::Greengrass::DeviceDefinition
+ AWS::Greengrass::DeviceDefinitionVersion
+ AWS::Greengrass::FunctionDefinition
+ AWS::Greengrass::FunctionDefinitionVersion
+ AWS::Greengrass::Group
+ AWS::Greengrass::GroupVersion
+ AWS::Greengrass::LoggerDefinition
+ AWS::Greengrass::LoggerDefinitionVersion
+ AWS::Greengrass::ResourceDefinition
+ AWS::Greengrass::ResourceDefinitionVersion
+ AWS::Greengrass::SubscriptionDefinition
+ AWS::Greengrass::SubscriptionDefinitionVersion

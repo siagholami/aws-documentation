@@ -1,0 +1,42 @@
+Unbox Class
+Unboxes a string field in a DynamicFrame.
+Methods
+
+__call__
+apply
+name
+describeArgs
+describeReturn
+describeTransform
+describeErrors
+describe
+
+__call__(frame, path, format, transformation_ctx = "", info="", stageThreshold=0, totalThreshold=0, **options)
+Unboxes a string field in a DynamicFrame.
+ frame – The DynamicFrame in which to unbox a field. (required).
+ path – The full path to the StringNode to unbox (required).
+ format – A format specification (optional). This is used for an Amazon Simple Storage Service (Amazon S3) or an AWS Glue connection that supports multiple formats. See Format Options for ETL Inputs and Outputs in AWS Glue for the formats that are supported.
+ transformation_ctx – A unique string that is used to identify state information (optional).
+ info – A string associated with errors in the transformation (optional).
+ stageThreshold – The maximum number of errors that can occur in the transformation before it errors out (optional; the default is zero).
+ totalThreshold – The maximum number of errors that can occur overall before processing errors out (optional; the default is zero).
+ separator – A separator token (optional).
+ escaper – An escape token (optional).
+ skipFirst – True if the first line of data should be skipped, or False if it should not be skipped (optional).
+ withSchema` – A string containing schema for the data to be unboxed \(optional\)\. This should always be created usingStructType.json\.
+withHeader–Trueif the data being unpacked includes a header, orFalse` if not (optional).
+Returns a new DynamicFrame with unboxed DynamicRecords.
+apply(cls, *args, **kwargs)
+Inherited from GlueTransform apply.
+name(cls)
+Inherited from GlueTransform name.
+describeArgs(cls)
+Inherited from GlueTransform describeArgs.
+describeReturn(cls)
+Inherited from GlueTransform describeReturn.
+describeTransform(cls)
+Inherited from GlueTransform describeTransform.
+describeErrors(cls)
+Inherited from GlueTransform describeErrors.
+describe(cls)
+Inherited from GlueTransform describe.

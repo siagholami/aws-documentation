@@ -1,0 +1,18 @@
+AWS::Athena::DataCatalog Tags
+A tag is a label that you assign to a data catalog resource. Each tag consists of a key and an optional value that you define. For example, you can use tags to categorize Athena data catalogs by purpose, owner, or environment. Use a consistent set of tag keys to make it easier to search and filter data catalogs in your account. Tag keys can be from 1 to 128 UTF-8 Unicode characters. Tags can use letters and numbers representable in UTF-8, and the following characters:  - = . _ : / @. Tag keys are case-sensitive and must be unique per resource. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Tags](#cfn-athena-datacatalog-tags-tags)" : [ Tag, ... ]
+}
+YAML
+[Tags](#cfn-athena-datacatalog-tags-tags): 
+    - Tag
+Properties
+Tags 
+A list of tags for the data catalog.
+For more information, see Tag.
+Required: No
+Type: List of Tag
+Update requires: No interruption

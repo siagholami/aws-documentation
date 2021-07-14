@@ -1,0 +1,9 @@
+elb-acm-certificate-required
+Checks whether the Classic Load Balancers use SSL certificates provided by AWS Certificate Manager. To use this rule, use an SSL or HTTPS listener with your Classic Load Balancer. This rule is only applicable to Classic Load Balancers. This rule does not check Application Load Balancers and Network Load Balancers.
+Identifier: ELB_ACM_CERTIFICATE_REQUIRED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions except China (Beijing), China (Ningxia), AWS GovCloud (US-East), Africa (Cape Town) and Europe (Milan)
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

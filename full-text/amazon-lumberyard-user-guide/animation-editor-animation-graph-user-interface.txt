@@ -1,0 +1,15 @@
+Anim Graph Interface
+Use the animation graph to create nodes and specify parameter and values for each node.
+
+On the animation graph, you can do the following:
+
+
+From the menu bar, you can do the following:
+    Open and save your animation graphs.
+    Select and deselect nodes.
+    Change the layout view of the editor.
+    Display or hide windows for animation graph.
+
+
+In the grid, create nodes and connect them with connectors.
+

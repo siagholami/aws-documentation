@@ -1,0 +1,7 @@
+Amazon Neptune resource type reference
+Resource types
+ AWS::Neptune::DBCluster
+ AWS::Neptune::DBClusterParameterGroup
+ AWS::Neptune::DBInstance
+ AWS::Neptune::DBParameterGroup
+ AWS::Neptune::DBSubnetGroup

@@ -1,0 +1,54 @@
+Abort Multipart Upload (DELETE uploadID)
+Description
+This multipart upload operation stops a multipart upload identified by the upload ID.
+After the Abort Multipart Upload request succeeds, you cannot use the upload ID to upload any more parts or perform any other operations. Stopping a completed multipart upload fails. However, stopping an already-stopped upload will succeed, for a short time. 
+This operation is idempotent. 
+For information about multipart upload, see Uploading Large Archives in Parts (Multipart Upload).
+Requests
+To stop a multipart upload, send an HTTP DELETE request to the URI of the multipart-uploads subresource of the vault and identify the specific multipart upload ID as part of the URI.
+Syntax
+1. DELETE /AccountId/vaults/VaultName/multipart-uploads/uploadID HTTP/1.1
+2. Host: glacier.Region.amazonaws.com
+3. Date: Date
+4. Authorization: SignatureValue
+5. x-amz-glacier-version: 2012-06-01
+Note
+The AccountId value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '-' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+Request Parameters
+This operation does not use request parameters.
+Request Headers
+This operation uses only request headers that are common to all operations. For information about common request headers, see Common Request Headers.
+Request Body
+This operation does not have a request body.
+Responses
+Syntax
+HTTP/1.1 204 No Content
+x-amzn-RequestId: x-amzn-RequestId
+Date: Date
+Response Headers
+This operation uses only response headers that are common to most responses. For information about common response headers, see Common Response Headers.
+Response Body
+This operation does not return a response body.
+Errors
+For information about Amazon S3 Glacier exceptions and error messages, see Error Responses.
+Example
+Example Request
+In the following example, a DELETE request is sent to the URI of a multipart upload ID resource.
+1. DELETE /-/vaults/examplevault/multipart-uploads/OW2fM5iVylEpFEMM9_HpKowRapC3vn5sSL39_396UW9zLFUWVrnRHaPjUJddQ5OxSHVXjYtrN47NBZ-khxOjyEXAMPLE  HTTP/1.1
+2. Host: glacier.us-west-2.amazonaws.com
+3. x-amz-Date: 20170210T120000Z
+4. x-amz-glacier-version: 2012-06-01
+5. Authorization: AWS4-HMAC-SHA256 Credential=AKIAIOSFODNN7EXAMPLE/20141123/us-west-2/glacier/aws4_request,SignedHeaders=host;x-amz-date;x-amz-glacier-version,Signature=9257c16da6b25a715ce900a5b45b03da0447acf430195dcb540091b12966f2a2
+Example Response
+1. HTTP/1.1 204 No Content
+2. x-amzn-RequestId: AAABZpJrTyioDC_HsOmHae8EZp_uBSJr6cnGOLKp_XJCl-Q
+3. Date: Wed, 10 Feb 2017 12:00:00 GMT
+Related Sections
+
+Initiate Multipart Upload (POST multipart-uploads)
+Upload Part (PUT uploadID)
+Complete Multipart Upload (POST uploadID)
+List Multipart Uploads (GET multipart-uploads)
+List Parts (GET uploadID)
+Uploading Large Archives in Parts (Multipart Upload)
+Identity and Access Management in Amazon S3 Glacier

@@ -1,0 +1,17 @@
+AWS::IoTAnalytics::Dataset OutputFileUriValue
+The value of the variable as a structure that specifies an output file URI.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[FileName](#cfn-iotanalytics-dataset-variable-outputfileurivalue-filename)" : String
+}
+YAML
+[FileName](#cfn-iotanalytics-dataset-variable-outputfileurivalue-filename): String
+Properties
+FileName 
+The URI of the location where dataset contents are stored, usually the URI of a file in an S3 bucket.
+Required: No
+Type: String
+Pattern: [\w\.-]{1,255}
+Update requires: No interruption

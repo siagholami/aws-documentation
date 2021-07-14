@@ -1,0 +1,25 @@
+AWS::IoTAnalytics::Dataset Trigger
+The "DatasetTrigger" that specifies when the data set is automatically updated.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Schedule](#cfn-iotanalytics-dataset-trigger-schedule)" : Schedule,
+  "[TriggeringDataset](#cfn-iotanalytics-dataset-trigger-triggeringdataset)" : TriggeringDataset
+}
+YAML
+[Schedule](#cfn-iotanalytics-dataset-trigger-schedule): 
+    Schedule
+  [TriggeringDataset](#cfn-iotanalytics-dataset-trigger-triggeringdataset): 
+    TriggeringDataset
+Properties
+Schedule 
+The "Schedule" when the trigger is initiated.
+Required: No
+Type: Schedule
+Update requires: No interruption
+TriggeringDataset 
+Information about the data set whose content generation triggers the new data set content generation.
+Required: No
+Type: TriggeringDataset
+Update requires: No interruption

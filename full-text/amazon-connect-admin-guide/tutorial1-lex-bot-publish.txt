@@ -1,0 +1,20 @@
+Part 5: Publish the Amazon Lex bot and create an alias
+Next, publish the bot so you can add it to a contact flow in Amazon Connect.
+
+
+In the Amazon Lex console, choose Publish.
+
+
+
+In the Publish HelpDesk dialog box, use the drop-down to choose the alias that you created for your bot, such as Test.
+
+
+
+Choose Publish. The publishing takes a few minutes.
+
+
+When Amazon Lex finishes publishing, choose Close. 
+
+
+
+Well done! You created an Amazon Lex bot that has intents and utterances. Now you can add the bot to Amazon Connect. Go to Step 2: Add permissions to Amazon Lex bot.

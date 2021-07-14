@@ -1,0 +1,17 @@
+ImageQuality
+Identifies face image brightness and sharpness. 
+Contents
+Brightness 
+Value representing brightness of the face. The service returns a value between 0 and 100 (inclusive). A higher value indicates a brighter face image.
+Type: Float
+Required: No
+Sharpness 
+Value representing sharpness of the face. The service returns a value between 0 and 100 (inclusive). A higher value indicates a sharper face image.
+Type: Float
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,15 @@
+AutoMLResult
+When the solution performs AutoML (performAutoML is true in CreateSolution), specifies the recipe that best optimized the specified metric.
+Contents
+bestRecipeArn 
+The Amazon Resource Name (ARN) of the best recipe.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

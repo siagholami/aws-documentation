@@ -1,0 +1,18 @@
+Working with build projects
+A build project includes information about how to run a build, including where to get the source code, which build environment to use, which build commands to run, and where to store the build output.
+You can perform these tasks when working with build projects:
+Topics
+ Create a build project in AWS CodeBuild
+ Create a notification rule
+ View a list of build project names in AWS CodeBuild
+ View a build project's details in AWS CodeBuild
+ Build caching in AWS CodeBuild
+ Create AWS CodeBuild triggers
+ Edit AWS CodeBuild triggers
+ Bitbucket webhook events
+ GitHub webhook events
+ Change a build project's settings in AWS CodeBuild
+ Delete a build project in AWS CodeBuild
+ Working with shared projects
+ Tagging projects in AWS CodeBuild
+ Batch builds in AWS CodeBuild

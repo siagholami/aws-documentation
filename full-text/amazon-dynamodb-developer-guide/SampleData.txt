@@ -1,0 +1,56 @@
+Step 3: Query the Data
+Topics
+In this step, you try some simple queries against the tables that you created, using the Amazon DynamoDB console.
+
+
+Open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane, choose Tables.
+
+
+In the list of tables, choose Reply.
+
+
+Choose the Items tab to view the data that you loaded into the table.
+
+
+Choose the data filtering link, located just below the Create item button.
+
+
+
+When you choose the link, the console reveals a data filtering pane.
+
+
+
+In the data filtering pane, do the following:
+
+
+Change the operation from Scan to Query.
+
+
+For the Partition key, enter the value Amazon DynamoDB#DynamoDB Thread 1.
+
+
+Choose Start. Only the items that match your query criteria are returned from the Reply table.
+
+
+The Reply table has a global secondary index on the PostedBy and Message attributes. You can use the data filtering pane to query the index. Do the following:
+
+
+Change the query source from the following:
+[Table] Reply: Id, ReplyDateTime
+To the following:
+[Index] PostedBy-Message-Index: PostedBy, Message
+
+
+For the Partition key, enter the value User A.
+
+
+Choose Start. Only the items that match your query criteria are returned from PostedBy-Message-Index.
+
+
+Take some time to explore your other tables using the DynamoDB console:
+ ProductCatalog
+ Forum
+ Thread

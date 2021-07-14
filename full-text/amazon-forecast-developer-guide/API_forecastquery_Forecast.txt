@@ -1,0 +1,19 @@
+Forecast
+Provides information about a forecast. Returned as part of the QueryForecast response.
+Contents
+Predictions 
+The forecast.
+The string of the string-to-array map is one of the following values:
+ p10
+ p50
+ p90
+The default setting is ["0.1", "0.5", "0.9"]. Use the optional ForecastTypes parameter of the CreateForecast operation to change the values. The values will vary depending on how this is set, with a minimum of 1 and a maximum of 5. 
+Type: String to array of DataPoint objects map
+Key Length Constraints: Maximum length of 4.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

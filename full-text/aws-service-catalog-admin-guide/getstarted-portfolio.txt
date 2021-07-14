@@ -1,0 +1,19 @@
+Step 3: Create an AWS Service Catalog Portfolio
+To provide users with products, begin by creating a portfolio for those products.
+To create a portfolio
+
+
+Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/.
+
+
+If you are using the AWS Service Catalog administrator console for the first time, choose Get started to start the wizard for configuring a portfolio. Otherwise, choose Create portfolio.
+
+
+Type the following values:
+    Portfolio name – Engineering Tools
+    Description – Sample portfolio that contains a single product. 
+    Owner – IT (it@example.com) 
+
+
+Choose Create.
+

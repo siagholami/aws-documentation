@@ -1,0 +1,124 @@
+COPY
+Loads data into a table from data files or from an Amazon DynamoDB table. The files can be located in an Amazon Simple Storage Service (Amazon S3) bucket, an Amazon EMR cluster, or a remote host that is accessed using a Secure Shell (SSH) connection.
+Note
+Amazon Redshift Spectrum external tables are read-only. You can't COPY to an external table.
+The COPY command appends the new input data to any existing rows in the table.
+The maximum size of a single input row from any source is 4 MB.
+Note
+To use the COPY command, you must have INSERT privilege for the Amazon Redshift table. 
+Topics
+ COPY syntax
+ COPY syntax overview
+ COPY parameter reference
+ Usage notes
+ COPY examples
+COPY syntax
+COPY table-name 
+[ column-list ]
+FROM data_source
+authorization
+[ [ FORMAT ] [ AS ] data_format ] 
+[ parameter [ argument ] [, ... ] ]
+COPY syntax overview
+You can perform a COPY operation with as few as three parameters: a table name, a data source, and authorization to access the data. 
+Amazon Redshift extends the functionality of the COPY command to enable you to load data in several data formats from multiple data sources, control access to load data, manage data transformations, and manage the load operation. 
+This section presents the required COPY command parameters and groups the optional parameters by function. Subsequent topics describe each parameter and explain how various options work together. You can also go directly to a parameter description by using the alphabetical parameter list. 
+Topics
+ Required parameters
+ Optional parameters
+ Using the COPY command
+Required parameters
+The COPY command requires three elements: 
+ Table Name
+ Data Source
+ Authorization
+The simplest COPY command uses the following format. 
+COPY table-name 
+FROM data-source
+authorization;
+The following example creates a table named CATDEMO, and then loads the table with sample data from a data file in Amazon S3 named category_pipe.txt. 
+create table catdemo(catid smallint, catgroup varchar(10), catname varchar(10), catdesc varchar(50));
+In the following example, the data source for the COPY command is a data file named category_pipe.txt in the tickit folder of an Amazon S3 bucket named awssampledbuswest2. The COPY command is authorized to access the Amazon S3 bucket through an AWS Identity and Access Management (IAM) role. If your cluster has an existing IAM role with permission to access Amazon S3 attached, you can substitute your role's Amazon Resource Name (ARN) in the following COPY command and execute it.
+copy catdemo
+from 's3://awssampledbuswest2/tickit/category_pipe.txt'
+iam_role 'arn:aws:iam::<aws-account-id>:role/<role-name>'
+region 'us-west-2';
+For steps to create an IAM role, see Step 2: Create an IAM Role in the Amazon Redshift Getting Started. For complete instructions on how to use COPY commands to load sample data, including instructions for loading data from other AWS regions, see Step 6: Load Sample Data from Amazon S3 in the Amazon Redshift Getting Started..
+table-name 
+The name of the target table for the COPY command. The table must already exist in the database. The table can be temporary or persistent. The COPY command appends the new input data to any existing rows in the table.
+FROM data-source 
+The location of the source data to be loaded into the target table. A manifest file can be specified with some data sources. 
+The most commonly used data repository is an Amazon S3 bucket. You can also load from data files located in an Amazon EMR cluster, an Amazon EC2 instance, or a remote host that your cluster can access using an SSH connection, or you can load directly from a DynamoDB table. 
+ COPY from Amazon S3
+ COPY from Amazon EMR 
+ COPY from remote host (SSH)
+ COPY from Amazon DynamoDB
+Authorization  
+A clause that indicates the method that your cluster uses for authentication and authorization to access other AWS resources. The COPY command needs authorization to access data in another AWS resource, including in Amazon S3, Amazon EMR, Amazon DynamoDB, and Amazon EC2. You can provide that authorization by referencing an IAM role that is attached to your cluster or by providing the access key ID and secret access key for an IAM user. 
+ Authorization parameters 
+ Role-based access control 
+ Key-based access control 
+Optional parameters
+You can optionally specify how COPY maps field data to columns in the target table, define source data attributes to enable the COPY command to correctly read and parse the source data, and manage which operations the COPY command performs during the load process. 
+ Column mapping options
+ Data format parameters
+ Data conversion parameters
+ Data load operations
+Column mapping
+By default, COPY inserts field values into the target table's columns in the same order as the fields occur in the data files. If the default column order will not work, you can specify a column list or use JSONPath expressions to map source data fields to the target columns. 
+ Column List
+ JSONPaths File
+Data format parameters
+You can load data from text files in fixed-width, character-delimited, comma-separated values (CSV), or JSON format, or from Avro files.
+By default, the COPY command expects the source data to be in character-delimited UTF-8 text files. The default delimiter is a pipe character ( | ). If the source data is in another format, use the following parameters to specify the data format.
+ FORMAT
+ CSV
+ DELIMITER 
+ FIXEDWIDTH 
+ AVRO 
+ JSON 
+ ENCRYPTED 
+ BZIP2 
+ GZIP 
+ LZOP 
+ PARQUET 
+ ORC 
+ ZSTD 
+Data conversion parameters
+As it loads the table, COPY attempts to implicitly convert the strings in the source data to the data type of the target column. If you need to specify a conversion that is different from the default behavior, or if the default conversion results in errors, you can manage data conversions by specifying the following parameters.
+ ACCEPTANYDATE 
+ ACCEPTINVCHARS 
+ BLANKSASNULL 
+ DATEFORMAT 
+ EMPTYASNULL 
+ ENCODING 
+ ESCAPE 
+ EXPLICIT_IDS 
+ FILLRECORD 
+ IGNOREBLANKLINES 
+ IGNOREHEADER 
+ NULL AS 
+ REMOVEQUOTES 
+ ROUNDEC 
+ TIMEFORMAT 
+ TRIMBLANKS 
+ TRUNCATECOLUMNS 
+Data load operations
+Manage the default behavior of the load operation for troubleshooting or to reduce load times by specifying the following parameters. 
+ COMPROWS 
+ COMPUPDATE 
+ MAXERROR 
+ NOLOAD 
+ STATUPDATE 
+Using the COPY command
+For more information about how to use the COPY command, see the following topics: 
+ COPY examples
+ Usage notes
+ Tutorial: Loading data from Amazon S3
+ Amazon Redshift best practices for loading data
+ Using a COPY command to load data
+   Loading data from Amazon S3
+   Loading data from Amazon EMR
+   Loading data from remote hosts 
+   Loading data from an Amazon DynamoDB table
+ Troubleshooting data loads

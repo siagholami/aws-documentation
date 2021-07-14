@@ -1,0 +1,7 @@
+Managing your AWS payments
+You can use the Payment Methods page of the Billing and Cost Management console to manage your AWS payments and payment methods.
+Topics
+ Managing your AWS payment methods
+ Managing your credit card payment methods
+ Managing your ACH direct debit payment methods
+If you have questions about payment methods, see Getting help with AWS Billing and Cost Management.

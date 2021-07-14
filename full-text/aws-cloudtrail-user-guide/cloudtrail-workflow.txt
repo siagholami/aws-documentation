@@ -1,0 +1,31 @@
+CloudTrail Workflow
+View event history for your AWS account
+You can view and search the last 90 days of events recorded by CloudTrail in the CloudTrail console or by using the AWS CLI. For more information, see Viewing Events with CloudTrail Event History.
+Download events
+You can download a CSV or JSON file containing up to the past 90 days of CloudTrail events for your AWS account. For more information, see Downloading Events or Downloading Insights Events.
+ Create a trail 
+A trail enables CloudTrail to deliver log files to your Amazon S3 bucket. By default, when you create a trail in the console, the trail applies to all regions. The trail logs events from all regions in the AWS partition and delivers the log files to the S3 bucket that you specify. For more information, see Creating a Trail For Your AWS Account.
+ Create and subscribe to an Amazon SNS topic
+Subscribe to a topic to receive notifications about log file delivery to your bucket. Amazon SNS can notify you in multiple ways, including programmatically with Amazon Simple Queue Service. For information, see Configuring Amazon SNS Notifications for CloudTrail.
+If you want to receive SNS notifications about log file deliveries from all regions, specify only one SNS topic for your trail. If you want to programmatically process all events, see Using the CloudTrail Processing Library.
+ View your log files 
+Use Amazon S3 to retrieve log files. For information, see Getting and Viewing Your CloudTrail Log Files.
+ Manage user permissions 
+Use AWS Identity and Access Management (IAM) to manage which users have permissions to create, configure, or delete trails; start and stop logging; and access buckets that have log files. For more information, see Controlling User Permissions for CloudTrail.
+ Monitor events with CloudWatch Logs 
+You can configure your trail to send events to CloudWatch Logs. You can then use CloudWatch Logs to monitor your account for specific API calls and events. For more information, see Monitoring CloudTrail Log Files with Amazon CloudWatch Logs.
+If you configure a trail that applies to all regions to send events to a CloudWatch Logs log group, CloudTrail sends events from all regions to a single log group.
+ Log management and data events 
+Configure your trails to log read-only, write-only, or all management and data events. By default, trails log management events. For more information, see Working with CloudTrail Log Files.
+Log CloudTrail Insights events
+Configure your trails to log Insights events to help you identify and respond to unusual activity associated with write management API calls. If your trail is configured to log read-only or no management events, you cannot turn on CloudTrail Insights event logging. For more information, see Logging Insights Events for Trails.
+ Enable log encryption 
+Log file encryption provides an extra layer of security for your log files. For more information, see Encrypting CloudTrail Log Files with AWS KMS–Managed Keys (SSE-KMS).
+ Enable log file integrity 
+Log file integrity validation helps you verify that log files have remained unchanged since CloudTrail delivered them. For more information, see Validating CloudTrail Log File Integrity.
+Share log files with other AWS accounts
+You can share log files between accounts. For more information, see Sharing CloudTrail Log Files Between AWS Accounts.
+ Aggregate logs from multiple accounts 
+You can aggregate log files from multiple accounts to a single bucket. For more information, see Receiving CloudTrail Log Files from Multiple Accounts.
+ Work with partner solutions 
+Analyze your CloudTrail output with a partner solution that integrates with CloudTrail. Partner solutions offer a broad set of capabilities, such as change tracking, troubleshooting, and security analysis. For more information, see the AWS CloudTrail partner page.

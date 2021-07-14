@@ -1,0 +1,31 @@
+Creating and Deleting Portfolios
+Use the Portfolios page to create and delete portfolios. Deleting a portfolio removes it from your account. Before you can delete a portfolio, you must remove all the products, constraints, and users that it contains.
+To create a new portfolio
+
+
+Navigate to the Portfolios page.
+
+
+Choose Create portfolio. 
+
+
+On the Create portfolio page, enter the requested information.
+
+
+Choose Create. AWS Service Catalog creates the portfolio and displays the portfolio details.
+
+
+To delete a portfolio
+
+
+Navigate to the Portfolios page.
+
+
+Select the portfolio by clicking the corresponding radio button or anywhere on the listing except on the portfolio title. 
+
+
+Choose Delete portfolio.
+
+
+Choose Continue. 
+

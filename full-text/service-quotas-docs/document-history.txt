@@ -1,0 +1,17 @@
+Document History for Service Quotas
+The following table describes the releases for Service Quotas.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Initial release
+This release introduces Service Quotas
+June 24, 2019
+
+

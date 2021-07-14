@@ -1,0 +1,156 @@
+AWS Elemental MediaStore User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Elemental MediaStore?
+AWS Elemental MediaStore concepts and terminology
+Related services
+Accessing AWS Elemental MediaStore
+Pricing for AWS Elemental MediaStore
+Regions and endpoints for AWS Elemental MediaStore
+Setting up AWS Elemental MediaStore
+Signing up for AWS
+Creating an admin IAM user
+Creating a non-admin IAM user
+Step 1: Create user groups
+Step 2: Create users
+
+
+Getting started with AWS Elemental MediaStore
+Containers in AWS Elemental MediaStore
+Rules for container names
+Creating a container
+Viewing the details for a container
+Viewing a list of containers
+Deleting a container
+Policies in AWS Elemental MediaStore
+Container policies in AWS Elemental MediaStore
+Viewing a container policy
+Editing a container policy
+Example container policies
+Example container policy: Default
+Example container policy: Public read access over HTTPS
+Example container policy: Public read access over HTTP or HTTPS
+Example container policy: Cross-account read access—HTTP enabled
+Example container policy: Cross-account read access over HTTPS
+Example container policy: Cross-account read access to a role
+Example container policy: Cross-account full access to a role
+Example container policy: Post access to an AWS service to a folder
+Example container policy: Post access to an AWS service to multiple folders
+Example container policy: Access restricted to specific IP addresses
+
+
+
+
+Cross-origin resource sharing (CORS) policies in AWS Elemental MediaStore
+CORS use-case scenarios
+Adding a CORS policy to a container
+Viewing a CORS policy
+Editing a CORS policy
+Deleting a CORS policy
+Troubleshooting CORS issues
+Example CORS policies
+Example CORS policy: Read access for any domain
+Example CORS policy: Read access for a specific domain
+
+
+
+
+Object lifecycle policies in AWS Elemental MediaStore
+Components of an object lifecycle policy
+Adding an object lifecycle policy to a container
+Viewing an object lifecycle policy
+Editing an object lifecycle policy
+Deleting an object lifecycle policy
+Example object lifecycle policies
+Example object lifecycle policy: Expire within seconds
+Example object lifecycle policy: Expire within days
+Example object lifecycle policy: Transition to infrequent access storage class
+Example object lifecycle policy: Multiple rules
+Example object lifecycle policy: Empty container
+
+
+
+
+Metric policies in AWS Elemental MediaStore
+Adding a metric policy
+Viewing a metric policy
+Editing a metric policy
+Example metric policies
+Example metric policy: Container-level metrics
+Example metric policy: Path-level metrics
+Example metric policy: Container-level and path-level metrics
+Example metric policy: Path-level metrics using wildcards
+Example metric policy: Path-level metrics with overlapping rules
+
+
+
+
+Folders in AWS Elemental MediaStore
+Rules for folder names
+Creating a folder
+Deleting a folder
+Objects in AWS Elemental MediaStore
+Uploading an object
+Viewing a list of objects
+Viewing the details of an object
+Downloading an object
+Deleting objects
+Deleting an object
+Emptying a container
+
+
+Security in AWS Elemental MediaStore
+Data protection in AWS Elemental MediaStore
+Identity and access management in AWS Elemental MediaStore
+How AWS Elemental MediaStore works with IAM
+AWS Elemental MediaStore Identity-Based Policy Examples
+AWS Elemental MediaStore resource-based policy examples
+Troubleshooting AWS Elemental MediaStore identity and access
+
+
+Logging and monitoring in AWS Elemental MediaStore
+Compliance validation for AWS Elemental MediaStore
+Resilience in AWS Elemental MediaStore
+Infrastructure security in AWS Elemental MediaStore
+Monitoring and tagging in AWS Elemental MediaStore
+Logging AWS Elemental MediaStore API calls with AWS CloudTrail
+AWS Elemental MediaStore information in CloudTrail
+Example: AWS Elemental MediaStore log file entries
+
+
+Monitoring AWS Elemental MediaStore with Amazon CloudWatch
+CloudWatch Logs
+Setting up permissions for Amazon CloudWatch
+Enabling access logging for a container
+Disabling access logging for a container
+Troubleshooting access logging in AWS Elemental MediaStore
+Access log format
+
+
+CloudWatch Events
+AWS Elemental MediaStore object state change event
+AWS Elemental MediaStore container state change event
+
+
+Monitoring AWS Elemental MediaStore with Amazon CloudWatch metrics
+
+
+Tagging AWS Elemental MediaStore resources
+Working with content delivery networks (CDNs)
+Allowing Amazon CloudFront to access your AWS Elemental MediaStore container
+AWS Elemental MediaStore's interaction with HTTP caches
+Quotas in AWS Elemental MediaStore
+AWS Elemental MediaStore related information
+Document history for user guide
+AWS glossary

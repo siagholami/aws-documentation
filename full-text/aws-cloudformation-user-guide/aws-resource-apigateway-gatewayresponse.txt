@@ -1,0 +1,179 @@
+AWS::ApiGateway::GatewayResponse
+The AWS::ApiGateway::GatewayResponse resource creates a gateway response for your API. For more information, see API Gateway Responses in the API Gateway Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGateway::GatewayResponse",
+  "Properties" : {
+      "[ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters)" : {Key : Value, ...},
+      "[ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates)" : {Key : Value, ...},
+      "[ResponseType](#cfn-apigateway-gatewayresponse-responsetype)" : String,
+      "[RestApiId](#cfn-apigateway-gatewayresponse-restapiid)" : String,
+      "[StatusCode](#cfn-apigateway-gatewayresponse-statuscode)" : String
+    }
+}
+YAML
+Type: AWS::ApiGateway::GatewayResponse
+Properties: 
+  [ResponseParameters](#cfn-apigateway-gatewayresponse-responseparameters): 
+    Key : Value
+  [ResponseTemplates](#cfn-apigateway-gatewayresponse-responsetemplates): 
+    Key : Value
+  [ResponseType](#cfn-apigateway-gatewayresponse-responsetype): String
+  [RestApiId](#cfn-apigateway-gatewayresponse-restapiid): String
+  [StatusCode](#cfn-apigateway-gatewayresponse-statuscode): String
+Properties
+ResponseParameters 
+The response parameters (paths, query strings, and headers) for the response. Duplicates not allowed.
+Required: No
+Type: Map of String
+Update requires: No interruption
+ResponseTemplates 
+The response templates for the response. Duplicates not allowed.
+Required: No
+Type: Map of String
+Update requires: No interruption
+ResponseType 
+The response type. For valid values, see GatewayResponse in the API Gateway API Reference.
+Required: Yes
+Type: String
+Update requires: Replacement
+RestApiId 
+The identifier of the API.
+Required: Yes
+Type: String
+Update requires: Replacement
+StatusCode 
+The HTTP status code for the response.
+Required: No
+Type: String
+Update requires: No interruption
+Examples
+404 Response
+The following example returns a 404 status code for resource not found instead of missing authentication token for a CORS request (applicable to unsecured/unrestricted APIs).
+JSON
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "RestApi": {
+            "Type": "AWS::ApiGateway::RestApi",
+            "Properties": {
+                "Name": "myRestApi"
+            }
+        },
+        "GatewayResponse": {
+            "Type": "AWS::ApiGateway::GatewayResponse",
+            "Properties": {
+                "ResponseParameters": {
+                    "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
+                    "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
+                },
+                "ResponseType": "MISSING_AUTHENTICATION_TOKEN",
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "StatusCode": "404"
+            }
+        }
+    }
+}
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  RestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: myRestApi
+  GatewayResponse:
+    Type: AWS::ApiGateway::GatewayResponse
+    Properties:
+      ResponseParameters:
+        gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+        gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+      ResponseType: MISSING_AUTHENTICATION_TOKEN
+      RestApiId: !Ref RestApi
+      StatusCode: '404'
+Parameterized Response
+The following example creates a response for an API based on the supplied parameters.
+JSON
+{
+    "Parameters": {
+        "apiName": {
+            "Type": "String"
+        },
+        "responseParameter1": {
+            "Type": "String"
+        },
+        "responseParameter2": {
+            "Type": "String"
+        },
+        "responseType": {
+            "Type": "String"
+        },
+        "statusCode": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "RestApi": {
+            "Type": "AWS::ApiGateway::RestApi",
+            "Properties": {
+                "Name": {
+                    "Ref": "apiName"
+                }
+            }
+        },
+        "GatewayResponse": {
+            "Type": "AWS::ApiGateway::GatewayResponse",
+            "Properties": {
+                "ResponseParameters": {
+                    "gatewayresponse.header.k1": {
+                        "Ref": "responseParameter1"
+                    },
+                    "gatewayresponse.header.k2": {
+                        "Ref": "responseParameter2"
+                    }
+                },
+                "ResponseType": {
+                    "Ref": "responseType"
+                },
+                "RestApiId": {
+                    "Ref": "RestApi"
+                },
+                "StatusCode": {
+                    "Ref": "statusCode"
+                }
+            }
+        }
+    }
+}
+YAML
+Parameters:
+    apiName :
+        Type : String
+    responseParameter1:
+        Type : String
+    responseParameter2:
+        Type : String
+    responseType:
+        Type : String
+    statusCode:
+        Type : String
+Resources :
+    RestApi:
+        Type: AWS::ApiGateway::RestApi
+        Properties:
+            Name: !Ref apiName
+    GatewayResponse:
+        Type: AWS::ApiGateway::GatewayResponse
+        Properties:
+            ResponseParameters:
+                gatewayresponse.header.k1 : !Ref responseParameter1
+                gatewayresponse.header.k2 : !Ref responseParameter2
+            ResponseType: !Ref responseType
+            RestApiId: !Ref RestApi
+            StatusCode: !Ref statusCode
+See also
+
+gatewayresponse:put in the Amazon API Gateway REST API Reference

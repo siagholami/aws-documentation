@@ -1,0 +1,30 @@
+AWS::Glue::Partition Column
+A column in a Table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Comment](#cfn-glue-partition-column-comment)" : String,
+  "[Name](#cfn-glue-partition-column-name)" : String,
+  "[Type](#cfn-glue-partition-column-type)" : String
+}
+YAML
+[Comment](#cfn-glue-partition-column-comment): String
+  [Name](#cfn-glue-partition-column-name): String
+  [Type](#cfn-glue-partition-column-type): String
+Properties
+Comment 
+A free-form text comment.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of the Column.
+Required: Yes
+Type: String
+Update requires: No interruption
+Type 
+The data type of the Column.
+Required: No
+Type: String
+Update requires: No interruption

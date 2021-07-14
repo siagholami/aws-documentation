@@ -1,0 +1,47 @@
+Common actions that you can use with AWS Global Accelerator
+The following table lists common AWS Global Accelerator actions that you can use with Global Accelerator resources. The table also provides links to relevant documentation.
+
+
+
+Action
+Using the Global Accelerator Console
+Using the Global Accelerator API
+
+
+
+
+Create an accelerator
+See Getting started with AWS Global Accelerator
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_CreateAccelerator.html
+
+
+Create a listener
+See Adding, editing, or removing a listener
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_CreateListener.html
+
+
+Create an endpoint group
+See  Adding, editing, or removing an endpoint group
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_CreateEndpointGroup.html
+
+
+List your accelerators
+See Viewing your accelerators
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_ListAccelerators.html
+
+
+Get all information about an accelerator
+See Viewing your accelerators
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_DescribeAccelerator.html
+
+
+Update an accelerator
+See  Creating or updating an accelerator
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_UpdateAccelerator.html
+
+
+Delete an accelerator
+See  Creating or updating an accelerator
+See https://docs.aws.amazon.com/global-accelerator/latest/api/API_DeleteAccelerator.html
+
+

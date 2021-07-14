@@ -1,0 +1,32 @@
+AWS::Pinpoint::Campaign CampaignHook
+Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[LambdaFunctionName](#cfn-pinpoint-campaign-campaignhook-lambdafunctionname)" : String,
+  "[Mode](#cfn-pinpoint-campaign-campaignhook-mode)" : String,
+  "[WebUrl](#cfn-pinpoint-campaign-campaignhook-weburl)" : String
+}
+YAML
+[LambdaFunctionName](#cfn-pinpoint-campaign-campaignhook-lambdafunctionname): String
+  [Mode](#cfn-pinpoint-campaign-campaignhook-mode): String
+  [WebUrl](#cfn-pinpoint-campaign-campaignhook-weburl): String
+Properties
+LambdaFunctionName 
+The name or Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Pinpoint invokes to customize a segment for a campaign.
+Required: No
+Type: String
+Update requires: No interruption
+Mode 
+The mode that Amazon Pinpoint uses to invoke the AWS Lambda function. Possible values are:
+  FILTER - Invoke the function to customize the segment that's used by a campaign.
+  DELIVERY - (Deprecated) Previously, invoked the function to send a campaign through a custom channel. This functionality is not supported anymore. To send a campaign through a custom channel, use the CustomDeliveryConfiguration and CampaignCustomMessage objects of the campaign.
+Required: No
+Type: String
+Update requires: No interruption
+WebUrl 
+The web URL that Amazon Pinpoint calls to invoke the AWS Lambda function over HTTPS.
+Required: No
+Type: String
+Update requires: No interruption

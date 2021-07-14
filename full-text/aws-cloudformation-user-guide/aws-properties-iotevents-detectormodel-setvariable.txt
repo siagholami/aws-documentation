@@ -1,0 +1,28 @@
+AWS::IoTEvents::DetectorModel SetVariable
+Information about the variable and its new value.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Value](#cfn-iotevents-detectormodel-setvariable-value)" : String,
+  "[VariableName](#cfn-iotevents-detectormodel-setvariable-variablename)" : String
+}
+YAML
+[Value](#cfn-iotevents-detectormodel-setvariable-value): String
+  [VariableName](#cfn-iotevents-detectormodel-setvariable-variablename): String
+Properties
+Value 
+The new value of the variable.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+VariableName 
+The name of the variable.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z][a-zA-Z0-9_]*$
+Update requires: No interruption

@@ -1,0 +1,28 @@
+Creating an Amazon Chime Voice Connector
+Create an Amazon Chime Voice Connector from the Amazon Chime console.
+To create an Amazon Chime Voice Connector
+
+
+Open the Amazon Chime console at https://chime.aws.amazon.com/.
+
+
+For Calling, choose Voice connectors.
+
+
+Choose Create new voice connector.
+
+
+For Voice connector name, enter a name for the Amazon Chime Voice Connector.
+
+
+(Optional) For AWS Region, choose an AWS Region for your Amazon Chime Voice Connector. The default Region is US East (N. Virginia) (us-east-1). Regions cannot be changed after your Amazon Chime Voice Connector is created.
+
+
+For Encryption, select Enabled or Disabled.
+
+
+Choose Create.
+
+
+Note
+Enabling encryption configures your Amazon Chime Voice Connector to use TLS transport for SIP signaling and Secure RTP (SRTP) for media. Inbound calls use TLS transport, and unencrypted outbound calls are blocked.

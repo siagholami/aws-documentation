@@ -1,0 +1,23 @@
+AWS::AmazonMQ::Broker InterBrokerCred
+The InterBrokerCred property type specifies Not currently supported by AWS CloudFormation. for an AWS::AmazonMQ::Broker.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Password](#cfn-amazonmq-broker-interbrokercred-password)" : String,
+  "[Username](#cfn-amazonmq-broker-interbrokercred-username)" : String
+}
+YAML
+[Password](#cfn-amazonmq-broker-interbrokercred-password): String
+  [Username](#cfn-amazonmq-broker-interbrokercred-username): String
+Properties
+Password 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: No interruption
+Username 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: No interruption

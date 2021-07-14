@@ -1,0 +1,7 @@
+Set up the CloudWatch Agent for Prometheus Metrics Collection
+The process for setting up Container Insights for Prometheus metrics is different for Amazon ECS and Amazon EKS and Kubernetes.
+Topics
+ Install the CloudWatch Agent with Prometheus Metrics Collection on Amazon ECS clusters
+ Install the CloudWatch agent with Prometheus metrics collection on Amazon EKS and Kubernetes clusters
+ Configuring the CloudWatch Agent for Prometheus Monitoring
+ (Optional) Set Up Sample Containerized Workloads for Prometheus Metric Testing

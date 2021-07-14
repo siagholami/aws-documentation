@@ -1,0 +1,15 @@
+Setting up captions in MediaConvert jobs
+To include captions in your job, follow these steps in the order listed:
+
+
+If your input captions are a timecode-based sidecar captions format, such as SCC or STL, set the timecode source settings.
+
+
+Gather required captions information.
+
+
+Create input captions selectors.
+
+
+Set up captions in outputs.
+

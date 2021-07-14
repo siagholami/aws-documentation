@@ -1,0 +1,33 @@
+AWS::Detective::Graph
+The AWS::Detective::Graph resource is an Amazon Detective resource type that creates a Detective behavior graph. The requesting account becomes the master account for the behavior graph.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Detective::Graph",
+  "Properties" : {
+    }
+}
+YAML
+Type: AWS::Detective::Graph
+Properties:
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ARN of the new behavior graph.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+The ARN of the new behavior graph.
+Examples
+Creating a new Detective behavior graph
+This example shows how to declare a new AWS:Detective:Graph resource to create a new Detective behavior graph
+JSON
+"NewGraph": {
+    "Type": "AWS::Detective::Graph"
+}
+YAML
+NewGraph:
+    Type: AWS::Detective::Graph

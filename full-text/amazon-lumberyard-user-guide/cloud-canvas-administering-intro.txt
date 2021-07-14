@@ -1,0 +1,7 @@
+Administering Cloud Canvas
+This section provides information for administering your Lumberyard project's AWS account and its use of the AWS cloud.
+Topics
+ Setting Up a Project to Use Resource Manager
+ Working with Deployments
+ Freeing Up AWS Resources
+ Understanding the Resource Manager Security System

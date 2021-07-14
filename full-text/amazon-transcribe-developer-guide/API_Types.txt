@@ -1,0 +1,27 @@
+Data Types
+The following data types are supported by Amazon Transcribe Service:
+  ContentRedaction 
+  InputDataConfig 
+  JobExecutionSettings 
+  LanguageModel 
+  Media 
+  MedicalTranscript 
+  MedicalTranscriptionJob 
+  MedicalTranscriptionJobSummary 
+  MedicalTranscriptionSetting 
+  ModelSettings 
+  Settings 
+  Transcript 
+  TranscriptionJob 
+  TranscriptionJobSummary 
+  VocabularyFilterInfo 
+  VocabularyInfo 
+The following data types are supported by Amazon Transcribe Streaming Service:
+  Alternative 
+  AudioEvent 
+  AudioStream 
+  Item 
+  Result 
+  Transcript 
+  TranscriptEvent 
+  TranscriptResultStream 

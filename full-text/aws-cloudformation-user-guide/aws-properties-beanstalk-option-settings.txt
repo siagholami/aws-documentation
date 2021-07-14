@@ -1,0 +1,45 @@
+AWS::ElasticBeanstalk::Environment OptionSetting
+The OptionSetting property type specifies an option for an AWS Elastic Beanstalk environment.
+The OptionSettings property of the AWS::ElasticBeanstalk::Environment resource contains a list of OptionSetting property types.
+For a list of possible namespaces and option values, see Option Values in the AWS Elastic Beanstalk Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Namespace](#cfn-beanstalk-optionsettings-namespace)" : String,
+  "[OptionName](#cfn-beanstalk-optionsettings-optionname)" : String,
+  "[ResourceName](#cfn-elasticbeanstalk-environment-optionsetting-resourcename)" : String,
+  "[Value](#cfn-beanstalk-optionsettings-value)" : String
+}
+YAML
+[Namespace](#cfn-beanstalk-optionsettings-namespace): String
+  [OptionName](#cfn-beanstalk-optionsettings-optionname): String
+  [ResourceName](#cfn-elasticbeanstalk-environment-optionsetting-resourcename): String
+  [Value](#cfn-beanstalk-optionsettings-value): String
+Properties
+Namespace 
+A unique namespace that identifies the option's associated AWS resource.
+Required: Yes
+Type: String
+Update requires: No interruption
+OptionName 
+The name of the configuration option.
+Required: Yes
+Type: String
+Update requires: No interruption
+ResourceName 
+A unique resource name for the option setting. Use it for a time–based scaling configuration option.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Update requires: No interruption
+Value 
+The current value for the configuration option.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ConfigurationOptionSetting in the AWS Elastic Beanstalk API Reference 
+Configuration Options in the AWS Elastic Beanstalk Developer Guide 

@@ -1,0 +1,6 @@
+Creating Systems Manager parameters
+Use the information in the following topics to help you create Systems Manager parameters using the AWS Systems Manager console, the AWS CLI, or AWS Tools for Windows PowerShell.
+Topics
+ Create a Systems Manager parameter (console)
+ Create a Systems Manager parameter (AWS CLI)
+ Create a Systems Manager parameter (Tools for Windows PowerShell)

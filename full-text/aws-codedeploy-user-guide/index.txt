@@ -1,0 +1,305 @@
+AWS CodeDeploy User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is CodeDeploy?
+CodeDeploy primary components
+CodeDeploy deployments
+Deployments on an AWS Lambda Compute Platform
+Deployments on an Amazon ECS Compute Platform
+Deployments on an EC2/On-Premises Compute Platform
+
+
+CodeDeploy application specification (AppSpec) files
+Getting started with CodeDeploy
+Step 1: Provision an IAM user
+Step 2: Install or upgrade and then configure the AWS CLI
+Step 3: Create a service role for CodeDeploy
+Step 4: Create an IAM instance profile for your Amazon EC2 instances
+Product and service integrations with CodeDeploy
+Integration with other AWS services
+Integrating CodeDeploy with Amazon EC2 Auto Scaling
+Integrating CodeDeploy with Elastic Load Balancing
+
+
+Integration with partner products and services
+Integrating CodeDeploy with GitHub
+
+
+Integration examples from the community
+CodeDeploy tutorials
+Tutorial: Deploy WordPress to an Amazon EC2 instance (Amazon Linux or Red Hat Enterprise Linux and Linux, macOS, or Unix)
+Step 1: Launch and configure an Amazon Linux or Red Hat Enterprise Linux Amazon EC2 instance
+Step 2: Configure your source content to be deployed to the Amazon Linux or Red Hat Enterprise Linux Amazon EC2 instance
+Step 3: Upload your WordPress application to Amazon S3
+Step 4: Deploy your WordPress application
+Step 5: Update and redeploy your WordPress application
+Step 6: Clean up your WordPress application and related resources
+
+
+Tutorial: Deploy a "hello, world!" application with CodeDeploy (Windows Server)
+Step 1: Launch a Windows Server Amazon EC2 instance
+Step 2: Configure your source content to deploy to the Windows Server Amazon EC2 instance
+Step 3: Upload your "hello, world!" application to Amazon S3
+Step 4: Deploy your Hello World application
+Step 5: Update and redeploy your "hello, world!" application
+Step 6: Clean up your "hello, world!" application and related resources
+
+
+Tutorial: Deploy an application to an on-premises instance with CodeDeploy (Windows Server, Ubuntu Server, or Red Hat Enterprise Linux)
+Prerequisites
+Step 1: Configure the on-premises instance
+Step 2: Create a sample application revision
+Step 3: Bundle and upload your application revision to Amazon S3
+Step 4: Deploy your application revision
+Step 5: Verify your deployment
+Step 6: Clean up resources
+
+
+Tutorial: Use CodeDeploy to deploy an application to an Amazon EC2 Auto Scaling group
+Prerequisites
+Step 1: Create and configure the Amazon EC2 Auto Scaling group
+Step 2: Deploy the application to the Amazon EC2 Auto Scaling group
+Step 3: Check your results
+Step 4: Increase the number of Amazon EC2 instances in the Amazon EC2 Auto Scaling group
+Step 5: Check your results again
+Step 6: Clean up
+
+
+Tutorial: Use CodeDeploy to deploy an application from GitHub
+Prerequisites
+Step 1: Set up a GitHub account
+Step 2: Create a GitHub repository
+Step 3: Upload a sample application to your GitHub repository
+Step 4: Provision an instance
+Step 5: Create an application and deployment group
+Step 6: Deploy the application to the instance
+Step 7: Monitor and verify the deployment
+Step 8: Clean up
+
+
+Tutorial: Deploy an Amazon ECS service
+Prerequisites
+Step 1: Update your Amazon ECS application
+Step 2: Create the AppSpec file
+Step 3: Use the CodeDeploy console to deploy your Amazon ECS service
+Step 4: Clean up
+
+
+Tutorial: Deploy an Amazon ECS service with a validation test
+Prerequisites
+Step 1: Create a test listener
+Step 2: Update your Amazon ECS application
+Step 3: Create a lifecycle hook Lambda function
+Step 4: Update your AppSpec file
+Step 5: Use the CodeDeploy console to deploy your Amazon ECS service
+Step 6: View your Lambda hook function output in CloudWatch Logs
+Step 7: Clean up
+
+
+Tutorial: Deploy an updated Lambda function with CodeDeploy and the AWS Serverless Application Model
+Prerequisites
+Step 1: Set up your infrastructure
+Create your files
+Create your AWS SAM template
+Create a file for your Lambda function
+Create a file for your BeforeAllowTraffic Lambda function
+Create a file for your AfterAllowTraffic Lambda function
+
+
+Package the AWS SAM application
+Deploy the AWS SAM application
+(Optional) inspect and test your infrastructure
+
+
+Step 2: Update the Lambda function
+Step 3: Deploy the updated Lambda function
+Step 4: View your deployment results
+Step 5: Clean up
+
+
+Working with the CodeDeploy agent
+Managing CodeDeploy agent operations
+Verify the CodeDeploy agent is running
+Determine the version of the CodeDeploy agent
+Install the CodeDeploy agent
+Install the CodeDeploy agent using AWS Systems Manager
+Install the CodeDeploy agent using the command line
+Install the CodeDeploy agent for Amazon Linux or RHEL
+Install the CodeDeploy agent for Ubuntu Server
+Install the CodeDeploy agent for Windows Server
+
+
+
+
+Update the CodeDeploy agent
+Update the CodeDeploy agent on Amazon Linux or RHEL
+Update the CodeDeploy agent on Ubuntu Server
+Update the CodeDeploy agent on Windows Server
+
+
+Uninstall the CodeDeploy agent
+
+
+Working with instances for CodeDeploy
+Tagging instances for deployment groups in CodeDeploy
+Working with Amazon EC2 instances for CodeDeploy
+Create an Amazon EC2 instance for CodeDeploy (AWS CLI or Amazon EC2 console)
+Create an Amazon EC2 instance for CodeDeploy (AWS CloudFormation template)
+Configure an Amazon EC2 instance to work with CodeDeploy
+
+
+Working with on-premises instances for CodeDeploy
+Prerequisites for configuring an on-premises instance
+Register an on-premises instance with CodeDeploy
+Use the register command (IAM user ARN) to register an on-premises instance
+Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance
+Use the register-on-premises-instance command (IAM Session ARN) to register an on-premises instance
+
+
+Managing on-premises instances operations in CodeDeploy
+Get information about a single on-premises instance
+Get information about multiple on-premises instances
+Manually remove on-premises instance tags from an on-premises instance
+Automatically uninstall the CodeDeploy agent and remove the configuration file from an on-premises instance
+Automatically deregister an on-premises instance
+Manually deregister an on-premises instance
+
+
+
+
+View instance details with CodeDeploy
+CodeDeploy instance health
+Working with deployment configurations in CodeDeploy
+Create a deployment configuration with CodeDeploy
+View deployment configuration details with CodeDeploy
+Delete a deployment configuration with CodeDeploy
+Working with applications in CodeDeploy
+Create an application with CodeDeploy
+Create an application for an in-place deployment (console)
+Create an application for a blue/green deployment (console)
+Create an application for an Amazon ECS service deployment (console)
+Create an application for an AWS Lambda function deployment (console)
+Create an application (CLI)
+
+
+View application details with CodeDeploy
+Create a notification rule
+Rename a CodeDeploy application
+Delete an application in CodeDeploy
+Working with deployment groups in CodeDeploy
+Create a deployment group with CodeDeploy
+Create a deployment group for an in-place deployment (console)
+Create a deployment group for an EC2/On-Premises blue/green deployment (console)
+Create a deployment group for an Amazon ECS deployment (console)
+Set up a load balancer in Elastic Load Balancing for CodeDeploy Amazon EC2 deployments
+Set up a load balancer, target groups, and listeners for CodeDeploy Amazon ECS deployments
+Create a deployment group (CLI)
+
+
+View deployment group details with CodeDeploy
+Change deployment group settings with CodeDeploy
+Configure advanced options for a deployment group
+Delete a deployment group with CodeDeploy
+Working with application revisions for CodeDeploy
+Plan a revision for CodeDeploy
+Add an application specification file to a revision for CodeDeploy
+Choose a CodeDeploy repository type
+Push a revision for CodeDeploy to Amazon S3 (EC2/On-Premises deployments only)
+View application revision details with CodeDeploy
+Register an application revision in Amazon S3 with CodeDeploy
+Working with deployments in CodeDeploy
+Create a deployment with CodeDeploy
+Deployment prerequisites
+Create an Amazon ECS Compute Platform deployment (console)
+Create an AWS Lambda Compute Platform deployment (console)
+Create an EC2/On-Premises Compute Platform deployment (console)
+Specify information about a revision stored in an Amazon S3 bucket
+Specify information about a revision stored in a GitHub repository
+
+
+Create an Amazon ECS Compute Platform deployment (CLI)
+Create an AWS Lambda Compute Platform deployment (CLI)
+Create an EC2/On-Premises Compute Platform deployment (CLI)
+Connect a CodeDeploy application to a GitHub repository
+
+
+Create an Amazon ECS blue/green deployment through AWS CloudFormation
+
+
+View CodeDeploydeployment details
+View log data for CodeDeploy EC2/On-Premises deployments
+Stop a deployment with CodeDeploy
+Redeploy and roll back a deployment with CodeDeploy
+Deploy an application in a different AWS account
+Use the CodeDeploy agent to validate a deployment package on a local machine
+Monitoring deployments in CodeDeploy
+Monitoring deployments with Amazon CloudWatch tools
+Monitoring deployments with CloudWatch alarms in CodeDeploy
+Grant CloudWatch permissions to a CodeDeploy service role
+
+
+Monitoring deployments with Amazon CloudWatch Events
+
+
+Monitoring deployments with AWS CloudTrail
+Monitoring deployments with Amazon SNS event notifications
+Grant Amazon SNS permissions to a CodeDeploy service role
+Create a trigger for a CodeDeploy event
+Edit a trigger in a CodeDeploy deployment group
+Delete a trigger from a CodeDeploy deployment group
+JSON data formats for CodeDeploy triggers
+
+
+Security in AWS CodeDeploy
+Data protection in AWS CodeDeploy
+Identity and access management for AWS CodeDeploy
+How AWS CodeDeploy works with IAM
+AWS CodeDeploy identity-based policy examples
+Troubleshooting AWS CodeDeploy identity and access
+CodeDeploy permissions reference
+
+
+Logging and monitoring in CodeDeploy
+Compliance validation for AWS CodeDeploy
+Resilience in AWS CodeDeploy
+Infrastructure security in AWS CodeDeploy
+Reference
+CodeDeploy AppSpec File reference
+AppSpec File structure
+AppSpec 'files' section (EC2/On-Premises deployments only)
+AppSpec 'resources' section (Amazon ECS and AWS Lambda deployments only)
+AppSpec 'permissions' section (EC2/On-Premises deployments only)
+AppSpec 'hooks' section
+
+
+AppSpec File example
+Validate your AppSpec File and file location
+
+
+CodeDeploy agent configuration reference
+AWS CloudFormation templates for CodeDeploy reference
+Use CodeDeploy with Amazon Virtual Private Cloud
+CodeDeploy resource kit reference
+Troubleshooting CodeDeploy
+General troubleshooting issues
+Troubleshoot EC2/On-Premises Deployment Issues
+Troubleshoot AWS Lambda deployment issues
+Troubleshoot deployment group issues
+Troubleshoot instance issues
+Troubleshoot GitHub token issues
+Troubleshoot Amazon EC2 Auto Scaling issues
+Error codes for AWS CodeDeploy
+CodeDeploy resources
+Document history
+AWS glossary

@@ -1,0 +1,329 @@
+Norwegian (nb-NO)
+The following chart lists the full set of International Phonetic Alphabet (IPA) phonemes and the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols as well as the corresponding visemes as supported by Amazon Polly for Norwegian language voices.
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+ɾ
+4
+alveolar flap
+prøv
+t
+
+
+b
+b
+voiced bilabial plosive
+labb
+p
+
+
+ç
+C
+voiceless palatal fricative
+kino
+k
+
+
+d
+d
+voiced alveolar plosive
+ladd
+t
+
+
+ɖ
+d`
+voiced retroflex plosive
+verdi
+t
+
+
+f
+f
+voiceless labiodental fricative
+fot
+f
+
+
+ɡ
+ɡ
+voiced velar plosive
+tagg
+k
+
+
+h
+h
+voiceless glottal fricative
+ha
+k
+
+
+j
+j
+palatal approximant
+gi
+i
+
+
+k
+k
+voiceless velar plosive
+takk
+k
+
+
+l
+l
+alveolar lateral approximant
+fall, ball
+t
+
+
+ɭ
+l`
+retroflex lateral approximant
+ærlig
+t
+
+
+m
+m
+bilabial nasal
+lam
+p
+
+
+n
+n
+alveolar nasal
+vann
+t
+
+
+ɳ
+n`
+retroflex nasal
+garn
+t
+
+
+ŋ
+N
+velar nasal
+sang
+k
+
+
+p
+p
+voiceless bilabial plosive
+hopp
+p
+
+
+s
+s
+voiceless alveolar fricative
+lass
+s
+
+
+ʂ
+s`
+voiceless retroflex fricative
+års
+S
+
+
+ʃ
+S
+voiceless postalveolar fricative
+skyt
+S
+
+
+t
+t
+voiceless alveolar plosive
+lat
+t
+
+
+ʈ
+t`
+voiceless retroflex plosive
+hardt
+t
+
+
+ʋ
+v\
+labiodental approximant
+vin
+f
+
+
+w
+w
+labial-velar approximant
+will
+x
+
+
+Vowels
+
+
+
+
+
+
+øː
+2:
+long close-mid front rounded vowel
+søt
+o
+
+
+œ
+9
+open-mid front rounded vowel
+søtt
+O
+
+
+ə
+@
+mid central vowel
+ape
+@
+
+
+æː
+{:
+long near-open front unrounded vowel
+vær
+a
+
+
+ʉ
+}
+close central rounded vowel
+lund
+u
+
+
+ʉː
+}:
+long close central rounded vowel
+lun
+u
+
+
+æ
+{
+near-open front unrounded vowel
+vært
+a
+
+
+ɑ
+A
+open back unrounded vowel
+hatt
+a
+
+
+ɑː
+A:
+long open back unrounded vowel
+hat
+a
+
+
+e:
+e:
+long close-mid front unrounded vowel
+sen
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+send
+E
+
+
+i:
+i:
+long close front unrounded vowel
+vin
+i
+
+
+ɪ
+I
+near-close near-front unrounded vowel
+vind
+i
+
+
+oː
+oː
+long close-mid back rounded vowel
+våt
+o
+
+
+ɔ
+O
+open-mid back rounded vowel
+vått
+O
+
+
+u:
+u:
+long close back rounded vowel
+bok
+u
+
+
+ʊ
+U
+near-close near-back rounded vowel
+bukk
+u
+
+
+y:
+y:
+long close front rounded vowel
+lyn
+u
+
+
+ʏ
+Y
+near-close near-front rounded vowel
+lynne
+u
+
+

@@ -1,0 +1,23 @@
+Enabling Viewport Interaction Model
+By default, the Viewport Interaction Model isn't enabled for the editor. You can enable it from the Preferences window.
+To enable the Viewport Interaction Model
+
+
+In Lumberyard Editor, choose Edit, Editor Settings, Global Preferences to open the Preferences window.
+
+
+Select Enable New Viewport Interaction Model (EXPERIMENTAL).
+
+
+Restart Lumberyard Editor.
+
+
+Open a level and, in the Asset Browser, select and drag two assets into the viewport.
+
+
+In the viewport, select an entity. A manipulator appears on the entity. The entity is locked for editing. If you click another entity in the viewport, the first entity remains selected.
+
+
+The following are shortcuts to select and deselect entities. 
+
+[See the AWS documentation website for more details]

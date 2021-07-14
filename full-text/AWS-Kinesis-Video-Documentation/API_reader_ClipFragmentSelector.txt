@@ -1,0 +1,19 @@
+ClipFragmentSelector
+Describes the timestamp range and timestamp origin of a range of fragments.
+Fragments that have duplicate producer timestamps are deduplicated. This means that if producers are producing a stream of fragments with producer timestamps that are approximately equal to the true clock time, the clip will contain all of the fragments within the requested timestamp range. If some fragments are ingested within the same time range and very different points in time, only the oldest ingested collection of fragments are returned.
+Contents
+FragmentSelectorType 
+The origin of the timestamps to use (Server or Producer).
+Type: String
+Valid Values:PRODUCER_TIMESTAMP | SERVER_TIMESTAMP 
+Required: Yes
+TimestampRange 
+The range of timestamps to return.
+Type: ClipTimestampRange object
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

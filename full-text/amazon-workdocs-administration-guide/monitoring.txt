@@ -1,0 +1,5 @@
+Logging and monitoring in Amazon WorkDocs
+Amazon WorkDocs site administrators can view and export the activity feed for an entire site. They can also use AWS CloudTrail to capture events from the Amazon WorkDocs console.
+Topics
+ Site-wide activity feed
+ Logging Amazon WorkDocs API calls using AWS CloudTrail

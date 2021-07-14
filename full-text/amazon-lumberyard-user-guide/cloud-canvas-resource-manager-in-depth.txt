@@ -1,0 +1,16 @@
+Resource Manager in Depth
+The effective use of Cloud Canvas Resource Manager is key to the success of any cloud-connected game project. This section provides in-depth information for software engineers.
+For information on permissions in Resource Manager, see Understanding the Resource Manager Security System.
+Topics
+ Understanding Resource Status Descriptions
+ Editing Resource Manager Files
+ Working with JSON Files
+ Viewing the Cloud Canvas Progress Log
+ Working with Resource Groups
+ Resource Definitions
+ Permissions Metadata for Resource Definitions
+ Importing Resource Definitions into Cloud Canvas
+ Resource Deployments
+ Resource Mappings
+ Resource Manager Resource Group Parameters
+ Custom Resources

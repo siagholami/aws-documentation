@@ -1,0 +1,101 @@
+AWS::IoTEvents::Input
+The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as inputs to AWS IoT Events. For more information, see  How to Use AWS IoT Events in the AWS IoT Events Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::IoTEvents::Input",
+  "Properties" : {
+      "[InputDefinition](#cfn-iotevents-input-inputdefinition)" : InputDefinition,
+      "[InputDescription](#cfn-iotevents-input-inputdescription)" : String,
+      "[InputName](#cfn-iotevents-input-inputname)" : String,
+      "[Tags](#cfn-iotevents-input-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::IoTEvents::Input
+Properties: 
+  [InputDefinition](#cfn-iotevents-input-inputdefinition): 
+    InputDefinition
+  [InputDescription](#cfn-iotevents-input-inputdescription): String
+  [InputName](#cfn-iotevents-input-inputname): String
+  [Tags](#cfn-iotevents-input-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+InputDefinition 
+The definition of the input.
+Required: No
+Type: InputDefinition
+Update requires: No interruption
+InputDescription 
+A brief description of the input.
+Required: No
+Type: String
+Maximum: 128
+Update requires: No interruption
+InputName 
+The name of the input.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z][a-zA-Z0-9_]*$
+Update requires: Replacement
+Tags 
+An array of key-value pairs to apply to this resource.
+For more information, see Tag.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the name of the input. For example:
+{"Ref": "myInput"}
+For the AWS IoT Events input myInput, Ref returns the name of the input.
+For more information about using the Ref function, see Ref.
+Examples
+Input
+The following example creates an input.
+JSON
+{
+  "Description": "Input Template for CloudFormation",
+  "Resources": {
+    "myInput": {
+      "Type": "AWS::IoTEvents::Input",
+      "Properties": {
+        "InputName": "myInput",
+        "InputDescription": "My Input created by CloudFormation",
+        "InputDefinition": {
+          "Attributes": [
+            {
+              "JsonPath": "foo"
+            },
+            {
+              "JsonPath": "bar"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+YAML
+```
+Description: "Input Template for CloudFormation"
+Resources:
+  myInput:
+    Type: "AWS::IoTEvents::Input"
+    Properties:
+      InputName: "myInput"
+      InputDescription: "My Input created by CloudFormation"
+      InputDefinition:
+        Attributes:
+          -
+            JsonPath: "foo"
+          -
+            JsonPath: "bar"
+```
+See also
+
+ How to Use AWS IoT Events in the AWS IoT Events Developer Guide
+CreateInput in the AWS IoT Events API Reference

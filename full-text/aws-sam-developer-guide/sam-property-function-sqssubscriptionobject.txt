@@ -1,0 +1,48 @@
+SqsSubscriptionObject
+Specify an existing SQS queue option to SNS event
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[BatchSize](#sam-function-sqssubscriptionobject-batchsize): String
+  [Enabled](#sam-function-sqssubscriptionobject-enabled): Boolean
+  [QueueArn](#sam-function-sqssubscriptionobject-queuearn): String
+  [QueuePolicyLogicalId](#sam-function-sqssubscriptionobject-queuepolicylogicalid): String
+  [QueueUrl](#sam-function-sqssubscriptionobject-queueurl): String
+Properties
+BatchSize 
+The maximum number of items to retrieve in a single batch for the SQS queue.
+Type: String
+Required: No
+Default: 10
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Enabled 
+Disables the SQS event source mapping to pause polling and invocation.
+Type: Boolean
+Required: No
+Default: True
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+QueueArn 
+Specify an existing SQS queue arn.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+QueuePolicyLogicalId 
+Give a custom logicalId name for the AWS::SQS::QueuePolicy resource.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+QueueUrl 
+Specify the queue URL associated with the QueueArn property.
+Type: String
+Required: Yes
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Examples
+Existing SQS for SNS event
+Example to add existing SQS queue for subscibing to an SNS topic.
+YAML
+QueuePolicyLogicalId: CustomQueuePolicyLogicalId
+QueueArn:
+  Fn::GetAtt: MyCustomQueue.Arn
+QueueUrl:
+  Ref: MyCustomQueue
+BatchSize: 5

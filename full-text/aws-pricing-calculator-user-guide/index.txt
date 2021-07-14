@@ -1,0 +1,34 @@
+AWS pricing calculator User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Pricing Calculator?
+Getting started
+Generating your estimate
+Reading an estimate
+Best practices for generating estimates
+Using groups
+Generating Amazon EC2 estimates
+Quick estimates
+Advanced estimates
+
+
+Generating AWS Support estimates
+Saving and sharing your estimate
+Exporting estimates
+Security in AWS Pricing Calculator
+Data protection in AWS Pricing Calculator
+Compliance validation for AWS Pricing Calculator
+Resources
+Document history for User Guide
+AWS glossary

@@ -1,0 +1,12 @@
+Download required files
+
+If you haven't already done so, install the AWS IoT Device SDK for Python. For instructions, see step 1 in Install the AWS IoT Device SDK for Python.
+
+This SDK is used by AWS IoT devices to communicate with AWS IoT and with AWS IoT Greengrass core devices.
+
+From the  TrafficLight examples folder on GitHub, download the lightController.py and trafficLight.py files to your computer. Save them in the folder that contains the GG_Switch and GG_TrafficLight device certificates and keys.
+
+The lightController.py script corresponds to the GG_Switch device, and the trafficLight.py script corresponds to the GG_TrafficLight device. 
+
+Note
+The example Python files are stored in the AWS IoT Greengrass Core SDK for Python repository for convenience, but they don't use the AWS IoT Greengrass Core SDK.

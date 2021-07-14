@@ -1,0 +1,9 @@
+autoscaling-group-elb-healthcheck-required
+Checks whether your Auto Scaling groups that are associated with a load balancer are using Elastic Load Balancing health checks.
+Identifier: AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

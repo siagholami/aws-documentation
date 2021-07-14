@@ -1,0 +1,8 @@
+ListDomainNamesResult
+Description
+The result of a ListDomainNames request. Contains a list of the domains owned by an account.
+Contents
+DomainNames 
+The names of the search domains owned by an account.
+Type: String to String map 
+ Required: No 

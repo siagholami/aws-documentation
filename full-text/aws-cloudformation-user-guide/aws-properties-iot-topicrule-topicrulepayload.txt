@@ -1,0 +1,53 @@
+AWS::IoT::TopicRule TopicRulePayload
+Describes a rule.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)" : [ Action, ... ],
+  "[AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion)" : String,
+  "[Description](#cfn-iot-topicrule-topicrulepayload-description)" : String,
+  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)" : Action,
+  "[RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled)" : Boolean,
+  "[Sql](#cfn-iot-topicrule-topicrulepayload-sql)" : String
+}
+YAML
+[Actions](#cfn-iot-topicrule-topicrulepayload-actions): 
+    - Action
+  [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion): String
+  [Description](#cfn-iot-topicrule-topicrulepayload-description): String
+  [ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction): 
+    Action
+  [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled): Boolean
+  [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
+Properties
+Actions 
+The actions associated with the rule.
+Required: Yes
+Type: List of Action
+Update requires: No interruption
+AwsIotSqlVersion 
+The version of the SQL rules engine to use when evaluating the rule.
+Required: No
+Type: String
+Update requires: No interruption
+Description 
+The description of the rule.
+Required: No
+Type: String
+Update requires: No interruption
+ErrorAction 
+The action to take when an error occurs.
+Required: No
+Type: Action
+Update requires: No interruption
+RuleDisabled 
+Specifies whether the rule is disabled.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+Sql 
+The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference in the AWS IoT Developer Guide.
+Required: Yes
+Type: String
+Update requires: No interruption

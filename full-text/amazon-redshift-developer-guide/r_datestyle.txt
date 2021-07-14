@@ -1,0 +1,15 @@
+datestyle
+Values (default in bold)
+Format specification (ISO, Postgres, SQL, or German), and year/month/day ordering (DMY, MDY, YMD).
+ISO, MDY 
+Description
+Sets the display format for date and time values as well as the rules for interpreting ambiguous date input values. The string contains two parameters that can be changed separately or together.
+Example
+```
+show datestyle;
+DateStyle
+
+ISO, MDY
+(1 row)
+set datestyle to 'SQL,DMY';
+```

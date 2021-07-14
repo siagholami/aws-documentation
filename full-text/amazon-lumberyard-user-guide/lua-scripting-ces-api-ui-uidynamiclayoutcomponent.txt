@@ -1,0 +1,8 @@
+UIDynamicLayoutComponent
+Clones a prototype element to achieve the specified number of child elements.
+UiDynamicLayoutBus
+Services messages for the UiDynamicLayoutComponent.
+SetNumChildElements
+Specifies the number of child elements to be created dynamically.
+Syntax
+void SetNumChildElements(int numChildren)

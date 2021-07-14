@@ -1,0 +1,14 @@
+Connect to your Linux instance
+Connect to the Linux instances that you launched and transfer files between your local computer and your instance.
+To connect to a Windows instance, see Connecting to Your Windows Instance in the Amazon EC2 User Guide for Windows Instances.
+Connection options
+The operating system of your local computer determines the options that you have to connect from your local computer to your Linux instance.
+If your local computer operating system is Linux or macOS X
+ SSH client
+ EC2 Instance Connect
+ AWS Systems Manager Session Manager
+If your local computer operating system is Windows
+ PuTTY
+ SSH client
+ AWS Systems Manager Session Manager
+ Windows Subsystem for Linux

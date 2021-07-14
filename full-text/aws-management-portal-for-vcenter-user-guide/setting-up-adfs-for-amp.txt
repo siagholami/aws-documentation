@@ -1,0 +1,185 @@
+Setting Up ADFS for AWS Management Portal for vCenter
+If you are using Windows Active Directory (AD) as your directory service, you can use Active Directory Federation Services (ADFS) as your identity provider (IdP) and enable federated single sign-on (SSO) to your AWS environment.
+To enable integration between your organization and AWS, complete the following tasks.
+Tasks
+
+
+Prepare requirements
+
+
+Install ADFS 2.0 or Install ADFS 3.0
+
+
+Enable RelayState
+
+
+Requirements
+Prepare the following requirements:
+ Create a domain account in Active Directory. For example, we use the name adfssvc in these procedures. Keep the password in a safe place. You'll use this account as the ADFS service account later in this procedure.
+ Verify that the server to run ADFS is joined to the domain. You can also update the computer name.
+ (Optional) If you don't have a certificate, you can create a self-signed certificate using Internet Information Services (IIS). It's convenient to use a self-signed certificate in a development environment. However, you'll need a certificate from a trusted certificate authority for a production environment.
+To create a self-signed certificate
+
+
+Open Internet Information Services (IIS) Manager.
+
+
+In the Connections pane, select a server node.
+
+
+From the Home page for the server node, open Server Certificates.
+
+
+From the Actions pane, click Create Self-Signed Certificate.
+
+
+In the Create Self-Signed Certificate dialog box, specify a name for the certificate, and then click OK.
+
+
+Installing ADFS 2.0
+If you have not done so already, install ADFS on your server and configure it as a federation server.
+To download and install ADFS 2.0 on Windows Server 2008 R2
+
+
+Download Active Directory Federation Services 2.0 from the Microsoft Download Center and start the installation.
+
+
+On the Server Role page, select Federation server.
+
+
+Complete the wizard as directed.
+
+
+To configure ADFS 2.0
+
+
+Open the AD FS 2.0 Federation Server Configuration Wizard.
+
+
+On the Welcome page, select Create a new Federation Service, and then click Next.
+
+
+On the Select Stand-Alone or Farm Deployment page, click New federation server farm, and then click Next.
+
+
+On the Specify the Federation Service Name page, from the SSL certificate list, select a certificate, and then click Next.
+
+
+On the Specify a Service Account page, do the following:
+
+
+Click Browse.
+
+
+In the Select User dialog box, enter the domain account described in the Requirements section (for example, adfssvc), click Check Names, and then click OK.
+
+
+
+Enter the password for the account, and then click Next.
+
+
+On the Ready to Apply Settings page, review the settings, make any changes that you need, and then click Next.
+
+
+On the Configuration Results page, review the results.
+
+
+If all the configuration steps completed successfully, click Close.
+If you see a warning icon next to Configure service settings, click Configuration finished with warnings.
+
+If the error message begins with "An error occurred during an attempt to set the SPN for the specified service account," you can fix the issue by opening a Command Prompt window as an administrator and then running the following command:
+setspn -a host/localhost service-account
+Note that service-account is the name of the service account described in the Requirements section (for example, adfssvc). Upon success, the output for this command ends with "Updated object."
+Installing ADFS 3.0
+If you have not done so already, install ADFS on your server and configure it as a federation server.
+To install ADFS 3.0 on Windows Server 2012
+
+
+Open Server Manager.
+
+
+From the dashboard, click Add roles and features.
+
+
+On the Select installation type page, select Role-based or feature-based installation and then click Next.
+
+
+On the Select destination server page, select Select a server from the server pool, select your server from the list, and then click Next.
+
+
+On the Select server roles page, select Active Directory Federation Services and then click Next.
+
+
+On the Confirm installation selections page, click Install.
+
+
+To configure ADFS 3.0
+
+
+Open Server Manager and click the warning icon to complete post-deployment configuration.
+
+
+On the Welcome page, select Create the first federation server in a federation server farm, and then click Next.
+
+
+On the Connect to Active Directory Domain Services page, specify a domain administrator account, and then click Next.
+
+
+On the Specify Service Properties page, select the SSL certificate described in the Requirements section. Click Import. Provide the requested information, and then click Next.
+
+
+On the Specify Service Account page, click Use an existing domain user account or group Managed Service Account. Specify the domain account described in the Requirements section (for example, adfssvc).
+
+
+On the Specify Configuration Database page, click Create a database on this server using Windows Internal Database and then click Next.
+
+
+Review the information on the Review Options page, and then click Next.
+
+
+On the Pre-requisite Checks page, monitor the status of the checks. Address any issues that are reported. When all checks pass successfully, click Configure.
+
+
+If you see an error message that begins with "An error occurred during an attempt to set the SPN for the specified service account," you can fix the issue by opening a Command Prompt window as an administrator and then running the following command:
+setspn -a host/localhost service-account
+Note that service-account is the name of the service account described in the Requirements section (for example, adfssvc). Upon success, the output for this command ends with "Updated object."
+Enabling RelayState
+Before you continue, verify that your ADFS supports the RelayState parameter, and then enable it. This parameter was introduced in Update Rollup 2 for ADFS 2.0. This parameter is supported in ADFS 3.0, but it is not enabled by default.
+To enable RelayState
+
+
+[ADFS 2.0] In Control Panel, go to Installed Updates and look for update KB2681584 (Update Rollup 2) or KB2790338 (Update Rollup 3). If you need to, download and install either Update Rollup 2 or Update Rollup 3.
+
+
+In a text editor, such as Notepad, open the following file:
+    [ADFS 2.0] C:\inetpub\adfs\ls\web.config
+    [ADFS 3.0] %systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config
+
+
+In the microsoft.identityServer.web section, add useRelyStateForIdpInitiatedSignOn as follows, and save the change:
+
+
+<microsoft.identityServer.web>
+       ...
+       <useRelayStateForIdpInitiatedSignOn enabled="true" />
+   </microsoft.identityServer.web>
+
+[ADFS 2.0] Restart IIS using the following command:
+
+```
+   C:> IISReset
+Attempting stop...
+   Internet services successfully stopped
+   Attempting start...
+   Internet services successfully restarted
+   ```
+
+
+Restart ADFS as follows:
+
+
+On the Start menu, point to Administrative Tools, and then click Services.
+
+
+Right-click the ADFS service, and then click Restart.
+

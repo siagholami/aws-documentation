@@ -1,0 +1,68 @@
+Manage subdomains
+A subdomain is the part of your URL that appears before your domain name. For example, www is the subdomain of www.amazon.com and aws is the subdomain of aws.amazon.com. If you already have a production website, you might want to only connect a subdomain. Subdomains can also be multilevel, for example beta.alpha.example.com has the multilevel subdomain beta.alpha.
+To add a subdomain only
+
+
+Sign in to the AWS Management Console and open the Amplify Console.
+
+
+Choose your app that you want to add a subdomain to.
+
+
+In the navigation pane, choose App Settings, and then choose Domain management.
+
+
+On the Domain management page, choose Add domain.
+
+
+For Domain, enter the name of your root domain and then choose Configure domain. For example, if the name of your domain is https://example.com, enter example.com for Domain.
+
+
+Choose Exclude root and modify the name of the subdomain. For example if the domain is example.com you can modify it to only add the subdomain alpha.
+
+
+
+To add a multilevel subdomain
+
+
+Sign in to the AWS Management Console and open the Amplify Console.
+
+
+Choose your app that you want to add a multilevel subdomain to.
+
+
+In the navigation pane, choose App Settings, and then choose Domain management.
+
+
+On the Domain management page, choose Add domain.
+
+
+For Domain, enter the name of a domain with a subdomain, choose Exclude root, and modify the subdomain to add a new level.
+
+
+For example, if you have a domain called alpha.example.com and you want to create a multilevel subdoman beta.alpha.example.com, you would enter beta as the subdomain value, as shown in the following screenshot.
+
+To add or edit a subdomain
+After adding a custom domain to an app, you can edit an existing subdomain or add a new subdomain.
+
+
+Sign in to the AWS Management Console and open the Amplify Console.
+
+
+Choose your app that you want to manage subdomains for.
+
+
+In the navigation pane, choose App Settings, and then choose Domain management.
+
+
+On the Domain management page, choose Manage subdomains.
+
+
+In Edit domain, you can edit your existing subdomains as needed. 
+
+
+(Optional) To add a new subdomain, choose Add. 
+
+
+Choose Update to save your changes.
+

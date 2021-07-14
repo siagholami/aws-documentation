@@ -1,0 +1,16 @@
+AWS::CodeDeploy::DeploymentGroup Alarm
+The Alarm property type specifies a CloudWatch alarm to use for an AWS CodeDeploy deployment group. The Alarm property of the  CodeDeploy DeploymentGroup AlarmConfiguration  property contains a list of Alarm property types. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-codedeploy-deploymentgroup-alarm-name)" : String
+}
+YAML
+[Name](#cfn-codedeploy-deploymentgroup-alarm-name): String
+Properties
+Name 
+The name of the alarm. Maximum length is 255 characters. Each alarm name can be used only once in a list of alarms.
+Required: No
+Type: String
+Update requires: No interruption

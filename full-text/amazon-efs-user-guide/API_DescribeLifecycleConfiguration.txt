@@ -1,0 +1,73 @@
+DescribeLifecycleConfiguration
+Returns the current LifecycleConfiguration object for the specified Amazon EFS file system. EFS lifecycle management uses the LifecycleConfiguration object to identify which files to move to the EFS Infrequent Access (IA) storage class. For a file system without a LifecycleConfiguration object, the call returns an empty array in the response.
+This operation requires permissions for the elasticfilesystem:DescribeLifecycleConfiguration operation.
+Request Syntax
+GET /2015-02-01/file-systems/FileSystemId/lifecycle-configuration HTTP/1.1
+URI Request Parameters
+The request uses the following URI parameters.
+ FileSystemId  
+The ID of the file system whose LifecycleConfiguration object you want to retrieve (String).
+Length Constraints: Maximum length of 128.
+Pattern: ^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$ 
+Required: Yes
+Request Body
+The request does not have a request body.
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "LifecyclePolicies": [ 
+      { 
+         "TransitionToIA": "string"
+      }
+   ]
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ LifecyclePolicies  
+An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
+Type: Array of LifecyclePolicy objects
+Errors
+BadRequest 
+Returned if the request is malformed or contains an error such as an invalid parameter value or a missing required parameter.
+HTTP Status Code: 400
+FileSystemNotFound 
+Returned if the specified FileSystemId value doesn't exist in the requester's AWS account.
+HTTP Status Code: 404
+InternalServerError 
+Returned if an error occurred on the server side.
+HTTP Status Code: 500
+Example
+Retrieve a Lifecycle Configuration for a File System
+The following request retrieves the LifecycleConfiguration object for the specified file system.
+Sample Request
+GET /2015-02-01/file-systems/fs-01234567/lifecycle-configuration HTTP/1.1
+Host: elasticfilesystem.us-west-2.amazonaws.com
+x-amz-date: 20181120T221118Z
+Authorization: <...>
+Sample Response
+HTTP/1.1 200 OK
+        x-amzn-RequestId: 01234567-89ab-cdef-0123-456789abcdef
+        Content-Type: application/json
+        Content-Length: 86
+{
+  "LifecyclePolicies": [
+    {
+        "TransitionToIA": "AFTER_14_DAYS"
+    }
+  ]
+}
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

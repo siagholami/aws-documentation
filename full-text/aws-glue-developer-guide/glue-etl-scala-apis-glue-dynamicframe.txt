@@ -1,0 +1,47 @@
+AWS Glue Scala DynamicFrame APIs
+Package: com.amazonaws.services.glue
+Contents
+ AWS Glue Scala DynamicFrame Class
+   val errorsCount
+   def applyMapping
+   def assertErrorThreshold
+   def count
+   def dropField
+   def dropFields
+   def dropNulls
+   def errorsAsDynamicFrame
+   def filter
+   def getName
+   def getNumPartitions
+   def getSchemaIfComputed
+   def isSchemaComputed
+   def javaToPython
+   def join
+   def map
+   def printSchema
+   def recomputeSchema
+   def relationalize
+   def renameField
+   def repartition
+   def resolveChoice
+   def schema
+   def selectField
+   def selectFields
+   def show
+   def spigot
+   def splitFields
+   def splitRows
+   def stageErrorsCount
+   def toDF
+   def unbox
+   def unnest
+   def withFrameSchema
+   def withName
+   def withTransformationContext
+ The DynamicFrame Object
+   def apply
+   def emptyDynamicFrame
+   def fromPythonRDD
+   def ignoreErrors
+   def inlineErrors
+   def newFrameWithErrors

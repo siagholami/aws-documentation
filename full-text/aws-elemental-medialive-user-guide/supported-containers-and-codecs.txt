@@ -1,0 +1,7 @@
+Reference: Supported Containers and Codecs
+This chapter provides information about the input content types and input video and audio codecs that AWS Elemental MediaLive can ingest, and the output content types and output video and codecs that MediaLive can produce.
+Topics
+ Supported Input Types and Upstream Systems
+ Supported Codecs for Inputs
+ Supported Containers and Downstream Systems
+ Supported Codecs for Outputs

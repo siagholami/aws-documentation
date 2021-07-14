@@ -1,0 +1,38 @@
+View how many contacts are in an agent's aueue
+To see how many contacts are in an agent's personal queue, add an Agent queues table to your Real-time metrics, Queues report. Then view these two metrics: 
+ In Queue—how many contacts are in an agent's personal queue.
+ Queued—the number of contacts added to their personal queue during the specified time range.
+Use the following procedure. 
+
+
+Go to Metrics and quality, Real-time metrics, Queues.
+
+
+Choose New table, Agent queues.
+
+
+
+The In queue column displays how many contacts are in the agent's queue.
+
+Review the metrics in then In queue and Queue columns.
+Tip
+An agent is included in the Agent queues table only if they are online or there is at least one contact in the their queue.
+
+Add In Queue and Queue to the Agent queue table
+If In queue or Queue don't appear in your Agent queue table, use the following steps to add them.
+
+
+On the Agent queues table, choose Settings.
+
+
+
+Choose the Metrics tab.
+
+
+Scroll to the Performance section and choose In queue and Queue, and then Apply.
+
+
+
+The changes appear in your table immediately.
+
+Choose Save to add this report to your list of Saved reports. 

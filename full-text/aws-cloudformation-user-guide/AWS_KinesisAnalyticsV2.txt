@@ -1,0 +1,6 @@
+Amazon Kinesis Data Analytics V2 resource type reference
+Resource types
+ AWS::KinesisAnalyticsV2::Application
+ AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+ AWS::KinesisAnalyticsV2::ApplicationOutput
+ AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource

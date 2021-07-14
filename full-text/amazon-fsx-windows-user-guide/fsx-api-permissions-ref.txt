@@ -1,0 +1,70 @@
+Amazon FSx API Permissions: Actions, Resources, and Conditions Reference
+When you are setting up access control and writing a permissions policy that you can attach to an IAM identity (identity-based policies), you can use the following table as a reference. The table includes each Amazon FSx API operation, the corresponding actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions. You specify the actions in the policy's Action field, and you specify the resource value in the policy's Resource field. 
+You can use AWS-wide condition keys in your Amazon FSx policies to express conditions. For a complete list of AWS-wide keys, see Available Keys in the IAM User Guide. 
+To specify an action, use the fsx: prefix followed by the API operation name (for example, fsx:CreateFileSystem). Each action applies to either a single Amazon FSx file system, to all Amazon FSx file systems owned by an AWS account, to a single backup, or to all backups owned by an AWS account.
+Amazon FSx API and Required Permissions for Actions 
+
+
+
+Amazon FSx API Operations
+Required Permissions (API Actions)
+Resource
+
+
+
+
+CreateFileSystem
+fsx:* ds:DescribeDirectories kms:CreateGrant kms:DescribeKey
+arn:aws:fsx:region:account-id:file-system/*
+
+
+CreateBackup
+elasticfilesystem:CreateMountTarget ec2:DescribeSubnets ec2:DescribeNetworkInterfaces ec2:CreateNetworkInterface
+arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id
+
+
+CreateFileSystemFromBackup
+fsx:CreateFileSystemFromBackup
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:backup/backup-id
+
+
+DeleteFileSystem
+fsx:DeleteFileSystem
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id
+
+
+DeleteBackup
+fsx:DeleteBackup
+arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:backup/backup-id
+
+
+DescribeFileSystems
+fsx:DescribeFileSystems
+N/A
+
+
+DescribeBackups
+fsx:DescribeBackups
+N/A
+
+
+UpdateFileSystem
+fsx:UpdateFileSystem
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id
+
+
+ListTagsForResource
+fsx:ListTagsForResource
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:backup/backup-id
+
+
+TagResource
+fsx:TagResource
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:backup/backup-id
+
+
+UntagResource
+fsx:UntagResource
+arn:aws:fsx:region:account-id:file-system/* arn:aws:fsx:region:account-id:file-system/filesystem-id arn:aws:fsx:region:account-id:backup/* arn:aws:fsx:region:account-id:backup/backup-id
+
+

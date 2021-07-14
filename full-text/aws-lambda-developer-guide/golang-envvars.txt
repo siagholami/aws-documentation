@@ -1,0 +1,15 @@
+Using environment variables
+To access environment variables in Go, use the Getenv function.
+The following explains how to do this. Note that the function imports the fmt package to format the printed results and the os package, a platform-independent system interface that allows you to access environment variables.
+```
+package main
+import (
+    "fmt"
+    "os"
+    "github.com/aws/aws-lambda-go/lambda"
+)
+func main() {
+    fmt.Printf("%s is %s. years old\n", os.Getenv("NAME"), os.Getenv("AGE"))
+}
+```
+For a list of environment variables that are set by the Lambda runtime, see Runtime environment variables.

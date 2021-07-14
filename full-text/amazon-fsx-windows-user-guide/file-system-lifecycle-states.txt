@@ -1,0 +1,35 @@
+Amazon FSx File System Status
+You can view the status of an Amazon FSx file system by using the Amazon FSx console, the AWS CLI command describe-file-systems, or the API operation DescribeFileSystems.
+
+
+
+File System Status
+Description
+
+
+
+
+AVAILABLE
+The file system is in a healthy state, and is reachable and available for use.
+
+
+CREATING
+Amazon FSx is creating a new file system.
+
+
+DELETING
+Amazon FSx is deleting an existing file system.
+
+
+UPDATING
+The file system is undergoing a customer-initiated update.
+
+
+MISCONFIGURED
+The file system is in a failed but recoverable state.
+
+
+FAILED
+[See the AWS documentation website for more details]
+
+

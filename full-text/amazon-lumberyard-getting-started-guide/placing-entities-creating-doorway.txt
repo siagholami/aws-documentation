@@ -1,0 +1,25 @@
+Creating an Entity
+In this tutorial, you create and name a new entity. You'll name this entity 'doorway' and, in the next tutorials, add components to it that make it look like a doorway and give it collision data.
+To create a doorway entity
+
+First, you create a new, empty entity. To do this, in Lumberyard's perspective viewport, right-click and choose Create entity.
+
+
+This action creates an empty entity, which means it currently has no components.
+You can view your new empty entity in the Entity Outliner, which lists all entities in the level. Its default placement is to the left of the viewport. In the Entity Outliner, you should see the PlayerSlice that you placed in an earlier tutorial.
+
+
+
+Click Entity1 to select your entity.
+
+
+Next, you name the entity. To do this, you modify entity properties in the Entity Inspector, which is located by default to the right of the viewport.
+
+
+For Name, `replace the Entity1 text with doorway.
+The Entity Inspector lists the components on the currently selected entity. Every entity by default has a transform component, which defines the entity's position, rotation, and size.
+
+
+Press CtrlS to save your level.
+
+Next: Adding a Mesh Component

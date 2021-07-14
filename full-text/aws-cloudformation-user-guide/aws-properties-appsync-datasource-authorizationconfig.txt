@@ -1,0 +1,26 @@
+AWS::AppSync::DataSource AuthorizationConfig
+The AuthorizationConfig property type specifies the authorization type and configuration for an AWS AppSync http data source.
+AuthorizationConfig is a property of the AWS AppSync DataSource HttpConfig property type. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AuthorizationType](#cfn-appsync-datasource-authorizationconfig-authorizationtype)" : String,
+  "[AwsIamConfig](#cfn-appsync-datasource-authorizationconfig-awsiamconfig)" : AwsIamConfig
+}
+YAML
+[AuthorizationType](#cfn-appsync-datasource-authorizationconfig-authorizationtype): String
+  [AwsIamConfig](#cfn-appsync-datasource-authorizationconfig-awsiamconfig): 
+    AwsIamConfig
+Properties
+AuthorizationType 
+The authorization type required by the HTTP endpoint.
+  AWS_IAM: The authorization type is Sigv4.
+Required: Yes
+Type: String
+Update requires: No interruption
+AwsIamConfig 
+The AWS IAM settings.
+Required: No
+Type: AwsIamConfig
+Update requires: No interruption

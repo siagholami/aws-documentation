@@ -1,0 +1,260 @@
+Amazon Rekognition Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Rekognition?
+How Amazon Rekognition Works
+Types of Analysis
+Image and Video Operations
+Non-Storage and Storage API Operations
+Model Versioning
+Getting Started with Amazon Rekognition
+Step 1: Set Up an AWS Account and Create an IAM User
+Step 2: Set Up the AWS CLI and AWS SDKs
+Step 3: Getting Started Using the AWS CLI and AWS SDK API
+Step 4: Getting Started Using the Amazon Rekognition Console
+Exercise 1: Detect Objects and Scenes in an Image (Console)
+Exercise 2: Analyze Faces in an Image (Console)
+Exercise 3: Compare Faces in Images (Console)
+Exercise 4: See Aggregated Metrics (Console)
+
+
+Programming the Amazon Rekognition API
+Working with Images
+Images
+Analyzing Images Stored in an Amazon S3 Bucket
+Analyzing an Image Loaded from a Local File System
+Using JavaScript
+
+
+Displaying Bounding Boxes
+Getting Image Orientation and Bounding Box Coordinates
+
+
+Working with Stored Videos
+Calling Amazon Rekognition Video Operations
+Configuring Amazon Rekognition Video
+Analyzing a Video Stored in an Amazon S3 Bucket with Java or Python (SDK)
+Analyzing a Video with the AWS Command Line Interface
+Tutorial: Creating an Amazon Rekognition Lambda Function
+Reference: Video Analysis Results Notification
+Troubleshooting Amazon Rekognition Video
+
+
+Working with Streaming Videos
+Recognizing Faces in a Streaming Video
+Giving Amazon Rekognition Video Access to Your Kinesis Streams
+Starting Streaming Video Analysis
+Reading Streaming Video Analysis Results
+Reference: Kinesis Face Recognition Record
+InputInformation
+KinesisVideo
+StreamProcessorInformation
+FaceSearchResponse
+DetectedFace
+MatchedFace
+
+
+Troubleshooting Streaming Video
+
+
+Error Handling
+Using Amazon Rekognition as a FedRAMP Authorized Service
+Best Practices for Sensors, Input Images, and Videos
+Amazon Rekognition Image Operation Latency
+Recommendations for Facial Comparison Input Images
+Recommendations for Camera Set-Up (Image and Video)
+Recommendations for Camera Setup (Stored and Streaming Video)
+Recommendations for Camera Set-Up (Streaming Video)
+Detecting Objects and Scenes
+Detecting Labels in an Image
+Detecting Labels in a Video
+Detecting Custom Labels
+Detecting and Analyzing Faces
+Overview of Face Detection and Face Comparison
+Guidelines on Face Attributes
+Detecting Faces in an Image
+Comparing Faces in Images
+Detecting Faces in a Stored Video
+Searching Faces in a Collection
+Use Cases that Involve Public Safety
+Creating a Collection
+Listing Collections
+Describing a Collection
+Deleting a Collection
+Adding Faces to a Collection
+Listing Faces in a Collection
+Deleting Faces from a Collection
+Searching for a Face Using Its Face ID
+Searching for a Face Using an Image
+Searching Stored Videos for Faces
+People Pathing
+Recognizing Celebrities
+Celebrity Recognition Compared to Face Search
+Recognizing Celebrities in an Image
+Recognizing Celebrities in a Stored Video
+Getting Information About a Celebrity
+Detecting Unsafe Content
+Detecting Unsafe Images
+Detecting Unsafe Stored Videos
+Reviewing Unsafe Content with Amazon Augmented AI
+Detecting Text
+Detecting Text in an Image
+Detecting Text in a Stored Video
+Amazon Rekognition Security
+Identity and Access Management for Amazon Rekognition
+How Amazon Rekognition Works with IAM
+Amazon Rekognition Identity-Based Policy Examples
+Troubleshooting Amazon Rekognition Identity and Access
+
+
+Data Protection in Amazon Rekognition
+Data Encryption
+Internetwork Traffic Privacy
+
+
+Monitoring Rekognition
+CloudWatch Metrics for Rekognition
+
+
+Logging Amazon Rekognition API Calls with AWS CloudTrail
+Using Amazon Rekognition with Amazon VPC Endpoints
+Compliance Validation for Amazon Rekognition
+Resilience in Amazon Rekognition
+Configuration and Vulnerability Analysis in Amazon Rekognition
+Infrastructure Security in Amazon Rekognition
+API Reference
+Actions
+CompareFaces
+CreateCollection
+CreateProject
+CreateProjectVersion
+CreateStreamProcessor
+DeleteCollection
+DeleteFaces
+DeleteProject
+DeleteProjectVersion
+DeleteStreamProcessor
+DescribeCollection
+DescribeProjects
+DescribeProjectVersions
+DescribeStreamProcessor
+DetectCustomLabels
+DetectFaces
+DetectLabels
+DetectModerationLabels
+DetectText
+GetCelebrityInfo
+GetCelebrityRecognition
+GetContentModeration
+GetFaceDetection
+GetFaceSearch
+GetLabelDetection
+GetPersonTracking
+GetTextDetection
+IndexFaces
+ListCollections
+ListFaces
+ListStreamProcessors
+RecognizeCelebrities
+SearchFaces
+SearchFacesByImage
+StartCelebrityRecognition
+StartContentModeration
+StartFaceDetection
+StartFaceSearch
+StartLabelDetection
+StartPersonTracking
+StartProjectVersion
+StartStreamProcessor
+StartTextDetection
+StopProjectVersion
+StopStreamProcessor
+
+
+Data Types
+AgeRange
+Asset
+Beard
+BoundingBox
+Celebrity
+CelebrityDetail
+CelebrityRecognition
+ComparedFace
+ComparedSourceImageFace
+CompareFacesMatch
+ContentModerationDetection
+CustomLabel
+DetectionFilter
+DetectTextFilters
+Emotion
+EvaluationResult
+Eyeglasses
+EyeOpen
+Face
+FaceDetail
+FaceDetection
+FaceMatch
+FaceRecord
+FaceSearchSettings
+Gender
+Geometry
+GroundTruthManifest
+HumanLoopActivationOutput
+HumanLoopConfig
+HumanLoopDataAttributes
+Image
+ImageQuality
+Instance
+KinesisDataStream
+KinesisVideoStream
+Label
+LabelDetection
+Landmark
+ModerationLabel
+MouthOpen
+Mustache
+NotificationChannel
+OutputConfig
+Parent
+PersonDetail
+PersonDetection
+PersonMatch
+Point
+Pose
+ProjectDescription
+ProjectVersionDescription
+RegionOfInterest
+S3Object
+Smile
+StartTextDetectionFilters
+StreamProcessor
+StreamProcessorInput
+StreamProcessorOutput
+StreamProcessorSettings
+Summary
+Sunglasses
+TestingData
+TestingDataResult
+TextDetection
+TextDetectionResult
+TrainingData
+TrainingDataResult
+UnindexedFace
+Video
+VideoMetadata
+
+
+Limits in Amazon Rekognition
+Document History for Amazon Rekognition
+AWS Glossary

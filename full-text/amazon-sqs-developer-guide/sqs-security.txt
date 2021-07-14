@@ -1,0 +1,10 @@
+Security in Amazon SQS
+This section provides information about Amazon SQS security, authentication and access control, and the Amazon SQS Access Policy Language.
+Topics
+ Data protection in Amazon SQS
+ Identity and access management in Amazon SQS
+ Logging and monitoring in Amazon SQS
+ Compliance validation for Amazon SQS
+ Resilience in Amazon SQS
+ Infrastructure security in Amazon SQS
+ Amazon SQS security best practices

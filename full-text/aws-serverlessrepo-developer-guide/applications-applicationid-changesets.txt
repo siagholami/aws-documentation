@@ -1,0 +1,478 @@
+Applications applicationId Changesets
+URI
+/applications/applicationId/changesets
+HTTP Methods
+POST
+Operation ID: CreateCloudFormationChangeSet
+Creates an AWS CloudFormation change set for the given application.
+Path Parameters 
+
+
+
+Name
+Type
+Required
+Description
+
+
+
+
+applicationId
+String
+True
+The Amazon Resource Name (ARN) of the application.
+
+
+
+Responses 
+
+
+
+Status Code
+Response Model
+Description
+
+
+
+
+201
+
+Success
+
+
+400
+
+One of the parameters in the request is invalid.
+
+
+403
+
+The client is not authenticated.
+
+
+429
+
+The client is sending more than the allowed number of requests per unit of time.
+
+
+500
+
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+
+Schemas
+Request Bodies
+Example POST
+{
+  "stackName": "string",
+  "semanticVersion": "string",
+  "templateId": "string",
+  "parameterOverrides": [
+    {
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "capabilities": [
+    "string"
+  ],
+  "changeSetName": "string",
+  "clientToken": "string",
+  "description": "string",
+  "notificationArns": [
+    "string"
+  ],
+  "resourceTypes": [
+    "string"
+  ],
+  "rollbackConfiguration": {
+    "rollbackTriggers": [
+      {
+        "arn": "string",
+        "type": "string"
+      }
+    ],
+    "monitoringTimeInMinutes": integer
+  },
+  "tags": [
+    {
+      "key": "string",
+      "value": "string"
+    }
+  ]
+}
+Response Bodies
+Example ChangeSetDetails
+{
+  "applicationId": "string",
+  "semanticVersion": "string",
+  "changeSetId": "string",
+  "stackId": "string"
+}
+Example BadRequestException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example ForbiddenException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example TooManyRequestsException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Example InternalServerErrorException
+{
+  "message": "string",
+  "errorCode": "string"
+}
+Properties
+BadRequestException
+One of the parameters in the request is invalid.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+One of the parameters in the request is invalid.
+
+
+errorCode
+string
+False
+400
+
+
+
+ChangeSetDetails
+Details of the change set.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+applicationId
+string
+True
+The application Amazon Resource Name (ARN).
+
+
+semanticVersion
+string
+True
+The semantic version of the application: https://semver.org/
+
+
+changeSetId
+string
+True
+The Amazon Resource Name (ARN) of the change set.Length constraints: Minimum length of 1.Pattern: ARN:[-a-zA-Z0-9:/]*
+
+
+stackId
+string
+True
+The unique ID of the stack.
+
+
+
+CreateCloudFormationChangeSetInput
+Create an application change set request.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+stackName
+string
+True
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+semanticVersion
+string
+False
+The semantic version of the application: https://semver.org/
+
+
+templateId
+string
+False
+The UUID returned by CreateCloudFormationTemplate.Pattern: [0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}
+
+
+parameterOverrides
+Array of type ParameterValue
+False
+A list of parameter values for the parameters of the application.
+
+
+capabilities
+Array of type string
+False
+A list of values that you must specify before you can deploy certain applications. Some applications might include resources that can affect permissions in your AWS account, for example, by creating new AWS Identity and Access Management (IAM) users. For those applications, you must explicitly acknowledge their capabilities by specifying this parameter.The only valid values are CAPABILITY_IAM, CAPABILITY_NAMED_IAM, CAPABILITY_RESOURCE_POLICY, and CAPABILITY_AUTO_EXPAND.The following resources require you to specify CAPABILITY_IAM or CAPABILITY_NAMED_IAM: AWS::IAM::Group, AWS::IAM::InstanceProfile, AWS::IAM::Policy, and AWS::IAM::Role. If the application contains IAM resources, you can specify either CAPABILITY_IAM or CAPABILITY_NAMED_IAM. If the application contains IAM resources with custom names, you must specify CAPABILITY_NAMED_IAM.The following resources require you to specify CAPABILITY_RESOURCE_POLICY: AWS::Lambda::Permission, AWS::IAM:Policy, AWS::ApplicationAutoScaling::ScalingPolicy, AWS::S3::BucketPolicy, AWS::SQS::QueuePolicy, and AWS::SNS:TopicPolicy.Applications that contain one or more nested applications require you to specify CAPABILITY_AUTO_EXPAND.If your application template contains any of the above resources, we recommend that you review all permissions associated with the application before deploying. If you don't specify this parameter for an application that requires capabilities, the call will fail.
+
+
+changeSetName
+string
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+clientToken
+string
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+description
+string
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+notificationArns
+Array of type string
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+resourceTypes
+Array of type string
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+rollbackConfiguration
+RollbackConfiguration
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+tags
+Array of type Tag
+False
+This property corresponds to the parameter of the same name for the *AWS CloudFormation CreateChangeSet * API.
+
+
+
+ForbiddenException
+The client is not authenticated.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The client is not authenticated.
+
+
+errorCode
+string
+False
+403
+
+
+
+InternalServerErrorException
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The AWS Serverless Application Repository service encountered an internal error.
+
+
+errorCode
+string
+False
+500
+
+
+
+ParameterValue
+Parameter value of the application.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+name
+string
+True
+The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+
+
+value
+string
+True
+The input value associated with the parameter.
+
+
+
+RollbackConfiguration
+This property corresponds to the *AWS CloudFormation RollbackConfiguration * Data Type.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+rollbackTriggers
+Array of type RollbackTrigger
+False
+This property corresponds to the content of the same name for the *AWS CloudFormation RollbackConfiguration * Data Type.
+
+
+monitoringTimeInMinutes
+integer
+False
+This property corresponds to the content of the same name for the *AWS CloudFormation RollbackConfiguration * Data Type.
+
+
+
+RollbackTrigger
+This property corresponds to the *AWS CloudFormation RollbackTrigger * Data Type.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+arn
+string
+True
+This property corresponds to the content of the same name for the *AWS CloudFormation RollbackTrigger * Data Type.
+
+
+type
+string
+True
+This property corresponds to the content of the same name for the *AWS CloudFormation RollbackTrigger * Data Type.
+
+
+
+Tag
+This property corresponds to the *AWS CloudFormation Tag * Data Type.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+key
+string
+True
+This property corresponds to the content of the same name for the *AWS CloudFormation Tag * Data Type.
+
+
+value
+string
+True
+This property corresponds to the content of the same name for the *AWS CloudFormation Tag * Data Type.
+
+
+
+TooManyRequestsException
+The client is sending more than the allowed number of requests per unit of time.
+
+
+
+Property
+Type
+Required
+Description
+
+
+
+
+message
+string
+False
+The client is sending more than the allowed number of requests per unit of time.
+
+
+errorCode
+string
+False
+429
+
+
+
+See Also
+For more information about using this API in one of the language-specific AWS SDKs and references, see the following:
+CreateCloudFormationChangeSet
+
+AWS Command Line Interface
+AWS SDK for .NET
+AWS SDK for C
+AWS SDK for Go
+AWS SDK for Java
+AWS SDK for JavaScript
+AWS SDK for PHP V3
+AWS SDK for Python
+AWS SDK for Ruby V3

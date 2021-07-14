@@ -1,0 +1,21 @@
+
+
+TextDocumentStatistics
+Provides information about text documents indexed in an index.
+Contents
+IndexedTextBytes 
+The total size, in bytes, of the indexed documents.
+Type: Long
+Valid Range: Minimum value of 0.
+Required: Yes
+IndexedTextDocumentsCount 
+The number of text documents indexed.
+Type: Integer
+Valid Range: Minimum value of 0.
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

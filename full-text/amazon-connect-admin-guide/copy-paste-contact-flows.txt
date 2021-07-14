@@ -1,0 +1,31 @@
+Copy and paste contact flows
+You can select, cut, copy, and paste a complete flow or multiple blocks within or across flows. The following information is copied:
+ All configured settings in the selected contact blocks.
+ The layout arrangements.
+ The connections.
+Windows: CTRLC to copy, CTRLV to paste, and CTRLX to cut
+
+
+To select multiple blocks at the same time, press the Ctrl key, and choose the blocks you want.
+
+
+Press CtrlC to copy the blocks.
+
+
+Press CTRLV to paste the blocks.
+
+
+Mac: CmdC to copy, CmdV to paste, and CmdX to cut
+
+
+To select multiple blocks at the same time, press the Cmd key, and choose the blocks you want.
+
+
+Press CmdC to copy the blocks.
+
+
+Press CmdV to paste the blocks.
+
+
+Tip
+Amazon Connect uses the clipboard for this feature. Paste won't work if you edit the JSON in your clipboard and introduce a typo or other error, or if you have multiple items saved to your clipboard. 

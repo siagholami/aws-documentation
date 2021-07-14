@@ -1,0 +1,20 @@
+Security in Amazon EC2
+Cloud security at AWS is the highest priority. As an AWS customer, you benefit from a data center and network architecture that are built to meet the requirements of the most security-sensitive organizations.
+Security is a shared responsibility between AWS and you. The shared responsibility model describes this as security of the cloud and security in the cloud:
+ Security of the cloud – AWS is responsible for protecting the infrastructure that runs AWS services in the AWS Cloud. AWS also provides you with services that you can use securely. Third-party auditors regularly test and verify the effectiveness of our security as part of the AWS Compliance Programs. To learn about the compliance programs that apply to Amazon EC2, see AWS Services in Scope by Compliance Program.
+ Security in the cloud – Your responsibility is determined by the AWS service that you use. You are also responsible for other factors including the sensitivity of your data, your company’s requirements, and applicable laws and regulations.
+This documentation helps you understand how to apply the shared responsibility model when using Amazon EC2. It shows you how to configure Amazon EC2 to meet your security and compliance objectives. You also learn how to use other AWS services that help you to monitor and secure your Amazon EC2 resources.
+For security best practices for Amazon EC2 running Windows Server, see Security and Network under Best practices for Windows on Amazon EC2.
+Topics
+ Infrastructure security in Amazon EC2
+ Amazon EC2 and interface VPC endpoints
+ Resilience in Amazon EC2
+ Data protection in Amazon EC2
+ Identity and access management for Amazon EC2
+ Amazon EC2 key pairs and Windows instances
+ Amazon EC2 security groups for Windows instances
+ Configuration management in Amazon EC2
+ Update management in Amazon EC2
+ Change management in Amazon EC2
+ Compliance validation for Amazon EC2
+ Audit and accountability in Amazon EC2

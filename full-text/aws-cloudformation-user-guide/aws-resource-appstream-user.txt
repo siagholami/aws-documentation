@@ -1,0 +1,62 @@
+AWS::AppStream::User
+The AWS::AppStream::User resource creates a new user in the AppStream 2.0 user pool.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppStream::User",
+  "Properties" : {
+      "[AuthenticationType](#cfn-appstream-user-authenticationtype)" : String,
+      "[FirstName](#cfn-appstream-user-firstname)" : String,
+      "[LastName](#cfn-appstream-user-lastname)" : String,
+      "[MessageAction](#cfn-appstream-user-messageaction)" : String,
+      "[UserName](#cfn-appstream-user-username)" : String
+    }
+}
+YAML
+Type: AWS::AppStream::User
+Properties: 
+  [AuthenticationType](#cfn-appstream-user-authenticationtype): String
+  [FirstName](#cfn-appstream-user-firstname): String
+  [LastName](#cfn-appstream-user-lastname): String
+  [MessageAction](#cfn-appstream-user-messageaction): String
+  [UserName](#cfn-appstream-user-username): String
+Properties
+AuthenticationType 
+The authentication type for the user. You must specify USERPOOL. 
+Required: Yes
+Type: String
+Update requires: Replacement
+FirstName 
+The first name, or given name, of the user.
+Required: No
+Type: String
+Maximum: 2048
+Pattern: ^[A-Za-z0-9_\-\s]$
+Update requires: Replacement
+LastName 
+The last name, or surname, of the user.
+Required: No
+Type: String
+Maximum: 2048
+Pattern: ^[A-Za-z0-9_\-\s]$
+Update requires: Replacement
+MessageAction 
+The action to take for the welcome email that is sent to a user after the user is created in the user pool. If you specify SUPPRESS, no email is sent. If you specify RESEND, do not specify the first name or last name of the user. If the value is null, the email is sent. 
+The temporary password in the welcome email is valid for only 7 days. If users don’t set their passwords within 7 days, you must send them a new welcome email.
+Required: No
+Type: String
+Allowed values: RESEND | SUPPRESS
+Update requires: Replacement
+UserName 
+The email address of the user.
+Users' email addresses are case-sensitive. During login, if they specify an email address that doesn't use the same capitalization as the email address specified when their user pool account was created, a "user does not exist" error message displays. 
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}]
+Update requires: Replacement
+See also
+
+CreateUser in the Amazon AppStream 2.0 API Reference 

@@ -1,0 +1,36 @@
+Changing AWS Regions
+When you set up your credentials, the AWS Toolkit for Visual Studio Code automatically selects and shows the default AWS Region for those credentials in the AWS Explorer. This topic describes how to change the list of Regions that is shown in the AWS Explorer.
+Add a Region to the AWS Explorer
+
+
+To open the Command Palette, on the menu bar, choose View, Command Palette. Or use the following shortcut keys: 
+    Windows and Linux – Press CtrlShiftP.
+    macOS – Press ShiftCommandP.
+
+
+Search for AWS and choose AWS: Show Region in the Explorer.
+
+
+
+Choose the Region that you want to add to the AWS Explorer.
+
+Note
+The list contains only those Regions that are available to add to the AWS Explorer. Regions you've already added don't appear in the list.
+
+
+Verify that the Region now appears in the AWS Explorer.
+
+
+
+Hide a Region from the AWS Explorer
+
+
+Choose the AWS icon in the Activity bar to open the AWS Explorer.
+
+
+Choose one of the Regions in the list, and open its context menu.
+
+
+
+Choose Hide Region from the Explorer.
+

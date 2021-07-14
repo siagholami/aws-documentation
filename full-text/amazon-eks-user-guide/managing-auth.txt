@@ -1,0 +1,7 @@
+Cluster authentication
+Amazon EKS uses IAM to provide authentication to your Kubernetes cluster (through the  aws eks get-token  command, available in version 1.16.156 or later of the AWS CLI, or the AWS IAM Authenticator for Kubernetes), but it still relies on native Kubernetes Role Based Access Control (RBAC) for authorization. This means that IAM is only used for authentication of valid IAM entities. All permissions for interacting with your Amazon EKS cluster’s Kubernetes API is managed through the native Kubernetes RBAC system.
+
+Topics
+ Installing aws-iam-authenticator
+ Create a kubeconfig for Amazon EKS
+ Managing users or IAM roles for your cluster

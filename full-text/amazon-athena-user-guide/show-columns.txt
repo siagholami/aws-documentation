@@ -1,0 +1,6 @@
+SHOW COLUMNS
+Lists the columns in the schema for a base table or a view.
+Synopsis
+SHOW COLUMNS IN table_name|view_name
+Examples
+SHOW COLUMNS IN clicks;

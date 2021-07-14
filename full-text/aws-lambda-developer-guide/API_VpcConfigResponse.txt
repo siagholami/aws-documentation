@@ -1,0 +1,23 @@
+VpcConfigResponse
+The VPC security groups and subnets that are attached to a Lambda function.
+Contents
+SecurityGroupIds 
+A list of VPC security groups IDs.
+Type: Array of strings
+Array Members: Maximum number of 5 items.
+Required: No
+SubnetIds 
+A list of VPC subnet IDs.
+Type: Array of strings
+Array Members: Maximum number of 16 items.
+Required: No
+VpcId 
+The ID of the VPC.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

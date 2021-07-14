@@ -1,0 +1,14 @@
+TracingConfig
+The function's AWS X-Ray tracing configuration. To sample and record incoming requests, set Mode to Active.
+Contents
+Mode 
+The tracing mode.
+Type: String
+Valid Values:Active | PassThrough 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

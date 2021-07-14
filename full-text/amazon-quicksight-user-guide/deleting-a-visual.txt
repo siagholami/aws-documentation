@@ -1,0 +1,10 @@
+Deleting an Amazon QuickSight Visual
+Use the following procedure to delete a visual.
+
+
+On the analysis page, select the visual that you want to delete.
+
+
+Choose the on-visual menu at the upper-right corner of the visual, and then choose Delete.
+
+

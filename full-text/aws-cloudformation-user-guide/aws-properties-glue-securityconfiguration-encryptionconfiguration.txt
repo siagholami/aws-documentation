@@ -1,0 +1,33 @@
+AWS::Glue::SecurityConfiguration EncryptionConfiguration
+Specifies an encryption configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption)" : CloudWatchEncryption,
+  "[JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption)" : JobBookmarksEncryption,
+  "[S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions)" : S3Encryptions
+}
+YAML
+[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption): 
+    CloudWatchEncryption
+  [JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption): 
+    JobBookmarksEncryption
+  [S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions): 
+    S3Encryptions
+Properties
+CloudWatchEncryption 
+The encryption configuration for Amazon CloudWatch.
+Required: No
+Type: CloudWatchEncryption
+Update requires: No interruption
+JobBookmarksEncryption 
+The encryption configuration for job bookmarks.
+Required: No
+Type: JobBookmarksEncryption
+Update requires: No interruption
+S3Encryptions 
+The encyption configuration for Amazon Simple Storage Service (Amazon S3) data.
+Required: No
+Type: S3Encryptions
+Update requires: No interruption

@@ -1,0 +1,19 @@
+List agents grouped by routing profile
+
+
+Go to Metrics and quality, Real-time metrics, Queues.
+
+
+Choose New table, Agents.
+
+
+Click Settings.
+
+
+
+On the Filters tab, choose Routing profiles. In Include, select the routing profiles you want included in the table.
+
+
+
+Choose Apply.
+

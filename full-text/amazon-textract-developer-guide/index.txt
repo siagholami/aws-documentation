@@ -1,0 +1,92 @@
+Amazon Textract Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Textract?
+How Amazon Textract Works
+Detecting Text
+Analyzing Text
+Input Documents
+Documents and Block Objects
+Pages
+Lines and Words of Text
+Form Data (Key-Value Pairs)
+Tables
+Selection Elements
+
+
+Item Location on a Document Page
+Getting Started with Amazon Textract
+Step 1: Set Up an AWS Account and Create an IAM User
+Step 2: Set Up the AWS CLI and AWS SDKs
+Step 3: Get Started Using the AWS CLI and AWS SDK API
+Detecting and Analyzing Text in Single-Page Documents
+Calling Amazon Textract Synchronous Operations
+Detecting Document Text with Amazon Textract
+Analyzing Document Text with Amazon Textract
+Detecting and Analyzing Text in Multipage Documents
+Calling Amazon Textract Asynchronous Operations
+Configuring Amazon Textract for Asynchronous Operations
+Detecting or Analyzing Text in a Multipage Document
+Amazon Textract Results Notification
+Handling Throttled Calls and Dropped Connections
+Best Practices for Amazon Textract
+Examples
+Extracting Key-Value Pairs from a Form Document
+Exporting Tables into a CSV File
+Creating an AWS Lambda Function
+Other Examples
+Using Amazon Augmented AI (Preview) with Amazon Textract
+Amazon Textract Security
+Authentication and Access Control for Amazon Textract
+Overview of Managing Access Permissions to Your Amazon Textract Resources
+Using Identity-based Policies (IAM Policies) for Amazon Textract
+Amazon Textract API Permissions: Actions, Permissions, and Resources Reference
+
+
+Logging and Monitoring
+Monitoring Amazon Textract
+CloudWatch Metrics for Amazon Textract
+
+
+Logging Amazon Textract API Calls with AWS CloudTrail
+API Reference
+Actions
+AnalyzeDocument
+DetectDocumentText
+GetDocumentAnalysis
+GetDocumentTextDetection
+StartDocumentAnalysis
+StartDocumentTextDetection
+
+
+Data Types
+Block
+BoundingBox
+Document
+DocumentLocation
+DocumentMetadata
+Geometry
+HumanLoopActivationOutput
+HumanLoopConfig
+HumanLoopDataAttributes
+NotificationChannel
+Point
+Relationship
+S3Object
+Warning
+
+
+Limits in Amazon Textract
+Document History for Amazon Textract
+AWS Glossary

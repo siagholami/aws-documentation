@@ -1,0 +1,3 @@
+MSK resource type reference
+Resource types
+ AWS::MSK::Cluster

@@ -1,0 +1,22 @@
+Setting up Lumberyard
+In this section, you can learn more about installing, upgrading, and setting up your installation of Lumberyard. 
+You can use Lumberyard to develop games for the following platforms: 
+ PC
+ Android
+ iOS
+ macOS
+ Play​Station 4
+ X​box One
+Some platforms have requirements beyond the scope of this documentation. 
+ For console support, see Developing Games for X​box One and Become a Registered Developer for Play​Station.
+ For mobile devices, see Create Android and iOS projects in Lumberyard.
+ For macOS, see Create macOS projects in Lumberyard.
+Lumberyard supports dedicated servers for Linux. For more information, see Creating Lumberyard dedicated servers for Linux.
+Topics
+ System requirements
+ Downloading Lumberyard
+ Upgrading Lumberyard
+ Using Lumberyard Setup Assistant to Set Up Your Development Environment
+ Enabling a Firewall
+ Using the Perforce Plugin with Lumberyard
+ Uninstalling Amazon Lumberyard

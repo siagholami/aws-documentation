@@ -1,0 +1,12 @@
+How to Unlock an AWS DeepRacer Vehicle Battery After Lockout
+To unlock your AWS DeepRacer battery after lockout, use the unlock cable (if you do not have a battery unlock cable, please contact AWSDeepRacer-Help@amazon.com and we will mail you one):
+
+
+Insert the red and white connectors on the battery to the respective colors on the cable. 
+
+
+
+Unplug the cable. 
+
+
+Your AWS DeepRacer vehicle battery is immediately ready for use.

@@ -1,0 +1,4 @@
+AWS Transfer Family resource type reference
+Resource types
+ AWS::Transfer::Server
+ AWS::Transfer::User

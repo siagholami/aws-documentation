@@ -1,0 +1,22 @@
+Deleting a repository policy statement
+If you no longer want an existing repository policy statement to apply to a repository, you can delete it.
+To delete a repository policy statement
+
+
+Open the Amazon ECR console at https://console.aws.amazon.com/ecr/repositories.
+
+
+From the navigation bar, choose the Region that contains the repository to delete a policy statement from.
+
+
+In the navigation pane, choose Repositories.
+
+
+On the Repositories page, choose the repository to delete a policy statement from.
+
+
+In the navigation pane, choose Permissions, Edit.
+
+
+On the Edit permissions page, choose Delete.
+

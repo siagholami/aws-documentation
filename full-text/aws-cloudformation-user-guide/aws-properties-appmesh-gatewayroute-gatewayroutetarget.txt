@@ -1,0 +1,17 @@
+AWS::AppMesh::GatewayRoute GatewayRouteTarget
+An object that represents a gateway route target.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[VirtualService](#cfn-appmesh-gatewayroute-gatewayroutetarget-virtualservice)" : GatewayRouteVirtualService
+}
+YAML
+[VirtualService](#cfn-appmesh-gatewayroute-gatewayroutetarget-virtualservice): 
+    GatewayRouteVirtualService
+Properties
+VirtualService 
+An object that represents a virtual service gateway route target.
+Required: Yes
+Type: GatewayRouteVirtualService
+Update requires: No interruption

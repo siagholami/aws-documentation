@@ -1,0 +1,6 @@
+Secure Your AD Connector Directory
+This section describes considerations for securing your AD Connector environment.
+Topics
+ Update Your AD Connector Service Account Credentials in AWS Directory Service
+ Enable Multi-Factor Authentication for AD Connector
+ Enable Client-Side LDAPS Using AD Connector

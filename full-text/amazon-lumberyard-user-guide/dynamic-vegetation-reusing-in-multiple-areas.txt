@@ -1,0 +1,27 @@
+Reusing Vegetation in Multiple Areas
+After you create your vegetation entity, you can designate your customized vegetation to appear in another area. You do this by referencing another shape. For example, if you created a forest patch that includes the vegetation assets and arrangement for your level, you can create another entity with a different shape and reference this new shape for your vegetation. With this feature, you can reuse your vegetation in different areas of your level without creating a separate vegetation entity each time.
+To reuse vegetation in a new area
+
+
+In the Entity Inspector, select the BasicCoverage entity.
+
+
+Right-click the entity, choose Create child entity, and name it Cylinder(PlacementTest).
+
+
+Click Add Component and select the Cylinder Shape component.
+
+
+Select the Cylinder(PlacementTest) entity and move it away from the vegetation area.
+
+
+
+Select the BasicCoverage entity.
+
+
+On the Vegetation Reference Shape component, for Shape Entity Id, specify the Cylinder(PlacementTest) entity. 
+
+Example 
+
+
+The vegetation appears in the cylinder instead of the box shape.

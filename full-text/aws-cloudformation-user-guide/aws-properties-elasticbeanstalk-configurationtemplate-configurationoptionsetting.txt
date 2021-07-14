@@ -1,0 +1,45 @@
+AWS::ElasticBeanstalk::ConfigurationTemplate ConfigurationOptionSetting
+The ConfigurationOptionSetting property type specifies an option for an AWS Elastic Beanstalk configuration template.
+The OptionSettings property of the AWS::ElasticBeanstalk::ConfigurationTemplate resource contains a list of ConfigurationOptionSetting property types.
+For a list of possible namespaces and option values, see Option Values in the AWS Elastic Beanstalk Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Namespace](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace)" : String,
+  "[OptionName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname)" : String,
+  "[ResourceName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename)" : String,
+  "[Value](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value)" : String
+}
+YAML
+[Namespace](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace): String
+  [OptionName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname): String
+  [ResourceName](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename): String
+  [Value](#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value): String
+Properties
+Namespace 
+A unique namespace that identifies the option's associated AWS resource.
+Required: Yes
+Type: String
+Update requires: No interruption
+OptionName 
+The name of the configuration option.
+Required: Yes
+Type: String
+Update requires: No interruption
+ResourceName 
+A unique resource name for the option setting. Use it for a time–based scaling configuration option.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Update requires: No interruption
+Value 
+The current value for the configuration option.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ConfigurationOptionSetting in the AWS Elastic Beanstalk API Reference 
+Configuration Options in the AWS Elastic Beanstalk Developer Guide 

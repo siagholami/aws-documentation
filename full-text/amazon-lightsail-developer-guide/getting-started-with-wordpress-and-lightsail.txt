@@ -1,0 +1,76 @@
+Getting started using WordPress from your Amazon Lightsail instance
+Last updated: May 17, 2017 
+If you're reading this, it means you successfully created a Lightsail instance that's running WordPress. Congrats! If you still need to create a WordPress instance, go ahead and do that now. We'll wait for you...
+Now you're ready to get started with some basic administrative tasks. First, let's log in to your WordPress Dashboard.
+Step 1: Go to your WordPress blog and log in
+Here's how to log in to your WordPress blog.
+
+
+Go to the Lightsail home page and find your WordPress blog.
+
+
+Copy the Public IP address to the clipboard. You can find this address on the Lightsail home page or on the instance details page.
+
+
+Paste the IP address into your browser.
+
+
+You should see something like this:
+
+
+
+Choose Manage in the lower right corner.
+
+
+Choose Login to log in to the admin console.
+
+
+Use the default user name (user).
+
+
+To get the password, you need to connect to your instance.
+
+
+Go back to Lightsail and choose Connect using SSH to connect to your WordPress instance.
+
+Type the following:
+
+cat bitnami_application_password
+Note
+If you're in a directory other than the user home directory, then type cat $HOME/bitnami_application_password.
+You should see something like this:
+
+
+
+Highlight your password in the terminal screen, then choose the clipboard icon.
+
+
+Highlight the text you want to copy in the clipboard text box, then press CtrlC or CmdC to copy the text to your local clipboard.
+
+Important
+You should save your password somewhere at this time. You can always change it later to something that's easier to remember.
+
+
+Paste your password into the WordPress login page, and then choose Log In.
+
+
+If you succeed, you'll see the WordPress Dashboard.
+
+Step 2: Update your profile or password in the WordPress Dashboard
+Now that you have access to your WordPress Dashboard, you can create another user or change your password to something that's easier to remember.
+
+
+Choose Users.
+
+
+Choose user, and then choose Edit.
+
+
+Update your Personal Options on the Profile page, and when you're done choose Update Profile.
+
+
+Next steps
+Visit Bitnami WordPress for Amazon Web Services for more tutorials. Here are some cool things you can do with your new WordPress blog in Lightsail.
+  Install plugins 
+  Create a full backup 
+  Enable HTTPS support with SSL certificates 

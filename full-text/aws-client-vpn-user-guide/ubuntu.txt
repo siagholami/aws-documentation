@@ -1,0 +1,39 @@
+Ubuntu
+The following procedures show how to establish a VPN connection using Ubuntu-based VPN clients.
+Before you begin, ensure that your Client VPN administrator has created a Client VPN endpoint and provided you with the Client VPN endpoint configuration file.
+For troubleshooting information, see Ubuntu troubleshooting.
+OpenVPN - Network Manager
+The following procedure shows how to establish a VPN connection using the OpenVPN application through the Network Manager GUI on an Ubuntu computer.
+To establish a VPN connection
+
+Install the network manager module using the following command.
+
+sudo apt-get install --reinstall network-manager network-manager-gnome network-manager-openvpn network-manager-openvpn-gnome
+
+
+Go to Settings, Network.
+
+
+Choose the plus symbol () next to VPN, and then choose Import from file....
+
+
+Navigate to the configuration file that you received from your VPN administrator and choose Open.
+
+
+In the Add VPN window, choose Add.
+
+
+Start the connection by enabling the toggle next to the VPN profile that you added.
+
+
+OpenVPN
+The following procedure shows how to establish a VPN connection using the OpenVPN application on an Ubuntu computer.
+To establish a VPN connection
+
+Install OpenVPN using the following command.
+
+sudo apt-get install openvpn
+
+Start the connection by loading the configuration file that you received from your VPN administrator.
+
+sudo openvpn --config /path/to/config/file

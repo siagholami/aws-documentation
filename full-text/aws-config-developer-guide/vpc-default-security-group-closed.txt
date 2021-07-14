@@ -1,0 +1,9 @@
+vpc-default-security-group-closed
+Checks that the default security group of any Amazon Virtual Private Cloud (VPC) does not allow inbound or outbound traffic. The rule returns NOT_APPLICABLE if the security group is not default. The rule is NON_COMPLIANT if the default security group has one or more inbound or outbound traffic.
+Identifier: VPC_DEFAULT_SECURITY_GROUP_CLOSED
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+None  
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

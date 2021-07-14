@@ -1,0 +1,18 @@
+Elastic Beanstalk platforms
+AWS Elastic Beanstalk provides a variety of platforms on which you can build your applications. You design your web application to one of these platforms, and Elastic Beanstalk deploys your code to the platform version you selected to create an active application environment.
+Elastic Beanstalk provides platforms for different programming languages, application servers, and Docker containers. Some platforms have multiple concurrently-supported versions.
+Topics
+ Elastic Beanstalk platforms glossary
+ Shared responsibility model for Elastic Beanstalk platform maintenance
+ Elastic Beanstalk platform support policy
+ Elastic Beanstalk supported platforms
+ Elastic Beanstalk Linux platforms
+ Deploying Elastic Beanstalk applications from Docker containers
+ Creating and deploying Go applications on Elastic Beanstalk
+ Creating and deploying Java applications on Elastic Beanstalk
+ Working with .NET Core on Linux
+ Creating and deploying .NET applications on Elastic Beanstalk
+ Deploying Node.js applications to Elastic Beanstalk
+ Creating and deploying PHP applications on Elastic Beanstalk
+ Working with Python
+ Creating and deploying Ruby applications on Elastic Beanstalk

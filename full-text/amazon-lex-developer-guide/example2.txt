@@ -1,0 +1,2 @@
+Deploying an Amazon Lex Bot in Mobile Applications
+Using AWS Amplify, you can integrate your Amazon Lex bots with mobile or web applications. For more information, see  Interactions – Getting started  in the AWS Amplify Docs.

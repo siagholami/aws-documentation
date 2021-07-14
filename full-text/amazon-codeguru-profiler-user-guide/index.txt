@@ -1,0 +1,82 @@
+Amazon CodeGuru Profiler User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon CodeGuru Profiler?
+Setting up CodeGuru Profiler
+Getting started with CodeGuru Profiler
+Integrating with Amazon CodeGuru Profiler
+Choosing the right integration option
+Profiling your applications that run on AWS Lambda
+Enabling the agent from the command line
+Enabling the agent with code
+Java
+Scala
+Kotlin
+Groovy
+Jython
+JRuby
+Clojure
+
+
+Working with unsupported AWS Regions
+Working with profiling groups
+Creating a profiling group
+Deleting a profiling group
+Working with visualizations
+Types of visualizations
+Exploring visualization data
+Choosing my code in visualizations
+Pausing over a frame
+Zooming in on a frame
+Resetting zoom in a visualization
+Inspecting a frame
+Understanding the dollar estimate of the CPU cost for frames
+
+
+Filtering visualization data
+Selecting and coloring thread states
+Hiding a frame
+
+
+Selecting a custom time range
+Working with anomalies and recommendation reports
+Security in CodeGuru Profiler
+Data protection for CodeGuru Profiler
+Identity and access management in CodeGuru Profiler
+Audience in CodeGuru Profiler
+Authenticating with identities in CodeGuru Profiler
+Managing access using policies
+Overview of managing access permissions to your CodeGuru Profiler resources
+Using identity-based policies for CodeGuru Profiler
+Resource-based policies in CodeGuru Profiler
+Amazon CodeGuru Profiler permissions reference
+Troubleshooting CodeGuru Profiler identity and access
+Using service-linked roles for CodeGuru Profiler
+
+
+Logging and monitoring in Amazon CodeGuru Profiler
+Logging Amazon CodeGuru Profiler API calls with AWS CloudTrail
+Monitoring Amazon CodeGuru Profiler with Amazon CloudWatch
+Monitoring profiling groups with CloudWatch metrics
+Monitoring profiling groups with CloudWatch alarms
+
+
+
+
+Compliance validation for Amazon CodeGuru Profiler
+Infrastructure security in Amazon CodeGuru Profiler
+Troubleshooting
+Quotas for CodeGuru Profiler
+CodeGuru Profiler user guide document history
+AWS glossary

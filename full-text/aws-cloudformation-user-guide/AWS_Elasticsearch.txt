@@ -1,0 +1,3 @@
+Elasticsearch resource type reference
+Resource types
+ AWS::Elasticsearch::Domain

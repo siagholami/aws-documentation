@@ -1,0 +1,12 @@
+8: Sculpting the Terrain
+A lushly detailed environment with varying features and movement creates an immersive player experience. In this tutorial, you use a variety of terrain and vegetation tools to make a verdant green landscape outside your maze and within, nature creeping in upon a cement world.
+
+Topics
+ Creating Texture Layers
+ Painting Pavement, Grass, Dirt, and Rocks
+ Drawing a Road
+ Placing Trees
+ Adding Shrubs and Grass
+ Inserting Rocks and Undergrowth
+ Customizing Your Landscape (Optional)
+Next: Creating Texture Layers

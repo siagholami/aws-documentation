@@ -1,0 +1,26 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Accessing IAM with the AWS SDK for .NET
+The AWS SDK for .NET supports AWS Identity and Access Management, which is a web service that enables AWS customers to manage users and user permissions in AWS.
+An AWS Identity and Access Management (IAM) user is an entity that you create in AWS. The entity represents a person or application that interacts with AWS. For more information about IAM users, see IAM Users and IAM and STS Limits in the IAM User Guide.
+You grant permissions to a user by creating a IAM policy. The policy contains a policy document that lists the actions that a user can perform and the resources those actions can affect. For more information about IAM policies, see Policies and Permissions in the IAM User Guide.
+APIs
+The AWS SDK for .NET provides APIs for IAM clients. The APIs enable you to work with IAM features such as users, roles, and access keys.
+This section contains a small number of examples that show you the patterns you can follow when working with these APIs. To view the full set of APIs, see the AWS SDK for .NET API Reference (and scroll to "Amazon.IdentityManagement").
+This section also contains an example that shows you how to attach an IAM role to Amazon EC2 instances to make managing credentials easier.
+The AWS IAM APIs are provided by the AWSSDK.IdentityManagement NuGet package.
+Prerequisites
+Before you begin, be sure you have set up your environment. Also review the information in Setting up your project and SDK features.
+Topics
+Topics
+ APIs
+ Prerequisites
+ Topics
+ Creating users
+ Deleting users
+ Creating managed policies from JSON
+ Creating managed policies programmatically
+ Displaying policy documents
+ Granting access with a role

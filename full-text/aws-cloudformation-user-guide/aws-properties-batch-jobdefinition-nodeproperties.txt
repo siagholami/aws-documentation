@@ -1,0 +1,34 @@
+AWS::Batch::JobDefinition NodeProperties
+An object representing the node properties of a multi-node parallel job.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode)" : Integer,
+  "[NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties)" : [ NodeRangeProperty, ... ],
+  "[NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes)" : Integer
+}
+YAML
+[MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode): Integer
+  [NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties): 
+    - NodeRangeProperty
+  [NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes): Integer
+Properties
+MainNode 
+Specifies the node index for the main node of a multi-node parallel job. This node index value must be fewer than the number of nodes.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+NodeRangeProperties 
+A list of node ranges and their properties associated with a multi-node parallel job.
+Required: Yes
+Type: List of NodeRangeProperty
+Update requires: No interruption
+NumNodes 
+The number of nodes associated with a multi-node parallel job.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+See also
+
+Multi-node Parallel Jobs in the AWS Batch User Guide.

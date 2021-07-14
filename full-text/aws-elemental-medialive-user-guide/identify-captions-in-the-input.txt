@@ -1,0 +1,41 @@
+Step 1: Create Captions Selectors in the Input
+You must identify the captions that you want to use and assign each to a captions selector. If you don't create any captions selectors, you can't include captions in the output. All the captions will be removed from the media.
+Then you must extract the captions that you want by adding a captions selector in the channel. Each extracted captions asset is contained in one captions selector. For example, one selector contains the Teletext captions in Czech.
+To identify the captions that you want
+
+
+Identify which captions are in the input (the provider of the input should provide you with this information). Identify the captions formats and, for each format, the languages. 
+
+
+Identify which of those formats and languages that you want to use.
+
+
+Determine how many captions selectors to create in the input in the channel, using the following guidance: 
+    For embedded passthrough, create a single captions selector for all languages. All languages are passed through; there is no other option. For details, see Information for Embedded .
+    For Teletext passthrough, create a single captions selector for all languages (in fact, one captions selector for the entire content). All languages are passed through; there is no other option. For details, see Information for Teletext.
+    In all other cases, create one captions selector for each language and format combination.
+
+
+You end up with a list of captions selectors to create. For example:
+ Captions Selector 1: Teletext captions in Czech
+ Captions Selector 2: Teletext captions in Polish
+To create a captions selector
+
+
+In the channel that you are creating, in the navigation pane, in Input attachments, choose the input. 
+
+
+For General input settings, choose Add captions selectors.
+
+
+For Captions selector name, enter a suitable name. For example, Teletext Czech. 
+
+
+For Selector settings, choose the format of the source captions. 
+
+
+For most formats, more fields appear. For details about a field, choose the Info link next to the field. In addition, see DVB-Sub or SCTE-27, Embedded, or Teletext.
+
+
+Create more captions selectors, as required. 
+

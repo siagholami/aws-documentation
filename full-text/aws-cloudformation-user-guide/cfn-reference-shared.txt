@@ -1,0 +1,5 @@
+Shared property types reference
+This section contains detailed reference information for property types that AWS CloudFormation supports for use in multiple resource types.
+Topics
+ Name type
+ Resource tag

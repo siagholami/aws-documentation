@@ -1,0 +1,6 @@
+PG_PROC_INFO
+PG_PROC_INFO is an Amazon Redshift system view built on the PostgreSQL catalog table PG_PROC and the internal catalog table PG_PROC_EXTENDED. PG_PROC_INFO includes details about stored procedures and functions, including information related to output arguments, if any.
+Table columns
+PG_PROC_INFO shows the following columns in addition to the columns in PG_PROC.
+[See the AWS documentation website for more details]
+The field proargnames in PG_PROC_INFO contains the names of all types of arguments (including OUT and INOUT), if any.

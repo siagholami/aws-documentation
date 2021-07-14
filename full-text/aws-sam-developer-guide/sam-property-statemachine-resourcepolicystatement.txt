@@ -1,0 +1,102 @@
+ResourcePolicyStatement
+Configures a resource policy for all methods and paths of an API. For more information about resource policies, see Controlling access to an API with API Gateway resource policies in the API Gateway Developer Guide.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[AwsAccountBlacklist](#sam-statemachine-resourcepolicystatement-awsaccountblacklist): List
+  [AwsAccountWhitelist](#sam-statemachine-resourcepolicystatement-awsaccountwhitelist): List
+  [CustomStatements](#sam-statemachine-resourcepolicystatement-customstatements): List
+  [IntrinsicVpcBlacklist](#sam-statemachine-resourcepolicystatement-intrinsicvpcblacklist): List
+  [IntrinsicVpcWhitelist](#sam-statemachine-resourcepolicystatement-intrinsicvpcwhitelist): List
+  [IntrinsicVpceBlacklist](#sam-statemachine-resourcepolicystatement-intrinsicvpceblacklist): List
+  [IntrinsicVpceWhitelist](#sam-statemachine-resourcepolicystatement-intrinsicvpcewhitelist): List
+  [IpRangeBlacklist](#sam-statemachine-resourcepolicystatement-iprangeblacklist): List
+  [IpRangeWhitelist](#sam-statemachine-resourcepolicystatement-iprangewhitelist): List
+  [SourceVpcBlacklist](#sam-statemachine-resourcepolicystatement-sourcevpcblacklist): List
+  [SourceVpcWhitelist](#sam-statemachine-resourcepolicystatement-sourcevpcwhitelist): List
+Properties
+AwsAccountBlacklist 
+The AWS accounts to block.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+AwsAccountWhitelist 
+The AWS accounts to allow. For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+CustomStatements 
+A list of custom resource policy statements to apply to this API. For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IntrinsicVpcBlacklist 
+The list of virtual private clouds (VPCs) to block, where each VPC is specified as a reference such as a dynamic reference or the Ref intrinsic function. For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IntrinsicVpcWhitelist 
+The list of VPCs to allow, where each VPC is specified as a reference such as a dynamic reference or the Ref intrinsic function.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IntrinsicVpceBlacklist 
+The list of VPC endpoints to block, where each VPC endpoint is specified as a reference such as a dynamic reference or the Ref intrinsic function.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IntrinsicVpceWhitelist 
+The list of VPC endpoints to allow, where each VPC endpoint is specified as a reference such as a dynamic reference or the Ref intrinsic function. For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IpRangeBlacklist 
+The IP addresses or address ranges to block. For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+IpRangeWhitelist 
+The IP addresses or address ranges to allow.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+SourceVpcBlacklist 
+The source VPC or VPC endpoints to block. Source VPC names must start with "vpc-" and source VPC endpoint names must start with "vpce-". For an example use of this property, see the Examples section at the bottom of this page.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+SourceVpcWhitelist 
+The source VPC or VPC endpoints to allow. Source VPC names must start with "vpc-" and source VPC endpoint names must start with "vpce-".
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Examples
+Resource Policy Example
+The following example blocks two IP addresses and a source VPC, and allows an AWS account.
+YAML
+Auth:
+  ResourcePolicy:
+    CustomStatements: [{
+                         "Effect": "Allow",
+                         "Principal": "*",
+                         "Action": "execute-api:Invoke",
+                         "Resource": "execute-api:/Prod/GET/pets",
+                         "Condition": {
+                           "IpAddress": {
+                             "aws:SourceIp": "1.2.3.4"
+                           }
+                         }
+                       }]
+    IpRangeBlacklist:
+      - "10.20.30.40"
+      - "1.2.3.4"
+    SourceVpcBlacklist:
+      - "vpce-1a2b3c4d"
+    AwsAccountWhitelist:
+      - "111122223333"
+    IntrinsicVpcBlacklist:
+      - "{{resolve:ssm:SomeVPCReference:1}}" 
+      - !Ref MyVPC
+    IntrinsicVpceWhitelist:
+      - "{{resolve:ssm:SomeVPCEReference:1}}" 
+      - !Ref MyVPCE

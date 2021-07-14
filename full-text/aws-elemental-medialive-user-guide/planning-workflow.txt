@@ -1,0 +1,38 @@
+Planning Your Workflow for AWS Elemental MediaLive
+To use AWS Elemental MediaLive to transcode a video asset, you follow this basic workflow: 
+
+
+Assess the video source to ensure that MediaLive can accept it. 
+
+
+Decide on the channel class—decide if you want to create a standard channel that supports redundancy or a single-pipeline channel that doesn't support redundancy.
+
+
+Set up the upstream system that will provide the video source to MediaLive.
+
+
+Create an input for your video asset.
+
+
+Optionally associate the input with an input security group (required only for certain types of inputs).
+
+
+Create a channel in which you identify the input to transcode and specify how MediaLive should ingest and encode that input.
+
+
+Start (run) your channel. MediaLive ingests the input, encodes the input (and any associated audio, captions, and metadata), and then creates the output.
+
+
+Send the output to a downstream system—for example, send the output to an origin service or a packager such as AWS Elemental MediaPackage. 
+
+
+Topics
+ Assessing the Video Source
+ Determining the Channel Class
+ Setting Up the Upstream System
+ Planning the Channel
+ Examples of Channel Designs
+ Setting Up the Downstream System
+ Next Steps
+Next Steps
+Now that you have set up the upstream and downstream systems and have created the inputs that you need, you are ready to create the channel itself. See Creating a Channel from Scratch.

@@ -1,0 +1,5 @@
+
+This guide is for the Snowball Edge. If you are looking for documentation for the Snowball, see the AWS Snowball User Guide.
+
+AWS glossary
+For the latest AWS terminology, see the AWS glossary in the AWS General Reference.

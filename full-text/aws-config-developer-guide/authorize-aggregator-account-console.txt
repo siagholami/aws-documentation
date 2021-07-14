@@ -1,0 +1,62 @@
+Authorizing Aggregator Accounts to Collect AWS Config Configuration and Compliance Data Using the Console
+AWS Config allows you to authorize aggregator accounts to collect AWS Config configuration and compliance data. 
+This flow is not required if you are aggregating source accounts that are part of AWS Organizations.
+On the Authorizations page, you can do the following:
+ Add Authorization to allow an aggregator account and region to collect AWS Config configuration and compliance data.
+ Authorize a pending request from an aggregator account to collect AWS Config configuration and compliance data.
+ Delete an authorization for an aggregator account.
+Topics
+ Add Authorization for Aggregator Accounts and Regions
+ Authorize a Pending Request for an Aggregator Account
+ Delete Authorization for an Exisiting Aggregator Account
+ Learn More
+Add Authorization for Aggregator Accounts and Regions
+You can add authorization to grant permission to aggregator accounts and regions to collect AWS Config configuration and compliance data.
+
+
+Sign in to the AWS Management Console and open the AWS Config console at https://console.aws.amazon.com/config/.
+
+
+Navigate to the Authorizations page and choose Add authorization.
+
+
+For Aggregator account, type the 12-digit account ID of an aggregator account.
+
+
+For Aggregator region, choose the AWS regions where aggregator account is allowed to collect AWS Config configuration and compliance data.
+
+
+Choose Add authorization to confirm your selection.
+
+
+AWS Config displays an aggregator account, region, and authorization status.
+Note
+You can also add authorization to aggregator accounts and regions programatically using AWS CloudFormation sample template. For more information, see AWS::Config::AggregationAuthorization in the AWS CloudFormation user guide.
+Authorize a Pending Request for an Aggregator Account
+If you have a pending authorization request from an exisiting aggregator account you will see the request status on the Authorizations page. You can authorize a pending request from this page.
+
+For the aggregator account you want to authorize, choose Authorize in the Actions column.
+
+
+A confirmation message is displayed to confirm you grant permission to an aggregator account and region for collecting AWS Config data.
+
+Choose Authorize to grant this permission for an aggregator account and region.
+
+The authorization status changes from Requesting for authorization to Authorized.
+Delete Authorization for an Exisiting Aggregator Account
+
+For the aggregator account you want to delete authorization, choose Delete in the Actions column.
+
+A warning message is displayed. When you delete this authorization, AWS Config data is not shared with an aggregator account.
+Note
+After authorization for an aggregator is deleted the data will remain in the aggregator account for up to 24 hours before being deleted.
+
+Choose Delete to confirm your selection.
+
+The aggregator account is deleted.
+Learn More
+
+Concepts
+Setting Up an Aggregator Using the Console
+Viewing Configuration and Compliance Data in the Aggregated View
+Troubleshooting for Multi-Account Multi-Region Data Aggregation

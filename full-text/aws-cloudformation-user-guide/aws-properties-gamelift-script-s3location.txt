@@ -1,0 +1,41 @@
+AWS::GameLift::Script S3Location
+The location in Amazon S3 where build or script files can be stored for access by Amazon GameLift. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Bucket](#cfn-gamelift-script-s3location-bucket)" : String,
+  "[Key](#cfn-gamelift-script-s3location-key)" : String,
+  "[ObjectVersion](#cfn-gamelift-script-s3location-objectversion)" : String,
+  "[RoleArn](#cfn-gamelift-script-s3location-rolearn)" : String
+}
+YAML
+[Bucket](#cfn-gamelift-script-s3location-bucket): String
+  [Key](#cfn-gamelift-script-s3location-key): String
+  [ObjectVersion](#cfn-gamelift-script-s3location-objectversion): String
+  [RoleArn](#cfn-gamelift-script-s3location-rolearn): String
+Properties
+Bucket 
+An S3 bucket identifier. This is the name of the S3 bucket.
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption
+Key 
+The name of the zip file that contains the build files or script files. 
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption
+ObjectVersion 
+The version of the file, if object versioning is turned on for the bucket. Amazon GameLift uses this information when retrieving files from an S3 bucket that you own. Use this parameter to specify a specific version of the file. If not set, the latest version of the file is retrieved. 
+Required: No
+Type: String
+Minimum: 1
+Update requires: No interruption
+RoleArn 
+The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access the S3 bucket.
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption

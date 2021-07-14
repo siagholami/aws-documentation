@@ -1,0 +1,55 @@
+Modules in the AWS Encryption SDK for JavaScript
+The modules in the AWS Encryption SDK for JavaScript make it easy to install the code that you need for your projects.
+Modules for JavaScript Node.js
+client-node
+Includes all of the modules you need to program with the AWS Encryption SDK for JavaScript in Node.js.
+caching-materials-manager-node
+Exports functions that support the data key caching feature in the AWS Encryption SDK for JavaScript in Node.js. 
+decrypt-node
+Exports functions that decrypt and verify encrypted messages representing data and data streams. Included in the client-node module.
+encrypt-node
+Exports functions that encrypt and sign different types of data. Included in the client-node module.
+example-node
+Exports working examples of programming with the AWS Encryption SDK for JavaScript in Node.js. Includes example of different types of keyrings and different types of data.
+hkdf-node
+Exports an HMAC-based Key Derivation Function (HKDF) that the AWS Encryption SDK for JavaScript in Node.js uses in particular algorithm suites. The AWS Encryption SDK for JavaScript in the browser uses the native HKDF function in the WebCrypto API.
+integration-node
+Defines tests that verify that the AWS Encryption SDK for JavaScript in Node.js is compatible with other language implementations of the AWS Encryption SDK.
+kms-keyring-node
+Exports functions that support AWS KMS keyrings in Node.js.
+raw-aes-keyring-node
+Exports functions that support Raw AES keyrings in Node.js.
+raw-rsa-keyring-node
+Exports functions that support Raw RSA keyrings in Node.js.
+Modules for JavaScript Browser
+client-browser
+Includes all of the modules you need to program with the AWS Encryption SDK for JavaScript in the browser.
+caching-materials-manager-browser
+Exports functions that support the data key caching feature for JavaScript in the browser.
+decrypt-browser
+Exports functions that decrypt and verify encrypted messages representing data and data streams.
+encrypt-browser
+Exports functions that encrypt and sign different types of data. 
+example-browser
+Working examples of programming with the AWS Encryption SDK for JavaScript in the browser. Includes examples of different types of keyrings and different types of data.
+integration-browser
+Defines tests that verify that the AWS Encryption SDK for JavaScript in the browser is compatible with other language implementations of the AWS Encryption SDK.
+kms-keyring-browser
+Exports functions that support AWS KMS keyrings in the browser.
+raw-aes-keyring-browser
+Exports functions that support Raw AES keyrings in the browser.
+raw-rsa-keyring-browser
+Exports functions that support Raw RSA keyrings in the browser.
+Modules for all implementations
+cache-material
+Supports the data key caching feature. Provides code for assembling the cryptographic materials that are cached with each data key.
+kms-keyring
+Exports functions that support KMS keyrings.
+material-management
+Implements the cryptographic materials manager (CMM).
+raw-keyring
+Exports functions required for raw AES and RSA keyrings.
+serialize
+Exports functions that the SDK uses to serialize its output.
+web-crypto-backend
+Exports functions that use the WebCrypto API in the AWS Encryption SDK for JavaScript in the browser.

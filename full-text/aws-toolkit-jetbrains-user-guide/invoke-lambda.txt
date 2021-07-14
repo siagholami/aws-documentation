@@ -1,0 +1,17 @@
+Running (invoking) or debugging the local version of an AWS Lambda function by using the AWS Toolkit for JetBrains
+To complete this procedure, you must create the AWS Lambda function that you want to run (invoke) or debug, if you have not created it already.
+Note
+To run (invoke) or debug the local version of a Lambda function, and run (invoke) or debug that function locally with any nondefault or optional properties, you must first set those properties in the function's corresponding AWS SAM template file (for example, in a file named template.yaml within the project). For a list of available properties, see AWS::Serverless::Function in the awslabs/serverless-application-model repository on GitHub.
+
+
+Do one of the following:
+    In the code file that contains the function handler for Java, Python, Node.js, or C#, choose the Lambda icon in the gutter next to the function handler. Choose Run '[Local]' or Debug '[Local]'. 
+
+    With the Project tool window already open and displaying the project that contains the function, open the project's template.yaml file. Choose the Run icon in the gutter next to the function's resource definition, and then choose Run '[Local]' or Debug '[Local]'.
+
+
+
+Complete the Edit configuration dialog box if it's displayed, and then choose Run or Debug. Results are displayed in the Run or Debug tool window.
+    If the Edit configuration dialog box doesn't appear and you want to change the existing configuration, first change its configuration, and then repeat this procedure from the beginning. 
+    If the configuration details are missing, expand Templates, AWS Lambda, and then choose Local. Choose OK, and then repeat this procedure from the beginning. 
+

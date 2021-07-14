@@ -1,0 +1,499 @@
+Amazon API Gateway Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon API Gateway?
+API Gateway use cases
+Amazon API Gateway concepts
+Choosing between HTTP APIs and REST APIs
+API Gateway pricing
+Getting started with Amazon API Gateway
+Prerequisites: Get ready to build an API in API Gateway
+Create a REST API with Lambda integrations in Amazon API Gateway
+Create a REST API with a mock integration in Amazon API Gateway
+Amazon API Gateway videos
+Amazon API Gateway tutorials
+Build an API Gateway REST API with Lambda integration
+Tutorial: Build a Hello World REST API with Lambda proxy integration
+Tutorial: Build an API Gateway REST API with cross-account Lambda proxy integration
+Tutorial: Build an API Gateway REST API with Lambda non-proxy integration
+
+
+Tutorial: Create a REST API by importing an example
+Build an API Gateway REST API with HTTP integration
+Tutorial: Build a REST API with HTTP proxy integration
+Tutorial: Build a REST API with HTTP non-proxy integration
+
+
+Tutorial: Build a REST API with API Gateway private integration
+Tutorial: Build an API Gateway REST API with AWS integration
+Tutorial: Create a Calc REST API with two AWS service integrations and one Lambda non-proxy integration
+OpenAPI definitions of sample API integrated with a Lambda function
+
+
+Tutorial: Create a REST API as an Amazon S3 proxy in API Gateway
+OpenAPI definitions of the sample API as an Amazon S3 proxy
+
+
+Tutorial: Create a REST API as an Amazon Kinesis proxy in API Gateway
+OpenAPI definitions of a sample API as a Kinesis proxy
+
+
+Working with HTTP APIs
+Developing an HTTP API in API Gateway
+Working with routes for HTTP APIs
+Controlling access to HTTP APIs with JWT authorizers
+Configuring integrations for HTTP APIs
+Working with AWS Lambda proxy integrations for HTTP APIs
+Working with HTTP proxy integrations for HTTP APIs
+Working with AWS service integrations for HTTP APIs
+Integration subtype reference
+
+
+Working with private integrations for HTTP APIs
+Working with VPC links for HTTP APIs
+
+
+
+
+Configuring CORS for an HTTP API
+Working with OpenAPI definitions for HTTP APIs
+Exporting an HTTP API from API Gateway
+
+
+
+
+Publishing HTTP APIs for customers to invoke
+Working with stages for HTTP APIs
+Setting up custom domain names for HTTP APIs
+
+
+Protecting your HTTP API
+Monitoring your HTTP API
+Working with metrics for HTTP APIs
+Configuring logging for an HTTP API
+Customizing HTTP API access logs
+
+
+
+
+Troubleshooting issues with HTTP APIs
+Troubleshooting issues with HTTP API Lambda integrations
+Troubleshooting issues with HTTP API JWT authorizers
+
+
+Working with REST APIs
+Developing a REST API in API Gateway
+Creating a REST API in Amazon API Gateway
+Choose an endpoint type to set up for an API Gateway API
+Change a public or private API endpoint type in API Gateway
+
+
+Initialize REST API setup in API Gateway
+Set up an API using the API Gateway console
+Set up an edge-optimized API using AWS CLI commands
+Set up an edge-optimized API using the AWS SDK for Node.js
+Set up an edge-optimized API by importing OpenAPI definitions
+Set up a regional API in API Gateway
+
+
+Set up REST API methods in API Gateway
+Set up a method request in API Gateway
+Set up method responses in API Gateway
+Set up a method using the API Gateway console
+
+
+
+
+Controlling and managing access to a REST API in API Gateway
+Controlling access to an API with API Gateway resource policies
+Access policy language overview for Amazon API Gateway
+How API Gateway resource policies affect authorization workflow
+API Gateway resource policy examples
+Create and attach an API Gateway resource policy to an API
+AWS condition keys that can be used in API Gateway resource policies
+
+
+Control access to an API with IAM permissions
+Control access for managing an API
+Control cross-account access to your API
+Control access for invoking an API
+IAM policy examples for managing API Gateway APIs
+IAM policy examples for API execution permissions
+Create and attach a policy to an IAM user
+
+
+Use VPC endpoint policies for private APIs in API Gateway
+Using tags to control access to a REST API in API Gateway
+Use API Gateway Lambda authorizers
+Configure a Lambda authorizer using the API Gateway console
+Input to an Amazon API Gateway Lambda authorizer
+Output from an Amazon API Gateway Lambda authorizer
+Call an API with API Gateway Lambda authorizers
+Configure a cross-account Lambda authorizer
+
+
+Control access to a REST API using Amazon Cognito User Pools as authorizer
+Obtain permissions to create Amazon Cognito user pool authorizers for a REST API
+Create an Amazon Cognito user pool for a REST API
+Integrate a REST API with an Amazon Cognito user pool
+Call a REST API integrated with an Amazon Cognito user pool
+Configure cross-account Amazon Cognito authorizer for a REST API using the API Gateway console
+
+
+
+
+Setting up REST API integrations
+Set up an integration request in API Gateway
+Basic tasks of an API integration request
+Choose an API Gateway API integration type
+Set up a proxy integration with a proxy resource
+Set up an API integration request using the API Gateway console
+
+
+Set up an integration response in API Gateway
+Set up Lambda integrations in API Gateway
+Set up Lambda proxy integrations in API Gateway
+Set up Lambda custom integrations in API Gateway
+Set up asynchronous invocation of the backend Lambda function
+Handle Lambda errors in API Gateway
+
+
+Set up HTTP integrations in API Gateway
+Set up API Gateway private integrations
+Set up a Network Load Balancer for API Gateway private integrations
+Grant permissions to create a VPC link
+Set up an API Gateway API with private integrations using the API Gateway console
+Set up an API Gateway API with private integrations using the AWS CLI
+Set up API with private integrations using OpenAPI
+API Gateway accounts used for private integrations
+
+
+Set up mock integrations in API Gateway
+Enable mock integration using the API Gateway console
+
+
+
+
+Enable request validation in API Gateway
+Set up basic request validation in API Gateway
+Test basic request validation in API Gateway
+OpenAPI definitions of a sample API with basic request validation
+
+
+Setting up data transformations for REST APIs
+Working with models and mapping templates
+Create a model in API Gateway
+View a list of models in API Gateway
+Delete a model in API Gateway
+Use a mapping template to override an API's request and response parameters and status codes
+
+
+Set up request and response data mappings using the API Gateway console
+Models and mapping template examples
+Photos example (API Gateway models and mapping templates)
+News article example (API Gateway models and mapping templates)
+Sales invoice example (API Gateway models and mapping templates)
+Employee record example (API Gateway models and mapping templates)
+
+
+Amazon API Gateway API request and response data mapping reference
+Integration passthrough behaviors
+
+
+API Gateway mapping template and access logging variable reference
+
+
+Gateway responses in API Gateway
+Set up a gateway response using the API Gateway console
+Set up a gateway response using the API Gateway REST API
+Set up gateway response customization in OpenAPI
+Gateway response types
+
+
+Enabling CORS for a REST API resource
+Enable CORS on a resource using the API Gateway console
+Enable CORS on a resource using the API Gateway import API
+Testing CORS
+
+
+Working with binary media types for REST APIs
+Content type conversions in API Gateway
+Enabling binary support using the API Gateway console
+Enabling binary support using the API Gateway REST API
+Import and export content encodings
+Examples of binary support
+Return binary media from a Lambda proxy integration
+Access binary files in Amazon S3 through an API Gateway API
+Access binary files in Lambda using an API Gateway API
+
+
+
+
+Invoking a REST API in Amazon API Gateway
+Use the API Gateway console to test a REST API method
+Use Postman to call a REST API
+Call REST API through generated SDKs
+Use a Java SDK generated by API Gateway for a REST API
+Use an Android SDK generated by API Gateway for a REST API
+Use a JavaScript SDK generated by API Gateway for a REST API
+Use a Ruby SDK generated by API Gateway for a REST API
+Use iOS SDK generated by API Gateway for a REST API in Objective-C or Swift
+Use generated iOS SDK (Objective-C) to call API
+Use generated iOS SDK (Swift) to call API
+
+
+Call a REST API through AWS Amplify
+How to invoke a private API
+
+
+Configuring a REST API using OpenAPI
+Import an edge-optimized API into API Gateway
+Import a regional API into API Gateway
+Import an OpenAPI file to update an existing API definition
+Set the OpenAPI basePath property
+AWS variables for OpenAPI import
+Errors and warnings during import
+Export a REST API from API Gateway
+
+
+
+
+Publishing REST APIs for customers to invoke
+Deploying a REST API in Amazon API Gateway
+Deploy a REST API in API Gateway
+Deploying a REST API from the API Gateway console
+
+
+Setting up a stage for a REST API
+Setting up a stage using the API Gateway console
+Setting up tags for an API stage in API Gateway
+Setting up stage variables for a REST API deployment
+Setting stage variables using the Amazon API Gateway console
+Using Amazon API Gateway stage variables
+Amazon API Gateway stage variables reference
+
+
+Set up an API Gateway canary release deployment
+Create a canary release deployment
+Update a canary release
+Promote a canary release
+Disable a canary release
+
+
+Updates to a REST API that require redeployment
+
+
+Setting up custom domain names for REST APIs
+Getting certificates ready in AWS Certificate Manager
+Choosing a minimum TLS version for a custom domain in API Gateway
+Creating an edge-optimized custom domain name
+Setting up a regional custom domain name in API Gateway
+Migrating a custom domain name to a different API endpoint
+
+
+
+
+Optimizing performance of REST APIs
+Enabling API caching to enhance responsiveness
+Enabling payload compression for an API
+Enable payload compression for an API
+Call an API method with a compressed payload
+Receive an API response with a compressed payload
+
+
+
+
+Distributing your REST API to clients
+Creating and using usage plans with API keys
+Steps to configure a usage plan
+Choose an API key source
+Set up API keys using the API Gateway console
+Create, configure, and test usage plans with the API Gateway console
+Set up API keys using the API Gateway REST API
+Create, configure, and test usage plans using the API Gateway CLI and REST API
+API Gateway API key file format
+
+
+Documenting REST APIs
+Representation of API documentation in API Gateway
+Document an API using the API Gateway console
+Publish API documentation using the API Gateway console
+Document an API using the API Gateway REST API
+Publish API documentation using the API Gateway REST API
+Import API documentation
+Control access to API documentation
+
+
+Generating an SDK for a REST API in API Gateway
+Generate SDKs for an API using the API Gateway console
+Generate the Java SDK of an API
+Generate the Android SDK of an API
+Generate the iOS SDK of an API
+Generate the JavaScript SDK of an API
+Generate the Ruby SDK of an API
+
+
+Generate SDKs for an API using AWS CLI commands
+Simple calculator Lambda function
+Simple calculator API in API Gateway
+Simple calculator API OpenAPI definition
+
+
+Use the serverless developer portal to catalog your API Gateway APIs
+Sell your API Gateway APIs through AWS Marketplace
+
+
+Protecting your REST API
+Generate and configure an SSL certificate for backend authentication
+API Gateway-supported certificate authorities for HTTP and HTTP proxy integrations
+
+
+Using AWS WAF to protect your APIs
+Throttle API requests for better throughput
+Creating a private API in Amazon API Gateway
+
+
+Monitoring REST APIs
+Monitoring REST API execution with Amazon CloudWatch metrics
+Amazon API Gateway dimensions and metrics
+View CloudWatch metrics with the API dashboard in API Gateway
+View API Gateway metrics in the CloudWatch console
+View API Gateway log events in the CloudWatch console
+Monitoring tools in AWS
+
+
+Setting up CloudWatch logging for a REST API in API Gateway
+Logging API calls to Kinesis Data Firehose
+Tracing user requests to REST APIs using X-Ray
+Setting up AWS X-Ray with API Gateway REST APIs
+Using AWS X-Ray service maps and trace views with API Gateway
+Configuring AWS X-Ray sampling rules for API Gateway APIs
+Understanding AWS X-Ray traces for Amazon API Gateway APIs
+
+
+
+
+Working with WebSocket APIs
+About WebSocket APIs in API Gateway
+Managing connected users and client apps: $connect and $disconnect routes
+Invoking your backend integration: $default Route and custom routes
+Sending data from backend services to connected clients
+WebSocket selection expressions in API Gateway
+
+
+Developing a WebSocket API in API Gateway
+Create a WebSocket API in API Gateway
+Working with routes for WebSocket APIs
+Set up route responses for a WebSocket API in API Gateway
+Setting up a $connect route that requires a WebSocket subprotocol
+
+
+Controlling and managing access to a WebSocket API in API Gateway
+Using IAM authorization
+Creating a Lambda REQUEST authorizer function
+
+
+Setting up WebSocket API integrations
+Setting up a WebSocket API integration request in API Gateway
+Setting up a WebSocket API integration responses in API Gateway
+
+
+Request validation
+Setting up data transformations for WebSocket APIs
+Setting up data mapping for WebSocket APIs
+API Gateway WebSocket API mapping template reference
+
+
+Working with binary media types for WebSocket APIs
+Invoking a WebSocket API
+Use wscat to connect to a WebSocket API and send messages to it
+Use @connections commands in your backend service
+
+
+
+
+Publishing WebSocket APIs for customers to invoke
+Deploy a WebSocket API in API Gateway
+Setting up custom domain names for WebSocket APIs
+
+
+Protecting your WebSocket API
+Monitoring WebSocket APIs
+Monitoring WebSocket API execution with CloudWatch metrics
+Configuring logging for a WebSocket API
+
+
+API Gateway Amazon Resource Name (ARN) reference
+Working with API Gateway extensions to OpenAPI
+x-amazon-apigateway-any-method object
+x-amazon-apigateway-cors object
+x-amazon-apigateway-api-key-source property
+x-amazon-apigateway-auth object
+x-amazon-apigateway-authorizer object
+x-amazon-apigateway-authtype property
+x-amazon-apigateway-binary-media-types property
+x-amazon-apigateway-documentation object
+x-amazon-apigateway-endpoint-configuration object
+x-amazon-apigateway-gateway-responses object
+x-amazon-apigateway-gateway-responses.gatewayResponse object
+x-amazon-apigateway-gateway-responses.responseParameters object
+x-amazon-apigateway-gateway-responses.responseTemplates object
+x-amazon-apigateway-importexport-version
+x-amazon-apigateway-integration object
+x-amazon-apigateway-integrations object
+x-amazon-apigateway-integration.requestTemplates object
+x-amazon-apigateway-integration.requestParameters object
+x-amazon-apigateway-integration.responses object
+x-amazon-apigateway-integration.response object
+x-amazon-apigateway-integration.responseTemplates object
+x-amazon-apigateway-integration.responseParameters object
+x-amazon-apigateway-integration.tlsConfig object
+x-amazon-apigateway-minimum-compression-size
+x-amazon-apigateway-policy
+x-amazon-apigateway-request-validator property
+x-amazon-apigateway-request-validators object
+x-amazon-apigateway-request-validators.requestValidator object
+x-amazon-apigateway-tag-value property
+Security in Amazon API Gateway
+Data protection in Amazon API Gateway
+Data encryption in Amazon API Gateway
+Internetwork traffic privacy
+
+
+Identity and access management for Amazon API Gateway
+How Amazon API Gateway works with IAM
+Amazon API Gateway identity-based policy examples
+Amazon API Gateway resource-based policy examples
+Troubleshooting Amazon API Gateway identity and access
+Using service-linked roles for API Gateway
+
+
+Logging and monitoring in Amazon API Gateway
+Logging calls to Amazon API Gateway APIs with AWS CloudTrail
+Monitoring API Gateway API configuration with AWS Config
+
+
+Compliance validation for Amazon API Gateway
+Resilience in Amazon API Gateway
+Infrastructure security in Amazon API Gateway
+Vulnerability analysis in Amazon API Gateway
+Security best practices in Amazon API Gateway
+Tagging your API Gateway resources
+API Gateway resources that can be tagged
+Using tags to control access to API Gateway resources
+API references
+Amazon API Gateway quotas and important notes
+Amazon API Gateway important notes
+Document history
+AWS glossary

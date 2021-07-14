@@ -1,0 +1,10 @@
+DROP LIBRARY
+Removes a custom Python library from the database. Only the library owner or a superuser can drop a library. 
+DROP LIBRARY can't be run inside a transaction block (BEGIN … END). For more information about transactions, see Serializable isolation. 
+This command isn't reversible. The DROP LIBRARY command commits immediately. If a UDF that depends on the library is running concurrently, the UDF might fail, even if the UDF is running within a transaction.
+For more information, see CREATE LIBRARY. 
+Syntax
+DROP LIBRARY library_name
+Parameters
+library_name 
+The name of the library.

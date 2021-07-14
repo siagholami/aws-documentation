@@ -1,0 +1,7 @@
+Step 1: Sign In To the IAM Console
+Sign in to the IAM console to manage policies and users.
+To sign in
+
+Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+
+Use your Administrator user credentials to sign in.

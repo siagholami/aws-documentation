@@ -1,0 +1,20 @@
+Supported Compression and Archive File Formats
+Currently, Macie supports the following compression and archive file formats:
+ BZIP
+ GZIP
+ LZO
+ RAR
+ SNAPPY
+ AR
+ CPIO
+ Unix dump
+ TAR
+ zip
+ XZ
+ Pack200
+ BZIP2
+ 7z
+ ARJ
+ LZMA
+ DEFLATE
+ Brotli

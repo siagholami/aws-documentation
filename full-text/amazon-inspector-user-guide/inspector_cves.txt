@@ -1,0 +1,20 @@
+Common vulnerabilities and exposures
+The rules in this package help verify whether the EC2 instances in your assessment targets are exposed to common vulnerabilities and exposures (CVEs). Attacks can exploit unpatched vulnerabilities to compromise the confidentiality, integrity, or availability of your service or data. The CVE system provides a reference method for publicly known information security vulnerabilities and exposures. For more information, see  https://cve.mitre.org/. 
+If a particular CVE appears in a finding that is produced by an Amazon Inspector assessment, you can search https://cve.mitre.org/ for the ID of the CVE (for example, CVE-2009-0021). The search results can provide detailed information about this CVE, its severity, and how to mitigate it.
+The rules included in this package help you assess whether your EC2 instances are exposed to the CVEs in the following regional lists:
+ US East (N. Virginia)
+ US East (Ohio)
+ US West (N. California)
+ US West (Oregon)
+ EU (Ireland)
+ EU (Frankfurt)
+ EU (London)
+ EU (Stockholm)
+ Asia Pacific (Tokyo)
+ Asia Pacific (Seoul)
+ Asia Pacific (Mumbai)
+ Asia Pacific (Sydney)
+ AWS GovCloud West (US)
+ AWS GovCloud East (US)
+The CVE rules package is updated regularly; this list includes the CVEs that are included in assessments runs that occur at the same time that this list is retrieved.
+For more information, see Amazon Inspector rules packages for supported operating systems.

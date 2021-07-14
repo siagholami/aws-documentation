@@ -1,0 +1,30 @@
+SVV_VACUUM_PROGRESS
+This view returns an estimate of how much time it will take to complete a vacuum operation that is currently in progress.
+SVV_VACUUM_PROGRESS is visible only to superusers. For more information, see Visibility of data in system tables and views.
+For information about SVV_VACUUM_SUMMARY, see SVV_VACUUM_SUMMARY.
+For information about SVL_VACUUM_PERCENTAGE, see SVL_VACUUM_PERCENTAGE.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+The following queries, run a few minutes apart, show that a large table named SALESNEW is being vacuumed. 
+```
+select * from svv_vacuum_progress;
+table_name    |            status             | time_remaining_estimate
+----------------------------------------------------------------------
+salesnew      |  Vacuum: initialize salesnew  |
+(1 row)
+...
+select * from svv_vacuum_progress;
+table_name   |         status         | time_remaining_estimate
+--------------------------------------------------------------
+salesnew     |  Vacuum salesnew sort  | 33m 21s
+(1 row)
+```
+The following query shows that no vacuum operation is currently in progress. The last table to be vacuumed was the SALES table. 
+```
+select * from svv_vacuum_progress;
+table_name   |  status  | time_remaining_estimate
+------------------------------------------------
+  sales      | Complete |
+(1 row)
+```

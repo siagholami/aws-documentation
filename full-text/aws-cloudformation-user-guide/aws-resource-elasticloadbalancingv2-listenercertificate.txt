@@ -1,0 +1,33 @@
+AWS::ElasticLoadBalancingV2::ListenerCertificate
+Specifies an SSL server certificate to add to the certificate list for an HTTPS or TLS listener.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ElasticLoadBalancingV2::ListenerCertificate",
+  "Properties" : {
+      "[Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates)" : [ Certificate, ... ],
+      "[ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn)" : String
+    }
+}
+YAML
+Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
+Properties: 
+  [Certificates](#cfn-elasticloadbalancingv2-listenercertificate-certificates): 
+    - Certificate
+  [ListenerArn](#cfn-elasticloadbalancingv2-listenercertificate-listenerarn): String
+Properties
+Certificates 
+The certificate. You can specify one certificate per resource.
+Required: Yes
+Type: List of Certificate
+Update requires: Replacement
+ListenerArn 
+The Amazon Resource Name (ARN) of the listener.
+Required: Yes
+Type: String
+Update requires: Replacement
+See also
+
+AddListenerCertificates in the Elastic Load Balancing API Reference (version 2015-12-01) 
+SSL Certificates in the User Guide for Application Load Balancers 

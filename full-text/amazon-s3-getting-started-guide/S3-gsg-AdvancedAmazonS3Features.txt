@@ -1,0 +1,31 @@
+Advanced Amazon S3 features
+The examples in this guide show how to accomplish the basic tasks of creating a bucket, uploading and downloading data to and from it, and moving and deleting the data. The following table summarizes some of the most common advanced functionality offered by Amazon S3. Note that some advanced functionality is not available in the AWS Management Console and requires that you use the Amazon S3 API. All advanced functionality and how to use it is described in the Amazon Simple Storage Service Developer Guide.
+
+
+
+Link
+Functionality
+
+
+
+
+Requester Pays Buckets
+Learn how to configure a bucket so that a customer pays for the downloads they make.
+
+
+Using BitTorrent With Amazon S3
+Use BitTorrent, which is an open, peer-to-peer protocol for distributing files.
+
+
+Versioning
+Learn about Amazon S3 versioning capabilities.
+
+
+Hosting Static Websites
+Learn how to host a static website on Amazon S3.
+
+
+Object Lifecycle Management
+Learn how to manage the lifecycle of objects in your bucket. Lifecycle management includes expiring objects and archiving objects (transitioning objects to the S3 S3 Glacier storage class).
+
+

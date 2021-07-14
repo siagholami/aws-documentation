@@ -1,0 +1,24 @@
+Template snippets
+This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts. You can also use the snippets as a starting point for sections of your custom templates. 
+Topics
+ General template snippets
+ Auto scaling template snippets
+ AWS CloudFormation template snippets
+ Amazon CloudFront template snippets
+ Amazon CloudWatch template snippets
+ Amazon CloudWatch Logs template snippets
+ Amazon DynamoDB template snippets
+ Amazon EC2 template snippets
+ Amazon Elastic Container Service template snippets
+ Amazon Elastic File System Sample Template
+ Elastic Beanstalk template snippets
+ Elastic Load Balancing template snippets
+ AWS Identity and Access Management template snippets
+ AWS Lambda template
+ AWS OpsWorks template snippets
+ Amazon Redshift template snippets
+ Amazon RDS template snippets
+ Route 53 template snippets
+ Amazon S3 template snippets
+ Amazon SNS template snippets
+ Amazon SQS template snippets

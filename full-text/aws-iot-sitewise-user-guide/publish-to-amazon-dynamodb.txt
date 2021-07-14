@@ -1,0 +1,322 @@
+Publishing property value updates to Amazon DynamoDB
+You can store your data in Amazon DynamoDB to easily access historical asset data without needing to repeatedly query the AWS IoT SiteWise API, which returns paginated value histories. After you complete this tutorial, you can easily create custom software that consumes your asset data, such as a live map of wind speed and direction over an entire wind farm. If you're looking to monitor and visualize your data without implementing a custom software solution, see Monitoring data with AWS IoT SiteWise Monitor.
+In this tutorial, you build on the AWS IoT SiteWise demo that provides a sample set of data for a wind farm. You configure property value updates from the wind farm demo to send data, through AWS IoT Core rules, to a DynamoDB table that you create. When you enable property value updates, AWS IoT SiteWise sends your data to AWS IoT Core in MQTT messages. Then, you can define AWS IoT Core rules that perform actions, such as the DynamoDB action, depending on the contents of those messages. For more information, see Interacting with other AWS services.
+Topics
+ Prerequisites
+ Configuring AWS IoT SiteWise to publish property value updates
+ Creating a rule in AWS IoT Core
+ Creating a DynamoDB table
+ Configuring the DynamoDB rule action
+ Exploring data in DynamoDB
+ Cleaning up resources after the tutorial
+ Troubleshooting a rule
+Prerequisites
+To complete this tutorial, you need the following:
+ An AWS account. If you don't have one, see Setting up an AWS account.
+ A development computer running Windows, macOS, Linux, or Unix to access the AWS Management Console. For more information, see Getting Started with the AWS Management Console.
+ An IAM user with administrator permissions.
+ A running AWS IoT SiteWise wind farm demo. When you set up the demo, it defines models and assets in AWS IoT SiteWise and streams data to them to represent a wind farm. For more information, see Using the AWS IoT SiteWise demo.
+Configuring AWS IoT SiteWise to publish property value updates
+In this procedure, you enable property value notifications on your demo turbine assets' Wind Speed properties. After you enable property value notifications, AWS IoT SiteWise publishes each value update in an MQTT message to AWS IoT Core.
+To enable property value update notifications on asset properties
+
+
+Sign in to the AWS IoT SiteWise console.
+
+
+Review the AWS Regions where AWS IoT SiteWise is supported and switch AWS Regions, if necessary. Switch to a Region where you're running the AWS IoT SiteWise demo.
+
+
+In the left navigation pane, choose Assets.
+
+
+
+Choose the arrow next to Demo Wind Farm Asset to expand the wind farm asset's hierarchy.
+
+
+
+Choose a demo turbine and choose Edit.
+
+
+
+Update the Wind Speed property's Notification status to ENABLED.
+
+
+
+Choose Save asset at the bottom of the page.
+
+
+Repeat steps 5 through 7 for each demo turbine asset.
+
+
+Choose a demo turbine (for example, Demo Turbine Asset 1).
+
+
+Choose Measurements.
+
+
+Choose the copy icon next to the Wind Speed property to copy the notification topic to your clipboard. Save the notification topic to use later in this tutorial. You only need to record the notification topic from one turbine.
+
+
+
+The notification topic should look like the following example.
+$aws/sitewise/asset-models/a1b2c3d4-5678-90ab-cdef-11111EXAMPLE/assets/a1b2c3d4-5678-90ab-cdef-22222EXAMPLE/properties/a1b2c3d4-5678-90ab-cdef-33333EXAMPLE
+Creating a rule in AWS IoT Core
+In this procedure, you create a rule in AWS IoT Core that parses the property value notification messages and inserts data into a DynamoDB table. AWS IoT Core rules parse MQTT messages and perform actions based on the contents and topic of each message. You can create a rule with a DynamoDB action to insert data to a DynamoDB table that you create as part of this tutorial.
+To create a rule with a DynamoDB action
+
+
+Navigate to the AWS IoT console. If a Get started button appears, choose it.
+
+
+In the left navigation pane, choose Act and then choose Rules.
+
+
+
+If a You don't have any rules yet dialog box appears, choose Create a rule. Otherwise, choose Create.
+
+
+Enter a name and description for the rule.
+
+
+
+Find the notification topic that you saved earlier in this tutorial.
+
+
+$aws/sitewise/asset-models/a1b2c3d4-5678-90ab-cdef-11111EXAMPLE/assets/a1b2c3d4-5678-90ab-cdef-22222EXAMPLE/properties/a1b2c3d4-5678-90ab-cdef-33333EXAMPLE
+Replace the asset ID (the ID after assets/) in the topic with a  to select the wind speed property for all demo wind turbine assets. The  topic filter accepts all nodes from a single level in a topic. Your topic should look the following example.
+$aws/sitewise/asset-models/a1b2c3d4-5678-90ab-cdef-11111EXAMPLE/assets//properties/a1b2c3d4-5678-90ab-cdef-33333EXAMPLE
+
+Enter the following rule query statement. Replace the topic in the FROM section with your notification topic.
+
+SELECT
+     payload.assetId AS asset,
+     (SELECT VALUE (value.doubleValue) FROM payload.values) AS windspeed,
+     timestamp() AS timestamp
+   FROM
+     '$aws/sitewise/asset-models/a1b2c3d4-5678-90ab-cdef-11111EXAMPLE/assets//properties/a1b2c3d4-5678-90ab-cdef-33333EXAMPLE' 
+   WHERE
+     type = 'PropertyValueUpdate'
+
+
+Under Set one or more actions, choose Add action.
+
+
+
+On the Select an action page, choose Split message into multiple columns of a DynamoDB table (DynamoDBv2).
+
+
+
+Choose Configure action at the bottom of the page.
+
+
+On the Configure action page, choose Create a new resource.
+
+
+The DynamoDB console opens in a new tab. Keep the rule action tab open while you complete the following procedures.
+Creating a DynamoDB table
+In this procedure, you create a DynamoDB table to receive wind speed data from the rule action.
+To create a DynamoDB table
+
+
+In the DynamoDB console dashboard, choose Create table.
+
+
+Enter a name for your table.
+
+
+
+For Primary key, do the following:
+
+
+Enter timestamp as the partition key.
+
+
+Choose the Number type.
+
+
+Select the Add sort key check box.
+
+
+Enter asset as the sort key, and leave the default sort key type of String.
+
+
+Choose Create.
+
+
+When the Table is being created notice disappears, your table is ready.
+
+Return to the tab with the Configure action page. Keep the DynamoDB tab open while you complete the following procedures.
+
+Configuring the DynamoDB rule action
+In this procedure, you configure the DynamoDB rule action to insert data from property value updates to your new DynamoDB table.
+To configure the DynamoDB rule action
+
+
+On the Configure action page, refresh the Table name list, and choose your new DynamoDB table.
+
+
+
+Choose Create role to create an IAM role that grants AWS IoT Core access to perform the rule action.
+
+
+Enter a role name and choose Create role.
+
+
+
+Choose Add action.
+
+
+Choose Create rule at the bottom of the page to finish creating the rule.
+
+
+Your demo asset data should start appearing in your DynamoDB table.
+Exploring data in DynamoDB
+In this procedure, you explore the demo assets' wind speed data in your new DynamoDB table.
+To explore asset data in DynamoDB
+
+
+Return to the tab with the DynamoDB table open.
+
+
+In the table you created earlier, choose the Items tab to view the data in the table. Refresh the page if you don't see rows in the table. If rows don't appear after a few minutes, see Troubleshooting a rule.
+
+
+
+In a row in the table, choose the edit icon to expand the data.
+
+
+
+Choose the arrow next to the windspeed structure to expand the list of wind speed data points. Each list reflects a batch of wind speed data points sent to AWS IoT SiteWise by the wind farm demo. You might want a different data format if you set up a rule action for your own use. For more information, see Querying asset property notification messages.
+
+
+
+Now that you completed the tutorial, you can disable or delete the rule and delete your DynamoDB table to avoid incurring additional charges. Follow the next procedure to clean up your resources.
+Cleaning up resources after the tutorial
+After you complete the tutorial, clean up your resources to avoid incurring additional charges. Your demo wind farm assets are deleted at the end of the duration that you chose when you created the demo, or you can delete the demo manually. For more information, see Deleting the AWS IoT SiteWise demo.
+Use the following procedures to disable property value update notifications (if you didn't delete the demo), disable or delete your AWS IoT rule, and delete your DynamoDB table.
+To disable property value update notifications on asset properties
+
+
+Navigate to the AWS IoT SiteWise console.
+
+
+In the left navigation pane, choose Assets.
+
+
+
+Choose the arrow next to Demo Wind Farm Asset to expand the wind farm asset's hierarchy.
+
+
+
+Choose a demo turbine and choose Edit.
+
+
+
+Update the Wind Speed property's Notification status to DISABLED.
+
+
+
+Choose Save asset at the bottom of the page.
+
+
+Repeat steps 4 through 6 for each demo turbine asset.
+
+
+To disable or delete a rule in AWS IoT Core
+
+
+Navigate to the AWS IoT console.
+
+
+In the left navigation pane, choose Act and then choose Rules.
+
+
+Choose the menu on your rule and choose Disable or Delete.
+
+
+
+To delete a DynamoDB table
+
+
+Navigate to the DynamoDB console.
+
+
+In the left navigation pane, choose Tables.
+
+
+Choose the table you created earlier, WindSpeedData.
+
+
+Choose Delete table.
+
+
+
+In the Delete table dialog, choose Delete.
+
+
+
+Troubleshooting a rule
+Follow the steps in this procedure to troubleshoot your rule if the demo asset data isn't appearing in the DynamoDB table as expected. In this procedure, you configure the republish rule action as an error action to view error messages in the MQTT test client. You can also configure logging to CloudWatch Logs to troubleshoot. For more information, see Monitoring with CloudWatch Logs in the AWS IoT Developer Guide.
+To add a republish error action to a rule
+
+
+Navigate to the AWS IoT console.
+
+
+In the left navigation pane, choose Act and then choose Rules.
+
+
+Choose the rule that you created earlier.
+
+
+
+Under Error action, choose Add action.
+
+
+Choose Republish a message to an AWS IoT topic.
+
+
+
+Choose Configure action at the bottom of the page.
+
+
+In Topic, enter windspeed/error. AWS IoT Core will republish error messages to this topic.
+
+
+
+Choose Select to grant AWS IoT Core access to perform the error action using the role that you created earlier.
+
+
+Choose Select next to your role.
+
+
+
+Choose Update Role to add the additional permissions to the role.
+
+
+
+Choose Add action to finish adding the error action.
+
+
+Choose the back arrow in the upper left of the console to return to the AWS IoT Core console home.
+
+
+After you set up the republish error action, you can view the error messages in the MQTT test client in AWS IoT Core.
+In the following procedure, you subscribe to the error topic in the MQTT test client.
+To subscribe to the error action topic
+
+
+In the AWS IoT Core console's left navigation page, choose Test.
+
+
+In the Subscription topic field, enter windspeed/error and choose Subscribe to topic.
+
+
+
+Watch for error messages to appear and explore the failures array in an error message to diagnose the following common issues:
+    Typos in the rule query statement
+    Insufficient role permissions
+
+
+If errors don't appear, check that your rule is enabled and that you subscribed to the same topic that you configured in the republish error action. If errors still don't appear, check that your demo wind farm assets still exist and that you enabled notifications on the wind speed properties. If your demo assets expired and disappeared from AWS IoT SiteWise, you can create a new demo and update the rule query statement to reflect the updated asset model and property IDs.

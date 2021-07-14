@@ -1,0 +1,16 @@
+AWS::LakeFormation::DataLakeSettings DataLakePrincipal
+The AWS Lake Formation principal.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DataLakePrincipalIdentifier](#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)" : String
+}
+YAML
+[DataLakePrincipalIdentifier](#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier): String
+Properties
+DataLakePrincipalIdentifier 
+An identifier for the AWS Lake Formation principal.
+Required: No
+Type: String
+Update requires: No interruption

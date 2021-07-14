@@ -1,0 +1,84 @@
+Amazon FSx for Lustre Lustre User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon FSx for Lustre?
+Setting Up
+Getting Started with Amazon FSx for Lustre
+Prerequisites
+Step 1: Create Your Amazon FSx for Lustre File System
+Step 2: Install and Configure the Lustre Client on Your Instance Before Mounting Your File System
+Step 3: Run Your Analysis
+(Optional) Step 4: Check Amazon FSx File System Status
+Step 5: Clean Up Resources
+Using Available Deployment Options for Amazon FSx for Lustre File Systems
+Using data repositories with Amazon FSx for Lustre
+Overview of data repositories
+Linking your file system to an S3 bucket
+Importing files from your S3 bucket
+Automatically import updates from your S3 bucket
+Preloading Files into Your File System
+
+
+Data repository tasks
+Understanding a Task's Status and Details
+Using Data Repository Tasks
+Working with Task Completion Reports
+Troubleshooting Failed Data Repository Tasks
+
+
+Exporting changes to the data repository
+Using data repository tasks to export data and metadata changes
+Exporting files using HSM commands
+
+
+Releasing data from your file system
+Using Amazon FSx with Your On-Premises Data Repository
+Amazon FSx for Lustre Performance
+Accessing File Systems
+Installing the Lustre Client
+Mounting from an Amazon EC2 Instance
+Mounting Amazon FSx File Systems from On-Premises or a Peered Amazon VPC
+Mounting Your Amazon FSx File System Automatically
+Unmounting File Systems
+Working with Amazon EC2 Spot Instances
+Working with Backups
+Setting Up a Custom Backup Schedule
+Monitoring Amazon FSx for Lustre
+How to Use Amazon FSx for Lustre Metrics
+Accessing CloudWatch Metrics
+Creating CloudWatch Alarms to Monitor Amazon FSx for Lustre
+Security in Amazon FSx for Lustre
+Data Protection in Amazon FSx for Lustre
+Data Encryption in Amazon FSx for Lustre
+Encrypting Data at Rest
+Encrypting Data in Transit
+How Amazon FSx for Lustre Uses AWS KMS
+
+
+Internetwork Traffic Privacy
+
+
+File System Access Control with Amazon VPC
+Amazon VPC Network ACLs
+Administration Access Control with IAM for Amazon FSx for Lustre Resources
+Using Service-Linked Roles for Amazon FSx for Lustre
+Amazon FSx for Lustre API Permissions: Actions, Resources, and Conditions Reference
+
+
+Compliance Validation for Amazon FSx for Lustre
+Logging Amazon FSx for Lustre API Calls with AWS CloudTrail
+Amazon FSx for Lustre Maintenance Windows
+Quotas
+Troubleshooting
+Document History

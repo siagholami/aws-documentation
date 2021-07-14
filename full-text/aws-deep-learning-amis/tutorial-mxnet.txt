@@ -1,0 +1,75 @@
+Apache MXNet
+Activating MXNet
+This tutorial shows how to activate MXNet on an instance running the Deep Learning AMI with Conda (DLAMI on Conda) and run a MXNet program.
+When a stable Conda package of a framework is released, it's tested and pre-installed on the DLAMI. If you want to run the latest, untested nightly build, you can Installing MXNet's Nightly Build (experimental) manually. 
+To run MXNet on the DLAMI with Conda
+
+
+To activate the framework, open an Amazon Elastic Compute Cloud (Amazon EC2) instance of the DLAMI with Conda.
+    For MXNet and Keras 2 on Python 3 with CUDA 9.0 and MKL-DNN, run this command:
+$ source activate mxnet_p36
+    For MXNet and Keras 2 on Python 2 with CUDA 9.0 and MKL-DNN, run this command:
+$ source activate mxnet_p27
+
+
+Start the iPython terminal.
+
+
+(mxnet_p36)$ ipython
+
+Run a quick MXNet program. Create a 5x5 matrix, an instance of the NDArray, with elements initialized to 0. Print the array.
+
+import mxnet as mx
+   mx.ndarray.zeros((5,5)).asnumpy()
+
+Verify the result.
+
+array([[ 0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.]], dtype=float32)
+Installing MXNet's Nightly Build (experimental)
+You can install the latest MXNet build into either or both of the MXNet Conda environments on your Deep Learning AMI with Conda.
+To install MXNet from a nightly build
+
+
+
+For the Python 3 MXNet environment, run this command:
+
+$ source activate mxnet_p36
+    For the Python 2 MXNet environment, run this command:
+$ source activate mxnet_p27
+
+
+Remove the currently installed MXNet.
+Note
+The remaining steps assume you are using the mxnet_p36 environment.
+
+
+(mxnet_p36)$ pip uninstall mxnet-cu90mkl
+
+Install the latest nightly build of MXNet.
+
+(mxnet_p36)$ pip install --pre mxnet-cu90mkl
+
+To verify you have successfully installed latest nightly build, start the IPython terminal and check the version of MXNet.
+
+(mxnet_p36)$ ipython
+import mxnet
+   print (mxnet.__version__)
+The output should print the latest stable version of MXNet.
+More Tutorials
+You can find more tutorials in the Deep Learning AMI with Conda tutorials folder, which is in the home directory of the DLAMI.
+
+
+Use Apache MXNet for Inference with a ResNet 50 Model
+
+
+Use Apache MXNet for Inference with an ONNX Model
+
+
+Model Server for Apache MXNet (MMS)
+
+
+For more tutorials and examples, see the framework's official Python documentation, the Python API for MXNet, or the Apache MXNet website.

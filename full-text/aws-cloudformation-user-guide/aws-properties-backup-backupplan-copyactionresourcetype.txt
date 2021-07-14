@@ -1,0 +1,24 @@
+AWS::Backup::BackupPlan CopyActionResourceType
+The CopyActionResourceType property type specifies Not currently supported by AWS CloudFormation. for an AWS::Backup::BackupPlan.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DestinationBackupVaultArn](#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)" : String,
+  "[Lifecycle](#cfn-backup-backupplan-copyactionresourcetype-lifecycle)" : LifecycleResourceType
+}
+YAML
+[DestinationBackupVaultArn](#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn): String
+  [Lifecycle](#cfn-backup-backupplan-copyactionresourcetype-lifecycle): 
+    LifecycleResourceType
+Properties
+DestinationBackupVaultArn 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: String
+Update requires: No interruption
+Lifecycle 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: LifecycleResourceType
+Update requires: No interruption

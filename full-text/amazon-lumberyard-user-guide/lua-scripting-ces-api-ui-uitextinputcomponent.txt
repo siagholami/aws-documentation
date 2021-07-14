@@ -1,0 +1,114 @@
+UITextInputComponent
+You can use a text input component to provide player text input capability.
+UiTextInputBus
+Services messages for the UiTextInputComponent.
+GetChangeAction
+Returns the action triggered when the text is changed.
+Syntax
+const AZStd::string& GetChangeAction()
+GetCursorBlinkInterval
+Returns the cursor blink interval of the text input.
+Syntax
+float GetCursorBlinkInterval()
+GetEndEditAction
+Returns the action triggered when the editing of text is finished.
+Syntax
+const AZStd::string& GetEndEditAction()
+GetEnterAction
+Returns the action triggered when enter is pressed.
+Syntax
+const AZStd::string& GetEnterAction()
+GetIsPasswordField
+Returns whether the text input is configured as a password field.
+Syntax
+bool GetIsPasswordField()
+GetMaxStringLength
+Returns the maximum number of characters that can be entered.
+Syntax
+int GetMaxStringLength()
+GetPlaceHolderTextEntity
+Returns the placeholder text element.
+Syntax
+AZ::EntityId GetPlaceHolderTextEntity()
+GetReplacementCharacter
+Returns the replacement character used to hide password text.
+Syntax
+char GetReplacementCharacter()
+GetText
+Returns the text string being displayed or edited by the element.
+Syntax
+AZStd::string GetText()
+GetTextCursorColor
+Returns the color to be used for the text cursor.
+Syntax
+AZ::Color GetTextCursorColor()
+GetTextEntity
+Returns the text element.
+Syntax
+AZ::EntityId GetTextEntity()
+GetTextSelectionColor
+Returns the color to be used for the text background when it is selected.
+Syntax
+AZ::Color GetTextSelectionColor()
+SetChangeAction
+Sets the action triggered when the text is changed.
+Syntax
+void SetChangeAction(const AZStd::string& actionName)
+SetCursorBlinkInterval
+Sets the cursor blink interval of the text input.
+Syntax
+void SetCursorBlinkInterval(float interval)
+SetEndEditAction
+Sets the action triggered when the editing of text is finished.
+Syntax
+void SetEndEditAction(const AZStd::string& actionName)
+SetEnterAction
+Sets the action triggered when enter is pressed.
+Syntax
+void SetEnterAction(const AZStd::string& actionName)
+SetIsPasswordField
+Sets whether the text input is configured as a password field.
+Syntax
+void SetIsPasswordField(bool passwordField)
+SetMaxStringLength
+Sets the maximum number of characters that can be entered.
+Syntax
+void SetMaxStringLength(int maxCharacters)
+SetPlaceHolderTextEntity
+Sets the placeholder text element.
+Syntax
+void SetPlaceHolderTextEntity(AZ::EntityId textEntity)
+SetReplacementCharacter
+Sets the replacement character used to hide password text.
+Syntax
+void SetReplacementCharacter(char replacementChar)
+SetText
+Sets the text string being displayed or edited by the element.
+Syntax
+void SetText(const AZStd::string& text)
+SetTextCursorColor
+Sets the color to be used for the text cursor.
+Syntax
+void SetTextCursorColor(const AZ::Color& color)
+SetTextEntity
+Sets the text element.
+Syntax
+void SetTextEntity(AZ::EntityId textEntity)
+SetTextSelectionColor
+Sets the color to be used for the text background when it is selected.
+Syntax
+void SetTextSelectionColor(const AZ::Color& color)
+UiTextInputNotificationBus
+Services notifications for the UiTextInputComponent.
+OnTextInputChange
+Called when a character is added, removed, or changed.
+Syntax
+void OnTextInputChange(const AZStd::string& textString)
+OnTextInputEndEdit
+Called when edit of text is completed.
+Syntax
+void OnTextInputEndEdit(const AZStd::string& textString)
+OnTextInputEnter
+Called when Enter is pressed on the keyboard.
+Syntax
+void OnTextInputEnter(const AZStd::string& textString)

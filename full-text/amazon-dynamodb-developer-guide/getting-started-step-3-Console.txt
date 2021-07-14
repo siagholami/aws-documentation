@@ -1,0 +1,20 @@
+AWS Management Console
+Follow these steps to read data from the Music table using the DynamoDB console.
+
+
+Open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Tables. 
+
+
+Choose the Music table from the table list.
+
+
+Choose the Items tab for the Music table.
+
+
+On the Items tab, view the list of items stored in the table, sorted by Artist and SongTitle. 
+
+
+The first item in the list is the one with the Artist Acme Band and the SongTitle Happy Day.

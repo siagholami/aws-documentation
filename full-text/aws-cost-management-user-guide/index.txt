@@ -1,0 +1,184 @@
+AWS Billing and Cost Management User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Billing and Cost Management?
+Getting help with AWS Billing and Cost Management
+Getting started
+Managing your account
+Managing an AWS account
+Managing an account in India
+Closing an account
+Using the AWS Free Tier
+Eligibility for the AWS Free Tier
+AWS Free Tier limits
+Tracking your AWS Free Tier usage
+Managing your payments
+Managing your AWS payments
+Managing your AWS payment methods
+Use China bank redirect payment methods
+
+
+Managing your credit card payment methods
+Managing your ACH direct debit payment methods
+
+
+Managing your payments in India
+Managing your payments in AWS Europe
+Managing your AWS Europe payment methods
+Managing your AWS Europe credit card payment methods
+Managing your AWS Europe credit card payment verifications
+Managing your SEPA direct debit payment methods
+
+
+Viewing your bill
+Viewing your monthly charges
+Getting an invoice emailed to you
+Managing your purchase orders
+Adding a purchase order
+Editing your purchase orders
+Deleting your purchase orders
+Viewing your purchase orders
+Reading your purchase order details page
+Enabling purchase order notifications
+Monitoring your usage and costs
+Reading your dashboard graphs
+Analyzing your costs with Cost Explorer
+Enabling Cost Explorer
+Controlling access for Cost Explorer
+
+
+Getting started with Cost Explorer
+Exploring your data using Cost Explorer
+Using the Cost Explorer chart
+Modifying your chart
+Filtering the data that you want to view
+Choosing advanced options
+Reading the Cost Explorer data table
+Forecasting with Cost Explorer
+
+
+
+
+Using Cost Explorer reports
+Using the default Cost Explorer reports
+Saving reports and results
+Saving your Cost Explorer configuration with bookmarks or favorites
+Downloading the CSV file
+Managing your saved Cost Explorer reports
+
+
+
+
+Understanding your reservations with Cost Explorer
+Accessing Reserved Instance Recommendations
+
+
+Optimizing your cost with Rightsizing Recommendations
+Using the AWS Cost Explorer API
+Best practices for the AWS Cost Explorer API
+
+
+
+
+Managing your costs with AWS Budgets
+Best practices for AWS Budgets
+Creating a budget
+Available budget filters
+
+
+Viewing your budgets
+Editing a budget
+Downloading a budget
+Copying a budget
+Deleting a budget
+Creating an Amazon SNS topic for budget notifications
+Receiving budget alerts in Amazon Chime and slack
+
+
+Reporting your budget metrics with budget reports
+Creating an AWS Budgets report
+Editing an AWS Budgets report
+Copying an AWS Budgets report
+Deleting an AWS Budgets report
+
+
+Managing your costs with Cost Categories
+Creating Cost Categories
+Editing Cost Categories
+Deleting Cost Categories
+
+
+Using Cost Allocation Tags
+AWS-Generated Cost Allocation Tags
+Activating the AWS-Generated Cost Allocation Tags
+Deactivating the AWS-Generated Cost Allocation Tags
+Restrictions on AWS-Generated Cost Allocation Tags
+
+
+User-Defined Cost Allocation Tags
+Activating User-Defined Cost Allocation Tags
+Refreshing User-Defined Cost Allocation Tags
+User-Defined Tag Restrictions
+
+
+Monthly cost allocation report
+
+
+Using the AWS Price List API
+Using the query API
+Using the bulk API
+Finding prices in an offer file
+Finding Savings Plan prices in an offer file
+Reading an offer file
+Reading the offer index file
+
+
+Setting up notifications
+
+
+Logging Billing and Cost Management API calls with AWS CloudTrail
+Avoiding unexpected charges
+Consolidated billing for AWS Organizations
+Consolidated billing process
+Consolidated billing in India
+Effective billing date
+Billing and account activity
+Volume discounts
+AWS credits
+Reserved instances
+Billing examples for specific services
+Turning off reserved instances and Savings Plans discount sharing
+Turning off shared reserved instances and Savings Plans discounts
+Turning on shared reserved instances and Savings Plans discounts
+
+
+
+
+Understanding Consolidated Bills
+AWS Support charges for accounts in an AWS Organizations
+Security in AWS Billing and Cost Management
+Data protection in AWS Billing and Cost Management
+AWS Identity and Access Management for AWS Billing and Cost Management
+Overview of managing access permissions
+Using identity-based policies (IAM policies) for Billing and Cost Management
+Billing and Cost Management policy examples
+
+
+Logging and monitoring in AWS Billing and Cost Management
+Compliance validation for AWS Billing and Cost Management
+Resilience in AWS Billing and Cost Management
+Infrastructure security in AWS Billing and Cost Management
+Quotas and restrictions
+Document history
+AWS glossary

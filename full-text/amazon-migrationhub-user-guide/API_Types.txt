@@ -1,0 +1,10 @@
+Data Types
+The following data types are supported:
+  ApplicationState 
+  CreatedArtifact 
+  DiscoveredResource 
+  MigrationTask 
+  MigrationTaskSummary 
+  ProgressUpdateStreamSummary 
+  ResourceAttribute 
+  Task 

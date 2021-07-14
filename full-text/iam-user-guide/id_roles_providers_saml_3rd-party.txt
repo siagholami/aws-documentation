@@ -1,0 +1,96 @@
+Integrating third-party SAML solution providers with AWS
+The following links help you configure third-party SAML 2.0 identity provider (IdP) solutions to work with AWS federation.
+Note
+AWS Support engineers can assist customers who have business and enterprise support plans with some integration tasks that involve third-party software. For a current list of supported platforms and applications, see What third-party software is supported? in the AWS Support FAQs.
+
+
+
+
+Solution
+More information
+
+
+
+
+Auth0
+AWS Integration in Auth0 – This page on the Auth0 documentation website describes how to set up single sign-on (SSO) with the AWS Management Console and includes a JavaScript example. You can configure Auth0 to pass session tags. For more information, see Auth0 Announces Partnership with AWS for IAM Session Tags.
+
+
+Bitium
+Configuring SAML for Amazon Web Services (AWS) – This article on the Bitium support site explains how to use Bitium to set up AWS with SAML SSO.
+
+
+Centrify
+Configure Centrify and Use SAML for SSO to AWS – This page on the Centrify website explains how to configure Centrify to use SAML for SSO to AWS.
+
+
+Clearlogin
+Amazon Web Services Setup – This article in the Clearlogin Help Center explains how to set up SSO functionality between Clearlogin and AWS.
+
+
+ForgeRock
+The ForgeRock Identity Platform integrates with AWS. You can configure ForgeRock to pass session tags. For more information, see Attribute Based Access Control for Amazon Web Services.
+
+
+Google G Suite
+Amazon Web Services cloud application – This article on the Google G Suite Administrator Help site describes how to configure G Suite as a SAML 2.0 IdP with AWS as the service provider.
+
+
+IBM
+You can configure IBM to pass session tags. For more information, see IBM Cloud Identity IDaaS one of first to support AWS session tags.
+
+
+Identacor
+Configuring SSO (SAML) for AWS – This article on the Identacor website describes how to set up and enable SSO for AWS.
+
+
+Matrix42
+MyWorkspace Getting Started Guide – This guide describes how to integrate AWS identity services with Matrix42 MyWorkspace.
+
+
+Microsoft Active Directory Federation Services (AD FS)
+Enabling Federation to AWS Using Windows Active Directory, AD FS, and SAML 2.0 – This post on the AWS Security Blog shows how to set up AD FS on an EC2 instance and enable SAML federation with AWS. You can configure AD FS to pass session tags. For more information, see Use attribute-based access control with AD FS to simplify IAM permissions management. PowerShell Automation to Give AWS Console Access – This post on Sivaprasad Padisetty's blog describes how to use Windows PowerShell to automate the process of setting up Active Directory and AD FS. It also covers enabling SAML federation with AWS.
+
+
+miniOrange
+SSO for AWS – This page on the miniOrange website describes how to establish secure access to AWS for enterprises and full control over access of AWS applications.
+
+
+MIRACL
+Setting up MIRACL Trust SSO as an Identity Provider within AWS – This page on the MIRACL website explains how to configure an AWS service provider for SSO authentication with MIRACL Trust SSO SAML.
+
+
+Okta
+ Integrating the Amazon Web Services Command Line Interface Using Okta – From this page on the Okta support site you can learn how to configure Okta for use with AWS. You can configure Okta to pass session tags. For more information, see Okta and AWS Partner to Simplify Access Via Session Tags.
+
+
+OneLogin
+From the OneLogin Knowledgebase, search for SAML AWS for a list of articles that explain how to set up AWS SSO functionality between OneLogin and AWS for a single-role and multi-role scenarios. You can configure OneLogin to pass session tags. For more information, see OneLogin and Session Tags: Attribute-Based Access Control for AWS Resources.
+
+
+Ping Identity
+PingFederate AWS Connector – View details about the PingFederate AWS Connector, a quick connection template to easily set up a single sign-on (SSO) and provisioning connection. Read documentation and download the latest PingFederate AWS Connector for integrations with AWS. You can configure Ping Identity to pass session tags. For more information, see Announcing Ping Identity Support for Attribute-Based Access Control in AWS.
+
+
+RadiantLogic
+Radiant Logic Technology Partners – Radiant Logic's RadiantOne Federated Identity Service integrates with AWS to provide an identity hub for SAML-based SSO.
+
+
+RSA
+RSA Link is on online community that facilitates information sharing and discussion. You can configure RSA to pass session tags. For more information, see Simplify Identity Access and Assurance Decisions on AWS with RSA SecurID and Session Tags.
+
+
+Salesforce.com
+How to configure SSO from Salesforce to AWS – This how-to article on the Salesforce.com developer site describes how to set up an identity provider (IdP) in Salesforce and configure AWS as a service provider.
+
+
+SecureAuth
+AWS - SecureAuth SAML SSO – This article on the SecureAuth website describes how to set up SAML integration with AWS for a SecureAuth appliance.
+
+
+Shibboleth
+How to Use Shibboleth for SSO to the AWS Management Console – This entry on the AWS Security Blog provides a step-by-step tutorial on how to set up Shibboleth and configure it as an identity provider for AWS. You can configure Shibboleth to pass session tags.
+
+
+
+For more details, see the IAM Partners page on the AWS website. 

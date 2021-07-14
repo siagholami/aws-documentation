@@ -1,0 +1,166 @@
+AWS Storage Gateway User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Storage Gateway?
+How AWS Storage Gateway Works (Architecture)
+Getting Started
+Sign Up for AWS Storage Gateway
+AWS Regions
+Requirements
+Accessing AWS Storage Gateway
+Using the AWS Storage Gateway Hardware Appliance
+Supported AWS Regions
+Setting Up Your Hardware Appliance
+Rack-Mounting Your Hardware Appliance and Connecting It to Power
+Configuring Network Parameters
+Activating Your Hardware Appliance
+Launching a Gateway
+Configuring an IP Address for the Gateway
+Configuring Your Gateway
+Removing a Gateway from the Hardware Appliance
+Deleting Your Hardware Appliance
+Creating Your Gateway
+Creating a file gateway
+Creating a gateway
+Creating a file share
+Creating an NFS file share
+Creating an SMB file share
+
+
+Using your file share
+Mounting your NFS file share on your client
+Mounting your SMB file share on your client
+Working with file shares on a bucket with pre-exisiting objects
+Testing your file gateway
+Where do I go from here?
+
+
+
+
+Creating a Volume Gateway
+Creating a Gateway
+Creating a Volume
+Using Your Volume
+Backing Up Your Volumes
+
+
+Creating a Tape Gateway
+Creating a Gateway
+Creating Tapes
+Using Your Tape Gateway
+Using Your Backup Software to Test Your Gateway Setup
+Testing Your Setup by Using Arcserve Backup r17.0
+Testing Your Setup by Using Bacula Enterprise
+Testing Your Setup by Using Commvault
+Testing Your Setup by Using Dell EMC NetWorker
+Testing Your Setup by Using IBM Spectrum Protect
+Testing Your Setup by Using Micro Focus (HPE) Data Protector
+Testing Your Setup by Using Microsoft System Center Data Protection Manager
+Testing Your Setup by Using NovaStor DataCenter/Network
+Testing Your Setup by Using Quest NetVault Backup
+Testing Your Setup by Using Veeam Backup & Replication
+Testing Your Setup by Using Veritas Backup Exec
+Testing Your Setup by Using Veritas NetBackup
+
+
+Where Do I Go from Here?
+
+
+
+
+Activating a Gateway in a Virtual Private Cloud
+Managing Your Gateway
+Managing your file gateway
+Managing Your Volume Gateway
+Managing Your Tape Gateway
+Monitoring Storage Gateway
+Monitoring Your File Gateway
+Monitoring Your Volume Gateway
+Monitoring Your Tape Gateway
+Maintaining Your Gateway
+Shutting Down Your Gateway VM
+Managing Local Disks for Your AWS Storage Gateway
+Managing Bandwidth for Your Gateway
+Managing Gateway Updates Using the AWS Storage Gateway Console
+Performing Maintenance Tasks on the Local Console
+Performing Tasks on the VM Local Console (File Gateway)
+Performing Tasks on the Amazon EC2 Local Console (File Gateway)
+Performing Tasks on the VM Local Console (Volume and Tape Gateways)
+Performing Tasks on the Amazon EC2 Local Console (Volume and Tape Gateways)
+Accessing the Gateway Local Console
+Configuring Network Adapters for Your Gateway
+
+
+Deleting Your Gateway by Using the AWS Storage Gateway Console and Removing Associated Resources
+Performance
+Security in AWS Storage Gateway
+Data Protection in AWS Storage Gateway
+Data Encryption Using AWS KMS
+Configuring CHAP Authentication for Your Volumes
+
+
+Authentication and Access Control for AWS Storage Gateway
+Overview of Managing Access Permissions to Your AWS Storage Gateway
+Using Identity-Based Policies (IAM Policies) for Storage Gateway
+Using Tags to Control Access to Your Gateway and Resources
+Using Microsoft Windows ACLs to Control Access to an SMB File Share
+Storage Gateway API Permissions: Actions, Resources, and Conditions Reference
+
+
+Logging and Monitoring in AWS Storage Gateway
+Compliance Validation for AWS Storage Gateway
+Resilience in AWS Storage Gateway
+Infrastructure Security in AWS Storage Gateway
+Security Best Practices for Storage Gateway
+Troubleshooting your gateway
+Troubleshooting on-premises gateway issues
+Troubleshooting Microsoft Hyper-V setup
+Troubleshooting Amazon EC2 gateway issues
+Troubleshooting hardware appliance issues
+Troubleshooting file gateway issues
+Troubleshooting file share issues
+Troubleshooting volume issues
+Troubleshooting virtual tape issues
+Troubleshooting high availability issues
+Best practices for recovering your data
+Additional AWS Storage Gateway Resources
+Host Setup
+Configuring VMware for Storage Gateway
+Synchronizing Your Gateway VM Time
+Deploying a Volume or Tape Gateway on an Amazon EC2 Host
+Deploying a file gateway on an Amazon EC2 host
+
+
+Volume Gateway
+Removing Disks from Your Gateway
+Adding and Removing Amazon EBS Volumes for Your Gateway Hosted on Amazon EC2
+
+
+Tape Gateway
+Working with VTL Devices
+Working With Tapes
+
+
+Getting an Activation Key for Your Gateway
+Connecting iSCSI Initiators
+Using AWS Direct Connect with AWS Storage Gateway
+Port Requirements
+Connecting to Your Gateway
+Understanding AWS Storage Gateway Resources and Resource IDs
+Tagging Storage Gateway Resources
+Working with Open-Source Components for AWS Storage Gateway
+AWS Storage Gateway quotas
+Using Storage Classes
+API Reference for AWS Storage Gateway
+Document history for AWS Storage Gateway

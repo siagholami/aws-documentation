@@ -1,0 +1,10 @@
+Still graphic overlays in AWS Elemental MediaConvert
+The following topics walk you through how to set up still graphic overlays. To begin, decide where in your job to specify the overlay. This choice affects how the overlay appears in outputs.
+Topics
+ Choosing between input overlay and output overlay
+ Placing your still graphic overlay
+ Requirements for the overlay file
+ Setting up still graphic overlays in outputs
+ Setting up still graphic overlays in inputs
+ About sizing your overlay to account for scaling
+ About specifying the overlay Layer

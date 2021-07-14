@@ -1,0 +1,69 @@
+Cost and Usage Report User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Are AWS Cost and Usage Reports?
+Creating Cost and Usage Reports
+Setting Up an Amazon S3 Bucket for Cost and Usage Reports
+Creating Cost and Usage Reports
+Managing Your Cost and Usage Reports
+Viewing Your Cost and Usage Reports Details
+Accessing Your Cost and Usage Reports in Amazon S3
+Editing Your Cost and Usage Reports Configuration
+Querying Cost and Usage Reports Using Amazon Athena
+Setting Up Amazon Athena Integration
+Creating a New Amazon S3 Bucket For Your Reports
+Creating New Cost and Usage Reports
+Setting Up Athena Using AWS CloudFormation Templates
+
+
+Manually Setting Up Amazon Athena
+Creating an Athena Table
+Creating a Cost and Usage Reports Status Table
+Uploading Your Report Partitions
+
+
+Running Amazon Athena Queries
+Loading Report Data to Other Resources
+Data Dictionary
+Identity Details
+Billing Details
+Line Item Details
+Reservation Details
+Pricing Details
+Product Details
+Resource Tags Details
+Savings Plans Details
+Cost Categories Details
+Use Cases
+Understanding Savings Plans
+Understanding Your Reservations
+Understanding Your Reservation Line Items
+Understanding Your Amortized Reservation Data
+Monitoring Your Size Flexible Reservations
+Monitoring Your On-Demand Capacity Reservations
+
+
+Legacy Reports
+Detailed Billing Reports
+Migrating From Detailed Billing Reports to Cost and Usage Reports
+
+
+Monthly Report
+Monthly Cost Allocation
+AWS Usage Report
+Contacting Customer Support
+Security in AWS Cost and Usage Reports
+Quotas and Restrictions
+Document History for AWS Cost and Usage Reports User Guide
+AWS Glossary

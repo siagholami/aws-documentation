@@ -1,0 +1,62 @@
+Stack Data Bag (aws_opsworks_stack)
+Represents a stack's settings.
+The following example shows how to use Chef search to write messages to the Chef log with the stack's name and cookbook's source url:
+stack = search("aws_opsworks_stack").first
+Chef::Log.info("********** The stack's name is '#{stack['name']}' **********")
+Chef::Log.info("********** The stack's cookbook URL is '#{stack['custom_cookbooks_source']['url']}' **********")
+
+
+
+
+
+
+
+
+
+
+
+arn
+custom_cookbooks_source
+name
+
+
+region
+stack_id
+use_custom_cookbooks
+
+
+vpc_id
+
+
+
+
+
+arn 
+The stack's Amazon Resource Name (ARN) (string).
+custom_cookbooks_source 
+A set of content that specify the custom cookbook's source repository.  
+type
+The repository type (string). Valid values include:
+ "archive"
+ "git"
+ "s3"
+url
+The repository URL, such as "git://github.com/amazonwebservices/opsworks-demo-php-simple-app.git" (string).
+username
+The user name for private repositories, and null for public repositories (string). For private Amazon Simple Storage Service (Amazon S3) buckets, the content is set to the access key.
+password
+The password for private repositories, and null for public repositories (string). For private S3 buckets, this content is set to the secret key.
+ssh_key
+A deploy SSH key for accessing private Git repositories, and null for public repositories (string).
+revision
+If the repository has multiple branches, the content specifies the app's branch or version, such as "version1" (string). Otherwise, it is set to null.
+name 
+The stack's name (string).
+region 
+The stack's AWS region (string).
+stack_id 
+A GUID that identifies the stack (string).
+use_custom_cookbooks 
+Whether custom cookbooks are enabled (Boolean).
+vpc_id 
+If the stack is running in a VPC, the VPC ID, if the stack is running in a VPC (string).

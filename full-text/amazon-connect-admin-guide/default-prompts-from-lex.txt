@@ -1,0 +1,15 @@
+Default prompts from Amazon Lex: "Sorry .. "
+If you add an Amazon Lex bot to your contact center, know that it also has some default prompts that it uses for error handling. For example: 
+ Sorry, can you please repeat that?
+ Sorry, I could not understand. Goodbye.
+To change default Amazon Lex prompts
+
+
+In Amazon Lex, go to your bot.
+
+
+On the Editor tab, choose Error Handling.
+
+
+Change the text as needed. Choose Save, then Build and Publish.
+

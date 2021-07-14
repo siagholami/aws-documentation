@@ -1,0 +1,23 @@
+AWS::S3::Bucket TagFilter
+Specifies tags to use to identify a subset of objects for an Amazon S3 bucket.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-s3-bucket-tagfilter-key)" : String,
+  "[Value](#cfn-s3-bucket-tagfilter-value)" : String
+}
+YAML
+[Key](#cfn-s3-bucket-tagfilter-key): String
+  [Value](#cfn-s3-bucket-tagfilter-value): String
+Properties
+Key 
+The tag key.
+Required: Yes
+Type: String
+Update requires: No interruption
+Value 
+The tag value.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,3 @@
+ResourceGroups resource type reference
+Resource types
+ AWS::ResourceGroups::Group

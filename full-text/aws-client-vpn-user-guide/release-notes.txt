@@ -1,0 +1,106 @@
+Release notes for the AWS-provided client
+The following tables contain the release notes and download links for the current and previous versions of the AWS-provided client.
+You can also download the latest version of the client at AWS Client VPN download.
+Platform: Windows 
+
+
+
+Version
+Changes
+Date
+Download link
+
+
+
+
+1.2.0
+[See the AWS documentation website for more details]
+May 19, 2020
+Download version 1.2.0
+
+
+1.1.1
+Minor bug fixes and enhancements.
+April 21, 2020
+Download version 1.1.1
+
+
+1.1.0
+[See the AWS documentation website for more details]
+March 9, 2020
+Download version 1.1.0
+
+
+1.0.0
+The initial release of the AWS-provided client.
+February 4, 2020
+Download version 1.0.0
+
+
+
+Platform: macOS 
+
+
+
+Version
+Changes
+Date
+Download link
+
+
+
+
+1.2.0
+[See the AWS documentation website for more details]
+May 19, 2020
+Download version 1.2.0
+
+
+1.1.2
+Minor bug fixes and enhancements.
+April 21, 2020
+Download version 1.1.2
+
+
+1.1.1
+[See the AWS documentation website for more details]
+April 2, 2020
+Download version 1.1.1
+
+
+1.1.0
+[See the AWS documentation website for more details]
+March 9, 2020
+Download version 1.1.0
+
+
+1.0.0
+The initial release of the AWS-provided client.
+February 4, 2020
+Download version 1.0.0
+
+
+
+Supported OpenVPN directives
+The AWS-provided client supports the following OpenVPN directives:
+ client
+ dev
+ proto
+ remote
+ remote-random-hostname
+ resolv-retry
+ nobind
+ persist-key
+ persist-tun
+ remote-cert-tls
+ cipher
+ verb
+ ca
+ reneg-sec
+ cert
+ key
+ auth-user-pass
+ connect-retry
+ static-challenge
+ tun-mtu
+ tun-mtu-extra

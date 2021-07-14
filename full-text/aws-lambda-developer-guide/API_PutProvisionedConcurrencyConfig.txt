@@ -1,0 +1,99 @@
+PutProvisionedConcurrencyConfig
+Adds a provisioned concurrency configuration to a function's alias or version.
+Request Syntax
+```
+PUT /2019-09-30/functions/FunctionName/provisioned-concurrency?Qualifier=Qualifier HTTP/1.1
+Content-type: application/json
+{
+   "ProvisionedConcurrentExecutions": number
+}
+```
+URI Request Parameters
+The request uses the following URI parameters.
+ FunctionName  
+The name of the Lambda function.  
+Name formats
+  Function name - my-function.
+  Function ARN - arn:aws:lambda:us-west-2:123456789012:function:my-function.
+  Partial ARN - 123456789012:function:my-function.
+The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.
+Length Constraints: Minimum length of 1. Maximum length of 140.
+Pattern: (arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_])(:(\$LATEST|[a-zA-Z0-9-_]))? 
+Required: Yes
+ Qualifier  
+The version number or alias name.
+Length Constraints: Minimum length of 1. Maximum length of 128.
+Pattern: (|[a-zA-Z0-9$_-]) 
+Required: Yes
+Request Body
+The request accepts the following data in JSON format.
+ ProvisionedConcurrentExecutions  
+The amount of provisioned concurrency to allocate for the version or alias.
+Type: Integer
+Valid Range: Minimum value of 1.
+Required: Yes
+Response Syntax
+```
+HTTP/1.1 202
+Content-type: application/json
+{
+   "AllocatedProvisionedConcurrentExecutions": number,
+   "AvailableProvisionedConcurrentExecutions": number,
+   "LastModified": "string",
+   "RequestedProvisionedConcurrentExecutions": number,
+   "Status": "string",
+   "StatusReason": "string"
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 202 response.
+The following data is returned in JSON format by the service.
+ AllocatedProvisionedConcurrentExecutions  
+The amount of provisioned concurrency allocated.
+Type: Integer
+Valid Range: Minimum value of 0.
+ AvailableProvisionedConcurrentExecutions  
+The amount of provisioned concurrency available.
+Type: Integer
+Valid Range: Minimum value of 0.
+ LastModified  
+The date and time that a user last updated the configuration, in ISO 8601 format.
+Type: String
+ RequestedProvisionedConcurrentExecutions  
+The amount of provisioned concurrency requested.
+Type: Integer
+Valid Range: Minimum value of 1.
+ Status  
+The status of the allocation process.
+Type: String
+Valid Values:IN_PROGRESS | READY | FAILED 
+ StatusReason  
+For failed allocations, the reason that provisioned concurrency could not be allocated.
+Type: String
+Errors
+InvalidParameterValueException 
+One of the parameters in the request is invalid.
+HTTP Status Code: 400
+ResourceConflictException 
+The resource already exists, or another operation is in progress.
+HTTP Status Code: 409
+ResourceNotFoundException 
+The resource specified in the request does not exist.
+HTTP Status Code: 404
+ServiceException 
+The AWS Lambda service encountered an internal error.
+HTTP Status Code: 500
+TooManyRequestsException 
+The request throughput limit was exceeded.
+HTTP Status Code: 429
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

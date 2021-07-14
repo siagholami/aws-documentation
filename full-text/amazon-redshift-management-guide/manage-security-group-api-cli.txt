@@ -1,0 +1,13 @@
+Manage cluster security groups using the Amazon Redshift CLI and API
+You can use the following Amazon Redshift CLI operations to manage cluster security groups. 
+ authorize-cluster-security-group-ingress
+ create-cluster-security-group
+ delete-cluster-security-group
+ describe-cluster-security-groups
+ revoke-cluster-security-group-ingress
+You can use the following Amazon Redshift API operations to manage cluster security groups.
+ AuthorizeClusterSecurityGroupIngress
+ CreateClusterSecurityGroup
+ DeleteClusterSecurityGroup
+ DescribeClusterSecurityGroups
+ RevokeClusterSecurityGroupIngress

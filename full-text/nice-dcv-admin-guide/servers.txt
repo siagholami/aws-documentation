@@ -1,0 +1,107 @@
+NICE DCV Servers
+The NICE DCV server is available for Windows and Linux. Both servers offer similar features, but there are some differences. Choose the NICE DCV server that best meets your needs. The following table compares the features supported by the Windows and Linux NICE DCV servers.
+Topics
+ Requirements
+ Supported Features
+Requirements
+For a good user experience with NICE DCV, ensure that your server meets the following minimum requirements. Keep in mind that your users' experience is largely dependent on the number of pixels streamed from the NICE DCV server to the NICE DCV client.
+If you are installing the NICE DCV server on an Amazon EC2 instance, we recommend that you use an Amazon EC2 G3 or G4 instance type. These instance types offer NVIDIA GPUs that support hardware-based OpenGL and GPU sharing. For more information, see Amazon EC2 G3 Instances and Amazon EC2 G4 Instances. You can install the NICE DCV server on any other instance type, but there might be screen resolution limitations. A third-party driver can be used to bypass this limitation. If you need the third-party driver, request it from NICE Support.
+Your server must meet the minimum requirements listed in the following table.
+[See the AWS documentation website for more details]
+Supported Features
+The following table compares the features that are supported by the WIndows and Linux NICE DCV serves.
+
+
+
+Feature
+Windows NICE DCV server
+Linux NICE DCV server
+
+
+
+
+Console sessions
+✓
+✓
+
+
+Virtual sessions
+✗
+✓
+
+
+Custom TCP port
+✓
+✓
+
+
+Idle client disconnection
+✓
+✓
+
+
+GPU sharing
+✗
+✓
+
+
+Custom TLS certificates
+✓
+✓
+
+
+USB remotization
+✓
+✓
+
+
+Smart card support
+✗
+✓
+
+
+Session storage and file transfer
+✓
+✓
+
+
+Copying and pasting
+✓
+✓
+
+
+Custom HTTP headers
+✓
+✓
+
+
+Printing from sessions
+✓
+✓
+
+
+Stereo 2.0 audio playback
+✓
+✓ (Not supported with CentOS 6)
+
+
+Surround sound audio playback
+✓ (up to 7.1)
+✓ (up to 5.1)
+
+
+Stereo 2.0 audio recording
+✓
+✗
+
+
+Touchscreen support
+✓ (Windows 8 and Server 2012 and later)
+✓
+
+
+Stylus support
+✓ (Windows 10 and Server 2019 )
+✓
+
+

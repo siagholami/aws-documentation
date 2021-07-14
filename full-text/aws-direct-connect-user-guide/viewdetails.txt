@@ -1,0 +1,18 @@
+Viewing connection details
+You can view the current status of your connection. You can also view your connection ID (for example, dxcon-12nikabc) and verify that it matches the connection ID on the LOA-CFA that you received or downloaded.
+For information on monitoring connections, see Monitoring AWS Direct Connect resources.
+To view details about a connection
+
+
+Open the AWS Direct Connect console at https://console.aws.amazon.com/directconnect/v2/home.
+
+
+In the left pane, choose Connections.
+
+
+Select a connection and choose View details.
+
+
+To describe a connection using the command line or API
+ describe-connections (AWS CLI)
+ DescribeConnections (AWS Direct Connect API)

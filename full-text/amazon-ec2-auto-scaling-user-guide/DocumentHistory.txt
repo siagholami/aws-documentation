@@ -1,0 +1,299 @@
+Document history
+The following table describes important additions to the Amazon EC2 Auto Scaling documentation, beginning in July 2018. For notification about updates to this documentation, you can subscribe to the RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Instance metadata service version 2
+You can require the use of Instance Metadata Service Version 2, which is a session-oriented method for requesting instance metadata, when using launch configurations. For more information, see Configuring the instance metadata options in the Amazon EC2 Auto Scaling User Guide.
+July 28, 2020
+
+
+Guide changes
+Various improvements and new console procedures in the Controlling which Auto Scaling instances terminate during scale in, Monitoring your Auto Scaling instances and groups, Launch templates, and Launch configurations sections of the Amazon EC2 Auto Scaling User Guide.
+July 28, 2020
+
+
+Instance refresh
+Start an instance refresh to update all instances in your Auto Scaling group when you make a configuration change. For more information, see Replacing Auto Scaling instances based on an instance refresh in the Amazon EC2 Auto Scaling User Guide.
+June 16, 2020
+
+
+Guide changes
+Various improvements in the Replacing Auto Scaling instances based on maximum instance lifetime, Auto Scaling groups with multiple instance types and purchase options, Scaling based on Amazon SQS, and Tagging Auto Scaling groups and instances sections of the Amazon EC2 Auto Scaling User Guide.
+May 6, 2020
+
+
+Guide changes
+Various improvements to IAM documentation. For more information, see Launch template support and Amazon EC2 Auto Scaling identity-based policy examples in the Amazon EC2 Auto Scaling User Guide.
+March 4, 2020
+
+
+Disable scaling policies
+You can now disable and re-enable scaling policies. This feature allows you to temporarily disable a scaling policy while preserving the configuration details so that you can enable the policy again later. For more information, see Disabling a scaling policy for an Auto Scaling group in the Amazon EC2 Auto Scaling User Guide.
+February 18, 2020
+
+
+Add notification functionality
+Amazon EC2 Auto Scaling now sends events to your AWS Personal Health Dashboard when your Auto Scaling groups cannot scale out due to a missing security group or launch template. For more information, see Personal Health Dashboard notifications for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
+February 12, 2020
+
+
+Guide changes
+Various improvements and corrections in the How Amazon EC2 Auto Scaling works with IAM, Amazon EC2 Auto Scaling identity-based policy examples, Required CMK key policy for use with encrypted volumes, and Monitoring your Auto Scaling instances and groups sections of the Amazon EC2 Auto Scaling User Guide.
+February 10, 2020
+
+
+Guide changes
+Improved documentation for Auto Scaling groups that use instance weighting. Learn how to use scaling policies when using "capacity units" to measure desired capacity. For more information, see How scaling policies work and Scaling adjustment types in the Amazon EC2 Auto Scaling User Guide.
+February 6, 2020
+
+
+New "Security" chapter
+A new Security chapter in the Amazon EC2 Auto Scaling User Guide helps you understand how to apply the shared responsibility model when using Amazon EC2 Auto Scaling. As part of this update, the user guide chapter "Controlling Access to Your Amazon EC2 Auto Scaling Resources" has been replaced by a new, more useful section, Identity and access management for Amazon EC2 Auto Scaling.
+February 4, 2020
+
+
+Recommendations for instance types
+AWS Compute Optimizer provides Amazon EC2 instance recommendations to help you improve performance, save money, or both. For more information, see Getting recommendations for an instance type in the Amazon EC2 Auto Scaling User Guide.
+December 3, 2019
+
+
+Dedicated Hosts and host resource groups
+Updated guide to show how to create a launch template that specifies a host resource group. This allows you to create an Auto Scaling group with a launch template that specifies a BYOL AMI to use on Dedicated Hosts. For more information, see Creating a launch template for an Auto Scaling group in the Amazon EC2 Auto Scaling User Guide.
+December 3, 2019
+
+
+Support for Amazon VPC endpoints
+You can now establish a private connection between your VPC and Amazon EC2 Auto Scaling. For more information, see Amazon EC2 Auto Scaling and interface VPC endpoints in the Amazon EC2 Auto Scaling User Guide.
+November 22, 2019
+
+
+Maximum instance lifetime
+You can now replace instances automatically by specifying the maximum length of time that an instance can be in service. If any instances are approaching this limit, Amazon EC2 Auto Scaling gradually replaces them. For more information, see Replacing Auto Scaling instances based on maximum instance lifetime in the Amazon EC2 Auto Scaling User Guide.
+November 19, 2019
+
+
+Instance weighting
+For Auto Scaling groups with multiple instance types, you can now optionally specify the number of capacity units that each instance type contributes to the capacity of the group. For more information, see Instance weighting for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
+November 19, 2019
+
+
+Minimum number of instance types
+You no longer have to specify additional instance types for groups of Spot, On-Demand, and Reserved Instances. For all Auto Scaling groups, the minimum is now one instance type. For more information, see Auto Scaling groups with multiple instance types and purchase options in the Amazon EC2 Auto Scaling User Guide.
+September 16, 2019
+
+
+Support for new Spot allocation strategy
+Amazon EC2 Auto Scaling now supports a new Spot allocation strategy "capacity-optimized" that fulfills your request using Spot Instance pools that are optimally chosen based on the available Spot capacity. For more information, see Auto Scaling groups with multiple instance types and purchase options in the Amazon EC2 Auto Scaling User Guide.
+August 12, 2019
+
+
+Guide changes
+Improved Amazon EC2 Auto Scaling documentation in the Service-linked roles and Required CMK key policy for use with encrypted volumes topics.
+August 1, 2019
+
+
+Support for tagging enhancement
+Amazon EC2 Auto Scaling now adds tags to Amazon EC2 instances as part of the same API call that launches the instances. For more information, see Tagging Auto Scaling groups and instances.
+July 26, 2019
+
+
+Guide changes
+Improved Amazon EC2 Auto Scaling documentation in the Suspending and resuming scaling processes topic. Updated Customer managed policy examples to include an example policy that allows users to pass only specific custom suffix service-linked roles to Amazon EC2 Auto Scaling.
+June 13, 2019
+
+
+Support for new Amazon EBS feature
+Added support for new Amazon EBS feature in the launch template topic. Change the encryption state of an EBS volume while restoring from a snapshot. For more information, see Creating a launch template for an Auto Scaling group in the Amazon EC2 Auto Scaling User Guide.
+May 13, 2019
+
+
+Guide changes
+Improved Amazon EC2 Auto Scaling documentation in the following sections: Controlling which Auto Scaling instances terminate during scale in, Auto Scaling groups, Auto Scaling groups with multiple instance types and purchase options, and Dynamic scaling for Amazon EC2 Auto Scaling.
+March 12, 2019
+
+
+Support for combining instance types and purchase options
+Provision and automatically scale instances across purchase options (Spot, On-Demand, and Reserved Instances) and instance types within a single Auto Scaling group. For more information, see Auto Scaling groups with multiple instance types and purchase options in the Amazon EC2 Auto Scaling User Guide.
+November 13, 2018
+
+
+Updated topic for scaling based on Amazon SQS
+Updated guide to explain how you can use custom metrics to scale an Auto Scaling group in response to changing demand from an Amazon SQS queue. For more information, see Scaling based on Amazon SQS in the Amazon EC2 Auto Scaling User Guide.
+July 26, 2018
+
+
+
+The following table describes important changes to the Amazon EC2 Auto Scaling documentation before July 2018.
+
+
+
+Feature
+Description
+Release date
+
+
+
+
+Support for target tracking scaling policies
+Set up dynamic scaling for your application in just a few steps. For more information, see Target tracking scaling policies for Amazon EC2 Auto Scaling.
+12 July 2017
+
+
+Support for resource-level permissions
+Create IAM policies to control access at the resource level. For more information, see Controlling access to your Amazon EC2 Auto Scaling resources.
+15 May 2017
+
+
+Monitoring improvements
+Auto Scaling group metrics no longer require that you enable detailed monitoring. You can now enable group metrics collection and view metrics graphs from the Monitoring tab in the console. For more information, see Monitoring your Auto Scaling groups and instances using Amazon CloudWatch.
+18 August 2016
+
+
+Support for Application Load Balancers
+Attach one or more target groups to a new or existing Auto Scaling group. For more information, see Attaching a load balancer to your Auto Scaling group.
+11 August 2016
+
+
+Events for lifecycle hooks
+Amazon EC2 Auto Scaling sends events to CloudWatch Events when it executes lifecycle hooks. For more information, see Getting CloudWatch Events when your Auto Scaling group scales.
+24 February 2016
+
+
+Instance protection
+Prevent Amazon EC2 Auto Scaling from selecting specific instances for termination when scaling in. For more information, see Instance protection.
+07 December 2015
+
+
+Step scaling policies
+Create a scaling policy that enables you to scale based on the size of the alarm breach. For more information, see Scaling policy types.
+06 July 2015
+
+
+Update load balancer
+Attach a load balancer to or detach a load balancer from an existing Auto Scaling group. For more information, see Attaching a load balancer to your Auto Scaling group.
+11 June 2015
+
+
+Support for ClassicLink
+Link EC2-Classic instances in your Auto Scaling group to a VPC, enabling communication between these linked EC2-Classic instances and instances in the VPC using private IP addresses. For more information, see Linking EC2-Classic instances to a VPC.
+19 January 2015
+
+
+Lifecycle hooks
+Hold your newly launched or terminating instances in a pending state while you perform actions on them. For more information, see Amazon EC2 Auto Scaling lifecycle hooks.
+30 July 2014
+
+
+Detach instances
+Detach instances from an Auto Scaling group. For more information, see Detach EC2 instances from your Auto Scaling group.
+30 July 2014
+
+
+Put instances into a Standby state
+Put instances that are in an InService state into a Standby state. For more information, see Temporarily removing instances from your Auto Scaling group.
+30 July 2014
+
+
+Manage tags
+Manage your Auto Scaling groups using the AWS Management Console. For more information, see Tagging Auto Scaling groups and instances.
+01 May 2014
+
+
+Support for Dedicated Instances
+Launch Dedicated Instances by specifying a placement tenancy attribute when you create a launch configuration. For more information, see Instance placement tenancy.
+23 April 2014
+
+
+Create a group or launch configuration from an EC2 instance
+Create an Auto Scaling group or a launch configuration using an EC2 instance. For information about creating a launch configuration using an EC2 instance, see Creating a launch configuration using an EC2 instance. For information about creating an Auto Scaling group using an EC2 instance, see Creating an Auto Scaling group using an EC2 instance.
+02 January 2014
+
+
+Attach instances
+Enable automatic scaling for an EC2 instance by attaching the instance to an existing Auto Scaling group. For more information, see Attach EC2 instances to your Auto Scaling group.
+02 January 2014
+
+
+View account limits
+View the limits on Auto Scaling resources for your account. For more information, see Auto Scaling limits.
+02 January 2014
+
+
+Console support for Amazon EC2 Auto Scaling
+Access Amazon EC2 Auto Scaling using the AWS Management Console. For more information, see Getting started with Amazon EC2 Auto Scaling.
+10 December 2013
+
+
+Assign a public IP address
+Assign a public IP address to an instance launched into a VPC. For more information, see Launching Auto Scaling instances in a VPC.
+19 September 2013
+
+
+Instance termination policy
+Specify an instance termination policy for Amazon EC2 Auto Scaling to use when terminating EC2 instances. For more information, see Controlling which Auto Scaling instances terminate during scale in.
+17 September 2012
+
+
+Support for IAM roles
+Launch EC2 instances with an IAM instance profile. You can use this feature to assign IAM roles to your instances, allowing your applications to access other AWS services securely. For more information, see Launch Auto Scaling instances with an IAM role.
+11 June 2012
+
+
+Support for Spot Instances
+Request Spot Instances in Auto Scaling groups by specifying a Spot Instance bid price in your launch configuration. For more information, see Launching Spot Instances in your Auto Scaling group.
+7 June 2012
+
+
+Tag groups and instances
+Tag Auto Scaling groups and specify that the tag also applies to EC2 instances launched after the tag was created. For more information, see Tagging Auto Scaling groups and instances.
+26 January 2012
+
+
+Support for Amazon SNS
+Use Amazon SNS to receive notifications whenever Amazon EC2 Auto Scaling launches or terminates EC2 instances. For more information, see Getting SNS notifications when your Auto Scaling group scales. Amazon EC2 Auto Scaling also added the following new features: [See the AWS documentation website for more details]
+20 July 2011
+
+
+Scheduled scaling actions
+Added support for scheduled scaling actions. For more information, see Scheduled scaling for Amazon EC2 Auto Scaling.
+2 December 2010
+
+
+Support for Amazon VPC
+Added support for Amazon VPC. For more information, see Launching Auto Scaling instances in a VPC.
+2 December 2010
+
+
+Support for HPC clusters
+Added support for high performance computing (HPC) clusters.
+2 December 2010
+
+
+Support for health checks
+Added support for using Elastic Load Balancing health checks with Amazon EC2 Auto Scaling-managed EC2 instances. For more information, see Using ELB health checks with Auto Scaling.
+2 December 2010
+
+
+Support for CloudWatch alarms
+Removed the older trigger mechanism and redesigned Amazon EC2 Auto Scaling to use the CloudWatch alarm feature. For more information, see Dynamic scaling for Amazon EC2 Auto Scaling.
+2 December 2010
+
+
+Suspend and resume scaling
+Added support to suspend and resume scaling processes.
+2 December 2010
+
+
+Support for IAM
+Added support for IAM. For more information, see Controlling access to your Amazon EC2 Auto Scaling resources.
+2 December 2010
+
+

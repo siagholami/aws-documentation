@@ -1,0 +1,10 @@
+iam-role-managed-policy-check
+Checks that AWS Identity and Access Management (IAM) policies in a list of policies are attached to all AWS roles. The rule is NON_COMPLIANT if the IAM managed policy is not attached to the IAM role.
+Identifier: IAM_ROLE_MANAGED_POLICY_CHECK
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions
+Parameters:
+managedPolicyNames
+Comma-separated list of AWS managed policy ARNs.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

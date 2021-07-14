@@ -1,0 +1,18 @@
+CRC32 function
+CRC32 is an error-detecting function that uses a CRC32 algorithm to detect changes between source and target data. The CRC32 function converts a variable-length string into an 8-character string that is a text representation of the hexadecimal value of a 32 bit-binary sequence.
+Syntax
+CRC32(string)
+Arguments
+string 
+A variable-length string.
+Return type
+The CRC32 function returns an 8-character string that is a text representation of the hexadecimal value of a 32-bit binary sequence. The Amazon Redshift CRC32 function is based on the CRC-32C polynomial. 
+Example
+The following example shows the 32-bit value for the string 'Amazon Redshift': 
+```
+select crc32('Amazon Redshift');
+crc32
+
+f2726906 
+(1 row)
+```

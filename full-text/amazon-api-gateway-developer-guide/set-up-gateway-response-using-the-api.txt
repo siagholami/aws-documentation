@@ -1,0 +1,10 @@
+Set up a gateway response using the API Gateway REST API
+Before customizing a gateway response using the API Gateway REST API, you must have already created an API and have obtained its identifier. To retrieve the API identifier, you can follow restapi:gateway-responses link relation and examine the result. 
+To customize a gateway response using the API Gateway REST API
+
+
+To overwrite an entire GatewayResponse instance, call the gatewayresponse:put action. Specify a desired responseType in the URL path parameter, and supply in the request payload the statusCode, responseParameters, and responseTemplates mappings.
+
+
+To update part of a GatewayResponse instance, call the gatewayresponse:update action. Specify a desired responseType in the URL path parameter, and supply in the request payload the individual GatewayResponse properties you want—for example, the responseParameters or the responseTemplates mapping.
+

@@ -1,0 +1,17 @@
+AWS::ManagedBlockchain::Member NetworkFabricConfiguration
+Hyperledger Fabric configuration properties for the network.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Edition](#cfn-managedblockchain-member-networkfabricconfiguration-edition)" : String
+}
+YAML
+[Edition](#cfn-managedblockchain-member-networkfabricconfiguration-edition): String
+Properties
+Edition 
+The edition of Amazon Managed Blockchain that the network uses. Valid values are standard and starter. For more information, see 
+Required: Yes
+Type: String
+Allowed values: STANDARD | STARTER
+Update requires: No interruption

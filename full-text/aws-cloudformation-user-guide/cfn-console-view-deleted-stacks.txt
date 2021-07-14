@@ -1,0 +1,10 @@
+Viewing deleted stacks on the AWS CloudFormation console
+By default, the AWS CloudFormation console does not display stacks with a status of DELETE_COMPLETE. To display information about deleted stacks, you must change the stack view.
+To view deleted stacks
+ On the Stacks page of the CloudFormation console, select Deleted from the filter list.
+
+AWS CloudFormation lists all of your deleted stacks (stacks with a status of DELETE_COMPLETE).
+See also
+
+Deleting a stack on the AWS CloudFormation console
+Viewing AWS CloudFormation stack data and resources on the AWS Management Console

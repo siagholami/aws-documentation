@@ -1,0 +1,24 @@
+SVV_TABLE_INFO
+Shows summary information for tables in the database. The view filters system tables and shows only user-defined tables. 
+You can use the SVV_TABLE_INFO view to diagnose and address table design issues that can influence query performance, including issues with compression encoding, distribution keys, sort style, data distribution skew, table size, and statistics. The SVV_TABLE_INFO view doesn't return any information for empty tables.
+The SVV_TABLE_INFO view summarizes information from the STV_BLOCKLIST, STV_PARTITIONS, STV_TBL_PERM, and STV_SLICES system tables and from the PG_DATABASE, PG_ATTRIBUTE, PG_CLASS, PG_NAMESPACE, and PG_TYPE catalog tables. 
+SVV_TABLE_INFO is visible only to superusers. For more information, see Visibility of data in system tables and views. To permit a user to query the view, grant SELECT privilege on SVV_TABLE_INFO to the user.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+The following example shows encoding, distribution style, sorting, and data skew for all user-defined tables in the database. Note that "table" must be enclosed in double quotes because it is a reserved word.
+```
+select "table", encoded, diststyle, sortkey1, skew_sortkey1, skew_rows
+from svv_table_info
+order by 1;
+table          | encoded | diststyle       | sortkey1     | skew_sortkey1 | skew_rows
+--------------------------------------------------------------------------------
+category       | N       | EVEN            |              |               |        
+date           | N       | ALL             | dateid       |          1.00 |        
+event          | Y       | KEY(eventid)    | dateid       |          1.00 |      1.02
+listing        | Y       | KEY(listid)     | dateid       |          1.00 |      1.01
+sales          | Y       | KEY(listid)     | dateid       |          1.00 |      1.02
+users          | Y       | KEY(userid)     | userid       |          1.00 |      1.01
+venue          | N       | ALL             | venueid      |          1.00 |        
+(7 rows)
+```

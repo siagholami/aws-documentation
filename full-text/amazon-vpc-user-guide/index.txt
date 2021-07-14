@@ -1,0 +1,134 @@
+Amazon Virtual Private Cloud User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon VPC?
+How Amazon VPC works
+Getting started with Amazon VPC
+Getting started with IPv6 for Amazon VPC
+Amazon VPC console wizard configurations
+VPC with a single public subnet
+VPC with public and private subnets (NAT)
+VPC with public and private subnets and AWS Site-to-Site VPN access
+VPC with a private subnet only and AWS Site-to-Site VPN access
+
+
+Examples for VPC
+Example: Sharing public subnets and private subnets
+Examples: Services using AWS PrivateLink and VPC peering
+Example: Service provider configures the service
+Example: Service consumer configures access
+Example: Service provider configures a service to span Regions
+Example: Service consumer configures access across Regions
+
+
+Example: Create an IPv4 VPC and subnets using the AWS CLI
+Example: Create an IPv6 VPC and subnets using the AWS CLI
+VPCs and subnets
+Working with VPCs and subnets
+Working with shared VPCs
+Extending Your VPCs
+Default VPC and default subnets
+IP Addressing in your VPC
+Migrating to IPv6
+Security in Amazon Virtual Private Cloud
+Data protection in Amazon Virtual Private Cloud
+Internetwork traffic privacy in Amazon VPC
+
+
+Identity and access management for Amazon VPC
+How Amazon VPC works with IAM
+Amazon VPC policy examples
+Troubleshooting Amazon VPC identity and access
+
+
+Logging and monitoring for Amazon VPC
+Resilience in Amazon Virtual Private Cloud
+Compliance validation for Amazon Virtual Private Cloud
+Security groups for your VPC
+Network ACLs
+VPC Flow Logs
+Flow log record examples
+Publishing flow logs to CloudWatch Logs
+Publishing flow logs to Amazon S3
+Working with flow logs
+Troubleshooting
+
+
+Security best practices for your VPC
+VPC networking components
+Elastic network interfaces
+Route tables
+Example routing options
+Working with route tables
+
+
+Managed prefix lists
+Working with shared prefix lists
+
+
+Internet gateways
+Egress-only internet gateways
+Carrier gateways
+NAT
+NAT gateways
+Monitoring NAT gateways using Amazon CloudWatch
+Troubleshooting NAT gateways
+
+
+NAT instances
+Comparison of NAT instances and NAT gateways
+
+
+DHCP options sets
+Using DNS with your VPC
+VPC peering
+Elastic IP addresses
+ClassicLink
+VPC endpoints and VPC endpoint services (AWS PrivateLink)
+VPC endpoints
+Interface VPC endpoints (AWS PrivateLink)
+Gateway VPC endpoints
+Endpoints for Amazon S3
+Endpoints for Amazon DynamoDB
+
+
+Controlling access to services with VPC endpoints
+Deleting a VPC endpoint
+
+
+VPC endpoint services (AWS PrivateLink)
+Creating a VPC endpoint service configuration
+Adding and removing permissions for your endpoint service
+Changing the Network Load Balancers and acceptance settings
+Accepting and rejecting interface endpoint connection requests
+Creating and managing a notification for an endpoint service
+Adding or removing VPC endpoint service tags
+Deleting an endpoint service configuration
+
+
+Identity and access management for VPC endpoints and VPC endpoint services
+Private DNS names for endpoint services
+VPC endpoint service private DNS name verification
+Modifying an existing endpoint service private DNS name
+Viewing endpoint service private DNS name configuration
+Manually initiating the endpoint service private DNS name domain verification
+Removing an endpoint service private DNS name
+Amazon VPC private DNS name domain verification TXT records
+Troubleshooting common private DNS domain verification problems
+
+
+AWS services that you can use with AWS PrivateLink
+VPN connections
+Amazon VPC quotas
+Document history

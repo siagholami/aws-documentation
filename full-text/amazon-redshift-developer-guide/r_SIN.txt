@@ -1,0 +1,17 @@
+SIN function
+SIN is a trigonometric function that returns the sine of a number. The return value is between -1 and 1. 
+Syntax
+SIN(number)
+Argument
+number 
+A double precision number in radians. 
+Return type
+The SIN function returns a double precision number. 
+Examples
+The following example returns the sine of -PI: 
+```
+select sin(-pi());
+sin
+-1.22464679914735e-16
+(1 row)
+```

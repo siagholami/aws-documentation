@@ -1,0 +1,30 @@
+Step 1: Create a Data Stream
+First, you must create the data stream that you will use in subsequent steps of this tutorial.
+To create a stream
+
+
+Sign in to the AWS Management Console and open the Kinesis console at https://console.aws.amazon.com/kinesis.
+
+
+Choose Data Streams in the navigation pane.
+
+
+In the navigation bar, expand the region selector and choose a region.
+
+
+Choose Create Kinesis stream.
+
+
+Enter a name for your data stream (for example, StockTradeStream).
+
+
+Enter 1 for the number of shards, but leave Estimate the number of shards you'll need collapsed.
+
+
+Choose Create Kinesis stream.
+
+
+On the Kinesis streams list page, the status of your stream appears as CREATING while the stream is being created. When the stream is ready to use, the status changes to ACTIVE. 
+If you choose the name of your stream, in the page that appears, the Details tab displays a summary of your data stream configuration. The Monitoring section displays monitoring information for the stream.
+Next Steps
+Step 2: Create an IAM Policy and User

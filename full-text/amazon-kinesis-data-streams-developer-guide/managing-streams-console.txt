@@ -1,0 +1,100 @@
+Managing Kinesis Data Streams Using the Console
+The following procedures show you how to create, delete, and work with an Amazon Kinesis data stream using the AWS Management Console.
+To create a stream
+
+
+Sign in to the AWS Management Console and open the Kinesis console at https://console.aws.amazon.com/kinesis.
+
+
+Choose Data Streams in the navigation bar.
+
+
+Choose Create Kinesis stream.
+
+
+Enter a name for the stream (for example, StockTradeStream).
+
+
+Specify the number of shards. If you need help, expand Estimate the number of shards you'll need.
+
+
+Choose Create Kinesis stream.
+
+
+To list your streams
+
+
+Open the Kinesis console at https://console.aws.amazon.com/kinesis.
+
+
+Choose Data Streams in the navigation bar.
+
+
+(Optional) To view more details for a stream, choose the name of the stream.
+
+
+To edit a stream
+
+
+Open the Kinesis console at https://console.aws.amazon.com/kinesis.
+
+
+Choose Data Streams in the navigation bar.
+
+
+Choose the name of the stream.
+
+
+To scale the shard capacity, do the following:
+
+
+Under Shards, choose Edit.
+
+
+Specify the new number of shards.
+
+
+Choose Save.
+
+
+To edit the data retention period, do the following:
+
+
+Under Data retention period, choose Edit.
+
+
+Specify a period between 24 and 168 hours. Records are stored in the stream for this period of time. Additional charges apply for periods greater than 24 hours. For more information, see Amazon Kinesis Data Streams pricing.
+
+
+Choose Save.
+
+
+To enable or disable shard-level metrics, do the following:
+
+
+Under Shard level metrics, choose Edit.
+
+
+Select the metrics to monitor. For more information, see Enhanced Shard-level Metrics.
+
+
+Choose Save.
+
+
+To delete your streams
+
+
+Open the Kinesis console at https://console.aws.amazon.com/kinesis.
+
+
+Choose Data Streams in the navigation bar.
+
+
+Select the check box next to the streams to delete.
+
+
+Choose Actions, Delete.
+
+
+When prompted for confirmation, choose Delete.
+

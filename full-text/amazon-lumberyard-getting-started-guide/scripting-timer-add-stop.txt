@@ -1,0 +1,87 @@
+Adding and Configuring the Timer's Stop Trigger
+To set up the timer's stop trigger, you do the following:
+ Create a child entity under TimerParent and name it TimerStop.
+ To TimerStop, add and configure a Box Shape, a Trigger Area, and a Lua Script component.
+ Adjust the position of the TimerStop entity so that it is at the maze's exit.
+To create the TimerStop child entity
+
+
+In the Entity Outliner, right-click TimerParent and select Create child entity.
+
+
+
+In the Entity Inspector, rename the new child entity TimerStop.
+
+
+
+To add and configure the box shape component
+
+
+In the Entity Outliner, select the TimerStop entity.
+
+
+In the Entity Inspector, click Add Component.
+
+
+Select the Box Shape component.
+
+In the Box Shape component properties, set the Dimensions as follows:
+    X: 1.00
+    Y: 5.00
+    Z: 5.00
+
+
+To add and configure the trigger area component
+
+
+In the Entity Outliner, select the TimerStop entity.
+
+
+In the Entity Inspector, click Add Component.
+
+
+Select the Trigger Area component.
+
+To add and configure the Lua Script components
+
+
+In the Entity Outliner, select the TimerStop entity.
+
+
+In the Entity Inspector, click Add Component.
+
+
+Select Lua Script.
+
+
+Click Browse (...) next to the Script box. Navigate to StarterGame\Scripts\Triggers and select TriggerEvent.lua. Click OK.
+
+
+In the Lua Script component's EventName property, enter TimerStop.
+
+
+
+Under Recipients, next to the Entity box, click the picker icon .
+
+
+In the Entity Outliner, select the TimerStart entity.
+
+To adjust the position of the timer's stop trigger
+
+
+In the Entity Outliner, select the TimerStop entity.
+
+
+In the viewport, use the Move tool to adjust the position of TimerStop so that it is at the maze's exit door.
+
+
+
+Press CtrlS to save your level.
+
+
+Press CtrlG to play your level.
+
+
+The timer should start when you enter the level. Collect the pickup item. The timer should stop when you exit the level.
+Press Esc to quit.
+Next: 7: Applying Physics to Stacked Crates

@@ -1,0 +1,33 @@
+TranscriptResultStream
+Represents the transcription result stream from Amazon Transcribe to your application.
+Contents
+BadRequestException 
+A client error occurred when the stream was created. Check the parameters of the request and try your request again.
+Type: Exception
+Required: No
+ConflictException 
+A new stream started with the same session ID. The current stream has been terminated.
+Type: Exception
+Required: No
+InternalFailureException 
+A problem occurred while processing the audio. Amazon Transcribe terminated processing.
+Type: Exception
+Required: No
+LimitExceededException 
+Your client has exceeded one of the Amazon Transcribe limits, typically the limit on audio length. Break your audio stream into smaller chunks and try your request again.
+Type: Exception
+Required: No
+ServiceUnavailableException 
+Service is currently unavailable. Try your request later.
+Type: Exception
+Required: No
+TranscriptEvent 
+A portion of the transcription of the audio stream. Events are sent periodically from Amazon Transcribe to your application. The event can be a partial transcription of a section of the audio stream, or it can be the entire transcription of that portion of the audio stream. 
+Type: TranscriptEvent object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

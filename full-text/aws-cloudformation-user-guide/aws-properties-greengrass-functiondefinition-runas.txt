@@ -1,0 +1,30 @@
+AWS::Greengrass::FunctionDefinition RunAs
+The access identity whose permissions are used to run the Lambda function. This setting overrides the default access identity that's specified for the group (by default, ggc_user and ggc_group). You can override the user, group, or both. For more information, see Run as in the AWS IoT Greengrass Developer Guide.
+Important
+Running as the root user increases risks to your data and device. Do not run as root (UID/GID=0) unless your business case requires it. For more information and requirements, see Running a Lambda Function as Root. 
+ In an AWS CloudFormation template, RunAs is a property of the  Execution  property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Gid](#cfn-greengrass-functiondefinition-runas-gid)" : Integer,
+  "[Uid](#cfn-greengrass-functiondefinition-runas-uid)" : Integer
+}
+YAML
+[Gid](#cfn-greengrass-functiondefinition-runas-gid): Integer
+  [Uid](#cfn-greengrass-functiondefinition-runas-uid): Integer
+Properties
+Gid 
+The group ID whose permissions are used to run the Lambda function. You can use the getent group command on your core device to look up the group ID.
+Required: No
+Type: Integer
+Update requires: Replacement
+Uid 
+The user ID whose permissions are used to run the Lambda function. You can use the getent passwd command on your core device to look up the user ID.
+Required: No
+Type: Integer
+Update requires: Replacement
+See also
+
+FunctionRunAsConfig in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

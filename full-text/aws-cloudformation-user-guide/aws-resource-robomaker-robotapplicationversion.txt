@@ -1,0 +1,104 @@
+AWS::RoboMaker::RobotApplicationVersion
+The AWS::RoboMaker::RobotApplicationVersion resource creates an AWS RoboMaker robot version.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::RoboMaker::RobotApplicationVersion",
+  "Properties" : {
+      "[Application](#cfn-robomaker-robotapplicationversion-application)" : String,
+      "[CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid)" : String
+    }
+}
+YAML
+Type: AWS::RoboMaker::RobotApplicationVersion
+Properties: 
+  [Application](#cfn-robomaker-robotapplicationversion-application): String
+  [CurrentRevisionId](#cfn-robomaker-robotapplicationversion-currentrevisionid): String
+Properties
+Application 
+The application information for the robot application.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1224
+Pattern: arn:.*
+Update requires: Replacement
+CurrentRevisionId 
+The current revision id for the robot application. If you provide a value and it matches the latest revision ID, a new version will be created.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 40
+Pattern: [a-zA-Z0-9_.\-]*
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of an AWS::RoboMaker::RobotApplicationVersion resource to the intrinsic Ref function, the function returns the Amazon Resource Name (ARN) of the robot application version, such as arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251. 
+For more information about using the Ref function, see Ref.
+Examples
+Create an AWS RoboMaker Robot Application Version
+The following example creates a robot application.
+JSON
+{
+  "Description": "RoboMaker RobotApplicationVersion example",
+  "Resources": {
+    "BasicRobotApplication": {
+      "Type": "AWS::RoboMaker::RobotApplication",
+      "Properties": {
+        "Name": "MyRobotApplication",
+        "Sources": [
+          {
+            "S3Bucket": "my-bucket",
+            "S3Key": "robot_bundle_x86.tar.gz",
+            "Architecture": "ARMHF"
+          }
+        ],
+        "RobotSoftwareSuite": {
+          "Name": "ROS",
+          "Version": "Kinetic"
+        }
+      }
+    },
+    "BasicRobotApplicationVersion": {
+      "Type": "AWS::RoboMaker::RobotApplicationVersion",
+      "Properties": {
+        "Application": { 
+          "Fn::GetAtt" : [ "BasicRobotApplication", "Arn" ] 
+        },
+        "CurrentRevisionId": { 
+          "Fn::GetAtt" : [ "BasicRobotApplication", "CurrentRevisionId" ] 
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "RobotApplicationVersion": {
+      "Value": "BasicRobotApplicationVersion"
+    }
+  }
+}
+YAML
+```
+Description: "RoboMaker RobotApplicationVersion example"
+Resources:
+  BasicRobotApplication:
+    Type: "AWS::RoboMaker::RobotApplication"
+    Properties:
+      Name: "MyRobotApplication"
+      Sources:
+        - S3Bucket: "my-bucket"
+          S3Key: "robot_bundle_x86.tar.gz"
+          Architecture: "ARMHF"
+      RobotSoftwareSuite:
+        Name: "ROS"
+        Version: "Kinetic"
+  BasicRobotApplicationVersion:
+    Type: "AWS::RoboMaker::RobotApplicationVersion"
+    Properties:
+      Application: !GetAtt BasicRobotApplication.Arn
+      CurrentRevisionId: !GetAtt BasicRobotApplication.CurrentRevisionId
+Outputs:
+  RobotApplicationVersion:
+    Value: !Ref BasicRobotApplicationVersion
+```

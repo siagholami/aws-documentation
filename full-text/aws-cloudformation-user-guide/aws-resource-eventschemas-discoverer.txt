@@ -1,0 +1,57 @@
+AWS::EventSchemas::Discoverer
+Use the AWS::EventSchemas::Discoverer resource to specify a discoverer that is associated with an event bus. A discoverer allows the Amazon EventBridge Schema Registry to automatically generate schemas based on events on an event bus. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EventSchemas::Discoverer",
+  "Properties" : {
+      "[Description](#cfn-eventschemas-discoverer-description)" : String,
+      "[SourceArn](#cfn-eventschemas-discoverer-sourcearn)" : String,
+      "[Tags](#cfn-eventschemas-discoverer-tags)" : [ TagsEntry, ... ]
+    }
+}
+YAML
+Type: AWS::EventSchemas::Discoverer
+Properties: 
+  [Description](#cfn-eventschemas-discoverer-description): String
+  [SourceArn](#cfn-eventschemas-discoverer-sourcearn): String
+  [Tags](#cfn-eventschemas-discoverer-tags): 
+    - TagsEntry
+Properties
+Description 
+A description for the discoverer.
+Required: No
+Type: String
+Update requires: No interruption
+SourceArn 
+The ARN of the event bus.
+Required: Yes
+Type: String
+Update requires: Replacement
+Tags 
+Tags associated with the resource.
+Required: No
+Type: List of TagsEntry
+Update requires: No interruption
+Return values
+Ref
+When you provide the logical ID of this resource to the Ref intrinsic function, Ref returns the ARN of the discoverer.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+DiscovererArn 
+The ARN of the discoverer.
+DiscovererId 
+The ID of the discoverer.
+Examples
+Generate Schemas for Events on the Default Event Bus
+YAML
+Resources:
+  MyDiscoverer:
+    Type: AWS::EventSchemas::Discoverer
+    Properties:
+      SourceArn: 'arn:aws:events:us-west-2:012345678910:event-bus/default'
+      Description: 'discover all custom schemas'

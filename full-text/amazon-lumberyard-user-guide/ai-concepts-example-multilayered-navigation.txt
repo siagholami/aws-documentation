@@ -1,0 +1,7 @@
+AI Multi-Layered Navigation
+Useful AI debug draw:
+ ai_useMNM=1 
+ ai_DebugDraw=1
+ ai_DebugDrawNavigation=1
+ ai_DrawPath=all
+ ai_DrawPathFollower=1

@@ -1,0 +1,23 @@
+Purging messages from an Amazon SQS queue (console)
+If you don't want to delete an Amazon SQS queue but need to delete all of the messages from it, purge the queue. The message deletion process takes up to 60 seconds. We recommend waiting for 60 seconds regardless of your queue's size. 
+Important
+When you purge a queue, you can't retrieve any of the deleted messages.
+To purge a queue (console)
+
+
+Open the Amazon SQS console at https://console.aws.amazon.com/sqs/.
+
+
+In the navigation pane, choose Queues.
+
+
+On the Queues page, choose the queue to purge. 
+
+
+Choose Purge.
+
+
+In the Purge queue dialog box, confirm the purge by entering purge and choosing Purge.
+
+
+All messages are purged from the queue. The console displays a confirmation banner.

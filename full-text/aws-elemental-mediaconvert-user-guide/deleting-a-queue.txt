@@ -1,0 +1,25 @@
+Deleting an on-demand queue in AWS Elemental MediaConvert
+You can delete any queue other than the default queue.
+Note
+You can't delete a queue that contains unprocessed jobs.
+To delete an on-demand queue
+
+
+Open the MediaConvert console at https://console.aws.amazon.com/mediaconvert.
+
+
+On the navigation bar of the MediaConvert console, choose the Region where you created the queue that you want to delete.
+
+
+
+Choose the three-bar icon on the left to access the left navigation pane.
+
+
+Choose Queues.
+
+
+On the Queues page, in the On-demand queues section, choose the name of the queue that you want to delete.
+
+
+On the queue's page, choose the Delete queue button.
+

@@ -1,0 +1,37 @@
+AWS::IoT::TopicRule CloudwatchAlarmAction
+Describes an action that updates a CloudWatch alarm.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname)" : String,
+  "[RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn)" : String,
+  "[StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason)" : String,
+  "[StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue)" : String
+}
+YAML
+[AlarmName](#cfn-iot-topicrule-cloudwatchalarmaction-alarmname): String
+  [RoleArn](#cfn-iot-topicrule-cloudwatchalarmaction-rolearn): String
+  [StateReason](#cfn-iot-topicrule-cloudwatchalarmaction-statereason): String
+  [StateValue](#cfn-iot-topicrule-cloudwatchalarmaction-statevalue): String
+Properties
+AlarmName 
+The CloudWatch alarm name.
+Required: Yes
+Type: String
+Update requires: No interruption
+RoleArn 
+The IAM role that allows access to the CloudWatch alarm.
+Required: Yes
+Type: String
+Update requires: No interruption
+StateReason 
+The reason for the alarm change.
+Required: Yes
+Type: String
+Update requires: No interruption
+StateValue 
+The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
+Required: Yes
+Type: String
+Update requires: No interruption

@@ -1,0 +1,81 @@
+AWS Snowball User Guide
+
+*Copyright © 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is an AWS Snowball Device?
+AWS Snowball Device Differences
+How AWS Snowball Works with the Standard Snowball device
+Jobs for Standard Snowball devices
+Setting Up Your AWS Access
+Getting Started with AWS Snowball
+Importing Data into Amazon S3 with AWS Snowball
+Create an Import Job
+Receive the AWS Snowball device
+Connect the AWS Snowball device to Your Local Network
+Transfer Data
+Return the device
+Monitor the Import Status
+
+
+Exporting Data from Amazon S3 with Snowball
+Create an Export Job
+Receive the AWS Snowball device
+Connect the AWS Snowball device to Your Local Network
+Transfer Data
+Return the device
+Repeat the Process
+
+
+Where Do I Go from Here?
+Best Practices for AWS Snowball
+Performance for AWS Snowball
+How to Transfer Petabytes of Data Efficiently
+Using the AWS Snowball Management Console
+Cloning an Import Job in the Console
+Using Export Ranges
+Getting Your Job Completion Report and Logs in the Console
+Canceling Jobs in the Console
+Using an AWS Snowball Device
+Transferring Data with the Snowball Client
+Using the Snowball Client
+Commands for the Snowball Client
+Options for the snowball cp Command
+Syntax for the snowball cp Command
+
+
+
+
+Transferring Data with the Amazon S3 Adapter for Snowball
+Using the Amazon S3 Adapter for Snowball
+Options for the Amazon S3 Adapter for Snowball
+Using the Adapter with Amazon S3 Commands for the AWS CLI
+Supported REST API Actions
+
+
+
+
+Shipping Considerations for AWS Snowball
+Shipping an AWS Snowball device
+Security in AWS Snowball
+Authorization and Access Control in AWS Snowball
+AWS Key Management Service in Snowball
+Authorization with the Amazon S3 API Adapter for Snowball
+Other Security Considerations for Snowball
+Data Validation in AWS Snowball
+Snowball Notifications
+AWS Snowball Specifications
+AWS Snowball Limits
+Troubleshooting for a Standard Snowball
+Job Management API Reference for AWS Snowball
+Document History
+

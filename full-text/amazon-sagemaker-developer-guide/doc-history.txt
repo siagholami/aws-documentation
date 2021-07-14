@@ -1,0 +1,66 @@
+Document History for Amazon SageMaker
+
+
+
+Change
+Description
+Date
+
+
+
+
+Studio Notebooks
+SageMaker Studio Notebooks
+April 28, 2020
+
+
+New features re:Invent 2019
+SageMaker Studio, SageMaker Studio Notebooks (preview), SageMaker Experiments, SageMaker Autopilot, SageMaker Debugger, SageMaker Model Monitor
+December 3, 2019
+
+
+New features re:Invent 2018
+Amazon SageMaker Ground Truth, Using Elastic Inference in Amazon SageMaker, SageMaker Resources in AWS Marketplace, SageMaker Inference Pipelines, SageMaker Neo, Manage Machine Learning Experiments with Search , Use Reinforcement Learning in Amazon SageMaker, Associating Git Repositories with Amazon SageMaker Notebook Instances, Semantic Segmentation, Using Augmented Manifest Files in TrainingJobs
+November 28, 2018
+
+
+Configuring notebook instances
+You can use shell scripts to configure notebook instances when you create or start them. For more information, see Customize a Notebook Instance.
+May 1, 2018
+
+
+Disable direct internet access
+You can now disable direct internet access for notebook instances. For more information, see Notebook Instances Are Enabled with Internet Access by Default.
+March 15, 2018
+
+
+Application Auto Scaling support
+Amazon SageMaker now supports Application Auto Scaling for production variants. For information, see Automatically Scaling SageMaker Models
+February 28, 2018
+
+
+TensorFlow 1.5 and MXNet 1.0 support
+Amazon SageMaker Deep Learning containers now support TensorFlow 1.5 and Apache MXNet 1.0.
+February 27, 2018
+
+
+BlazingText algorithm
+Amazon SageMaker now supports the BlazingText algorithm.
+January 18, 2018
+
+
+KMS encryption support for training and hosting
+Amazon SageMaker now supports KMS encryption for hosting instances and training model artifacts at rest. You can specify a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to a hosting endpoint by using the KmsKeyId request parameter in a call to  CreateEndpointConfig. You can specify an AWS KMS key that SageMaker uses to encrypt training model artifacts at rest by setting the KmsKeyId field of the  OutputDataConfig object you use to configure your training job.
+January 17, 2018
+
+
+CloudTrail support
+Amazon SageMaker now supports logging with AWS CloudTrail.
+January 11, 2018
+
+
+DeepAR Forecasting algorithm
+Amazon SageMaker now supports the DeepAR algorithm for time series forecasting.
+January 8, 2018
+
+

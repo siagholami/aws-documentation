@@ -1,0 +1,16 @@
+Update a historical metrics report
+After you save a report, you can update it at any time.
+To update a historical metrics report
+
+
+Log in to your contact center using your access URL (https://domain.awsapps.com/connect/login).
+
+
+Choose Metrics and quality, Saved reports.
+
+
+From the Historical metrics tab, choose the name of the report. Choose the gear icon, update the report settings as needed, and choose Apply.
+
+
+To update the current report, choose Save. To save your changes to a new report, choose Save as.
+

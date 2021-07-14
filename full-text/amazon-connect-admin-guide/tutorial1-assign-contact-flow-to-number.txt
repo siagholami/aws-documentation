@@ -1,0 +1,15 @@
+Step 5: Assign the contact flow to the phone number
+
+
+On the navigation menu, go to Routing, Phone Numbers.
+
+
+Choose your phone number.
+
+
+
+Use the drop-down box to choose the contact flow you just created, and then choose Save.
+
+
+
+Everything is all set up! Now you're ready to test your IT Help Desk. Go to Step 6: Test a custom voice and chat experience.

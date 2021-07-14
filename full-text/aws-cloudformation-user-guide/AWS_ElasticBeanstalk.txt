@@ -1,0 +1,6 @@
+AWS Elastic Beanstalk resource type reference
+Resource types
+ AWS::ElasticBeanstalk::Application
+ AWS::ElasticBeanstalk::ApplicationVersion
+ AWS::ElasticBeanstalk::ConfigurationTemplate
+ AWS::ElasticBeanstalk::Environment

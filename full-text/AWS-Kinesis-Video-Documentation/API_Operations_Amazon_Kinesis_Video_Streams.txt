@@ -1,0 +1,21 @@
+Amazon Kinesis Video Streams
+The following actions are supported by Amazon Kinesis Video Streams:
+  CreateSignalingChannel 
+  CreateStream 
+  DeleteSignalingChannel 
+  DeleteStream 
+  DescribeSignalingChannel 
+  DescribeStream 
+  GetDataEndpoint 
+  GetSignalingChannelEndpoint 
+  ListSignalingChannels 
+  ListStreams 
+  ListTagsForResource 
+  ListTagsForStream 
+  TagResource 
+  TagStream 
+  UntagResource 
+  UntagStream 
+  UpdateDataRetention 
+  UpdateSignalingChannel 
+  UpdateStream 

@@ -1,0 +1,71 @@
+AWS Cloud Development Kit (AWS CDK) Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is the AWS CDK?
+Getting started with the AWS CDK
+Your first AWS CDK app
+Working with the AWS CDK
+Working with the AWS CDK in TypeScript
+Working with the AWS CDK in JavaScript
+Working with the AWS CDK in Python
+Working with the AWS CDK in Java
+Working with the AWS CDK in C#
+Translating TypeScript AWS CDK code to other languages
+Concepts
+Constructs
+Apps
+Stacks
+Environments
+Resources
+Identifiers
+Tokens
+Parameters
+Tagging
+Assets
+Permissions
+Runtime context
+Feature flags
+Aspects
+Escape hatches
+Bootstrapping
+API reference
+Examples
+Creating a serverless application using the AWS CDK
+Creating an AWS Fargate service using the AWS CDK
+Creating a pipeline using the AWS CDK
+AWS CDK examples
+AWS CDK how-tos
+Get a value from an environment variable
+Use an AWS CloudFormation parameter
+Use an existing AWS CloudFormation template
+Get a value from the Systems Manager Parameter Store
+Get a value from AWS Secrets Manager
+Create an app with multiple stacks
+Set a CloudWatch alarm
+Get a value from a context variable
+Continuous integration and delivery (CI/CD) using CDK Pipelines
+AWS CDK tools
+AWS CDK Toolkit (cdk command)
+AWS Toolkit for Visual Studio Code
+SAM CLI
+Testing constructs
+Security for the AWS Cloud Development Kit (AWS CDK)
+Identity and access management for the AWS Cloud Development Kit (AWS CDK)
+Compliance validation for the AWS Cloud Development Kit (AWS CDK)
+Resilience for the AWS Cloud Development Kit (AWS CDK)
+Infrastructure security for the AWS Cloud Development Kit (AWS CDK)
+Troubleshooting common AWS CDK issues
+Videos
+OpenPGP keys for the AWS CDK and JSII
+AWS CDK Developer Guide history

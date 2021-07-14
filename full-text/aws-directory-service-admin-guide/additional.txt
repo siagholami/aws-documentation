@@ -1,0 +1,8 @@
+Related Resources
+The following resource links are located on the Microsoft website and provide related information. 
+ Extending the Schema (Windows)
+ Active Directory Schema (Windows)
+ Active Directory Schema
+ Windows Administration: Extending the Active Directory Schema
+ Restrictions on Schema Extension (Windows)
+ Ldifde

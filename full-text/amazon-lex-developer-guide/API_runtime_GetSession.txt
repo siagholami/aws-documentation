@@ -1,0 +1,100 @@
+GetSession
+Returns session information for a specified bot, alias, and user ID.
+Request Syntax
+GET /bot/botName/alias/botAlias/user/userId/session/?checkpointLabelFilter=checkpointLabelFilter HTTP/1.1
+URI Request Parameters
+The request uses the following URI parameters.
+ botAlias  
+The alias in use for the bot that contains the session data.
+Required: Yes
+ botName  
+The name of the bot that contains the session data.
+Required: Yes
+ checkpointLabelFilter  
+A string used to filter the intents returned in the recentIntentSummaryView structure. 
+When you specify a filter, only intents with their checkpointLabel field set to that string are returned.
+Length Constraints: Minimum length of 1. Maximum length of 255.
+Pattern: [a-zA-Z0-9-] 
+ userId  
+The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. 
+Length Constraints: Minimum length of 2. Maximum length of 100.
+Pattern: [0-9a-zA-Z._:-] 
+Required: Yes
+Request Body
+The request does not have a request body.
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "dialogAction": { 
+      "fulfillmentState": "string",
+      "intentName": "string",
+      "message": "string",
+      "messageFormat": "string",
+      "slots": { 
+         "string" : "string" 
+      },
+      "slotToElicit": "string",
+      "type": "string"
+   },
+   "recentIntentSummaryView": [ 
+      { 
+         "checkpointLabel": "string",
+         "confirmationStatus": "string",
+         "dialogActionType": "string",
+         "fulfillmentState": "string",
+         "intentName": "string",
+         "slots": { 
+            "string" : "string" 
+         },
+         "slotToElicit": "string"
+      }
+   ],
+   "sessionAttributes": { 
+      "string" : "string" 
+   },
+   "sessionId": "string"
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ dialogAction  
+Describes the current state of the bot.
+Type: DialogAction object
+ recentIntentSummaryView  
+An array of information about the intents used in the session. The array can contain a maximum of three summaries. If more than three intents are used in the session, the recentIntentSummaryView operation contains information about the last three intents used.
+If you set the checkpointLabelFilter parameter in the request, the array contains only the intents with the specified label.
+Type: Array of IntentSummary objects
+Array Members: Minimum number of 0 items. Maximum number of 3 items.
+ sessionAttributes  
+Map of key/value pairs representing the session-specific context information. It contains application information passed between Amazon Lex and a client application.
+Type: String to string map
+ sessionId  
+A unique identifier for the session.
+Type: String
+Errors
+BadRequestException 
+ Request validation failed, there is no usable message in the context, or the bot build failed, is still in progress, or contains unbuilt changes. 
+HTTP Status Code: 400
+InternalFailureException 
+Internal service error. Retry the call.
+HTTP Status Code: 500
+LimitExceededException 
+Exceeded a limit.
+HTTP Status Code: 429
+NotFoundException 
+The resource (such as the Amazon Lex bot or an alias) that is referred to is not found.
+HTTP Status Code: 404
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

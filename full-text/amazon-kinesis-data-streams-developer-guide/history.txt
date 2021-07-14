@@ -1,0 +1,127 @@
+Document History
+The following table describes the important changes to the Amazon Kinesis Data Streams documentation.
+
+
+
+Change
+Description
+Date Changed
+
+
+
+
+Added information about controlling access to VPCE endpoints for Kinesis Data Streams.
+For information, see Controlling Access to VPCE Endpoints for Kinesis Data Streams.
+August 23, 2019
+
+
+New documentation for consumers that use enhanced fan-out.
+For information, see Developing Custom Consumers with Dedicated Throughput (Enhanced Fan-Out).
+August 2, 2018
+
+
+Updated summary of service limits.
+Added Kinesis Data Streams Quotas and Limits.
+June 6, 2018
+
+
+New content for server-side encryption.
+Added Data Protection in Amazon Kinesis Data Streams.
+July 7, 2017
+
+
+New content for enhanced CloudWatch metrics.
+Updated Monitoring Amazon Kinesis Data Streams.
+April 19, 2016
+
+
+New content for enhanced Kinesis agent.
+Updated Writing to Amazon Kinesis Data Streams Using Kinesis Agent.
+April 11, 2016
+
+
+New content for using Kinesis agents.
+Added Writing to Amazon Kinesis Data Streams Using Kinesis Agent.
+October 2, 2015
+
+
+Update KPL content for release 0.10.0.
+Added Developing Producers Using the Amazon Kinesis Producer Library.
+July 15, 2015
+
+
+Update KCL metrics topic for configurable metrics.
+Added Monitoring the Kinesis Client Library with Amazon CloudWatch.
+July 9, 2015
+
+
+Re-organized content.
+Significantly re-organized content topics for more concise tree view and more logical grouping.
+July 01, 2015
+
+
+New KPL developer's guide topic.
+Added Developing Producers Using the Amazon Kinesis Producer Library.
+June 02, 2015
+
+
+New KCL metrics topic.
+Added Monitoring the Kinesis Client Library with Amazon CloudWatch.
+May 19, 2015
+
+
+Support for KCL .NET
+Added Developing a Kinesis Client Library Consumer in .NET.
+May 1, 2015
+
+
+Support for KCL Node.js
+Added Developing a Kinesis Client Library Consumer in Node.js.
+March 26, 2015
+
+
+Support for KCL Ruby
+Added links to KCL Ruby library.
+January 12, 2015
+
+
+New API PutRecords
+Added information about new PutRecords API to Adding Multiple Records with PutRecords.
+December 15, 2014
+
+
+Support for tagging
+Added Tagging Your Streams in Amazon Kinesis Data Streams.
+September 11, 2014
+
+
+New CloudWatch metric
+Added the metric GetRecords.IteratorAgeMilliseconds to Amazon Kinesis Data Streams Dimensions and Metrics.
+September 3, 2014
+
+
+New monitoring chapter
+Added Monitoring Amazon Kinesis Data Streams and Monitoring the Amazon Kinesis Data Streams Service with Amazon CloudWatch.
+July 30, 2014
+
+
+Default shard limit
+Updated the Kinesis Data Streams Quotas and Limits: the default shard limit has been raised from 5 to 10.
+February 25, 2014
+
+
+Default shard limit
+Updated the Kinesis Data Streams Quotas and Limits: the default shard limit has been raised from 2 to 5.
+January 28, 2014
+
+
+API version updates
+Updates for version 2013-12-02 of the Kinesis Data Streams API.
+December 12, 2013
+
+
+Initial release
+Initial release of the Amazon Kinesis Developer Guide.
+November 14, 2013
+
+

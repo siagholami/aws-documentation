@@ -1,0 +1,75 @@
+Setting Up a VPC to Connect to JDBC Data Stores
+To enable AWS Glue components to communicate, you must set up access to your data stores, such as Amazon Redshift and Amazon RDS. To enable AWS Glue to communicate between its components, specify a security group with a self-referencing inbound rule for all TCP ports. By creating a self-referencing rule, you can restrict the source to the same security group in the VPC, and it's not open to all networks. The default security group for your VPC might already have a self-referencing inbound rule for ALL Traffic. 
+To set up access for Amazon Redshift data stores
+
+
+Sign in to the AWS Management Console and open the Amazon Redshift console at https://console.aws.amazon.com/redshift/.
+
+
+In the left navigation pane, choose Clusters.
+
+
+Choose the cluster name that you want to access from AWS Glue.
+
+
+In the Cluster Properties section, choose a security group in VPC security groups to allow AWS Glue to use. Record the name of the security group that you chose for future reference. Choosing the security group opens the Amazon EC2 console Security Groups list.
+
+
+Choose the security group to modify and navigate to the Inbound tab.
+
+
+Add a self-referencing rule to allow AWS Glue components to communicate. Specifically, add or confirm that there is a rule of Type All TCP, Protocol is TCP, Port Range includes all ports, and whose Source is the same security group name as the Group ID. 
+
+
+The inbound rule looks similar to the following:   
+
+[See the AWS documentation website for more details]
+For example:
+
+
+Add a rule for outbound traffic also. Either open outbound traffic to all ports, for example:  
+
+
+[See the AWS documentation website for more details]
+Or create a self-referencing rule where Type All TCP, Protocol is TCP, Port Range includes all ports, and whose Destination is the same security group name as the Group ID. If using an Amazon S3 VPC endpoint, also add an HTTPS rule for Amazon S3 access. The s3-prefix-list-id is required in the security group rule to allow traffic from the VPC to the Amazon S3 VPC endpoint.
+For example:  
+
+[See the AWS documentation website for more details]
+To set up access for Amazon RDS data stores
+
+
+Sign in to the AWS Management Console and open the Amazon RDS console at https://console.aws.amazon.com/rds/.
+
+
+In the left navigation pane, choose Instances.
+
+
+Choose the Amazon RDS Engine and DB Instance name that you want to access from AWS Glue.
+
+
+From Instance Actions, choose See Details. On the Details tab, find the Security Groups name you will access from AWS Glue. Record the name of the security group for future reference.
+
+
+Choose the security group to open the Amazon EC2 console.
+
+
+Confirm that your Group ID from Amazon RDS is chosen, then choose the Inbound tab.
+
+
+Add a self-referencing rule to allow AWS Glue components to communicate. Specifically, add or confirm that there is a rule of Type All TCP, Protocol is TCP, Port Range includes all ports, and whose Source is the same security group name as the Group ID. 
+
+
+The inbound rule looks similar to this:  
+
+[See the AWS documentation website for more details]
+For example:
+
+
+Add a rule for outbound traffic also. Either open outbound traffic to all ports, for example:  
+
+
+[See the AWS documentation website for more details]
+Or create a self-referencing rule where Type All TCP, Protocol is TCP, Port Range includes all ports, and whose Destination is the same security group name as the Group ID. If using an Amazon S3 VPC endpoint, also add an HTTPS rule for Amazon S3 access. The s3-prefix-list-id is required in the security group rule to allow traffic from the VPC to the Amazon S3 VPC endpoint.
+For example:  
+
+[See the AWS documentation website for more details]

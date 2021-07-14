@@ -1,0 +1,14 @@
+Working with AWS Services
+AWS Explorer gives you a view of, and allows you to manipulate, multiple Amazon Web Services simultaneously. This section provides information about how to access and use the AWS Explorer view in Eclipse.
+It assumes that you’ve already installed the AWS Toolkit for Eclipse on your system.
+Topics
+ How to Access AWS Explorer
+ Using Lambda with the AWS Toolkit for Eclipse
+ The AWS CloudFormation Template Editor
+ Using DynamoDB with AWS Explorer
+ Launch an Amazon EC2 Instance from an Amazon Machine Image
+ Managing Security Groups from AWS Explorer
+ Viewing and Adding Amazon SNS Notifications
+ Connecting to Amazon Relational Database Service (Amazon RDS)
+ Identity and Access Management
+ Debug Serverless Applications Using AWS SAM Local

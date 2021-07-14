@@ -1,0 +1,8 @@
+Troubleshooting
+When you have a problem with AWS Data Pipeline, the most common symptom is that a pipeline doesn't run. You can use the data that the console and CLI provide to identity the problem and find a solution.
+Topics
+ Locating Errors in Pipelines
+ Identifying the Amazon EMR Cluster that Serves Your Pipeline
+ Interpreting Pipeline Status Details
+ Locating Error Logs
+ Resolving Common Problems

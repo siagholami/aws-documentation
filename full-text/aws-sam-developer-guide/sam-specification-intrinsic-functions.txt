@@ -1,0 +1,2 @@
+Intrinsic Functions
+Intrinsic functions are built-in functions that enable you to assign values to properties that are only available at runtime. For more information about intrinsic functions, see Intrinsic Function Reference in the AWS CloudFormation User Guide.

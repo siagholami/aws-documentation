@@ -1,0 +1,16 @@
+Amazon Rekognition Custom Labels API Reference
+The Amazon Rekognition Custom Labels API is documented as part of the Amazon Rekognition API reference content. This is a list of the Amazon Rekognition Custom Labels API operations with links to the appropriate Amazon Rekognition API reference topic. Also, API reference links within this document go to the appropriate Amazon Rekognition Developer Guide API reference topic.
+Training Your Model
+
+CreateProject — Creates your Amazon Rekognition Custom Labels project which is a logical grouping of resources (images, Labels, models) and operations (training, evaluation and detection).
+CreateProjectVersion — Trains your Amazon Rekognition Custom Labels model using the provided training and test datasets. Optionally you can autosplit a training dataset to create a test dataset.
+DeleteProject — Deletes an Amazon Rekognition Custom Labels project.
+DeleteProjectVersion — Deletes an Amazon Rekognition Custom Labels model.
+DescribeProjects — Returns a list of all your projects. 
+DescribeProjectVersions — Returns a list of all the custom labels models within a specific project.
+
+Using Your Model
+
+DetectCustomLabels — Analyzes an image with your custom labels model. 
+StartProjectVersion — Starts your custom labels model.
+StopProjectVersion — Stops your custom labels model. 

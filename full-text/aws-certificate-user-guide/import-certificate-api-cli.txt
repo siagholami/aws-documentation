@@ -1,0 +1,45 @@
+Import a Certificate
+You can import a certificate into ACM by using the AWS Management Console, the AWS CLI, or the ACM API. The following topics show you how to use the AWS Management Console and the AWS CLI. 
+Topics
+ Import Using the Console
+ Import Using the AWS CLI
+Import Using the Console
+The following example shows how to import a certificate using the AWS Management Console.
+
+
+Open the ACM console at https://console.aws.amazon.com/acm/home. If this is your first time using ACM, look for the AWS Certificate Manager heading and choose the Get started button under it.
+
+
+Choose Import a certificate.
+
+
+Do the following:
+
+
+For Certificate body, paste the PEM-encoded certificate to import.
+
+
+For Certificate private key, paste the PEM-encoded, unencrypted private key that matches the certificate's public key. 
+Important
+ Currently, Services Integrated with AWS Certificate Manager support only the RSA_1024 and RSA_2048 algorithms. 
+
+
+(Optional) For Certificate chain, paste the PEM-encoded certificate chain.
+
+
+Choose Review and import.
+
+
+Review the information about your certificate, then choose Import.
+
+
+Import Using the AWS CLI
+The following example shows how to import a certificate using the AWS Command Line Interface (AWS CLI). The example assumes the following:
+ The PEM-encoded certificate is stored in a file named Certificate.pem.
+ The PEM-encoded certificate chain is stored in a file named CertificateChain.pem.
+ The PEM-encoded, unencrypted private key is stored in a file named PrivateKey.pem.
+To use the following example, replace the file names with your own and type the command on one continuous line. The following example includes line breaks and extra spaces to make it easier to read.
+$ aws acm import-certificate --certificate file://Certificate.pem
+                                 --certificate-chain file://CertificateChain.pem
+                                 --private-key file://PrivateKey.pem
+If the import-certificate command is successful, it returns the Amazon Resource Name (ARN) of the imported certificate. 

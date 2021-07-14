@@ -1,0 +1,18 @@
+TO_HEX function
+The TO_HEX function converts a number to its equivalent hexadecimal value. 
+Syntax
+TO_HEX(string)
+Arguments
+number 
+A number to convert to its hexadecimal value. 
+Return type
+The TO_HEX function returns a hexadecimal value. 
+Examples
+The following example shows the conversion of a number to its hexadecimal value: 
+```
+select to_hex(2147676847);
+to_hex
+
+8002f2af
+(1 row)
+```

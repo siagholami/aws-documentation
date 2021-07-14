@@ -1,0 +1,23 @@
+Getting Started with Cookbooks in AWS OpsWorks Stacks
+A production-level AWS OpsWorks Stacks stack typically requires some customization, which often means implementing a custom Chef cookbook. A cookbook is a package file that contains configuration information, including instructions called recipes. A recipe is a set of one or more instructions, written with Ruby language syntax, that specifies the resources to use and the order in which those resources are applied. A resource, as used in Chef, is a statement of configuration policy. This walkthrough provides a basic introduction to implementing Chef cookbooks for AWS OpsWorks Stacks. To learn more about Chef, cookbooks, recipes, and resources, see the links in Next Steps.
+This walkthrough mostly describes how to create your own cookbooks. You can also use community-provided cookbooks available on websites like the Chef Supermarket. To help you get started with community cookbooks, we include instructions for using a community cookbook from the Chef Supermarket later in the walkthrough.
+Before you start this walkthrough, complete a few setup steps. If you have already completed any of the other walkthroughs in this chapter, such as Getting Started: Sample, then you have met the prerequisites for this walkthrough and can skip to start this walkthrough. Otherwise, be sure to complete the prerequisites, and then return to this walkthrough.
+Topics
+ Step 1: Create the Cookbook
+ Step 2: Create the Stack and its Components
+ Step 3: Run and Test the Recipe
+ Step 4: Update the Cookbook to Install a Package
+ Step 5: Update the Cookbook on the Instance and Run the Recipe
+ Step 6: Update the Cookbook to Add a User
+ Step 7: Update the Cookbook to Create a Directory
+ Step 8: Update the Cookbook to Create and Copy Files
+ Step 9: Update the Cookbook to Run a Command
+ Step 10: Update the Cookbook to Run a Script
+ Step 11: Update the Cookbook to Manage a Service
+ Step 12: Update the Cookbook to Use Custom JSON
+ Step 13: Update the Cookbook to Use Data Bags
+ Step 14: Update the Cookbook to Use Iteration
+ Step 15: Update the Cookbook to Use Conditional Logic
+ Step 16: Update the Cookbook to Use Community Cookbooks
+ Step 17: (Optional) Clean Up
+ Next Steps

@@ -1,0 +1,2 @@
+Call a REST API through AWS Amplify
+You can use AWS Amplify to make API requests to an API Gateway REST API. Amplify can use Amazon Cognito to get AWS credentials and call a REST API that uses AWS Identity and Access Management authorization. For more information, see the instructions in the AWS Amplify API Guide. 

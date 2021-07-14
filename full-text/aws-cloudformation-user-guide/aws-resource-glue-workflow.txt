@@ -1,0 +1,46 @@
+AWS::Glue::Workflow
+The AWS::Glue::Workflow is an AWS Glue resource type that manages AWS Glue workflows. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue. Using a workflow, you can design a complex multi-job extract, transform, and load (ETL) activity that AWS Glue can execute and track as single entity
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Glue::Workflow",
+  "Properties" : {
+      "[DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties)" : Json,
+      "[Description](#cfn-glue-workflow-description)" : String,
+      "[Name](#cfn-glue-workflow-name)" : String,
+      "[Tags](#cfn-glue-workflow-tags)" : Json
+    }
+}
+YAML
+Type: AWS::Glue::Workflow
+Properties: 
+  [DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties): Json
+  [Description](#cfn-glue-workflow-description): String
+  [Name](#cfn-glue-workflow-name): String
+  [Tags](#cfn-glue-workflow-tags): Json
+Properties
+DefaultRunProperties 
+A collection of properties to be used as part of each execution of the workflow
+Required: No
+Type: Json
+Update requires: No interruption
+Description 
+A description of the workflow
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of the workflow representing the flow
+Required: No
+Type: String
+Update requires: Replacement
+Tags 
+The tags to use with this workflow.
+Required: No
+Type: Json
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the workflow name.
+For more information about using the Ref function, see Ref.

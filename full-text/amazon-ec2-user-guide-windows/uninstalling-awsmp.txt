@@ -1,0 +1,33 @@
+Uninstalling the AWS Management Pack
+If you need to uninstall the AWS Management Pack, use the following procedure.
+System Center 2012
+To uninstall the AWS Management Pack
+
+
+In the Operations console, on the Go menu, click Administration, and then click Management Packs.
+
+
+Right-click Amazon Web Services and select Delete.
+
+
+In the Dependent Management Packs dialog box, note the dependent management packs, and then click Close.
+
+
+Right-click the dependent management pack and select Delete.
+
+
+Right-click Amazon Web Services and select Delete.
+
+
+System Center 2007 R2
+To uninstall the AWS Management Pack
+
+
+Complete steps 1 through 5 described for System Center 2012 in the previous section.
+
+
+From Control Panel, open Programs and Features. Select Amazon Web Services Management Pack and then click Uninstall.
+
+
+If your root management server, Operations console, and watcher node are on different computers, you must repeat this process on each computer.
+

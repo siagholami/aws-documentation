@@ -1,0 +1,5 @@
+Deleting objects
+AWS Elemental MediaStore offers different options for deleting objects from containers:
+ Delete an individual object. No charges apply.
+ Empty a container to delete all objects within a container at once. Because this process uses API calls, normal API charges apply.
+ Add an object lifecycle policy to delete objects when they reach a certain age. No charges apply.

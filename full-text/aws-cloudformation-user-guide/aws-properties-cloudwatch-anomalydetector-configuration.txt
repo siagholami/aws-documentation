@@ -1,0 +1,25 @@
+AWS::CloudWatch::AnomalyDetector Configuration
+Specifies details about how the anomaly detection model is to be trained, including time ranges to exclude when training and updating the model. The configuration can also include the time zone to use for the metric.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ExcludedTimeRanges](#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)" : [ Range, ... ],
+  "[MetricTimeZone](#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)" : String
+}
+YAML
+[ExcludedTimeRanges](#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges): 
+    - Range
+  [MetricTimeZone](#cfn-cloudwatch-anomalydetector-configuration-metrictimezone): String
+Properties
+ExcludedTimeRanges 
+Specifies an array of time ranges to exclude from use when the anomaly detection model is trained and updated. Use this to make sure that events that could cause unusual values for the metric, such as deployments, aren't used when CloudWatch creates or updates the model.
+Required: No
+Type: List of Range
+Update requires: No interruption
+MetricTimeZone 
+The time zone to use for the metric. This is useful to enable the model to automatically account for daylight savings time changes if the metric is sensitive to such time changes. 
+To specify a time zone, use the name of the time zone as specified in the standard tz database. For more information, see tz database.
+Required: No
+Type: String
+Update requires: No interruption

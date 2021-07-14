@@ -1,0 +1,60 @@
+STL views for logging
+STL system views are generated from Amazon Redshift log files to provide a history of the system.
+These files reside on every node in the data warehouse cluster. The STL views take the information from the logs and format them into usable views for system administrators.
+To manage disk space, the STL log views only retain approximately two to five days of log history, depending on log usage and available disk space. If you want to retain the log data, you will need to periodically copy it to other tables or unload it to Amazon S3.
+Topics
+ STL_AGGR
+ STL_ALERT_EVENT_LOG
+ STL_ANALYZE
+ STL_ANALYZE_COMPRESSION
+ STL_BCAST
+ STL_COMMIT_STATS
+ STL_CONNECTION_LOG
+ STL_DDLTEXT
+ STL_DELETE
+ STL_DISK_FULL_DIAG
+ STL_DIST
+ STL_ERROR
+ STL_EXPLAIN
+ STL_FILE_SCAN
+ STL_HASH
+ STL_HASHJOIN
+ STL_INSERT
+ STL_LIMIT
+ STL_LOAD_COMMITS
+ STL_LOAD_ERRORS
+ STL_LOADERROR_DETAIL
+ STL_MERGE
+ STL_MERGEJOIN
+ STL_MV_STATE
+ STL_NESTLOOP
+ STL_PARSE
+ STL_PLAN_INFO
+ STL_PROJECT
+ STL_QUERY
+ STL_QUERY_METRICS
+ STL_QUERYTEXT
+ STL_REPLACEMENTS
+ STL_RESTARTED_SESSIONS
+ STL_RETURN
+ STL_S3CLIENT
+ STL_S3CLIENT_ERROR
+ STL_SAVE
+ STL_SCAN
+ STL_SCHEMA_QUOTA_VIOLATIONS
+ STL_SESSIONS
+ STL_SORT
+ STL_SSHCLIENT_ERROR
+ STL_STREAM_SEGS
+ STL_TR_CONFLICT
+ STL_UNDONE
+ STL_UNIQUE
+ STL_UNLOAD_LOG
+ STL_USAGE_CONTROL
+ STL_USERLOG
+ STL_UTILITYTEXT
+ STL_VACUUM
+ STL_WINDOW
+ STL_WLM_ERROR
+ STL_WLM_RULE_ACTION
+ STL_WLM_QUERY

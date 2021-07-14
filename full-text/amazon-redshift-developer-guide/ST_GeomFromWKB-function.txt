@@ -1,0 +1,24 @@
+ST_GeomFromWKB
+ST_GeomFromWKB constructs a geometry object from a hexadecimal well-known binary (WKB) representation of an input geometry. 
+Syntax
+ST_GeomFromWKB(wkb_string)
+ST_GeomFromWKB(wkb_string, srid)
+Arguments
+wkb_string 
+A value of data type VARCHAR that is a hexadecimal WKB representation of a geometry.
+srid 
+A value of data type INTEGER that is a spatial reference identifier (SRID). If an SRID value is provided, the returned geometry has this SRID value. Otherwise, the SRID value of the returned geometry is set to 0.
+Return type
+GEOMETRY
+If wkb_string or srid is null, then null is returned. 
+If srid is negative, then null is returned. 
+If wkb_string is not valid, then an error is returned. 
+If srid is not valid, then an error is returned. 
+Examples
+The following SQL constructs a polygon from a WKB value and returns the WKT representation of a polygon. 
+SELECT ST_AsText(ST_GeomFromWKB('01030000000100000005000000000000000000000000000000000000000000000000000000000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000000000000000000000000000000000000000'));
+```
+ st_astext
+
+POLYGON((0 0,0 1,1 1,1 0,0 0))
+```

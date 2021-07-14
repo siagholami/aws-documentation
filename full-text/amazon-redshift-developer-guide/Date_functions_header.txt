@@ -1,0 +1,57 @@
+Date and time functions
+In this section, you can find information about the date and time scalar functions that Amazon Redshift supports.
+Topics
+ Summary of date and time functions
+ Date and time functions in transactions
+ Deprecated leader node-only functions
+ ADD_MONTHS function
+ AT TIME ZONE function
+ CONVERT_TIMEZONE function
+ CURRENT_DATE function
+ DATE_CMP function
+ DATE_CMP_TIMESTAMP function
+ DATE_CMP_TIMESTAMPTZ function
+ DATE_PART_YEAR function
+ DATEADD function
+ DATEDIFF function
+ DATE_PART function
+ DATE_TRUNC function
+ EXTRACT function
+ GETDATE function
+ INTERVAL_CMP function
+ LAST_DAY function
+ MONTHS_BETWEEN function
+ NEXT_DAY function
+ SYSDATE function
+ TIMEOFDAY function
+ TIMESTAMP_CMP function
+ TIMESTAMP_CMP_DATE function
+ TIMESTAMP_CMP_TIMESTAMPTZ function
+ TIMESTAMPTZ_CMP function
+ TIMESTAMPTZ_CMP_DATE function
+ TIMESTAMPTZ_CMP_TIMESTAMP function
+ TIMEZONE function
+ TO_TIMESTAMP function
+ TRUNC Date function
+ Dateparts for Date or Time Stamp functions
+Summary of date and time functions
+[See the AWS documentation website for more details]
+Note
+Leap seconds are not considered in elapsed-time calculations.
+Date and time functions in transactions
+When you execute the following functions within a transaction block (BEGIN … END), the function returns the start date or time of the current transaction, not the start of the current statement.
+ SYSDATE
+ TIMESTAMP
+ CURRENT_DATE
+The following functions always return the start date or time of the current statement, even when they are within a transaction block.
+ GETDATE
+ TIMEOFDAY
+Deprecated leader node-only functions
+The following date functions are deprecated because they execute only on the leader node. For more information, see Leader node–only functions.
+ AGE. Use DATEDIFF function instead.
+ CURRENT_TIME. Use GETDATE function or SYSDATE instead. 
+ CURRENT_TIMESTAMP. Use GETDATE function or SYSDATE instead.
+ LOCALTIME. Use GETDATE function or SYSDATE instead.
+ LOCALTIMESTAMP. Use GETDATE function or SYSDATE instead.
+ ISFINITE 
+ NOW. Use GETDATE function or SYSDATE instead.

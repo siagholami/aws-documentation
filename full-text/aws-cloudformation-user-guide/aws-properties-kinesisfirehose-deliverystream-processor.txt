@@ -1,0 +1,25 @@
+AWS::KinesisFirehose::DeliveryStream Processor
+The Processor property specifies a data processor for an Amazon Kinesis Data Firehose delivery stream.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Parameters](#cfn-kinesisfirehose-deliverystream-processor-parameters)" : [ ProcessorParameter, ... ],
+  "[Type](#cfn-kinesisfirehose-deliverystream-processor-type)" : String
+}
+YAML
+[Parameters](#cfn-kinesisfirehose-deliverystream-processor-parameters): 
+    - ProcessorParameter
+  [Type](#cfn-kinesisfirehose-deliverystream-processor-type): String
+Properties
+Parameters 
+The processor parameters.
+Required: No
+Type: List of ProcessorParameter
+Update requires: No interruption
+Type 
+The type of processor. Valid values: Lambda. 
+Required: Yes
+Type: String
+Allowed values: Lambda
+Update requires: No interruption

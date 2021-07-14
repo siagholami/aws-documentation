@@ -1,0 +1,22 @@
+AWS::LakeFormation::DataLakeSettings
+The AWS::LakeFormation::DataLakeSettings resource is an AWS Lake Formation resource type that manages the data lake settings for your account. Note that the CloudFormation template only supports updating the Admins list. It does not support updating the CreateDatabaseDefaultPermissions or CreateTableDefaultPermissions. Those permissions can only be edited in the DataLakeSettings resource via the API.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::LakeFormation::DataLakeSettings",
+  "Properties" : {
+      "[Admins](#cfn-lakeformation-datalakesettings-admins)" : Admins
+    }
+}
+YAML
+Type: AWS::LakeFormation::DataLakeSettings
+Properties: 
+  [Admins](#cfn-lakeformation-datalakesettings-admins): 
+    Admins
+Properties
+Admins 
+A list of AWS Lake Formation principals.
+Required: No
+Type: Admins
+Update requires: No interruption

@@ -1,0 +1,105 @@
+Cloud Directory Resources
+The following tables list related resources that you'll find useful as you work with this service.
+
+
+
+Cloud Directory Getting Started
+Link
+
+
+
+
+Cloud Directory Webinar
+https://www.youtube.com/watch?v=UANm3DC_IxE
+
+
+Cloud Directory Sample Java Code
+https://github.com/aws-samples/AmazonCloudDirectory-sample
+
+
+
+
+
+
+Cloud Directory Blog Posts
+Description
+
+
+
+
+How to rapidly develop applications on Amazon Cloud Directory with Managed Schema
+This blog post explains about rapidly prototyping and developing on Cloud Directory using managed schema. It also includes sample Java code.
+
+
+How to Search More Efficiently in Amazon Cloud Directory
+This blog post explains about searching more efficiently using facet-based indexing. It also includes sample Java code.
+
+
+How to Easily Apply Amazon Cloud Directory Schema Changes with In-Place Schema Upgrades 
+This blog post explains about performing an in-place schema upgrade for any operational (running) Cloud Directory. It also includes sample Java code.
+
+
+Write and Read Multiple Objects in Amazon Cloud Directory by Using Batch Operations
+Explains about using Batch Read and Write. It also includes sample Java code.
+
+
+How to Use Batch References in Amazon Cloud Directory to Refer to New Objects in a Batch Request
+Explains about using Batch Reference. It also includes sample Java code.
+
+
+Cloud Directory Update – Support for Typed Links
+Explains about creating and searching relationships across hierarchies in Cloud Directory by using typed links. It also includes sample Java code.
+
+
+New Cloud Directory API Makes It Easier to Query Data Along Multiple Dimensions
+Explains how to query for data across multiple dimensions with a single call using the ListObjectParentPaths API.
+
+
+How to Create an Organizational Chart with Separate Hierarchies by Using Amazon Cloud Directory
+Explains how to create a schema and a directory with sample Java code.
+
+
+Amazon Cloud Directory – A Cloud-Native Directory for Hierarchical Data
+Describes the launch of Cloud Directory as a new service from AWS.
+
+
+
+
+
+
+Cloud Directory Documentation
+Link
+
+
+
+
+Cloud Directory Developer Guide
+https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html
+
+
+Cloud Directory API Reference
+http://docs.aws.amazon.com/clouddirectory/latest/APIReference/welcome.html
+
+
+Cloud Directory Limits
+https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html
+
+
+
+
+
+
+Cloud Directory Other
+Link
+
+
+
+
+Cloud Directory Product Info
+https://aws.amazon.com/cloud-directory/
+
+
+Cloud Directory Pricing
+https://aws.amazon.com/cloud-directory/pricing/
+
+

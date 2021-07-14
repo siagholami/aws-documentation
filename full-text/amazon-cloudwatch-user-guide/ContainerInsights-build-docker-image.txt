@@ -1,0 +1,2 @@
+Building Your Own CloudWatch Agent Docker Image
+You can build your own CloudWatch agent Docker image by referring to the Dockerfile located at  https://github.com/aws-samples/amazon-cloudwatch-container-insights/blob/master/cloudwatch-agent-dockerfile/Dockerfile.

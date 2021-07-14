@@ -1,0 +1,25 @@
+AWS::KinesisFirehose::DeliveryStream EncryptionConfiguration
+The EncryptionConfiguration property type specifies the encryption settings that Amazon Kinesis Data Firehose (Kinesis Data Firehose) uses when delivering data to Amazon Simple Storage Service (Amazon S3). 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig)" : KMSEncryptionConfig,
+  "[NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig)" : String
+}
+YAML
+[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig): 
+    KMSEncryptionConfig
+  [NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig): String
+Properties
+KMSEncryptionConfig 
+The AWS Key Management Service (AWS KMS) encryption key that Amazon S3 uses to encrypt your data. 
+Required: No
+Type: KMSEncryptionConfig
+Update requires: No interruption
+NoEncryptionConfig 
+Disables encryption. For valid values, see the NoEncryptionConfig content for the EncryptionConfiguration data type in the Amazon Kinesis Data Firehose API Reference. 
+Required: No
+Type: String
+Allowed values: NoEncryption
+Update requires: No interruption

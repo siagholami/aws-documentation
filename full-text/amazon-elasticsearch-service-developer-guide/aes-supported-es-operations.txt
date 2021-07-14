@@ -1,0 +1,610 @@
+Supported Elasticsearch Operations
+Amazon ES supports many versions of Elasticsearch. The following topics show the operations that Amazon ES supports for each version.
+Topics
+ Notable API Differences
+ Version 7.7
+ Version 7.4
+ Version 7.1
+ Version 6.8
+ Version 6.7
+ Version 6.5
+ Version 6.4
+ Version 6.3
+ Version 6.2
+ Version 6.0
+ Version 5.6
+ Version 5.5
+ Version 5.3
+ Version 5.1
+ Version 2.3
+ Version 1.5
+Notable API Differences
+Settings and Statistics
+Amazon ES only accepts PUT requests to the _cluster/settings API that use the "flat" settings form. It rejects requests that use the expanded settings form.
+```
+// Accepted
+PUT _cluster/settings
+{
+  "persistent" : {
+    "action.auto_create_index" : false
+  }
+}
+// Rejected
+PUT _cluster/settings
+{
+  "persistent": {
+    "action": {
+      "auto_create_index": false
+    }
+  }
+}
+```
+The high-level Java REST client uses the expanded form, so if you need to send settings requests, use the low-level client.
+Prior to Elasticsearch 5.3, the _cluster/settings API on Amazon ES domains supported only the HTTP PUT method, not the GET method. Later versions support the GET method, as shown in the following example:
+GET https://domain.region.es.amazonaws.com/_cluster/settings?pretty
+Here is a return example:
+{
+  "persistent": {
+    "cluster": {
+      "routing": {
+        "allocation": {
+          "cluster_concurrent_rebalance": "2",
+          "node_concurrent_recoveries": "2",
+          "disk": {
+            "watermark": {
+              "low": "1.35gb",
+              "flood_stage": "0.45gb",
+              "high": "0.9gb"
+            }
+          },
+          "node_initial_primaries_recoveries": "4"
+        }
+      }
+    },
+    "indices": {
+      "recovery": {
+        "max_bytes_per_sec": "40mb"
+      }
+    }
+  }
+}
+If you compare responses from an open source Elasticsearch cluster and Amazon ES for certain settings and statistics APIs, you might notice missing fields. Amazon ES redacts certain information that exposes service internals, such as the file system data path from _nodes/stats or the operating system name and version from _nodes.
+Shrink
+The _shrink API can cause upgrades, configuration changes, and domain deletions to fail. We don't recommend using it on domains that run Elasticsearch versions 5.3 or 5.1. These versions have a bug that can cause snapshot restoration of shrunken indices to fail.
+If you use the _shrink API on other Elasticsearch versions, make the following request before starting the shrink operation:
+PUT https://domain.region.es.amazonaws.com/source-index/_settings
+{
+  "settings": {
+    "index.routing.allocation.require._name": "name-of-the-node-to-shrink-to",
+    "index.blocks.read_only": true
+  }
+}
+Then make the following requests after completing the shrink operation:
+```
+PUT https://domain.region.es.amazonaws.com/source-index/_settings
+{
+  "settings": {
+    "index.routing.allocation.require._name": null,
+    "index.blocks.read_only": false
+  }
+}
+PUT https://domain.region.es.amazonaws.com/shrunken-index/_settings
+{
+  "settings": {
+    "index.routing.allocation.require._name": null,
+    "index.blocks.read_only": false
+  }
+}
+```
+Version 7.7
+For Elasticsearch 7.7, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 7.4
+For Elasticsearch 7.4, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 7.1
+For Elasticsearch 7.1, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.8
+For Elasticsearch 6.8, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.7
+For Elasticsearch 6.7, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.5
+For Elasticsearch 6.5, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.4
+For Elasticsearch 6.4, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.3
+For Elasticsearch 6.3, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.2
+For Elasticsearch 6.2, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 6.0
+For Elasticsearch 6.0, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 5.6
+For Elasticsearch 5.6, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 5.5
+For Elasticsearch 5.5, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+For considerations about using scripts, see Other Supported Resources.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 5.3
+For Elasticsearch 5.3, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+Refers to the PUT method. For information about the GET method, see Notable API Differences.
+
+
+See Shrink.
+
+
+Version 5.1
+For Elasticsearch 5.1, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+
+
+Cluster configuration changes might interrupt these operations before completion. We recommend that you use the /_tasks operation along with these operations to verify that the requests completed successfully.
+
+
+DELETE requests to /_search/scroll with a message body must specify "Content-Length" in the HTTP header. Most clients add this header by default. To avoid a problem with = characters in scroll_id values, use the request body, not the query string, to pass scroll_id values to Amazon ES.
+
+
+See Shrink.
+
+
+Version 2.3
+For Elasticsearch 2.3, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+
+
+Version 1.5
+For Elasticsearch 1.5, Amazon ES supports the following operations.
+
+
+
+
+
+
+
+
+
+[See the AWS documentation website for more details]
+[See the AWS documentation website for more details]
+
+

@@ -1,0 +1,4 @@
+Asia/Oceania
+You can use the following top-level domains (TLDs) for Asia and Oceania to register domains with Amazon Route 53.
+.cc (Cocos (Keeling) Islands), .co.nz (New Zealand), .com.au (Australia), .com.sg (Republic of Singapore), .fm (Federated States of Micronesia), .in (India), .jp (Japan), .io (British Indian Ocean Territory), .net.au (Australia), .net.nz (New Zealand), .org.nz (New Zealand), .qa (Qatar), .ru (Russian Federation), .sg (Republic of Singapore) 
+Return to index

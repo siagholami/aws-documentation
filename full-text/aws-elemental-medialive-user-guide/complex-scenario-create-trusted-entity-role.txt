@@ -1,0 +1,8 @@
+Creating Trusted Entity Roles
+This section applies if you have determined that your deployment requires the complex option for the trusted entity role, as described in Options for Implementing the Role. 
+This section describes how to create a role, policy, and trust relationship, as described and illustrated in About the Trusted Entity Role.
+Topics
+ Step 1: Determine the Access Requirements
+ Step 2: Create Policies
+ Step 3: Create Roles
+ Step 4: Revise the Trust Relationship

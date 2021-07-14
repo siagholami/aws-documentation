@@ -1,0 +1,101 @@
+AWS::AppSync::ApiKey
+The AWS::AppSync::ApiKey resource creates a unique key that you can distribute to clients who are executing GraphQL operations with AWS AppSync that require an API key.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppSync::ApiKey",
+  "Properties" : {
+      "[ApiId](#cfn-appsync-apikey-apiid)" : String,
+      "[Description](#cfn-appsync-apikey-description)" : String,
+      "[Expires](#cfn-appsync-apikey-expires)" : Double
+    }
+}
+YAML
+Type: AWS::AppSync::ApiKey
+Properties: 
+  [ApiId](#cfn-appsync-apikey-apiid): String
+  [Description](#cfn-appsync-apikey-description): String
+  [Expires](#cfn-appsync-apikey-expires): Double
+Properties
+ApiId 
+Unique AWS AppSync GraphQL API ID for this API key.
+Required: Yes
+Type: String
+Update requires: Replacement
+Description 
+Unique description of your API key.
+Required: No
+Type: String
+Update requires: No interruption
+Expires 
+Expiration time of the API key in seconds (using Unix Epoch time), with a minimum of 1 day and a maximum of 365 days. The default value is 7 days. 
+Required: No
+Type: Double
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of an AWS::AppSync::ApiKey resource to the intrinsic Ref function, the function returns the ARN of the API key, such as arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi. 
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+Fn::GetAtt returns a value for a specified attribute of this type. The following are the available attributes and sample return values. 
+For more information about using Fn::GetAtt, see Fn::GetAtt. 
+
+ApiKey 
+The API key.
+Arn 
+The Amazon Resource Name (ARN) of the API key, such as arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi.
+Examples
+API Key Creation Example
+The following example creates an API key and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter. 
+YAML
+Parameters:
+  graphQlApiId:
+    Type: String
+  apiKeyDescription:
+    Type: String
+  apiKeyExpires:
+    Type: Number
+Resources:
+  ApiKey:
+    Type: AWS::AppSync::ApiKey
+    Properties:
+      ApiId:
+    Ref: graphQlApiId
+      Description:
+        Ref: apiKeyDescription
+      Expires:
+        Ref: apiKeyExpires
+JSON
+{
+  "Parameters": {
+    "graphQlApiId": {
+      "Type": "String"
+    },
+    "apiKeyDescription": {
+      "Type": "String"
+    },
+    "apiKeyExpires": {
+      "Type": "Number"
+    }
+  },
+  "Resources": {
+    "ApiKey": {
+      "Type": "AWS::AppSync::ApiKey",
+      "Properties": {
+        "ApiId": {
+           "Ref": "graphQlApiId"
+        },
+        "Description": {
+          "Ref": "apiKeyDescription"
+        },
+        "Expires": {
+          "Ref": "apiKeyExpires"
+        }
+      }
+    }
+  }
+}
+See also
+
+CreateApiKey operation in the AWS AppSync API Reference.

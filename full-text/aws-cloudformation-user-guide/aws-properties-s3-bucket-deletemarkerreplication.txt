@@ -1,0 +1,17 @@
+AWS::S3::Bucket DeleteMarkerReplication
+Not currently supported by AWS CloudFormation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Status](#cfn-s3-bucket-deletemarkerreplication-status)" : String
+}
+YAML
+[Status](#cfn-s3-bucket-deletemarkerreplication-status): String
+Properties
+Status 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: String
+Allowed values: Disabled | Enabled
+Update requires: No interruption

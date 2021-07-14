@@ -1,0 +1,12 @@
+My browser displays a "Server not found" error
+If your browser displays a "Server not found" error when you try to browse to a domain (example.com) or a subdomain (www.example.com), here are some common explanations.
+Topics
+ You didn't create a record for the domain or subdomain name
+ You created a record but specified the wrong value
+ The resource that you're routing traffic to is unavailable
+You didn't create a record for the domain or subdomain name
+If you don't create a record for the domain or subdomain, then DNS doesn't know where to route traffic when someone enters that name in a browser. For more information, see Working with records.
+You created a record but specified the wrong value
+When you create a record, it's easy to specify the wrong value, such as the IP address for a web server or the domain name that CloudFront assigned to your web distribution. If the record exists but you're still getting a "Server not found" error, we recommend that you confirm that the value is correct. 
+The resource that you're routing traffic to is unavailable
+If a record specifies a resource such as a web server that's unavailable, a browser will return a "Server not found" error. We recommend that you check the status of the resource that you're routing traffic to.

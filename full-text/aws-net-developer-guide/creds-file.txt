@@ -1,0 +1,75 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Using the shared AWS credentials file
+(Be sure to review the important warnings and guidance for credentials.)
+One way to provide credentials for your applications is to create profiles in the shared AWS credentials file and then store credentials in those profiles. This file can be used by the other AWS SDKs. It can also be used by the AWS CLI, the AWS Tools for Windows PowerShell, and the AWS toolkits for Visual Studio, JetBrains, and VS Code.
+General information
+By default, the shared AWS credentials file is located in the .aws directory within your home directory and is named credentials; that is, ~/.aws/credentials (Linux or macOS) or %USERPROFILE%\.aws\credentials (Windows). For information about alternative locations, see Location of the shared files in the AWS SDKs and Tools Shared Configuration and Credentials Reference Guide. Also see Accessing credentials and profiles in an application.
+The shared AWS credentials file is a plaintext file and follows a certain format. For information about the format of AWS credentials files, see Format of the credentials file in the AWS SDKs and Tools Shared Configuration and Credentials Reference Guide.
+You can manage the profiles in the shared AWS credentials file in several ways.
+ Use any text editor to create and update the shared AWS credentials file.
+ Use the Amazon.Runtime.CredentialManagement namespace of the AWS SDK for .NET API, as shown later in this topic.
+ Use commands and procedures for the AWS Tools for PowerShell and the AWS toolkits for Visual Studio, JetBrains, and VS Code.
+ Use AWS CLI commands; for example, aws configure set aws_access_key_id and aws configure set aws_secret_access_key.
+Examples of profile management
+The following sections show examples of profiles in the shared AWS credentials file. Some of the examples show the result, which can be obtained through any of the credential-management methods described earlier. Other examples show how to use a particular method.
+The default profile
+The shared AWS credentials file will almost always have a profile named default. This is where the AWS SDK for .NET looks for credentials if no other profiles are defined.
+The [default] profile typically looks something like the following.
+[default]
+aws_access_key_id = AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Create a profile programmatically
+This example shows you how to create a profile and save it to the shared AWS credentials file programmatically. It uses the following classes of the Amazon.Runtime.CredentialManagement namespace: CredentialProfileOptions, CredentialProfile, and SharedCredentialsFile.
+```
+using Amazon.Runtime.CredentialManagement;
+...
+// For illustrative purposes only--do not include credentials in your code.
+WriteProfile("my_new_profile", "AKIAIOSFODNN7EXAMPLE", "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY");
+...
+void WriteProfile(string profileName, string keyId, string secret)
+{
+    Console.WriteLine($"Create the [{profileName}] profile...");
+    var options = new CredentialProfileOptions
+    {
+        AccessKey = keyId,
+        SecretKey = secret
+    };
+    var profile = new CredentialProfile(profileName, options);
+    var sharedFile = new SharedCredentialsFile();
+    sharedFile.RegisterProfile(profile);
+}
+```
+Warning
+Code such as this generally shouldn't be in your application. If you include it in your application, take appropriate precautions to ensure that plaintext keys can't possibly be seen in the code, over the network, or even in computer memory.
+The following is the profile that's created by this example.
+[my_new_profile]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Update an existing profile programmatically
+This example shows you how to programmatically update the profile that was created earlier. It uses the following classes of the Amazon.Runtime.CredentialManagement namespace: CredentialProfile and SharedCredentialsFile. It also uses the RegionEndpoint class of the Amazon namespace.
+```
+using Amazon.Runtime.CredentialManagement;
+...
+AddRegion("my_new_profile", RegionEndpoint.USWest2);
+...
+void AddRegion(string profileName, RegionEndpoint region)
+{
+    var sharedFile = new SharedCredentialsFile();
+    CredentialProfile profile;
+    if (sharedFile.TryGetProfile(profileName, out profile))
+    {
+        profile.Region = region;
+        sharedFile.RegisterProfile(profile);
+    }
+}
+```
+The following is the updated profile.
+[my_new_profile]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+region=us-west-2
+Note
+You can also set the AWS Region in other locations and by using other methods. For more information, see Configure the AWS Region.

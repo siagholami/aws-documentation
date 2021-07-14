@@ -1,0 +1,17 @@
+FunctionCodeLocation
+Details about a function's deployment package.
+Contents
+Location 
+A presigned URL that you can use to download the deployment package.
+Type: String
+Required: No
+RepositoryType 
+The service that's hosting the file.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

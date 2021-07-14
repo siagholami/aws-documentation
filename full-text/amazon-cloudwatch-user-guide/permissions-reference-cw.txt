@@ -1,0 +1,399 @@
+Amazon CloudWatch Permissions Reference
+When you are setting up Access Control and writing permissions policies that you can attach to an IAM identity (identity-based policies), you can use the following table as a reference. The table lists each CloudWatch API operation and the corresponding actions for which you can grant permissions to perform the action. You specify the actions in the policy's Action field, and you specify a wildcard character (*) as the resource value in the policy's Resource field.
+You can use AWS-wide condition keys in your CloudWatch policies to express conditions. For a complete list of AWS-wide keys, see AWS Global and IAM Condition Context Keys in the IAM User Guide.
+Note
+To specify an action, use the cloudwatch: prefix followed by the API operation name. For example: cloudwatch:GetMetricStatistics, cloudwatch:ListMetrics, or cloudwatch:* (for all CloudWatch actions).
+Topics
+ CloudWatch API Operations and Required Permissions for Actions
+ CloudWatch Contributor Insights API Operations and Required Permissions for Actions
+ CloudWatch Events API Operations and Required Permissions for Actions
+ CloudWatch Logs API Operations and Required Permissions for Actions
+ Amazon EC2 API Operations and Required Permissions for Actions
+ Amazon EC2 Auto Scaling API Operations and Required Permissions for Actions
+CloudWatch API Operations and Required Permissions for Actions
+
+
+
+CloudWatch API Operations
+Required Permissions (API Actions)
+
+
+
+
+DeleteAlarms
+cloudwatch:DeleteAlarms Required to delete an alarm.
+
+
+DeleteDashboards
+cloudwatch:DeleteDashboards Required to delete a dashboard.
+
+
+DescribeAlarmHistory
+cloudwatch:DescribeAlarmHistory Required to view alarm history.
+
+
+DescribeAlarms
+cloudwatch:DescribeAlarms Required to retrieve alarm information by name.
+
+
+DescribeAlarmsForMetric
+cloudwatch:DescribeAlarmsForMetric Required to view alarms for a metric.
+
+
+DisableAlarmActions
+cloudwatch:DisableAlarmActions Required to disable an alarm action.
+
+
+EnableAlarmActions
+cloudwatch:EnableAlarmActions Required to enable an alarm action.
+
+
+GetDashboard
+cloudwatch:GetDashboard Required to display data about existing dashboards.
+
+
+GetMetricData
+cloudwatch:GetMetricData Required to retrieve large batches of metric data and perform metric math on that data.
+
+
+GetMetricStatistics
+cloudwatch:GetMetricStatistics Required to view graphs in other parts of the CloudWatch console and in dashboard widgets.
+
+
+GetMetricWidgetImage
+cloudwatch:GetMetricWidgetImage Required to retrieve a snapshot graph of one or more CloudWatch metrics as a bitmap image.
+
+
+ListDashboards
+cloudwatch:ListDashboards Required to view the list of CloudWatch dashboards in your account.
+
+
+ListMetrics
+cloudwatch:ListMetrics Required to view or search metric names within the CloudWatch console and in the CLI. Required to select metrics on dashboard widgets.
+
+
+PutDashboard
+cloudwatch:PutDashboard Required to create a dashboard or update an existing dashboard.
+
+
+PutMetricAlarm
+cloudwatch:PutMetricAlarm Required to create or update an alarm.
+
+
+PutMetricData
+cloudwatch:PutMetricData Required to create metrics.
+
+
+SetAlarmState
+cloudwatch:SetAlarmState Required to manually set an alarm's state.
+
+
+
+CloudWatch Contributor Insights API Operations and Required Permissions for Actions
+Important
+When you grant a user the cloudwatch:PutInsightRule and cloudwatch:GetInsightRuleReport permissions, that user can create a rule that evaluates any log group in CloudWatch Logs and then see the results. The results can contain contributor data for those log groups. Be sure to grant these permissions only to users who should be able to view this data.
+
+
+
+CloudWatch Contributor Insights API Operations
+Required Permissions (API Actions)
+
+
+
+
+DeleteInsightRules
+cloudwatch:DeleteInsightRules Required to delete Contributor Insights rules.
+
+
+DescribeInsightRules
+cloudwatch:DescribeInsightRules Required to view the Contributor Insights rules in your account.
+
+
+EnableInsightRules
+cloudwatch:EnableInsightRules Required to enable Contributor Insights rules.
+
+
+GetInsightRuleReport
+cloudwatch:GetInsightRuleReport Required to retrieve time series data and other statistics collectd by Contributor Insights rules.
+
+
+PutInsightRule
+cloudwatch:PutInsightRule Required to create Contributor Insights rules.
+
+
+
+CloudWatch Events API Operations and Required Permissions for Actions
+
+
+
+CloudWatch Events API Operations
+Required Permissions (API Actions)
+
+
+
+
+DeleteRule
+events:DeleteRule Required to delete a rule.
+
+
+DescribeRule
+events:DescribeRule Required to list the details about a rule.
+
+
+DisableRule
+events:DisableRule Required to disable a rule.
+
+
+EnableRule
+events:EnableRule Required to enable a rule.
+
+
+ListRuleNamesByTarget
+events:ListRuleNamesByTarget Required to list rules associated with a target.
+
+
+ListRules
+events:ListRules Required to list all rules in your account.
+
+
+ListTargetsByRule
+events:ListTargetsByRule Required to list all targets associated with a rule.
+
+
+PutEvents
+events:PutEvents Required to add custom events that can be matched to rules.
+
+
+PutRule
+events:PutRule Required to create or update a rule.
+
+
+PutTargets
+events:PutTargets Required to add targets to a rule.
+
+
+RemoveTargets
+events:RemoveTargets Required to remove a target from a rule.
+
+
+TestEventPattern
+events:TestEventPattern Required to test an event pattern against a given event.
+
+
+
+CloudWatch Logs API Operations and Required Permissions for Actions
+
+
+
+CloudWatch Logs API Operations
+Required Permissions (API Actions)
+
+
+
+
+CancelExportTask
+logs:CancelExportTask Required to cancel a pending or running export task.
+
+
+CreateExportTask
+logs:CreateExportTask Required to export data from a log group to an Amazon S3 bucket.
+
+
+CreateLogGroup
+logs:CreateLogGroup Required to create a new log group.
+
+
+CreateLogStream
+logs:CreateLogStream Required to create a new log stream in a log group.
+
+
+DeleteDestination
+logs:DeleteDestination Required to delete a log destination and disables any subscription filters to it.
+
+
+DeleteLogGroup
+logs:DeleteLogGroup Required to delete a log group and any associated archived log events.
+
+
+DeleteLogStream
+logs:DeleteLogStream Required to delete a log stream and any associated archived log events.
+
+
+DeleteMetricFilter
+logs:DeleteMetricFilter Required to delete a metric filter associated with a log group.
+
+
+DeleteQueryDefinition
+logs:DeleteQueryDefinition Required to delete a saved query definition in CloudWatch Logs Insights.
+
+
+DeleteResourcePolicy
+logs:DeleteResourcePolicy Required to delete a CloudWatch Logs resource policy.
+
+
+DeleteRetentionPolicy
+logs:DeleteRetentionPolicy Required to delete a log group's retention policy.
+
+
+DeleteSubscriptionFilter
+logs:DeleteSubscriptionFilter Required to delete the subscription filter associated with a log group.
+
+
+DescribeDestinations
+logs:DescribeDestinations Required to view all destinations associated with the account.
+
+
+DescribeExportTasks
+logs:DescribeExportTasks Required to view all export tasks associated with the account.
+
+
+DescribeLogGroups
+logs:DescribeLogGroups Required to view all log groups associated with the account.
+
+
+DescribeLogStreams
+logs:DescribeLogStreams Required to view all log streams associated with a log group.
+
+
+DescribeMetricFilters
+logs:DescribeMetricFilters Required to view all metrics associated with a log group.
+
+
+DescribeQueryDefinitions
+logs:DescribeQueryDefinitions Required to see the list of saved query definitions in CloudWatch Logs Insights.
+
+
+DescribeQueries
+logs:DescribeQueries Required to see the list of CloudWatch Logs Insights queries that are scheduled, executing, or have recently excecuted.
+
+
+DescribeResourcePolicies
+logs:DescribeResourcePolicies Required to view a list of CloudWatch Logs resource policies.
+
+
+DescribeSubscriptionFilters
+logs:DescribeSubscriptionFilters Required to view all subscription filters associated with a log group.
+
+
+FilterLogEvents
+logs:FilterLogEvents Required to sort log events by log group filter pattern.
+
+
+GetLogEvents
+logs:GetLogEvents Required to retrieve log events from a log stream.
+
+
+GetLogGroupFields
+logs:GetLogGroupFields Required to retrieve the list of fields that are included in the log events in a log group.
+
+
+GetLogRecord
+logs:GetLogRecord Required to retrieve the details from a single log event.
+
+
+GetQueryResults
+logs:GetQueryResults Required to retrieve the results of CloudWatch Logs Insights queries.
+
+
+ListTagsLogGroup
+logs:ListTagsLogGroup Required to list the tags associated with a log group.
+
+
+PutDestination
+logs:PutDestination Required to create or update a destination log stream (such as an Kinesis stream).
+
+
+PutDestinationPolicy
+logs:PutDestinationPolicy Required to create or update an access policy associated with an existing log destination.
+
+
+PutLogEvents
+logs:PutLogEvents Required to upload a batch of log events to a log stream.
+
+
+PutMetricFilter
+logs:PutMetricFilter Required to create or update a metric filter and associate it with a log group.
+
+
+PutQueryDefinition
+logs:PutQueryDefinition Required to save a query in CloudWatch Logs Insights.
+
+
+PutResourcePolicy
+logs:PutResourcePolicy Required to create a CloudWatch Logs resource policy.
+
+
+PutRetentionPolicy
+logs:PutRetentionPolicy Required to set the number of days to keep log events (retention) in a log group.
+
+
+PutSubscriptionFilter
+logs:PutSubscriptionFilter Required to create or update a subscription filter and associate it with a log group.
+
+
+StartQuery
+logs:StartQuery Required to start CloudWatch Logs Insights queries.
+
+
+StopQuery
+logs:StopQuery Required to stop a CloudWatch Logs Insights query that is in progress.
+
+
+TagLogGroup
+logs:TagLogGroup Required to add or update log group tags.
+
+
+TestMetricFilter
+logs:TestMetricFilter Required to test a filter pattern against a sampling of log event messages.
+
+
+
+Amazon EC2 API Operations and Required Permissions for Actions
+
+
+
+Amazon EC2 API Operations
+Required Permissions (API Actions)
+
+
+
+
+DescribeInstanceStatus
+ec2:DescribeInstanceStatus Required to view EC2 instance status details.
+
+
+DescribeInstances
+ec2:DescribeInstances Required to view EC2 instance details.
+
+
+RebootInstances
+ec2:RebootInstances Required to reboot an EC2 instance.
+
+
+StopInstances
+ec2:StopInstances Required to stop an EC2 instance.
+
+
+TerminateInstances
+ec2:TerminateInstances Required to terminate an EC2 instance.
+
+
+
+Amazon EC2 Auto Scaling API Operations and Required Permissions for Actions
+
+
+
+Amazon EC2 Auto Scaling API Operations
+Required Permissions (API Actions)
+
+
+
+
+Scaling
+autoscaling:Scaling Required to scale an Auto Scaling group.
+
+
+Trigger
+autoscaling:Trigger Required to trigger an Auto Scaling action.
+
+

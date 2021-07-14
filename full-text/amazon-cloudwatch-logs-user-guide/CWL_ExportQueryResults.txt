@@ -1,0 +1,44 @@
+Add Query to Dashboard or Export Query Results
+After you run a query, you can add the query to a CloudWatch dashboard or copy the results to the clipboard.
+Queries added to dashboards run every time you load the dashboard and every time that the dashboard refreshes. These queries count toward your limit of four concurrent CloudWatch Logs Insights queries.
+To add query results to a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+Choose one or more log groups and run a query.
+
+
+Choose Add to dashboard.
+
+
+Select the dashboard, or choose Create new to create a dashboard for the query results.
+
+
+Select the widget type to use for the query results.
+
+
+Enter a name for the widget.
+
+
+Choose Add to dashboard.
+
+
+To copy query results to the clipboard or download the query results
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Insights.
+
+
+Choose one or more log groups and run a query.
+
+
+Choose Export results, and then choose the option you want.
+

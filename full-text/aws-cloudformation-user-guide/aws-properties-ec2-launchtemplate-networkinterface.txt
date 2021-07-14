@@ -1,0 +1,109 @@
+AWS::EC2::LaunchTemplate NetworkInterface
+Specifies the parameters for a network interface.
+NetworkInterface is a property of AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress)" : Boolean,
+  "[DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination)" : Boolean,
+  "[Description](#cfn-ec2-launchtemplate-networkinterface-description)" : String,
+  "[DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex)" : Integer,
+  "[Groups](#cfn-ec2-launchtemplate-networkinterface-groups)" : [ String, ... ],
+  "[InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype)" : String,
+  "[Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount)" : Integer,
+  "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ Ipv6Add, ... ],
+  "[NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid)" : String,
+  "[PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress)" : String,
+  "[PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses)" : [ PrivateIpAdd, ... ],
+  "[SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount)" : Integer,
+  "[SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid)" : String
+}
+YAML
+[AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress): Boolean
+  [DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination): Boolean
+  [Description](#cfn-ec2-launchtemplate-networkinterface-description): String
+  [DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex): Integer
+  [Groups](#cfn-ec2-launchtemplate-networkinterface-groups): 
+    - String
+  [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
+  [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
+  [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
+    - Ipv6Add
+  [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
+  [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
+  [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses): 
+    - PrivateIpAdd
+  [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount): Integer
+  [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid): String
+Properties
+AssociatePublicIpAddress 
+Associates a public IPv4 address with eth0 for a new network interface.
+Required: No
+Type: Boolean
+Update requires: No interruption
+DeleteOnTermination 
+Indicates whether the network interface is deleted when the instance is terminated.
+Required: No
+Type: Boolean
+Update requires: No interruption
+Description 
+A description for the network interface.
+Required: No
+Type: String
+Update requires: No interruption
+DeviceIndex 
+The device index for the network interface attachment.
+Required: No
+Type: Integer
+Update requires: No interruption
+Groups 
+The IDs of one or more security groups.
+Required: No
+Type: List of String
+Update requires: No interruption
+InterfaceType 
+The type of network interface. To create an Elastic Fabric Adapter (EFA), specify efa. For more information, see Elastic Fabric Adapter in the Amazon Elastic Compute Cloud User Guide.
+If you are not creating an EFA, specify interface or omit this parameter.
+Valid values: interface | efa 
+Required: No
+Type: String
+Update requires: No interruption
+Ipv6AddressCount 
+The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses.
+Required: No
+Type: Integer
+Update requires: No interruption
+Ipv6Addresses 
+One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying a number of IPv6 addresses.
+Required: No
+Type: List of Ipv6Add
+Update requires: No interruption
+NetworkInterfaceId 
+The ID of the network interface.
+Required: No
+Type: String
+Update requires: No interruption
+PrivateIpAddress 
+The primary private IPv4 address of the network interface.
+Required: No
+Type: String
+Update requires: No interruption
+PrivateIpAddresses 
+One or more private IPv4 addresses.
+Required: No
+Type: List of PrivateIpAdd
+Update requires: No interruption
+SecondaryPrivateIpAddressCount 
+The number of secondary private IPv4 addresses to assign to a network interface.
+Required: No
+Type: Integer
+Update requires: No interruption
+SubnetId 
+The ID of the subnet for the network interface.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest in the Amazon Elastic Compute Cloud API Reference 

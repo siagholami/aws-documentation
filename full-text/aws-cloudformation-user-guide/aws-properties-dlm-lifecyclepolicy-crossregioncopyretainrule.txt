@@ -1,0 +1,25 @@
+AWS::DLM::LifecyclePolicy CrossRegionCopyRetainRule
+Specifies the retention rule for cross-Region snapshot copies.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Interval](#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval)" : Integer,
+  "[IntervalUnit](#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit)" : String
+}
+YAML
+[Interval](#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval): Integer
+  [IntervalUnit](#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit): String
+Properties
+Interval 
+The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+Required: Yes
+Type: Integer
+Minimum: 1
+Update requires: No interruption
+IntervalUnit 
+The unit of time for time-based retention.
+Required: Yes
+Type: String
+Allowed values: DAYS | MONTHS | WEEKS | YEARS
+Update requires: No interruption

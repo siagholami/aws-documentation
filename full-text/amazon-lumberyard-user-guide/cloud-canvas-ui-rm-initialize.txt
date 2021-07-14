@@ -1,0 +1,15 @@
+Initializing Cloud Canvas Resource Manager
+When you perform an operation that requires an AWS account, and no account has been associated with your Lumberyard project, the Initialize Cloud Canvas Resource Manager dialog prompts you for the required information. 
+
+To initialize *Cloud Canvas Resource Manager*
+
+
+When prompted to initialize the Cloud Canvas Resource Manager, provide the following information: 
+    For Project stack name, enter the name of an AWS CloudFormation stack that you will create. The stack will contain the AWS resources that Cloud Canvas Resource Manager will use for your project. By default, Lumberyard uses the name of your project for the stack name. A stack with the name that you specify must not already exist in your AWS account for the region you select. 
+     For AWS Credentials, select from the list of available profiles or create a new one. If you have no AWS profiles on your computer, you are prompted for an AWS secret key and an AWS access key. You can also edit an existing one. 
+In order to use Lumberyard with AWS, you must provide administrative credentials for your AWS account either directly, or through an AWS profile. For information on how to get these credentials from AWS, see the Tutorial: Getting Started with Cloud Canvas.
+     For AWS region, specify the AWS data center where your resources will reside. You must choose a region that supports all the AWS services that your game uses. The region you choose must also support the Amazon Cognito service, which Lumberyard uses to establish player identity, and AWS CloudFormation, which Lumberyard uses to create and manage resources. For more information about the capabilities of different regions, see AWS Regions and Endpoints. 
+
+
+Click Create to start the initialization process. In the navigation tree, the Project stack node is selected, and in the detail pane, the Progress log shows the progress of the initialization. 
+

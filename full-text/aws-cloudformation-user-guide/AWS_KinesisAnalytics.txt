@@ -1,0 +1,5 @@
+KinesisAnalytics resource type reference
+Resource types
+ AWS::KinesisAnalytics::Application
+ AWS::KinesisAnalytics::ApplicationOutput
+ AWS::KinesisAnalytics::ApplicationReferenceDataSource

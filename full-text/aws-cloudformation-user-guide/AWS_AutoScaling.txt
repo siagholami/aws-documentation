@@ -1,0 +1,7 @@
+Amazon EC2 Auto Scaling resource type reference
+Resource types
+ AWS::AutoScaling::AutoScalingGroup
+ AWS::AutoScaling::LaunchConfiguration
+ AWS::AutoScaling::LifecycleHook
+ AWS::AutoScaling::ScalingPolicy
+ AWS::AutoScaling::ScheduledAction

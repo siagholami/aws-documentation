@@ -1,0 +1,49 @@
+AWS::CodeBuild::ReportGroup S3ReportExportConfig
+Information about the S3 bucket where the raw data of a report are exported. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Bucket](#cfn-codebuild-reportgroup-s3reportexportconfig-bucket)" : String,
+  "[EncryptionDisabled](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptiondisabled)" : Boolean,
+  "[EncryptionKey](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptionkey)" : String,
+  "[Packaging](#cfn-codebuild-reportgroup-s3reportexportconfig-packaging)" : String,
+  "[Path](#cfn-codebuild-reportgroup-s3reportexportconfig-path)" : String
+}
+YAML
+[Bucket](#cfn-codebuild-reportgroup-s3reportexportconfig-bucket): String
+  [EncryptionDisabled](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptiondisabled): Boolean
+  [EncryptionKey](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptionkey): String
+  [Packaging](#cfn-codebuild-reportgroup-s3reportexportconfig-packaging): String
+  [Path](#cfn-codebuild-reportgroup-s3reportexportconfig-path): String
+Properties
+Bucket 
+ The name of the S3 bucket where the raw data of a report are exported. 
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption
+EncryptionDisabled 
+ A boolean value that specifies if the results of a report are encrypted. 
+Required: No
+Type: Boolean
+Update requires: No interruption
+EncryptionKey 
+ The encryption key for the report's encrypted raw data. 
+Required: No
+Type: String
+Minimum: 1
+Update requires: No interruption
+Packaging 
+ The type of build output artifact to create. Valid values include: 
+  NONE: AWS CodeBuild creates the raw data in the output bucket. This is the default if packaging is not specified. 
+  ZIP: AWS CodeBuild creates a ZIP file with the raw data in the output bucket. 
+Required: No
+Type: String
+Allowed values: NONE | ZIP
+Update requires: No interruption
+Path 
+ The path to the exported report's raw data results. 
+Required: No
+Type: String
+Update requires: No interruption

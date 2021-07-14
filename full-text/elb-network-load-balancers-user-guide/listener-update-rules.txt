@@ -1,0 +1,30 @@
+Update a listener for your Network Load Balancer
+You can update the listener port, listener protocol, or the default listener rule.
+The default listener rule forwards requests to the specified target group.
+If you change the protocol from TCP or UDP to TLS, you must specify a security policy and server certificate. If you change the protocol from TLS to TCP or UDP, the security policy and server certificate are removed.
+To update your listener using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, under LOAD BALANCING, choose Load Balancers.
+
+
+Select the load balancer and choose Listeners.
+
+
+Select the check box for the listener and then choose Edit.
+
+
+(Optional) Change the specified values for Protocol : port.
+
+
+(Optional) Click the pencil icon to select a different target group for Default action.
+
+
+Choose Update.
+
+
+To update your listener using the AWS CLI
+Use the modify-listener command.

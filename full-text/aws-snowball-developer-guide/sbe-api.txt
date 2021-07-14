@@ -1,0 +1,11 @@
+
+This guide is for the Snowball Edge. If you are looking for documentation for the Snowball, see the AWS Snowball User Guide.
+
+API Reference
+In addition to using the console, you can use the AWS Snowball API to programmatically configure and manage AWS Snowball Edge device and its resources. This section describes the device operations and data types and contains the API Reference documentation for AWS Snowball Edge device. 
+Topics
+ Job Management API Reference
+ Actions
+ Data Types
+ Common Parameters
+ Common Errors

@@ -1,0 +1,41 @@
+RobotDeployment
+Information about a robot deployment.
+Contents
+arn 
+The robot deployment Amazon Resource Name (ARN).
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+Required: No
+deploymentFinishTime 
+The time, in milliseconds since the epoch, when the deployment finished.
+Type: Timestamp
+Required: No
+deploymentStartTime 
+The time, in milliseconds since the epoch, when the deployment was started.
+Type: Timestamp
+Required: No
+failureCode 
+The robot deployment failure code.
+Type: String
+Valid Values:ResourceNotFound | EnvironmentSetupError | EtagMismatch | FailureThresholdBreached | RobotDeploymentAborted | RobotDeploymentNoResponse | RobotAgentConnectionTimeout | GreengrassDeploymentFailed | MissingRobotArchitecture | MissingRobotApplicationArchitecture | MissingRobotDeploymentResource | GreengrassGroupVersionDoesNotExist | ExtractingBundleFailure | PreLaunchFileFailure | PostLaunchFileFailure | BadPermissionError | DownloadConditionFailed | InternalServerError 
+Required: No
+failureReason 
+A short description of the reason why the robot deployment failed.
+Type: String
+Required: No
+progressDetail 
+Information about how the deployment is progressing.
+Type: ProgressDetail object
+Required: No
+status 
+The status of the robot deployment.
+Type: String
+Valid Values:Available | Registered | PendingNewDeployment | Deploying | Failed | InSync | NoResponse 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V2 

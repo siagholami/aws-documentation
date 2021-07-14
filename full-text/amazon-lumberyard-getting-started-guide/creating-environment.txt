@@ -1,0 +1,7 @@
+2: Building the Environment
+This tutorial shows you how to do the following:
+ Create a level
+ Import a heightmap
+ Import a mega terrain texture
+ Place a player character and camera manager
+Next: Creating a Level

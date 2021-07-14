@@ -1,0 +1,23 @@
+AWS::RDS::OptionGroup OptionSetting
+The OptionSetting property type specifies the value for an option within an OptionSetting property.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-rds-optiongroup-optionconfigurations-optionsettings-name)" : String,
+  "[Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value)" : String
+}
+YAML
+[Name](#cfn-rds-optiongroup-optionconfigurations-optionsettings-name): String
+  [Value](#cfn-rds-optiongroup-optionconfigurations-optionsettings-value): String
+Properties
+Name 
+The name of the option that has settings that you can set.
+Required: No
+Type: String
+Update requires: No interruption
+Value 
+The current value of the option setting.
+Required: No
+Type: String
+Update requires: No interruption

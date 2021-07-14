@@ -1,0 +1,755 @@
+Using identity-based policies for AWS CodeBuild
+This topic provides examples of identity-based policies that demonstrate how an account administrator can attach permissions policies to IAM identities (that is, users, groups, and roles) and thereby grant permissions to perform operations on AWS CodeBuild resources.
+Important
+We recommend that you first review the introductory topics that explain the basic concepts and options available to manage access to your CodeBuild resources. For more information, see Overview of managing access permissions to your AWS CodeBuild resources.
+Topics
+ Permissions required to use the AWS CodeBuild console
+ Permissions required for the AWS CodeBuild console to connect to source providers
+ AWS managed (predefined) policies for AWS CodeBuild
+ CodeBuild managed policies and notifications
+ Customer-managed policy examples
+The following shows an example of a permissions policy that allows a user to get information about build projects only in the us-east-2 region for account 123456789012 for any build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchGetProjects",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"
+    }
+  ]
+}
+Permissions required to use the AWS CodeBuild console
+A user who uses the AWS CodeBuild console must have a minimum set of permissions that allows the user to describe other AWS resources for the AWS account. You must have permissions from the following services:
+ AWS CodeBuild
+ Amazon CloudWatch
+ CodeCommit (if you are storing your source code in an AWS CodeCommit repository)
+ Amazon Elastic Container Registry (Amazon ECR) (if you are using a build environment that relies on a Docker image in an Amazon ECR repository)
+ Amazon Elastic Container Service (Amazon ECS) (if you are using a build environment that relies on a Docker image in an Amazon ECR repository)
+ AWS Identity and Access Management (IAM)
+ AWS Key Management Service (AWS KMS)
+ Amazon Simple Storage Service (Amazon S3)
+If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended.
+Permissions required for the AWS CodeBuild console to connect to source providers
+The AWS CodeBuild console uses the following API actions to connect to source providers (for example, GitHub repositories).
+ codebuild:ListConnectedOAuthAccounts
+ codebuild:ListRepositories
+ codebuild:PersistOAuthToken
+ codebuild:ImportSourceCredentials
+You can associate source providers (such as GitHub repositories) with your build projects using the AWS CodeBuild console. To do this, you must first add the preceding API actions to IAM access policies associated with the IAM user you use to access the AWS CodeBuild console.
+The ListConnectedOAuthAccounts, ListRepositories, and PersistOAuthToken API actions are not intended to be called by your code. Therefore, these API actions are not included in the AWS CLI and AWS SDKs.
+AWS managed (predefined) policies for AWS CodeBuild
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS. These AWS managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed. The managed policies for CodeBuild also provide permissions to perform operations in other serivces, such as IAM, AWS CodeCommit,Amazon EC2, Amazon ECR, Amazon SNS, and Amazon CloudWatch Events, as required for the responsibilities for the users who have been granted the policy in question. For example, the AWSCodeBuildAdminAccess policy is an administrative-level user policy that allows users with this policy to create and manage CloudWatch Events rules for project builds and Amazon SNS topics for notifications about project-related events (topics whose names are prefixed with arn:aws:codebuild:), as well as administer projects and report groups in CodeBuild. For more information, see AWS Managed Policies in the IAM User Guide.
+The following AWS managed policies, which you can attach to users in your account, are specific to AWS CodeBuild.
+ AWSCodeBuildAdminAccess – Provides full access to CodeBuild including permissions to administrate CodeBuild build projects. 
+ AWSCodeBuildDeveloperAccess – Provides access to CodeBuild but does not allow build project administration.
+ AWSCodeBuildReadOnlyAccess – Provides read-only access to CodeBuild.
+To access build output artifacts that CodeBuild creates, you must also attach the AWS managed policy named AmazonS3ReadOnlyAccess.
+To create and manage CodeBuild service roles, you must also attach the AWS managed policy named IAMFullAccess.
+You can also create your own custom IAM policies to allow permissions for CodeBuild actions and resources. You can attach these custom policies to the IAM users or groups that require those permissions.
+Topics
+ AWSCodeBuildAdminAccess
+ AWSCodeBuildDeveloperAccess
+ AWSCodeBuildReadOnlyAccess
+AWSCodeBuildAdminAccess
+AWSCodeBuildAdminAccess – Provides full access to CodeBuild, including permissions to administer CodeBuild build projects. Apply this policy only to administrative-level users to grant them full control over CodeBuild projects, report groups, and related resources in your AWS account, including the ability to delete projects and report groups.
+The AWSCodeBuildAdminAccess policy contains the following policy statement:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "codebuild:*",
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:GetRepository",
+                "codecommit:ListBranches",
+                "codecommit:ListRepositories",
+                "cloudwatch:GetMetricStatistics",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ecr:DescribeRepositories",
+                "ecr:ListImages",
+                "events:DeleteRule",
+                "events:DescribeRule",
+                "events:DisableRule",
+                "events:EnableRule",
+                "events:ListTargetsByRule",
+                "events:ListRuleNamesByTarget",
+                "events:PutRule",
+                "events:PutTargets",
+                "events:RemoveTargets",
+                "logs:GetLogEvents",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": [
+                "logs:DeleteLogGroup"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/codebuild/*:log-stream:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:PutParameter"
+            ],
+            "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        },
+        {
+            "Sid": "CodeStarNotificationsReadWriteAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:CreateNotificationRule",
+                "codestar-notifications:DescribeNotificationRule",
+                "codestar-notifications:UpdateNotificationRule",
+                "codestar-notifications:DeleteNotificationRule",
+                "codestar-notifications:Subscribe",
+                "codestar-notifications:Unsubscribe"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+                }
+            }
+        },
+        {
+            "Sid": "CodeStarNotificationsListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:ListNotificationRules",
+                "codestar-notifications:ListEventTypes",
+                "codestar-notifications:ListTargets",
+                "codestar-notifications:ListTagsforResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "CodeStarNotificationsSNSTopicCreateAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sns:CreateTopic",
+                "sns:SetTopicAttributes"
+            ],
+            "Resource": "arn:aws:sns:*:*:codestar-notifications*"
+        },
+        {
+            "Sid": "SNSTopicListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListTopics",
+                "sns:GetTopicAttributes"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+AWSCodeBuildDeveloperAccess
+AWSCodeBuildDeveloperAccess – Allows access to all of the functionality of CodeBuild and project and report group-related resources. This policy does not allow users to delete CodeBuild projects or report groups, or related resources in other AWS services, such as CloudWatch Events. We recommend that you apply this policy to most users.
+The AWSCodeBuildDeveloperAccess policy contains the following policy statement:
+{
+    "Statement": [
+        {
+            "Action": [
+                "codebuild:StartBuild",
+                "codebuild:StopBuild",
+                "codebuild:BatchGet*",
+                "codebuild:GetResourcePolicy",
+                "codebuild:DescribeTestCases",
+                "codebuild:List*",
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:GetRepository",
+                "codecommit:ListBranches",
+                "cloudwatch:GetMetricStatistics",
+                "events:DescribeRule",
+                "events:ListTargetsByRule",
+                "events:ListRuleNamesByTarget",
+                "logs:GetLogEvents",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:PutParameter"
+            ],
+            "Resource": "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+        },
+        {
+            "Sid": "CodeStarNotificationsReadWriteAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:CreateNotificationRule",
+                "codestar-notifications:DescribeNotificationRule",
+                "codestar-notifications:UpdateNotificationRule",
+                "codestar-notifications:Subscribe",
+                "codestar-notifications:Unsubscribe"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+                }
+            }
+        },
+        {
+            "Sid": "CodeStarNotificationsListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:ListNotificationRules",
+                "codestar-notifications:ListEventTypes",
+                "codestar-notifications:ListTargets",
+                "codestar-notifications:ListTagsforResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SNSTopicListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListTopics",
+                "sns:GetTopicAttributes"
+            ],
+            "Resource": "*"
+        }
+    ],
+    "Version": "2012-10-17"
+}
+AWSCodeBuildReadOnlyAccess
+AWSCodeBuildReadOnlyAccess – Grants read-only access to CodeBuild and related resources in other AWS services. Apply this policy to users who can view and run builds, view projects, and view report groups, but cannot make any changes to them. 
+The AWSCodeBuildReadOnlyAccess policy contains the following policy statement:
+{
+    "Statement": [
+        {
+            "Action": [
+                "codebuild:BatchGet*",
+                "codebuild:GetResourcePolicy",
+                "codebuild:List*",
+                "codebuild:DescribeTestCases",
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:GetRepository",
+                "cloudwatch:GetMetricStatistics",
+                "events:DescribeRule",
+                "events:ListTargetsByRule",
+                "events:ListRuleNamesByTarget",
+                "logs:GetLogEvents"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "CodeStarNotificationsPowerUserAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:DescribeNotificationRule"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "codestar-notifications:NotificationsForResource": "arn:aws:codebuild:*"
+                }
+            }
+        },
+        {
+            "Sid": "CodeStarNotificationsListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "codestar-notifications:ListNotificationRules",
+                "codestar-notifications:ListEventTypes"
+            ],
+            "Resource": "*"
+        }
+    ],
+    "Version": "2012-10-17"
+}
+CodeBuild managed policies and notifications
+CodeBuild supports notifications, which can notify users of important changes to build projects. Managed policies for CodeBuild include policy statements for notification functionality. For more information, see What are notifications?.
+Permissions related to notifications in full access managed policies
+The AWSCodeBuildFullAccess managed policy includes the following statements to allow full access to notifications. Users with this managed policy applied can also create and manage Amazon SNS topics for notifications, subscribe and unsubscribe users to topics, list topics to choose as targets for notification rules, and list AWS Chatbot clients configured for Slack.
+{
+        "Sid": "CodeStarNotificationsReadWriteAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:UpdateNotificationRule",
+            "codestar-notifications:DeleteNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe"
+        ],
+        "Resource": "*",
+        "Condition" : {
+            "StringLike" : {"codestar-notifications:NotificationsForResource" : "arn:aws:codebuild:*"} 
+        }
+    },    
+    {
+        "Sid": "CodeStarNotificationsListAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTargets",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListEventTypes"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Sid": "CodeStarNotificationsSNSTopicCreateAccess",
+        "Effect": "Allow",
+        "Action": [
+            "sns:CreateTopic",
+            "sns:SetTopicAttributes"
+        ],
+        "Resource": "arn:aws:sns:*:*:codestar-notifications*"
+    },
+    {
+        "Sid": "SNSTopicListAccess",
+        "Effect": "Allow",
+        "Action": [
+            "sns:ListTopics"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Sid": "CodeStarNotificationsChatbotAccess",
+        "Effect": "Allow",
+        "Action": [
+            "chatbot:DescribeSlackChannelConfigurations"
+          ],
+       "Resource": "*"
+    }
+Permissions related to notifications in read-only managed policies
+The AWSCodeBuildReadOnlyAccess managed policy includes the following statements to allow read-only access to notifications. Users with this managed policy applied can view notifications for resources, but cannot create, manage, or subscribe to them. 
+{
+        "Sid": "CodeStarNotificationsPowerUserAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:DescribeNotificationRule"
+        ],
+        "Resource": "*",
+        "Condition" : {
+            "StringLike" : {"codestar-notifications:NotificationsForResource" : "arn:aws:codebuild:*"} 
+        }
+    },    
+    {
+        "Sid": "CodeStarNotificationsListAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListEventTypes",
+            "codestar-notifications:ListTargets"
+        ],
+        "Resource": "*"
+    }
+Permissions related to notifications in other managed policies
+The AWSCodeBuildDeveloperAccess managed policy includes the following statements to allow users to create, edit, and subscribe to notifications. Users cannot delete notification rules or manage tags for resources.
+{
+        "Sid": "CodeStarNotificationsReadWriteAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:CreateNotificationRule",
+            "codestar-notifications:DescribeNotificationRule",
+            "codestar-notifications:UpdateNotificationRule",
+            "codestar-notifications:Subscribe",
+            "codestar-notifications:Unsubscribe"
+        ],
+        "Resource": "*",
+        "Condition" : {
+            "StringLike" : {"codestar-notifications:NotificationsForResource" : "arn:aws:codebuild*"} 
+        }
+    },    
+    {
+        "Sid": "CodeStarNotificationsListAccess",
+        "Effect": "Allow",
+        "Action": [
+            "codestar-notifications:ListNotificationRules",
+            "codestar-notifications:ListTargets",
+            "codestar-notifications:ListTagsforResource",
+            "codestar-notifications:ListEventTypes"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Sid": "SNSTopicListAccess",
+        "Effect": "Allow",
+        "Action": [
+            "sns:ListTopics"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Sid": "CodeStarNotificationsChatbotAccess",
+        "Effect": "Allow",
+        "Action": [
+            "chatbot:DescribeSlackChannelConfigurations"
+          ],
+       "Resource": "*"
+    }
+For more information about IAM and notifications, see Identity and Access Management for AWS CodeStar Notifications.
+Customer-managed policy examples
+In this section, you can find example user policies that grant permissions for AWS CodeBuild actions. These policies work when you are using the CodeBuild API, AWS SDKs, or AWS CLI. When you are using the console, you must grant additional, console-specific permissions. For information, see Permissions required to use the AWS CodeBuild console.
+You can use the following sample IAM policies to limit CodeBuild access for your IAM users and roles.
+Topics
+ Allow a user to get information about build projects
+ Allow a user to get information about report groups
+ Allow a user to get information about reports
+ Allow a user to create build projects
+ Allow a user to create a report group
+ Allow a user to delete a report group
+ Allow a user to delete a report
+ Allow a user to delete build projects
+ Allow a user to get a list of build project names
+ Allow a user to change information about build projects
+ Allow a user to change a report group
+ Allow a user to get information about builds
+ Allow a user to get a list of build IDs for a build project
+ Allow a user to get a list of build IDs
+ Allow a user to get a list of report groups
+ Allow a user to get a list of reports
+ Allow a user to get a list of reports for a report group
+ Allow a user to get a list of test cases for a report
+ Allow a user to start running builds
+ Allow a user to attempt to stop builds
+ Allow a user to attempt to delete builds
+ Allow a user to get information about Docker images that are managed by CodeBuild
+ Allow CodeBuild access to AWS services required to create a VPC network interface
+ Use a deny statement to prevent AWS CodeBuild from disconnecting from source providers
+Allow a user to get information about build projects
+The following example policy statement allows a user to get information about build projects in the us-east-2 Region for account 123456789012 for any build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchGetProjects",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"      
+    }
+  ]
+}
+Allow a user to get information about report groups
+The following example policy statement allows a user to get information about report groups in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchGetReportGroups",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to get information about reports
+The following example policy statement allows a user to get information about reports in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchGetReports",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to create build projects
+The following example policy statement allows a user to create build projects with any name but only in the us-east-2 Region for account 123456789012 and only using the specified CodeBuild service role:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:CreateProject",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/*"      
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam:123456789012:role/CodeBuildServiceRole"
+    }
+  ]
+}
+Allow a user to create a report group
+The following example policy statement allows a user to create a report group in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:CreateReportGroup",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to delete a report group
+The following example policy statement allows a user to delete a report group in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:DeleteReportGroup",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to delete a report
+The following example policy statement allows a user to delete a report in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:DeleteReport",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to delete build projects
+The following example policy statement allows a user to delete build projects in the us-east-2 Region for account 123456789012 for any build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:DeleteProject",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"
+    }
+  ]
+}
+Allow a user to get a list of build project names
+The following example policy statement allows a user to get a list of build project names for the same account:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListProjects",
+      "Resource": "*"
+    }
+  ]
+}
+Allow a user to change information about build projects
+The following example policy statement allows a user to change information about build projects with any name but only in the us-east-2 Region for account 123456789012 and only using the specified AWS CodeBuild service role:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:UpdateProject",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam:123456789012:role/CodeBuildServiceRole"
+    }
+  ]
+}
+Allow a user to change a report group
+The following example policy statement allows a user to change a report group in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:UpdateReportGroup",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to get information about builds
+The following example policy statement allows a user to get information about builds in the us-east-2 Region for account 123456789012 for the build projects named my-build-project and my-other-build-project:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchGetBuilds",
+      "Resource": [
+        "arn:aws:codebuild:us-east-2:123456789012:project/my-build-project",
+        "arn:aws:codebuild:us-east-2:123456789012:project/my-other-build-project"
+      ]
+    }
+  ]
+}
+Allow a user to get a list of build IDs for a build project
+The following example policy statement allows a user to get a list of build IDs in the us-east-2 Region for account 123456789012 for the build projects named my-build-project and my-other-build-project:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListBuildsForProject",
+      "Resource": [
+        "arn:aws:codebuild:us-east-2:123456789012:project/my-build-project",
+        "arn:aws:codebuild:us-east-2:123456789012:project/my-other-build-project"
+      ]
+    }
+  ]
+}
+Allow a user to get a list of build IDs
+The following example policy statement allows a user to get a list of all build IDs for the same account:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListBuilds",
+      "Resource": "*"
+    }
+  ]
+}
+Allow a user to get a list of report groups
+The following example policy statement allows a user to get a list of report groups in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListReportGroups",
+      "Resource": "*"
+    }
+  ]
+}
+Allow a user to get a list of reports
+The following example policy statement allows a user to get a list of reports in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListReports",
+      "Resource": "*"
+    }
+  ]
+}
+Allow a user to get a list of reports for a report group
+The following example policy statement allows a user to get a list of reports for a report group in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListReportsForReportGroup",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to get a list of test cases for a report
+The following example policy statement allows a user to get a list of test cases for a report in the us-east-2 Region for account 123456789012:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:DescribeTestCases",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:report-group/*"
+    }
+  ]
+}
+Allow a user to start running builds
+The following example policy statement allows a user to run builds in the us-east-2 Region for account 123456789012 for a build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:StartBuild",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"
+    }
+  ]
+}
+Allow a user to attempt to stop builds
+The following example policy statement allows a user to attempt to stop running builds only in the us-east-2 region for account 123456789012 for any build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:StopBuild",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"
+    }
+  ]
+}
+Allow a user to attempt to delete builds
+The following example policy statement allows a user to attempt to delete builds only in the us-east-2 Region for account 123456789012 for any build project that starts with the name my:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:BatchDeleteBuilds",
+      "Resource": "arn:aws:codebuild:us-east-2:123456789012:project/my*"
+    }
+  ]
+}
+Allow a user to get information about Docker images that are managed by CodeBuild
+The following example policy statement allows a user to get information about all Docker images that are managed by CodeBuild:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "codebuild:ListCuratedEnvironmentImages",
+      "Resource": "*"
+    }
+  ]
+}
+Allow CodeBuild access to AWS services required to create a VPC network interface
+The following example policy statement grants AWS CodeBuild permission to create a network interface in a VPC with two subnets:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow", 
+            "Action": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DescribeDhcpOptions",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeVpcs"
+            ], 
+            "Resource": "*" 
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateNetworkInterfacePermission"
+            ],
+            "Resource": "arn:aws:ec2:region:account-id:network-interface/*",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:Subnet": [
+                        "arn:aws:ec2:region:account-id:subnet/subnet-id-1",
+                        "arn:aws:ec2:region:account-id:subnet/subnet-id-2"
+                    ],
+                    "ec2:AuthorizedService": "codebuild.amazonaws.com"
+                }
+            }
+        }
+    ]
+}
+Use a deny statement to prevent AWS CodeBuild from disconnecting from source providers
+The following example policy statement uses a deny statement to prevent AWS CodeBuild from disconnecting from source providers. It uses codebuild:DeleteOAuthToken, which is the inverse of codebuild:PersistOAuthToken and codebuild:ImportSourceCredentials, to connect with source providers. For more information, see Permissions required for the AWS CodeBuild console to connect to source providers. 
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "codebuild:DeleteOAuthToken",
+      "Resource": "*"
+    }
+  ]
+}

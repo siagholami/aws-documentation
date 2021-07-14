@@ -1,0 +1,10 @@
+Getting Started with DynamoDB: Next Steps
+For more information about using Amazon DynamoDB, see the following topics:
+ Working with Tables and Data in DynamoDB
+ Working with Items and Attributes
+ Working with Queries in DynamoDB
+ Using Global Secondary Indexes in DynamoDB
+ DynamoDB TransactionsExample Code
+ In-Memory Acceleration with DynamoDB Accelerator (DAX)
+ Getting Started with DynamoDB and AWS SDKs
+ Programming with DynamoDB and the AWS SDKs

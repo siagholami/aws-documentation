@@ -1,0 +1,96 @@
+AWS::NetworkManager::Site
+Specifies a site in a global network.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::NetworkManager::Site",
+  "Properties" : {
+      "[Description](#cfn-networkmanager-site-description)" : String,
+      "[GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid)" : String,
+      "[Location](#cfn-networkmanager-site-location)" : Location,
+      "[Tags](#cfn-networkmanager-site-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::NetworkManager::Site
+Properties: 
+  [Description](#cfn-networkmanager-site-description): String
+  [GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid): String
+  [Location](#cfn-networkmanager-site-location): 
+    Location
+  [Tags](#cfn-networkmanager-site-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+Description 
+A description of your site.
+Length Constraints: Maximum length of 256 characters.
+Required: No
+Type: String
+Update requires: No interruption
+GlobalNetworkId 
+The ID of the global network.
+Required: Yes
+Type: String
+Update requires: Replacement
+Location 
+The site location. This information is used for visualization in the Network Manager console. If you specify the address, the latitude and longitude are automatically calculated.
+  Address: The physical address of the site.
+  Latitude: The latitude of the site. 
+  Longitude: The longitude of the site.
+Required: No
+Type: Location
+Update requires: No interruption
+Tags 
+The tags for the site.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the IDs of the global network and the site. For example: global-network-01231231231231231|site-444555aaabbb11223.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+SiteArn 
+The ARN of the site. For example, arn:aws:networkmanager::123456789012:site/global-network-01231231231231231/site-444555aaabbb11223.
+SiteId 
+The ID of the site. For example, site-444555aaabbb11223.
+Examples
+Site
+The following example creates a site in a global network.
+JSON
+{
+    "Type": "AWS::NetworkManager::Site",
+    "Properties": {
+        "Description": "Chicago office",
+        "GlobalNetworkId": {
+            "Ref": "GlobalNetwork"
+        },
+        "Location": {
+            "Address": "227 W Monroe St, Chicago, IL 60606",
+            "Latitude": "41.880520",
+            "Longitude": "-87.634720"
+        },
+        "Tags": [
+            {
+                "Key": "Network",
+                "Value": "north-america"
+            }
+        ]
+    }
+}
+YAML
+Type: AWS::NetworkManager::Site
+Properties:
+  Description: "Chicago office"
+  GlobalNetworkId: !Ref GlobalNetwork
+  Location:
+    Address: "227 W Monroe St, Chicago, IL 60606"
+    Latitude: "41.880520"
+    Longitude: "-87.634720"
+  Tags:
+    - Key: Network
+      Value: north-america

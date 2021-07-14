@@ -1,0 +1,17 @@
+AWS::Cognito::UserPool Policies
+The policy associated with a user pool.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy)" : PasswordPolicy
+}
+YAML
+[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy): 
+    PasswordPolicy
+Properties
+PasswordPolicy 
+The password policy.
+Required: No
+Type: PasswordPolicy
+Update requires: No interruption

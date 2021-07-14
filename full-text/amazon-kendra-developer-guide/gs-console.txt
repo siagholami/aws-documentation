@@ -1,0 +1,43 @@
+
+
+Getting started with an S3 bucket (Console)
+The following procedures show how to create and test an Amazon Kendra index by using the AWS console. In the procedures you create an index and a data source for an S3 bucket. Finally, you test your index by making a search request. 
+Step 1: To create an index (Console)
+
+
+Choose Create index to start creating a new index.
+
+
+In Specify index details, give your index a name and a description.
+
+
+In IAM role choose Create a new role and then give the role a name. The IAM role will have the prefix "AmazonKendra-".
+
+
+Leave all of the other fields at their defaults. Choose Next.
+
+
+Provisioning details page, choose Developer edition.
+
+
+Choose Create to create your index.
+
+
+Wait for your index to be created. Kendra provisions the hardware for your index. This operation can take some time.
+
+
+Step 2: To add a data source to an index (Console)
+ Create a data source that connects the Amazon Kendra index to your documents. You can choose from one of the following procedures to create a data source.
+   Getting started with a Microsoft OneDrive for Business data source (Console)
+   Getting started with an Amazon S3 data source (Console)
+   Getting started with a Salesforce data source (Console)
+   Getting started with a ServiceNow data source (Console)
+   Getting started with a Microsoft SharePoint Online data source (Console)
+Step 3: To search an index (Console)
+
+
+In the navigation pane, choose Search console
+
+
+Enter a search term that's appropriate for your index. The top results and top document results are shown.
+

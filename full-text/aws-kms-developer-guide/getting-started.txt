@@ -1,0 +1,11 @@
+Getting started
+To get started, create an AWS KMS customer master key (CMK). The topics in this section explain how to create, view, edit, enable, disable, and tag your CMK. They also explain how to download the public key of an asymmetric CMK.
+You can perform these AWS Key Management Service (AWS KMS) tasks in the AWS Management Console. You can access all AWS KMS features by using the AWS KMS API operations. To run the AWS KMS API operations, use any AWS SDK, the AWS Command Line Interface (AWS CLI), or AWS Tools for PowerShell.
+Topics
+ Creating keys
+ Viewing keys
+ Editing keys
+ Tagging keys
+ Enabling and disabling keys
+ Downloading public keys
+ Using aliases

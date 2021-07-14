@@ -1,0 +1,27 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayListenerTls
+An object that represents the Transport Layer Security (TLS) properties for a listener.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Certificate](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)" : VirtualGatewayListenerTlsCertificate,
+  "[Mode](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)" : String
+}
+YAML
+[Certificate](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate): 
+    VirtualGatewayListenerTlsCertificate
+  [Mode](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode): String
+Properties
+Certificate 
+An object that represents a Transport Layer Security (TLS) certificate.
+Required: Yes
+Type: VirtualGatewayListenerTlsCertificate
+Update requires: No interruption
+Mode 
+Specify one of the following modes.
+ *STRICT – Listener only accepts connections with TLS enabled. 
+ PERMISSIVE – Listener accepts connections with or without TLS enabled.
+ DISABLED – Listener only accepts connections without TLS. 
+Required: Yes
+Type: String
+Update requires*: No interruption

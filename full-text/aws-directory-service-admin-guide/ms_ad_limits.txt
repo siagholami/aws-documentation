@@ -1,0 +1,63 @@
+Limits for AWS Managed Microsoft AD
+The following are the default limits for AWS Managed Microsoft AD. Each limit is per region unless otherwise noted.
+AWS Managed Microsoft AD Limits 
+
+
+
+Resource
+Default Limit
+
+
+
+
+AWS Managed Microsoft AD directories
+20
+
+
+Manual snapshots *
+5 per AWS Managed Microsoft AD
+
+
+Manual snapshots age **
+180 days
+
+
+Maximum number of domain controllers per directory
+20
+
+
+Shared domains per Standard Microsoft AD
+5
+
+
+Shared domains per Enterprise Microsoft AD
+125
+
+
+Maximum number of registered certificate authority (CA) certificates per directory
+5
+
+
+
+* The manual snapshot limit cannot be changed.
+** The maximum supported age of a manual snapshot is 180 days and cannot be changed. This is due to the Tombstone-Lifetime attribute of deleted objects which defines the useful shelf life of a system-state backup of Active Directory. It is not possible to restore from a snapshot older than 180 days. For more information, see Useful shelf life of a system-state backup of Active Directory on the Microsoft website.
+Note
+You cannot attach a public IP address to your AWS elastic network interface (ENI).
+For information regarding application design and load distribution, see Programming Your Applications.
+For storage and object limits, see the Comparison Table on the AWS Directory Service Pricing page.
+Increase Your Limit
+Perform the following steps to increase your limit for a Region.
+To request a limit increase for a Region
+
+
+Go to the AWS Support Center page, sign in, if necessary, and click Open a new case.
+
+
+Under Regarding, select Service Limit Increase.
+
+
+Under Limit Type, select AWS Directory Service.
+
+
+Fill in all of the necessary fields in the form and click the button at the bottom of the page for your desired method of contact.
+

@@ -1,0 +1,41 @@
+Tutorial: Create an Analysis
+Create an analysis, add a visual using AutoGraph, and add another visual by choosing a specific visual type. This procedure builds on the data set you create and prepare using the steps in Tutorial: Create a Prepared Data Set.
+Create the Analysis
+Create the analysis.
+
+
+On the Amazon QuickSight start page, choose New analysis.
+
+
+
+On the Your data sets page, choose the Marketing Sample data set and then choose Create Analysis.
+
+
+
+Create a Visual By Using AutoGraph
+Create a visual by using AutoGraph, which is selected by default.
+On the analysis page, choose Date and Return visitors in the Fields list pane.
+Amazon QuickSight creates a line chart using this data.
+
+Create a Scatter Plot Visual
+Create a visual by choosing a visual type and dragging fields to the field wells.
+
+
+On the analysis page, choose Add and then Add visual on the application bar. A new, blank visual is created, and AutoGraph is selected by default.
+
+
+
+In the Visual types pane, choose the scatter plot icon.
+
+
+
+Choose fields in the Fields list pane to add to the Field wells pane.
+    Choose Desktop Uniques to populate the X axis field well.
+    Choose Mobile Uniques to populate the Y axis field well. 
+    Choose Date to populate the Group/Color field well. 
+
+
+A scatter plot is created using these fields.
+
+Next Steps
+Modify the visuals in the analysis by using the procedure in Tutorial: Modify Visuals.

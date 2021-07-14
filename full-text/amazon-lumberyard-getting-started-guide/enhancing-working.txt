@@ -1,0 +1,42 @@
+Using the Particle System to Add Steam
+The particle system employs a large number of tiny sprites, 3D models, or other graphic objects to simulate certain kinds of fuzzy phenomena. Examples include highly chaotic systems, natural phenomena, or processes caused by chemical reactions. These types of particles are difficult to recreate with conventional rendering techniques.
+In this tutorial, you place pipes and use the particle system to add steam erupting from cracks in those pipes. 
+To place pipes and add steam effects
+
+To add pipes to your maze, in the Asset Browser, navigate to StarterGame/Objects/ManMade/Airship/. 
+
+Drag am_air_pipes_straight_02.cgf into the viewport.
+
+
+Use the Move tool to position the pipe in the upper half of the inner maze walls, similar to the following image.
+
+You may need to scale the pipes on the Y axis to make them long enough to span the space between the walls. 
+
+
+
+Next, create an entity to add steam erupting from the pipes. Right-click in the Perspective viewport and choose Create entity. 
+
+
+
+In the Entity Inspector, click Add component. Under Rendering, click the Particle component. 
+
+
+
+In the Particle component's properties, next to the Particle effects library, click the browse (…) button. 
+
+
+
+In the Pick Particle dialog box, navigate to StarterGame/libs/particles/. 
+Select ambientfx.xml and click OK.
+
+
+
+In the Entity Inspector, in the Particle component's properties, for Emitters select Damage.SteamDamage from the particles list.
+
+
+
+Use the Move tool to align the steam particle entity so that it appears to shoot from one of the pipes.
+
+
+
+Next: Adding Ambient Particles

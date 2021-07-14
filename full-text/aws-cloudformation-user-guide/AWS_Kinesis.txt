@@ -1,0 +1,4 @@
+Amazon Kinesis resource type reference
+Resource types
+ AWS::Kinesis::Stream
+ AWS::Kinesis::StreamConsumer

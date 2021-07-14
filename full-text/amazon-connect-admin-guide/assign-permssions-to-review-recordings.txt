@@ -1,0 +1,40 @@
+Assign permissions to review recordings of past conversations
+To assign a manager permissions to review recordings of past conversations
+
+
+Go to Users, User management, choose the manager, and then choose Edit.
+
+
+In the Security Profiles box, assign the manager to the CallCenterManager security profile. This security profile also includes a setting that makes the icon to download recordings appear in the results of the Contact search page. 
+
+
+If you also want the manager to monitor live conversations, assign the manager to the Agent security profile so they can access the Contact Control Panel (CCP). This is so they can monitor the conversation through the CCP.
+
+
+For the manager to listen to recordings that have been redacted, assign Recorded conversations (redacted) permissions to the security profile. For more information about these permissions, see Security profile permissions for Contact Lens.
+
+
+The redaction feature is provided as part of Contact Lens for Amazon Connect. For more information, see About sensitive data redaction in Contact Lens.
+
+Choose Save. 
+
+Or, to create a new security profile specific for this purpose
+
+
+Choose Users, User management, Security profiles. 
+
+
+Choose Add new security profile. 
+
+
+Expand Metrics and Quality, then choose Manager monitor and Recorded conversations (choose both Access and Enable download button). 
+
+
+If you also want the manager to monitor live conversations, assign the manager to the Agent security profile so they can access the Contact Control Panel (CCP). This is so they can monitor the conversation through the CCP.
+
+
+For the manager to listen to recordings that have been redacted, assign Recorded conversations (redacted) permissions to the security profile. For more information about these permissions, see Security profile permissions for Contact Lens.
+
+
+Choose Save. 
+

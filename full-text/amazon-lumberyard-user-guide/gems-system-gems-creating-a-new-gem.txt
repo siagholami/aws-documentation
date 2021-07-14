@@ -1,0 +1,5 @@
+Creating a New Empty Gem
+You can create a new, empty gem using either the Project Configurator or the command line. When you create a new gem, Lumberyard automatically creates a directory structure for your gem in the \dev\Gems\ directory. It also adds the special gem files and directories needed to function as a gem.
+Topics
+ Creating a Gem with the Project Configurator
+ Creating a Gem from the Command Line

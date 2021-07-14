@@ -1,0 +1,5 @@
+AWS::AppSync::GraphQLApi AdditionalAuthenticationProviders
+A list of additional authentication providers for the GraphqlApi API.
+Required: No
+Type: List of AdditionalAuthenticationProvider
+Update requires: No interruption

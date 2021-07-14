@@ -1,0 +1,8 @@
+Code and Application Examples
+This section provides code samples and example applications that you can use to explore Amazon Polly. 
+
+Sample Code
+Example Applications
+
+The Sample Code topic contains snippets of code organized by programming language and separated into examples for different Amazon Polly functionality. The Example Application topic contains applications organized by programming language that can be used independently to explore Amazon Polly.
+Before you start using these examples, we recommend that you first read Amazon Polly: How It Works and follow the steps described in Getting Started with Amazon Polly. 

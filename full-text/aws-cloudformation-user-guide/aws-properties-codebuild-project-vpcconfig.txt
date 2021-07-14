@@ -1,0 +1,38 @@
+AWS::CodeBuild::Project VpcConfig
+VpcConfig is a property of the AWS::CodeBuild::Project resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more information, see Use AWS CodeBuild with Amazon Virtual Private Cloud in the AWS CodeBuild User Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[Subnets](#cfn-codebuild-project-vpcconfig-subnets)" : [ String, ... ],
+  "[VpcId](#cfn-codebuild-project-vpcconfig-vpcid)" : String
+}
+YAML
+[SecurityGroupIds](#cfn-codebuild-project-vpcconfig-securitygroupids): 
+    - String
+  [Subnets](#cfn-codebuild-project-vpcconfig-subnets): 
+    - String
+  [VpcId](#cfn-codebuild-project-vpcconfig-vpcid): String
+Properties
+SecurityGroupIds 
+A list of one or more security groups IDs in your Amazon VPC. The maximum count is 5.
+Required: No
+Type: List of String
+Maximum: 5
+Update requires: No interruption
+Subnets 
+A list of one or more subnet IDs in your Amazon VPC. The maximum count is 16.
+Required: No
+Type: List of String
+Maximum: 16
+Update requires: No interruption
+VpcId 
+The ID of the Amazon VPC.
+Required: No
+Type: String
+Minimum: 1
+Update requires: No interruption
+See also
+
+ VpcConfig in the AWS CodeBuild API Reference 

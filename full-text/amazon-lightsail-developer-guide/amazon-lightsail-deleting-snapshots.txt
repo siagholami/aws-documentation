@@ -1,0 +1,41 @@
+Deleting snapshots in Amazon Lightsail
+Last updated: July 8, 2019 
+Delete instance, database, and disk snapshots in Amazon Lightsail if you no longer need them to avoid incurring a monthly charge.
+Delete an individual snapshot
+
+
+On the Lightsail console, choose Snapshots tab.
+
+
+Find the Lightsail resource whose snapshot you want to delete, and choose the right-arrow to expand the list of of available snapshots for that resource.
+
+
+Choose the actions menu icon (⋮) next to the snapshot you want to delete, and choose Delete snapshot.
+
+
+
+Choose Yes to confirm that you want to delete the snapshot.
+Important
+This is a permanent operation and can't be undone. You will lose all data on the snapshot when you delete it.
+
+
+Delete multiple snapshots
+
+
+From the Lightsail home page, choose Snapshots.
+
+
+Find the Lightsail resource whose snapshots you want to delete, and choose the right-arrow to expand the list of snapshots.
+
+
+
+Choose Delete multiple.
+
+
+Choose the snapshots you want to delete, and choose Delete.
+
+
+Choose Yes to confirm that you want to delete the snapshots.
+Important
+This is a permanent operation and can't be undone. You will lose all data on the snapshots when you delete them.
+

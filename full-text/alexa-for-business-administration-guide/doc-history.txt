@@ -1,0 +1,142 @@
+Document History for Alexa for Business Administration Guide
+The following table describes important changes to the Alexa for Business Administration Guide, beginning in November 2017. For notifications about updates to this documentation, you can subscribe to an RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Send Alexa announcements to one or more rooms. Alexa will wake and speak the announcement that you create.
+For more information, see Sending Announcements in the Alexa for Business Administrator’s Guide.
+May 2, 2019
+
+
+Use Polycom Trio with Alexa for Business
+For more information, see Use Polycom Trio with Alexa for Business in the Alexa for Business Administrator’s Guide.
+April 16, 2019
+
+
+Users can ask Alexa to find an available meeting room
+For more information, see Managing Conferencing and Room Booking in the Alexa for Business Administrator’s Guide.
+April 3, 2019
+
+
+Publish private business skills with Alexa Skill Blueprints
+For more information, see Alexa Skill Blueprints in the Alexa for Business Administrator’s Guide.
+March 27, 2019
+
+
+Run multiple gateways
+For more information, see Running Multiple Gateways in the Alexa for Business Administrator’s Guide.
+March 15, 2019
+
+
+Import Devices with the Alexa Companion App
+For more information, see Import Your Devices in the Alexa for Business Administrator’s Guide.
+January 16, 2019
+
+
+Use the Device Setup Tool for WPA2 Enterprise network security type 
+For more information, see Run the Device Setup Tool in the Alexa for Business Administrator’s Guide.
+December 10, 2018
+
+
+See how Alexa for Business helps your organization by creating usage reports
+For more information, see Creating Usage Reports in the Alexa for Business Administrator’s Guide.
+December 7, 2018
+
+
+Use Alexa for Business to control your Polycom Group Series systems and join meetings by using your voice.
+For more information, see Use Polycom Group Series with Alexa for Business in the Alexa for Business Administrator’s Guide.
+December 6, 2018
+
+
+Register an Alexa Voice Service (AVS) device with Alexa for Business by giving access to the Alexa built-in device maker.
+For more information, see AVS Permissions in the Alexa for Business Administrator’s Guide.
+October 24, 2018
+
+
+Ask Alexa to check whether a room is available, book a room, and tell you who reserved a room
+For more information, see Link Alexa for Business to Your Calendar System in the Alexa for Business Administrator’s Guide.
+October 9, 2018
+
+
+Use the Device Setup Tool - Beta for WPA2 Enterprise network security type 
+For more information, see Run the Device Setup Tool in the Alexa for Business Administrator’s Guide.
+September 24, 2018
+
+
+Link Alexa for Business to Office 365 with delegate or application permissions
+For more information, see Link Alexa for Business to Office 365 in the Alexa for Business Administrator’s Guide.
+August 15, 2018
+
+
+New deregistered device status
+For more information, see Managing Devices in the Alexa for Business Administrator’s Guide.
+August 3, 2018
+
+
+Calendar voice restriction and Alexa Smart Scheduling Assistant
+For more information, see Require Users to Restrict Calendars to Voice and Instruct Users to Use the Alexa Smart Scheduling Assistant  in the Alexa for Business Administrator’s Guide.
+May 21, 2018
+
+
+Connect Alexa for Business to your Zoom Rooms system
+For more information, see Use Zoom Rooms with Alexa for Business in the Alexa for Business Administrator’s Guide.
+May 9, 2018
+
+
+View the network connection status of a device and monitor devices using CloudWatch
+For more information, see Managing Devices in the Alexa for Business Administrator’s Guide.
+April 30, 2018
+
+
+Password expiration emails
+For more information, see Set up Microsoft Exchange Access for Users in the Alexa for Business Administrator’s Guide.
+April 26, 2018
+
+
+Various conferencing updates
+For more information, see Managing Conferencing in the Alexa for Business Administrator’s Guide.
+April 10, 2018
+
+
+Change permissions for a skill
+For more information, see Managing Skills in the Alexa for Business Administrator’s Guide.
+April 6, 2018
+
+
+Make calls from your shared devices with Alexa for Business
+For more information, see Managing Calling in the Alexa for Business Administrator’s Guide.
+March 28, 2018
+
+
+Updates to the Device Setup Tool 
+For more information, see Run the Device Setup Tool in the Alexa for Business Administrator’s Guide.
+March 26, 2018
+
+
+Added support for Fuze and Google Hangouts Meet
+For more information, see Understanding Alexa-enabled Conferencing in the Alexa for Business Administrator’s Guide.
+March 16, 2018
+
+
+Use the Alexa for Business gateway to connect Alexa for Business to your Cisco TelePresence systems
+For more information, see Use the Alexa for Business Gateway in the Alexa for Business Administrator’s Guide.
+February 8, 2018
+
+
+Assign multiple devices to a room
+For more information, see Managing Devices in the Alexa for Business Administrator’s Guide.
+January 26, 2018
+
+
+Initial release
+Initial release
+November 29, 2017
+
+

@@ -1,0 +1,3 @@
+Quotas related to queues
+The following table lists quotas related to queues.
+[See the AWS documentation website for more details]

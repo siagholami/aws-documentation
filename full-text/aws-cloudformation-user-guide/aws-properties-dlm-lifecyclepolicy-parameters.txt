@@ -1,0 +1,16 @@
+AWS::DLM::LifecyclePolicy Parameters
+Specifies optional parameters to add to a policy. The set of valid parameters depends on the combination of policy type and resource type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ExcludeBootVolume](#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume)" : Boolean
+}
+YAML
+[ExcludeBootVolume](#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume): Boolean
+Properties
+ExcludeBootVolume 
+[EBS Snapshot Management – Instance policies only] Indicates whether to exclude the root volume from snapshots created using CreateSnapshots. The default is false.
+Required: No
+Type: Boolean
+Update requires: No interruption

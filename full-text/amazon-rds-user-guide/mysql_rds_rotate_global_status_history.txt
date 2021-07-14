@@ -1,0 +1,4 @@
+mysql.rds_rotate_global_status_history
+Rotates the contents of the mysql.global_status_history table to mysql.global_status_history_old on demand. For more information, see Managing the Global Status History.
+Syntax
+CALL mysql.rds_rotate_global_status_history;

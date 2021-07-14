@@ -1,0 +1,16 @@
+Monitoring profiling groups with CloudWatch metrics
+You can view Amazon CodeGuru Profiler metrics in the Amazon CloudWatch console. 
+To access profiling group metrics
+
+
+Sign in to the AWS Management Console and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Metrics. 
+
+
+On the All metrics tab, choose AWS/CodeGuruProfiler. 
+
+
+Choose ProfilingGroupName. Metrics for recommendations for all selected profiling groups are displayed in the graph on the page. 
+

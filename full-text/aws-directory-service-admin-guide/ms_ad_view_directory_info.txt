@@ -1,0 +1,12 @@
+View Directory Information
+You can view detailed information about a directory.
+To view detailed directory information
+
+
+In the AWS Directory Service console navigation pane, select Directories.
+
+
+Click the directory ID link for your directory. Information about the directory is displayed in the Directory details page. 
+
+
+For more information about the Status field, see Understanding Your Directory Status.

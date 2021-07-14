@@ -1,0 +1,4 @@
+ManagedBlockchain resource type reference
+Resource types
+ AWS::ManagedBlockchain::Member
+ AWS::ManagedBlockchain::Node

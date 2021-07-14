@@ -1,0 +1,27 @@
+Converting the color space
+If you want your output video to use a different color space than your input video, use color space conversion. Set up color space conversion in the output Color corrector settings.
+To convert the color space
+
+
+Confirm that MediaConvert supports the conversion that you want to do. See Supported color space conversions.
+
+
+Set up your transcoding job as usual. For more information, see Setting up a job in AWS Elemental MediaConvert.
+
+
+On the Create job page, in the Job pane on the left, choose your HDR output.
+
+
+At the bottom of the Encoding settings section on the right, choose Preprocessors.
+
+
+Choose Color corrector to display the color correction settings.
+
+
+For Color space conversion, choose the color space that you want for your output.
+
+
+If you are converting to HDR 10, specify values for the HDR master display information settings.
+
+
+These values don't affect the pixel values that are encoded in the video stream. They are intended to help the downstream video player display content in a way that reflects the intentions of the content creator.

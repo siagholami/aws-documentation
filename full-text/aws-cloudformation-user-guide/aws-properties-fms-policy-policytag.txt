@@ -1,0 +1,29 @@
+AWS::FMS::Policy PolicyTag
+A collection of key:value pairs associated with an AWS resource. The key:value pair can be anything you define. Typically, the tag key represents a category (such as "environment") and the tag value represents a specific value within that category (such as "test," "development," or "production"). You can add up to 50 tags to each AWS resource. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-fms-policy-policytag-key)" : String,
+  "[Value](#cfn-fms-policy-policytag-value)" : String
+}
+YAML
+[Key](#cfn-fms-policy-policytag-key): String
+  [Value](#cfn-fms-policy-policytag-value): String
+Properties
+Key 
+Part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^([\p{L}\p{Z}\p{N}_.:/=\-@]*)$
+Update requires: No interruption
+Value 
+Part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive. 
+Required: Yes
+Type: String
+Minimum: 0
+Maximum: 256
+Pattern: ^([\p{L}\p{Z}\p{N}_.:/=\-@]*)$
+Update requires: No interruption

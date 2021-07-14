@@ -1,0 +1,56 @@
+AWS::Greengrass::ResourceDefinitionVersion ResourceDataContainer
+A container for resource data, which defines the resource type. The container takes only one of the following supported resource data types: LocalDeviceResourceData, LocalVolumeResourceData, SageMakerMachineLearningModelResourceData, S3MachineLearningModelResourceData, or SecretsManagerSecretResourceData.
+Note
+Only one resource type can be defined for a ResourceDataContainer instance.
+ In an AWS CloudFormation template, ResourceDataContainer is a property of the https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[LocalDeviceResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localdeviceresourcedata)" : LocalDeviceResourceData,
+  "[LocalVolumeResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localvolumeresourcedata)" : LocalVolumeResourceData,
+  "[S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-s3machinelearningmodelresourcedata)" : S3MachineLearningModelResourceData,
+  "[SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)" : SageMakerMachineLearningModelResourceData,
+  "[SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-secretsmanagersecretresourcedata)" : SecretsManagerSecretResourceData
+}
+YAML
+[LocalDeviceResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localdeviceresourcedata): 
+    LocalDeviceResourceData
+  [LocalVolumeResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-localvolumeresourcedata): 
+    LocalVolumeResourceData
+  [S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-s3machinelearningmodelresourcedata): 
+    S3MachineLearningModelResourceData
+  [SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata): 
+    SageMakerMachineLearningModelResourceData
+  [SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-secretsmanagersecretresourcedata): 
+    SecretsManagerSecretResourceData
+Properties
+LocalDeviceResourceData 
+Settings for a local device resource.
+Required: No
+Type: LocalDeviceResourceData
+Update requires: Replacement
+LocalVolumeResourceData 
+Settings for a local volume resource.
+Required: No
+Type: LocalVolumeResourceData
+Update requires: Replacement
+S3MachineLearningModelResourceData 
+Settings for a machine learning resource stored in Amazon S3.
+Required: No
+Type: S3MachineLearningModelResourceData
+Update requires: Replacement
+SageMakerMachineLearningModelResourceData 
+Settings for a machine learning resource saved as an Amazon SageMaker training job.
+Required: No
+Type: SageMakerMachineLearningModelResourceData
+Update requires: Replacement
+SecretsManagerSecretResourceData 
+Settings for a secret resource.
+Required: No
+Type: SecretsManagerSecretResourceData
+Update requires: Replacement
+See also
+
+ResourceDataContainer in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

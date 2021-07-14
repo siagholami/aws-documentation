@@ -1,0 +1,172 @@
+Use Cisco TelePresence with Alexa for Business
+Use Alexa for Business to control your Cisco TelePresence systems and join meetings by using your voice. Alexa for Business supports the following Cisco video conferencing endpoints:
+ Cisco Telepresence DX, EX, MX, and SX series
+ Cisco Spark Room Kit
+To have Alexa control your Cisco video conferencing endpoints, run the Alexa for Business gateway within your local network. The Alexa for Business gateway receives control events from Alexa for Business and issues commands to the Cisco video conferencing endpoints in your meeting rooms. For example, when a user asks Alexa to join a meeting, an event is sent to the gateway. The gateway processes this event, connects to the Cisco video conferencing endpoint in the room, and then initiates the dial-in to the meeting. The following diagram shows the setup and network boundaries.
+
+For more information, see Use the Alexa for Business Gateway.
+To use Alexa for Business to control your Cisco video conferencing endpoints, you must meet the following requirements:
+ You have a Cisco TelePresence system with firmware version TC7.3.12 or CE8 or higher.
+ You have Windows Server 2008 or later, Windows 7 desktop or later, or a Linux server or choice to run the Alexa for Business gateway. This can be a virtual or physical machine.
+ Your locally deployed Alexa for Business gateway is allowed to make outbound HTTPS connections and has local network access to control your Cisco TelePresence system. Incoming external communication or inbound ports aren't required.
+ Cisco video conferencing endpoints registered with Cisco Spark cloud are currently not supported.
+To use Cisco TelePresence with Alexa for Business
+
+
+Set up your conferencing provider in Alexa for Business.
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Conference settings and then choose the name of your default conferencing provider.
+
+
+Enter the H323/SIP endpoint if it isn't filled in. Alexa for Business sends these settings with the meeting ID/PIN to create a dial-in string that's called on in the Cisco TelePresence system.
+
+
+Enable the skill.
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Conference settings and Alexa for Cisco TelePresence in the list of conference equipment.
+
+
+Choose Enable.
+
+
+You receive a prompt to link an account. Sign in or create an Amazon.com account (for example, marymajor@example.com).
+
+
+Choose Skills, Enabled skills, and then select the skill.
+
+
+Choose Assign to skill group and choose the skill group associated with the rooms where you want to make the skill available.
+
+
+Install the Alexa for Business gateway. For more information, see Use the Alexa for Business Gateway. 
+
+
+Add your Cisco TelePresence system to Alexa for Business and add it to a room.
+
+
+Choose Endpoint, Add endpoint.
+
+
+Specify the Cisco TelePresence system name.
+
+
+Enter a friendly name, which can be used to control the Cisco endpoint using your voice. For example, "Alexa, turn on ."
+
+
+(Optional) Enter a description.
+
+
+Choose the Cisco TelePresence model.
+
+
+Specify the endpoint URL of your Cisco TelePresence endpoint. For example, "http://10.0.1.42". 
+Note
+If you don't specify a protocol, "http" is used.
+
+
+Choose the Alexa for Business room where the Cisco TelePresence endpoint is located.
+
+
+Choose Add.
+
+
+Choose Rooms and the name of the room where you just assigned the Cisco TelePresence endpoint.
+
+
+Choose the gateway group to control your Cisco endpoint.
+
+
+Choose Discover devices to have the endpoint available in your room.
+
+
+Test the integration by saying “Alexa, start my meeting,” and say the meeting ID and PIN for your meeting when prompted. 
+
+
+To add a Cisco TelePresence endpoint
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Conferencing settings, Alexa for Cisco TelePresence.
+
+
+In the endpoint section, choose Add endpoint. For System name, enter Cisco TelePresence.
+
+
+Enter a friendly name, which can be used to control the Cisco endpoint using your voice. For example, "Alexa, turn on ." Enter an optional description.
+
+
+Choose Cisco TelePresence model and specify the endpoint URL of your Cisco TelePresence endpoint. For example, "http://10.0.1.42".
+Note
+If you don't specify a protocol, "http" is used.
+
+
+Choose the Alexa for Business room where the Cisco TelePresence endpoint is located and choose Add.
+
+
+Choose Rooms and the name of the room where you just assigned the Cisco TelePresence endpoint.
+
+
+Choose the gateway group to control your endpoint.
+
+
+To have the endpoint available in your room, go to the Smart Home devices section and choose Discover devices.
+
+
+You can now use Alexa to control your Cisco TelePresence endpoint using voice.
+To remove an endpoint
+
+
+Open the Alexa for Business console at https://console.aws.amazon.com/a4b/.
+
+
+Choose Conferencing settings, Alexa for Cisco TelePresence.
+
+
+Go to the endpoint section and select the check box next to the device to deregister. 
+
+
+Choose Remove.
+
+
+To use HTTPS to connect to your Cisco Telepresence endpoints
+
+
+Choose one of the following options:
+
+
+To connect Alexa for Business to your Cisco Telepresence systems over Transport Layer Security (TLS), the gateway must be able to verify the signature of the certificates. To enable this capability, install the root CA and other intermediate CAs that signed the certificate on the host where you run the gateway. If the Cisco system can't be authenticated, the connection isn't established. 
+You can either install the root CA and other intermediate CAs in the certificate store of your gateway host. You can also specify the path to the certificates in the gateway config file; for example:.
+"rootCAsFile": "path\\to\\certs\\custom-certs.pem"
+
+
+(Not secure and not recommended) If your Cisco endpoints are configured with a self-signed certificate, you can also disable the certificate validation to allow the gateway to connect regardless of the certificate in use. To do this, open the gateway configuration file and change the following configuration value:
+"skipSslVerification": true
+
+
+To apply the change, restart the gateway.
+
+
+Verify the gateway log file to confirm that the certificate validation works correctly. If the certificate validation fails, you see the following message in the log file:
+
+
+handler-cisco: failed executing request: Get https:///getxml?location=/Status: x509: certificate signed by unknown authority
+To debug log files
+
+
+Go to one of the following locations to see the log files written by the Alexa for Business gateway:
+    On Windows: C:\ProgramData\
+    On Linux: /var/log/a4b-gateway/gateway.log
+
+
+In the log files, verify that the gateway is listening to the queue for control commands. Find control requests in the log file by searching for “inbound: worker received request.” By default, the log shows all the different control commands the gateway is performing. Looks for errors to determine why the gateway can’t control your Cisco endpoint.
+

@@ -1,0 +1,113 @@
+AWS Service Catalog Administrator Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Service Catalog?
+Overview of AWS Service Catalog
+AWS Service Catalog default service quotas
+Setting Up for AWS Service Catalog
+Grant Permissions to AWS Service Catalog Administrators
+Grant Permissions to AWS Service Catalog End Users
+Getting Started
+Step 1: Download the AWS CloudFormation Template
+Step 2: Create a Key Pair
+Step 3: Create an AWS Service Catalog Portfolio
+Step 4: Create an AWS Service Catalog Product
+Step 5: Add a Template Constraint to Limit Instance Size
+Step 6: Add a Launch Constraint to Assign an IAM Role
+Step 7: Grant End Users Access to the Portfolio
+Step 8: Test the End User Experience
+Getting Started Library
+Security in AWS Service Catalog
+Data Protection in AWS Service Catalog
+Identity and Access Management in AWS Service Catalog
+Example Policies for Managing Provisioned Products
+
+
+Logging and Monitoring in AWS Service Catalog
+Compliance Validation for AWS Service Catalog
+Resilience in AWS Service Catalog
+Infrastructure Security in AWS Service Catalog
+Security Best Practices for AWS Service Catalog
+Managing Catalogs
+Managing Portfolios
+Creating and Deleting Portfolios
+Adding Products
+Adding Constraints
+Granting Access to Users
+
+
+Managing Products
+Creating Products
+Adding Products to Portfolios
+Updating Products
+Deleting Products
+Managing Versions
+
+
+Using AWS Service Catalog Constraints
+AWS Service Catalog Launch Constraints
+AWS Service Catalog Notification Constraints
+AWS Service Catalog Tag Update Constraints
+AWS Service Catalog Stack Set Constraints
+AWS Service Catalog Template Constraints
+Template Constraint Rules
+AWS Service Catalog Rule Functions
+
+
+
+
+AWS Service Catalog Service Actions
+Adding AWS Marketplace Products to Your Portfolio
+Portfolio Sharing
+Using AWS CloudFormation StackSets
+Managing Budgets
+Managing Provisioned Products
+Managing All Provisioned Products as Administrator
+Changing Provisioned Product Owner
+Tutorial: Identifying User Resource Allocation
+Managing Tags in AWS Service Catalog
+AWS Service Catalog AutoTags
+AWS Service Catalog TagOption Library
+Launching a Product with TagOptions
+Managing TagOptions
+
+
+Monitoring in AWS Service Catalog
+Monitoring Tools
+AWS Service Catalog CloudWatch Metrics
+Viewing AWS Service Catalog Metrics
+
+
+Product and Service Integrations with AWS Service Catalog
+AWS Service Catalog Connector for ServiceNow
+Baseline Permissions
+Configuring AWS Service Catalog
+Creating StackSet Constraints
+Relating Budgets to Products and Portfolios
+Configuring ServiceNow
+Validating Configurations
+ServiceNow Additional Administrator Features
+Upgrade Instructions
+
+
+AWS Service Management Connector for Jira Service Desk
+Baseline Permissions
+Configuring AWS Service Catalog
+Configuring Jira Service Desk
+IT Lifecycle Management Setup and Use Case
+Validating Configurations
+Jira Additional Administrator Features
+
+
+Document History

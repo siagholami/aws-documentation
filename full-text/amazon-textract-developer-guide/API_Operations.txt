@@ -1,0 +1,8 @@
+Actions
+The following actions are supported:
+  AnalyzeDocument 
+  DetectDocumentText 
+  GetDocumentAnalysis 
+  GetDocumentTextDetection 
+  StartDocumentAnalysis 
+  StartDocumentTextDetection 

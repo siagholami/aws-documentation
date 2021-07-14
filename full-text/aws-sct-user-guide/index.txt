@@ -1,0 +1,51 @@
+AWS Schema Conversion Tool User Guide
+
+*Copyright © 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is the AWS Schema Conversion Tool?
+Installing, Verifying, and Updating the AWS Schema Conversion Tool (AWS SCT)
+Using the AWS Schema Conversion Tool (AWS SCT) User Interface
+Getting Started with the AWS Schema Conversion Tool
+Source Databases for the AWS Schema Conversion Tool
+Using Oracle as a Source for AWS Schema Conversion Tool (AWS SCT)
+Converting Oracle to Amazon RDS for PostgreSQL or Amazon Aurora (PostgreSQL)
+Converting Oracle to Amazon RDS for MySQL or Amazon Aurora (MySQL)
+Converting Oracle to Amazon RDS for Oracle
+
+
+Using Microsoft SQL Server as a Source for AWS Schema Conversion Tool (AWS SCT)
+Converting SQL Server to MySQL
+Converting SQL Server to PostgreSQL
+Converting SQL Server to Amazon RDS for SQL Server
+
+
+Using MySQL as a Source for AWS Schema Conversion Tool (AWS SCT)
+Using PostgreSQL as a Source for AWS Schema Conversion Tool (AWS SCT)
+Using Db2 LUW as a Source for AWS Schema Conversion Tool (AWS SCT)
+Converting DB2 LUW to Amazon RDS for PostgreSQL or Amazon Aurora (PostgreSQL)
+
+
+AWS Schema Conversion Tool Assessment Report
+Converting Database Schemas Using the AWS Schema Conversion Tool
+Comparing Database Schemas
+Finding Related Transformed Objects
+Converting Data Warehouse Schemas to Amazon Redshift Using the AWS Schema Conversion Tool
+Optimizing Amazon Redshift by Using the AWS Schema Conversion Tool
+Using the AWS Schema Conversion Tool with the AWS Database Migration Service
+Using Data Extraction Agents
+Converting Application SQL Using the AWS Schema Conversion Tool
+Using the AWS Schema Conversion Tool Extension Pack
+Best Practices for the AWS Schema Conversion Tool
+Troubleshooting Issues with the AWS Schema Conversion Tool
+Release Notes for the AWS Schema Conversion Tool
+Document History

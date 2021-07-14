@@ -1,0 +1,23 @@
+AWS::ECS::TaskDefinition VolumeFrom
+The VolumeFrom property specifies details on a data volume from another container in the same task definition.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly)" : Boolean,
+  "[SourceContainer](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer)" : String
+}
+YAML
+[ReadOnly](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly): Boolean
+  [SourceContainer](#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer): String
+Properties
+ReadOnly 
+If this value is true, the container has read-only access to the volume. If this value is false, then the container can write to the volume. The default value is false.
+Required: No
+Type: Boolean
+Update requires: Replacement
+SourceContainer 
+The name of another container within the same task definition from which to mount volumes.
+Required: No
+Type: String
+Update requires: Replacement

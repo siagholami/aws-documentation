@@ -1,0 +1,25 @@
+AWS Systems Manager reference
+The following information and topics can help you better implement Systems Manager solutions.
+Principal
+In AWS Identity and Access Management (IAM), you can grant or deny a service access to resources using the Principal policy element. The Principal policy element value for Systems Manager is ssm.amazonaws.com.
+ Supported Regions and Endpoints 
+See Systems Manager service endpoints in the Amazon Web Services General Reference.
+Service Quotas
+See Systems Manager service quotas in the Amazon Web Services General Reference.
+API Reference
+See AWS Systems Manager API Reference.
+AWS CLI Command Reference
+See AWS Systems Manager section of the AWS CLI Command Reference.
+AWS Tools for PowerShell Cmdlet Reference
+See AWS Systems Manager section of the AWS Tools for PowerShell Cmdlet Reference.
+SSM Agent Repository on GitHub
+See aws/amazon-ssm-agent.
+Ask a Question
+AWS Systems Manager Developer Forum
+AWS News Blog
+Management Tools
+Topics
+ Reference: Amazon EventBridge event patterns and types for Systems Manager
+ Reference: Cron and rate expressions for Systems Manager
+ Reference: ec2messages, ssmmessages, and other API calls
+ Reference: Creating formatted date and time strings for Systems Manager

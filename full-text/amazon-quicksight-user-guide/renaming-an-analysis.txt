@@ -1,0 +1,9 @@
+Renaming an Analysis
+Use the following procedure to rename an analysis.
+
+
+Open the analysis you want to rename.
+
+
+In the Analysis name field in the application bar, select the current name and then type a new name.
+

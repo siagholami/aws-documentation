@@ -1,0 +1,3 @@
+AWS Cloud9 resource type reference
+Resource types
+ AWS::Cloud9::EnvironmentEC2

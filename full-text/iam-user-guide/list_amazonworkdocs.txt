@@ -1,0 +1,441 @@
+Actions, resources, and condition keys for Amazon WorkDocs
+Amazon WorkDocs (service prefix: workdocs) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Amazon WorkDocs
+ Resource types defined by Amazon WorkDocs
+ Condition keys for Amazon WorkDocs
+Actions defined by Amazon WorkDocs
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AbortDocumentVersionUpload 
+Grants permission to abort the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload.
+Write
+
+
+
+
+
+ ActivateUser 
+Grants permission to activate the specified user. Only active users can access Amazon WorkDocs.
+Write
+
+
+
+
+
+ AddResourcePermissions 
+Grants permission to create a set of permissions for the specified folder or document.
+Write
+
+
+
+
+
+ AddUserToGroup  [permission only]
+Grants permission to add a user to a group.
+Write
+
+
+
+
+
+ CheckAlias  [permission only]
+Grants permission to check an alias.
+Read
+
+
+
+
+
+ CreateComment 
+Grants permission to add a new comment to the specified document version.
+Write
+
+
+
+
+
+ CreateCustomMetadata 
+Grants permission to add one or more custom properties to the specified resource.
+Write
+
+
+
+
+
+ CreateFolder 
+Grants permission to create a folder with the specified name and parent folder.
+Write
+
+
+
+
+
+ CreateInstance  [permission only]
+Grants permission to create an instance.
+Write
+
+
+
+
+
+ CreateLabels 
+Grants permission to add labels to the given resource.
+Write
+
+
+
+
+
+ CreateNotificationSubscription 
+Grants permission to configure WorkDocs to use Amazon SNS notifications.
+Write
+
+
+
+
+
+ CreateUser 
+Grants permission to create a user in a Simple AD or Microsoft AD directory.
+Write
+
+
+
+
+
+ DeactivateUser 
+Grants permission to deactivate the specified user, which revokes the user's access to Amazon WorkDocs.
+Write
+
+
+
+
+
+ DeleteComment 
+Grants permission to delete the specified comment from the document version.
+Write
+
+
+
+
+
+ DeleteCustomMetadata 
+Grants permission to delete custom metadata from the specified resource.
+Write
+
+
+
+
+
+ DeleteDocument 
+Grants permission to permanently delete the specified document and its associated metadata.
+Write
+
+
+
+
+
+ DeleteFolder 
+Grants permission to permanently delete the specified folder and its contents.
+Write
+
+
+
+
+
+ DeleteFolderContents 
+Grants permission to delete the contents of the specified folder.
+Write
+
+
+
+
+
+ DeleteInstance  [permission only]
+Grants permission to delete an instance.
+Write
+
+
+
+
+
+ DeleteLabels 
+Grants permission to delete one or more labels from a resource.
+Write
+
+
+
+
+
+ DeleteNotificationSubscription 
+Grants permission to delete the specified subscription from the specified organization.
+Write
+
+
+
+
+
+ DeleteUser 
+Grants permission to delete the specified user from a Simple AD or Microsoft AD directory.
+Write
+
+
+
+
+
+ DeregisterDirectory  [permission only]
+Grants permission to deregister a directory.
+Write
+
+
+
+
+
+ DescribeActivities 
+Grants permission to fetch user activities in a specified time period.
+List
+
+
+
+
+
+ DescribeAvailableDirectories  [permission only]
+Grants permission to describe available directories.
+List
+
+
+
+
+
+ DescribeComments 
+Grants permission to list all the comments for the specified document version.
+List
+
+
+
+
+
+ DescribeDocumentVersions 
+Grants permission to retrieve the document versions for the specified document.
+List
+
+
+
+
+
+ DescribeFolderContents 
+Grants permission to describe the contents of the specified folder, including its documents and sub-folders.
+List
+
+
+
+
+
+ DescribeGroups 
+Grants permission to describe the user groups.
+List
+
+
+
+
+
+ DescribeInstances  [permission only]
+Grants permission to describe instances.
+List
+
+
+
+
+
+ DescribeNotificationSubscriptions 
+Grants permission to list the specified notification subscriptions.
+List
+
+
+
+
+
+ DescribeResourcePermissions 
+Grants permission to view a description of a specified resource's permissions.
+List
+
+
+
+
+
+ DescribeRootFolders 
+Grants permission to describe the root folders.
+List
+
+
+
+
+
+ DescribeUsers 
+Grants permission to view a description of the specified users. You can describe all users or filter the results (for example, by status or organization).
+List
+
+
+
+
+
+ DownloadDocumentVersion  [permission only]
+Grants permission to download a specified document version.
+Read
+
+
+
+
+
+ GetCurrentUser 
+Grants permission to retrieve the details of the current user.
+Read
+
+
+
+
+
+ GetDocument 
+Grants permission to retrieve the specified document object.
+Read
+
+
+
+
+
+ GetDocumentPath 
+Grants permission to retrieve the path information (the hierarchy from the root folder) for the requested document.
+Read
+
+
+
+
+
+ GetDocumentVersion 
+Grants permission to retrieve version metadata for the specified document.
+Read
+
+
+
+
+
+ GetFolder 
+Grants permission to retrieve the metadata of the specified folder.
+Read
+
+
+
+
+
+ GetFolderPath 
+Grants permission to retrieve the path information (the hierarchy from the root folder) for the specified folder.
+Read
+
+
+
+
+
+ GetResources 
+Grants permission to get a collection of resources.
+Read
+
+
+
+
+
+ InitiateDocumentVersionUpload 
+Grants permission to create a new document object and version object.
+Write
+
+
+
+
+
+ RegisterDirectory  [permission only]
+Grants permission to register a directory.
+Write
+
+
+
+
+
+ RemoveAllResourcePermissions 
+Grants permission to remove all the permissions from the specified resource.
+Write
+
+
+
+
+
+ RemoveResourcePermission 
+Grants permission to remove the permission for the specified principal from the specified resource.
+Write
+
+
+
+
+
+ UpdateDocument 
+Grants permission to update the specified attributes of the specified document.
+Write
+
+
+
+
+
+ UpdateDocumentVersion 
+Grants permission to change the status of the document version to ACTIVE.
+Write
+
+
+
+
+
+ UpdateFolder 
+Grants permission to update the specified attributes of the specified folder.
+Write
+
+
+
+
+
+ UpdateInstanceAlias  [permission only]
+Grants permission to update an instance alias.
+Write
+
+
+
+
+
+ UpdateUser 
+Grants permission to update the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site.
+Write
+
+
+
+
+
+
+Resource types defined by Amazon WorkDocs
+Amazon WorkDocs does not support specifying a resource ARN in the Resource element of an IAM policy statement. To allow access to Amazon WorkDocs, specify “Resource”: “*” in your policy.
+Condition keys for Amazon WorkDocs
+WorkDocs has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

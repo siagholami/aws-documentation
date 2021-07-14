@@ -1,0 +1,36 @@
+UI World Components
+Controls the loading and unloading of UI canvases.
+UiCanvasAssetRefBus
+Services messages for the UiCanvasAssetRefComponent.
+LoadCanvas
+Loads the UI canvas using the stored asset reference. Returns the entity ID of the loaded canvas.
+Syntax
+AZ::EntityId LoadCanvas()
+UnloadCanvas
+Unloads the UI canvas using the stored asset reference.
+Syntax
+void UnloadCanvas()
+UiCanvasAssetRefNotificationBus
+Handles events sent by the UiCanvasAssetRefComponent.
+OnCanvasLoadedIntoEntity
+Called when the canvas asset reference loads a UI canvas.
+Syntax
+void OnCanvasLoadedIntoEntity(AZ::EntityId uiCanvasEntity)
+UiCanvasProxyRefBus
+Services messages for the UiCanvasProxyRefComponent.
+SetCanvasRefEntity
+Sets the entity that manages the UI canvas for this proxy.
+Syntax
+void SetCanvasRefEntity(AZ::EntityId canvasAssetRefEntity)
+UiCanvasRefBus
+Services messages for the UiCanvasAssetRefComponent and UiCanvasProxyRefComponent.
+GetCanvas
+Returns the UI canvas associated with this entity
+Syntax
+AZ::EntityId GetCanvas()
+UiCanvasRefNotificationBus
+Provides notifications of when the UI canvas reference changes.
+OnCanvasRefChanged
+Called when the canvas referenced by a UiCanvasAssetRefComponent has changed. This can happen when LoadCanvas, UnloadCanvas, or SetCanvasRefEntity is called.
+Syntax
+void OnCanvasRefChanged(AZ::EntityId uiCanvasRefEntity, AZ::EntityId uiCanvasEntity

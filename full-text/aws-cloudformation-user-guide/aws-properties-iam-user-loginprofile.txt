@@ -1,0 +1,26 @@
+AWS::IAM::User LoginProfile
+Contains the user name and password create date for a user.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Password](#cfn-iam-user-loginprofile-password)" : String,
+  "[PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired)" : Boolean
+}
+YAML
+[Password](#cfn-iam-user-loginprofile-password): String
+  [PasswordResetRequired](#cfn-iam-user-loginprofile-passwordresetrequired): Boolean
+Properties
+Password 
+The user's password.
+Required: Yes
+Type: String
+Update requires: No interruption
+PasswordResetRequired 
+Specifies whether the user is required to set a new password on next sign-in.
+Required: No
+Type: Boolean
+Update requires: No interruption
+See also
+
+LoginProfile in the AWS Identity and Access Management API Reference 

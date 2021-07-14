@@ -1,0 +1,17 @@
+CREATE GROUP
+Defines a new user group. Only a superuser can create a group.
+Syntax
+CREATE GROUP group_name
+[ [ WITH ] [ USER username ] [, ...] ]
+Parameters
+group_name 
+Name of the new user group. Group names beginning with two underscores are reserved for Amazon Redshift internal use. For more information about valid names, see Names and identifiers.
+WITH
+Optional syntax to indicate additional parameters for CREATE GROUP.
+USER
+Add one or more users to the group.
+username 
+Name of the user to add to the group.
+Examples
+The following example creates a user group named ADMIN_GROUP with a two users, ADMIN1 and ADMIN2.
+create group admin_group with user admin1, admin2;

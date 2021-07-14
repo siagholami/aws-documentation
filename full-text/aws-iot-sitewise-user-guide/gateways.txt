@@ -1,0 +1,10 @@
+Ingesting data using a gateway
+An AWS IoT SiteWise gateway connects to OPC-UA servers to deliver your industrial data streams to the AWS Cloud. You can deploy the AWS IoT SiteWise connector on any device or platform that can run AWS IoT Greengrass.
+Note
+This documentation describes how to set up the latest version of the AWS IoT SiteWise connector, version 7. For more information and the connector version changelog, see the AWS IoT SiteWise connector in the AWS IoT Greengrass Developer Guide.
+For more information about how to identify and resolve gateway issues, see Troubleshooting an AWS IoT SiteWise gateway.
+Topics
+ Choosing a gateway platform
+ Configuring a gateway
+ Configuring data sources
+ Upgrading a connector

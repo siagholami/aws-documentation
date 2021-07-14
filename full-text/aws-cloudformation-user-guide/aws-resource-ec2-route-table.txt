@@ -1,0 +1,60 @@
+AWS::EC2::RouteTable
+Specifies a route table for a specified VPC. After you create a route table, you can add routes and associate the table with a subnet.
+For more information, see Route Tables in the Amazon Virtual Private Cloud User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::RouteTable",
+  "Properties" : {
+      "[Tags](#cfn-ec2-routetable-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VpcId](#cfn-ec2-routetable-vpcid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::RouteTable
+Properties: 
+  [Tags](#cfn-ec2-routetable-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VpcId](#cfn-ec2-routetable-vpcid): String
+Properties
+Tags 
+Any tags assigned to the route table.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+VpcId 
+The ID of the VPC.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the route table.
+For more information about using the Ref function, see Ref.
+Examples
+Route Table
+The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template.
+JSON
+"myRouteTable" : {
+   "Type" : "AWS::EC2::RouteTable",
+   "Properties" : {
+      "VpcId" : { "Ref" : "myVPC" },
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+}
+YAML
+myRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  
+        Ref: myVPC
+      Tags:
+      - Key: foo
+        Value: bar
+See also
+
+AWS::EC2::Route
+CreateRouteTable in the Amazon EC2 API Reference
+Route Tables in the Amazon VPC User Guide
+Using Tags in the Amazon Elastic Compute Cloud User Guide

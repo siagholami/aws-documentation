@@ -1,0 +1,37 @@
+AWS::SES::Template Template
+The content of the email, composed of a subject line, an HTML part, and a text-only part.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[HtmlPart](#cfn-ses-template-template-htmlpart)" : String,
+  "[SubjectPart](#cfn-ses-template-template-subjectpart)" : String,
+  "[TemplateName](#cfn-ses-template-template-templatename)" : String,
+  "[TextPart](#cfn-ses-template-template-textpart)" : String
+}
+YAML
+[HtmlPart](#cfn-ses-template-template-htmlpart): String
+  [SubjectPart](#cfn-ses-template-template-subjectpart): String
+  [TemplateName](#cfn-ses-template-template-templatename): String
+  [TextPart](#cfn-ses-template-template-textpart): String
+Properties
+HtmlPart 
+The HTML body of the email.
+Required: No
+Type: String
+Update requires: No interruption
+SubjectPart 
+The subject line of the email.
+Required: No
+Type: String
+Update requires: No interruption
+TemplateName 
+The name of the template. You specify this name when you send email using the SendTemplatedEmail or SendBulkTemplatedEmail operations.
+Required: No
+Type: String
+Update requires: Replacement
+TextPart 
+The email body that is visible to recipients whose email clients don't display HTML content.
+Required: No
+Type: String
+Update requires: No interruption

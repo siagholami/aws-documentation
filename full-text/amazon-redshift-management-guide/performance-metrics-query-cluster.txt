@@ -1,0 +1,45 @@
+Viewing cluster performance during query execution
+Note
+A new console is available for Amazon Redshift. Choose either the New console or the Original console instructions based on the console that you are using. The New console instructions are open by default.
+New console
+To display cluster performance during query execution
+
+
+Sign in to the AWS Management Console and open the Amazon Redshift console at https://console.aws.amazon.com/redshift/.
+
+
+On the navigation menu, choose CLUSTERS, then choose the cluster name from the list to open its details. The details of the cluster are displayed, including Cluster performance, Query monitoring, Maintenance and monitoring, Backup, Properties, and Schedule tabs.
+
+
+Choose the Query monitoring tab for more details. 
+
+
+For more information, see Viewing query history data. 
+Original console
+You can use the Cluster Performance During Query Execution section of the Query view to see cluster metrics during query execution. Doing so helps identify poorly performing queries, look for bottleneck queries, and determine if you need to resize your cluster for your workload.
+To view cluster metrics during query execution
+
+
+Sign in to the AWS Management Console and open the Amazon Redshift console at https://console.aws.amazon.com/redshift/.
+
+
+In the navigation pane, choose Clusters.
+
+
+For Cluster, choose the cluster for which you want to view cluster performance during query execution.
+
+
+Choose the Queries tab.
+
+
+In the query list, find the query you want to work with, and choose the query ID in the Query column.
+
+
+In the following example, the queries are sorted by Run time to find the queries with the longest run times. 
+
+
+In the Query page that opens, scroll to the Cluster Performance During Query Execution section to view cluster metrics.
+
+In the following example, the CPUUtilization and NetworkReceiveThroughput metrics are displayed for the time that this query was running.
+Tip
+You can close the details of the Query Execution Details or SQL sections to manage how much information is displayed in the pane.

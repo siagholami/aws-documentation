@@ -1,0 +1,23 @@
+AWS::EC2::Instance CpuOptions
+The CPU options for the instance.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CoreCount](#cfn-ec2-instance-cpuoptions-corecount)" : Integer,
+  "[ThreadsPerCore](#cfn-ec2-instance-cpuoptions-threadspercore)" : Integer
+}
+YAML
+[CoreCount](#cfn-ec2-instance-cpuoptions-corecount): Integer
+  [ThreadsPerCore](#cfn-ec2-instance-cpuoptions-threadspercore): Integer
+Properties
+CoreCount 
+The number of CPU cores for the instance.
+Required: No
+Type: Integer
+Update requires: No interruption
+ThreadsPerCore 
+The number of threads per CPU core.
+Required: No
+Type: Integer
+Update requires: No interruption

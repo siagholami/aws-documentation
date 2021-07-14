@@ -1,0 +1,23 @@
+stored_proc_log_min_messages
+Values (default in bold)
+LOG, INFO, NOTICE, WARNING, EXCEPTION
+Description
+Specifies the minimum logging level of raised stored procedure messages. Messages at or above the specfied level are logged. The default is LOG (all messages are logged). The order of log levels from highest to lowest is: 
+
+
+EXCEPTION
+
+
+WARNING
+
+
+NOTICE
+
+
+INFO
+
+
+LOG
+
+
+For example if you specify a value of NOTICE, then messages are only logged for NOTICE, WARNING, and EXCEPTION. 

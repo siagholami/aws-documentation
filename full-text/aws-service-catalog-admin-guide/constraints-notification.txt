@@ -1,0 +1,45 @@
+AWS Service Catalog Notification Constraints
+A notification constraint specifies an Amazon SNS topic to receive notifications about stack events. The SNS topic specifies the email address to receive the notifications.
+Use the following procedure to create an SNS topic and subscribe to it.
+To create an SNS topic and a subscription
+
+
+Open the Amazon SNS console at https://console.aws.amazon.com/sns/v3/home.
+
+
+Choose Create topic.
+
+
+Type a topic name and then choose Create topic.
+
+
+Choose Create subscription.
+
+
+For Protocol, select Email. For Endpoint, type an email address that you can use to receive notifications. Choose Create subscription.
+
+
+You'll receive a confirmation email with the subject line AWS Notification - Subscription Confirmation. Open the email and follow the directions to complete your subscription.
+
+
+Use the following procedure to apply a notification constraint using the SNS topic that you created using the previous procedure.
+To apply a notification constraint to a product
+
+
+Open the AWS Service Catalog console at https://console.aws.amazon.com/servicecatalog/.
+
+
+Choose the portfolio that contains the product.
+
+
+Expand Constraints and choose Add constraints.
+
+
+Choose the product from Product and set Constraint type to Notification. Choose Continue.
+
+
+Choose Choose a topic from your account and select the SNS topic that you created from Topic Name.
+
+
+Choose Submit.
+

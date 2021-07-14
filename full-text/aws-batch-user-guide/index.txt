@@ -1,0 +1,88 @@
+AWS Batch User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Batch?
+Setting Up with AWS Batch
+Getting Started with AWS Batch
+Jobs
+Submitting a Job
+Job States
+AWS Batch Job Environment Variables
+Automated Job Retries
+Job Dependencies
+Job Timeouts
+Array Jobs
+Example Array Job Workflow
+Tutorial: Using the Array Job Index to Control Job Differentiation
+
+
+Multi-node Parallel Jobs
+GPU Jobs
+Job Definitions
+Creating a Job Definition
+Creating a Multi-node Parallel Job Definition
+Job Definition Template
+Job Definition Parameters
+Example Job Definitions
+Job Queues
+Creating a Job Queue
+Job Queue Template
+
+
+Job Queue Parameters
+Job Scheduling
+Compute Environments
+Compute Resource AMIs
+Creating a Compute Resource AMI
+Using a GPU Workload AMI
+
+
+Launch Template Support
+Creating a Compute Environment
+Compute Environment Template
+
+
+Compute Environment Parameters
+Allocation Strategies
+Compute Resource Memory Management
+Elastic Fabric Adapter
+AWS Batch IAM Policies, Roles, and Permissions
+Policy Structure
+Supported Resource-Level Permissions for AWS Batch API Actions
+Example Policies
+AWS Batch Managed Policy
+Creating AWS Batch IAM Policies
+AWS Batch Service IAM Role
+Amazon ECS Instance Role
+Amazon EC2 Spot Fleet Role
+CloudWatch Events IAM Role
+AWS Batch Event Stream for CloudWatch Events
+AWS Batch Events
+AWS Batch Jobs as CloudWatch Events Targets
+Tutorial: Listening for AWS Batch CloudWatch Events
+Tutorial: Sending Amazon Simple Notification Service Alerts for Failed Job Events
+Logging AWS Batch API Calls with AWS CloudTrail
+Tutorial: Creating a VPC with Public and Private Subnets for Your Compute Environments
+Security in AWS Batch
+Identity and Access Management for AWS Batch
+How AWS Batch Works with IAM
+AWS Batch Identity-Based Policy Examples
+Troubleshooting AWS Batch Identity and Access
+
+
+Compliance Validation for AWS Batch
+Infrastructure Security in AWS Batch
+AWS Batch Service Limits
+Troubleshooting AWS Batch
+Document History

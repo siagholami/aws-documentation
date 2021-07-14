@@ -1,0 +1,32 @@
+Getting started with Cost Explorer
+After you enable Cost Explorer, you can launch it from the Billing and Cost Management console.
+Starting Cost Explorer
+Start Cost Explorer by opening the Billing and Cost Management console and choosing Launch Cost Explorer.
+To open Cost Explorer
+
+
+Sign in to the AWS Management Console and open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Cost Explorer.
+
+
+On the Cost Explorer page, choose Launch Cost Explorer.
+
+
+Cost Explorer opens to the Monthly Amazon EC2 running hours costs and usage saved report.
+To trigger the Cost Explorer walkthrough
+The first time that you use Cost Explorer, Cost Explorer walks you through the main sections of the console. You can trigger this walkthrough again at any time with the following procedure.
+
+
+Sign in to the AWS Management Console and open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Cost Explorer.
+
+
+On the Cost Explorer page, choose Launch Cost Explorer.
+
+
+On the service bar, choose ? and choose View Cost Explorer tutorial. 
+

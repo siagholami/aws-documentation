@@ -1,0 +1,164 @@
+Setting up static key encryption using AWS Elemental MediaConnect
+Before you can create a flow with an encrypted source or an output or entitlement that uses static key encryption, you must perform the following steps:
+Step 1 – Store your encryption key as a secret in AWS Secrets Manager.
+Step 2 – Create an IAM policy that allows AWS Elemental MediaConnect to read the secret that you stored in AWS Secrets Manager.
+Step 3 – Create an IAM role and attach the policy that you created in step 2. Next, set up AWS Elemental MediaConnect as a trusted entity that is allowed to assume this role and make requests on behalf of your account.
+Note
+Static key encryption is supported only for entitlements, and for sources and outputs that use the Zixi protocol.
+Step 1: Store your encryption key in AWS Secrets Manager
+To use static key encryption to encrypt your AWS Elemental MediaConnect content, you must create a secret in AWS Secrets Manager to store your encryption key. You also must use the same AWS account to create the secret that you use to create the AWS Elemental MediaConnect resource (source, output, or entitlement) that uses the secret. AWS Elemental MediaConnect does not support cross-account sharing of secrets.
+Note
+ If you use two flows to distribute video from one AWS Region to another, you must create two secrets (one secret in each Region). 
+To store an encryption key in Secrets Manager
+
+
+Obtain the encryption key from the entity that manages the source.
+
+
+Sign in to the AWS Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
+
+
+On the Store a new secret page, for Select secret type, choose Other type of secrets.
+
+
+For Specify the key/value pairs to be stored in this secret, choose Plaintext.
+
+
+Clear any text in the box and replace it with the encryption key.
+
+
+For Select the encryption key, keep the default set to DefaultEncryptionKey.
+
+
+Choose Next.
+
+
+For Secret name, specify a name for your secret that will help you identify it later. For example, 2018-12-01_baseball-game-source.
+
+
+Choose Next.
+
+
+For Configure automatic rotation section, choose Disable automatic rotation. 
+
+
+Choose Next, and then choose Store.
+
+
+The details page for your new secret appears, showing information such as the secret ARN.
+
+Make a note of the secret ARN from Secrets Manager. You will need this information in the next procedure.
+
+Step 2: Create an IAM policy to allow AWS Elemental MediaConnect to access your secret
+In step 1, you created a secret and stored it in AWS Secrets Manager. In this step, you create an IAM policy that allows AWS Elemental MediaConnect to read the secret that you stored.
+To create an IAM policy that allows MediaConnect to access your secret
+
+
+Open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+In the navigation pane of the IAM console, choose Policies.
+
+
+Choose Create policy, and then choose the JSON tab.
+
+
+Enter a policy that uses the following format:
+
+
+{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": [
+           "secretsmanager:GetResourcePolicy",
+           "secretsmanager:GetSecretValue",
+           "secretsmanager:DescribeSecret",
+           "secretsmanager:ListSecretVersionIds"
+         ],
+         "Resource": [
+           "arn:aws:secretsmanager:us-west-2:111122223333:secret:aes256-7g8H9i"
+         ]
+       }
+     ]
+   }
+In the Resource section, each line represents the ARN of a different secret that you created. For more examples, see IAM policy examples for secrets in AWS Secrets Manager.
+
+
+Choose Review policy.
+
+
+For Name, enter a name for your policy such as SecretsManagerForMediaConnect.
+
+
+Choose Create policy.
+
+
+Step 3: Create an IAM role with a trusted relationship
+In step 2, you created an IAM policy that allows read access to the secret that you stored in AWS Secrets Manager. In this step, you create an IAM role and assign the policy to that role. Then you define AWS Elemental MediaConnect as a trusted entity that can assume the role. This allows MediaConnect to have read access to your secret.
+To create a role with a trusted relationship
+
+
+In the navigation pane of the IAM console, choose Roles.
+
+
+On the Role page, choose Create role. 
+
+
+On the Create role page, for Select type of trusted entity, choose AWS service (the default).
+
+
+For Choose the service that will use this role, choose EC2. 
+
+
+You choose EC2 because AWS Elemental MediaConnect is not currently included in this list. Choosing EC2 lets you create a role. In a later step, you change this role to include MediaConnect instead of EC2.
+
+
+Choose Next: Permissions.
+
+
+For Attach permissions policies, enter the name of the policy that you created in step 2, such as SecretsManagerForMediaConnect. 
+
+
+For SecretsManagerReadWrite, select the check box, and then choose Next: Review.
+
+
+For Role name, enter a name. We highly recommend that you don't use the name MediaConnectAccessRole because it is reserved. Instead, use a name that includes MediaConnect and describes this role's purpose, such as MediaConnect-ASM.
+
+
+For Role description, replace the default text with a description that will help you remember the purpose of this role. For example, Allows MediaConnect to view secrets stored in AWS Secrets Manager.
+
+
+Choose Create role.
+
+
+In the confirmation message that appears across the top of your page, choose the name of the role that you just created.
+
+
+Choose Trust relationships, and then choose Edit Trust Relationship.
+
+
+For Policy Document, change ec2.amazonaws.com to mediaconnect.amazonaws.com. 
+
+
+The policy document should now look like this: 
+{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Service": "mediaconnect.amazonaws.com",
+         },
+         "Action": "sts:AssumeRole",
+       },
+     ],
+   }
+
+
+Choose Update Trust Policy.
+
+
+On the Summary page, make a note of the value for Role ARN. It looks like this: arn:aws:iam::111122223333:role/MediaConnectASM.
+

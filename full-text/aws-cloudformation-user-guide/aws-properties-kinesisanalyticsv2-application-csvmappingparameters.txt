@@ -1,0 +1,30 @@
+AWS::KinesisAnalyticsV2::Application CSVMappingParameters
+For a SQL-based Kinesis Data Analytics application, provides additional mapping information when the record format uses delimiters, such as CSV. For example, the following sample records use CSV format, where the records use the '\n' as the row delimiter and a comma (",") as the column delimiter: 
+"name1", "address1" 
+"name2", "address2" 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter)" : String,
+  "[RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter)" : String
+}
+YAML
+[RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter): String
+  [RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter): String
+Properties
+RecordColumnDelimiter 
+The column delimiter. For example, in a CSV format, a comma (",") is the typical column delimiter.
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption
+RecordRowDelimiter 
+The row delimiter. For example, in a CSV format, '\n' is the typical row delimiter.
+Required: Yes
+Type: String
+Minimum: 1
+Update requires: No interruption
+See also
+
+CSVMappingParameters in the Amazon Kinesis Data Analytics API Reference 

@@ -1,0 +1,6 @@
+Supported Identity Providers
+The following external identity providers have been tested with the AWS SSO SCIM implementation.
+Topics
+ Azure AD
+ Okta
+ OneLogin

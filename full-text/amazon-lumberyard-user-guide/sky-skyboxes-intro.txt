@@ -1,0 +1,8 @@
+Creating Static Skyboxes
+Static skies use the Sky Shader and a skybox, which is a cube that has textures on five sides (excluding the bottom). This allows you to simulate the sky in your level. Static skies cannot use dynamic or animated Time of Day effects, HDR settings, and sun or moon parameters.
+If you want to create a static sky, create a skybox material and then apply the material to the skybox.
+Topics
+ Creating Skybox Materials
+ Applying Skybox Materials to a Skybox
+ Changing Skybox Parameters
+ Switching Skyboxes with the Script Canvas Editor

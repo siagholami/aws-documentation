@@ -1,0 +1,75 @@
+Amazon EventBridge User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon EventBridge?
+Setting Up Amazon EventBridge
+Getting Started with Amazon EventBridge
+Creating an EventBridge Rule That Triggers on an Event from an AWS Resource
+Creating an EventBridge Rule That Triggers on an AWS API Call Using AWS CloudTrail
+Creating an EventBridge Rule That Triggers on a Schedule
+Receiving Events from an SaaS Partner
+Creating a Rule That Triggers on an SaaS Partner Event
+
+
+Creating an Event Bus
+Deleting or Disabling an EventBridge Rule
+Amazon EventBridge Tutorials
+Tutorial: Use EventBridge to Relay Events to AWS Systems Manager Run Command
+Tutorial: Log the State of an Amazon EC2 Instance Using EventBridge
+Tutorial: Log the State of an Auto Scaling Group Using EventBridge
+Tutorial: Log Amazon S3 Object-Level Operations Using EventBridge
+Tutorial: Use Input Transformer to Customize What Is Passed to the Event Target
+Tutorial: Log AWS API Calls Using EventBridge
+Tutorial: Schedule Automated Amazon EBS Snapshots Using EventBridge
+Tutorial: Schedule AWS Lambda Functions Using EventBridge
+Tutorial: Set AWS Systems Manager Automation as an EventBridge Target
+Tutorial: Relay Events to an Amazon Kinesis Stream Using EventBridge
+Tutorial: Run an Amazon ECS Task When a File Is Uploaded to an Amazon S3 Bucket
+Tutorial: Schedule Automated Builds Using AWS CodeBuild
+Tutorial: Log State Changes of Amazon EC2 Instances
+Tutorial: Download Code Bindings for Events using the EventBridge Schema Registry
+Schedule Expressions for Rules
+Events and Event Patterns in EventBridge
+AWS Events
+Event Patterns
+Matching Null Values and Empty Strings in EventBridge Event Patterns
+Arrays in EventBridge Event Patterns
+Content-based Filtering with Event Patterns
+Transforming Target Input
+Amazon EventBridge Schema Registry
+EventBridge Event Examples from Supported AWS Services
+Sending and Receiving Events Between AWS Accounts
+Adding Events with PutEvents
+Calculating PutEvents Event Entry Sizes
+Using EventBridge with Interface VPC Endpoints
+Monitoring Usage with CloudWatch Metrics
+Amazon EventBridge Managed Rules
+Security in Amazon EventBridge
+Data Protection in Amazon EventBridge
+Tag-based Policies
+Identity and Access Management in Amazon EventBridge
+Overview of Managing Access Permissions to Your EventBridge Resources
+Using Identity-Based Policies (IAM Policies) for EventBridge
+Using Resource-Based Policies for EventBridge
+EventBridge Permissions Reference
+Using IAM Policy Conditions for Fine-Grained Access Control
+
+
+Logging and Monitoring in Amazon EventBridge
+Resilience in Amazon EventBridge
+Tagging Your Amazon EventBridge Resources
+Amazon EventBridge Quotas
+Troubleshooting Amazon EventBridge
+Document History
+AWS Glossary

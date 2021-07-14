@@ -1,0 +1,9 @@
+App Mesh resource type reference
+Resource types
+ AWS::AppMesh::GatewayRoute
+ AWS::AppMesh::Mesh
+ AWS::AppMesh::Route
+ AWS::AppMesh::VirtualGateway
+ AWS::AppMesh::VirtualNode
+ AWS::AppMesh::VirtualRouter
+ AWS::AppMesh::VirtualService

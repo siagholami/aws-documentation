@@ -1,0 +1,16 @@
+AWS::MSK::Cluster EncryptionAtRest
+The data volume encryption details.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DataVolumeKMSKeyId](#cfn-msk-cluster-encryptionatrest-datavolumekmskeyid)" : String
+}
+YAML
+[DataVolumeKMSKeyId](#cfn-msk-cluster-encryptionatrest-datavolumekmskeyid): String
+Properties
+DataVolumeKMSKeyId 
+The ARN of the AWS KMS key for encrypting data at rest. If you don't specify a KMS key, MSK creates one for you and uses it on your behalf.
+Required: Yes
+Type: String
+Update requires: Replacement

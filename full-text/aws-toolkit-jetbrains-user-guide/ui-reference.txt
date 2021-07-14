@@ -1,0 +1,11 @@
+User interface reference for the AWS Toolkit for JetBrains
+Use the following information to help you work with the AWS Toolkit for JetBrains user interface.
+Topics
+ AWS Explorer
+ Create Function dialog box
+ Deploy Serverless Application dialog box
+ Edit Configuration dialog box
+ New Project dialog box
+ Run/Debug Configurations dialog box
+ Update Code dialog box
+ Update Configuration dialog box

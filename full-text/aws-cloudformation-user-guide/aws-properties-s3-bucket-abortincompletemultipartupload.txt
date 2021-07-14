@@ -1,0 +1,16 @@
+AWS::S3::Bucket AbortIncompleteMultipartUpload
+Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload. For more information, see  Stopping Incomplete Multipart Uploads Using a Bucket Lifecycle Policy in the Amazon Simple Storage Service Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation)" : Integer
+}
+YAML
+[DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
+Properties
+DaysAfterInitiation 
+Specifies the number of days after which Amazon S3 stops an incomplete multipart upload.
+Required: Yes
+Type: Integer
+Update requires: No interruption

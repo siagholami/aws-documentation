@@ -1,0 +1,49 @@
+AWS::GuardDuty::Detector
+The AWS::GuardDuty::Detector resource specifies a new Amazon GuardDuty detector. A detector is an object that represents the Amazon GuardDuty service. A detector is required for Amazon GuardDuty to become operational.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::GuardDuty::Detector",
+  "Properties" : {
+      "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
+      "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String
+    }
+}
+YAML
+Type: AWS::GuardDuty::Detector
+Properties: 
+  [Enable](#cfn-guardduty-detector-enable): Boolean
+  [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
+Properties
+Enable 
+Specifies whether or not to enable the detector.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+FindingPublishingFrequency 
+A enumeration value that specifies how frequently finding updates are published. Valid values include: FIFTEEN_MINUTES | ONE_HOUR | SIX_HOURS. The default value is SIX_HOURS.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the unique ID of the detector.
+For more information about using the Ref function, see Ref.
+Examples
+Declare a Detector Resource
+The following example shows how to declare a GuardDuty Detector resource:
+JSON
+"mydetector": {
+    "Type" : "AWS::GuardDuty::Detector",
+    "Properties" : {
+        "Enable" : True,
+        "FindingPublishingFrequency" : "FIFTEEN_MINUTES"
+    }
+}
+YAML
+mydetector:
+    Type: AWS::GuardDuty::Detector
+    Properties:
+        Enable: True
+        FindingPublishingFrequency: FIFTEEN_MINUTES

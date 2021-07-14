@@ -1,0 +1,3 @@
+Amazon Athena HBase Connector
+The Amazon Athena HBase connector enables Amazon Athena to communicate with your HBase instances so that you can query your HBase data with SQL.
+For information about configuration options, data types, permissions, deployment, performance, and licensing, see Amazon Athena HBase Connector on GitHub.

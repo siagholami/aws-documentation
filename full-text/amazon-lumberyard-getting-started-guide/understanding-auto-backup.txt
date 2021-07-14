@@ -1,0 +1,5 @@
+Configuring Auto Backup
+Lumberyard's Auto Backup feature is off by default. Auto Backup saves your level file automatically at specified time intervals. This prevents the loss of your progress if an unexpected event causes a crash or freeze while you are working in your level. 
+To enable this feature, in the main menu, choose Edit, Editor Settings, Global Preferences. Under General Settings, choose Files. In the right panel, you can customize your Auto Backup settings.
+
+Next: 2: Building the Environment

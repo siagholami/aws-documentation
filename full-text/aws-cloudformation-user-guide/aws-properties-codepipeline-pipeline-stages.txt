@@ -1,0 +1,35 @@
+AWS::CodePipeline::Pipeline StageDeclaration
+Represents information about a stage and its definition.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Actions](#cfn-codepipeline-pipeline-stages-actions)" : [ ActionDeclaration, ... ],
+  "[Blockers](#cfn-codepipeline-pipeline-stages-blockers)" : [ BlockerDeclaration, ... ],
+  "[Name](#cfn-codepipeline-pipeline-stages-name)" : String
+}
+YAML
+[Actions](#cfn-codepipeline-pipeline-stages-actions): 
+    - ActionDeclaration
+  [Blockers](#cfn-codepipeline-pipeline-stages-blockers): 
+    - BlockerDeclaration
+  [Name](#cfn-codepipeline-pipeline-stages-name): String
+Properties
+Actions 
+The actions included in a stage.
+Required: Yes
+Type: List of ActionDeclaration
+Update requires: No interruption
+Blockers 
+Reserved for future use.
+Required: No
+Type: List of BlockerDeclaration
+Update requires: No interruption
+Name 
+The name of the stage.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: [A-Za-z0-9.@\-_]
+Update requires: No interruption

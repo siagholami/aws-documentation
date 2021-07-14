@@ -1,0 +1,58 @@
+AWS::MediaLive::Channel CaptionSelectorSettings
+Captions Selector Settings
+The parent of this entity is CaptionSelector.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : AribSourceSettings,
+  "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : DvbSubSourceSettings,
+  "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : EmbeddedSourceSettings,
+  "[Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings)" : Scte20SourceSettings,
+  "[Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings)" : Scte27SourceSettings,
+  "[TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings)" : TeletextSourceSettings
+}
+YAML
+[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings): 
+    AribSourceSettings
+  [DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings): 
+    DvbSubSourceSettings
+  [EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings): 
+    EmbeddedSourceSettings
+  [Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings): 
+    Scte20SourceSettings
+  [Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings): 
+    Scte27SourceSettings
+  [TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings): 
+    TeletextSourceSettings
+Properties
+AribSourceSettings 
+Information about the ARIB captions to extract from the input.
+Required: No
+Type: AribSourceSettings
+Update requires: No interruption
+DvbSubSourceSettings 
+Information about the DVB Sub captions to extract from the input.
+Required: No
+Type: DvbSubSourceSettings
+Update requires: No interruption
+EmbeddedSourceSettings 
+Information about the embedded captions to extract from the input.
+Required: No
+Type: EmbeddedSourceSettings
+Update requires: No interruption
+Scte20SourceSettings 
+Information about the SCTE-20 captions to extract from the input.
+Required: No
+Type: Scte20SourceSettings
+Update requires: No interruption
+Scte27SourceSettings 
+Information about the SCTE-27 captions to extract from the input.
+Required: No
+Type: Scte27SourceSettings
+Update requires: No interruption
+TeletextSourceSettings 
+Information about the Teletext captions to extract from the input.
+Required: No
+Type: TeletextSourceSettings
+Update requires: No interruption

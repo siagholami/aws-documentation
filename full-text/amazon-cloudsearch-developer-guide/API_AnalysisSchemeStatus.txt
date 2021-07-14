@@ -1,0 +1,12 @@
+AnalysisSchemeStatus
+Description
+The status and configuration of an AnalysisScheme.
+Contents
+Options 
+Configuration information for an analysis scheme. Each analysis scheme has a unique name and specifies the language of the text to be processed. The following options can be configured for an analysis scheme: Synonyms, Stopwords, StemmingDictionary, JapaneseTokenizationDictionary and AlgorithmicStemming.
+Type: AnalysisScheme 
+ Required: Yes 
+Status 
+The status of domain configuration option.
+Type: OptionStatus 
+ Required: Yes 

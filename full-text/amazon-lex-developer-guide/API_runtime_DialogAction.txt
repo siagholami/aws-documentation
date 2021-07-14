@@ -1,0 +1,52 @@
+DialogAction
+Describes the next action that the bot should take in its interaction with the user and provides information about the context in which the action takes place. Use the DialogAction data type to set the interaction to a specific state, or to return the interaction to a previous state.
+Contents
+fulfillmentState 
+The fulfillment state of the intent. The possible values are:
+  Failed - The Lambda function associated with the intent failed to fulfill the intent.
+  Fulfilled - The intent has fulfilled by the Lambda function associated with the intent. 
+  ReadyForFulfillment - All of the information necessary for the intent is present and the intent ready to be fulfilled by the client application.
+Type: String
+Valid Values:Fulfilled | Failed | ReadyForFulfillment 
+Required: No
+intentName 
+The name of the intent.
+Type: String
+Required: No
+message 
+The message that should be shown to the user. If you don't specify a message, Amazon Lex will use the message configured for the intent.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1024.
+Required: No
+messageFormat 
+  PlainText - The message contains plain UTF-8 text.
+  CustomPayload - The message is a custom format for the client.
+  SSML - The message contains text formatted for voice output.
+  Composite - The message contains an escaped JSON object containing one or more messages. For more information, see Message Groups. 
+Type: String
+Valid Values:PlainText | CustomPayload | SSML | Composite 
+Required: No
+slots 
+Map of the slots that have been gathered and their values. 
+Type: String to string map
+Required: No
+slotToElicit 
+The name of the slot that should be elicited from the user.
+Type: String
+Required: No
+type 
+The next action that the bot should take in its interaction with the user. The possible values are:
+  ConfirmIntent - The next action is asking the user if the intent is complete and ready to be fulfilled. This is a yes/no question such as "Place the order?"
+  Close - Indicates that the there will not be a response from the user. For example, the statement "Your order has been placed" does not require a response.
+  Delegate - The next action is determined by Amazon Lex.
+  ElicitIntent - The next action is to determine the intent that the user wants to fulfill.
+  ElicitSlot - The next action is to elicit a slot value from the user.
+Type: String
+Valid Values:ElicitIntent | ConfirmIntent | ElicitSlot | Close | Delegate 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,148 @@
+Configuring a secondary private IPv4 address for your Windows instance
+You can specify multiple private IPv4 addresses for your instances. After you assign a secondary private IPv4 address to an instance, you must configure the operating system on the instance to recognize the secondary private IPv4 address.
+Configuring the operating system on a Windows instance to recognize a secondary private IPv4 address requires the following:
+ Step 1: Configure static IP addressing on your instance
+ Step 2: Configure a secondary private IP address for your instance
+ Step 3: Configure applications to Use the secondary private IP address
+Note
+These instructions are based on Windows Server 2008 R2. The implementation of these steps may vary based on the operating system of the Windows instance.
+Prerequisites
+Before you begin, make sure you meet the following requirements:
+ As a best practice, launch your Windows instances using the latest AMIs. If you are using an older Windows AMI, ensure that it has the Microsoft hot fix referenced in http://support.microsoft.com/kb/2582281.
+ After you launch your instance in your VPC, add a secondary private IP address. For more information, see Assigning a secondary private IPv4 address.
+ To allow Internet requests to your website after you complete the tasks in these steps, you must configure an Elastic IP address and associate it with the secondary private IP address. For more information, see Associating an Elastic IP address with the secondary private IPv4 address.
+Step 1: Configure static IP addressing on your instance
+To enable your Windows instance to use multiple IP addresses, you must configure your instance to use static IP addressing rather than a DHCP server.
+Important
+When you configure static IP addressing on your instance, the IP address must match exactly what is shown in the console, CLI, or API. If you enter these IP addresses incorrectly, the instance could become unreachable. 
+To configure static IP addressing on a Windows instance
+
+
+Connect to your instance.
+
+
+Find the IP address, subnet mask, and default gateway addresses for the instance by performing the following steps: 
+
+
+At a Command Prompt window, run the following command:
+ipconfig /all
+Review the following section in your output, and note the IPv4 Address, Subnet Mask, Default Gateway, and DNS Servers values for the network interface.
+```
+ Ethernet adapter Local Area Connection:
+Connection-specific DNS Suffix  . :
+Description . . . . . . . . . . . :
+Physical Address  . . . . . . . . :
+DHCP Enabled. . . . . . . . . . . : 
+Autoconfiguration Enabled . . . . :
+IPv4 Address. . . . . . . . . . . : 10.0.0.131
+Subnet Mask . . . . . . . . . . . : 255.255.255.0
+Default Gateway . . . . . . . . . : 10.0.0.1
+DNS Servers . . . . . . . . . . . : 10.1.1.10
+                                    10.1.1.20
+
+```
+
+
+Open the Network and Sharing Center by running the following command:
+
+
+%SystemRoot%\system32\control.exe ncpa.cpl
+
+
+Open the context (right-click) menu for the network interface (Local Area Connection) and choose Properties.
+
+
+Choose Internet Protocol Version 4 (TCP/IPv4), Properties.
+
+
+In the Internet Protocol Version 4 (TCP/IPv4) Properties dialog box, choose Use the following IP address, enter the following values, and then choose OK.  
+[See the AWS documentation website for more details]
+Important
+If you set the IP address to any value other than the current IP address, you will lose connectivity to the instance.
+
+
+
+You will lose RDP connectivity to the Windows instance for a few seconds while the instance converts from using DHCP to static addressing. The instance retains the same IP address information as before, but now this information is static and not managed by DHCP.
+Step 2: Configure a secondary private IP address for your instance
+After you have set up static IP addressing on your Windows instance, you are ready to prepare a second private IP address.
+To configure a secondary IP address
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Instances and select your instance.
+
+
+On the Description tab, note the secondary IP address.
+
+
+Connect to your instance.
+
+
+On your Windows instance, choose Start, Control Panel.
+
+
+Choose Network and Internet, Network and Sharing Center.
+
+
+Select the network interface (Local Area Connection) and choose Properties.
+
+
+On the Local Area Connection Properties page, choose Internet Protocol Version 4 (TCP/IPv4), Properties, Advanced.
+
+
+Choose Add.
+
+
+In the TCP/IP Address dialog box, type the secondary private IP address for IP address. For Subnet mask, type the same subnet mask that you entered for the primary private IP address in Step 1: Configure static IP addressing on your instance, and then choose Add. 
+
+
+
+Verify the IP address settings and choose OK.
+
+
+
+Choose OK, Close.
+
+
+To confirm that the secondary IP address has been added to the operating system, at a command prompt, run the command ipconfig /all.
+
+
+Step 3: Configure applications to Use the secondary private IP address
+You can configure any applications to use the secondary private IP address. For example, if your instance is running a website on IIS, you can configure IIS to use the secondary private IP address.
+To configure IIS to use the secondary private IP address
+
+
+Connect to your instance.
+
+
+Open Internet Information Services (IIS) Manager.
+
+
+In the Connections pane, expand Sites.
+
+
+Open the context (right-click) menu for your website and choose Edit Bindings.
+
+
+In the Site Bindings dialog box, for Type, choose http, Edit.
+
+
+In the Edit Site Binding dialog box, for IP address, select the secondary private IP address. (By default, each website accepts HTTP requests from all IP addresses.)
+
+
+
+Choose OK, Close.
+
+
+Configure a secondary network interface
+You can attach a second elastic network interface to the instance.
+To configure a second network interface
+
+
+Configure the static IP addressing for the primary elastic network interface as per the procedures above in Step 1: Configure static IP addressing on your instance.
+
+
+Configure the static IP addressing for the secondary elastic network interface as per the same procedures.
+

@@ -1,0 +1,12 @@
+Using the Terrain Heightmap
+The heightmap is the base of the terrain in your level. You have three options for obtaining a terrain heightmap:
+ Create a new heightmap using the Terrain Editor
+ Create a new heightmap using a third-party terrain-building tool
+ Importing an existing heightmap
+Topics
+ Creating a Terrain Heightmap
+ Setting Heightmap Properties
+ Importing a Terrain Heightmap
+ Exporting a Terrain Heightmap
+ Resizing a Terrain Heightmap
+ Rotating a Terrain Heightmap

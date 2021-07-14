@@ -1,0 +1,16 @@
+AWS::ElasticLoadBalancingV2::ListenerCertificate Certificate
+Specifies an SSL server certificate for the certificate list of a secure listener.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn)" : String
+}
+YAML
+[CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
+Properties
+CertificateArn 
+The Amazon Resource Name (ARN) of the certificate.
+Required: No
+Type: String
+Update requires: No interruption

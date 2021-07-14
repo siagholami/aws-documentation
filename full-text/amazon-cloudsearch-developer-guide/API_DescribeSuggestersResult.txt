@@ -1,0 +1,8 @@
+DescribeSuggestersResult
+Description
+The result of a DescribeSuggesters request.
+Contents
+Suggesters 
+The suggesters configured for the domain specified in the request.
+Type: SuggesterStatus list 
+ Required: Yes 

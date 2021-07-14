@@ -1,0 +1,8 @@
+Creating Metric Filters
+The following examples show how to create metric filters.
+Topics
+ Example: Count Log Events
+ Example: Count Occurrences of a Term
+ Example: Count HTTP 404 Codes
+ Example: Count HTTP 4xx Codes
+ Example: Extract Fields from an Apache Log

@@ -1,0 +1,2 @@
+Document History
+For more information about the important changes in each release of the Amazon VPC Peering Guide, see Document History in the Amazon VPC User Guide.

@@ -1,0 +1,37 @@
+Step 2: Attach Inputs to the Channel
+You must choose the input or inputs to attach to the channel, and then configure how AWS Elemental MediaLive will handle this input. 
+You can attach multiple inputs to the channel. For detailed information about setting up a channel with more than one input, see Input Switching in AWS Elemental MediaLive. There are specific rules about the number and type (push versus pull, for example) of inputs that you can attach to one channel.
+To attach one input
+
+
+On the Create channel page, for Input attachments, choose Add.
+
+
+On the Attach input page, for Input, choose an existing input. More ﬁelds appear. 
+
+
+Complete the ﬁelds that apply to your input. See the following sections:
+    Channel Input—HLS Pull Input
+    Channel Input—MediaConnect Push Input
+    Channel Input—MP4 Pull Input
+    Channel Input—RTMP Push Input
+     Channel Input—RTMP Pull Input 
+    Channel Input—RTP Push Input 
+
+
+For Attachment name, enter a name for the attachment. The default name is the name of the input itself. You will need to change this default if you have already attached this input to the channel because names must be unique in the channel.
+
+
+Choose Confirm. The Input attachment section closes, and the General input settings section appears.
+
+
+For information about completing the fields in the General input settings section, go to the next step.
+
+
+Topics
+ Channel Input—HLS Pull Input
+ Channel Input—MediaConnect Push Input
+ Channel Input—MP4 Pull Input
+ Channel Input—RTMP Push Input
+ Channel Input—RTMP Pull Input
+ Channel Input—RTP Push Input

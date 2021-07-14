@@ -1,0 +1,31 @@
+AWS::CodeBuild::Project BuildStatusConfig
+Contains information that defines how the AWS CodeBuild build project reports the build status to the source provider. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Context](#cfn-codebuild-project-buildstatusconfig-context)" : String,
+  "[TargetUrl](#cfn-codebuild-project-buildstatusconfig-targeturl)" : String
+}
+YAML
+[Context](#cfn-codebuild-project-buildstatusconfig-context): String
+  [TargetUrl](#cfn-codebuild-project-buildstatusconfig-targeturl): String
+Properties
+Context 
+Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.  
+Bitbucket
+This parameter is used for the name parameter in the Bitbucket commit status. For more information, see build in the Bitbucket API documentation.
+GitHub/GitHub Enterprise Server
+This parameter is used for the context parameter in the GitHub commit status. For more information, see Create a commit status in the GitHub developer guide.
+Required: No
+Type: String
+Update requires: No interruption
+TargetUrl 
+Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.  
+Bitbucket
+This parameter is used for the url parameter in the Bitbucket commit status. For more information, see build in the Bitbucket API documentation.
+GitHub/GitHub Enterprise Server
+This parameter is used for the target_url parameter in the GitHub commit status. For more information, see Create a commit status in the GitHub developer guide.
+Required: No
+Type: String
+Update requires: No interruption

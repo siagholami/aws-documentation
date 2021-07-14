@@ -1,0 +1,37 @@
+PG_BACKEND_PID
+Returns the process ID (PID) of the server process handling the current session.
+Note
+The PID is not globally unique. It can be reused over time.
+Syntax
+pg_backend_pid()
+Return type
+Returns an integer.
+Example
+You can correlate PG_BACKEND_PID() with log tables to retrieve information for the current session. For example, the following query returns the query ID and a portion of the query text for queries executed in the current session.
+```
+select query, substring(text,1,40)
+from stl_querytext
+where pid =  PG_BACKEND_PID()
+order by query desc;
+query |                substring
+-------------------------------------------------
+ 14831 | select query, substring(text,1,40) from
+ 14827 | select query, substring(path,0,80) as pa
+ 14826 | copy category from 's3://dw-tickit/manif
+ 14825 | Count rows in target table
+ 14824 | unload ('select * from category') to 's3
+(5 rows)
+```
+You can correlate PG_BACKEND_PID() with the pid column in the following log tables (exceptions are noted in parentheses):
+ STL_CONNECTION_LOG
+ STL_DDLTEXT
+ STL_ERROR
+ STL_QUERY
+ STL_QUERYTEXT
+ STL_SESSIONS (process)
+ STL_TR_CONFLICT
+ STL_UTILITYTEXT
+ STV_ACTIVE_CURSORS
+ STV_INFLIGHT
+ STV_LOCKS (lock_owner_pid)
+ STV_RECENTS (process_id)

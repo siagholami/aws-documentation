@@ -1,0 +1,21 @@
+Send a direct message to a mobile device
+You can send Amazon SNS push notification messages directly to an endpoint which represents an application on a mobile device. 
+To send a direct message
+
+
+Sign in to the Amazon SNS console.
+
+
+On the navigation panel, choose Mobile, Push notifications.
+
+
+On the Mobile push notifications* page, in the the Platform applications section, choose the name of the application, for example MyApp***.
+
+
+On the MyApp page, in the Endpoints section, choose an endpoint and then choose Publish message.
+
+
+On the Publish message to endpoint page, enter the message that will appear in the application on the mobile device and then choose Publish message.
+
+
+Amazon SNS sends the notification message to the platform notification service which, in turn, sends the message to the application.

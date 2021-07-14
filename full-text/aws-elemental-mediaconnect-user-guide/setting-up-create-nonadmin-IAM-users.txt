@@ -1,0 +1,6 @@
+Step 3. Create non-admin IAM users
+Users in the Administrators group for an account have access to all AWS services and resources in that account. This section describes how to create users with permissions that are limited to AWS Elemental MediaConnect.
+Topics
+ Step 3a: Create a policy
+ Step 3b: Create a user group
+ Step 3c: Create users

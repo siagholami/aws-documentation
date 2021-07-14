@@ -1,0 +1,19 @@
+Removing a source from a flow
+If a flow has more than one source, you can remove one of the sources even when the flow is currently running.
+To remove a source from a flow (console)
+
+
+Open the MediaConnect console at https://console.aws.amazon.com/mediaconnect/.
+
+
+On the Flows page, choose the name of the flow.
+
+
+Choose the Source tab.
+
+
+Choose the source that you want to remove.
+
+
+Choose Remove.
+

@@ -1,0 +1,29 @@
+Security in AWS ParallelCluster
+Cloud security at AWS is the highest priority. As an AWS customer, you benefit from a data center and network architecture that is built to meet the requirements of the most security-sensitive organizations.
+Security is a shared responsibility between AWS and you. The shared responsibility model describes this as security of the cloud and security in the cloud:
+ Security of the cloud – AWS is responsible for protecting the infrastructure that runs AWS services in the AWS Cloud. AWS also provides you with services that you can use securely. Third-party auditors regularly test and verify the effectiveness of our security as part of the AWS Compliance Programs. To learn about the compliance programs that apply to AWS ParallelCluster, see AWS Services in Scope by Compliance Program.
+ Security in the cloud – Your responsibility is determined by the specific AWS service or services that you use. You are also responsible for several other related factors including the sensitivity of your data, your company’s requirements, and applicable laws and regulations. 
+This documentation describes how you should apply the shared responsibility model when using AWS ParallelCluster. The following topics show you how to configure AWS ParallelCluster to meet your security and compliance objectives. You also learn how to use AWS ParallelCluster in a way that helps you to monitor and secure your AWS resources.
+Topics
+ Security information for services used by AWS ParallelCluster
+ Data protection in AWS ParallelCluster
+ Identity and Access Management for AWS ParallelCluster
+ Compliance validation for AWS ParallelCluster
+ Enforcing a Minimum Version of TLS 1.2
+Security information for services used by AWS ParallelCluster
+
+Security in Amazon EC2
+Security in AWS Batch
+Security in Amazon CloudWatch
+Security in AWS CodeBuild
+Security in Amazon DynamoDB
+Security in Amazon ECR
+Security in Amazon ECS
+Security in Amazon EFS
+Security in Amazon FSx for Lustre
+Security in AWS Identity and Access Management (IAM) 
+Security in AWS Lambda
+Security in Amazon SNS
+Security in Amazon SQS
+Security in Amazon S3
+Security in Amazon VPC

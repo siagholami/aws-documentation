@@ -1,0 +1,27 @@
+AWS::ImageBuilder::InfrastructureConfiguration S3Logs
+Amazon S3 logging configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3BucketName](#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname)" : String,
+  "[S3KeyPrefix](#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix)" : String
+}
+YAML
+[S3BucketName](#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname): String
+  [S3KeyPrefix](#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix): String
+Properties
+S3BucketName 
+The Amazon S3 bucket in which to store the logs.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+S3KeyPrefix 
+The Amazon S3 path in which to store the logs.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption

@@ -1,0 +1,22 @@
+Creating a Channel from Scratch
+A channel contains the details that instruct AWS Elemental MediaLive how to transcode (decode and encode) and package your input into specific outputs.
+Before you start the process of creating a channel, you should plan your channel to identify the following elements:
+ Inputs that the channel will use
+ Output groups for the channel
+ Outputs (within each output group)
+ Video, audio, and captions encodes (in each output) that the channel will produce
+There are three ways to create a channel: 
+ Create from scratch. See the topics (steps 1-9) in this chapter.
+ Use a built-in or custom template. See Creating a Channel from a Template or by Cloning.
+ Clone an existing channel. See Creating a Channel from a Template or by Cloning. 
+Topics
+ Step 1: Complete the Channel and Input Details
+ Step 2: Attach Inputs to the Channel
+ Step 3: Complete the Settings for Each Input
+ Step 4: Complete the General Settings
+ Step 5: Create Output Groups
+ Step 6: Create Outputs
+ Step 7: Set Up the Video Encode
+ Step 8: Set Up the Audio Encodes
+ Step 9: Set up the Captions Encodes
+ Step 10: Save the Channel

@@ -1,0 +1,42 @@
+AWS::Greengrass::CoreDefinitionVersion Core
+ A core is an AWS IoT device that runs the AWS IoT Greengrass core software and manages local processes for a Greengrass group. For more information, see What Is AWS IoT Greengrass? in the AWS IoT Greengrass Developer Guide.
+ In an AWS CloudFormation template, the Cores property of the  AWS::Greengrass::CoreDefinitionVersion  resource contains a list of Core property types. Currently, the list can contain only one core.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CertificateArn](#cfn-greengrass-coredefinitionversion-core-certificatearn)" : String,
+  "[Id](#cfn-greengrass-coredefinitionversion-core-id)" : String,
+  "[SyncShadow](#cfn-greengrass-coredefinitionversion-core-syncshadow)" : Boolean,
+  "[ThingArn](#cfn-greengrass-coredefinitionversion-core-thingarn)" : String
+}
+YAML
+[CertificateArn](#cfn-greengrass-coredefinitionversion-core-certificatearn): String
+  [Id](#cfn-greengrass-coredefinitionversion-core-id): String
+  [SyncShadow](#cfn-greengrass-coredefinitionversion-core-syncshadow): Boolean
+  [ThingArn](#cfn-greengrass-coredefinitionversion-core-thingarn): String
+Properties
+CertificateArn 
+The ARN of the device certificate for the core. This X.509 certificate is used to authenticate the core with AWS IoT and AWS IoT Greengrass services.
+Required: Yes
+Type: String
+Update requires: Replacement
+Id 
+A descriptive or arbitrary ID for the core. This value must be unique within the core definition version. Maximum length is 128 characters with pattern [a-zA-Z0-9:_-].
+Required: Yes
+Type: String
+Update requires: Replacement
+SyncShadow 
+Indicates whether the core's local shadow is synced with the cloud automatically. The default is false.
+Required: No
+Type: Boolean
+Update requires: Replacement
+ThingArn 
+The Amazon Resource Name (ARN) of the core, which is an AWS IoT device (thing).
+Required: Yes
+Type: String
+Update requires: Replacement
+See also
+
+Core in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

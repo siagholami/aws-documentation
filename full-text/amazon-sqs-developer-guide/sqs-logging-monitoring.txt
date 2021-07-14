@@ -1,0 +1,5 @@
+Logging and monitoring in Amazon SQS
+This section provides information about logging and monitoring Amazon SQS queues.
+Topics
+ Logging Amazon SQS API calls using AWS CloudTrail
+ Monitoring Amazon SQS queues using CloudWatch

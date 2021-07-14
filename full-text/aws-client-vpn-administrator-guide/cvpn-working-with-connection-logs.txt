@@ -1,0 +1,105 @@
+Working with connection logs
+You can enable connection logging for a new or existing Client VPN endpoint, and start capturing connection logs.
+Before you begin, you must have a CloudWatch Logs log group in your account. For more information, see Working with Log Groups and Log Streams in the Amazon CloudWatch Logs User Guide. Charges apply for using CloudWatch Logs. For more information, see Amazon CloudWatch pricing.
+When you enable connection logging, you can specify the name of a log stream in the log group. If you do not specify a log stream, the Client VPN service creates one for you.
+Enable connection logging for a new Client VPN endpoint
+You can enable connection logging when you create a new Client VPN endpoint by using the console or the command line.
+To enable connection logging for a new Client VPN endpoint using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Client VPN Endpoints, and then choose Create Client VPN Endpoint.
+
+
+Complete the options until you reach the Connection Logging section. For more information about the options, see Create a Client VPN endpoint.
+
+
+For Do you want to log the details on client connections?, choose Yes.
+
+
+For CloudWatch Logs log group name, choose the name of the CloudWatch Logs log group.
+
+
+(Optional) For CloudWatch Logs log stream name, choose the name of the CloudWatch Logs log stream.
+
+
+Choose Create Client VPN Endpoint.
+
+
+To enable connection logging for a new Client VPN endpoint using the AWS CLI
+Use the create-client-vpn-endpoint command, and specify the --connection-log-options parameter. You can specify the connection logs information in JSON format, as shown in the following example.
+{
+    "Enabled": true,
+    "CloudwatchLogGroup": "ClientVpnConnectionLogs",
+    "CloudwatchLogStream": "NewYorkOfficeVPN"
+}
+Enable connection logging for an existing Client VPN endpoint
+You can enable connection logging for an existing Client VPN endpoint by using the console or the command line.
+To enable connection logging for an existing Client VPN endpoint using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Client VPN Endpoints.
+
+
+Select the Client VPN endpoint, choose Actions, and then choose Modify Client VPN Endpoint.
+
+
+For Connection Logging, choose Yes, and do the following:
+    For CloudWatch Log Group, choose the name of the CloudWatch Logs log group.
+    (Optional) For CloudWatch Log Stream, choose the name of the CloudWatch Logs log stream.
+
+
+Choose Modify Client VPN Endpoint.
+
+
+To enable connection logging for an existing Client VPN endpoint using the AWS CLI
+Use the modify-client-vpn-endpoint command and specify the --connection-log-options parameter. You can specify the connection logs information in JSON format, as shown in the following example.
+{
+    "Enabled": true,
+    "CloudwatchLogGroup": "ClientVpnConnectionLogs",
+    "CloudwatchLogStream": "NewYorkOfficeVPN"
+}
+View connection logs
+You can view your connection logs using the CloudWatch Logs console.
+To view your connection logs using the console
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Log groups, and select the log group that contains your connection logs. 
+
+
+Select the log stream for your Client VPN endpoint.
+Note
+The Timestamp column displays the time that the connection log was published to CloudWatch Logs, not the time of the connection.
+
+
+For more information about searching log data, see Search Log Data Using Filter Patterns in the Amazon CloudWatch Logs User Guide.
+Disable connection logging
+You can disable connection logging for a Client VPN endpoint by using the console or the command line. When you disable connection logging, existing connection logs in CloudWatch Logs are not deleted.
+To disable connection logging using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Client VPN Endpoints.
+
+
+Select the Client VPN endpoint, choose Actions, and then choose Modify Client VPN Endpoint.
+
+
+For Connection Logging, choose No.
+
+
+Choose Modify Client VPN Endpoint.
+
+
+To disable connection logging using the AWS CLI
+Use the modify-client-vpn-endpoint command, and specify the --connection-log-options parameter. Ensure that Enabled is set to false.

@@ -1,0 +1,32 @@
+AWS::WAFv2::WebACL RuleAction
+Note
+This is the latest version of AWS WAF, named AWS WAFV2, released in November, 2019. For information, including how to migrate your AWS WAF resources from the prior release, see the AWS WAF Developer Guide. 
+The action that AWS WAF should take on a web request when it matches a rule's statement. Settings at the web ACL level can override the rule action setting. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Allow](#cfn-wafv2-webacl-ruleaction-allow)" : Json,
+  "[Block](#cfn-wafv2-webacl-ruleaction-block)" : Json,
+  "[Count](#cfn-wafv2-webacl-ruleaction-count)" : Json
+}
+YAML
+[Allow](#cfn-wafv2-webacl-ruleaction-allow): Json
+  [Block](#cfn-wafv2-webacl-ruleaction-block): Json
+  [Count](#cfn-wafv2-webacl-ruleaction-count): Json
+Properties
+Allow 
+Instructs AWS WAF to allow the web request.
+Required: No
+Type: Json
+Update requires: No interruption
+Block 
+Instructs AWS WAF to block the web request.
+Required: No
+Type: Json
+Update requires: No interruption
+Count 
+Instructs AWS WAF to count the web request and allow it.
+Required: No
+Type: Json
+Update requires: No interruption

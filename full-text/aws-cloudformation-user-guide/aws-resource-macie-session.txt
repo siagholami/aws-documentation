@@ -1,0 +1,54 @@
+AWS::Macie::Session
+The AWS::Macie::Session resource represents the Amazon Macie service and configuration settings for an account. A Session is created for each AWS Region in which you enable Macie. 
+You must create a Session for an account before you can create an AWS::Macie::FindingsFilter or AWS::Macie::CustomDataIdentifier resource. Use a DependsOn attribute to ensure that the Session is created before the other resources. For example, "DependsOn: Session".
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Macie::Session",
+  "Properties" : {
+      "[FindingPublishingFrequency](#cfn-macie-session-findingpublishingfrequency)" : String,
+      "[Status](#cfn-macie-session-status)" : String
+    }
+}
+YAML
+Type: AWS::Macie::Session
+Properties: 
+  [FindingPublishingFrequency](#cfn-macie-session-findingpublishingfrequency): String
+  [Status](#cfn-macie-session-status): String
+Properties
+FindingPublishingFrequency 
+The frequency with which Amazon Macie publishes updates to policy findings for an account. This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events). Valid values are:
+ FIFTEEN_MINUTES
+ ONE_HOUR
+ SIX_HOURS
+Required: No
+Type: String
+Update requires: No interruption
+Status 
+The MacieStatus of the Session. Valid values include ENABLED and PAUSED.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the AWS Account ID for the account in which the Macie session is created. For example, { "Ref": "Session" }.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+AwsAccountId 
+The account ID for the AWS account in which the Session is created.
+ServiceRole 
+The Amazon Resource Name (ARN) of the service-linked role that allows Amazon Macie to monitor and analyze data in AWS resources for the account.
+Examples
+The following examples demonstrates how to declare an AWS::Macie::Session resource.
+Creating a Macie Session
+This example enables Amazon Macie for an account. It also configures Macie to publish updated findings every hour for the account.
+JSON
+{ "Type": "AWS::Macie::Session", "Properties": {
+                "FindingPublishingFrequency": "ONE_HOUR", "Status": "ENABLED" } }
+YAML
+Type: AWS::Macie::Session Properties:
+                FindingPublishingFrequency: ONE_HOUR Status: ENABLED

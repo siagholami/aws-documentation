@@ -1,0 +1,8 @@
+Creating outputs in ABR streaming output groups
+For each ABR streaming output group that you set up in Step 3: Create output groups, create and set up an output for each media element that you want in the ABR streaming package, as shown in the following illustration.
+
+Topics
+ Creating video ABR streaming outputs
+ Creating audio ABR streaming outputs
+ Creating captions ABR streaming outputs
+ Creating additional manifests

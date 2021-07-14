@@ -1,0 +1,32 @@
+EB CLI command reference
+You can use the Elastic Beanstalk command line interface (EB CLI) to perform a variety of operations to deploy and manage your Elastic Beanstalk applications and environments. The EB CLI integrates with Git if you want to deploy application source code that is under Git source control. For more information, see Using the Elastic Beanstalk command line interface (EB CLI) and Using the EB CLI with Git.
+Topics
+ eb abort
+ eb appversion
+ eb clone
+ eb codesource
+ eb config
+ eb console
+ eb create
+ eb deploy
+ eb events
+ eb health
+ eb init
+ eb labs
+ eb list
+ eb local
+ eb logs
+ eb open
+ eb platform
+ eb printenv
+ eb restore
+ eb scale
+ eb setenv
+ eb ssh
+ eb status
+ eb swap
+ eb tags
+ eb terminate
+ eb upgrade
+ eb use
+ Common options

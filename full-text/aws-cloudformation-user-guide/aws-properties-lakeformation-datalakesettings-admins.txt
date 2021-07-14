@@ -1,0 +1,2 @@
+AWS::LakeFormation::DataLakeSettings Admins
+A list of AWS Lake Formation principals.

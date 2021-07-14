@@ -1,0 +1,66 @@
+Amazon CodeGuru Reviewer User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon CodeGuru Reviewer?
+How CodeGuru Reviewer works
+Setting up with Amazon CodeGuru Reviewer
+Sign up for AWS
+Configure IAM permissions for Amazon CodeGuru Reviewer
+Install or upgrade and then configure the AWS CLI
+Create a repository for your source code
+Getting started with CodeGuru Reviewer
+Step 1: Get set up
+Step 2: Associate a repository
+Step 3: Get recommendations
+Step 4: Provide feedback
+Tutorial: monitor source code in a GitHub repository
+Working with repository associations in Amazon CodeGuru Reviewer
+Create an AWS CodeCommit repository association in Amazon CodeGuru Reviewer
+Create a Bitbucket repository association in Amazon CodeGuru Reviewer
+Create a GitHub repository association in Amazon CodeGuru Reviewer
+Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer
+Working with code reviews
+View all code reviews
+View code review details
+View recommendations and provide feedback
+Product and service integrations
+Recommendations in Amazon CodeGuru Reviewer
+Security in CodeGuru Reviewer
+Data protection for CodeGuru Reviewer
+Identity and access management in CodeGuru Reviewer
+Audience in CodeGuru Reviewer
+Authenticating with identities in CodeGuru Reviewer
+Managing access using policies
+Overview of managing access permissions to your CodeGuru Reviewer resources
+Using identity-based policies for CodeGuru Reviewer
+Amazon CodeGuru Reviewer permissions reference
+Troubleshooting CodeGuru Reviewer identity and access
+
+
+Logging and monitoring in CodeGuru Reviewer
+Logging CodeGuru Reviewer API calls with AWS CloudTrail
+Monitoring CodeGuru Reviewer with Amazon CloudWatch
+Monitoring profiling groups with CloudWatch metrics
+Monitoring CodeGuru Reviewer recommendations with CloudWatch alarms
+
+
+
+
+Compliance validation for CodeGuru Reviewer
+CodeGuru Reviewer and interface VPC endpoints (AWS PrivateLink)
+Infrastructure security in CodeGuru Reviewer
+Quotas for CodeGuru Reviewer
+Troubleshooting
+CodeGuru Reviewer user guide document history
+AWS glossary

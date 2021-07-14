@@ -1,0 +1,114 @@
+Amazon EC2 Auto Scaling User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon EC2 Auto Scaling?
+Benefits of Amazon EC2 Auto Scaling
+Auto Scaling instance lifecycle
+Amazon EC2 Auto Scaling service quotas
+Setting up Amazon EC2 Auto Scaling
+Getting started with Amazon EC2 Auto Scaling
+Tutorial: Set up a scaled and load-balanced application
+Launch templates
+Creating a launch template for an Auto Scaling group
+Copying a launch configuration to a launch template
+Replacing a launch configuration with a launch template
+Launch configurations
+Creating a launch configuration
+Creating a launch configuration using an EC2 instance
+Changing the launch configuration for an Auto Scaling group
+Launching Auto Scaling instances in a VPC
+Auto Scaling groups
+Auto Scaling groups with multiple instance types and purchase options
+Instance weighting for Amazon EC2 Auto Scaling
+
+
+Creating an Auto Scaling group using a launch template
+Creating an Auto Scaling group using a launch configuration
+Creating an Auto Scaling group using an EC2 instance
+Creating an Auto Scaling group using the Amazon EC2 launch wizard
+Tagging Auto Scaling groups and instances
+Elastic Load Balancing and Amazon EC2 Auto Scaling
+Attaching a load balancer to your Auto Scaling group
+Adding Elastic Load Balancing health checks to an Auto Scaling group
+Expanding your scaled and load-balanced application to an additional Availability Zone
+
+
+Launching Spot Instances in your Auto Scaling group
+Getting recommendations for an instance type
+Replacing Auto Scaling instances based on maximum instance lifetime
+Replacing Auto Scaling instances based on an instance refresh
+Merging your Auto Scaling groups into a single multi-zone group
+Deleting your Auto Scaling infrastructure
+Scaling the size of your Auto Scaling group
+Setting capacity limits for your Auto Scaling group
+Maintaining a fixed number of instances in your Auto Scaling group
+Manual scaling for Amazon EC2 Auto Scaling
+Attach EC2 instances to your Auto Scaling group
+Detach EC2 instances from your Auto Scaling group
+
+
+Dynamic scaling for Amazon EC2 Auto Scaling
+Target tracking scaling policies for Amazon EC2 Auto Scaling
+Step and simple scaling policies for Amazon EC2 Auto Scaling
+Scaling based on Amazon SQS
+Verifying a scaling activity for an Auto Scaling group
+Disabling a scaling policy for an Auto Scaling group
+Deleting a scaling policy
+Example scaling policies for the AWS Command Line Interface (AWS CLI)
+
+
+Scaling cooldowns for Amazon EC2 Auto Scaling
+Scheduled scaling for Amazon EC2 Auto Scaling
+Controlling which Auto Scaling instances terminate during scale in
+Common termination policy scenarios for Amazon EC2 Auto Scaling
+
+
+Amazon EC2 Auto Scaling lifecycle hooks
+Configuring notifications for Amazon EC2 Auto Scaling lifecycle hooks
+
+
+Temporarily removing instances from your Auto Scaling group
+Suspending and resuming scaling processes
+Monitoring your Auto Scaling instances and groups
+Health checks for Auto Scaling instances
+Personal Health Dashboard notifications for Amazon EC2 Auto Scaling
+Monitoring CloudWatch metrics for your Auto Scaling groups and instances
+Configuring monitoring for Auto Scaling instances
+
+
+Logging Amazon EC2 Auto Scaling API calls with AWS CloudTrail
+Getting Amazon SNS notifications when your Auto Scaling group scales
+Automating Amazon EC2 Auto Scaling with EventBridge
+Security in Amazon EC2 Auto Scaling
+Amazon EC2 Auto Scaling and data protection
+Identity and access management for Amazon EC2 Auto Scaling
+How Amazon EC2 Auto Scaling works with IAM
+Service-linked roles for Amazon EC2 Auto Scaling
+Amazon EC2 Auto Scaling identity-based policy examples
+Launch template support
+IAM role for applications that run on Amazon EC2 instances
+Required CMK key policy for use with encrypted volumes
+
+
+Compliance validation for Amazon EC2 Auto Scaling
+Resilience in Amazon EC2 Auto Scaling
+Infrastructure security in Amazon EC2 Auto Scaling
+Amazon EC2 Auto Scaling and interface VPC endpoints
+Troubleshooting Amazon EC2 Auto Scaling
+Troubleshooting Amazon EC2 Auto Scaling: EC2 Instance launch failures
+Troubleshooting Amazon EC2 Auto Scaling: AMI issues
+Troubleshooting Amazon EC2 Auto Scaling: Load balancer issues
+Troubleshooting Auto Scaling: Capacity limits
+Amazon EC2 Auto Scaling resources
+Document history

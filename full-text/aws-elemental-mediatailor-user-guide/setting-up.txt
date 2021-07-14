@@ -1,0 +1,7 @@
+Setting Up AWS Elemental MediaTailor
+This section guides you through the steps required to configure users to access AWS Elemental MediaTailor. For background and additional information about identity and access management for MediaTailor, see Identity and Access Management for AWS Elemental MediaTailor.
+To start using AWS Elemental MediaTailor, complete the following steps.
+Topics
+ Signing Up for AWS
+ Creating an Admin IAM User
+ Creating a Non-Admin IAM User

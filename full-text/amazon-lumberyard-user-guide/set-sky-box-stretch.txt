@@ -1,0 +1,46 @@
+Set Skybox Stretch
+Sets the stretch factor, which affects how the skybox stretches vertically. Stretching the skybox lowers the horizon line.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Amount
+Number
+Vertical stretch factor.  A value of 0 does not stretch the skybox. Specify a higher value to lower the horizon line. Default value: 0
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

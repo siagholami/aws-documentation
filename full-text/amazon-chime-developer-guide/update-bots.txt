@@ -1,0 +1,10 @@
+Update chatbots
+As the Amazon Chime account administrator, you can use the Amazon Chime API with the AWS SDK or AWS CLI to view your chatbot details. You can also enable or stop your chatbots from being used in your account. You can also regenerate security tokens for your chatbot. 
+For more information, see the following topics in the Amazon Chime API Reference:
+ GetBot – Gets your chatbot details, such as bot email address and bot type.
+ UpdateBot – Enables or stops a chatbot from being used in your account.
+ RegenerateSecurityToken – Regenerates the security token for your chatbot.
+You can also change the PutEventsConfiguration for your chatbot. For example, if your chatbot was initially configured to use an outbound HTTPS endpoint, you can delete the previous events configuration and put a new events configuration for a Lambda function ARN.
+For more information, see the following topics in the Amazon Chime API Reference:
+ DeleteEventsConfiguration
+ PutEventsConfiguration

@@ -1,0 +1,9 @@
+Writing Data to Amazon Kinesis Data Streams
+A producer is an application that writes data to Amazon Kinesis Data Streams. You can build producers for Kinesis Data Streams using the AWS SDK for Java and the Kinesis Producer Library.
+If you are new to Kinesis Data Streams, start by becoming familiar with the concepts and terminology presented in What Is Amazon Kinesis Data Streams? and Getting Started with Amazon Kinesis Data Streams.
+Topics
+ Developing Producers Using the Amazon Kinesis Producer Library
+ Developing Producers Using the Amazon Kinesis Data Streams API with the AWS SDK for Java
+ Writing to Amazon Kinesis Data Streams Using Kinesis Agent
+ Troubleshooting Amazon Kinesis Data Streams Producers
+ Advanced Topics for Kinesis Data Streams Producers

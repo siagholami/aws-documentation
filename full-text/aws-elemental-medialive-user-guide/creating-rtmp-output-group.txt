@@ -1,0 +1,16 @@
+Creating an RTMP Output Group
+Follow these steps if, when you were planning the channel, you determined that you want to include an RTMP output group.
+To create an RTMP output group
+
+
+On the Create channel page, under Output groups, choose Add. The Add output group section appears. 
+
+
+Choose RTMP, and then choose Confirm. More sections appear. 
+
+
+Complete the fields as described in Fields for the RTMP Group. 
+
+
+After you enter all the information for one output group, you can create another output group if your plan requires it. Otherwise, go to the next step.
+

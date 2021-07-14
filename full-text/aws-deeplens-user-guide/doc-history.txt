@@ -1,0 +1,80 @@
+Document History for AWS DeepLens
+
+API version: 2017-08-31 
+
+The following table describes the additions and changes to the AWS DeepLens Developer Guide documentation.
+
+
+
+Change
+Description
+Date
+
+
+
+
+The release of AWS DeepLens 2019 Edition
+Improves the device registration experience and adds support of Amazon SageMaker Neo for automatic inference optimization. For more information, see Register AWS DeepLens 2019 Edition Device and Use Amazon SageMaker Neo to Optimize Inference on AWS DeepLens.
+July 10, 2019
+
+
+The Bird Classification Sample Project
+Adds Bird Classification to the AWS DeepLens Sample Projects. For more information see The Bird Classification Sample Project.
+April 8, 2019
+
+
+Support for models created with TensorFlow and Caffe
+Adds TensorFlow and Caffe as supported modeling frameworks. For more information see Supported TensorFlow Models and Layers and Supported Caffe Models and Layers.
+June 14, 2018
+
+
+Simplified IAM roles creation
+Enables creation of required IAM roles to run your AWS DeepLens app project with a single click of a button in the AWS DeepLens console. For more information, see Register Your Device.
+June 14, 2018
+
+
+Secure boot
+Adds secure booting. The AWS DeepLens device securely boots to prevent the installation of unauthorized operating systems. For more information see Securely Boot Your Device.
+June 14, 2018
+
+
+Integration with Amazon Kinesis Video Streams
+Uses the Kinesis Video Streams for AWS DeepLens Video library to send video feeds from an AWS DeepLens device to Kinesis Video Streams for a specified period. The feeds can be used as input for additional vision analysis or as training data for your computer vision deep-learning model. For more information, see AWS DeepLens Kinesis Video Integration Library Module.
+June 14, 2018
+
+
+Ability to view device output streams in a browser
+Adds support for using a browser to view unprocessed device streams or processed project streams. For more information, see View Your AWS DeepLens Device Output in a Browser.
+June 14, 2018
+
+
+Named device setup URL
+Makes the AWS DeepLens device setup app accessible through the URL of http://deeplens.config. For more information see Set up Your Device.
+June 5, 2018
+
+
+Troubleshooting Guide
+Provides a list of commonly asked questions and answers about troubleshooting common AWS DeepLens issues. For more information see Troubleshooting Guide.
+May 3, 2018
+
+
+Gluon support
+Adds support for Gluon models. For more information, see Supported MXNet Models Exposed by the Gluon API.
+March 13, 2018
+
+
+Importing from Amazon SageMaker
+Simplifies the process for importing a model trained with Amazon SageMaker. For more information, see Importing Your Amazon SageMaker-Trained Model.
+February 22, 2018
+
+
+Model optimization
+Adds support for optimizing your custom model so that it runs on the GPU instead of the CPU. For more information, see Optimize a Custom Model and Model Optimization (mo) Module.
+January 31, 2018
+
+
+AWS DeepLens Developer Guide
+The first release of the programmer's guide to building edge-optimized computer vision applications using AWS DeepLens with inference models trained in common deep learning frameworks, including MXNet.
+November 29, 2017
+
+

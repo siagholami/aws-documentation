@@ -1,0 +1,17 @@
+Listing Presets and Viewing Preset Settings in Elastic Transcoder
+You can list the default presets included with Elastic Transcoder and the presets that you have added in an AWS region by using the AWS Management Console or by using the Elastic Transcoder List Presets API. You can also view the settings for an individual preset. The following procedure explains how to list presets and how to view settings for a preset using the console.
+For information about how to list presets using the API, see List Presets. For information about how to view settings for a preset using the API, see Read Preset. For the list of system presets, see System Presets.
+To list presets using the Elastic Transcoder console
+
+
+Sign in to the AWS Management Console and open the Elastic Transcoder console at https://console.aws.amazon.com/elastictranscoder/.
+
+
+In the navigation bar of the Elastic Transcoder console, select the region in which you want to list presets.
+
+
+In the left pane of the console, click Presets.
+
+
+To display settings for an individual preset, click the  icon next to the preset.
+

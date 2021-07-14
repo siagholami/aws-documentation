@@ -1,0 +1,5 @@
+Appendix: Time zone names and abbreviations
+Topics
+ Time zone names
+ Time zone abbreviations
+The following lists contain most of the valid time zone names and time zone abbreviations that can be specified with the CONVERT_TIMEZONE function.

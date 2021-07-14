@@ -1,0 +1,267 @@
+Internet gateways
+An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between your VPC and the internet. 
+An internet gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic, and to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses. 
+An internet gateway supports IPv4 and IPv6 traffic. It does not cause availability risks or bandwidth constraints on your network traffic. There's no additional charge for having an internet gateway in your account.
+Enabling internet access
+To enable access to or from the internet for instances in a subnet in a VPC, you must do the following:
+ Attach an internet gateway to your VPC.
+ Add a route to your subnet's route table that directs internet-bound traffic to the internet gateway. If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
+ Ensure that instances in your subnet have a globally unique IP address (public IPv4 address, Elastic IP address, or IPv6 address).
+ Ensure that your network access control lists and security group rules allow the relevant traffic to flow to and from your instance.
+In your subnet route table, you can specify a route for the internet gateway to all destinations not explicitly known to the route table (0.0.0.0/0 for IPv4 or ::/0 for IPv6). Alternatively, you can scope the route to a narrower range of IP addresses; for example, the public IPv4 addresses of your company’s public endpoints outside of AWS, or the Elastic IP addresses of other Amazon EC2 instances outside your VPC.
+To enable communication over the internet for IPv4, your instance must have a public IPv4 address or an Elastic IP address that's associated with a private IPv4 address on your instance. Your instance is only aware of the private (internal) IP address space defined within the VPC and subnet. The internet gateway logically provides the one-to-one NAT on behalf of your instance, so that when traffic leaves your VPC subnet and goes to the internet, the reply address field is set to the public IPv4 address or Elastic IP address of your instance, and not its private IP address. Conversely, traffic that's destined for the public IPv4 address or Elastic IP address of your instance has its destination address translated into the instance's private IPv4 address before the traffic is delivered to the VPC.
+To enable communication over the internet for IPv6, your VPC and subnet must have an associated IPv6 CIDR block, and your instance must be assigned an IPv6 address from the range of the subnet. IPv6 addresses are globally unique, and therefore public by default. 
+In the following diagram, Subnet 1 in the VPC is a public subnet. It's associated with a custom route table that points all internet-bound IPv4 traffic to an internet gateway. The instance has an Elastic IP address, which enables communication with the internet.
+
+To provide your instances with internet access without assigning them public IP addresses, you can use a NAT device instead. For more information, see NAT.
+Internet access for default and nondefault VPCs
+The following table provides an overview of whether your VPC automatically comes with the components required for internet access over IPv4 or IPv6. 
+
+
+
+Component
+Default VPC
+Nondefault VPC
+
+
+
+
+Internet gateway
+Yes
+Yes, if you created the VPC using the first or second option in the VPC wizard. Otherwise, you must manually create and attach the internet gateway.
+
+
+Route table with route to internet gateway for IPv4 traffic (0.0.0.0/0)
+Yes
+Yes, if you created the VPC using the first or second option in the VPC wizard. Otherwise, you must manually create the route table and add the route.
+
+
+Route table with route to internet gateway for IPv6 traffic (::/0)
+No
+Yes, if you created the VPC using the first or second option in the VPC wizard, and if you specified the option to associate an IPv6 CIDR block with the VPC. Otherwise, you must manually create the route table and add the route.
+
+
+Public IPv4 address automatically assigned to instance launched into subnet
+Yes (default subnet)
+No (nondefault subnet)
+
+
+IPv6 address automatically assigned to instance launched into subnet
+No (default subnet)
+No (nondefault subnet)
+
+
+
+For more information about default VPCs, see Default VPC and default subnets. For more information about using the VPC wizard to create a VPC with an internet gateway, see VPC with a single public subnet or VPC with public and private subnets (NAT). 
+For more information about IP addressing in your VPC, and controlling how instances are assigned public IPv4 or IPv6 addresses, see IP Addressing in your VPC.
+When you add a new subnet to your VPC, you must set up the routing and security that you want for the subnet.
+Adding an internet gateway to your VPC
+The following describes how to manually create a public subnet and attach an internet gateway to your VPC to support internet access.
+Topics
+ Creating a subnet
+ Creating and attaching an internet gateway
+ Creating a custom route table
+ Creating a security group for internet access
+ Adding Elastic IP addresses
+ Detaching an internet gateway from your VPC
+ Deleting an internet gateway
+ API and command overview
+Creating a subnet
+To add a subnet to your VPC
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Subnets, Create subnet.
+
+
+Specify the subnet details as needed:.
+    Name tag: Optionally provide a name for your subnet. Doing so creates a tag with a key of Name and the value that you specify.
+    VPC: Choose the VPC for which you're creating the subnet.
+    Availability Zone: Optionally choose an Availability Zone or Local Zone in which your subnet will reside, or leave the default No Preference to let AWS choose an Availability Zone for you.
+For information about the Regions that support Local Zones, see Available Regions in the Amazon EC2 User Guide for Linux Instances. 
+    IPv4 CIDR block: Specify an IPv4 CIDR block for your subnet, for example, 10.0.1.0/24. For more information, see VPC and subnet sizing for IPv4.
+    IPv6 CIDR block: (Optional) If you've associated an IPv6 CIDR block with your VPC, choose Specify a custom IPv6 CIDR. Specify the hexadecimal pair value for the subnet, or leave the default value. 
+
+
+Choose Create.
+
+
+For more information about subnets, see VPCs and subnets.
+Creating and attaching an internet gateway
+After you create an internet gateway, attach it to your VPC.
+To create an internet gateway and attach it to your VPC
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Internet Gateways, and then choose Create internet gateway.
+
+
+Optionally name your internet gateway.
+
+
+Optionally add or remove a tag.
+
+
+[Add a tag] Choose Add tag and do the following:
+    For Key, enter the key name.
+    For Value, enter the key value.
+[Remove a tag] Choose Remove to the right of the tag’s Key and Value.
+
+
+Choose Create internet gateway.
+
+
+Select the internet gateway that you just created, and then choose Actions, Attach to VPC.
+
+
+Select your VPC from the list, and then choose Attach internet gateway.
+
+
+Creating a custom route table
+When you create a subnet, we automatically associate it with the main route table for the VPC. By default, the main route table doesn't contain a route to an internet gateway. The following procedure creates a custom route table with a route that sends traffic destined outside the VPC to the internet gateway, and then associates it with your subnet.
+To create a custom route table
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Route Tables, and then choose Create Route Table.
+
+
+In the Create Route Table dialog box, optionally name your route table, then select your VPC, and then choose Yes, Create.
+
+
+Select the custom route table that you just created. The details pane displays tabs for working with its routes, associations, and route propagation.
+
+
+On the Routes tab, choose Edit, Add another route, and add the following routes as necessary. Choose Save when you're done.
+    For IPv4 traffic, specify 0.0.0.0/0 in the Destination box, and select the internet gateway ID in the Target list.
+    For IPv6 traffic, specify ::/0 in the Destination box, and select the internet gateway ID in the Target list.
+
+
+On the Subnet Associations tab, choose Edit, select the Associate check box for the subnet, and then choose Save.
+
+
+For more information, see Route tables.
+Creating a security group for internet access
+By default, a VPC security group allows all outbound traffic. You can create a new security group and add rules that allow inbound traffic from the internet. You can then associate the security group with instances in the public subnet.
+To create a new security group and associate it with your instances
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Security Groups, and then choose Create Security Group.
+
+
+In the Create Security Group dialog box, specify a name for the security group and a description. Select the ID of your VPC from the VPC list, and then choose Yes, Create.
+
+
+Select the security group. The details pane displays the details for the security group, plus tabs for working with its inbound rules and outbound rules.
+
+
+On the Inbound Rules tab, choose Edit. Choose Add Rule, and complete the required information. For example, select HTTP or HTTPS from the Type list, and enter the Source as 0.0.0.0/0 for IPv4 traffic, or ::/0 for IPv6 traffic. Choose Save when you're done.
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, choose Instances.
+
+
+Select the instance, choose Actions, then Networking, and then select Change Security Groups. 
+
+
+In the Change Security Groups dialog box, clear the check box for the currently selected security group, and select the new one. Choose Assign Security Groups.
+
+
+For more information, see Security groups for your VPC.
+Adding Elastic IP addresses
+After you've launched an instance into the subnet, you must assign it an Elastic IP address if you want it to be reachable from the internet over IPv4.
+Note
+If you assigned a public IPv4 address to your instance during launch, then your instance is reachable from the internet, and you do not need to assign it an Elastic IP address. For more information about IP addressing for your instance, see IP Addressing in your VPC.
+To allocate an Elastic IP address and assign it to an instance using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Elastic IPs.
+
+
+Choose Allocate new address.
+
+
+Choose Allocate.
+Note
+If your account supports EC2-Classic, first choose VPC.
+
+
+Select the Elastic IP address from the list, choose Actions, and then choose Associate address.
+
+
+Choose Instance or Network interface, and then select either the instance or network interface ID. Select the private IP address with which to associate the Elastic IP address, and then choose Associate.
+
+
+For more information, see Elastic IP addresses.
+Detaching an internet gateway from your VPC
+If you no longer need internet access for instances that you launch into a nondefault VPC, you can detach an internet gateway from a VPC. You can't detach an internet gateway if the VPC has resources with associated public IP addresses or Elastic IP addresses.
+To detach an internet gateway
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Elastic IPs and select the Elastic IP address.
+
+
+Choose Actions, Disassociate address. Choose Disassociate address.
+
+
+In the navigation pane, choose Internet Gateways.
+
+
+Select the internet gateway and choose Actions, Detach from VPC.
+
+
+In the Detach from VPC dialog box, choose Detach internet gateway.
+
+
+Deleting an internet gateway
+If you no longer need an internet gateway, you can delete it. You can't delete an internet gateway if it's still attached to a VPC.
+To delete an internet gateway
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Internet Gateways.
+
+
+Select the internet gateway and choose Actions, Delete internet gateway.
+
+
+In the Delete internet gateway dialog box, enter delete, and choose Delete internet gateway.
+
+
+API and command overview
+You can perform the tasks described on this page using the command line or an API. For more information about the command line interfaces and a list of available API actions, see Accessing Amazon VPC.
+Create an internet gateway
+ create-internet-gateway (AWS CLI)
+ New-EC2InternetGateway (AWS Tools for Windows PowerShell)
+Attach an internet gateway to a VPC
+ attach-internet-gateway (AWS CLI)
+ Add-EC2InternetGateway (AWS Tools for Windows PowerShell)
+Describe an internet gateway
+ describe-internet-gateways (AWS CLI)
+ Get-EC2InternetGateway (AWS Tools for Windows PowerShell)
+Detach an internet gateway from a VPC
+ detach-internet-gateway (AWS CLI)
+ Dismount-EC2InternetGateway (AWS Tools for Windows PowerShell)
+Delete an internet gateway
+ delete-internet-gateway (AWS CLI)
+ Remove-EC2InternetGateway (AWS Tools for Windows PowerShell)

@@ -1,0 +1,36 @@
+Fn::Base64
+The intrinsic function Fn::Base64 returns the Base64 representation of the input string. This function is typically used to pass encoded data to Amazon EC2 instances by way of the UserData property.
+Declaration
+JSON
+{ "Fn::Base64" : valueToEncode }
+YAML
+Syntax for the full function name:
+Fn::Base64: valueToEncode
+Syntax for the short form:
+!Base64 valueToEncode
+Note
+If you use the short form and immediately include another function in the valueToEncode parameter, use the full function name for at least one of the functions. For example, the following syntax is invalid:   
+!Base64 !Sub string
+!Base64 !Ref logical_ID
+ Instead, use the full function name for at least one of the functions, as shown in the following examples:   
+```
+!Base64
+  "Fn::Sub": string
+Fn::Base64:
+  !Sub string
+```
+Parameters
+valueToEncode
+The string value you want to convert to Base64.
+Return value:
+The original string, in Base64 representation.
+Example
+JSON
+{ "Fn::Base64" : "AWS CloudFormation" }
+YAML
+Fn::Base64: AWS CloudFormation
+Supported functions
+You can use any function that returns a string inside the Fn::Base64 function.
+See also
+
+Intrinsic Function Reference

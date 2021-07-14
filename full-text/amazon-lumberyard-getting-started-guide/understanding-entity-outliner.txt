@@ -1,0 +1,5 @@
+3: Entity Outliner
+
+The Entity Outliner lists every entity and slice that is in your level. From here, you can find, select, lock, hide, and disable any entity or slice in your level. You can also create new entities, create child entities, create or instantiate slices, and more.
+For more information about the Entity Outliner, see Entity Outliner in the Amazon Lumberyard User Guide.
+Next: 4: Asset Browser

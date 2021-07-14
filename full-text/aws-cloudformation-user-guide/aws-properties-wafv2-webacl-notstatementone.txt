@@ -1,0 +1,17 @@
+AWS::WAFv2::WebACL NotStatementOne
+Logical NOT statement used to negate the match results of a nested statement. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Statement](#cfn-wafv2-webacl-notstatementone-statement)" : StatementTwo
+}
+YAML
+[Statement](#cfn-wafv2-webacl-notstatementone-statement): 
+    StatementTwo
+Properties
+Statement 
+Logical NOT statement used to negate the match results of a nested statement. 
+Required: Yes
+Type: StatementTwo
+Update requires: No interruption

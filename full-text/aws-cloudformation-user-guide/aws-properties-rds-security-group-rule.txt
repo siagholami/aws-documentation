@@ -1,0 +1,37 @@
+AWS::RDS::DBSecurityGroup Ingress
+The Ingress property type specifies an individual ingress rule within an AWS::RDS::DBSecurityGroup resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CIDRIP](#cfn-rds-securitygroup-cidrip)" : String,
+  "[EC2SecurityGroupId](#cfn-rds-securitygroup-ec2securitygroupid)" : String,
+  "[EC2SecurityGroupName](#cfn-rds-securitygroup-ec2securitygroupname)" : String,
+  "[EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ec2securitygroupownerid)" : String
+}
+YAML
+[CIDRIP](#cfn-rds-securitygroup-cidrip): String
+  [EC2SecurityGroupId](#cfn-rds-securitygroup-ec2securitygroupid): String
+  [EC2SecurityGroupName](#cfn-rds-securitygroup-ec2securitygroupname): String
+  [EC2SecurityGroupOwnerId](#cfn-rds-securitygroup-ec2securitygroupownerid): String
+Properties
+CIDRIP 
+The IP range to authorize.
+Required: No
+Type: String
+Update requires: No interruption
+EC2SecurityGroupId 
+ Id of the EC2 Security Group to authorize. For VPC DB Security Groups, EC2SecurityGroupId must be provided. Otherwise, EC2SecurityGroupOwnerId and either EC2SecurityGroupName or EC2SecurityGroupId must be provided. 
+Required: No
+Type: String
+Update requires: Replacement
+EC2SecurityGroupName 
+ Name of the EC2 Security Group to authorize. For VPC DB Security Groups, EC2SecurityGroupId must be provided. Otherwise, EC2SecurityGroupOwnerId and either EC2SecurityGroupName or EC2SecurityGroupId must be provided. 
+Required: No
+Type: String
+Update requires: Replacement
+EC2SecurityGroupOwnerId 
+ AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value. For VPC DB Security Groups, EC2SecurityGroupId must be provided. Otherwise, EC2SecurityGroupOwnerId and either EC2SecurityGroupName or EC2SecurityGroupId must be provided. 
+Required: No
+Type: String
+Update requires: Replacement

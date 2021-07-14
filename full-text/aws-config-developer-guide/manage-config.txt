@@ -1,0 +1,10 @@
+Managing AWS Config
+At any time, you can change the settings for your IAM role and modify or delete your delivery channel (that is, the Amazon Simple Storage Service bucket and the Amazon Simple Notification Service topic). You can start or stop the configuration recorder associated with your account, and you can customize which types of resources are recorded. 
+Topics
+ Managing the Delivery Channel
+ Updating the IAM Role Assigned to AWS Config
+ Managing the Configuration Recorder
+ Selecting Which Resources AWS Config Records
+ Recording Software Configuration for Managed Instances
+ Querying the Current Configuration State of AWS Resources
+ Deleting AWS Config Data

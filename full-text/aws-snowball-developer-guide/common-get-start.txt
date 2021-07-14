@@ -1,0 +1,19 @@
+
+This guide is for the Snowball Edge. If you are looking for documentation for the Snowball, see the AWS Snowball User Guide.
+
+Getting Started with AWS Snowball Edge: Your First Job
+Regardless of the type of job you're creating for an AWS Snowball Edge device, there's a set of common procedures in the AWS Snowball Management Console. These are procedures for creating a job, monitoring the status of your job, setting up the device, unlocking the device, transferring data, and returning the device. Following, you can walk through these procedures. Whenever there is a job-type specific consideration, we call out that consideration in a note.
+Topics
+ Create Your First Job
+ Receive the Snowball Edge
+ Connect to Your Local Network
+ Get Your Credentials and Tools
+ Download and Install the Snowball Client
+ Unlock the Snowball Edge
+ Set Up Local Users
+ Use the Snowball Edge
+ Stop the Snowball Client, and Power Off the Snowball Edge
+ Disconnect the Snowball Edge
+ Return the Snowball Edge
+ Monitor the Import Status
+ Get Your Job Completion Report and Logs in the Console

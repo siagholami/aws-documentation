@@ -1,0 +1,37 @@
+AWS::GroundStation::Config DataflowEndpointConfig
+Provides information to AWS Ground Station about which IP endpoints to use during a contact. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DataflowEndpointName](#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointname)" : String,
+  "[DataflowEndpointRegion](#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointregion)" : String
+}
+YAML
+[DataflowEndpointName](#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointname): String
+  [DataflowEndpointRegion](#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointregion): String
+Properties
+DataflowEndpointName 
+ The name of the dataflow endpoint to use during contacts. 
+Required: Yes
+Type: String
+Update requires: No interruption
+DataflowEndpointRegion 
+ The region of the dataflow endpoint to use during contacts. When omitted, Ground Station will use the region of the contact. 
+Required: No
+Type: String
+Update requires: No interruption
+Examples
+Create a DataflowEndpointConfig
+The following example creates a Ground Station DataflowEndpointConfig
+JSON
+{
+  "DataflowEndpointConfig": {
+    "DataflowEndpointName": "Downlink Demod Decode",
+    "DataflowEndpointRegion": "us-east-2"
+  }
+}
+YAML
+DataflowEndpointConfig:
+  DataflowEndpointName: "Downlink Demod Decode"
+  DataflowEndpointRegion: "us-east-2"

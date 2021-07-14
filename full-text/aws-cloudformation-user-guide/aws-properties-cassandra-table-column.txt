@@ -1,0 +1,23 @@
+AWS::Cassandra::Table Column
+The name and data type of an individual column in a table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ColumnName](#cfn-cassandra-table-column-columnname)" : String,
+  "[ColumnType](#cfn-cassandra-table-column-columntype)" : String
+}
+YAML
+[ColumnName](#cfn-cassandra-table-column-columnname): String
+  [ColumnType](#cfn-cassandra-table-column-columntype): String
+Properties
+ColumnName 
+The name of the column. For more information, see Identifiers in the Amazon Keyspaces Developer Guide.
+Required: Yes
+Type: String
+Update requires: No interruption
+ColumnType 
+The data type of the column. For more information, see Data Types in the the Amazon Keyspaces Developer Guide.
+Required: Yes
+Type: String
+Update requires: No interruption

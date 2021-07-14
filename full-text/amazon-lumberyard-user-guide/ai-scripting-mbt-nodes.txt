@@ -1,0 +1,81 @@
+Modular Behavior Tree Node Reference
+This section contains reference information on modular behavior tree (MBT) node types. MBT node types are organized here based on the system they are defined into.
+It is possible to expose MBT nodes from anywhere in Lumberyard code. A node can have parameters that configure the behavior of its execution. If an invalid value is passed to the node, causing the node's parsing to fail, an error message is written to either Editor.log or Game.log.
+Node Index
+Generic Nodes
+
+Loop
+LoopUntilSuccess
+Parallel
+Selector
+Sequence
+StateMachine
+State & Transitions
+SuppressFailure
+Timeout
+Wait
+
+AI Nodes
+
+AdjustCoverStance
+Aim 
+AimAroundWhileUsingAMachingGun 
+Animate
+AnimationTagWrapper 
+AssertCondition 
+AssertLua 
+AssertTime 
+Bubble
+CheckIfTargetCanBeReached 
+ClearTargets 
+Communicate 
+ExecuteLua 
+GroupScope 
+IfCondition 
+IfTime
+Log
+Look 
+LuaGate
+LuaWrapper 
+ MonitorCondition
+ Move 
+Priority & Case
+PullDownThreatLevel 
+QueryTPS 
+RandomGate
+SendTransitionSignal
+SetAlertness
+Shoot 
+ShootFromCover 
+Signal
+SmartObjectStatesWrapper 
+Stance 
+StopMovement 
+Teleport 
+ThrowGrenade 
+WaitUntilTime 
+
+CryAction Nodes
+
+AnimateFragment
+
+Game Nodes
+
+InflateAgentCollisionRadiusUsingPhysicsTrick
+KeepTargetAtADistance
+Melee
+ScorcherDeploy
+SuppressHitReactions
+
+Flying Nodes
+
+ Hover
+FlyShoot
+WaitAlignedWithAttentionTarget
+Fly
+FlyForceAttentionTarget
+FlyAimAtCombatTarget
+HeavyShootMortar
+SquadScope
+SendSquadEvent
+IfSquadCount

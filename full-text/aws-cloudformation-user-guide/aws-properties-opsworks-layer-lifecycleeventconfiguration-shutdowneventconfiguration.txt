@@ -1,0 +1,23 @@
+AWS::OpsWorks::Layer ShutdownEventConfiguration
+The Shutdown event configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained)" : Boolean,
+  "[ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout)" : Integer
+}
+YAML
+[DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained): Boolean
+  [ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout): Integer
+Properties
+DelayUntilElbConnectionsDrained 
+Whether to enable Elastic Load Balancing connection draining. For more information, see Connection Draining 
+Required: No
+Type: Boolean
+Update requires: No interruption
+ExecutionTimeout 
+The time, in seconds, that AWS OpsWorks Stacks will wait after triggering a Shutdown event before shutting down an instance.
+Required: No
+Type: Integer
+Update requires: No interruption

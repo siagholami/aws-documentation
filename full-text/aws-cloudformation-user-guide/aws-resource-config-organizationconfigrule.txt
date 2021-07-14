@@ -1,0 +1,114 @@
+AWS::Config::OrganizationConfigRule
+An organization config rule that has information about config rules that AWS Config creates in member accounts. Only a master account can create or update an organization config rule. 
+OrganizationConfigRule resource enables organization service access through EnableAWSServiceAccess action and creates a service linked role in the master account of your organization. The service linked role is created only when the role does not exist in the master account. AWS Config verifies the existence of role with GetRole action. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Config::OrganizationConfigRule",
+  "Properties" : {
+      "[ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts)" : [ String, ... ],
+      "[OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename)" : String,
+      "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : OrganizationCustomRuleMetadata,
+      "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : OrganizationManagedRuleMetadata
+    }
+}
+YAML
+Type: AWS::Config::OrganizationConfigRule
+Properties: 
+  [ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts): 
+    - String
+  [OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename): String
+  [OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata): 
+    OrganizationCustomRuleMetadata
+  [OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata): 
+    OrganizationManagedRuleMetadata
+Properties
+ExcludedAccounts 
+A comma-separated list of accounts excluded from organization config rule.
+Required: No
+Type: List of String
+Maximum: 1000
+Update requires: No interruption
+OrganizationConfigRuleName 
+The name that you assign to organization config rule.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Pattern: .*\S.*
+Update requires: Replacement
+OrganizationCustomRuleMetadata 
+An OrganizationCustomRuleMetadata object.
+Required: No
+Type: OrganizationCustomRuleMetadata
+Update requires: No interruption
+OrganizationManagedRuleMetadata 
+An OrganizationManagedRuleMetadata object.
+Required: No
+Type: OrganizationManagedRuleMetadata
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the OrganizationConfigRuleName. 
+For more information about using the Ref function, see Ref.
+Examples
+Managed Rule
+The following example creates a managed organization config rule.
+JSON
+{
+    "BasicOrganizationConfigRule": {
+        "Type": "AWS::Config::OrganizationConfigRule",
+        "Properties": {
+            "OrganizationConfigRuleName": "OrganizationConfigRuleName",
+            "OrganizationManagedRuleMetadata": {
+                "RuleIdentifier": "CLOUD_TRAIL_ENABLED",
+                "Description": "Cloudtrail enabled rule"
+            },
+            "ExcludedAccounts": [
+                "accountId"
+            ]
+        }
+    }
+}
+YAML
+BasicOrganizationConfigRule:
+    Type: "AWS::Config::OrganizationConfigRule"
+    Properties:
+        OrganizationConfigRuleName: "OrganizationConfigRuleName"
+        OrganizationManagedRuleMetadata:
+            RuleIdentifier: "CLOUD_TRAIL_ENABLED"
+            Description: "Cloudtrail enabled rule"
+        ExcludedAccounts:
+        - "accountId"
+Custom Rule
+The following example creates a custom organization config rule.
+JSON
+{
+    "BasicOrganizationConfigRule": {
+        "Type": "AWS::Config::OrganizationConfigRule",
+        "Properties": {
+            "OrganizationConfigRuleName": "OrganizationConfigRuleName",
+            "OrganizationCustomRuleMetadata": {
+                "LambdaFunctionArn": "CustomRuleLambdaArn",
+                "OrganizationConfigRuleTriggerTypes": [
+                    "ScheduledNotification"
+                ]
+            },
+            "ExcludedAccounts": [
+                "accountId"
+            ]
+        }
+    }
+}
+YAML
+BasicOrganizationConfigRule:
+    Type: "AWS::Config::OrganizationConfigRule"
+    Properties:
+        OrganizationConfigRuleName: "OrganizationConfigRuleName"
+        OrganizationCustomRuleMetadata:
+            LambdaFunctionArn: "CustomRuleLambdaArn"
+            OrganizationConfigRuleTriggerTypes:
+                - "ScheduledNotification"
+            ExcludedAccounts:
+            - "accountId"

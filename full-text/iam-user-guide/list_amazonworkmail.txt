@@ -1,0 +1,845 @@
+Actions, resources, and condition keys for Amazon WorkMail
+Amazon WorkMail (service prefix: workmail) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by Amazon WorkMail
+ Resource types defined by Amazon WorkMail
+ Condition keys for Amazon WorkMail
+Actions defined by Amazon WorkMail
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AddMembersToGroup  [permission only]
+Adds a list of members (users or groups) to a group.
+Write
+ organization* 
+
+
+
+
+ AssociateDelegateToResource 
+Adds a member (user or group) to the resource's set of delegates.
+Write
+ organization* 
+
+
+
+
+ AssociateMemberToGroup 
+Adds a member (user or group) to the group's set.
+Write
+ organization* 
+
+
+
+
+ CreateAlias 
+Adds an alias to the set of a given member (user or group) of WorkMail.
+Write
+ organization* 
+
+
+
+
+ CreateGroup 
+Creates a group that can be used in WorkMail by calling the RegisterToWorkMail operation.
+Write
+ organization* 
+
+
+
+
+ CreateInboundMailFlowRule  [permission only]
+Create an inbound email flow rule which will apply to all email sent to an organization
+Write
+ organization* 
+
+
+
+
+ CreateMailDomain  [permission only]
+Creates a mail domain.
+Write
+ organization* 
+
+
+
+
+ CreateMailUser  [permission only]
+Creates a user in the directory and the WorkMail storage but does not enable the user for mail.
+Write
+ organization* 
+
+
+
+
+ CreateOrganization  [permission only]
+Creates an organization, either using an existing directory or creates a new directory on-the-fly. Also creates and enables the complementary mail domain. Optionally creates KMS key
+Write
+
+
+
+
+
+ CreateOutboundMailFlowRule  [permission only]
+Create an outbound email flow rule which will apply to all email sent from an organization
+Write
+ organization* 
+
+
+
+
+ CreateResource 
+Creates a new WorkMail resource.
+Write
+ organization* 
+
+
+
+
+ CreateSmtpGateway  [permission only]
+Register an SMTP device against a WorkMail organization
+Write
+ organization* 
+
+
+
+
+ CreateUser 
+Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation.
+Write
+ organization* 
+
+
+
+
+ DeleteAccessControlRule 
+Deletes an access control rule for the specified WorkMail organization.
+Write
+ organization* 
+
+
+
+
+ DeleteAlias 
+Remove one or more specified aliases from a set of aliases for a given user.
+Write
+ organization* 
+
+
+
+
+ DeleteGroup 
+Deletes a group from WorkMail.
+Write
+ organization* 
+
+
+
+
+ DeleteInboundMailFlowRule  [permission only]
+Remove an inbound email flow rule to no longer apply to emails sent to an organization
+Write
+ organization* 
+
+
+
+
+ DeleteMailDomain  [permission only]
+Removes an unused mail domain from an organization
+Write
+ organization* 
+
+
+
+
+ DeleteMailboxPermissions 
+Deletes permissions granted to a member (user or group).
+Write
+ organization* 
+
+
+
+
+ DeleteMobileDevice  [permission only]
+Removes a mobile device from a user
+Write
+ organization* 
+
+
+
+
+ DeleteOrganization  [permission only]
+Removes an organization from an account, either removing the directory from directory services or leaving it available for re-use
+Write
+ organization* 
+
+
+
+
+ DeleteOutboundMailFlowRule  [permission only]
+Remove an outbound email flow rule to no longer apply to emails sent from an organization
+Write
+ organization* 
+
+
+
+
+ DeleteResource 
+Deletes the specified resource.
+Write
+ organization* 
+
+
+
+
+ DeleteRetentionPolicy 
+Deletes the retention policy based on the supplied organization and policy identifiers.
+Write
+ organization* 
+
+
+
+
+ DeleteSmtpGateway  [permission only]
+Remove an SMTP device from an organization
+Write
+ organization* 
+
+
+
+
+ DeleteUser 
+Deletes a user from WorkMail and all subsequent systems. The action cannot be undone.
+Write
+ organization* 
+
+
+
+
+ DeregisterFromWorkMail 
+Mark a user, group, or resource as no longer used in WorkMail.
+Write
+ organization* 
+
+
+
+
+ DescribeDirectories  [permission only]
+Shows a list of directories available for use in creating an organization
+List
+
+
+
+
+
+ DescribeGroup 
+Returns the data available for the group.
+List
+ organization* 
+
+
+
+
+ DescribeInboundMailFlowRule  [permission only]
+Returns the details of an inbound mail flow rule configured for an organization
+Read
+ organization* 
+
+
+
+
+ DescribeKmsKeys  [permission only]
+Shows a list of KMS Keys available for use in creating an organization
+List
+
+
+
+
+
+ DescribeMailDomains  [permission only]
+Shows the details of all mail domains associated with the organization
+List
+ organization* 
+
+
+
+
+ DescribeMailGroups  [permission only]
+Shows the details of all groups associated with the organization
+List
+ organization* 
+
+
+
+
+ DescribeMailUsers  [permission only]
+Shows the details of all users associated with the orgaization
+List
+ organization* 
+
+
+
+
+ DescribeOrganization 
+Provides more information regarding a given organization based on its identifier.
+List
+ organization* 
+
+
+
+
+ DescribeOrganizations  [permission only]
+Shows a summary of all organizations associated with the account
+List
+
+
+
+
+
+ DescribeOutboundMailFlowRule  [permission only]
+Returns the details of an outbound mail flow rule configured for an organization
+Read
+ organization* 
+
+
+
+
+ DescribeResource 
+Returns the data available for the resource.
+List
+ organization* 
+
+
+
+
+ DescribeSmtpGateway  [permission only]
+Returns the details of an SMTP device registered against an organization
+Read
+ organization* 
+
+
+
+
+ DescribeUser 
+Provides information regarding the user.
+List
+ organization* 
+
+
+
+
+ DisableMailGroups  [permission only]
+Disable a mail group when it is not being used and, to allow it to be deleted
+Write
+ organization* 
+
+
+
+
+ DisableMailUsers  [permission only]
+Disable a user mailbox when it is no longer being used, and to allow it to be deleted
+Write
+ organization* 
+
+
+
+
+ DisassociateDelegateFromResource 
+Removes a member from the resource's set of delegates.
+Write
+ organization* 
+
+
+
+
+ DisassociateMemberFromGroup 
+Removes a member from a group.
+Write
+ organization* 
+
+
+
+
+ EnableMailDomain  [permission only]
+Enable a mail domain in the organization
+Write
+ organization* 
+
+
+
+
+ EnableMailGroups  [permission only]
+Enable a mail group after it has been created to allow it to receive mail
+Write
+ organization* 
+
+
+
+
+ EnableMailUsers  [permission only]
+Enable a user's mailbox after it has been created to allow it to receive mail
+Write
+ organization* 
+
+
+
+
+ GetAccessControlEffect 
+Gets the effects of an organization's access control rules as they apply to a specified IPv4 address, access protocol action, or user ID.
+Read
+ organization* 
+
+
+
+
+ GetDefaultRetentionPolicy 
+Retrieves the retention policy associated at an organizational level.
+Read
+ organization* 
+
+
+
+
+ GetJournalingRules  [permission only]
+Returns journaling and fallback email addresses configured for email journaling
+Read
+ organization* 
+
+
+
+
+ GetMailDomainDetails  [permission only]
+Get the details of the mail domain
+Read
+ organization* 
+
+
+
+
+ GetMailGroupDetails  [permission only]
+Get the details of the mail group
+Read
+ organization* 
+
+
+
+
+ GetMailUserDetails  [permission only]
+Get the details of the user's mailbox and account
+Read
+ organization* 
+
+
+
+
+ GetMailboxDetails 
+Returns the details of the user's mailbox.
+Read
+ organization* 
+
+
+
+
+ GetMobileDeviceDetails  [permission only]
+Get the details of the mobile device
+Read
+ organization* 
+
+
+
+
+ GetMobileDevicesForUser  [permission only]
+Get a list of the mobile devices associated with the user
+Read
+ organization* 
+
+
+
+
+ GetMobilePolicyDetails  [permission only]
+Get the details of the mobile device policy associated with the organization
+Read
+ organization* 
+
+
+
+
+ ListAccessControlRules 
+Lists the access control rules for the specified organization.
+List
+ organization* 
+
+
+
+
+ ListAliases 
+Creates a paginated call to list the aliases associated with a given entity.
+List
+ organization* 
+
+
+
+
+ ListGroupMembers 
+Returns an overview of the members of a group. Users and groups can be members of a group.
+List
+ organization* 
+
+
+
+
+ ListGroups 
+Returns summaries of the organization's groups.
+List
+ organization* 
+
+
+
+
+ ListInboundMailFlowRules  [permission only]
+Returns a list of inbound mail flow rules configured for an organization
+List
+ organization* 
+
+
+
+
+ ListMailboxPermissions 
+Lists the mailbox permissions associated with a user, group, or resource mailbox.
+List
+ organization* 
+
+
+
+
+ ListMembersInMailGroup  [permission only]
+Get a list of all the members in a mail group
+Read
+ organization* 
+
+
+
+
+ ListOrganizations 
+Returns summaries of the customer's non-deleted organizations.
+List
+
+
+
+
+
+ ListOutboundMailFlowRules  [permission only]
+Returns a list of outbound mail flow rules configured for an organization
+List
+ organization* 
+
+
+
+
+ ListResourceDelegates 
+Lists the delegates associated with a resource.
+List
+ organization* 
+
+
+
+
+ ListResources 
+Returns summaries of the organization's resources.
+List
+ organization* 
+
+
+
+
+ ListSmtpGateways  [permission only]
+Returns a list of SMTP devices registered against the organization
+List
+ organization* 
+
+
+
+
+ ListTagsForResource 
+Grants permission to list the tags applied to an Amazon WorkMail organization resource.
+List
+ organization* 
+
+
+
+
+ ListUsers 
+Returns summaries of the organization's users.
+List
+ organization* 
+
+
+
+
+ PutAccessControlRule 
+Adds a new access control rule for the specified organization. The rule allows or denies access to the organization for the specified IPv4 addresses, access protocol actions, and user IDs. Adding a new rule with the same name as an existing rule replaces the older rule.
+Write
+ organization* 
+
+
+
+
+ PutMailboxPermissions 
+Sets permissions for a user, group, or resource. This replaces any pre-existing permissions.
+Write
+ organization* 
+
+
+
+
+ PutRetentionPolicy 
+Adds or updates the retention policy for the specified organization.
+Write
+ organization* 
+
+
+
+
+ RegisterToWorkMail 
+Registers an existing and disabled user, group, or resource for use by associating a mailbox and calendaring capabilities.
+Write
+ organization* 
+
+
+
+
+ RemoveMembersFromGroup  [permission only]
+Remove members from a mail group
+Write
+ organization* 
+
+
+
+
+ ResetPassword 
+Allows the administrator to reset the password for a user.
+Write
+ organization* 
+
+
+
+
+ ResetUserPassword  [permission only]
+Reset the password for a user's account
+Write
+ organization* 
+
+
+
+
+ SearchMembers  [permission only]
+Prefix search to find a specific user in a mail group
+Read
+ organization* 
+
+
+
+
+ SetAdmin  [permission only]
+Mark a user as being an administrator
+Write
+ organization* 
+
+
+
+
+ SetDefaultMailDomain  [permission only]
+Set the default mail domain for the organization
+Write
+ organization* 
+
+
+
+
+ SetJournalingRules  [permission only]
+Set journaling and fallback email addresses for email journaling
+Write
+ organization* 
+
+
+
+
+ SetMailGroupDetails  [permission only]
+Set the details of the mail group which has just been created
+Write
+ organization* 
+
+
+
+
+ SetMailUserDetails  [permission only]
+Set the details for the user account which has just been created
+Write
+ organization* 
+
+
+
+
+ SetMobilePolicyDetails  [permission only]
+Set the details of a mobile policy associated with the organization
+Write
+ organization* 
+
+
+
+
+ TagResource 
+Grants permission to tag the specified Amazon WorkMail organization resource.
+Tagging
+ organization* 
+
+
+
+
+ TestInboundMailFlowRules  [permission only]
+Test what inbound rules will apply to an email with a given sender and recipient
+Write
+ organization* 
+
+
+
+
+ TestOutboundMailFlowRules  [permission only]
+Test what outbound rules will apply to an email with a given sender and recipient
+Write
+ organization* 
+
+
+
+
+ UntagResource 
+Grants permission to untag the specified Amazon WorkMail organization resource.
+Tagging
+ organization* 
+
+
+
+
+ UpdateInboundMailFlowRule  [permission only]
+Update the details of an inbound email flow rule which will apply to all email sent to an organization
+Write
+ organization* 
+
+
+
+
+ UpdateMailboxQuota 
+Updates the maximum size (in MB) of the user's mailbox.
+Write
+ organization* 
+
+
+
+
+ UpdateOutboundMailFlowRule  [permission only]
+Update the details of an outbound email flow rule which will apply to all email sent from an organization
+Write
+ organization* 
+
+
+
+
+ UpdatePrimaryEmailAddress 
+Updates the primary email for a user, group, or resource.
+Write
+ organization* 
+
+
+
+
+ UpdateResource 
+Updates data for the resource. To retrieve the latest information, it must be preceded by a DescribeResource call.
+Write
+ organization* 
+
+
+
+
+ UpdateSmtpGateway  [permission only]
+Update the details of an existing SMTP device registered against an organization
+Write
+ organization* 
+
+
+
+
+ WipeMobileDevice  [permission only]
+Remotely wipe the mobile device associated with a user's account
+Write
+ organization* 
+
+
+
+
+
+Resource types defined by Amazon WorkMail
+The following resource types are defined by this service and can be used in the Resource element of IAM permission policy statements. Each action in the Actions table identifies the resource types that can be specified with that action. A resource type can also define which condition keys you can include in a policy. These keys are displayed in the last column of the table. For details about the columns in the following table, see The resource types table.
+
+
+
+
+Resource types
+ARN
+Condition keys
+
+
+
+
+ organization 
+arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId}
+ aws:ResourceTag/${TagKey} 
+
+
+
+Condition keys for Amazon WorkMail
+Amazon WorkMail defines the following condition keys that can be used in the Condition element of an IAM policy. You can use these keys to further refine the conditions under which the policy statement applies. For details about the columns in the following table, see The condition keys table.
+To view the global condition keys that are available to all services, see Available global condition keys.
+
+
+
+
+Condition keys
+Description
+Type
+
+
+
+
+ aws:RequestTag/${TagKey} 
+Filters actions based on the presence of tag key-value pairs in the request
+String
+
+
+ aws:ResourceTag/${TagKey} 
+Filters actions based on tag key-value pairs attached to the resource
+String
+
+
+ aws:TagKeys 
+Filters actions based on the presence of tag keys in the request
+String
+
+

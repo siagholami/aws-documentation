@@ -1,0 +1,36 @@
+Enable contact flow logs
+Step 1: Enable logging for your instance
+By default when you create a new Amazon Connect instance, an Amazon CloudWatch log group is created automatically to store the logs for your instance. 
+Use the following procedure to check that logging is enabled for your instance.
+
+
+Open the Amazon Connect console.
+
+
+Choose the instance alias for your instance.
+
+
+Choose Contact flows.
+
+
+Scroll to bottom of the page. Select Enable Contact flow logs and choose Apply.
+
+
+Step 2: Add the Set logging behavior block
+Logs are generated only for contact flows that include a Set logging behavior block with logging set to enabled. 
+You control which flows, or parts of flows, logs are generated for by including multiple Set logging behavior blocks and configuring them as needed.
+When you use a Set logging behavior block to enable or disable logging for a flow, logging is also enabled or disabled for any subsequent flow that a contact is transferred to, even if the flow does not include a Set logging behavior block. To avoid logging that persists between flows, enable or disable a Set logging behavior block as needed for that specific flow.
+To enable or disable contact flow logs for a contact flow
+
+
+Add a Set logging behavior block and connect it to another block in the flow.
+
+
+Open the properties for the block. Choose Enable or Disable.
+
+
+Choose Save.
+
+
+If you add a Set logging behavior block to a contact flow that is already published, you must publish it again to start generating logs for it.
+

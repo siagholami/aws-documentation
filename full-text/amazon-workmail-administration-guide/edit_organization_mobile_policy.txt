@@ -1,0 +1,55 @@
+Editing your organization's mobile device policy
+You can edit your organization's mobile device policy to change the way that mobile devices interact with Amazon WorkMail.
+To edit your organization's mobile device policy
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+If necessary, change the AWS Region. From the navigation bar, select the appropriate Region. For more information, see Regions and endpoints in the Amazon Web Services General Reference.
+
+
+For Organizations, choose the name of your organization.
+
+
+In the navigation pane, choose Mobile Policies, and then on the Mobile policy screen, choose Edit.
+
+
+Update any of the following as necessary:
+
+
+Require encryption on device: Encrypt email data on the mobile device.
+
+
+Require encryption on storage card: Encrypt email data on the mobile device's removable storage.
+
+
+Password required: Require a password to lock a mobile device.
+
+
+Allow simple password: Use the PIN on the device as the password.
+
+
+Minimal password length: Set the number of characters required in a valid password.
+
+
+Require alphanumeric password: Require that passwords are made up of letters and numbers.
+
+
+Minimum number of character sets: Specify the number of character sets required in a password, such as lowercase and uppercase letters, symbols, and numbers.
+
+
+Number of failed attempts allowed: Specify the number of failed login attempts that are allowed before the user is locked out of their account.
+
+
+Password expiration: Specify the number of days before a password expires and must be changed.
+
+
+Enable screen lock: Specify the number of seconds that must elapse without user input to lock the user's screen.
+
+
+Enforce password history: Specify the number of passwords that can be entered before repeating the same password.
+
+
+Choose Save.
+

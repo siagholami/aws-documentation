@@ -1,0 +1,411 @@
+AWS Elemental MediaLive User Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is MediaLive?
+Related Services
+Pricing
+Setting Up AWS Elemental MediaLive
+Signing Up for AWS Elemental MediaLive
+Creating an Administrator IAM User
+Creating a Non-Administrator IAM User
+Step 2: Create an IAM Group
+Step 3: Create or Add an IAM User to Your Group
+Step 1: Create Customer Managed Policies
+
+
+
+
+Setting up AWS Elemental MediaLive as a Trusted Service
+Data Retention and Personally Identifiable Information
+Setting Up AWS Elemental MediaLive Permissions for a Production Environment
+Setting Up Administrators and Users
+Creating an Administrator User with Limited Access
+Creating a Non-Administrator User
+Step 1: Identify Requirements for Permissions for Users
+Requirements for AWS Elemental MediaLive Features
+Requirements for AWS CloudTrail
+Requirements for Amazon CloudWatch—Monitoring Channel Health
+Requirements for CloudWatch and Amazon SNS—Setting Up Email Notification
+Requirements for Amazon CloudWatch Logs—Setting Up Channel Logging
+Requirements for Amazon Elastic Compute Cloud—VPC Inputs
+Requirements for AWS Identity and Access Management—Trusted Entity Role
+About the Trusted Entity Role
+Options for Implementing the Role
+Requirements for Permissions for the Simple Option
+
+
+Requirements for AWS Elemental MediaConnect
+Requirements for AWS Elemental MediaPackage
+Requirements for AWS Elemental MediaStore
+Requirements for AWS Resource Groups—Tagging
+Requirements for Amazon S3
+Requirements for AWS Systems Manager—Creating Password Parameters in Parameter Store
+
+
+Summary of Step 1 Access Requirements
+Step 2: Identify Categories of Users
+Step 3: Create the Custom Policies
+Step 4: Create the Groups
+Step 5: Create or Modify each IAM User
+Create a User
+Modify an Existing User
+
+
+Step 6: Setting Up Required Data
+
+
+Setting Up AWS Elemental MediaLive as a Trusted Service
+How the Trusted Entity Is Created and Attached
+Creating Trusted Entity Roles
+Step 1: Determine the Access Requirements
+Step 2: Create Policies
+Step 3: Create Roles
+Step 4: Revise the Trust Relationship
+
+
+Setting Up Permissions for Non-Administrator Users
+Identifying Permissions
+Setting Up Permissions
+
+
+
+
+Getting Started with AWS Elemental MediaLive
+Components of AWS Elemental MediaLive
+Inputs
+Channels
+Input Security Groups
+How Components Are Associated
+Planning Your Workflow for AWS Elemental MediaLive
+Assessing the Video Source
+Determining the Channel Class
+Setting Up the Upstream System
+MediaConnect Push
+MP4 Pull
+RTP Push
+RTMP Push
+RTMP Pull
+HLS Pull
+Planning the Inputs
+
+
+Planning the Channel
+Rules for Encodes in an Output
+
+
+Examples of Channel Designs
+Non-ABR Asset with Captions Embedded in the Video
+Non-ABR Segmented Asset with Captions as Separate Objects
+Non-ABR Segmented Asset with Captions as Sidecars
+ABR Asset with Captions Embedded in the Video
+ABR Asset with Captions in Sidecars
+
+
+Setting Up the Downstream System
+Setting Up the Downstream System for an Archive Output
+Setting Up the Downstream System for an HLS Output
+Setting Up the Downstream System for a MediaPackage Output
+Setting Up the Downstream System for a Frame Capture Output
+Setting Up the Downstream System for a Microsoft Smooth Output
+Setting Up the Downstream System for an RTMP or RTMPS Output
+Setting Up the Downstream System for a UDP Output
+
+
+Working with Input Security Groups
+Purpose of an Input Security Group
+Creating an Input Security Group
+Editing an Input Security Group
+Deleting an Input Security Group
+Working with Inputs in AWS Elemental MediaLive
+Creating an Input
+Creating an HLS Pull Input
+Creating a MediaConnect Push Input
+Creating an MP4 Pull Input
+Creating an RTMP Push Input
+Creating an RTMP Push Input in Amazon VPC
+Creating an RTMP Pull Input
+Creating an RTP Push Input
+Creating an RTP Push Input in Amazon VPC
+
+
+Editing an Input
+Deleting an Input
+Creating a Channel from Scratch
+Step 1: Complete the Channel and Input Details
+IAM Role and ARN
+Channel Class
+Input Specifications Settings
+
+
+Step 2: Attach Inputs to the Channel
+Channel Input—HLS Pull Input
+Channel Input—MediaConnect Push Input
+Channel Input—MP4 Pull Input
+Channel Input—RTMP Push Input
+Channel Input—RTMP Pull Input
+Channel Input—RTP Push Input
+
+
+Step 3: Complete the Settings for Each Input
+Input Settings—Network Input Settings
+Input Settings—Other Settings
+Input Settings—Video Selector
+Input Settings—Audio Selectors
+Input Settings—Caption Selectors
+
+
+Step 4: Complete the General Settings
+Step 5: Create Output Groups
+Creating an Archive Output Group
+Fields for the Archive Group
+About Archive Locations and File Names
+Archive Examples
+
+
+Creating a Frame Capture Output Group
+Fields for the Frame Capture Group
+About Frame Capture Locations and File Names
+
+
+Creating an HLS Output Group
+Fields for the HLS Group
+About HLS Group Destinations and File Names
+HLS Example
+
+
+Creating a MediaPackage Output Group
+Creating an RTMP Output Group
+Fields for the RTMP Group
+
+
+Creating a Microsoft Smooth Output Group
+Fields for the Microsoft Smooth Group
+Microsoft Smooth Example
+
+
+Creating a UDP Output Group
+
+
+Step 6: Create Outputs
+Settings for an Archive Output
+Settings for a Frame Capture Output
+Settings for an HLS Output
+Settings for a MediaPackage Output
+Settings for an RTMP Output
+Settings for a Microsoft Smooth Output
+Settings for a UDP Output
+
+
+Step 7: Set Up the Video Encode
+Step 8: Set Up the Audio Encodes
+Step 9: Set up the Captions Encodes
+Step 10: Save the Channel
+Creating a Channel from a Template or by Cloning
+Creating a Channel from a Template
+Creating a Channel by Cloning
+Creating a Custom Template
+Starting, Stopping, and Pausing an AWS Elemental MediaLive Channel
+Viewing and Monitoring Channels
+Viewing a Channel Configuration
+Monitoring a Channel Using the AWS Elemental MediaLive Console
+Monitoring a Channel Using Amazon CloudWatch Events
+Option 1: Send all MediaLive Events to an Email Address
+Option 2: Send Events for Specific Channels to an Email Address
+
+
+Monitoring Using Amazon CloudWatch Logs
+Enabling Channel Logs
+Working with Logs
+
+
+Logging MediaLive API Calls with AWS CloudTrail
+Editing and Deleting a Channel
+Working with the AWS Elemental MediaLive Schedule
+Actions in the Schedule
+Working with the Schedule (Console)
+Creating Actions in the Schedule (Console)
+Fields for an Input Switch
+Fields for Activating an Image Overlay
+Fields for Deactivating an Image Overlay
+Fields for a Splice_Insert Message
+Fields for a Time_Signal Message
+Fields for a Return-to-Network Message
+Fields for ID3 Metadata
+Fields for Pause
+Fields for Unpause
+
+
+Deleting Actions from the Schedule (Console)
+Modifying Actions in the Schedule (Console)
+Viewing the Schedule (Console)
+
+
+Working with the Schedule (AWS CLI)
+Creating and Deleting Using a Batch Command
+How a Batch Request Works
+Batch Command in Different Interfaces
+JSON Payload in Different Interfaces
+
+
+Submitting a Batch Update Schedule Command
+JSON Payload for Create Actions
+Payload for an Input Switch Action
+Payload for an Activate Image Action
+Payload for a Deactivate Overlay Action
+Payload for a Splice_Insert Message
+Payload for a Time_Signal Message
+Payload for a Return-to-Network Message
+Payload for an ID3 Metadata Item
+Payload for a Pause Pipeline Action
+Combination of Create Actions
+
+
+JSON Payload for Delete Actions
+JSON Payload for Combining Create and Delete
+Viewing the Schedule (AWS CLI)
+
+
+Working with Captions
+Supported Features
+Supported Formats
+Format Support by Output Container
+Support for Languages
+Support for Font Styles in Output Captions
+Captions in Channels with Multiple Inputs
+
+
+Typical Scenarios
+Use Case A: One Input Format to One Output and Not Converted
+Use Case B: One Input Format Converted to One Different Format in One Output
+Use Case C: One Input Format Converted to Different Formats, One Format for Each Output
+Use Case D: One Captions Output Shared by Multiple Video Encodes
+
+
+Setting Up for Captions
+Step 1: Create Captions Selectors in the Input
+Information for DVB-Sub or SCTE-27
+Information for Embedded
+Information for Teletext
+
+
+Step 2: Plan Captions for the Outputs
+Step 3: Match Formats to Categories
+Step 4: Create Captions Encodes
+All Captions Except Sidecar or SMPTE-TT in Microsoft Smooth
+Sidecar Captions and SMPTE-TT in Microsoft Smooth
+Details for Specific Output Formats
+Font Styles for Burn-in or DVB-Sub
+PIDs for ARIB
+PIDs for DVB-Sub
+PIDs for SCTE-27
+PIDs for Teletext
+HLS Manifests (Embedded Captions)
+
+
+
+
+
+
+Examples
+Use Case A: One Input Format to One Output and Not Converted
+Use Case B: One Input Format Converted to One Different Output Format
+Use Case C: One Input Format Converted to Different Formats, One Format for Each Output
+Use Case D: One Captions Output Shared by Multiple Video Encodes
+Setup with Embedded or Object-style Captions
+Setup with Sidecar Captions
+
+
+
+
+Input Switching in AWS Elemental MediaLive
+Typical Use Cases
+Recommended Procedure
+Rules and Limits for Input Switches
+Types of Switches—Fixed, Follow, and Follow Chains
+Planning the Schedule of Input Switches
+Creating Inputs for Input Switching
+Creating a Channel with Multiple Inputs
+Setting Up the Schedule with Input Switches
+Starting a Channel That Has Multiple Inputs
+What Happens at Runtime
+Restarting a Channel
+
+
+Working with ID3 Metadata
+Enabling ID3 Metadata
+Passing Through ID3 Metadata
+Inserting ID3 Metadata When Creating the Channel
+Inserting ID3 Metadata Using the Schedule
+SCTE-35 Message Processing
+About Message Processing
+Supported Features by Input Type
+Supported Output Features
+Processing Features – Default Behavior
+Scope of Processing by Feature
+Supported Features by Output Type
+Archive Output with MPEG-2 Container
+Frame Capture Output
+HLS Output
+MediaPackage Output
+Microsoft Smooth Output
+UDP Output
+
+
+
+
+Getting Ready: Set the Ad Avail Mode
+Enabling Manifest Decoration in the Output
+Enabling Decoration – HLS
+Enabling Decoration – Microsoft Smooth
+How SCTE-35 Events Are Handled in Manifests and Sparse Tracks
+
+
+Enabling Ad Avail Blanking in the Output
+Enabling Blanking
+Triggers for Ad Avail Blanking
+Ad Avail Blanking Restriction Flags
+
+
+Enabling Blackout in the Output
+Enabling Blackout
+Triggers for Blackout
+Blackout Restriction Flags
+
+
+Enabling SCTE-35 Passthrough or Removal in the Output
+Sample Manifests - HLS
+Working with Image Overlays
+Tagging AWS Elemental MediaLive Resources
+Reference: Supported Captions
+How to Read the Supported Captions Information
+General Information About Supported Formats
+Formats Supported in an HLS Output or a MediaPackage Output
+Formats Supported in an RTMP Output
+Formats Supported in an MPEG2-TS File Output or MPEG2-UDP Streaming Output
+Formats Supported in a Microsoft Smooth Output
+Reference: Supported Containers and Codecs
+Supported Input Types and Upstream Systems
+Supported Codecs for Inputs
+Supported Containers and Downstream Systems
+Supported Codecs for Outputs
+Reference: Identifiers for Variable Data
+Working with Reservations in AWS Elemental MediaLive
+Input and Output Reservations
+Add-on Reservations
+Purchasing a Reservation
+Viewing Purchased Reservations
+Deleting a Reservation
+Limits in MediaLive
+Document History for User Guide
+AWS Glossary

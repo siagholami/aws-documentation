@@ -1,0 +1,5 @@
+Incident response
+Incident response for AWS Support is an AWS responsibility. AWS has a formal, documented policy and program that governs incident response. For more information, see the Introducing the AWS Security Incident Response Whitepaper.
+Use the following options to inform yourself about operational issues:
+ View AWS operational issues with broad impact on the AWS Service Health Dashboard. For example, events that affect a service or Region that isn't specific to your account.
+ View operational issues for individual accounts in the Personal Health Dashboard. For example, events that affect services or resources in your account. For more information, see Getting started with the AWS Personal Health Dashboard in the AWS Health User Guide.

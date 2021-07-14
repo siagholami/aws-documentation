@@ -1,0 +1,14 @@
+Step 9: Explore Layer Monitoring Reports
+Examine reports that AWS OpsWorks Stacks generates about the layer's compute performance.
+To display layer monitoring reports
+
+
+In the service navigation pane, choose Monitoring. The Monitoring Layers page is displayed.
+
+
+To explore additional views, choose the arrow next to CPU, Memory, Load, and time:
+
+
+
+For information about these and other reports, see Using Amazon CloudWatch and Monitoring.
+In the next step, you can explore additional stack settings.

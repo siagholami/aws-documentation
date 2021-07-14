@@ -1,0 +1,17 @@
+AWS::OpsWorks::Layer LifecycleEventConfiguration
+Specifies the lifecycle event configuration
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)" : ShutdownEventConfiguration
+}
+YAML
+[ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration): 
+    ShutdownEventConfiguration
+Properties
+ShutdownEventConfiguration 
+The Shutdown event configuration.
+Required: No
+Type: ShutdownEventConfiguration
+Update requires: No interruption

@@ -1,0 +1,4 @@
+Platform history
+AWS Elastic Beanstalk platform history has moved. See Platform History in the AWS Elastic Beanstalk Platforms document.
+Topics
+ Elastic Beanstalk custom platforms

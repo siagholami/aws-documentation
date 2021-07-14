@@ -1,0 +1,9 @@
+s3-default-encryption-kms
+Checks whether the Amazon Simple Storage Service (Amazon S3) buckets are encrypted with AWS Key Management Service (AWS KMS). The rule is not NON_COMPLIANT if Amazon S3 bucket is not encrypted with AWS KMS key. 
+Identifier: S3_DEFAULT_ENCRYPTION_KMS
+Trigger type: Configuration changes
+Parameters:
+kmsKeyArns (Optional)
+Comma separated list of AWS KMS key ARNs allowed for encrypting Amazon S3 buckets.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

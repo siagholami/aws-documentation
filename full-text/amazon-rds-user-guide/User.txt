@@ -1,0 +1,7 @@
+Additional Features for Microsoft SQL Server on Amazon RDS
+In the following sections, you can find information about augmenting Amazon RDS instances running the Microsoft SQL Server DB engine by adding SSL, Windows Authentication, and S3 integration. 
+Topics
+ Using SSL with a Microsoft SQL Server DB Instance
+ Configuring Security Protocols and Ciphers
+ Using Windows Authentication with an Amazon RDS for SQL Server DB Instance
+ Integrating an Amazon RDS for SQL Server DB Instance with Amazon S3

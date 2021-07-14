@@ -1,0 +1,2 @@
+Loading Canvases in Lua
+You can use the Lua scripting language to load and unload UI canvases. For more information, see Loading Canvases in Lua in the Amazon Lumberyard Legacy Reference.

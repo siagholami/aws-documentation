@@ -1,0 +1,27 @@
+Release History for Amazon Corretto 11
+This topic lists all the downloads available for Amazon Corretto 11. Choose the appropriate link for your environment's platform:
+For the latest version, see Downloads for Amazon Corretto 11.
+version.11.0.3.7.1 released 2019-04-16
+[See the AWS documentation website for more details]
+Signature Verification
+Public keys are available and are specific to each release: 11.0.3.7.1 (x86_64) and 11.0.3.7.1 (aarch64). 
+In the terminal, run the following command to verify the installation.
+Example 
+java -version
+This is the expected output for 11.0.3:   
+openjdk version "11.0.3" 2019-04-16 LTS
+OpenJDK Runtime Environment Corretto-11.0.3.7.1 (build 11.0.37-LTS)
+OpenJDK 64-Bit Server VM Corretto-11.0.3.7.1 (build 11.0.37-LTS, mixed mode)
+If you see a version string that doesn't mention Corretto, run the following command to change the default java or javac providers. 
+version.11.0.2.9.3 released 2019-03-19
+[See the AWS documentation website for more details]
+Signature Verification
+Public keys are available and are specific to each release: 11.0.2.9.3 (Linux, Windows) and 11.0.2.9.3 (macOS). 
+In the terminal, run the following command to verify the installation.
+Example 
+java -version
+This is the expected output for 11.0.2:   
+openjdk version "11.0.2" 2019-01-15 LTS
+OpenJDK Runtime Environment Corretto-11.0.2.9.3 (build 11.0.29-LTS)
+OpenJDK 64-Bit Server VM Corretto-11.0.2.9.3 (build 11.0.29-LTS, mixed mode)
+If you see a version string that doesn't mention Corretto, run the following command to change the default java or javac providers. 

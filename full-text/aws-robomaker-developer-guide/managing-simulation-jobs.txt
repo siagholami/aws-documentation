@@ -1,0 +1,8 @@
+Managing Simulation Jobs
+In this section, learn how to create and manage simulation jobs.
+Topics
+ Creating a Simulation Job
+ Viewing a Simulation Job
+ Cancelling a Simulation Job
+ Cloning a Simulation Job
+ Restarting a Simulation Job

@@ -1,0 +1,11 @@
+Master and member accounts in AWS Security Hub
+You can invite other AWS accounts to enable AWS Security Hub and become associated with your AWS account. If the owner of the account that you invite enables Security Hub and then accepts the invitation, your account is designated as the master Security Hub account. The invited accounts become associated as member accounts.
+When the invited account accepts the invitation, permission is granted to the master account to view the findings from the member account. The master account can also perform actions on findings in a member account.
+Topics
+ Restrictions and recommendations
+ Adding and inviting member accounts
+ Responding to an invitation to be a member account
+ Disassociating member accounts
+ Deleting member accounts
+ Disassociating from your master account
+ Effect of account actions on Security Hub data

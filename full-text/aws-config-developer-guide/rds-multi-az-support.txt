@@ -1,0 +1,12 @@
+rds-multi-az-support
+Checks whether high availability is enabled for your RDS DB instances.
+In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains a synchronous standby replica in a different Availability Zone. For more information, see High Availability (Multi-AZ) in the Amazon RDS User Guide.
+Note
+This rule does not evaluate Amazon Aurora databases.
+Identifier: RDS_MULTI_AZ_SUPPORT
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions 
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

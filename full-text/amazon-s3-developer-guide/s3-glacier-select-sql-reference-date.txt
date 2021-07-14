@@ -1,0 +1,115 @@
+Date Functions
+Amazon S3 Select and S3 Glacier Select support the following date functions.
+Topics
+ DATE_ADD
+ DATE_DIFF
+ EXTRACT
+ TO_STRING
+ TO_TIMESTAMP
+ UTCNOW
+DATE_ADD
+Given a date part, a quantity, and a time stamp, returns an updated time stamp by altering the date part by the quantity.
+Syntax
+DATE_ADD( date_part, quantity, timestamp )
+Parameters
+date_part 
+Specifies which part of the date to modify. This can be one of the following:
+ year
+ month
+ day
+ hour
+ minute
+ second
+quantity 
+The value to apply to the updated time stamp. Positive values for quantity add to the time stamp's date_part, and negative values subtract.
+timestamp 
+The target time stamp that the function operates on.
+Examples
+DATE_ADD(year, 5, `2010-01-01T`)                -- 2015-01-01 (equivalent to 2015-01-01T)
+DATE_ADD(month, 1, `2010T`)                     -- 2010-02T (result will add precision as necessary)
+DATE_ADD(month, 13, `2010T`)                    -- 2011-02T
+DATE_ADD(day, -1, `2017-01-10T`)                -- 2017-01-09 (equivalent to 2017-01-09T)
+DATE_ADD(hour, 1, `2017T`)                      -- 2017-01-01T01:00-00:00
+DATE_ADD(hour, 1, `2017-01-02T03:04Z`)          -- 2017-01-02T04:04Z
+DATE_ADD(minute, 1, `2017-01-02T03:04:05.006Z`) -- 2017-01-02T03:05:05.006Z
+DATE_ADD(second, 1, `2017-01-02T03:04:05.006Z`) -- 2017-01-02T03:04:06.006Z
+DATE_DIFF
+Given a date part and two valid time stamps, returns the difference in date parts. The return value is a negative integer when the date_part value of timestamp1 is greater than the date_part value of timestamp2. The return value is a positive integer when the date_part value of timestamp1 is less than the date_part value of timestamp2.
+Syntax
+DATE_DIFF( date_part, timestamp1, timestamp2 )
+Parameters
+date_part 
+Specifies which part of the time stamps to compare. For the definition of date_part, see DATE_ADD.
+timestamp1 
+The first time stamp to compare.
+timestamp2 
+The second time stamp to compare.
+Examples
+DATE_DIFF(year, `2010-01-01T`, `2011-01-01T`)            -- 1
+DATE_DIFF(year, `2010T`, `2010-05T`)                     -- 4 (2010T is equivalent to 2010-01-01T00:00:00.000Z)
+DATE_DIFF(month, `2010T`, `2011T`)                       -- 12
+DATE_DIFF(month, `2011T`, `2010T`)                       -- -12
+DATE_DIFF(day, `2010-01-01T23:00`, `2010-01-02T01:00`) -- 0 (need to be at least 24h apart to be 1 day apart)
+EXTRACT
+Given a date part and a time stamp, returns the time stamp's date part value.
+Syntax
+EXTRACT( date_part FROM timestamp )
+Parameters
+date_part 
+Specifies which part of the time stamps to extract. This can be one of the following:
+ year
+ month
+ day
+ hour
+ minute
+ second
+ timezone_hour
+ timezone_minute
+timestamp 
+The target time stamp that the function operates on.
+Examples
+EXTRACT(YEAR FROM `2010-01-01T`)                           -- 2010
+EXTRACT(MONTH FROM `2010T`)                                -- 1 (equivalent to 2010-01-01T00:00:00.000Z)
+EXTRACT(MONTH FROM `2010-10T`)                             -- 10
+EXTRACT(HOUR FROM `2017-01-02T03:04:0507:08`)             -- 3
+EXTRACT(MINUTE FROM `2017-01-02T03:04:0507:08`)           -- 4
+EXTRACT(TIMEZONE_HOUR FROM `2017-01-02T03:04:0507:08`)    -- 7
+EXTRACT(TIMEZONE_MINUTE FROM `2017-01-02T03:04:0507:08`)  -- 8
+TO_STRING
+Given a time stamp and a format pattern, returns a string representation of the time stamp in the given format.
+Syntax
+TO_STRING ( timestamp time_format_pattern )
+Parameters
+timestamp 
+The target time stamp that the function operates on.
+time_format_pattern 
+A string that has the following special character interpretations.    
+[See the AWS documentation website for more details]
+Examples
+TO_STRING(`1969-07-20T20:18Z`,  'MMMM d, y')                    -- "July 20, 1969"
+TO_STRING(`1969-07-20T20:18Z`, 'MMM d, yyyy')                   -- "Jul 20, 1969"
+TO_STRING(`1969-07-20T20:18Z`, 'M-d-yy')                        -- "7-20-69"
+TO_STRING(`1969-07-20T20:18Z`, 'MM-d-y')                        -- "07-20-1969"
+TO_STRING(`1969-07-20T20:18Z`, 'MMMM d, y h:m a')               -- "July 20, 1969 8:18 PM"
+TO_STRING(`1969-07-20T20:18Z`, 'y-MM-dd''T''H:m:ssX')           -- "1969-07-20T20:18:00Z"
+TO_STRING(`1969-07-20T20:1808:00Z`, 'y-MM-dd''T''H:m:ssX')     -- "1969-07-20T20:18:00Z"
+TO_STRING(`1969-07-20T20:1808:00`, 'y-MM-dd''T''H:m:ssXXXX')   -- "1969-07-20T20:18:000800"
+TO_STRING(`1969-07-20T20:1808:00`, 'y-MM-dd''T''H:m:ssXXXXX')  -- "1969-07-20T20:18:0008:00"
+TO_TIMESTAMP
+Given a string, converts it to a time stamp. This is the inverse operation of TO_STRING.
+Syntax
+TO_TIMESTAMP ( string )
+Parameters
+string 
+The target string that the function operates on.
+Examples
+TO_TIMESTAMP('2007T')                         -- `2007T`
+TO_TIMESTAMP('2007-02-23T12:14:33.079-08:00') -- `2007-02-23T12:14:33.079-08:00`
+UTCNOW
+Returns the current time in UTC as a time stamp.
+Syntax
+UTCNOW()
+Parameters
+none
+Examples
+UTCNOW() -- 2017-10-13T16:02:11.123Z

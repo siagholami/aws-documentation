@@ -1,0 +1,24 @@
+Deleting a Metric Filter
+A policy is identified by its name and the log group it belongs to.
+To delete a metric filter using the CloudWatch console
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Log groups.
+
+
+In the contents pane, in the Metric Filter column, choose the metric filter.
+
+
+On the Logs Metric Filters screen, in the metric filter, choose Delete Filter.
+
+
+When prompted for confirmation, choose Yes, Delete.
+
+
+To delete a metric filter using the AWS CLI
+At a command prompt, run the following command:
+aws logs delete-metric-filter --log-group-name MyApp/access.log \
+ --filter-name MyFilterName

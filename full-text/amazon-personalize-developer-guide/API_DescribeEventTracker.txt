@@ -1,0 +1,51 @@
+DescribeEventTracker
+Describes an event tracker. The response includes the trackingId and status of the event tracker. For more information on event trackers, see CreateEventTracker.
+Request Syntax
+{
+   "eventTrackerArn": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ eventTrackerArn  
+The Amazon Resource Name (ARN) of the event tracker to describe.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: Yes
+Response Syntax
+{
+   "eventTracker": { 
+      "accountId": "string",
+      "creationDateTime": number,
+      "datasetGroupArn": "string",
+      "eventTrackerArn": "string",
+      "lastUpdatedDateTime": number,
+      "name": "string",
+      "status": "string",
+      "trackingId": "string"
+   }
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ eventTracker  
+An object that describes the event tracker.
+Type: EventTracker object
+Errors
+InvalidInputException 
+Provide a valid value for the field or parameter.
+HTTP Status Code: 400
+ResourceNotFoundException 
+Could not find the specified resource.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

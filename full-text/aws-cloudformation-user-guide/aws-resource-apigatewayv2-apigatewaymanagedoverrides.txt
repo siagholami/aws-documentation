@@ -1,0 +1,45 @@
+AWS::ApiGatewayV2::ApiGatewayManagedOverrides
+The AWS::ApiGatewayV2::ApiGatewayManagedOverrides resource overrides the default properties of API Gateway-managed resources that are implicitly configured for you when you use quick create. When you create an API by using quick create, an AWS::ApiGatewayV2::Route, AWS::ApiGatewayV2::Integration, and AWS::ApiGatewayV2::Stage are created for you and associated with your AWS::ApiGatewayV2::Api. The AWS::ApiGatewayV2::ApiGatewayManagedOverrides resource enables you to set, or override the properties of these implicit resources. Supported only for HTTP APIs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGatewayV2::ApiGatewayManagedOverrides",
+  "Properties" : {
+      "[ApiId](#cfn-apigatewayv2-apigatewaymanagedoverrides-apiid)" : String,
+      "[Integration](#cfn-apigatewayv2-apigatewaymanagedoverrides-integration)" : IntegrationOverrides,
+      "[Route](#cfn-apigatewayv2-apigatewaymanagedoverrides-route)" : RouteOverrides,
+      "[Stage](#cfn-apigatewayv2-apigatewaymanagedoverrides-stage)" : StageOverrides
+    }
+}
+YAML
+Type: AWS::ApiGatewayV2::ApiGatewayManagedOverrides
+Properties: 
+  [ApiId](#cfn-apigatewayv2-apigatewaymanagedoverrides-apiid): String
+  [Integration](#cfn-apigatewayv2-apigatewaymanagedoverrides-integration): 
+    IntegrationOverrides
+  [Route](#cfn-apigatewayv2-apigatewaymanagedoverrides-route): 
+    RouteOverrides
+  [Stage](#cfn-apigatewayv2-apigatewaymanagedoverrides-stage): 
+    StageOverrides
+Properties
+ApiId 
+The ID of the API for which to override the configuration of API Gateway-managed resources.
+Required: Yes
+Type: String
+Update requires: Replacement
+Integration 
+Overrides the integration configuration for an API Gateway-managed integration.
+Required: No
+Type: IntegrationOverrides
+Update requires: No interruption
+Route 
+Overrides the route configuration for an API Gateway-managed route.
+Required: No
+Type: RouteOverrides
+Update requires: No interruption
+Stage 
+Overrides the stage configuration for an API Gateway-managed stage.
+Required: No
+Type: StageOverrides
+Update requires: No interruption

@@ -1,0 +1,37 @@
+Make a call while on a chat
+Let's say you're chatting with a contact and you want to consult with someone else. While you're on a chat, you can use the updated CCP to make outbound calls using the dial pad and external quick connects. 
+Note the following limitations:
+ You can't access agent quick connects while you're on a chat.
+ Agents can't receive calls while on a chat.
+To make an external call while you're on a chat
+
+
+In the CCP, choose the phone tab.
+
+
+
+Choose Number pad.
+
+
+
+Enter the external number you want to call, and then choose Call.
+
+
+
+You'll be connected to the call at the same time the chat is still ongoing, as shown in the following image.
+
+
+
+To go to the chat conversation while you're on the phone, choose the chat tab. 
+
+
+To end the phone conversation, choose the phone tab, choose End call, and then choose Clear contact. You're still connected to the chat conversation.
+
+
+Can't make outbound call to another agent
+If you're on a chat and having trouble making an outbound call to another agent, that agent may be handling a chat conversation. They can't receive a call while on a chat. 
+Can't see external quick connects in the CCP
+Agent quick connects are not visible in the CCP while you're on a chat.
+If you can't see external quick connects in your CCP, however, check that the external quick connect has been added to your queue as described in Step 2: Enable agents to see quick connects.
+Enable agent quick connects for calls during a chat
+To enable agents to consult over the phone with each other while they are on chats, your Amazon Connect administrator needs to set up a direct dial number (DID) that routes to the agent. This configuration incurs additional costs. 

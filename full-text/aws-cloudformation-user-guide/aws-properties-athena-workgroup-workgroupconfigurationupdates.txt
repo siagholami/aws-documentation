@@ -1,0 +1,53 @@
+AWS::Athena::WorkGroup WorkGroupConfigurationUpdates
+The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery)" : Integer,
+  "[EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration)" : Boolean,
+  "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled)" : Boolean,
+  "[RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery)" : Boolean,
+  "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled)" : Boolean,
+  "[ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates)" : ResultConfigurationUpdates
+}
+YAML
+[BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery): Integer
+  [EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration): Boolean
+  [PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled): Boolean
+  [RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery): Boolean
+  [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled): Boolean
+  [ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates): 
+    ResultConfigurationUpdates
+Properties
+BytesScannedCutoffPerQuery 
+The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan.
+This property currently supports integer types. Support for long values is planned.
+Required: No
+Type: Integer
+Update requires: No interruption
+EnforceWorkGroupConfiguration 
+If set to "true", the settings for the workgroup override client-side settings. If set to "false" client-side settings are used. For more information, see Workgroup Settings Override Client-Side Settings.
+Required: No
+Type: Boolean
+Update requires: No interruption
+PublishCloudWatchMetricsEnabled 
+Indicates whether this workgroup enables publishing metrics to Amazon CloudWatch.
+Required: No
+Type: Boolean
+Update requires: No interruption
+RemoveBytesScannedCutoffPerQuery 
+Indicates that the data usage control limit per query is removed. See BytesScannedCutoffPerQuery.
+Required: No
+Type: Boolean
+Update requires: No interruption
+RequesterPaysEnabled 
+If set to true, allows members assigned to a workgroup to specify Amazon S3 Requester Pays buckets in queries. If set to false, workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false. For more information about Requester Pays buckets, see Requester Pays Buckets in the Amazon Simple Storage Service Developer Guide.
+Required: No
+Type: Boolean
+Update requires: No interruption
+ResultConfigurationUpdates 
+The result configuration information about the queries in this workgroup that will be updated. Includes the updated results location and an updated option for encrypting query results.
+Required: No
+Type: ResultConfigurationUpdates
+Update requires: No interruption

@@ -1,0 +1,74 @@
+Amazon Virtual Private Cloud Transit Gateways
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is a transit gateway?
+How transit gateways work
+Getting started with transit gateways
+Examples
+Example: Centralized router
+Example: Isolated VPCs
+Example: Isolated VPCs with shared services
+Example: Peered transit gateways
+Working with transit gateways
+Transit gateways
+Transit gateway attachments to a VPC
+Transit gateway attachments to a Direct Connect gateway
+Transit gateway VPN attachments
+Transit gateway peering attachments
+Transit gateway route tables
+Prefix list references
+
+
+Multicast on transit gateways
+Multicast routing
+Working with multicast
+
+
+Monitor your transit gateways
+CloudWatch metrics for your transit gateways
+Logging API calls for your transit gateway using AWS CloudTrail
+Authentication and access control for your transit gateways
+Transit gateway service-linked role
+Transit gateway design best practices
+How Network ACLs work with transit gateways
+Quotas for your transit gateways
+Transit gateway sharing considerations
+Transit Gateway Network Manager
+How Transit Gateway Network Manager works
+Getting started with Transit Gateway Network Manager
+Scenarios for Transit Gateway Network Manager
+Working with Network Manager resources
+Global networks
+Transit gateway registrations
+On-premises network
+
+
+Visualizing and monitoring your global network using the Network Manager console
+Using Amazon CloudWatch metrics and events with your global network
+Monitoring your global network with Amazon CloudWatch metrics
+CloudWatch metrics for on-premises resources
+Viewing global network CloudWatch metrics
+
+
+Monitoring your global network with CloudWatch Events
+
+
+Route Analyzer
+Identity and access management for Transit Gateway Network Manager
+Transit Gateway Network Manager service-linked role
+
+
+Tagging your Network Manager resources
+Logging Transit Gateway Network Manager API calls with AWS CloudTrail
+Document history for transit gateways

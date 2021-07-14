@@ -1,0 +1,13 @@
+Downloading the CSV file
+When you want to review comprehensive detail, you can download a CSV file of the cost data that Cost Explorer uses to generate the chart, which is the same data that appears in the data table under the chart. The data table sometimes does not display the complete data set used for the chart. For more information, see Reading the Cost Explorer data table. 
+To download a CSV file
+
+
+Launch Cost Explorer.
+
+
+Configure Cost Explorer to use the options that you want to see in the CSV file. 
+
+
+Choose Download CSV.
+

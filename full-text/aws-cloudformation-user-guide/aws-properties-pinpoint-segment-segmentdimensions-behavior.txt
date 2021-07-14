@@ -1,0 +1,17 @@
+AWS::Pinpoint::Segment Behavior
+Specifies behavior-based criteria, such as how recently users have used your app, for a segment.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Recency](#cfn-pinpoint-segment-segmentdimensions-behavior-recency)" : Recency
+}
+YAML
+[Recency](#cfn-pinpoint-segment-segmentdimensions-behavior-recency): 
+    Recency
+Properties
+Recency 
+The dimension settings that are based on how recently an endpoint was active.
+Required: No
+Type: Recency
+Update requires: No interruption

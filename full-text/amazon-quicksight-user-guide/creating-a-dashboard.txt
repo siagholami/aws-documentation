@@ -1,0 +1,23 @@
+Publishing a Dashboard
+Use the following procedure to publish and optionally share a dashboard.
+
+
+On the analysis page, choose Share on the application bar, and then choose Publish dashboard.
+
+
+
+Do one of the following:
+    Choose Publish new dashboard as, and then type a dashboard name.
+    Choose Replace an existing dashboard, and then choose the dashboard to replace.
+
+
+
+Choose Publish dashboard.
+
+
+Do one of the following:
+    To publish a dashboard without sharing, choose x at the upper right of the Share dashboard with users screen. You can always share the dashboard later by choosing Share from the application bar. 
+    To share the dashboard, follow the procedure in Sharing Dashboards.
+
+
+After you complete these steps, you complete creating and sharing the dashboard. The new dashboard users now receive email with a link to the dashboard. Groups don't receive invitation emails.

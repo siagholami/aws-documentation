@@ -1,0 +1,23 @@
+ResponseCard
+If you configure a response card when creating your bots, Amazon Lex substitutes the session attributes and slot values that are available, and then returns it. The response card can also come from a Lambda function ( dialogCodeHook and fulfillmentActivity on an intent).
+Contents
+contentType 
+The content type of the response.
+Type: String
+Valid Values:application/vnd.amazonaws.card.generic 
+Required: No
+genericAttachments 
+An array of attachment objects representing options.
+Type: Array of GenericAttachment objects
+Array Members: Minimum number of 0 items. Maximum number of 10 items.
+Required: No
+version 
+The version of the response card format.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

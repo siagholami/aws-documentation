@@ -1,0 +1,11 @@
+ALTER TABLE SET TBLPROPERTIES
+Adds custom metadata properties to a table and sets their assigned values.
+Managed tables are not supported, so setting 'EXTERNAL'='FALSE' has no effect.
+Synopsis
+ALTER TABLE table_name SET TBLPROPERTIES ('property_name' = 'property_value' [ , ... ])
+Parameters
+SET TBLPROPERTIES ('property_name' = 'property_value' [ , ... ])
+Specifies the metadata properties to add as property_name and the value for each as property value. If property_name already exists, its value is reset to property_value.
+Examples
+ALTER TABLE orders 
+SET TBLPROPERTIES ('notes'="Please don't drop this table.");

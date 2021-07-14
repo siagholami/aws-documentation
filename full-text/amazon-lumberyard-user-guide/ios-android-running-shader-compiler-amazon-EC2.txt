@@ -1,0 +1,114 @@
+Running the Shader Compiler on Amazon EC2
+Amazon Elastic Compute Cloud (Amazon EC2) provides a GPU instance that you can use to run the Lumberyard shader compiler for mobile (Android and iOS) and macOS development. For example, you can use the AWS device farm to test a build rather than hosting a PC on a public IP address. Amazon EC2 also provides a G2 instance type that supports advanced rendering features such as texturing, shadows, and anti-aliasing. For more information, see Amazon EC2 Instances.
+To run the Lumberyard shader compiler, you must do the following:
+
+
+Set up the Amazon EC2 instance.
+
+
+Install virtual network computing (VNC) software.
+
+
+Connect to the shader compiler.
+
+
+Topics
+ Prerequisites
+ Setting Up the Amazon EC2 Instance
+ Installing VNC Software
+ Connecting to the Shader Compiler
+Prerequisites
+To run the Lumberyard shader compiler on Amazon EC2, you must have the following:
+ AWS account
+ Familiarity with the AWS Management Console
+ Understanding of Amazon EC2 instances, VNC, security groups, and the Lumberyard tool chain
+Setting Up the Amazon EC2 Instance
+Before you can set up the Amazon EC2 instance, you must request a GPU instance using the Request to Increase Amazon EC2 Instance Limit link. When you are done, follow the steps below. For information about Windows GPU instances, see Windows Accelerated Computing Instances.
+To set up the Amazon EC2 instance
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+From the console dashboard, choose Launch Instance.
+
+
+On the Amazon Machine Image (AMI) page, enter GPU.
+
+
+In the search results, select Windows Server 2012 R2 with NVIDIA GRID GPU Driver.
+
+
+On the Choose an Instance Type page, select the g2.2xlarge type.
+
+
+Choose Review and Launch to let the wizard complete the other configuration settings for you.
+
+
+On the Add Storage page, add a drive with sufficient space (512 GB minimum).
+
+
+On the Add Tags page, add a memorable tag for the computer. For example, ShaderCompilerMachine.
+
+
+On the Review Instance Launch page, create a new security group or use an existing one.
+
+
+Open port number 61453 for the shader compiler.
+
+
+On the Review Instance Launch page, click Launch.
+
+
+When prompted for a key pair, select Choose an existing key pair, and then select the key pair that you created when getting set up.
+
+
+When you are ready, select the acknowledgement check box, and then click Launch Instances.
+
+
+A confirmation page lets you know that your instance is launching. Click View Instances to close the confirmation page and return to the console.
+
+
+Installing VNC Software
+Once the Amazon EC2 instance is set up, you can install virtual network computing (VNC) software to run the shader compiler on the instance.
+To install VNC software
+
+
+Using a remote desktop connection, log in to the Amazon EC2 instance.
+Note
+If you are using a Mac, you must download Remote Desktop App from the App Store.
+
+
+Download and install your preferred VNC software.
+
+
+On your Amazon EC2 instance, run the VNC server.
+
+
+Terminate the remote desktop session.
+
+
+On your local PC, install a VNC client.
+
+
+Using the VNC connection, run the shader compiler on the Amazon EC2 instance.
+
+
+Leave the VNC window open and then follow the steps in Connecting to the Shader Compiler.
+
+
+Connecting to the Shader Compiler
+Follow these steps to connect to the shader compiler.
+To connect to the shader compiler
+
+
+On your computer, open the platform configuration file:
+    For Android, open the system_android_es3.cfg file (located in the lumberyard_version\dev directory).
+    For iOS, open the system_ios_ios.cfg file (located in the lumberyard_version\dev directory).
+
+
+Edit the configuration file to set r_ShaderCompilerServer to the public IP address of your Amazon EC2 instance. You can retrieve the IP address from the Amazon EC2 console.
+
+
+Run your game on your device to connect to the EC2 instance and compile the shaders.
+

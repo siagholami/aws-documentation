@@ -1,0 +1,26 @@
+Managing tags using the Amazon Redshift API
+You can use the following AWS CLI operations to manage tags in Amazon Redshift. 
+ create-tags
+ delete-tags
+ describe-tags
+You can use the following Amazon Redshift API operations to manage tags:
+ CreateTags
+ DeleteTags
+ DescribeTags
+ Tag
+ TaggedResource
+Also, you can use the following Amazon Redshift API operations to manage and view tags for a specific resource:
+ CreateCluster
+ CreateClusterParameterGroup
+ CreateClusterSecurityGroup
+ CreateClusterSnapshot
+ CreateClusterSubnetGroup
+ CreateHsmClientCertificate
+ CreateHsmConfiguration
+ DescribeClusters
+ DescribeClusterParameterGroups
+ DescribeClusterSecurityGroups
+ DescribeClusterSnapshots
+ DescribeClusterSubnetGroups
+ DescribeHsmClientCertificates
+ DescribeHsmConfigurations

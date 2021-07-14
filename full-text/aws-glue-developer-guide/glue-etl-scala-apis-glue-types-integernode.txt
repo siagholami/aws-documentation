@@ -1,0 +1,12 @@
+AWS Glue Scala IntegerNode APIs
+Package: com.amazonaws.services.glue.types
+IntegerNode Case Class
+IntegerNode
+case class IntegerNode extends ScalarNode(value, TypeCode.INT)  (
+           value : Int )
+IntegerNode val Fields
+
+ordering
+
+IntegerNode def Methods
+def equals( other : Any )

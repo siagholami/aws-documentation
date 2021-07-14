@@ -1,0 +1,26 @@
+Actions
+The following actions are supported:
+  BuildSuggesters 
+  CreateDomain 
+  DefineAnalysisScheme 
+  DefineExpression 
+  DefineIndexField 
+  DefineSuggester 
+  DeleteAnalysisScheme 
+  DeleteDomain 
+  DeleteExpression 
+  DeleteIndexField 
+  DeleteSuggester 
+  DescribeAnalysisSchemes 
+  DescribeAvailabilityOptions 
+  DescribeDomains 
+  DescribeExpressions 
+  DescribeIndexFields 
+  DescribeScalingParameters 
+  DescribeServiceAccessPolicies 
+  DescribeSuggesters 
+  IndexDocuments 
+  ListDomainNames 
+  UpdateAvailabilityOptions 
+  UpdateScalingParameters 
+  UpdateServiceAccessPolicies 

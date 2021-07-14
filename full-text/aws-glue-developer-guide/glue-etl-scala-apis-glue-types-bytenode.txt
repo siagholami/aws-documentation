@@ -1,0 +1,12 @@
+AWS Glue Scala ByteNode APIs
+Package: com.amazonaws.services.glue.types
+ByteNode Case Class
+ByteNode
+case class ByteNode extends ScalarNode(value, TypeCode.BYTE)  (
+           value : Byte )
+ByteNode val Fields
+
+ordering
+
+ByteNode def Methods
+def equals( other : Any )

@@ -1,0 +1,5 @@
+Slice Favorites
+With the Slice Favorites gem, you can flag a slice as a favorite in the Asset Browser.
+After you create a slice favorite, you can easily access and instantiate it into your scenes from the Entity Outliner.
+
+For more information, see Slice Favorites.

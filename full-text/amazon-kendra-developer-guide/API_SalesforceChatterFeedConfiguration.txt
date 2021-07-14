@@ -1,0 +1,34 @@
+
+
+SalesforceChatterFeedConfiguration
+Defines configuration for syncing a Salesforce chatter feed. The contents of the object comes from the Salesforce FeedItem table.
+Contents
+DocumentDataFieldName 
+The name of the column in the Salesforce FeedItem table that contains the content to index. Typically this is the Body column.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 100.
+Pattern: ^[a-zA-Z][a-zA-Z0-9_.]*$ 
+Required: Yes
+DocumentTitleFieldName 
+The name of the column in the Salesforce FeedItem table that contains the title of the document. This is typically the Title collumn.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 100.
+Pattern: ^[a-zA-Z][a-zA-Z0-9_.]*$ 
+Required: No
+FieldMappings 
+Maps fields from a Salesforce chatter feed into Amazon Kendra index fields.
+Type: Array of DataSourceToIndexFieldMapping objects
+Array Members: Minimum number of 1 item. Maximum number of 100 items.
+Required: No
+IncludeFilterTypes 
+Filters the documents in the feed based on status of the user. When you specify ACTIVE_USERS only documents from users who have an active account are indexed. When you specify STANDARD_USER only documents for Salesforce standard users are documented. You can specify both.
+Type: Array of strings
+Array Members: Minimum number of 1 item. Maximum number of 2 items.
+Valid Values:ACTIVE_USER | STANDARD_USER 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

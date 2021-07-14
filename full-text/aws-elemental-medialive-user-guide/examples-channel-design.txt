@@ -1,0 +1,8 @@
+Examples of Channel Designs
+The following sections show examples of channel designs. The designs progress from simple designs that contain only one video offering to more complex designs for adaptive bitrate streaming (ABR) assets that contain several video offerings. 
+Topics
+ Non-ABR Asset with Captions Embedded in the Video
+ Non-ABR Segmented Asset with Captions as Separate Objects
+ Non-ABR Segmented Asset with Captions as Sidecars
+ ABR Asset with Captions Embedded in the Video
+ ABR Asset with Captions in Sidecars

@@ -1,0 +1,10 @@
+Contact block: Disconnect / hang up
+Contact flow types
+You can use this block in the following contact flow types:
+ Inbound contact flow
+ Customer queue flow
+ Transfer to Agent flow
+ Transfer to Queue flow
+Description
+
+Disconnects the customer.

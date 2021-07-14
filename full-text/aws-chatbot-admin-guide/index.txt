@@ -1,0 +1,40 @@
+AWS Chatbot Administrator Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Chatbot?
+Setting up AWS Chatbot
+Getting started with AWS Chatbot
+Using AWS Chatbot with other AWS services
+Using AWS Chatbot with Slack
+Running AWS CLI commands from Slack channels
+Using AWS Lambda with AWS Chatbot - Common use cases
+Tutorial: Using AWS Chatbot to run an AWS Lambda function remotely
+Monitoring AWS Chatbot
+Monitoring AWS Chatbot with Amazon CloudWatch
+Accessing Amazon CloudWatch Logs for AWS Chatbot
+Logging AWS Chatbot API calls with AWS CloudTrail
+Security in AWS Chatbot
+Identity and Access Management for AWS Chatbot
+IAM policies for AWS Chatbot
+Identity-based IAM policies for AWS Chatbot
+IAM resource-level permissions for AWS Chatbot
+Using service-linked roles for AWS Chatbot
+
+
+Compliance validation for AWS Chatbot
+Resilience in AWS Chatbot
+Infrastructure security in AWS Chatbot
+Troubleshooting AWS Chatbot
+Document history
+AWS glossary

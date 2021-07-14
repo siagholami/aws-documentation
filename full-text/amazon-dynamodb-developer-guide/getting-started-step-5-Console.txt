@@ -1,0 +1,23 @@
+AWS Management Console
+Follow these steps to use the DynamoDB console to query data in the Music table.
+
+
+Open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Tables.
+
+
+Choose the Music table from the table list.
+
+
+Choose the Items tab for the Music table.
+
+
+In the drop-down list, choose Query.
+
+
+
+For Partition key, enter Acme Band, and then choose Start search.
+
+

@@ -1,0 +1,17 @@
+TimestampRange
+The range of timestamps for which to return fragments.
+Contents
+EndTimestamp 
+The ending timestamp in the range of timestamps for which to return fragments.
+Type: Timestamp
+Required: Yes
+StartTimestamp 
+The starting timestamp in the range of timestamps for which to return fragments.
+Type: Timestamp
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

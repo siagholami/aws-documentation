@@ -1,0 +1,9 @@
+Remove a solution assessment from Porting Assistant for .NET
+To remove a solution assessment, follow these steps.
+
+
+Navigate to the Assessed solutions page from the left navigation pane.
+
+
+Select the bullet next to the solution assessment that you want to remove, and from the Actions dropdown, select Remove. When you remove a solution assessment, only the assessment report is removed from Porting Assistant for .NET. Your source code is not deleted. 
+

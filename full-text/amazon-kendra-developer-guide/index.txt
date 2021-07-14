@@ -1,0 +1,196 @@
+Amazon Kendra Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon Kendra?
+How Amazon Kendra works
+Index
+Documents
+Types of documents
+Document attributes
+
+
+Data sources
+Queries
+Tags
+Setting up Amazon Kendra
+Setting up the AWS CLI
+Setting up the AWS SDKs
+Getting started
+Prerequisites
+Getting started with an S3 bucket (Console)
+Getting started (AWS CLI)
+Getting started (AWS SDK for Python (Boto3))
+Getting started (AWS SDK for Java)
+Getting started with a Microsoft OneDrive for Business data source (Console)
+Getting started with an Amazon S3 data source (Console)
+Getting started with a Salesforce data source (Console)
+Getting started with a ServiceNow data source (Console)
+Getting started with a Microsoft SharePoint Online data source (Console)
+IAM access roles for Amazon Kendra
+Creating an index
+Adding documents directly to an index
+Adding documents with the API
+Adding documents from an Amazon S3 bucket
+Adding questions and answers
+
+
+Adding documents from a data source
+Using an Amazon S3 data source
+S3 document metadata
+
+
+Using a database data source
+Using a Microsoft OneDrive data source
+Using a Salesforce data source
+Using a ServiceNow data source
+Using a Microsoft SharePoint data source
+
+
+Deleting data sources
+Creating custom document attributes
+Mapping data source fields
+Configuring Amazon Kendra to use a VPC
+Searching indexes
+Querying an index
+Filtering queries
+Filtering on user context
+Query responses
+Sorting responses
+Response types
+Submitting feedback
+Deploying Amazon Kendra
+Troubleshooting
+Manually tuning an index
+Adjusting capacity
+Monitoring and logging for Amazon Kendra
+Monitoring your index (Console)
+Logging Amazon Kendra API calls with AWS CloudTrail logs
+Monitoring Amazon Kendra with Amazon CloudWatch
+Monitoring Amazon Kendra with Amazon CloudWatch Logs
+Security in Amazon Kendra
+Data protection in Amazon Kendra
+Encryption at rest
+Encryption in transit
+Key management
+
+
+Amazon Kendra and interface VPC endpoints (AWS PrivateLink)
+Identity and access management for Amazon Kendra
+How Amazon Kendra works with IAM
+Amazon Kendra Identity-based policy examples
+Troubleshooting Amazon Kendra Identity and Access
+
+
+
+
+Logging and monitoring in Amazon Kendra
+Compliance validation for Amazon Kendra
+Resilience in Amazon Kendra
+Infrastructure security in Amazon Kendra
+Quotas for Amazon Kendra
+Document history for Amazon Kendra
+API Reference
+Actions
+BatchDeleteDocument
+BatchPutDocument
+CreateDataSource
+CreateFaq
+CreateIndex
+DeleteDataSource
+DeleteFaq
+DeleteIndex
+DescribeDataSource
+DescribeFaq
+DescribeIndex
+ListDataSources
+ListDataSourceSyncJobs
+ListFaqs
+ListIndices
+ListTagsForResource
+Query
+StartDataSourceSyncJob
+StopDataSourceSyncJob
+SubmitFeedback
+TagResource
+UntagResource
+UpdateDataSource
+UpdateIndex
+
+
+Data Types
+AccessControlListConfiguration
+AclConfiguration
+AdditionalResultAttribute
+AdditionalResultAttributeValue
+AttributeFilter
+BatchDeleteDocumentResponseFailedDocument
+BatchPutDocumentResponseFailedDocument
+CapacityUnitsConfiguration
+ClickFeedback
+ColumnConfiguration
+ConnectionConfiguration
+DatabaseConfiguration
+DataSourceConfiguration
+DataSourceSummary
+DataSourceSyncJob
+DataSourceSyncJobMetrics
+DataSourceSyncJobMetricTarget
+DataSourceToIndexFieldMapping
+DataSourceVpcConfiguration
+Document
+DocumentAttribute
+DocumentAttributeValue
+DocumentAttributeValueCountPair
+DocumentMetadataConfiguration
+DocumentsMetadataConfiguration
+Facet
+FacetResult
+FaqStatistics
+FaqSummary
+Highlight
+IndexConfigurationSummary
+IndexStatistics
+OneDriveConfiguration
+OneDriveUsers
+Principal
+QueryResultItem
+Relevance
+RelevanceFeedback
+S3DataSourceConfiguration
+S3Path
+SalesforceChatterFeedConfiguration
+SalesforceConfiguration
+SalesforceCustomKnowledgeArticleTypeConfiguration
+SalesforceKnowledgeArticleConfiguration
+SalesforceStandardKnowledgeArticleTypeConfiguration
+SalesforceStandardObjectAttachmentConfiguration
+SalesforceStandardObjectConfiguration
+ScoreAttributes
+Search
+ServerSideEncryptionConfiguration
+ServiceNowConfiguration
+ServiceNowKnowledgeArticleConfiguration
+ServiceNowServiceCatalogConfiguration
+SharePointConfiguration
+SortingConfiguration
+SqlConfiguration
+Tag
+TextDocumentStatistics
+TextWithHighlights
+TimeRange
+
+
+Common Errors
+Common Parameters
+AWS glossary

@@ -1,0 +1,82 @@
+AWS Service Integrations
+AWS Step Functions integrates with some AWS services so that you can call API actions, and coordinate executions directly from the Amazon States Language in Step Functions. You can directly call and pass parameters to the API of those services. You coordinate these services directly from a task state in the Amazon States Language. For example, using Step Functions, you can call other services to: 
+ Invoke an AWS Lambda function.
+ Run an AWS Batch job and then perform different actions based on the results.
+ Insert or get an item from Amazon DynamoDB.
+ Run an Amazon Elastic Container Service (Amazon ECS) task and wait for it to complete.
+ Publish to a topic in Amazon Simple Notification Service (Amazon SNS).
+ Send a message in Amazon Simple Queue Service (Amazon SQS).
+ Manage a job for AWS Glue or Amazon SageMaker.
+ Launch an AWS Step Functions workflow execution.
+Supported Service Integrations 
+
+
+
+Service
+Request Response
+Run a Job (.sync)
+Wait for Callback (.waitForTaskToken)
+
+
+
+
+AWS Lambda
+✓
+
+✓
+
+
+AWS Batch
+✓
+✓
+✓
+
+
+Amazon DynamoDB
+✓
+
+
+
+
+Amazon ECS/Fargate
+✓
+✓
+✓
+
+
+Amazon Simple Notification Service
+✓
+
+✓
+
+
+Amazon Simple Queue Service
+✓
+
+✓
+
+
+AWS Glue
+✓
+✓
+
+
+
+Amazon SageMaker
+✓
+✓
+
+
+
+AWS Step Functions
+✓
+✓
+✓
+
+
+
+Topics
+ Service Integration Patterns
+ Pass Parameters to a Service API
+ Code Snippets
+ Supported AWS Services

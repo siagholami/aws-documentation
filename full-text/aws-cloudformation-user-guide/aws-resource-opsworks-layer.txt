@@ -1,0 +1,504 @@
+AWS::OpsWorks::Layer
+Creates a layer. For more information, see How to Create a Layer.
+Note
+You should use CreateLayer for noncustom layer types such as PHP App Server only if the stack does not have an existing layer of that type. A stack can have at most one instance of each noncustom layer; if you attempt to create a second instance, CreateLayer fails. A stack can have an arbitrary number of custom layers, so you can call CreateLayer as many times as you like for that layer type.
+Required Permissions: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see Managing User Permissions.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::OpsWorks::Layer",
+  "Properties" : {
+      "[Attributes](#cfn-opsworks-layer-attributes)" : {Key : Value, ...},
+      "[AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips)" : Boolean,
+      "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
+      "[CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn)" : String,
+      "[CustomJson](#cfn-opsworks-layer-customjson)" : Json,
+      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : Recipes,
+      "[CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids)" : [ String, ... ],
+      "[EnableAutoHealing](#cfn-opsworks-layer-enableautohealing)" : Boolean,
+      "[InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot)" : Boolean,
+      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : LifecycleEventConfiguration,
+      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : LoadBasedAutoScaling,
+      "[Name](#cfn-opsworks-layer-name)" : String,
+      "[Packages](#cfn-opsworks-layer-packages)" : [ String, ... ],
+      "[Shortname](#cfn-opsworks-layer-shortname)" : String,
+      "[StackId](#cfn-opsworks-layer-stackid)" : String,
+      "[Tags](#cfn-opsworks-layer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-opsworks-layer-type)" : String,
+      "[UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances)" : Boolean,
+      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ VolumeConfiguration, ... ]
+    }
+}
+YAML
+Type: AWS::OpsWorks::Layer
+Properties: 
+  [Attributes](#cfn-opsworks-layer-attributes): 
+    Key : Value
+  [AutoAssignElasticIps](#cfn-opsworks-layer-autoassignelasticips): Boolean
+  [AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips): Boolean
+  [CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn): String
+  [CustomJson](#cfn-opsworks-layer-customjson): 
+    Json
+  [CustomRecipes](#cfn-opsworks-layer-customrecipes): 
+    Recipes
+  [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids): 
+    - String
+  [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing): Boolean
+  [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot): Boolean
+  [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration): 
+    LifecycleEventConfiguration
+  [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling): 
+    LoadBasedAutoScaling
+  [Name](#cfn-opsworks-layer-name): String
+  [Packages](#cfn-opsworks-layer-packages): 
+    - String
+  [Shortname](#cfn-opsworks-layer-shortname): String
+  [StackId](#cfn-opsworks-layer-stackid): String
+  [Tags](#cfn-opsworks-layer-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Type](#cfn-opsworks-layer-type): String
+  [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances): Boolean
+  [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations): 
+    - VolumeConfiguration
+Properties
+Attributes 
+One or more user-defined key-value pairs to be added to the stack attributes.
+To create a cluster layer, set the EcsClusterArn attribute to the cluster's ARN.
+Required: No
+Type: Map of String
+Update requires: No interruption
+AutoAssignElasticIps 
+Whether to automatically assign an Elastic IP address to the layer's instances. For more information, see How to Edit a Layer.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+AutoAssignPublicIps 
+For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer's instances. For more information, see How to Edit a Layer.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+CustomInstanceProfileArn 
+The ARN of an IAM profile to be used for the layer's EC2 instances. For more information about IAM ARNs, see Using Identifiers.
+Required: No
+Type: String
+Update requires: No interruption
+CustomJson 
+A JSON-formatted string containing custom stack configuration and deployment attributes to be installed on the layer's instances. For more information, see  Using Custom JSON. This feature is supported as of version 1.7.42 of the AWS CLI. 
+Required: No
+Type: Json
+Update requires: No interruption
+CustomRecipes 
+A LayerCustomRecipes object that specifies the layer custom recipes.
+Required: No
+Type: Recipes
+Update requires: No interruption
+CustomSecurityGroupIds 
+An array containing the layer custom security group IDs.
+Required: No
+Type: List of String
+Update requires: No interruption
+EnableAutoHealing 
+Whether to disable auto healing for the layer.
+Required: Yes
+Type: Boolean
+Update requires: No interruption
+InstallUpdatesOnBoot 
+Whether to install operating system and package updates when the instance boots. The default value is true. To control when updates are installed, set this value to false. You must then update your instances manually by using CreateDeployment to run the update_dependencies stack command or by manually running yum (Amazon Linux) or apt-get (Ubuntu) on the instances. 
+To ensure that your instances have the latest security updates, we strongly recommend using the default value of true.
+Required: No
+Type: Boolean
+Update requires: No interruption
+LifecycleEventConfiguration 
+A LifeCycleEventConfiguration object that you can use to configure the Shutdown event to specify an execution timeout and enable or disable Elastic Load Balancer connection draining.
+Required: No
+Type: LifecycleEventConfiguration
+Update requires: No interruption
+LoadBasedAutoScaling 
+The load-based scaling configuration for the AWS OpsWorks layer.
+Required: No
+Type: LoadBasedAutoScaling
+Update requires: No interruption
+Name 
+The layer name, which is used by the console.
+Required: Yes
+Type: String
+Update requires: No interruption
+Packages 
+An array of Package objects that describes the layer packages.
+Required: No
+Type: List of String
+Update requires: No interruption
+Shortname 
+For custom layers only, use this parameter to specify the layer's short name, which is used internally by AWS OpsWorks Stacks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters, which are limited to the alphanumeric characters, '-', '_', and '.'.
+The built-in layers' short names are defined by AWS OpsWorks Stacks. For more information, see the Layer Reference.
+Required: Yes
+Type: String
+Update requires: No interruption
+StackId 
+The layer stack ID.
+Required: Yes
+Type: String
+Update requires: Replacement
+Tags 
+Specifies one or more sets of tags (key–value pairs) to associate with this AWS OpsWorks layer. Use tags to manage your resources.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Type 
+The layer type. A stack cannot have more than one built-in layer of the same type. It can have any number of custom layers. Built-in layers are not available in Chef 12 stacks.
+Required: Yes
+Type: String
+Allowed values: aws-flow-ruby | custom | db-master | ecs-cluster | java-app | lb | memcached | monitoring-master | nodejs-app | php-app | rails-app | web
+Update requires: Replacement
+UseEbsOptimizedInstances 
+Whether to use Amazon EBS-optimized instances.
+Required: No
+Type: Boolean
+Update requires: No interruption
+VolumeConfigurations 
+A VolumeConfigurations object that describes the layer's Amazon EBS volumes.
+Required: No
+Type: List of VolumeConfiguration
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name. For example:
+{ "Ref": "myLayer" } 
+For the AWS OpsWorks layer myLayer, Ref returns the AWS OpsWorks layer ID.
+For more information about using the Ref function, see Ref.
+Examples
+AWS OpsWorks PHP Layer
+The following snippet creates an AWS OpsWorks PHP layer that is associated with the myStack AWS OpsWorks stack. The layer is dependent on the myApp AWS OpsWorks application.
+JSON
+"myLayer": {
+  "Type": "AWS::OpsWorks::Layer",
+  "DependsOn": "myApp",
+  "Properties": {
+    "StackId": {"Ref": "myStack"},
+    "Type": "php-app",
+    "Shortname" : "php-app",
+    "EnableAutoHealing" : "true",
+    "AutoAssignElasticIps" : "false",
+    "AutoAssignPublicIps" : "true",
+    "Name": "MyPHPApp"
+  }
+}
+YAML
+myLayer: 
+  Type: "AWS::OpsWorks::Layer"
+  DependsOn: "myApp"
+  Properties: 
+    StackId: 
+      Ref: "myStack"
+    Type: "php-app"
+    Shortname: "php-app"
+    EnableAutoHealing: "true"
+    AutoAssignElasticIps: "false"
+    AutoAssignPublicIps: "true"
+    Name: "MyPHPApp"
+Load-based Auto Scaling Layer
+The following snippet creates a load-based automatic scaling AWS OpsWorks PHP layer that is associated with the myStack AWS OpsWorks stack.
+JSON
+"myLayer": {
+  "Type": "AWS::OpsWorks::Layer",
+  "DependsOn": "myApp",
+  "Properties": {
+    "StackId": {"Ref": "myStack"},
+    "Type": "php-app",
+    "Shortname" : "php-app",
+    "EnableAutoHealing" : "true",
+    "AutoAssignElasticIps" : "false",
+    "AutoAssignPublicIps" : "true",
+    "Name": "MyPHPApp",
+    "LoadBasedAutoScaling" : {
+      "Enable" : "true",
+      "UpScaling" : {
+        "InstanceCount" : 1,
+        "ThresholdsWaitTime" : 1,
+        "IgnoreMetricsTime" : 1,
+        "CpuThreshold" : 70.0,
+        "MemoryThreshold" : 30.0,
+        "LoadThreshold" : 0.7
+      },
+      "DownScaling" : {
+        "InstanceCount" : 1,
+        "ThresholdsWaitTime" : 1,
+        "IgnoreMetricsTime" : 1,
+        "CpuThreshold" : 30.0,
+        "MemoryThreshold" : 70.0,
+        "LoadThreshold" : 0.3
+      }
+    }
+  }
+}
+YAML
+myLayer: 
+  Type: "AWS::OpsWorks::Layer"
+  DependsOn: "myApp"
+  Properties: 
+    StackId: 
+      Ref: "myStack"
+    Type: "php-app"
+    Shortname: "php-app"
+    EnableAutoHealing: "true"
+    AutoAssignElasticIps: "false"
+    AutoAssignPublicIps: "true"
+    Name: "MyPHPApp"
+    LoadBasedAutoScaling: 
+      Enable: "true"
+      UpScaling: 
+        InstanceCount: 1
+        ThresholdsWaitTime: 1
+        IgnoreMetricsTime: 1
+        CpuThreshold: 70
+        MemoryThreshold: 30
+        LoadThreshold: 0.7
+      DownScaling: 
+        InstanceCount: 1
+        ThresholdsWaitTime: 1
+        IgnoreMetricsTime: 1
+        CpuThreshold: 30
+        MemoryThreshold: 70
+        LoadThreshold: 0.3
+Specify tags for layers and stacks
+The following complete template example specifies tags for an AWS OpsWorks layer and stack that reference parameter values.
+JSON
+{
+    "Resources": {
+        "ServiceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    {
+                                        "Ref": "OpsServicePrincipal"
+                                    }
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/",
+                "Policies": [
+                    {
+                        "PolicyName": "opsworks-service",
+                        "PolicyDocument": {
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "ec2:*",
+                                        "iam:PassRole",
+                                        "cloudwatch:GetMetricStatistics",
+                                        "elasticloadbalancing:*"
+                                    ],
+                                    "Resource": "*"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "OpsWorksEC2Role": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    {
+                                        "Ref": "Ec2ServicePrincipal"
+                                    }
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/"
+            }
+        },
+        "InstanceRole": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "OpsWorksEC2Role"
+                    }
+                ]
+            }
+        },
+        "myStack": {
+            "Type": "AWS::OpsWorks::Stack",
+            "Properties": {
+                "Name": "TestStack",
+                "ServiceRoleArn": {
+                    "Fn::GetAtt": [
+                        "ServiceRole",
+                        "Arn"
+                    ]
+                },
+                "DefaultInstanceProfileArn": {
+                    "Fn::GetAtt": [
+                        "InstanceRole",
+                        "Arn"
+                    ]
+                },
+                "Tags": [
+                    {
+                        "Key": {
+                            "Ref": "StackKey"
+                        },
+                        "Value": {
+                            "Ref": "StackValue"
+                        }
+                    }
+                ]
+            }
+        },
+        "myLayer": {
+            "Type": "AWS::OpsWorks::Layer",
+            "Properties": {
+                "EnableAutoHealing": "true",
+                "AutoAssignElasticIps": "false",
+                "AutoAssignPublicIps": "true",
+                "StackId": {
+                    "Ref": "myStack"
+                },
+                "Type": "custom",
+                "Shortname": "shortname",
+                "Name": "name",
+                "Tags": [
+                    {
+                        "Key": {
+                            "Ref": "LayerKey"
+                        },
+                        "Value": {
+                            "Ref": "LayerValue"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Parameters": {
+        "StackKey": {
+            "Type": "String"
+        },
+        "LayerKey": {
+            "Type": "String"
+        },
+        "StackValue": {
+            "Type": "String"
+        },
+        "LayerValue": {
+            "Type": "String"
+        },
+        "OpsServicePrincipal": {
+            "Type": "String"
+        },
+        "Ec2ServicePrincipal": {
+            "Type": "String"
+        }
+    }
+}
+YAML
+Resources:
+  ServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - !Ref OpsServicePrincipal
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: opsworks-service
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'ec2:*'
+                  - 'iam:PassRole'
+                  - 'cloudwatch:GetMetricStatistics'
+                  - 'elasticloadbalancing:*'
+                Resource: '*'
+  OpsWorksEC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - !Ref Ec2ServicePrincipal
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+  InstanceRole:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles:
+        - !Ref OpsWorksEC2Role
+  myStack:
+    Type: AWS::OpsWorks::Stack
+    Properties:
+      Name: TestStack
+      ServiceRoleArn: !GetAtt 
+        - ServiceRole
+        - Arn
+      DefaultInstanceProfileArn: !GetAtt 
+        - InstanceRole
+        - Arn
+      Tags:
+        - Key: !Ref StackKey
+          Value: !Ref StackValue
+  myLayer:
+    Type: AWS::OpsWorks::Layer
+    Properties:
+      EnableAutoHealing: 'true'
+      AutoAssignElasticIps: 'false'
+      AutoAssignPublicIps: 'true'
+      StackId: !Ref myStack
+      Type: custom
+      Shortname: shortname
+      Name: name
+      Tags:
+        - Key: !Ref LayerKey
+          Value: !Ref LayerValue
+Parameters:
+  StackKey:
+    Type: String
+  LayerKey:
+    Type: String
+  StackValue:
+    Type: String
+  LayerValue:
+    Type: String
+  OpsServicePrincipal:
+    Type: String
+  Ec2ServicePrincipal:
+    Type: String
+See also
+
+CreateLayer in the AWS OpsWorks API Reference.
+Creating an OpsWorks Layer in the AWS OpsWorks User Guide.

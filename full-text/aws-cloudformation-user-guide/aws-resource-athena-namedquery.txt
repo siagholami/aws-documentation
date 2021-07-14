@@ -1,0 +1,94 @@
+AWS::Athena::NamedQuery
+The AWS::Athena::NamedQuery resource specifies an Amazon Athena saved query, where QueryString is the list of SQL query statements that comprise the query.
+Note
+The AWS::Athena::NamedQuery resource creates a named query in the primary workgroup. To create a named query in a different workgroup, use the CreateNamedQuery API operation and specify a workgroup in the WorkGroup parameter, or use the create-named-query AWS CLI command and specify a workgroup in the --work-group option.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Athena::NamedQuery",
+  "Properties" : {
+      "[Database](#cfn-athena-namedquery-database)" : String,
+      "[Description](#cfn-athena-namedquery-description)" : String,
+      "[Name](#cfn-athena-namedquery-name)" : String,
+      "[QueryString](#cfn-athena-namedquery-querystring)" : String
+    }
+}
+YAML
+Type: AWS::Athena::NamedQuery
+Properties: 
+  [Database](#cfn-athena-namedquery-database): String
+  [Description](#cfn-athena-namedquery-description): String
+  [Name](#cfn-athena-namedquery-name): String
+  [QueryString](#cfn-athena-namedquery-querystring): 
+    String
+Properties
+Database 
+The database to which the query belongs.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 255
+Update requires: Replacement
+Description 
+The query description.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: Replacement
+Name 
+The query name.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: Replacement
+QueryString 
+The SQL query statements that comprise the query.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 262144
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+NamedQueryId 
+The unique ID of the query.
+Examples
+The following example creates a named query.
+
+JSON
+{
+  "Resources": {
+    "AthenaNamedQuery": {
+      "Type": "AWS::Athena::NamedQuery",
+      "Properties": {
+        "Database": "swfnetadata",
+        "Description": "A query that selects all aggregated data",
+        "Name": "MostExpensiveWorkflow",
+        "QueryString": "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10"
+      }
+    }
+  }
+}
+
+YAML
+Resources:
+  AthenaNamedQuery:
+    Type: AWS::Athena::NamedQuery
+    Properties:
+      Database: "swfnetadata"
+      Description: "A query that selects all aggregated data"
+      Name: "MostExpensiveWorkflow"
+      QueryString: >
+                    SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow
+                    FROM swfmetadata
+                    WHERE year='17' AND GROUP BY workflowname
+                    ORDER BY AverageWorkflow DESC LIMIT 10

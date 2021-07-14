@@ -1,0 +1,48 @@
+AWS::Neptune::DBSubnetGroup
+The AWS::Neptune::DBSubnetGroup type creates an Amazon Neptune DB subnet group. Subnet groups must contain at least two subnets in two different Availability Zones in the same AWS Region.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Neptune::DBSubnetGroup",
+  "Properties" : {
+      "[DBSubnetGroupDescription](#cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription)" : String,
+      "[DBSubnetGroupName](#cfn-neptune-dbsubnetgroup-dbsubnetgroupname)" : String,
+      "[SubnetIds](#cfn-neptune-dbsubnetgroup-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-neptune-dbsubnetgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::Neptune::DBSubnetGroup
+Properties: 
+  [DBSubnetGroupDescription](#cfn-neptune-dbsubnetgroup-dbsubnetgroupdescription): String
+  [DBSubnetGroupName](#cfn-neptune-dbsubnetgroup-dbsubnetgroupname): String
+  [SubnetIds](#cfn-neptune-dbsubnetgroup-subnetids): 
+    - String
+  [Tags](#cfn-neptune-dbsubnetgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+DBSubnetGroupDescription 
+Provides the description of the DB subnet group.
+Required: Yes
+Type: String
+Update requires: No interruption
+DBSubnetGroupName 
+The name of the DB subnet group.
+Required: No
+Type: String
+Update requires: Replacement
+SubnetIds 
+The Amazon EC2 subnet IDs for the DB subnet group.
+Required: Yes
+Type: List of String
+Update requires: No interruption
+Tags 
+The tags that you want to attach to the DB subnet group.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name.
+For more information about using the Ref function, see Ref.

@@ -1,0 +1,51 @@
+Recompute Static Shadows
+Triggers recalculation of cached shadow maps.
+Contents
+ Inputs
+ Outputs
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Bounds
+AABB
+Specifies the area where shadow maps should be recomputed.
+
+
+Next Cascade Scale
+Number
+Multiplier for scaling the bounding boxes for subsequent cached cascades. The bounding boxes are scaled versions of the preceding cascades.
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

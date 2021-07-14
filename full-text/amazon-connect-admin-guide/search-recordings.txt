@@ -1,0 +1,18 @@
+Search for recordings by contact ID
+To find a recording of a specific contact, you only need the contact ID. You don't need to know the date range, agent, or any other information about the contact. 
+
+
+Log in to Amazon Connect with a user account that has permissions to access recordings.
+
+
+In Amazon Connect choose Metrics and quality, Contact search. 
+
+
+In the Contact ID, enter the contact ID, and then choose Search.
+
+
+Conversations that were recorded have icons in the Recording/Transcript column. If you don't have the appropriate permissions, you won't see these icons. 
+
+
+
+To learn more about searching, see Contact search.

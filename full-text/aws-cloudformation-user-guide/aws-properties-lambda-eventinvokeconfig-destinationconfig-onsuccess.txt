@@ -1,0 +1,24 @@
+AWS::Lambda::EventInvokeConfig OnSuccess
+A destination for events that were processed successfully.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Destination](#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess-destination)" : String
+}
+YAML
+[Destination](#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess-destination): String
+Properties
+Destination 
+The Amazon Resource Name (ARN) of the destination resource.
+Required: Yes
+Type: String
+Minimum: 0
+Maximum: 350
+Pattern: ^$|arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-]):([a-z]{2}(-gov)?-[a-z]-\d{1})?:(\d{12})?:(.*)
+Update requires: No interruption
+Examples
+On-Success Destination Configuration
+Configure a function to send a record of successful asynchronous invocations to an SQS queue.
+YAML
+OnSuccess: Destination: arn:aws:sqs:us-east-2:123456789012:destination

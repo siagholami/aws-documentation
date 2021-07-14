@@ -1,0 +1,41 @@
+AWS::AppMesh::VirtualNode Listener
+An object that represents a listener for a virtual node.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck)" : HealthCheck,
+  "[PortMapping](#cfn-appmesh-virtualnode-listener-portmapping)" : PortMapping,
+  "[Timeout](#cfn-appmesh-virtualnode-listener-timeout)" : ListenerTimeout,
+  "[TLS](#cfn-appmesh-virtualnode-listener-tls)" : ListenerTls
+}
+YAML
+[HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck): 
+    HealthCheck
+  [PortMapping](#cfn-appmesh-virtualnode-listener-portmapping): 
+    PortMapping
+  [Timeout](#cfn-appmesh-virtualnode-listener-timeout): 
+    ListenerTimeout
+  [TLS](#cfn-appmesh-virtualnode-listener-tls): 
+    ListenerTls
+Properties
+HealthCheck 
+The health check information for the listener.
+Required: No
+Type: HealthCheck
+Update requires: No interruption
+PortMapping 
+The port mapping information for the listener.
+Required: Yes
+Type: PortMapping
+Update requires: No interruption
+Timeout 
+An object that represents timeouts for different protocols.
+Required: No
+Type: ListenerTimeout
+Update requires: No interruption
+TLS 
+A reference to an object that represents the Transport Layer Security (TLS) properties for a listener.
+Required: No
+Type: ListenerTls
+Update requires: No interruption

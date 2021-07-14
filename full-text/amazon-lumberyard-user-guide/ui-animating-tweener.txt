@@ -1,0 +1,15 @@
+Scripted Tweener Entity System
+Lumberyard's Scripted Tweener Entity system is a script-driven animation system that creates powerful and flexible animations. To use this system, enable the Scripted Tweener Entity gem. In the Samples Project, this gem is enabled by default.
+The Scripted Tweener Entity system primarily animates entities in the UI Editor, and also supports the following Lumberyard component entities. 
+ Particle
+ Lights – Point Light, Area Light, and Projector Light.
+ Mesh
+ Transform
+For a complete list, see Tweener Supported Components.
+Topics
+ Understanding Tweeners
+ Tweener Sample Level
+ Tweener Supported Components
+ Tweener Lua Script
+ Tweener Parameters
+ Tweener Timeline

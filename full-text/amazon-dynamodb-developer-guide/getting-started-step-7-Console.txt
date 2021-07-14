@@ -1,0 +1,24 @@
+AWS Management Console
+Follow these steps to use the DynamoDB console to query data through the AlbumTitle-index global secondary index.
+
+
+Open the DynamoDB console at https://console.aws.amazon.com/dynamodb/.
+
+
+In the navigation pane on the left side of the console, choose Tables.
+
+
+Choose the Music table from the table list.
+
+
+Choose the Items tab for the Music table.
+
+
+In the drop-down list, choose Query.
+
+
+
+In the drop-down list next to Query , choose [Index] AlbumTitle-index: AlbumTitle .
+
+
+For AlbumTitle, enter Somewhat Famous, and then choose Start search.

@@ -1,0 +1,30 @@
+AWS::ElasticLoadBalancingV2::LoadBalancer SubnetMapping
+Specifies a subnet to attach to an Application Load Balancer or a Network Load Balancer.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)" : String,
+  "[PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)" : String,
+  "[SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)" : String
+}
+YAML
+[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
+  [PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address): String
+  [SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid): String
+Properties
+AllocationId 
+[Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing load balancer.
+Required: No
+Type: String
+Update requires: No interruption
+PrivateIPv4Address 
+[Network Load Balancers] The private IPv4 address for an internal load balancer.
+Required: No
+Type: String
+Update requires: No interruption
+SubnetId 
+The ID of the subnet.
+Required: Yes
+Type: String
+Update requires: No interruption

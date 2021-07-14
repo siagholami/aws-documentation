@@ -1,0 +1,49 @@
+AWS::Cognito::UserPoolUserToGroupAttachment
+Adds the specified user to the specified group.
+Calling this action requires developer credentials.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Cognito::UserPoolUserToGroupAttachment",
+  "Properties" : {
+      "[GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
+      "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
+      "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
+    }
+}
+YAML
+Type: AWS::Cognito::UserPoolUserToGroupAttachment
+Properties: 
+  [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
+  [Username](#cfn-cognito-userpoolusertogroupattachment-username): String
+  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
+Properties
+GroupName 
+The group name.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}]
+Update requires: Replacement
+Username 
+The username for the user.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: [\p{L}\p{M}\p{S}\p{N}\p{P}]
+Update requires: Replacement
+UserPoolId 
+The user pool ID for the user pool.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 55
+Pattern: [\w-]_[0-9a-zA-Z]
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns a generated ID, such as UserToGroupAttachment-YejJvzrEXAMPLE.
+For more information about using the Ref function, see Ref.

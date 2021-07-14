@@ -1,0 +1,21 @@
+Enabling Decoration – HLS
+Manifest decoration is enabled at the output group level, which means that the manifests for all outputs in that group include instructions based on the SCTE-35 content.
+To enable decoration
+
+
+In the channel that you are creating, make sure that you have set the ad avail mode. See Getting Ready: Set the Ad Avail Mode.
+
+
+In the navigation pane, find the desired HLS output group. 
+
+
+In Ad Marker, choose Add ad markers. 
+
+
+For HLS ad markers, select the type of ad marker. For information about the different types of markers, see Sample Manifests - HLS. 
+
+
+Repeat to add more types of markers, as desired.
+
+
+The manifest for each output will include a separate set of tags for each type that you select.

@@ -1,0 +1,38 @@
+AWS::KinesisAnalyticsV2::Application S3ContentLocation
+For a Flink-based Kinesis Data Analytics application, provides a description of an Amazon S3 object, including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BucketARN](#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn)" : String,
+  "[FileKey](#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey)" : String,
+  "[ObjectVersion](#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion)" : String
+}
+YAML
+[BucketARN](#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn): String
+  [FileKey](#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey): String
+  [ObjectVersion](#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion): String
+Properties
+BucketARN 
+The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:.*
+Update requires: No interruption
+FileKey 
+The file key for the object containing the application code.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+ObjectVersion 
+The version of the object containing the application code.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+S3ContentLocation in the Amazon Kinesis Data Analytics API Reference 

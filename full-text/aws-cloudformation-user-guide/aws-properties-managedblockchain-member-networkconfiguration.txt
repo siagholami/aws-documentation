@@ -1,0 +1,60 @@
+AWS::ManagedBlockchain::Member NetworkConfiguration
+Configuration properties of the network to which the member belongs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Description](#cfn-managedblockchain-member-networkconfiguration-description)" : String,
+  "[Framework](#cfn-managedblockchain-member-networkconfiguration-framework)" : String,
+  "[FrameworkVersion](#cfn-managedblockchain-member-networkconfiguration-frameworkversion)" : String,
+  "[Name](#cfn-managedblockchain-member-networkconfiguration-name)" : String,
+  "[NetworkFrameworkConfiguration](#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration)" : NetworkFrameworkConfiguration,
+  "[VotingPolicy](#cfn-managedblockchain-member-networkconfiguration-votingpolicy)" : VotingPolicy
+}
+YAML
+[Description](#cfn-managedblockchain-member-networkconfiguration-description): String
+  [Framework](#cfn-managedblockchain-member-networkconfiguration-framework): String
+  [FrameworkVersion](#cfn-managedblockchain-member-networkconfiguration-frameworkversion): String
+  [Name](#cfn-managedblockchain-member-networkconfiguration-name): String
+  [NetworkFrameworkConfiguration](#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration): 
+    NetworkFrameworkConfiguration
+  [VotingPolicy](#cfn-managedblockchain-member-networkconfiguration-votingpolicy): 
+    VotingPolicy
+Properties
+Description 
+Attributes of the blockchain framework for the network.
+Required: No
+Type: String
+Maximum: 128
+Update requires: No interruption
+Framework 
+The blockchain framework that the network uses.
+Required: Yes
+Type: String
+Allowed values: HYPERLEDGER_FABRIC
+Update requires: No interruption
+FrameworkVersion 
+The version of the blockchain framework that the network uses.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 8
+Update requires: No interruption
+Name 
+The name of the network.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 64
+Pattern: .*\S.*
+Update requires: No interruption
+NetworkFrameworkConfiguration 
+ Configuration properties relevant to the network for the blockchain framework that the network uses. 
+Required: No
+Type: NetworkFrameworkConfiguration
+Update requires: No interruption
+VotingPolicy 
+The voting rules for the network to decide if a proposal is accepted.
+Required: Yes
+Type: VotingPolicy
+Update requires: No interruption

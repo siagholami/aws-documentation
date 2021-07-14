@@ -1,0 +1,3 @@
+SecurityHub resource type reference
+Resource types
+ AWS::SecurityHub::Hub

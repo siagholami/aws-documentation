@@ -1,0 +1,25 @@
+AWS::SSM::MaintenanceWindowTask MaintenanceWindowAutomationParameters
+The MaintenanceWindowAutomationParameters property type specifies the parameters for an AUTOMATION task type for a maintenance window task in AWS Systems Manager.
+MaintenanceWindowAutomationParameters is a property of the TaskInvocationParameters property type.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)" : String,
+  "[Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)" : Json
+}
+YAML
+[DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion): String
+  [Parameters](#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters): Json
+Properties
+DocumentVersion 
+The version of an Automation document to use during task execution.
+Required: No
+Type: String
+Pattern: ([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)
+Update requires: No interruption
+Parameters 
+The parameters for the AUTOMATION task.
+Required: No
+Type: Json
+Update requires: No interruption

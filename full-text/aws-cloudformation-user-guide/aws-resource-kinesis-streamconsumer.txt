@@ -1,0 +1,88 @@
+AWS::Kinesis::StreamConsumer
+Use the AWS CloudFormation AWS::Kinesis::StreamConsumer resource to register a consumer with a Kinesis data stream. The consumer you register can then call SubscribeToShard to receive data from the stream using enhanced fan-out, at a rate of up to 2 MiB per second for every shard you subscribe to. This rate is unaffected by the total number of consumers that read from the same stream. 
+You can register up to five consumers per stream. However, you can request a limit increase using the Kinesis Data Streams limits form. A given consumer can only be registered with one stream at a time. 
+For more information, see Using Consumers with Enhanced Fan-Out. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Kinesis::StreamConsumer",
+  "Properties" : {
+      "[ConsumerName](#cfn-kinesis-streamconsumer-consumername)" : String,
+      "[StreamARN](#cfn-kinesis-streamconsumer-streamarn)" : String
+    }
+}
+YAML
+Type: AWS::Kinesis::StreamConsumer
+Properties: 
+  [ConsumerName](#cfn-kinesis-streamconsumer-consumername): String
+  [StreamARN](#cfn-kinesis-streamconsumer-streamarn): String
+Properties
+ConsumerName 
+The name of the consumer is something you choose when you register the consumer.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: [a-zA-Z0-9_.-]
+Update requires: Replacement
+StreamARN 
+The ARN of the stream with which you registered the consumer.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:aws.*:kinesis:.*:\d{12}:stream/.
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of an AWS::Kinesis::StreamConsumer resource to the intrinsic Ref function, the function returns the consumer ARN. For example ARN formats, see Example ARNs. 
+For more information about using the Ref function, see Ref. 
+Fn::GetAtt
+Fn::GetAtt returns a value for a specified attribute of this type. The following are the available attributes and sample return values. 
+For more information about using Fn::GetAtt, see Fn::GetAtt. 
+
+ConsumerARN 
+When you register a consumer, Kinesis Data Streams generates an ARN for it. You need this ARN to be able to call SubscribeToShard. 
+If you delete a consumer and then create a new one with the same name, it won't have the same ARN. That's because consumer ARNs contain the creation timestamp. This is important to keep in mind if you have IAM policies that reference consumer ARNs. 
+ConsumerCreationTimestamp 
+The time at which the consumer was created.
+ConsumerName 
+The name you gave the consumer when you registered it.
+ConsumerStatus 
+A consumer can't read data while in the CREATING or DELETING states.
+StreamARN 
+The ARN of the data stream with which the consumer is registered.
+Examples
+Register a Consumer with a Kinesis Data Stream
+JSON
+{ 
+    "Parameters": { 
+        "TestStreamARN": { 
+            "Type": "String" },
+        "TestConsumerName": { 
+            "Type": "String" } }, 
+    "Resources": { 
+        "StreamConsumer": {
+            "Type": "AWS::Kinesis::StreamConsumer", 
+            "Properties": { 
+                "StreamARN": { "Ref" : TestStreamARN }, 
+                "ConsumerName": { "Ref" : TestConsumerName } 
+                } 
+        } 
+   } 
+}
+YAML
+```
+    Parameters: 
+        TestStreamARN: 
+            Type: String 
+        TestConsumerName:
+            Type: String 
+Resources: StreamConsumer: 
+    Type: "AWS::Kinesis::StreamConsumer"
+    Properties: 
+        StreamARN: !Ref TestStreamARN 
+        ConsumerName: !Ref TestConsumerName
+
+```

@@ -1,0 +1,35 @@
+AWS::EMR::SecurityConfiguration
+Use a SecurityConfiguration resource to configure data encryption, Kerberos authentication (available in Amazon EMR release version 5.10.0 and later), and Amazon S3 authorization for EMRFS (available in EMR 5.10.0 and later). You can re-use a security configuration for any number of clusters in your account. For more information and example security configuration JSON objects, see Create a Security Configuration in the Amazon EMR Management Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EMR::SecurityConfiguration",
+  "Properties" : {
+      "[Name](#cfn-emr-securityconfiguration-name)" : String,
+      "[SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration)" : Json
+    }
+}
+YAML
+Type: AWS::EMR::SecurityConfiguration
+Properties: 
+  [Name](#cfn-emr-securityconfiguration-name): String
+  [SecurityConfiguration](#cfn-emr-securityconfiguration-securityconfiguration): Json
+Properties
+Name 
+The name of the security configuration.
+Required: No
+Type: String
+Minimum: 0
+Maximum: 10280
+Pattern: [\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*
+Update requires: Replacement
+SecurityConfiguration 
+The security configuration details in JSON format.
+Required: Yes
+Type: Json
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the security configuration name, such as mySecurityConfiguration.
+For more information about using the Ref function, see Ref.

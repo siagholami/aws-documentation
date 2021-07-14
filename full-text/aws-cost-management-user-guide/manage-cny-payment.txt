@@ -1,0 +1,70 @@
+Use China bank redirect payment methods
+If you have overdue payments on your AWS account and you’re a China customer with CNY payments enabled, you can use the China bank redirect payment method to complete your payments. With the China bank redirect method, you can make payments in CNY for AWS Inc. invoices up to a total of $50,000 USD at a time.
+Note
+This payment method is only available for overdue payments and is not available as a default payment method.
+Topics
+ Requirements to use China bank redirect
+ Enabling China bank redirect
+ Making payments using China bank redirect
+Requirements to use China bank redirect
+To enable a China bank account as a payment method, your account must meet the following requirements:
+ Your account must be an Amazon Web Services, Inc. customer.
+ You must have a China Union Pay credit card payment method in CNY enabled.
+ You must have CNY set as your preferred currency.
+Enabling China bank redirect
+To use China bank redirect, you must enable the payment method on the Billing and Cost Management console. You can only enable China bank redirect when you have overdue invoices.
+To enable China bank redirect payments
+
+
+Sign in to the AWS Management Console and open the Billing and Cost Management console at https://console.aws.amazon.com/billing/home#/.
+
+
+In the navigation pane, choose Orders and Invoices.
+
+
+Next to the invoice that you want to pay, choose Verify and pay.
+
+
+Under China bank redirect, choose Enable bank redirect.
+
+
+Making payments using China bank redirect
+After enabling the payment method, you can use China bank redirect to make payments on your invoices that are past due.
+To pay invoices using China bank redirect
+
+
+Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
+
+
+In the navigation pane, choose Orders and invoices.
+
+
+Next to the invoice that you want to pay, choose Verify and pay.
+
+
+For Select payment option, choose China bank redirect.
+
+
+Choose Complete payment.
+
+
+To proceed with the redirect, choose OK.
+
+
+When you are redirected, choose your bank from the dropdown menu and complete your payment on your bank’s website.
+
+
+It can take up to 24 hours for your transaction request to process.
+
+
+Within 24 hours, sign in to the Billing and Cost Management console again, and navigate to Orders and invoices.
+
+
+Next to the invoice that you want to pay, choose Verify and pay.
+
+
+For Select payment option, choose China bank redirect.
+
+
+Choose Complete payment.
+

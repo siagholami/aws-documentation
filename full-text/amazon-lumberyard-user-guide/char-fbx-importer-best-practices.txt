@@ -1,0 +1,9 @@
+Best Practices for Creating and Exporting Meshes
+Follow the recommended best practices for creating and exporting skinned meshes when working with the FBX Settings tool.
+Note
+If you are working with meshes for the Animation Editor, see Best Practices for Working with Skinned Meshes for Animation.
+Topics
+ Using Custom Normals for DCC Assets
+ Exporting Static Meshes
+ Creating Physics Proxies for Static Meshes
+ Tutorial: Importing FBX Files as Static Meshes

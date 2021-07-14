@@ -1,0 +1,365 @@
+Amazon Relational Database Service User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon Relational Database Service (Amazon RDS)?
+Amazon RDS DB Instances
+DB Instance Classes
+Amazon RDS DB Instance Storage
+Regions, Availability Zones, and Local Zones
+High Availability (Multi-AZ) for Amazon RDS
+DB Instance Billing for Amazon RDS
+On-Demand DB Instances for Amazon RDS
+Reserved DB Instances for Amazon RDS
+
+
+Setting Up for Amazon RDS
+Getting Started with Amazon RDS
+Creating a MariaDB DB Instance and Connecting to a Database on a MariaDB DB Instance
+Creating a Microsoft SQL Server DB Instance and Connecting to a DB Instance
+Creating a MySQL DB Instance and Connecting to a Database on a MySQL DB Instance
+Creating an Oracle DB Instance and Connecting to a Database on an Oracle DB Instance
+Creating a PostgreSQL DB Instance and Connecting to a Database on a PostgreSQL DB Instance
+Tutorial: Create a Web Server and an Amazon RDS DB Instance
+Create a DB Instance
+Create an EC2 Instance and Install a Web Server
+
+
+Tutorials
+Best Practices for Amazon RDS
+Configuring an Amazon RDS DB Instance
+Creating an Amazon RDS DB Instance
+Connecting to an Amazon RDS DB Instance
+Managing Connections with Amazon RDS Proxy
+
+
+Working with Option Groups
+Working with DB Parameter Groups
+Managing an Amazon RDS DB Instance
+Stopping an Amazon RDS DB Instance Temporarily
+Starting an Amazon RDS DB Instance That Was Previously Stopped
+Modifying an Amazon RDS DB Instance
+Maintaining a DB Instance
+Upgrading a DB Instance Engine Version
+Renaming a DB Instance
+Rebooting a DB Instance
+Working with Read Replicas
+Tagging Amazon RDS Resources
+Working with Amazon Resource Names (ARNs) in Amazon RDS
+Working with Storage for Amazon RDS DB Instances
+Deleting a DB Instance
+Backing Up and Restoring an Amazon RDS DB Instance
+Working With Backups
+Creating a DB Snapshot
+Restoring from a DB Snapshot
+Copying a Snapshot
+Sharing a DB Snapshot
+Exporting DB Snapshot Data to Amazon S3
+Restoring a DB Instance to a Specified Time
+Deleting a Snapshot
+Tutorial: Restore a DB Instance from a DB Snapshot
+Monitoring an Amazon RDS DB Instance
+Overview of Monitoring Amazon RDS
+DB Instance Status
+Enhanced Monitoring
+Using Amazon RDS Performance Insights
+Overview of Performance Insights
+Enabling and Disabling Performance Insights
+Accessing Performance Insights
+Monitoring with the Performance Insights Dashboard
+Customizing the Performance Insights Dashboard
+Retrieving Data with the Performance Insights API
+Performance Insights Metrics Published to Amazon CloudWatch
+Logging Performance Insights Calls by Using AWS CloudTrail
+
+
+Using Amazon RDS Recommendations
+Using Amazon RDS Event Notification
+Viewing Amazon RDS Events
+Getting CloudWatch Events and Amazon EventBridge Events for Amazon RDS
+Amazon RDS Database Log Files
+MariaDB Database Log Files
+Microsoft SQL Server Database Log Files
+MySQL Database Log Files
+Oracle Database Log Files
+PostgreSQL Database Log Files
+
+
+Working with AWS CloudTrail and Amazon RDS
+Working with Amazon RDS on AWS Outposts
+MariaDB on Amazon RDS
+Connecting to a DB Instance Running the MariaDB Database Engine
+Updating Applications to Connect to MariaDB DB Instances Using New SSL/TLS Certificates
+Upgrading the MariaDB DB Engine
+Migrating Data from a MySQL DB Snapshot to a MariaDB DB Instance
+Working with MariaDB Replication in Amazon RDS
+Working with MariaDB Read Replicas
+Configuring GTID-Based Replication into an Amazon RDS MariaDB DB instance
+
+
+Importing Data into a MariaDB DB Instance
+Options for MariaDB Database Engine
+Parameters for MariaDB
+MariaDB on Amazon RDS SQL Reference
+mysql.rds_set_external_master_gtid
+mysql.rds_kill_query_id
+
+
+Microsoft SQL Server on Amazon RDS
+Licensing Microsoft SQL Server on Amazon RDS
+Connecting to a DB Instance Running the Microsoft SQL Server Database Engine
+Updating Applications to Connect to Microsoft SQL Server DB Instances Using New SSL/TLS Certificates
+Upgrading the Microsoft SQL Server DB Engine
+Importing and Exporting SQL Server Databases
+Importing and Exporting SQL Server Data Using Other Methods
+
+
+Working with Read Replicas for Microsoft SQL Server in Amazon RDS
+Multi-AZ Deployments for Microsoft SQL Server
+Additional Features for Microsoft SQL Server on Amazon RDS
+Using SSL with a Microsoft SQL Server DB Instance
+Configuring Security Protocols and Ciphers
+Using Windows Authentication with an Amazon RDS for SQL Server DB Instance
+Integrating an Amazon RDS for SQL Server DB Instance with Amazon S3
+
+
+Options for the Microsoft SQL Server Database Engine
+Support for Native Backup and Restore in SQL Server
+Support for Transparent Data Encryption in SQL Server
+SQL Server Performance Considerations
+
+
+SQL Server Audit
+Support for SQL Server Analysis Services in SQL Server
+Support for SQL Server Integration Services in SQL Server
+Support for SQL Server Reporting Services in SQL Server
+Support for Microsoft Distributed Transaction Coordinator in SQL Server
+
+
+Common DBA Tasks for Microsoft SQL Server
+Accessing the tempdb Database on Microsoft SQL Server DB Instances on Amazon RDS
+Analyzing Your Database Workload on an Amazon RDS DB Instance with SQL Server Tuning Advisor
+Collations and Character Sets for Microsoft SQL Server
+Determining a Recovery Model for Your Microsoft SQL Server Database
+Determining the Last Failover Time
+Disabling Fast Inserts During Bulk Loading
+Dropping a Microsoft SQL Server Database
+Renaming a Microsoft SQL Server Database in a Multi-AZ Deployment
+Resetting the db_owner Role Password
+Restoring License-Terminated DB Instances
+Transitioning a Microsoft SQL Server Database from OFFLINE to ONLINE
+Using Change Data Capture
+Using SQL Server Agent
+Working with Microsoft SQL Server Logs
+Working with Trace and Dump Files
+
+
+MySQL on Amazon RDS
+Connecting to a DB Instance Running the MySQL Database Engine
+Updating Applications to Connect to MySQL DB Instances Using New SSL/TLS Certificates
+Upgrading the MySQL DB Engine
+Upgrading a MySQL DB Snapshot
+Importing Data into a MySQL DB Instance
+Restoring a Backup into an Amazon RDS MySQL DB Instance
+Importing Data from a MySQL or MariaDB DB to an Amazon RDS MySQL or MariaDB DB Instance
+Importing Data to an Amazon RDS MySQL or MariaDB DB Instance with Reduced Downtime
+Importing Data From Any Source to a MySQL or MariaDB DB Instance
+
+
+Working with MySQL Replication in Amazon RDS
+Working with MySQL Read Replicas
+Using GTID-Based Replication for Amazon RDS MySQL
+Replication with a MySQL or MariaDB Instance Running External to Amazon RDS
+
+
+Exporting Data from a MySQL DB Instance by Using Replication
+Options for MySQL DB Instances
+MariaDB Audit Plugin Support
+MySQL memcached Support
+
+
+Common DBA Tasks for MySQL DB Instances
+Using Kerberos Authentication for MySQL
+Known Issues and Limitations for MySQL on Amazon RDS
+MySQL on Amazon RDS SQL Reference
+mysql.rds_set_master_auto_position
+mysql.rds_set_external_master
+mysql.rds_set_external_master_with_delay
+mysql.rds_set_external_master_with_auto_position
+mysql.rds_reset_external_master
+mysql.rds_import_binlog_ssl_material
+mysql.rds_remove_binlog_ssl_material
+mysql.rds_set_source_delay
+mysql.rds_start_replication
+mysql.rds_start_replication_until
+mysql.rds_start_replication_until_gtid
+mysql.rds_stop_replication
+mysql.rds_skip_transaction_with_gtid
+mysql.rds_skip_repl_error
+mysql.rds_next_master_log
+mysql.rds_innodb_buffer_pool_dump_now
+mysql.rds_innodb_buffer_pool_load_now
+mysql.rds_innodb_buffer_pool_load_abort
+mysql.rds_set_configuration
+mysql.rds_show_configuration
+mysql.rds_kill
+mysql.rds_kill_query
+mysql.rds_rotate_general_log
+mysql.rds_rotate_slow_log
+mysql.rds_enable_gsh_collector
+mysql.rds_set_gsh_collector
+mysql.rds_disable_gsh_collector
+mysql.rds_collect_global_status_history
+mysql.rds_enable_gsh_rotation
+mysql.rds_set_gsh_rotation
+mysql.rds_disable_gsh_rotation
+mysql.rds_rotate_global_status_history
+
+
+Oracle on Amazon RDS
+Connecting to a DB Instance Running the Oracle Database Engine
+Updating Applications to Connect to Oracle DB Instances Using New SSL/TLS Certificates
+Modifying Oracle sqlnet.ora Parameters
+Upgrading the Oracle DB Engine
+Upgrading an Oracle DB Snapshot
+Importing Data into Oracle on Amazon RDS
+Working with Oracle Replicas for Amazon RDS
+Oracle Character Sets Supported in Amazon RDS
+Options for Oracle DB Instances
+Amazon S3 Integration
+Oracle Application Express
+Oracle Enterprise Manager
+Oracle Enterprise Manager Database Express
+Oracle Management Agent for Enterprise Manager Cloud Control
+
+
+Oracle Java Virtual Machine
+Oracle Label Security
+Oracle Locator
+Oracle Multimedia
+Oracle Native Network Encryption
+Oracle OLAP
+Oracle Secure Sockets Layer
+Oracle Spatial
+Oracle SQLT
+Oracle Statspack
+Oracle Time Zone
+Oracle Transparent Data Encryption
+Oracle UTL_MAIL
+Oracle XML DB
+
+
+Common DBA Tasks for Oracle DB Instances
+Common DBA System Tasks for Oracle DB Instances
+Common DBA Database Tasks for Oracle DB Instances
+Common DBA Log Tasks for Oracle DB Instances
+Common DBA Recovery Manager (RMAN) Tasks for Oracle DB Instances
+Common DBA Oracle Scheduler Tasks for Oracle DB Instances
+Common DBA Diagnostic Tasks for Oracle DB Instances
+Other Common DBA Tasks for Oracle DB Instances
+
+
+Using Kerberos Authentication with Amazon RDS for Oracle
+Setting Up Kerberos Authentication for Oracle DB Instances
+Managing a DB Instance in a Domain
+Connecting to Oracle with Kerberos Authentication
+
+
+Tools and Third-Party Software for Oracle DB Instances
+Setting Up Amazon RDS to Host Tools and Third-Party Software for Oracle
+Using Oracle GoldenGate with Amazon RDS
+Using the Oracle Repository Creation Utility on Amazon RDS for Oracle
+Installing a Siebel Database on Oracle on Amazon RDS
+
+
+Oracle Database Engine Release Notes
+Database Engine: 19.0.0.0
+Database Engine: 18.0.0.0
+Database Engine: 12.2.0.1
+Database Engine: 12.1.0.2
+Database Engine: 11.2.0.4
+
+
+PostgreSQL on Amazon RDS
+Connecting to a DB Instance Running the PostgreSQL Database Engine
+Updating Applications to Connect to PostgreSQL DB Instances Using New SSL/TLS Certificates
+Upgrading the PostgreSQL DB Engine for Amazon RDS
+Upgrading a PostgreSQL DB Snapshot
+Working with PostgreSQL Read Replicas in Amazon RDS
+Importing Data into PostgreSQL on Amazon RDS
+Common DBA Tasks for PostgreSQL
+Using Kerberos Authentication with Amazon RDS for PostgreSQL
+Setting Up Kerberos Authentication for PostgreSQL DB Instances
+Managing a DB Instance in a Domain
+Connecting to PostgreSQL with Kerberos Authentication
+
+
+Security in Amazon RDS
+Data Protection in Amazon RDS
+Protecting Data Using Encryption
+Encrypting Amazon RDS Resources
+Customer Master Key (CMK) Management
+Using SSL/TLS to Encrypt a Connection to a DB Instance
+Rotating Your SSL/TLS Certificate
+
+
+Internetwork Traffic Privacy
+
+
+Identity and Access Management in Amazon RDS
+How Amazon RDS Works with IAM
+Amazon RDS Identity-Based Policy Examples
+IAM Database Authentication for MySQL and PostgreSQL
+Enabling and Disabling IAM Database Authentication
+Creating and Using an IAM Policy for IAM Database Access
+Creating a Database Account Using IAM Authentication
+Connecting to Your DB Instance Using IAM Authentication
+Connecting to Your DB Instance Using IAM Authentication from the Command Line: AWS CLI and mysql Client
+Connecting to Your DB Instance Using IAM Authentication from the Command Line: AWS CLI and psql Client
+Connecting to Your DB Instance Using IAM Authentication and the AWS SDK for Python (Boto3)
+Connecting to Your DB Instance Using IAM Authentication and the AWS SDK for .NET
+Connecting to Your DB Instance Using IAM Authentication and the AWS SDK for Java
+
+
+
+
+Troubleshooting Amazon RDS Identity and Access
+
+
+Kerberos Authentication
+Logging and Monitoring in Amazon RDS
+Compliance Validation for Amazon RDS
+Resilience in Amazon RDS
+Infrastructure Security in Amazon RDS
+Amazon RDS and Interface VPC Endpoints (AWS PrivateLink)
+Security Best Practices for Amazon RDS
+Controlling Access with Security Groups
+Working with DB Security Groups (EC2-Classic Platform)
+
+
+Master User Account Privileges
+Using Service-Linked Roles for Amazon RDS
+Amazon Virtual Private Cloud VPCs and Amazon RDS
+Determining Whether You Are Using the EC2-VPC or EC2-Classic Platform
+Scenarios for Accessing a DB Instance in a VPC
+Working with a DB Instance in a VPC
+Tutorial: Create an Amazon VPC for Use with a DB Instance
+
+
+Quotas and Constraints for Amazon RDS
+Troubleshooting for Amazon RDS
+Amazon RDS Application Programming Interface (API) Reference
+Using the Query API
+Troubleshooting Applications on Amazon RDS
+Document History
+AWS glossary

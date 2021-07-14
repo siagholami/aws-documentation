@@ -1,0 +1,42 @@
+ProvisionedConcurrencyConfigListItem
+Details about the provisioned concurrency configuration for a function alias or version.
+Contents
+AllocatedProvisionedConcurrentExecutions 
+The amount of provisioned concurrency allocated.
+Type: Integer
+Valid Range: Minimum value of 0.
+Required: No
+AvailableProvisionedConcurrentExecutions 
+The amount of provisioned concurrency available.
+Type: Integer
+Valid Range: Minimum value of 0.
+Required: No
+FunctionArn 
+The Amazon Resource Name (ARN) of the alias or version.
+Type: String
+Pattern: arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}(-gov)?-[a-z]-\d{1}:\d{12}:function:[a-zA-Z0-9-_](:(\$LATEST|[a-zA-Z0-9-_]))? 
+Required: No
+LastModified 
+The date and time that a user last updated the configuration, in ISO 8601 format.
+Type: String
+Required: No
+RequestedProvisionedConcurrentExecutions 
+The amount of provisioned concurrency requested.
+Type: Integer
+Valid Range: Minimum value of 1.
+Required: No
+Status 
+The status of the allocation process.
+Type: String
+Valid Values:IN_PROGRESS | READY | FAILED 
+Required: No
+StatusReason 
+For failed allocations, the reason that provisioned concurrency could not be allocated.
+Type: String
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

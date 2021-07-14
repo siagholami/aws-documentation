@@ -1,0 +1,24 @@
+Deleting health checks
+To delete health checks, perform the following procedure.
+Note
+If you're using AWS Cloud Map and you configured AWS Cloud Map to create a Route 53 health check when you register an instance, you can't use the Route 53 console to delete the health check. The health check is deleted automatically when you deregister the instance. There can be a delay of several hours before the health check no longer appears in the Route 53 console. 
+To delete a health check (console)
+
+
+If you're deleting health checks that are associated with records, perform the recommended tasks in Updating or deleting health checks when DNS failover is configured.
+
+
+Sign in to the AWS Management Console and open the Route 53 console at https://console.aws.amazon.com/route53/.
+
+
+In the navigation pane, choose Health Checks.
+
+
+In the right pane, select the health check that you want to delete.
+
+
+Choose Delete Health Check.
+
+
+Choose Yes, Delete to confirm.
+

@@ -1,0 +1,230 @@
+AWS CloudHSM User Guide
+
+*Copyright © 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS CloudHSM?
+AWS CloudHSM Use Cases
+AWS CloudHSM Clusters
+AWS CloudHSM Cluster Backups
+AWS CloudHSM Client Tools and Software Libraries
+HSM Users
+Pricing
+Regions
+AWS CloudHSM Quotas
+System Resources
+
+
+Getting Started with AWS CloudHSM
+Create IAM Administrative Groups
+Create a Virtual Private Cloud (VPC)
+Create a Private Subnet
+Create a Cluster
+Review Cluster Security Group
+Launch an Amazon EC2 Client Instance
+Connect Amazon EC2 Instance to AWS CloudHSM Cluster
+Create an HSM
+Verify the Identity and Authenticity of Your Cluster's HSM (Optional)
+Initialize the Cluster
+Install and Configure the AWS CloudHSM Client (Linux)
+Install and Configure the AWS CloudHSM Client (Windows)
+Activate the Cluster
+Reconfigure SSL with a New Certificate and Private Key (Optional)
+Best Practices for AWS CloudHSM
+Managing AWS CloudHSM Clusters
+Adding or Removing HSMs in an AWS CloudHSM Cluster
+Copying a Backup Across Regions
+Creating an AWS CloudHSM Cluster from a Previous Backup
+Deleting and Restoring an AWS CloudHSM Cluster Backup
+Deleting an AWS CloudHSM Cluster
+Tagging AWS CloudHSM Resources
+Managing HSM Users and Keys in AWS CloudHSM
+Managing HSM Users in AWS CloudHSM
+Managing Keys in AWS CloudHSM
+Enforcing Quorum Authentication (M of N Access Control)
+Using Quorum Authentication for Crypto Officers: First Time Setup
+Using Quorum Authentication for Crypto Officers
+Change the Quorum Minimum Value for Crypto Officers
+
+
+Using Trusted Keys to Control Key Unwraps
+AWS CloudHSM Command Line Tools
+cloudhsm_mgmt_util
+Getting Started with cloudhsm_mgmt_util
+cloudhsm_mgmt_util Command Reference
+changePswd
+createUser
+deleteUser
+findAllKeys
+getAttribute
+getCert
+getHSMInfo
+getKeyInfo
+info
+listAttributes
+listUsers
+loginHSM and logoutHSM
+server
+setAttribute
+quit
+shareKey
+syncKey
+syncUser
+
+
+
+
+key_mgmt_util
+Getting Started with key_mgmt_util
+key_mgmt_util Command Reference
+aesWrapUnwrap
+deleteKey
+Error2String
+exit
+exportPrivateKey
+exportPubKey
+exSymKey
+extractMaskedObject
+findKey
+findSingleKey
+genDSAKeyPair
+genECCKeyPair
+genPBEKey
+genRSAKeyPair
+genSymKey
+getAttribute
+getCaviumPrivKey
+getCert
+getKeyInfo
+help
+importPrivateKey
+importPubKey
+imSymKey
+insertMaskedObject
+IsValidKeyHandlefile
+listAttributes
+listUsers
+loginHSM and logoutHSM
+setAttribute
+sign
+unWrapKey
+verify
+wrapKey
+Key Attribute Reference
+
+
+
+
+Configure Tool
+Using the AWS CloudHSM Software Libraries
+AWS CloudHSM Software Library for PKCS #11
+Installing the AWS CloudHSM Software Library for PKCS #11
+Authenticating to PKCS #11
+Supported PKCS #11 Key Types
+Supported PKCS #11 Mechanisms
+Supported PKCS #11 API Operations
+Supported PKCS #11 Attributes
+Code Samples for AWS CloudHSM Software Library for PKCS#11
+
+
+AWS CloudHSM Dynamic Engine for OpenSSL
+Install and Use the AWS CloudHSM Dynamic Engine for OpenSSL
+
+
+AWS CloudHSM Software Library for Java
+Install and Use the AWS CloudHSM Software Library for Java
+Supported Mechanisms
+Code Samples for the AWS CloudHSM Software Library for Java
+Using CloudHSM KeyStore Java Class
+Using AWS CloudHSM Key Store with Third-Party Tools
+
+
+KSP and CNG Providers for Windows
+Install the KSP and CNG Providers for Windows
+Windows AWS CloudHSM Prerequisites
+Associate a AWS CloudHSM Key with a Certificate
+Code Sample for Cavium CNG Provider
+
+
+Integrating Third-Party Applications with AWS CloudHSM
+Improve Your Web Server's Security with SSL/TLS Offload in AWS CloudHSM
+How SSL/TLS Offload with AWS CloudHSM Works
+Tutorial: Using SSL/TLS Offload with AWS CloudHSM on Linux
+Step 1: Set Up the Prerequisites
+Step 2: Generate or Import a Private Key and SSL/TLS Certificate
+Step 3: Configure the Web Server
+Step 4: Enable HTTPS Traffic and Verify the Certificate
+(Optional) Step 5: Add a Load Balancer with Elastic Load Balancing
+
+
+Tutorial: Using SSL/TLS Offload with AWS CloudHSM on Windows
+Step 1: Set Up the Prerequisites
+Step 2: Create a Certificate Signing Request (CSR) and Certificate
+Step 3: Configure the Web Server
+Step 4: Enable HTTPS Traffic and Verify the Certificate
+(Optional) Step 5: Add a Load Balancer with Elastic Load Balancing
+
+
+
+
+Configure Windows Server as a Certificate Authority (CA) with AWS CloudHSM
+Windows Server CA Step 1: Set Up the Prerequisites
+Windows Server CA Step 2: Create a Windows Server CA with AWS CloudHSM
+Windows Server CA Step 3: Sign a Certificate Signing Request (CSR) with Your Windows Server CA with AWS CloudHSM
+
+
+Oracle Database Transparent Data Encryption (TDE) with AWS CloudHSM
+Oracle TDE with AWS CloudHSM: Set Up the Prerequisites
+Oracle TDE with AWS CloudHSM: Configure the Database and Generate the Master Encryption Key
+
+
+Use Microsoft SignTool with AWS CloudHSM to Sign Files
+Microsoft SignTool with AWS CloudHSM Step 1: Set Up the Prerequisites
+Microsoft SignTool with AWS CloudHSM Step 2: Create a Signing Certificate
+Microsoft SignTool with AWS CloudHSM Step 3: Sign a File
+
+
+Other Third-party Vendor Integrations
+Monitoring AWS CloudHSM Logs
+Getting AWS CloudHSM Client Logs
+Logging AWS CloudHSM API Calls with AWS CloudTrail
+Monitoring AWS CloudHSM Audit Logs in Amazon CloudWatch Logs
+How Audit Logging Works
+Viewing Audit Logs in CloudWatch Logs
+Interpreting HSM Audit Logs
+Audit Log Reference
+
+
+Getting Metrics
+Getting CloudWatch Metrics
+Security in AWS CloudHSM
+Data Protection in AWS CloudHSM
+Identity and Access Management for AWS CloudHSM
+Service-Linked Roles for AWS CloudHSM
+
+
+Compliance Validation for AWS CloudHSM
+Resilience in AWS CloudHSM
+Infrastructure Security in AWS CloudHSM
+Update Management in AWS CloudHSM
+Troubleshooting AWS CloudHSM
+Known Issues
+Lost Connection to the Cluster
+Keep HSM Users In Sync Across HSMs In The Cluster
+Verify the Performance of the HSM
+Resolving Cluster Creation Failures
+Missing AWS CloudHSM Audit Logs in CloudWatch
+Retrieving Client Configuration Logs
+AWS CloudHSM Client and Software Information
+AWS CloudHSM Client and Software Version History
+Supported Platforms
+Document History

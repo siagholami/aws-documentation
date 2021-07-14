@@ -1,0 +1,41 @@
+AWS::MediaLive::Channel OutputDestination
+Configuration information for an output.
+This entity is at the top level in the channel.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Id](#cfn-medialive-channel-outputdestination-id)" : String,
+  "[MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings)" : [ MediaPackageOutputDestinationSettings, ... ],
+  "[MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings)" : MultiplexProgramChannelDestinationSettings,
+  "[Settings](#cfn-medialive-channel-outputdestination-settings)" : [ OutputDestinationSettings, ... ]
+}
+YAML
+[Id](#cfn-medialive-channel-outputdestination-id): String
+  [MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings): 
+    - MediaPackageOutputDestinationSettings
+  [MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings): 
+    MultiplexProgramChannelDestinationSettings
+  [Settings](#cfn-medialive-channel-outputdestination-settings): 
+    - OutputDestinationSettings
+Properties
+Id 
+The ID for this destination.
+Required: No
+Type: String
+Update requires: No interruption
+MediaPackageSettings 
+The destination settings for a MediaPackage output.
+Required: No
+Type: List of MediaPackageOutputDestinationSettings
+Update requires: No interruption
+MultiplexSettings 
+Include this element if this destination information is for a Multiplex output group. Create an array of one Create an array of two MultiplexProgramChannelDestinationSettings, because Multiplex output groups always require a standard channel. 
+Required: No
+Type: MultiplexProgramChannelDestinationSettings
+Update requires: No interruption
+Settings 
+The destination settings for an output.
+Required: No
+Type: List of OutputDestinationSettings
+Update requires: No interruption

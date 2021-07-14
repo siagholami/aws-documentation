@@ -1,0 +1,2 @@
+AWS Glossary
+For the latest AWS terminology, see the AWS Glossary in the AWS General Reference.

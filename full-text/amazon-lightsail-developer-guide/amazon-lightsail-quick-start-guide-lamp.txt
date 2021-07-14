@@ -1,0 +1,45 @@
+Quick start guide: LAMP on Amazon Lightsail
+Last updated: August 13, 2018 
+Here are a few steps you should take to get started after your LAMP instance is up and running on Amazon Lightsail:
+Step 1: Get the default application password for your LAMP instance
+You need the default application password to access pre-installed applications or services on your instance.
+
+
+On your instance management page, under the Connect tab, choose Connect using SSH.
+
+
+After you're connected, enter the following command to get the application password:
+
+
+cat bitnami_application_password
+Note
+If you're in a directory other than the user home directory, then enter cat $HOME/bitnami_application_password.
+You should see a response similar to this, which contains the default application password:
+
+For more information, see Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail.
+Step 2: Attach a static IP address to your LAMP instance
+The default dynamic public IP address attached to your instance changes every time you stop and start the instance. Create a static IP address, and attach it to your instance, to keep the public IP address from changing. Later, when you use your domain name with your instance, you don’t have to update your domain’s DNS records each time you stop and start the instance.
+On your instance management page, under the Networking tab, choose Create static IP, then follow the instructions on the page.
+For more information, see Create a static IP and attach it to an instance in Amazon Lightsail.
+Step 3: Visit your LAMP instance welcome page
+Navigate to the public IP address of your instance to access the application installed on it, access phpMyAdmin, or access the Bitnami documentation.
+
+
+On your instance management page, under the Connect tab, make note of the public IP.
+
+
+Browse to the public IP address, for example by going to http://192.0.2.3.
+
+
+For more information, see Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail.
+Step 4: Map your domain name to your LAMP instance
+To map your domain name, such as example.com, to your instance, you add a record to the domain name system (DNS) of your domain. DNS records are typically managed and hosted at the registrar where you registered your domain. However, we recommend that you transfer management of your domain's DNS records to Lightsail so that you can administer it using the Lightsail console.
+On the Lightsail console home page, under the Networking tab, choose Create DNS zone, then follow the instructions on the page.
+For more information, see Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail.
+Step 5: Read the Bitnami documentation
+Read the Bitnami documentation to learn how to deploy your application, enable HTTPs support with SSL certificates, upload files to the server with SFTP, and more.
+For more information, see the Bitnami LAMP for AWS cloud.
+Step 6: Create a snapshot of your LAMP instance
+A snapshot is a copy of the system disk and original configuration of an instance. The snapshot includes such information as memory, CPU, disk size, and data transfer rate. You can use a snapshot as a baseline for new instances, or as a data backup.
+Under the Snapshot tab of your instance’s management page, enter a name for the snapshot, then choose Create snapshot.
+For more information, see Creating a snapshot of your Linux or Unix instance in Amazon Lightsail.

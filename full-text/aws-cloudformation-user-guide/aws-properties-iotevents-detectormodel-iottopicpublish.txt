@@ -1,0 +1,26 @@
+AWS::IoTEvents::DetectorModel IotTopicPublish
+Information required to publish the MQTT message through the AWS IoT message broker.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MqttTopic](#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)" : String,
+  "[Payload](#cfn-iotevents-detectormodel-iottopicpublish-payload)" : Payload
+}
+YAML
+[MqttTopic](#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic): String
+  [Payload](#cfn-iotevents-detectormodel-iottopicpublish-payload): 
+    Payload
+Properties
+MqttTopic 
+The MQTT topic of the message. You can use a string expression that includes variables ($variable.<variable-name>) and input values ($input.<input-name>.<path-to-datum>) as the topic string.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption
+Payload 
+You can configure the action payload when you publish a message to an AWS IoT Core topic.
+Required: No
+Type: Payload
+Update requires: No interruption

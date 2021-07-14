@@ -1,0 +1,5 @@
+Using service-linked roles for Systems Manager
+AWS Systems Manager uses AWS Identity and Access Management (IAM) service-linked roles. A service-linked role is a unique type of IAM role that is linked directly to Systems Manager. Service-linked roles are predefined by Systems Manager and include all the permissions that the service requires to call other AWS services on your behalf. 
+Topics
+ Using Roles to Collect Inventory and Run Maintenance Windows Tasks
+ Using Roles to Collect AWS Account Information for Systems Manager Explorer

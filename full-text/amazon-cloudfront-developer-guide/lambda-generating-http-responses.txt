@@ -1,0 +1,6 @@
+Working with Requests and Responses
+You can use Lambda@Edge to work with requests and responses in several ways:
+ Generating HTTP Responses in Request Triggers
+ Updating HTTP Responses in Origin-Response Triggers
+ Accessing the Request Body by Choosing the Include Body Option
+ Using Lambda@Edge Functions with Origin Failover

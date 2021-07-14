@@ -1,0 +1,66 @@
+Deleting automatic snapshots of instances or disks in Amazon Lightsail
+Last updated: October 2, 2019 
+You can delete automatic snapshots of an instance or block storage disk in Amazon Lightsail at any time; whether the feature is enabled, or if it's disabled after it had been enabled. You will be billed the snapshot storage fee for the automatic snapshots stored on your Lightsail account. Follow the steps in this guide to delete automatic snapshots if you no longer need them. For example, if you've copied an automatic snapshot to a manual snapshot and you no longer need the original, or if you've disabled the automatic snapshots feature for your resource and you don't need the existing automatic snapshots that were kept.
+Contents
+ Deleting automatic snapshots restriction
+ Deleting automatic snapshots of an instance using the Lightsail console
+ Deleting automatic snapshots of an instance or block storage disk using the AWS CLI
+Deleting automatic snapshots restriction
+Automatic snapshots of block storage disks cannot be deleted using the Lightsail console. To delete an automatic snapshot of a block storage disk, you must use the Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs. For more information, see Deleting automatic snapshots of an instance or block storage disk using the AWS CLI.
+Deleting automatic snapshots of an instance using the Lightsail console
+Complete the following steps to delete automatic snapshots of an instance using the Lightsail console.
+
+
+Sign in to the Lightsail console.
+
+
+On the Lightsail home page, choose the Instances tab.
+
+
+
+Choose the name of the instance for which you want to delete automatic snapshots.
+
+
+On the instance management page, choose the Snapshots tab.
+
+
+
+Under the Automatic snapshots section, choose the ellipsis icon next to the automatic snapshot that you want to delete, then choose Delete snapshot.
+
+
+At the prompt, choose Yes to confirm that you want to delete the snapshot.
+
+
+The automatic snapshot is deleted after a few moments.
+Deleting automatic snapshots of an instance or block storage disk using the AWS CLI
+Complete the following steps to delete automatic snapshots of an instance or block storage disk using the AWS CLI.
+
+Open a Terminal or Command Prompt window.
+
+If you haven't already, install the AWS CLI and configure it to work with Lightsail.
+
+Enter the following command to get the dates of the available automatic snapshots for a specific resource. You will need the date of the automatic snapshot to specify as the date parameter in the subsequent command.
+
+aws lightsail --region Region get-auto-snapshots --resource-name ResourceName
+In the command, replace:
+    Region with the AWS Region in which the resource is located.
+    ResourceName with the name of the resource.
+Example:
+aws lightsail --region us-west-2 get-auto-snapshots --resource-name MyFirstWordPressWebsite01
+You should see a result similar to the following, which lists the available automatic snapshots:
+
+
+Enter the following command to delete an automatic snapshot:
+
+aws lightsail --region Region delete-auto-snapshot --resource-name ResourceName --date YYYY-MM-DD
+In the command, replace:
+    Region with the AWS Region in which the resource is located.
+    ResourceName with the name of the resource.
+    YYYY-MM-DD with the date of the available auto snapshot that you obtained using the preceding command.
+Example:
+aws lightsail --region us-west-2 delete-auto-snapshot --resource-name MyFirstWordPressWebsite01 --date 2019-09-16
+You should see a result similar to the following example:
+
+The automatic snapshot is deleted after a few moments.
+Note
+For more information about the GetAutoSnapshots and DeleteAutoSnapshot API operations in these commands, see GetAutoSnapshots and DeleteAutoSnapshot in the Lightsail API documentation.

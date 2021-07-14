@@ -1,0 +1,18 @@
+Programmer's Guide to Component Mode
+
+This feature is in preview release and is subject to change. 
+If you're a programmer, you can edit your components to add support for Component Mode. This can help designers on your team work more easily with components. You can use this feature to do the following:
+ Use manipulators to edit a component directly in the viewport
+ Create editing modes and tools without needing to create custom standalone editors
+ Create your own shortcuts
+For more information, see Editing Components in the Viewport.
+Topics
+ Step 1: Choose a Component
+ Step 2: Add a ComponentModeDelegate
+ Step 3: Write a New Component Mode
+ Step 4: Add Shortcuts for Component Mode
+ Step 5: Handle Selection in the Viewport
+ Step 6: Building Component Mode
+ Tips for Working with Component Mode
+Note
+Before you start, you should be familiar with the component entity framework and have written a component. For more information, see the Programmer's Guide to Entities and Components.

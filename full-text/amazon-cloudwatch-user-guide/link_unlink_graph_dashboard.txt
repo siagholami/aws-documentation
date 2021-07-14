@@ -1,0 +1,25 @@
+Link and Unlink Graphs on a CloudWatch Dashboard
+You can link the graphs on your dashboard together, so that when you zoom in or zoom out on one graph, the other graphs zoom in or zoom out at the same time. You can unlink graphs to limit zoom to one graph.
+To link the graphs on a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Choose Actions and then Link graphs.
+
+
+To unlink the graphs on a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Clear Actions and then Link graphs.
+

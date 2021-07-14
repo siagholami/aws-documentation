@@ -1,0 +1,3 @@
+CodeStarConnections resource type reference
+Resource types
+ AWS::CodeStarConnections::Connection

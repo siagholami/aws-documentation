@@ -1,0 +1,8 @@
+Setting Up AWS Elemental MediaPackage
+Before you use AWS Elemental MediaPackage for the first time, you must sign up for AWS if you don't already have an AWS account. Next, you must create AWS Identity and Access Management (IAM) users to allow access to MediaPackage. 
+Topics
+ Signing Up for AWS
+ Creating an Admin IAM User
+ Creating a Non-Admin IAM User
+ Allowing AWS Elemental MediaPackage to Access Other AWS Services
+ (Optional) Setting Up Encryption

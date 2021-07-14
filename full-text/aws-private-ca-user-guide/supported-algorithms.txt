@@ -1,0 +1,19 @@
+Supported Cryptographic Algorithms
+ACM Private CA supports the following cryptographic algorithms for private key generation and certificate signing. This list applies only to certificates issued directly by ACM Private CA through its console, API, or command line. 
+Supported algorithm 
+
+
+
+Private key algorithms
+Signing algorithms
+
+
+
+
+RSA_2048  RSA_4096 EC_prime256v1 EC_secp384r1
+SHA256WITHECDSASHA384WITHECDSASHA512WITHECDSASHA256WITHRSASHA384WITHRSASHA512WITHRSA
+
+
+
+Note
+When AWS Certificate Manager issues certificates using a CA from ACM Private CA, it supports some but not all of these algorithms. For more information, see Request a Private Certificate in the AWS Certificate Manager User Guide.

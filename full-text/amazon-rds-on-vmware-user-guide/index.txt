@@ -1,0 +1,35 @@
+Amazon Relational Database Service on VMware User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Amazon RDS on VMware?
+How Amazon RDS on VMware Works
+Terminology
+Support for RDS Features in Amazon RDS on VMware
+Setting Up Amazon RDS on VMware
+Getting Started with Amazon RDS on VMware
+Complete the Prerequisites
+Onboard Your vSphere Cluster
+Import the Installer VM Certificate
+
+
+Working with Amazon RDS on VMware
+Installing the Media for Microsoft SQL Server
+Choosing the On-Premises DB Instance Class
+Creating an On-Premises DB Instance
+Creating Additional Custom AZs in a Region
+Creating Read Replicas
+Managing Your On-Premises DB Instances
+Troubleshooting Amazon RDS on VMware
+Document History
+AWS glossary

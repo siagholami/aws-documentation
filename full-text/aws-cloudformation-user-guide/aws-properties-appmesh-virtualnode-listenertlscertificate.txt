@@ -1,0 +1,25 @@
+AWS::AppMesh::VirtualNode ListenerTlsCertificate
+An object that represents a listener's Transport Layer Security (TLS) certificate.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ACM](#cfn-appmesh-virtualnode-listenertlscertificate-acm)" : ListenerTlsAcmCertificate,
+  "[File](#cfn-appmesh-virtualnode-listenertlscertificate-file)" : ListenerTlsFileCertificate
+}
+YAML
+[ACM](#cfn-appmesh-virtualnode-listenertlscertificate-acm): 
+    ListenerTlsAcmCertificate
+  [File](#cfn-appmesh-virtualnode-listenertlscertificate-file): 
+    ListenerTlsFileCertificate
+Properties
+ACM 
+A reference to an object that represents an AWS Certicate Manager (ACM) certificate.
+Required: No
+Type: ListenerTlsAcmCertificate
+Update requires: No interruption
+File 
+A reference to an object that represents a local file certificate.
+Required: No
+Type: ListenerTlsFileCertificate
+Update requires: No interruption

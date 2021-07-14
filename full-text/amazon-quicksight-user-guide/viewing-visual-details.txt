@@ -1,0 +1,4 @@
+Viewing Visual Details
+When viewing a visual, you can hover your cursor over any graphical element to get details on that element. For example, a bar on a bar chart:
+
+Or a bubble on a scatter plot:

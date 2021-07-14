@@ -1,0 +1,66 @@
+AWS::ApiGateway::UsagePlanKey
+The AWS::ApiGateway::UsagePlanKey resource associates an API key with a usage plan. This association determines which users the usage plan is applied to.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGateway::UsagePlanKey",
+  "Properties" : {
+      "[KeyId](#cfn-apigateway-usageplankey-keyid)" : String,
+      "[KeyType](#cfn-apigateway-usageplankey-keytype)" : String,
+      "[UsagePlanId](#cfn-apigateway-usageplankey-usageplanid)" : String
+    }
+}
+YAML
+Type: AWS::ApiGateway::UsagePlanKey
+Properties: 
+  [KeyId](#cfn-apigateway-usageplankey-keyid): String
+  [KeyType](#cfn-apigateway-usageplankey-keytype): String
+  [UsagePlanId](#cfn-apigateway-usageplankey-usageplanid): String
+Properties
+KeyId 
+The ID of the usage plan key.
+Required: Yes
+Type: String
+Update requires: Replacement
+KeyType 
+The type of usage plan key. Currently, the only valid key type is API_KEY.
+Required: Yes
+Type: String
+Update requires: Replacement
+UsagePlanId 
+The ID of the usage plan.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the key and ID of the usage plan combined with a ":", such as 123abcdef:abc123.
+For more information about using the Ref function, see Ref.
+Examples
+Create usage plan key
+JSON
+{
+    "usagePlanKey": {
+        "Type": "AWS::ApiGateway::UsagePlanKey",
+        "Properties": {
+            "KeyId": {
+                "Ref": "myApiKey"
+            },
+            "KeyType": "API_KEY",
+            "UsagePlanId": {
+                "Ref": "myUsagePlan"
+            }
+        }
+    }
+}
+YAML
+usagePlanKey:
+  Type: 'AWS::ApiGateway::UsagePlanKey'
+  Properties:
+    KeyId: !Ref myApiKey
+    KeyType: API_KEY
+    UsagePlanId: !Ref myUsagePlan
+See also
+
+usageplankey:create in the Amazon API Gateway REST API Reference

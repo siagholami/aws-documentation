@@ -1,0 +1,25 @@
+AWS::IoTAnalytics::Dataset QueryAction
+An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set contents.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Filters](#cfn-iotanalytics-dataset-queryaction-filters)" : [ Filter, ... ],
+  "[SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery)" : String
+}
+YAML
+[Filters](#cfn-iotanalytics-dataset-queryaction-filters): 
+    - Filter
+  [SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery): String
+Properties
+Filters 
+Pre-filters applied to message data.
+Required: No
+Type: List of Filter
+Maximum: 1
+Update requires: No interruption
+SqlQuery 
+An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set contents.
+Required: Yes
+Type: String
+Update requires: No interruption

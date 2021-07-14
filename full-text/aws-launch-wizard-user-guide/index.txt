@@ -1,0 +1,51 @@
+AWS Launch Wizard User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+AWS Launch Wizard for SQL Server
+What Is AWS Launch Wizard for SQL Server?
+Features of AWS Launch Wizard
+Components
+Related services
+How AWS Launch Wizard works
+Deployment options
+
+
+Getting started with AWS Launch Wizard for SQL Server
+Setting up for AWS Launch Wizard for SQL Server
+Accessing and deploying an application with AWS Launch Wizard for SQL Server
+
+
+Managing application resources with AWS Launch Wizard for SQL Server
+Monitoring SQL Server Always On deployments
+High availability and security best practices for AWS Launch Wizard for SQL Server
+Troubleshooting AWS Launch Wizard for SQL Server
+AWS Launch Wizard for SAP
+What is AWS Launch Wizard for SAP?
+Supported deployments and features of AWS Launch Wizard
+Components
+Related services
+How AWS Launch Wizard for SAP works
+
+
+Getting started with AWS Launch Wizard for SAP
+Setting up for AWS Launch Wizard for SAP
+Accessing and deploying an SAP application with AWS Launch Wizard
+
+
+Managing application resources with AWS Launch Wizard for SAP
+Troubleshooting AWS Launch Wizard for SAP
+Making SAP HANA software available for AWS Launch Wizard to deploy HANA database
+Supported operating system versions for SAP deployments
+Security groups in AWS Launch Wizard
+AWS Launch Wizard security

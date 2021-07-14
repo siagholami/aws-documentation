@@ -1,0 +1,73 @@
+UpdateCampaign
+Updates a campaign by either deploying a new solution or changing the value of the campaign's minProvisionedTPS parameter.
+To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the DescribeCampaign API.
+Note
+You must wait until the status of the updated campaign is ACTIVE before asking the campaign for recommendations.
+For more information on campaigns, see CreateCampaign.
+Request Syntax
+{
+   "campaignArn": "string",
+   "campaignConfig": { 
+      "itemExplorationConfig": { 
+         "string" : "string" 
+      }
+   },
+   "minProvisionedTPS": number,
+   "solutionVersionArn": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ campaignArn  
+The Amazon Resource Name (ARN) of the campaign.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: Yes
+ campaignConfig  
+The configuration details of a campaign.
+Type: CampaignConfig object
+Required: No
+ minProvisionedTPS  
+Specifies the requested minimum provisioned transactions (recommendations) per second that Amazon Personalize will support.
+Type: Integer
+Valid Range: Minimum value of 1.
+Required: No
+ solutionVersionArn  
+The ARN of a new solution version to deploy.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+Response Syntax
+{
+   "campaignArn": "string"
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ campaignArn  
+The same campaign ARN as given in the request.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Errors
+InvalidInputException 
+Provide a valid value for the field or parameter.
+HTTP Status Code: 400
+ResourceInUseException 
+The specified resource is in use.
+HTTP Status Code: 400
+ResourceNotFoundException 
+Could not find the specified resource.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

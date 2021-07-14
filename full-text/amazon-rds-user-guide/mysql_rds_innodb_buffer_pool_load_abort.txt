@@ -1,0 +1,10 @@
+mysql.rds_innodb_buffer_pool_load_abort
+Cancels a load of the saved buffer pool state while in progress. For more information, see InnoDB Cache Warming.
+Syntax
+CALL mysql.rds_innodb_buffer_pool_load_abort();
+Usage Notes
+The master user must run the mysql.rds_innodb_buffer_pool_load_abort procedure. 
+The mysql.rds_innodb_buffer_pool_load_abort procedure is available in these versions of Amazon RDS MySQL:
+ MySQL 5.6
+ MySQL 5.7
+ MySQL 8.0

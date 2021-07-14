@@ -1,0 +1,24 @@
+DynamicFrameCollection Class
+A DynamicFrameCollection is a dictionary of DynamicFrame Class objects, in which the keys are the names of the DynamicFrames and the values are the DynamicFrame objects.
+__init__
+__init__(dynamic_frames, glue_ctx)
+ dynamic_frames – A dictionary of DynamicFrame Class objects.
+ glue_ctx – A GlueContext Class object.
+keys
+keys( ) – Returns a list of the keys in this collection, which generally consists of the names of the corresponding DynamicFrame values.
+values
+values(key) – Returns a list of the DynamicFrame values in this collection.
+select
+select(key)
+Returns the DynamicFrame that corresponds to the specfied key (which is generally the name of the DynamicFrame).
+ key – A key in the DynamicFrameCollection, which usually represents the name of a DynamicFrame.
+map
+map(callable, transformation_ctx="")
+Uses a passed-in function to create and return a new DynamicFrameCollection based on the DynamicFrames in this collection.
+ callable – A function that takes a DynamicFrame and the specified transformation context as parameters and returns a DynamicFrame.
+ transformation_ctx – A transformation context to be used by the callable (optional).
+flatmap
+flatmap(f, transformation_ctx="")
+Uses a passed-in function to create and return a new DynamicFrameCollection based on the DynamicFrames in this collection.
+ f – A function that takes a DynamicFrame as a parameter and returns a DynamicFrame or DynamicFrameCollection.
+ transformation_ctx – A transformation context to be used by the function (optional).

@@ -1,0 +1,22 @@
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption
+Provides a description of Amazon CloudWatch logging options, including the log stream Amazon Resource Name (ARN). 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[LogStreamARN](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption-logstreamarn)" : String
+}
+YAML
+[LogStreamARN](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption-logstreamarn): String
+Properties
+LogStreamARN 
+The ARN of the CloudWatch log to receive application messages.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:.*
+Update requires: No interruption
+See also
+
+CloudWatchLoggingOption in the Amazon Kinesis Data Analytics API Reference 

@@ -1,0 +1,14 @@
+Troubleshoot a Classic Load Balancer: Instance registration
+When you register an instance with your load balancer, there are a number of steps that are taken before the load balancer can begin to send requests to your instance.
+The following are issues your load balancer might encounter when registering your EC2 instances, the potential causes, and the steps you can take to resolve the issues.
+Topics
+ Taking too long to register an EC2 instance
+ Unable to register an instance launched from a paid AMI
+Taking too long to register an EC2 instance
+Problem: Registered EC2 instances are taking longer than expected to be in the InService state.
+Cause: Your instance might be failing the health check. After the initial instance registration steps are completed (it can take up to approximately 30 seconds), the load balancer starts sending health check requests. Your instance is not InService until one health check succeeds.
+Solution: See Connection to the instances has timed out.
+Unable to register an instance launched from a paid AMI
+Problem: Elastic Load Balancing is not registering an instance launched using a paid AMI.
+Cause: Your instances might have been launched using a paid AMI from Amazon DevPay. 
+Solution: Elastic Load Balancing does not support registering instances launched using paid AMIs from Amazon DevPay. Note that you can use paid AMIs from AWS Marketplace. If you are already using a paid AMI from AWS Marketplace and are unable to register an instance launched from that paid AMI, go to the AWS Support Center for assistance.

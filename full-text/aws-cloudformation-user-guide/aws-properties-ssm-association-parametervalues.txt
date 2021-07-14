@@ -1,0 +1,17 @@
+AWS::SSM::Association ParameterValues
+ParameterValues is a property of the AWS::SSM::Association resource that specifies the parameters for the runtime configuration of the document. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ParameterValues](#cfn-ssm-association-parametervalues-parametervalues)" : [ String, ... ]
+}
+YAML
+[ParameterValues](#cfn-ssm-association-parametervalues-parametervalues): 
+    - String
+Properties
+ParameterValues 
+The parameters for the runtime configuration of the document.
+Required: Yes
+Type: List of String
+Update requires: No interruption

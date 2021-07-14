@@ -1,0 +1,9 @@
+Run a build in AWS CodeBuild
+You can use the AWS CodeBuild console, AWS CLI, or AWS SDKs to run a build in CodeBuild.
+Topics
+ Run a build (console)
+ Run a build (AWS CLI)
+ Run a batch build (AWS CLI)
+ Start running builds automatically (AWS CLI)
+ Stop running builds automatically (AWS CLI)
+ Run a build (AWS SDKs)

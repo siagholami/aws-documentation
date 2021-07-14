@@ -1,0 +1,20 @@
+Media
+Describes the input media file in a transcription request.
+Contents
+MediaFileUri 
+The S3 object location of the input media file. The URI must be in the same region as the API endpoint that you are calling. The general form is:
+s3://<AWSDOC-EXAMPLE-BUCKET>/<keyprefix>/<objectkey> 
+For example:
+s3://AWSDOC-EXAMPLE-BUCKET/example.mp4 
+s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4 
+For more information about S3 object names, see Object Keys in the Amazon S3 Developer Guide.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 2000.
+Pattern: (s3://|http(s*)://). 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,8 @@
+Parameter Store walkthroughs
+The walkthroughs in this section show you how to create, store, and run parameters with Parameter Store in a test environment. These walkthroughs show you how to use Parameter Store with other Systems Manager capabilities. You can also use Parameter Store with other AWS services. For more information, see Using SecureString parameters with other AWS services.
+Topics
+ Walkthrough: Create and test a String parameter (console)
+ Walkthrough: Create and update a String parameter (AWS CLI)
+ Walkthrough: Create and update a SecureString parameter (AWS CLI)
+ Walkthrough: Create a SecureString parameter and join an instance to a Domain (PowerShell)
+ Walkthrough: Manage parameters using hierarchies (AWS CLI)

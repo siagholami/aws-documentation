@@ -1,0 +1,6 @@
+Container Insights Performance Log Reference
+This section includes reference information about how Container Insights uses peformance log events to collect metrics.
+Topics
+ Container Insights Performance Log Events for Amazon ECS
+ Container Insights Performance Log Events for Amazon EKS and Kubernetes
+ Relevant Fields in Performance Log Events for Amazon EKS and Kubernetes

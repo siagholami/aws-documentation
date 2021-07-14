@@ -1,0 +1,23 @@
+AWS::Cassandra::Table ProvisionedThroughput
+The provisioned throughput for the table, consisting of ReadCapacityUnits and WriteCapacityUnits.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ReadCapacityUnits](#cfn-cassandra-table-provisionedthroughput-readcapacityunits)" : Integer,
+  "[WriteCapacityUnits](#cfn-cassandra-table-provisionedthroughput-writecapacityunits)" : Integer
+}
+YAML
+[ReadCapacityUnits](#cfn-cassandra-table-provisionedthroughput-readcapacityunits): Integer
+  [WriteCapacityUnits](#cfn-cassandra-table-provisionedthroughput-writecapacityunits): Integer
+Properties
+ReadCapacityUnits 
+The amount of read capacity that's provisioned for the table. For more information, see Read/Write Capacity Mode in the the Amazon Keyspaces Developer Guide.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+WriteCapacityUnits 
+The amount of write capacity that's provisioned for the table. For more information, see Read/Write Capacity Mode in the the Amazon Keyspaces Developer Guide.
+Required: Yes
+Type: Integer
+Update requires: No interruption

@@ -1,0 +1,22 @@
+UiCursorBus
+The UiCursorBus contains functions for manipulating the cursor in the game UI.
+IncrementVisibleCounter
+Increments the UI cursor visible counter. Should be paired with a call to DecrementVisibleCounter.
+Syntax
+void IncrementVisibleCounter()
+DecrementVisibleCounter
+Decrements the UI cursor visible counter. Should be paired with a call to IncrementVisibleCounter.
+Syntax
+void DecrementVisibleCounter()
+IsUiCursorVisible
+Queries whether the UI cursor is currently visible.
+Syntax
+bool IsUiCursorVisible()
+SetUiCursor
+Sets the UI cursor image.
+Syntax
+void SetUiCursor(const char* cursorImagePath)
+GetUiCursorPosition
+Returns the UI cursor position (in pixels) relative to the top left corner of the UI overlay viewport.
+Syntax
+AZ::Vector2 GetUiCursorPosition()

@@ -1,0 +1,64 @@
+Step 1: Set Up an AWS Account and Create an Administrator
+Before you use Kinesis Video Streams for the first time, complete the following tasks: 
+
+
+Sign Up for AWS (unless you already have an account)
+
+
+Create an Administrator IAM User
+
+
+Create an AWS Account Key
+
+
+Sign Up for AWS
+If you already have an AWS account, you can skip this step.
+When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS, including Kinesis Video Streams. When you use Kinesis Video Streams, you are charged based on the amount of data ingested into, stored by, and consumed from the service. If you are a new AWS customer, you can get started with Kinesis Video Streams for free. For more information, see AWS Free Usage Tier.
+To create an AWS account
+
+
+Open https://portal.aws.amazon.com/billing/signup.
+
+
+Follow the online instructions.
+
+
+Part of the sign-up procedure involves receiving a phone call and entering a verification code on the phone keypad.
+Write down your AWS account ID because you need it for the next task.
+Create an Administrator IAM User
+When you sign up for AWS, you provide an email address and password that is associated with your AWS account. This is your AWS account root user. Its credentials provide complete access to all of your AWS resources. 
+Note
+For security reasons, we recommend that you use the root user only to create an administrator, which is an IAM user with full permissions to your AWS account. You can then use this administrator to create other IAM users and roles with limited permissions. For more information, see IAM Best Practices and Creating an Admin User and Group in the IAM User Guide. 
+To create an administrator and sign into the console
+
+
+Create an administrator in your AWS account. For instructions, see Creating Your First IAM User and Administrators Group in the IAM User Guide.
+
+
+As an administrator, you can sign in to the console using a special URL. For more information, see How Users Sign in to Your Account in the IAM User Guide.
+
+
+The administrator can create more users in the account. IAM users by default don't have any permissions. The administrator can create users and manage their permissions. For more information, see Creating Your First IAM User and Administrators Group. 
+For more information about IAM, see the following:
+ AWS Identity and Access Management (IAM)
+ Getting Started
+ IAM User Guide
+Create an AWS Account Key
+You will need an AWS Account Key to access Kinesis Video Streams programmatically. 
+To create an AWS Account Key, do the following:
+
+
+Sign in to the AWS Management Console and open the IAM console at https://console.aws.amazon.com/iam/.
+
+
+Choose Users in the navigation bar, and choose the Admininstrator user. 
+
+
+Choose the Security credentials tab, and choose Create access key.
+
+
+Record the Access key ID. Choose Show under Secret access key. Record the Secret access key.
+
+
+Next Step
+Step 2: Create a Kinesis Video Stream

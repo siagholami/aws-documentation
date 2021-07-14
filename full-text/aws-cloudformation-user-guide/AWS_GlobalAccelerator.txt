@@ -1,0 +1,5 @@
+GlobalAccelerator resource type reference
+Resource types
+ AWS::GlobalAccelerator::Accelerator
+ AWS::GlobalAccelerator::EndpointGroup
+ AWS::GlobalAccelerator::Listener

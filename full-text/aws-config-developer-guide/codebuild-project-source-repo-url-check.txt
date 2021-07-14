@@ -1,0 +1,9 @@
+codebuild-project-source-repo-url-check
+Checks whether the GitHub or Bitbucket source repository URL contains either personal access tokens or user name and password. The rule is COMPLIANT with the usage of OAuth to grant authorization for accessing GitHub or Bitbucket repositories.
+Identifier: CODEBUILD_PROJECT_SOURCE_REPO_URL_CHECK
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions except China (Beijing), China (Ningxia), AWS GovCloud (US-East), AWS GovCloud (US-West), Europe (Stockholm), Africa (Cape Town) and Europe (Milan)
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

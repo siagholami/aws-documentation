@@ -1,0 +1,7 @@
+SHOW CREATE VIEW
+Shows the SQL statement that creates the specified view.
+Synopsis
+SHOW CREATE VIEW view_name
+Examples
+SHOW CREATE VIEW orders_by_date
+See also CREATE VIEW and DROP VIEW.

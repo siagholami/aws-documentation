@@ -1,0 +1,96 @@
+AWS IoT Analytics User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS IoT Analytics?
+AWS IoT Analytics console quickstart guide
+Getting started with AWS IoT Analytics
+Creating a channel
+Creating a data store
+Creating a pipeline
+Ingesting data to AWS IoT Analytics
+Monitoring the ingested data
+Creating a dataset
+Exploring AWS IoT Analytics data
+Keeping multiple versions of datasets
+Message payload syntax
+Pipeline activities
+Channel activity
+Datastore activity
+AWS Lambda activity
+AddAttributes activity
+RemoveAttributes activity
+SelectAttributes activity
+Filter activity
+DeviceRegistryEnrich activity
+DeviceShadowEnrich activity
+Math activity
+Math activity operators and functions
+abs(Decimal)
+acos(Decimal)
+asin(Decimal)
+atan(Decimal)
+atan2(Decimal, Decimal)
+ceil(Decimal)
+cos(Decimal)
+cosh(Decimal)
+exp(Decimal)
+ln(Decimal)
+log(Decimal)
+mod(Decimal, Decimal)
+power(Decimal, Decimal)
+round(Decimal)
+sign(Decimal)
+sin(Decimal)
+sinh(Decimal)
+sqrt(Decimal)
+tan(Decimal)
+tanh(Decimal)
+trunc(Decimal, Integer)
+
+
+
+
+RunPipelineActivity
+Reprocessing channel data
+Automating your workflow
+Use cases
+Using a Docker container
+Permissions
+Using the CreateDataset API via Java and the AWS CLI
+Containerizing a notebook
+Using a custom container for analysis
+Visualizing AWS IoT Analytics data
+Tagging your AWS IoT Analytics resources
+SQL expressions in AWS IoT Analytics
+Security in AWS IoT Analytics
+AWS Identity and Access Management in AWS IoT Analytics
+Authenticating with identities
+Managing access using policies
+How AWS IoT Analytics works with IAM
+AWS IoT Analytics identity-based policy examples
+Troubleshooting AWS IoT Analytics identity and access
+
+
+Logging and monitoring in AWS IoT Analytics
+Monitoring with Amazon CloudWatch Logs
+Logging AWS IoT Analytics API calls with AWS CloudTrail
+
+
+Compliance validation for AWS IoT Analytics
+Resilience in AWS IoT Analytics
+Infrastructure security in AWS IoT Analytics
+AWS IoT Analytics quotas
+AWS IoT Analytics commands
+Troubleshooting AWS IoT Analytics
+Document history for the AWS IoT Analytics user guide

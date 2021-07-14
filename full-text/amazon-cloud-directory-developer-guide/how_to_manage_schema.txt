@@ -1,0 +1,9 @@
+Manage Your Schema
+This section describes how to maintain common schema tasks for your Cloud Directory environment.
+Topics
+ Create Your Schema
+ Delete a Schema
+ Download a Schema
+ Publish a Schema
+ Update Your Schema
+ Upgrade Your Schema

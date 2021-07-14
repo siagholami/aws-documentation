@@ -1,0 +1,49 @@
+Supported Caffe Models
+AWS DeepLens supports the following deep learning models.trained with Caffe.
+
+
+
+Supported Caffe Models
+Model
+Description
+
+
+
+
+AlexNet
+An image classification model trained on the ImageNet dataset using Caffe
+
+
+
+DenseNet
+An image classification model from the original Torch model
+
+
+
+Inception
+An image classification model converted from the original Apache MXNet model
+
+
+
+MobileNet
+An image classification model trained on the ImageNet dataset using Caffe
+
+
+
+ResNet
+An image classification model trained on the ImageNet dataset using Caffe
+
+
+
+SqueezeNet
+An image classification model trained on the ImageNet dataset using Caffe
+
+
+
+VGG
+An image classification model trained on the ImageNet dataset usng Caffe
+
+
+
+
+For more information about Caffe models, see Caffe Model Zoo.

@@ -1,0 +1,22 @@
+AWS::KinesisAnalyticsV2::ApplicationOutput KinesisStreamsOutput
+When you configure a SQL-based Kinesis Data Analytics application's output, identifies a Kinesis data stream as the destination. You provide the stream Amazon Resource Name (ARN). 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ResourceARN](#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn)" : String
+}
+YAML
+[ResourceARN](#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn): String
+Properties
+ResourceARN 
+The ARN of the destination Kinesis data stream to write to.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:.*
+Update requires: No interruption
+See also
+
+KinesisStreamsOutput in the Amazon Kinesis Data Analytics API Reference 

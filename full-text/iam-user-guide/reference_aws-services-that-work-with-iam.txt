@@ -1,0 +1,2251 @@
+AWS services that work with IAM
+The AWS services listed below are grouped by their AWS product categories and include information about what IAM features they support:
+ Service – You can choose the name of a service to view the AWS documentation about IAM authorization and access for that service.
+ Actions – You can specify individual actions in a policy. If the service does not support this feature, then All actions is selected in the visual editor. In a JSON policy document, you must use * in the Action element. For a list of actions in each service, see Actions, Resources, and Condition Keys for AWS Services.
+ Resource-level permissions – You can use ARNs to specify individual resources in the policy. If the service does not support this feature, then All resources is chosen in the policy visual editor. In a JSON policy document, you must use * in the Resource element. Some actions, such as List* actions, do not support specifying an ARN because they are designed to return multiple resources. If a service supports this feature for some resources but not others, it is indicated by yellow cells in the table. See the documentation for that service for more information.
+ Resource-based policies – You can attach resource-based policies to a resource within the service. Resource-based policies include a Principal element to specify which IAM identities can access that resource. For more information, see Identity-based policies and resource-based policies.
+ Authorization based on tags – You can use resource tags in the condition of a policy to control access to a resource in the service. You do this using the aws:ResourceTag global condition key or service-specific tags, such as https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ExamplePolicies_EC2.html#iam-example-taggingresources. For more information about defining permissions based on attributes such as tags, see What is ABAC for AWS?.
+ Temporary credentials – Users signed in with federation, a cross-account role, or a service role can access the service. Temporary security credentials are obtained by calling AWS STS API operations like AssumeRole or GetFederationToken. For more information, see Temporary security credentials in IAM. 
+ Service-linked roles – A service-linked role gives the service permission to access resources in other services to complete an action on your behalf. Choose the Yes link to see the documentation for services that support these roles. For more information, see Using service-linked roles.
+ More information – If a service doesn't fully support a feature, you can review the footnotes for an entry to view the limitations and links to related information.
+Compute services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Batch
+ Yes
+ Partial
+ No
+ No
+ Yes
+ Yes
+
+
+Amazon Elastic Compute Cloud (Amazon EC2)
+ Yes
+ Partial
+ No
+ Partial
+ Yes
+ Partial¹
+
+
+Amazon EC2 Auto Scaling
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon EC2 Image Builder
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elastic Beanstalk
+ Yes
+ Partial
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Elastic Container Registry (Amazon ECR)
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ No
+
+
+Amazon Elastic Container Service (Amazon ECS)
+ Yes
+ Partial²
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Elastic Kubernetes Service (Amazon EKS)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Elastic Inference
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+Elastic Load Balancing
+ Yes
+ Partial
+ No
+ Partial
+ Yes
+ Yes
+
+
+AWS Lambda
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ Partial³
+
+
+Amazon Lightsail
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Outposts
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Serverless Application Repository
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+
+¹ Amazon EC2 service-linked roles cannot be created using the AWS Management Console, and can be used only for the following features: Scheduled Instances, Spot Instance Requests, Spot Fleet Requests.
+² Only some Amazon ECS actions support resource-level permissions.
+³ AWS Lambda doesn't have service-linked roles, but Lambda@Edge does. For more information, see Service-Linked Roles for Lambda@Edge in the Amazon CloudFront Developer Guide.
+Storage services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Backup
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+
+
+AWS Backup Storage
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Elastic Block Store (Amazon EBS)
+ Yes
+ Partial
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Elastic File System (Amazon EFS)
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+
+
+Amazon FSx
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+
+
+Amazon S3 Glacier
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ No
+
+
+AWS Import/Export
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon Simple Storage Service (Amazon S3)
+ Yes
+ Yes
+ Yes
+ Partial¹
+ Yes
+ No
+
+
+AWS Snowball
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Snowball Edge
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Storage Gateway
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+¹ Amazon S3 supports tag-based authorization for only object resources. 
+Database services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon DynamoDB
+ Yes
+ Yes
+ No
+ No
+ Yes
+ Yes
+
+
+Amazon ElastiCache
+ Yes
+ Yes
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Managed Apache Cassandra Service (MCS)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Quantum Ledger Database (Amazon QLDB)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Redshift
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Redshift Data API
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon Relational Database Service (Amazon RDS)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon RDS Data API
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon SimpleDB
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+
+Developer tools services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Cloud9
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+
+
+AWS Code Artifact
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+CodeBuild
+ Yes
+ Yes
+ Yes¹
+ Partial²
+ Yes
+ No
+
+
+CodeCommit
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CodeDeploy
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+CodePipeline
+ Yes
+ Partial
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CodeStar
+ Yes
+ Partial¹
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CodeStar Connections
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CodeStar Notifications
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS X-Ray
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+
+¹ CodeBuild supports cross-account resource sharing using AWS RAM.
+² CodeBuild supports authorization based on tags for project-based actions.
+Security, identity, and compliance services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Certificate Manager Private Certificate Authority (ACM)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Artifact
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Certificate Manager (ACM)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CloudHSM
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Cognito
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Detective
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Directory Service
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Firewall Manager
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Partial
+
+
+Amazon GuardDuty
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Partial
+
+
+AWS Identity and Access Management (IAM)
+ Yes
+ Yes
+ Partial¹
+ Partial²
+ Partial³
+ No
+
+
+IAM Access Analyzer
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Partial
+
+
+Amazon Inspector
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Key Management Service (AWS KMS)
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+
+
+Amazon Macie
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Macie Classic
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Resource Access Manager (AWS RAM)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Secrets Manager
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ No
+
+
+AWS Security Hub
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS Single Sign-On (AWS SSO)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS SSO Directory
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS SSO Identity Store
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Security Token Service (AWS STS)
+ Yes
+ Partial⁴
+ No
+ Yes
+ Partial⁵
+ No
+
+
+AWS Shield Advanced
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS WAF
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS WAF Classic
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+
+¹ IAM supports only one type of resource-based policy called a role trust policy, which is attached to an IAM role. For more information, see Granting a user permissions to switch roles.
+² IAM supports tag-based access control for only user and role resources.
+³ Only some of the API actions for IAM can be called with temporary credentials. For more information, see Comparing your API options.
+⁴ AWS STS does not have "resources," but does allow restricting access in a similar way to users. For more information, see Denying Access to Temporary Security Credentials by Name.
+⁵ Only some of the API operations for AWS STS support calling with temporary credentials. For more information, see Comparing your API options.
+Machine learning services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon CodeGuru
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+Amazon CodeGuru Profiler
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon CodeGuru Reviewer
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Comprehend
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS DeepComposer
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS DeepRacer
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+Forecast
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Fraud Detector
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Ground Truth Labeling
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon Kendra
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Lex
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Machine Learning
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Personalize
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Polly
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Rekognition
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon SageMaker
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Textract
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Transcribe
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon Translate
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+
+Management and governance services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Application Auto Scaling
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS AppConfig
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Auto Scaling
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Chatbot 
+ Yes
+ Yes
+ No
+ No
+ Yes
+ Yes
+
+
+AWS CloudFormation
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS CloudTrail
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon CloudWatch
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Partial¹
+
+
+Amazon CloudWatch Events Application Insights
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon CloudWatch Events
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon CloudWatch Logs 
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+Amazon CloudWatch Synthetics
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Compute Optimizer
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Config
+ Yes
+ Partial²
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Data Lifecycle Manager
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Health
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS OpsWorks
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS OpsWorks for Chef Automate
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Organizations
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS Resource Groups
+ Yes
+ Yes
+ No
+ Yes
+ Partial³
+ No
+
+
+Resource Groups Tagging API
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Service Catalog
+ Yes
+ No
+ No
+ Partial⁴
+ Yes
+ No
+
+
+AWS Systems Manager
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS Tag Editor
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Trusted Advisor
+ Partial⁵
+ Yes
+ No
+ No
+ Partial
+ Yes
+
+
+AWS Well-Architected Tool
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+
+¹ Amazon CloudWatch service-linked roles cannot be created using the AWS Management Console, and support only the  Alarm Actions feature.
+² AWS Config supports resource-level permissions for multi-account multi-Region data aggregation and AWS Config Rules. For a list of supported resources, see the Multi-Account Multi-Region Data Aggregation section and AWS Config Rules section of AWS Config API Guide.
+³ Users can assume a role with a policy that allows AWS Resource Groups operations.
+⁴ AWS Service Catalog supports tag-based access control for only actions that match API operations with one resource in the input.
+⁵ API access to Trusted Advisor is through the AWS Support API and is controlled by AWS Support IAM policies.
+Migration and transfer services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Application Discovery Service
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+AWS Connector Service
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Transfer for SFTP
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Database Migration Service
+ Yes
+ Yes
+ Yes¹
+ Yes
+ Yes
+ No
+
+
+AWS DataSync
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Migration Hub
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Server Migration Service
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+
+¹ You can create and modify policies that are attached to AWS KMS encryption keys you create to encrypt data migrated to supported target endpoints. The supported target endpoints include Amazon Redshift and Amazon S3. For more information, see Creating and Using AWS KMS Keys to Encrypt Amazon Redshift Target Data and Creating AWS KMS Keys to Encrypt Amazon S3 Target Objects in the AWS Database Migration Service User Guide.
+Mobile services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Amplify
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Device Farm
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Networking and content delivery services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon API Gateway
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+
+
+AWS App Mesh
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon CloudFront
+ Partial¹
+ Yes
+ No
+ Yes
+ Yes
+ Partial⁴
+
+
+AWS Cloud Map
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Direct Connect
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Global Accelerator
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Network Manager
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+
+
+Amazon Route 53
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Route 53 Resolver
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Virtual Private Cloud (Amazon VPC)
+ Yes
+ Partial²
+ Partial³
+ No
+ Yes
+ No
+
+
+
+¹ CloudFront does not support action-level permissions for creating CloudFront key pairs. You must use an AWS account root user to create a CloudFront key pair. For more information, see Creating CloudFront Key Pairs for Your Trusted Signers in the Amazon CloudFront Developer Guide. 
+² In an IAM user policy, you cannot restrict permissions to a specific Amazon VPC endpoint. Any Action element that includes the ec2:*VpcEndpoint* or ec2:DescribePrefixLists API actions must specify ""Resource": "*"". For more information, see Controlling the Use of Endpoints in the Amazon VPC User Guide. 
+³ Amazon VPC supports attaching a single resource policy to a VPC endpoint to restrict what can be accessed through that endpoint. For more information about using resource-based policies to control access to resources from specific Amazon VPC endpoints, see Using Endpoint Policies in the Amazon VPC User Guide.
+⁴ Amazon CloudFront doesn't have service-linked roles, but Lambda@Edge does. For more information, see Service-Linked Roles for Lambda@Edge in the Amazon CloudFront Developer Guide.
+Media services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Elastic Transcoder
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Elemental Activations
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elemental Appliances and Software
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elemental MediaConnect
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Elemental MediaConvert
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elemental MediaLive
+ Yes
+ Yes
+ Yes
+ Yes
+ Yes
+ No
+
+
+AWS Elemental MediaPackage
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elemental MediaPackage VOD
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Elemental MediaStore
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+AWS Elemental MediaTailor
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Interactive Video Service
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Kinesis Video Streams
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Analytics services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Athena
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon CloudSearch
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Data Exchange
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS Data Pipeline
+ Yes
+ No
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Elasticsearch Service
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+
+
+Amazon EMR
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS Glue
+ Yes
+ Yes
+ Yes
+ Partial
+ Yes
+ No
+
+
+Amazon Kinesis Data Analytics
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Kinesis Data Firehose
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Kinesis Data Streams
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Lake Formation
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+Amazon Managed Streaming for Apache Kafka (MSK)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon QuickSight
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Application integration services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon AppFlow
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon EventBridge
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon EventBridge Schemas
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon MQ
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Simple Notification Service (Amazon SNS)
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+Amazon Simple Queue Service (Amazon SQS)
+ Yes
+ Yes
+ Yes
+ No
+ Yes
+ No
+
+
+AWS Step Functions
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Simple Workflow Service (Amazon SWF)
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Business applications services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Alexa for Business
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon Chime
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Honeycode
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+Amazon WorkMail
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+
+Satellite services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Ground Station
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Internet of Things services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS IoT Greengrass
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS IoT
+ Yes
+ Yes
+ Partial¹
+ Yes
+ Yes
+ No
+
+
+AWS IoT Analytics
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS IoT Device Tester
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS IoT Events
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+AWS IoT SiteWise
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+AWS IoT Things Graph
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+FreeRTOS
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+¹ Devices connected to AWS IoT are authenticated by using X.509 certificates or using Amazon Cognito Identities. You can attach AWS IoT policies to an X.509 certificate or Amazon Cognito Identity to control what the device is authorized to do. For more information, see Security and Identity for AWS IoT in the AWS IoT Developer Guide. 
+Robotics services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+RoboMaker
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+
+Quantum Computing Services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Bracket
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+
+Blockchain services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Managed Blockchain
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+
+Game development services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon GameLift
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+AR & VR services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Sumerian
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+
+Customer enablement services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS IQ
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS IQ Permissions
+ No
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Support
+ Yes
+ No
+ No
+ No
+ Yes
+ Yes
+
+
+
+Customer engagement services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon Connect
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon Pinpoint
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon Simple Email Service (Amazon SES)
+ Yes
+ Partial¹
+ Yes
+ Yes
+ Partial²
+ No
+
+
+
+¹ You can only use resource-level permissions in policy statements that refer to actions related to sending email, such as ses:SendEmail or ses:SendRawEmail. For policy statements that refer to any other actions, the Resource element can only contain *.
+² Only the Amazon SES API supports temporary security credentials. The Amazon SES SMTP interface does not support SMTP credentials that are derived from temporary security credentials. 
+End user computing services
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+Amazon AppStream
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon AppStream 2.0
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+Amazon WAM
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon WorkDocs
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+Amazon WorkLink
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ Yes
+
+
+Amazon WorkSpaces
+ Yes
+ Yes
+ No
+ Yes
+ Yes
+ No
+
+
+
+Additional resources
+
+
+
+Service
+Actions
+Resource-level permissions
+Resource-based policies
+Authorization based on tags
+Temporary credentials
+Service-linked roles
+
+
+
+
+AWS Billing and Cost Management
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Budget Service
+ Yes
+ Yes
+ No
+ No
+ No
+ No
+
+
+AWS Cost and Usage Report
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Cost Explorer
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Marketplace
+ Yes
+ No
+ No
+ No
+ Yes
+ No
+
+
+AWS Marketplace Catalog
+ Yes
+ Yes
+ No
+ No
+ Yes
+ No
+
+
+AWS Private Marketplace
+ Yes
+ No
+ No
+ No
+ No
+ No
+
+

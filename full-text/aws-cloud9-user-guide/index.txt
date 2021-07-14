@@ -1,0 +1,157 @@
+AWS Cloud9 User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Cloud9?
+What Can I Do with AWS Cloud9?
+Additional information about AWS Cloud9
+Setting up AWS Cloud9
+Individual user setup for AWS Cloud9
+Team setup for AWS Cloud9
+Enterprise setup for AWS Cloud9
+Additional Setup Options for AWS Cloud9 (Team and Enterprise)
+Individual student setup for AWS Cloud9
+Classroom Setup for AWS Cloud9
+Getting Started: Basic Tutorials for AWS Cloud9
+Tutorial: Hello AWS Cloud9 (console)
+Step 1: Create an Environment
+Step 2: Basic tour of the IDE
+Step 3: Clean up
+Related information
+
+
+Tutorial: Hello AWS Cloud9 (CLI)
+Step 1: Create an Environment
+Step 2: Basic Tour of the IDE
+Step 3: Clean Up
+Related Information
+
+
+Working with Environments in AWS Cloud9
+Creating an Environment in AWS Cloud9
+Creating an EC2 Environment
+Creating an SSH Environment
+
+
+Accessing no-ingress EC2 instances with AWS Systems Manager
+Opening an environment in AWS Cloud9
+Calling AWS services from an environment in AWS Cloud9
+Changing environment settings in AWS Cloud9
+Working with Shared Environments in AWS Cloud9
+Moving an environment and resizing or encrypting Amazon EBS volumes
+Deleting an Environment in AWS Cloud9
+Working with the AWS Cloud9 Integrated Development Environment (IDE)
+Tour the AWS Cloud9 IDE
+Language Support in the AWS Cloud9 Integrated Development Environment (IDE)
+Menu Bar Commands Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Finding and Replacing Text in the AWS Cloud9 Integrated Development Environment (IDE)
+Previewing Files in the AWS Cloud9 Integrated Development Environment (IDE)
+Previewing running applications in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with File Revisions in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Images Files in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Builders, Runners, and Debuggers in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Language Projects in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Custom Environment Variables in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Project Settings in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with User Settings in the AWS Cloud9 IDE
+Working with AWS Project and User Settings in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with Keybindings in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with themes in the AWS Cloud9 Integrated Development Environment (IDE)
+Managing initialization scripts in the AWS Cloud9 Integrated Development Environment (IDE)
+MacOS Default Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+MacOS Vim Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+MacOS Emacs Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+MacOS Sublime Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Windows / Linux Default Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Windows / Linux Vim Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Windows / Linux Emacs Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Windows / Linux Sublime Keybindings Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Commands Reference for the AWS Cloud9 Integrated Development Environment (IDE)
+Working with other AWS services
+Working with Amazon Lightsail instances in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with AWS CodeStar Projects in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with AWS Lambda functions in the AWS Cloud9 Integrated Development Environment (IDE)
+Working with AWS CodePipeline in the AWS Cloud9 Integrated Development Environment (IDE)
+Tutorials and samples for AWS Cloud9
+AWS Lambda Tutorial for AWS Cloud9
+Step 1: Create and Open the Environment
+Step 2: Create the Lambda Function and API
+Step 3: Add Code to the Function
+Step 4: Run or Debug the Function Locally
+Step 5: Run or Debug the API Locally
+Step 6: Run the Function in Production
+Step 7: Run the API in Production
+Step 8: Change the Function and Deploy the Change
+Step 9: Clean Up
+Related Information
+
+
+Advanced AWS Lambda Tutorial for AWS Cloud9
+AWS Command Line Interface and aws-shell Sample for AWS Cloud9
+AWS CodeCommit Sample for AWS Cloud9
+GitHub Sample for AWS Cloud9
+Amazon DynamoDB Sample for AWS Cloud9
+AWS CDK Sample for AWS Cloud9
+LAMP Sample for AWS Cloud9
+WordPress Sample for AWS Cloud9
+Java Sample for AWS Cloud9
+C Sample for AWS Cloud9
+Python Tutorial for AWS Cloud9
+.NET Core sample for AWS Cloud9
+Node.js Sample for AWS Cloud9
+PHP Sample for AWS Cloud9
+Tutorial: Ruby in AWS Cloud9
+Step 1: Install Required Tools
+Step 2: Add Code
+Step 3: Run the Code
+Step 4: Install and Configure the AWS SDK for Ruby
+Step 5: Add AWS SDK Code
+Step 6: Run the AWS SDK Code
+Step 7: Clean Up
+
+
+Go Sample for AWS Cloud9
+TypeScript Sample for AWS Cloud9
+Docker sample for AWS Cloud9
+Advanced Topics for AWS Cloud9
+EC2 Environments versus SSH Environments in AWS Cloud9
+VPC settings for AWS Cloud9 Development Environments
+AWS Cloud9 SSH Development Environment host requirements
+Using the AWS Cloud9 Installer
+Inbound SSH IP address ranges for AWS Cloud9
+Amazon Machine Image (AMI) Contents for an AWS Cloud9 EC2 Development Environment
+Using Service-Linked Roles for AWS Cloud9
+Logging AWS Cloud9 API Calls with AWS CloudTrail
+Tags
+Security for AWS Cloud9
+Data protection in AWS Cloud9
+Data encryption
+
+
+Identity and access management in AWS Cloud9
+Audience
+Authenticating with identities
+Managing access using policies
+How AWS Cloud9 works with IAM
+
+
+Logging and monitoring in AWS Cloud9
+Compliance validation for AWS Cloud9
+Resilience in AWS Cloud9
+Infrastructure security in AWS Cloud9
+Configuration and vulnerability analysis in AWS Cloud9
+Security best practices for AWS Cloud9
+Troubleshooting AWS Cloud9
+Supported Browsers for AWS Cloud9
+Limits for AWS Cloud9
+Document history for the AWS Cloud9 User Guide

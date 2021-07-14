@@ -1,0 +1,8 @@
+SQL Reference for Amazon S3 Select and S3 Glacier Select
+This reference contains a description of the structured query language (SQL) elements that are supported by Amazon S3 Select and S3 Glacier Select.
+Topics
+ SELECT Command
+ Data Types
+ Operators
+ Reserved Keywords
+ SQL Functions

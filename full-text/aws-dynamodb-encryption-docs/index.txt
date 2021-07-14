@@ -1,0 +1,37 @@
+Amazon DynamoDB Encryption Client Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is the Amazon DynamoDB Encryption Client?
+Which fields are encrypted and signed?
+How the DynamoDB Encryption Client works
+Client-side and server-side encryption
+Amazon DynamoDB Encryption Client concepts
+How to choose a cryptographic materials provider
+Direct KMS Materials Provider
+Wrapped Materials Provider
+Most Recent Provider
+Static Materials Provider
+Amazon DynamoDB Encryption Client available programming languages
+Amazon DynamoDB Encryption Client for Java
+Using the DynamoDB Encryption Client for Java
+Example code for the DynamoDB Encryption Client for Java
+
+
+DynamoDB Encryption Client for Python
+Using the DynamoDB Encryption Client for Python
+Example code for the DynamoDB Encryption Client for Python
+
+
+Troubleshooting issues in your DynamoDB Encryption Client application
+Document history for the Amazon DynamoDB Encryption Client Developer Guide

@@ -1,0 +1,7 @@
+Importing and Exporting Terrain Data
+You can import and export terrain data such as color maps, terrain blocks, and splat maps.
+Topics
+ Importing a Megaterrain Texture
+ Importing and Exporting Terrain Blocks
+ Importing Splat Maps
+ Terrain FAQs

@@ -1,0 +1,5 @@
+Monitor Your AD Connector Directory
+You can monitor your AD Connector directory with the following methods:
+Topics
+ Understanding Your Directory Status
+ Configure Directory Status Notifications

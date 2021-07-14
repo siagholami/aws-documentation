@@ -1,0 +1,9 @@
+Modifying a role
+You can use the AWS Management Console, the AWS CLI, or the IAM API to make changes to a role.
+Topics
+ View role access
+ Modifying a role (console)
+ Modifying a role (AWS CLI)
+ Modifying a role (AWS API)
+View role access
+Before you change the permissions for a role, you should review its recent service-level activity. This is important because you don't want to remove access from a principal (person or application) who is using it. For more information about viewing last accessed information, see Refining permissions in AWS using last accessed information.

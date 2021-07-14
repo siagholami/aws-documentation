@@ -1,0 +1,5 @@
+Setting Up the AWS SDKs
+Download and install the AWS SDKs that you want to use. This guide provides examples for Python, and JavaScript using the AWS Amplify library. For information about other AWS SDKs, see Tools for Amazon Web Services.
+ AWS SDK for Python (Boto3)
+To confirm that your Python environment is configured correctly for use with Amazon Personalize, see Getting Started (AWS SDK for Python).
+ AWS Amplify

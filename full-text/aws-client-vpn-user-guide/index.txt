@@ -1,0 +1,31 @@
+AWS Client VPN User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Client VPN?
+Getting started with Client VPN
+Connect using the AWS-provided client
+Windows
+macOS
+Release notes for the AWS-provided client
+Connect using an OpenVPN client
+Windows
+Android and iOS
+MacOS
+Ubuntu
+Troubleshooting your Client VPN connection
+Windows troubleshooting
+MacOS troubleshooting
+Ubuntu troubleshooting
+Common problems
+Document history

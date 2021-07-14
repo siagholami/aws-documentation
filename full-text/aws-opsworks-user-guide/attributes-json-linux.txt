@@ -1,0 +1,14 @@
+Stack Configuration and Deployment Attributes: Linux
+This topic includes the most commonly used stack configuration and deployment attributes and their associated node syntax. It is organized around the stack configuration namespace structure that is used by Linux stacks. Note that the same attribute names are sometimes used for different purposes, and occur in different namespaces. For example, id can refer to a stack ID, a layer ID, an app ID, and so on, so you need the fully qualified name to use the attribute value. A convenient way to visualize this data is as a JSON object. For examples , see Stack Configuration and Deployment Attributes.
+Note
+On Linux instances, AWS OpsWorks Stacks installs this JSON object on each instance in addition to adding the data to the node object. You can retrieve it by using the agent CLI's get_json command.
+Topics
+ opsworks Attributes
+ opsworks_custom_cookbooks Attributes
+ dependencies Attributes
+ ganglia Attributes
+ mysql Attributes
+ passenger Attributes
+ opsworks_bundler Attributes
+ deploy Attributes
+ Other Top-Level Attributes

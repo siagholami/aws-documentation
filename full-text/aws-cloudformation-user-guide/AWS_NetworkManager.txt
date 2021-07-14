@@ -1,0 +1,9 @@
+NetworkManager resource type reference
+Resource types
+ AWS::NetworkManager::CustomerGatewayAssociation
+ AWS::NetworkManager::Device
+ AWS::NetworkManager::GlobalNetwork
+ AWS::NetworkManager::Link
+ AWS::NetworkManager::LinkAssociation
+ AWS::NetworkManager::Site
+ AWS::NetworkManager::TransitGatewayRegistration

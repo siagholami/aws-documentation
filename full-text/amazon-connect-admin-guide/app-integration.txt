@@ -1,0 +1,19 @@
+Use an allow list for integrated applications
+All domains that embed the CCP for a particular instance must be explicitly allowed for cross-domain access to the instance. For example, to integrate with Salesforce, you must place your Salesforce Visualforce domain in an allow list.
+To allow a domain URL
+
+
+Open the Amazon Connect console at https://console.aws.amazon.com/connect/.
+
+
+Choose the name of the instance from Instance Alias.
+
+
+In the navigation pane, choose Application integration.
+
+
+Choose Add origin.
+
+
+Type the URL and choose Add.
+

@@ -1,0 +1,8 @@
+Using the LightingArc Sample
+The LightningArc Sample uses the LightningArc gem to demonstrate the various prescripted arc types.
+
+Topics
+ Enabling the Lightning Gem
+ Placing Lightning Arc
+ Configuring the Lightning Arc
+ Customizing a Lightning Arc Preset

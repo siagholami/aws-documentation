@@ -1,0 +1,13 @@
+Managing Catalogs
+AWS Service Catalog provides an interface for managing portfolios, products, and constraints from an administrator console.
+Note
+To perform any of the tasks in this section, you must have administrator permissions for AWS Service Catalog. For more information, see Identity and Access Management in AWS Service Catalog. 
+Topics
+ Managing Portfolios
+ Managing Products
+ Using AWS Service Catalog Constraints
+ AWS Service Catalog Service Actions
+ Adding AWS Marketplace Products to Your Portfolio
+ Portfolio Sharing
+ Using AWS CloudFormation StackSets
+ Managing Budgets

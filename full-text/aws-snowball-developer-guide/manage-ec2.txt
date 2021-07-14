@@ -1,0 +1,143 @@
+
+This guide is for the Snowball Edge. If you are looking for documentation for the Snowball, see the AWS Snowball User Guide.
+
+Using Amazon EC2 Compute Instances Locally
+You can use AWS OpsHub to run pre-installed software on virtual servers (instances) locally on your device, and also to manage Amazon EC2 instances on your device. 
+Topics
+ Launching an EC2 Instance
+ Stopping an EC2 Instance
+ Starting an EC2 Instance
+ Terminating an EC2 Instance
+ Using Storage Volumes Locally
+Launching an EC2 Instance
+Follow these steps to launch an Amazon EC2 instance using AWS OpsHub.
+To launch an Amazon EC2 instance
+
+
+Open the AWS OpsHub application.
+
+
+In the Start computing section on the dashboard, choose Get started. Or, choose the Services menu at the top, and then choose Compute (EC2) to open the Compute page. All your compute resources appear in the Resources section.
+
+
+If you have Amazon EC2 instances running on your device, they appear in the Instance name column under Instances. You can see details of each instance on this page.
+
+
+Choose Launch instance. The launch instance wizard opens.
+
+
+For Device, choose the Snow device that you want to launch the EC2 instance on. 
+
+
+For Image (AMI), choose an Amazon Machine Image (AMI) from the list. This AMI is used to launch your instance.
+
+
+For Instance type, choose one from the list.
+
+
+Choose how you want to attach an IP address to the instance. You have the following options:
+    Create public IP address (VNI)—choose this option to create a new IP address using a physical network interface. Choose a physical network interface and IP address assignment.
+    Use existing IP address (VNI)—choose this option to use an existing IP address and then use existing virtual network interfaces. Choose a physical network interface and a virtual network interface.
+    Do not attach IP address—choose this option if you don't want to attach an IP address. 
+
+
+Choose Launch. You should see your instance launching in the Compute instances section. The State is Pending and then changes to Running when done.
+
+
+Stopping an EC2 Instance
+Use the following steps to use AWS OpsHub to stop an Amazon EC2 instance.
+To stop an EC2 instance
+
+
+Open the AWS OpsHub application.
+
+
+In the Start computing section of the dashboard, choose Get started. Or, choose the Services menu at the top, and then choose Compute (EC2) to open the Compute page. 
+
+
+All your compute resources appear in the Resources section.
+
+
+If you have Amazon EC2 instances running on your device, they appear in the Instance name column under Instances.
+
+
+Choose the instance that you want to stop, and choose Stop. The State changes to Stopping, and then to Stopped when done.
+
+
+Starting an EC2 Instance
+Use these steps to start an Amazon EC2 instance using AWS OpsHub.
+To start an EC2 instance
+
+
+Open the AWS OpsHub application.
+
+
+In the Start computing section of the dashboard, choose Get started. Or, choose the Services menu at the top, and then choose Compute (EC2) to open the Compute page. 
+
+
+Your compute resources appear in the Resources section.
+
+
+In the Instance name column, under Instances, find the instance that you want to start.
+
+
+Choose the instance, and then choose Start. The State changes to Pending, and then changes to Running when done.
+
+
+Terminating an EC2 Instance
+After you terminate an Amazon EC2 instance, you can't restart the instance.
+To terminate an EC2 instance
+
+
+Open the AWS OpsHub application.
+
+
+In the Start computing section on the dashboard, choose Get started. Or, choose the Services menu at the top, and then choose Compute (EC2) to open the Compute page. You can see all your compute resources in the Resources section.
+
+
+In the Instance name column, under Instances, find the instance that you want to terminate.
+
+
+Choose the instance, and choose Terminate. The State changes to Terminating, and then to Terminated when done. 
+
+
+After the instance is terminated, you can't restart it.
+Using Storage Volumes Locally
+Amazon EC2 instances use Amazon EBS volumes for storage. In this procedure, you create a storage volume and attach it to your instance using AWS OpsHub.
+To create a storage volume
+
+
+Open the AWS OpsHub application.
+
+
+In the Start computing section on the dashboard, choose Get started. Or, choose the Services menu at the top, and then choose Compute (EC2) to open the Compute page. 
+
+
+Choose the Storage volumes tab. If you have storage volumes on your device, the details about the volumes appear under Storage volumes.
+
+
+Choose Create volume to open the Create volume page.
+
+
+Choose the device that you want to create the volume on, enter the size (in GiBs) that you want to create, and choose the type of volume.
+
+
+Choose Submit. The State is Creating, and changes to Available when done. You can see your volume and details about it in the Volumes tab.
+
+
+To attach a storage volume to your instance
+
+
+Choose the volume that you created, and then choose Attach volume.
+
+
+For Compute instance Id, choose the instance you want to attach the volume to.
+
+
+For Volume Device Name, enter the device name of your volume (for example, /dev/sdh or xvdh).
+
+
+Choose Attach.
+
+
+If you no longer need the volume, you can detach it from the instance and then delete it.

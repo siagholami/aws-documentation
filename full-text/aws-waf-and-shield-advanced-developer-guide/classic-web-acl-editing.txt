@@ -1,0 +1,45 @@
+Editing a Web ACL
+Note
+This is AWS WAF Classic documentation. You should only use this version if you created AWS WAF resources, like rules and web ACLs, in AWS WAF prior to November 2019, and you have not migrated them over to the latest version yet. To migrate your resources, see Migrating your AWS WAF Classic resources to AWS WAF .
+For the latest version of AWS WAF, see AWS WAF. 
+To add or remove rules from a web ACL or change the default action, perform the following procedure. 
+To edit a web ACL
+
+
+Sign in to the AWS Management Console and open the AWS WAF console at https://console.aws.amazon.com/wafv2/. 
+
+
+In the navigation pane, choose Web ACLs.
+
+
+Choose the web ACL that you want to edit.
+
+
+On the Rules tab in the right pane, choose Edit web ACL.
+
+
+To add rules to the web ACL, perform the following steps:
+
+
+In the Rules list, choose the rule that you want to add. 
+
+
+Choose Add rule to web ACL.
+
+
+Repeat steps a and b until you've added all the rules that you want.
+
+
+If you want to change the order of the rules in the web ACL, use the arrows in the Order column. AWS WAF Classic inspects web requests based on the order in which rules appear in the web ACL. 
+
+
+To remove a rule from the web ACL, choose the x at the right of the row for that rule. This doesn't delete the rule from AWS WAF Classic, it just removes the rule from this web ACL.
+
+
+To change the action for a rule or the default action for the web ACL, choose the preferred option.
+Note
+When setting the action for a rule group or an AWS Marketplace rule group (as opposed to a single rule), the action you set for the rule group (either No override or Override to count) is called the override action. For more information, see Rule group override
+
+
+Choose Save changes.
+

@@ -1,0 +1,6 @@
+Amazon SQS quotas
+This topic lists quotas within Amazon Simple Queue Service (Amazon SQS).
+Topics
+ Quotas related to queues
+ Quotas related to messages
+ Quotas related to policies

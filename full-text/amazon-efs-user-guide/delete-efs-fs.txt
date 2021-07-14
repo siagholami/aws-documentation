@@ -1,0 +1,27 @@
+Deleting an Amazon EFS file system
+File system deletion is a destructive action that you can't undo. You lose the file system and any data you have in it. Any data that you delete from a file system is gone, and you can't restore the data. When users delete data from a file system, that data is immediately rendered unusable. EFS force-overwrites the data in an eventual manner.
+Important
+You should always unmount a file system before you delete it.
+Using the Console
+To delete a file system
+
+
+Open the Amazon Elastic File System console at https://console.aws.amazon.com/efs/.
+
+
+Select the file system that you want to delete in the File systems page.
+
+
+Choose Delete.
+
+
+In the Delete file system dialog box, enter the file system id shown, and choose Confirm to confirm the delete.
+
+
+
+The console simplifies the file system deletion for you. First it deletes the associated mount targets, and then it deletes the file system.
+Using the CLI
+Before you can use the AWS CLI command to delete a file system, you must delete all of the mount targets and access points created for the file system. 
+For example AWS CLI commands, see Step 4: Clean Up. 
+Related Topics
+Managing Amazon EFS file systems 

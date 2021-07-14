@@ -1,0 +1,45 @@
+CloudWatchEvent
+The object describing a CloudWatchEvent event source type.
+AWS Serverless Application Model (AWS SAM) generates an AWS::Events::Rule resource when this event type is set.
+Important Note: EventBridgeRule is the preferred event source type to use, instead of CloudWatchEvent. EventBridgeRule and CloudWatchEvent use the same underlying service, API, and AWS CloudFormation resources. However, AWS SAM will add support for new features only to EventBridgeRule.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[EventBusName](#sam-statemachine-statemachinecloudwatchevent-eventbusname): String
+  [Input](#sam-statemachine-statemachinecloudwatchevent-input): String
+  [InputPath](#sam-statemachine-statemachinecloudwatchevent-inputpath): String
+  [Pattern](#sam-statemachine-statemachinecloudwatchevent-pattern): [EventPattern](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventpattern)
+Properties
+EventBusName 
+The event bus to associate with this rule. If you omit this property, AWS SAM uses the default event bus.
+Type: String
+Required: No
+Default: Default event bus
+AWS CloudFormation compatibility: This property is passed directly to the [EventBusName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventbusname) property of an AWS::Events::Rule resource.
+Input 
+Valid JSON text passed to the target. If you use this property, nothing from the event text itself is passed to the target.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [Input](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-input) property of an AWS::Events::Rule Target resource.
+InputPath 
+When you don't want to pass the entire matched event to the target, use the InputPath property to describe which part of the event to pass.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is passed directly to the [InputPath](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-inputpath) property of an AWS::Events::Rule Target resource.
+Pattern 
+Describes which events are routed to the specified target. For more information, see Events and Event Patterns in EventBridge in the Amazon EventBridge User Guide
+Type: EventPattern
+Required: Yes
+AWS CloudFormation compatibility: This property is passed directly to the [EventPattern](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventpattern) property of an AWS::Events::Rule resource.
+Examples
+CloudWatchEvent
+The following is an example of a CloudWatchEvent event source type.
+YAML
+CWEvent:
+  Type: CloudWatchEvent
+  Properties:
+    Input: '{"Key": "Value"}'
+    Pattern:
+      detail:
+        state:
+          - terminated

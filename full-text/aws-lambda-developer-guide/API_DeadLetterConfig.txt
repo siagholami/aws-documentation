@@ -1,0 +1,14 @@
+DeadLetterConfig
+The dead-letter queue for failed asynchronous invocations.
+Contents
+TargetArn 
+The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
+Type: String
+Pattern: (arn:(aws[a-zA-Z-]*)?:[a-z0-9-.]:.*)|() 
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

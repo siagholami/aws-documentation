@@ -1,0 +1,123 @@
+Perform Common Tasks in Amazon SageMaker Studio
+The following sections describe how to perform common tasks in Amazon SageMaker Studio. For an overview of the Studio interface, see Amazon SageMaker Studio UI Overview.
+Topics
+ Upload files to Amazon SageMaker Studio
+ Clone and Connect to a Git Repository
+ Stop a Training Job
+ Manage Your EFS Storage Volume
+ Provide Feedback on Amazon SageMaker Studio
+ Update Amazon SageMaker Studio
+Upload files to Amazon SageMaker Studio
+When you onboard to Amazon SageMaker Studio, a home directory is created for you in the Amazon Elastic File System (Amazon EFS) volume that was created for your team. Studio can open only files that have been uploaded to your directory. The Studio file browser maps to your home directory.
+To upload files to your home directory
+
+
+In the left sidebar, choose the File Browser icon ( ).
+
+
+In the file browser, choose the Upload Files icon ( ).
+
+
+Select the files you want to upload and then choose Open.
+
+
+Double-click a file to open the file in a new tab in Studio.
+
+
+Clone and Connect to a Git Repository
+Amazon SageMaker Studio can connect only to a local repository. For this procedure, we connect to a clone of the awslabs/amazon-sagemaker-examples repository (repo). 
+To clone and connect to a repo
+
+
+On the top menu, choose File then New then Terminal.
+
+
+At the command prompt, run the following command and wait for the repo to finish cloning.
+
+
+git clone https://github.com/awslabs/amazon-sagemaker-examples.git
+
+
+In the left sidebar, choose the File Browser icon ( ).
+
+
+Double click the repo to open it.
+
+
+In the left sidebar, choose the Git icon ( ) to view the Git user interface.
+
+
+Stop a Training Job
+You can stop a training job with the Amazon SageMaker Studio UI. When you stop a training job, its status changes to Stopping at which time billing ceases. An algorithm can delay termination in order to save model artifacts after which the job status changes to Stopped. For more information, see the stop_training_job method in the AWS SDK for Python (Boto3).
+To stop a training job
+
+
+Follow the View and Compare Experiments, Trials, and Trial Components procedure on this page until you open the Describe Trial Component tab.
+
+
+At the upper-right side of the tab, choose Stop training job. The Status at the top left of the tab changes to Stopped.
+
+
+To view the training time and billing time, choose AWS Settings.
+
+
+Manage Your EFS Storage Volume
+The first time a user on your team onboards to Amazon SageMaker Studio, Amazon SageMaker creates an Amazon Elastic File System (Amazon EFS) volume for the team. A home directory is created in the volume for each user who onboards to Studio as part of your team. Notebook files and data files are stored in these directories. Users don't have access to other team member's home directories.
+Important
+Don't delete the Amazon EFS volume. If you delete it, the domain will no longer function and all of your users will lose their work.
+To find your Amazon EFS volume
+
+
+From the Amazon SageMaker Studio Control Panel, under Studio Summary, find the Studio ID. The ID will be in the following format: d-xxxxxxxx.
+
+
+Pass the Studio ID, as DomainId, to the describe_domain method.
+
+
+In the response from describe_domain, note the value for the HomeEfsFileSystemId key. This is the Amazon EFS file system ID.
+
+
+Open the Amazon EFS console. Make sure the AWS Region is the same as the Region used by Studio.
+
+
+Under File systems, choose the file system ID from the previous step.
+
+
+To verify that you've chosen the correct file system, select the Tags heading. The value corresponding to the ManagedByAmazonSageMakerResource key should match the Studio ID.
+
+
+For information on how to access the Amazon EFS volume, see Using file systems in Amazon EFS.
+To delete the Amazon EFS volume, see Deleting an Amazon EFS file system.
+Provide Feedback on Amazon SageMaker Studio
+Amazon SageMaker takes your feedback seriously. We encourage you to provide feedback.
+To provide feedback
+
+
+At the upper-right of SageMaker Studio, choose Feedback.
+
+
+Choose a smiley emoji to let us know how satisfied you are with SageMaker Studio and add any feedback you'd care to share with us.
+
+
+Decide whether to share your identity with us, then choose Submit.
+
+
+Update Amazon SageMaker Studio
+When you update Amazon SageMaker Studio to the latest release, Amazon SageMaker shuts down and restarts the JupyterServer App. Any unsaved notebook information is lost in the process. The user data in the Amazon EFS volume isn't touched.
+After the JupyterServer App is restarted, you must reopen Studio through the SageMaker Studio Control Panel.
+To update Studio
+
+
+(Optional) View the current version number. On the top-left corner of Studio, choose Amazon SageMaker Studio to open the Studio landing page. The version is shown on the bottom-left of the page.
+
+
+On the top menu, choose File then Shut Down.
+
+
+Choose one of the following options:
+    Shutdown Server – Shuts down the JupyterServer App. Terminal sessions, kernel sessions, SageMaker images, and instances aren't shut down. These resources continue to accrue charges.
+    Shutdown All – Shuts down all Apps, terminal sessions, kernel sessions, SageMaker images, and instances. These resources no longer accrue charges.
+
+
+Close the window and reopen Studio.
+

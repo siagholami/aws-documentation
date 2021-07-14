@@ -1,0 +1,36 @@
+Post Effects Nodes
+You can configure the following post effect nodes in the Script Canvas editor. Post effects are useful if you want to enhance a scene after it renders, such as color, blur, or water effects. You can enable an effect once and the effect remains active until you disable it. If you want to animate the settings of an effect or transition in or out, you can trigger the Enable* node for each frame with different settings.
+Important
+To use post effects nodes, you must enable the Graphics Scripting gem for your game project. For more information, see Enabling Gems.
+Topics
+ Apply Effect Group At Position
+ Disable Blur
+ Disable Color Correction
+ Disable Depth of Field
+ Disable Directional Blur
+ Disable Effect Group
+ Disable Frost
+ Disable Ghosting
+ Disable Radial Blur
+ Disable Rain Drops
+ Disable Sharpen
+ Disable Visual Artifacts
+ Disable Volumetric Scattering
+ Disable Water Droplets
+ Disable Water Flow
+ Enable Blur
+ Enable Color Correction
+ Enable Depth of Field
+ Enable Directional Blur
+ Enable Effect Group
+ Enable Frost
+ Enable Ghosting
+ Enable Radial Blur
+ Enable Rain Drops
+ Enable Sharpen
+ Enable Visual Artifacts
+ Enable Volumetric Scattering
+ Enable Water Droplets
+ Enable Water Flow
+ Screen Fader
+ Set Color Chart

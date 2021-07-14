@@ -1,0 +1,6 @@
+Best Practices for Amazon MQ
+Use these best practices to make the most of Amazon MQ.
+Topics
+ Connecting to Amazon MQ
+ Ensuring Effective Amazon MQ Performance
+ Avoid Slow Restarts by Recovering Prepared XA Transactions

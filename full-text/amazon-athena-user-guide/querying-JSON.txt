@@ -1,0 +1,8 @@
+Querying JSON
+Amazon Athena lets you parse JSON-encoded values, extract data from JSON, search for values, and find length and size of JSON arrays.
+Topics
+ Best Practices for Reading JSON Data
+ Extracting Data from JSON
+ Searching for Values in JSON Arrays
+ Obtaining Length and Size of JSON Arrays
+ Troubleshooting JSON Queries

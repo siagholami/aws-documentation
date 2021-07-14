@@ -1,0 +1,22 @@
+Uploading an object to a bucket
+Now that you've created a bucket, you're ready to upload an object to it. An object can be any kind of file: a text file, a photo, a video, and so on. 
+To upload an object to a bucket
+
+
+In the Bucket list, choose the name of the bucket that you want to upload your object to.
+
+
+On the Overview tab for your bucket, choose Upload or Get Started.
+
+
+To choose the file to upload, in the Upload dialog box, choose Add files.
+
+
+Choose a file to upload, and then choose Open. 
+
+
+Choose Upload. 
+
+
+You've successfully uploaded an object to your bucket. 
+To view your object, see Accessing an object.

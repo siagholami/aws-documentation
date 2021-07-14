@@ -1,0 +1,18 @@
+Cloning a Simulation Job
+You can create a new simulation job from an existing simulation job by cloning it from the Simulation job detail page.
+
+
+Sign in to the AWS RoboMaker console at https://console.aws.amazon.com/robomaker/.
+
+
+In the left navigation pane, choose Simulations, then choose Simulation jobs.
+
+
+Select the Id of a running simulation job you would like to restart.
+
+
+In the Simulation job detail page, under Actions, choose Clone.
+
+
+In the Review and create simulation job, select Edit to make changes and then select Create.
+

@@ -1,0 +1,133 @@
+AWS::WAF::SqlInjectionMatchSet
+Note
+This is AWS WAF Classic documentation. For more information, see AWS WAF Classic in the developer guide.
+For the latest version of AWS WAF, use the AWS WAFV2 API and see the AWS WAF Developer Guide. With the latest version, AWS WAF has a single set of endpoints for regional and global use. 
+A complex type that contains SqlInjectionMatchTuple objects, which specify the parts of web requests that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header. If a SqlInjectionMatchSet contains more than one SqlInjectionMatchTuple object, a request needs to include snippets of SQL code in only one of the specified parts of the request to be considered a match.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::WAF::SqlInjectionMatchSet",
+  "Properties" : {
+      "[Name](#cfn-waf-sqlinjectionmatchset-name)" : String,
+      "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ SqlInjectionMatchTuple, ... ]
+    }
+}
+YAML
+Type: AWS::WAF::SqlInjectionMatchSet
+Properties: 
+  [Name](#cfn-waf-sqlinjectionmatchset-name): String
+  [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples): 
+    - SqlInjectionMatchTuple
+Properties
+Name 
+The name, if any, of the SqlInjectionMatchSet.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: .*\S.*
+Update requires: Replacement
+SqlInjectionMatchTuples 
+Specifies the parts of web requests that you want to inspect for snippets of malicious SQL code.
+Required: No
+Type: List of SqlInjectionMatchTuple
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource physical ID, such as 1234a1a-a1b1-12a1-abcd-a123b123456.
+For more information about using the Ref function, see Ref.
+Examples
+Find SQL Injections
+The following example looks for snippets of SQL code in the query string of an HTTP request.
+JSON
+"SqlInjDetection": {
+  "Type": "AWS::WAF::SqlInjectionMatchSet",
+  "Properties": {
+    "Name": "Find SQL injections in the query string",
+    "SqlInjectionMatchTuples": [
+      {
+        "FieldToMatch" : {
+          "Type": "QUERY_STRING"
+        },
+        "TextTransformation" : "URL_DECODE"
+      }
+    ]
+  }
+}
+YAML
+SqlInjDetection: 
+  Type: "AWS::WAF::SqlInjectionMatchSet"
+  Properties: 
+    Name: "Find SQL injections in the query string"
+    SqlInjectionMatchTuples: 
+      - 
+        FieldToMatch: 
+          Type: "QUERY_STRING"
+        TextTransformation: "URL_DECODE"
+Associate a SQL Injection Match Set with a Web ACL Rule
+The following example associates the SqlInjDetection match set with a web access control list (ACL) rule.
+JSON
+"SqlInjRule" : {
+  "Type": "AWS::WAF::Rule",
+  "Properties": {
+    "Name": "SqlInjRule",
+    "MetricName" : "SqlInjRule",
+    "Predicates": [
+      {
+        "DataId" : {  "Ref" : "SqlInjDetection" },
+        "Negated" : false,
+        "Type" : "SqlInjectionMatch"
+      }
+    ]
+  }
+}
+YAML
+SqlInjRule: 
+  Type: "AWS::WAF::Rule"
+  Properties: 
+    Name: "SqlInjRule"
+    MetricName: "SqlInjRule"
+    Predicates: 
+      - 
+        DataId: 
+          Ref: "SqlInjDetection"
+        Negated: false
+        Type: "SqlInjectionMatch"
+Create a Web ACL
+The following example associates the SqlInjRule rule with a web ACL. The web ACL allows all requests except for ones with SQL code in the query string of a request.
+JSON
+"MyWebACL": {
+  "Type": "AWS::WAF::WebACL",
+  "Properties": {
+    "Name": "Web ACL to block SQL injection in the query string",
+    "DefaultAction": {
+      "Type": "ALLOW"
+    },
+    "MetricName" : "SqlInjWebACL",
+    "Rules": [
+      {
+        "Action" : {
+          "Type" : "BLOCK"
+        },
+        "Priority" : 1,
+        "RuleId" : { "Ref" : "SqlInjRule" }
+      }
+    ]
+  }
+}
+YAML
+MyWebACL: 
+  Type: "AWS::WAF::WebACL"
+  Properties: 
+    Name: "Web ACL to block SQL injection in the query string"
+    DefaultAction: 
+      Type: "ALLOW"
+    MetricName: "SqlInjWebACL"
+    Rules: 
+      - 
+        Action: 
+          Type: "BLOCK"
+        Priority: 1
+        RuleId: 
+          Ref: "SqlInjRule"

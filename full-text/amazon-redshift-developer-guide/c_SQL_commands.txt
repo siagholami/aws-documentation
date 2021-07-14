@@ -1,0 +1,76 @@
+SQL commands
+Topics
+ ABORT
+ ALTER DATABASE
+ ALTER DEFAULT PRIVILEGES
+ ALTER GROUP
+ ALTER PROCEDURE
+ ALTER SCHEMA
+ ALTER TABLE
+ ALTER TABLE APPEND
+ ALTER USER
+ ANALYZE
+ ANALYZE COMPRESSION
+ BEGIN
+ CALL
+ CANCEL
+ CLOSE
+ COMMENT
+ COMMIT
+ COPY
+ CREATE DATABASE
+ CREATE EXTERNAL SCHEMA
+ CREATE EXTERNAL TABLE
+ CREATE FUNCTION
+ CREATE GROUP
+ CREATE LIBRARY
+ CREATE MATERIALIZED VIEW
+ CREATE PROCEDURE
+ CREATE SCHEMA
+ CREATE TABLE
+ CREATE TABLE AS
+ CREATE USER
+ CREATE VIEW
+ DEALLOCATE
+ DECLARE
+ DELETE
+ DROP DATABASE
+ DROP FUNCTION
+ DROP GROUP
+ DROP LIBRARY
+ DROP MATERIALIZED VIEW
+ DROP PROCEDURE
+ DROP SCHEMA
+ DROP TABLE
+ DROP USER
+ DROP VIEW
+ END
+ EXECUTE
+ EXPLAIN
+ FETCH
+ GRANT
+ INSERT
+ INSERT (external table)
+ LOCK
+ PREPARE
+ REFRESH MATERIALIZED VIEW
+ RESET
+ REVOKE
+ ROLLBACK
+ SELECT
+ SELECT INTO
+ SET
+ SET SESSION AUTHORIZATION
+ SET SESSION CHARACTERISTICS
+ SHOW
+ SHOW PROCEDURE
+ START TRANSACTION
+ TRUNCATE
+ UNLOAD
+ UPDATE
+ VACUUM
+The SQL language consists of commands that you use to create and manipulate database objects, run queries, load tables, and modify the data in tables.
+Note
+Amazon Redshift is based on PostgreSQL 8.0.2. Amazon Redshift and PostgreSQL have a number of very important differences that you must be aware of as you design and develop your data warehouse applications. For more information about how Amazon Redshift SQL differs from PostgreSQL, see Amazon Redshift and PostgreSQL.
+Note
+The maximum size for a single SQL statement is 16 MB.

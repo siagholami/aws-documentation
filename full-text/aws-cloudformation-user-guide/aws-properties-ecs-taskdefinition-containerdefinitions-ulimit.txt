@@ -1,0 +1,31 @@
+AWS::ECS::TaskDefinition Ulimit
+The Ulimit property specifies the ulimit settings to pass to the container.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit)" : Integer,
+  "[Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name)" : String,
+  "[SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit)" : Integer
+}
+YAML
+[HardLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-hardlimit): Integer
+  [Name](#cfn-ecs-taskdefinition-containerdefinition-ulimit-name): String
+  [SoftLimit](#cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit): Integer
+Properties
+HardLimit 
+The hard limit for the ulimit type.
+Required: Yes
+Type: Integer
+Update requires: Replacement
+Name 
+The type of the ulimit.
+Required: Yes
+Type: String
+Allowed values: core | cpu | data | fsize | locks | memlock | msgqueue | nice | nofile | nproc | rss | rtprio | rttime | sigpending | stack
+Update requires: Replacement
+SoftLimit 
+The soft limit for the ulimit type.
+Required: Yes
+Type: Integer
+Update requires: Replacement

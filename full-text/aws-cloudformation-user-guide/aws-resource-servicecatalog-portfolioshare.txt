@@ -1,0 +1,50 @@
+AWS::ServiceCatalog::PortfolioShare
+Shares the specified portfolio with the specified account.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ServiceCatalog::PortfolioShare",
+  "Properties" : {
+      "[AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage)" : String,
+      "[AccountId](#cfn-servicecatalog-portfolioshare-accountid)" : String,
+      "[PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid)" : String
+    }
+}
+YAML
+Type: AWS::ServiceCatalog::PortfolioShare
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage): String
+  [AccountId](#cfn-servicecatalog-portfolioshare-accountid): String
+  [PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid): String
+Properties
+AcceptLanguage 
+The language code.
+  en - English (default)
+  jp - Japanese
+  zh - Chinese
+Required: No
+Type: String
+Maximum: 100
+Update requires: Replacement
+AccountId 
+The AWS account ID. For example, 123456789012.
+Required: Yes
+Type: String
+Pattern: ^[0-9]{12}$
+Update requires: Replacement
+PortfolioId 
+The portfolio identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the identifier of the portfolio share.
+For more information about using the Ref function, see Ref.
+See also
+
+CreatePortfolioShare in the AWS Service Catalog API Reference

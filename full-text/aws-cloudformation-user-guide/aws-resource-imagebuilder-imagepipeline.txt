@@ -1,0 +1,158 @@
+AWS::ImageBuilder::ImagePipeline
+An image pipeline is the automation configuration for building secure OS images on AWS. The Image Builder image pipeline is associated with an image recipe that defines the build, validation, and test phases for an image build lifecycle. An image pipeline can be associated with an infrastructure configuration that defines where your image is built. You can define attributes, such as instance type, subnets, security groups, logging, and other infrastructure-related configurations. You can also associate your image pipeline with a distribution configuration to define how you would like to deploy your image.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ImageBuilder::ImagePipeline",
+  "Properties" : {
+      "[Description](#cfn-imagebuilder-imagepipeline-description)" : String,
+      "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
+      "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
+      "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
+      "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
+      "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
+      "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : Schedule,
+      "[Status](#cfn-imagebuilder-imagepipeline-status)" : String,
+      "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key : Value, ...}
+    }
+}
+YAML
+Type: AWS::ImageBuilder::ImagePipeline
+Properties: 
+  [Description](#cfn-imagebuilder-imagepipeline-description): String
+  [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
+  [ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn): String
+  [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
+    ImageTestsConfiguration
+  [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
+  [Name](#cfn-imagebuilder-imagepipeline-name): String
+  [Schedule](#cfn-imagebuilder-imagepipeline-schedule): 
+    Schedule
+  [Status](#cfn-imagebuilder-imagepipeline-status): String
+  [Tags](#cfn-imagebuilder-imagepipeline-tags): 
+    Key : Value
+Properties
+Description 
+The description of this image pipeline.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+DistributionConfigurationArn 
+The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
+Required: No
+Type: String
+Update requires: No interruption
+EnhancedImageMetadataEnabled 
+ Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default. 
+Required: No
+Type: Boolean
+Update requires: No interruption
+ImageRecipeArn 
+The Amazon Resource Name (ARN) of the image recipe associated with this image pipeline.
+Required: Yes
+Type: String
+Update requires: No interruption
+ImageTestsConfiguration 
+The configuration of the image tests used when creating this image.
+Required: No
+Type: ImageTestsConfiguration
+Update requires: No interruption
+InfrastructureConfigurationArn 
+The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
+Required: Yes
+Type: String
+Update requires: No interruption
+Name 
+The name of the image pipeline.
+Required: Yes
+Type: String
+Pattern: ^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$
+Update requires: Replacement
+Schedule 
+The schedule of the image pipeline. A schedule configures how often and when a pipeline will automatically create a new image.
+Required: No
+Type: Schedule
+Update requires: No interruption
+Status 
+The status of the image pipeline.
+Required: No
+Type: String
+Allowed values: DISABLED | ENABLED
+Update requires: No interruption
+Tags 
+The tags of this image pipeline.
+Required: No
+Type: Map of String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource ARN, such as arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+Arn 
+Returns the Amazon Resource Name (ARN) of the image pipeline. For example, arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline.
+Examples
+Create an image pipeline
+The following example shows the schema for all of the parameters of the ImagePipeline resource document in both YAML and JSON format .
+YAML
+Resources:
+  ImagePipelineAllParameters:
+    Type: 'AWS::ImageBuilder::ImagePipeline'
+    Properties:
+      Name: 'image-pipeline-name'
+      Description: 'description'
+      ImageRecipeArn: !Ref ImageRecipeArn
+      InfrastructureConfigurationArn: !Ref InfrastructureConfigurationArn
+      DistributionConfigurationArn: !Ref DistributionConfigurationArn
+      ImageTestsConfiguration:
+        ImageTestsEnabled: false
+        TimeoutMinutes: 90
+      Schedule:
+        ScheduleExpression: 'cron(0 0 * * 0)'
+        PipelineExecutionStartCondition: 'EXPRESSION_MATCH_ONLY'
+      Status: 'DISABLED'
+      Tags:
+        CustomerImagePipelineTagKey1: 'CustomerImagePipelineTagValue1'
+        CustomerImagePipelineTagKey2: 'CustomerImagePipelineTagValue2'
+JSON
+{
+    "Resources": {
+        "ImagePipelineAllParameters": {
+            "Type": "AWS::ImageBuilder::ImagePipeline",
+            "Properties": {
+                "Name": "image-pipeline-name",
+                "Description": "description",
+                "ImageRecipeArn": {
+                    "Ref": "ImageRecipeArn"
+                },
+                "InfrastructureConfigurationArn": {
+                    "Ref": "InfrastructureConfigurationArn"
+                },
+                "DistributionConfigurationArn": {
+                    "Ref": "DistributionConfigurationArn"
+                },
+                "ImageTestsConfiguration": {
+                    "ImageTestsEnabled": false,
+                    "TimeoutMinutes": 90
+                },
+                "Schedule": {
+                    "ScheduleExpression": "cron(0 0 * * 0)",
+                    "PipelineExecutionStartCondition": "EXPRESSION_MATCH_ONLY"
+                },
+                "Status": "DISABLED",
+                "Tags": {
+                    "CustomerImagePipelineTagKey1": "CustomerImagePipelineTagValue1",
+                    "CustomerImagePipelineTagKey2": "CustomerImagePipelineTagValue2"
+                }
+            }
+        }
+    }
+}

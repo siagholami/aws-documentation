@@ -1,0 +1,72 @@
+Supported AWS Service Integrations for Step Functions
+The following topics include the supported APIs, parameters, and request/response syntax in the Amazon States Language for coordinating other AWS services, and provide example code. You can call integrated services directly from the Amazon States Language in the Resource field of a task state. There are three different service integration patterns you can use.
+ Default response
+ Wait for a job to complete (.sync).
+ Wait for a task token (.waitForTaskToken).
+For more information on service integrations, see Service Integration Patterns.
+Supported Service Integrations 
+
+
+
+Service
+Request Response
+Run a Job (.sync)
+Wait for Callback (.waitForTaskToken)
+
+
+
+
+Lambda
+✓
+
+✓
+
+
+AWS Batch
+✓
+✓
+✓
+
+
+DynamoDB
+✓
+
+
+
+
+Amazon ECS/Fargate
+✓
+✓
+✓
+
+
+Amazon SNS
+✓
+
+✓
+
+
+Amazon SQS
+✓
+
+✓
+
+
+AWS Glue
+✓
+✓
+
+
+
+Amazon SageMaker
+✓
+✓
+
+
+
+Step Functions
+✓
+✓
+✓
+
+

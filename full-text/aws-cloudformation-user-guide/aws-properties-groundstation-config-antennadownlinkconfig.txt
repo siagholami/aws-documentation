@@ -1,0 +1,46 @@
+AWS::GroundStation::Config AntennaDownlinkConfig
+Provides information about how AWS Ground Station should configure an antenna for downlink during a contact. Use an antenna downlink config in a mission profile to receive the downlink data in raw DigIF format. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : SpectrumConfig
+}
+YAML
+[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig): 
+    SpectrumConfig
+Properties
+SpectrumConfig 
+ Defines the spectrum configuration. 
+Required: Yes
+Type: SpectrumConfig
+Update requires: No interruption
+Examples
+Create an AntennaDownlinkConfig
+The following example creates a Ground Station AntennaDownlinkConfig
+JSON
+{
+  "AntennaDownlinkConfig": {
+    "SpectrumConfig": {
+    "CenterFrequency": {
+      "Value": 7812,
+      "Units": "MHz"
+    },
+    "Bandwidth": {
+      "Value": 30,
+      "Units": "MHz"
+    },
+    "Polarization": "RIGHT_HAND"
+    }
+  }
+}
+YAML
+AntennaDownlinkConfig:
+  SpectrumConfig:
+    CenterFrequency:
+      Value: 7812
+      Units: MHz
+    Bandwidth:
+      Value: 30
+      Units: MHz
+    Polarization: RIGHT_HAND

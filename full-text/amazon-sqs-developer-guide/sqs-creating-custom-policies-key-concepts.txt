@@ -1,0 +1,34 @@
+Amazon SQS Access Policy Language key concepts
+To write your own policies, you must be familiar with JSON and a number of key concepts.
+Allow 
+The result of a Statement that has Effect set to allow.
+Action 
+The activity that the Principal has permission to perform, typically a request to AWS.
+Default-deny 
+The result of a Statement that has no Allow or Explicit-deny settings.
+Condition 
+Any restriction or detail about a Permission. Typical conditions are related to date and time and IP addresses.
+Effect 
+The result that you want the Statement of a Policy to return at evaluation time. You specify the deny or allow value when you write the policy statement. There can be three possible results at policy evaluation time: Default-deny, Allow, and Explicit-deny.
+Explicit-deny 
+The result of a Statement that has Effect set to deny.
+Evaluation 
+The process that Amazon SQS uses to determine whether an incoming request should be denied or allowed based on a Policy.
+Issuer 
+The user who writes a Policy to grant permissions to a resource. The issuer, by definition is always the resource owner. AWS doesn't permit Amazon SQS users to create policies for resources they don't own.
+Key 
+The specific characteristic that is the basis for access restriction.
+Permission 
+The concept of allowing or disallowing access to a resource using a Condition and a Key.
+Policy 
+The document that acts as a container for one or more statements.  
+
+Amazon SQS uses the policy to determine whether to grant access to a user for a resource.
+Principal 
+The user who receives Permission in the Policy.
+Resource 
+The object that the Principal requests access to.
+Statement 
+The formal description of a single permission, written in the access policy language as part of a broader Policy document.
+Requester 
+The user who sends a request for access to a Resource.

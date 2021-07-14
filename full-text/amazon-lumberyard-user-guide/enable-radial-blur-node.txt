@@ -1,0 +1,59 @@
+Enable Radial Blur
+Enables the radial blur filter around a defined 2D position on the screen. To enable this feature, you must enable the r_MotionBlur console variable. For more information, see Using the Console Window.
+To disable the effect, see Disable Radial Blur.
+Contents
+ Inputs
+ Outputs
+
+Example 
+
+Inputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+In
+Event
+Triggers the node.
+
+
+Amount
+Number
+Amount of blurring. Default value: 1
+
+
+Screen Position
+Vector2
+Screen position of the center of the blur. Default value: (0.5, 0.5) This is the center of the screen.
+
+
+Radius
+Number
+Blurring radius. Default value: 1
+
+
+
+Outputs
+
+
+
+
+Pin
+Type
+Description
+
+
+
+
+Out
+Event
+Sends when the node is finished.
+
+

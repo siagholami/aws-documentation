@@ -1,0 +1,87 @@
+SolutionVersion
+An object that provides information about a specific version of a Solution.
+Contents
+creationDateTime 
+The date and time (in Unix time) that this version of the solution was created.
+Type: Timestamp
+Required: No
+datasetGroupArn 
+The Amazon Resource Name (ARN) of the dataset group providing the training data.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+eventType 
+The event type (for example, 'click' or 'like') that is used for training the model.
+Type: String
+Length Constraints: Maximum length of 256.
+Required: No
+failureReason 
+If training a solution version fails, the reason for the failure.
+Type: String
+Required: No
+lastUpdatedDateTime 
+The date and time (in Unix time) that the solution was last updated.
+Type: Timestamp
+Required: No
+performAutoML 
+When true, Amazon Personalize searches for the most optimal recipe according to the solution configuration. When false (the default), Amazon Personalize uses recipeArn.
+Type: Boolean
+Required: No
+performHPO 
+Whether to perform hyperparameter optimization (HPO) on the chosen recipe. The default is false.
+Type: Boolean
+Required: No
+recipeArn 
+The ARN of the recipe used in the solution.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+solutionArn 
+The ARN of the solution.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+solutionConfig 
+Describes the configuration properties for the solution.
+Type: SolutionConfig object
+Required: No
+solutionVersionArn 
+The ARN of the solution version.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: arn:([a-z\d-]):personalize:.*:.*:. 
+Required: No
+status 
+The status of the solution version.
+A solution version can be in one of the following states:
+ CREATE PENDING
+ CREATE IN_PROGRESS
+ ACTIVE
+ CREATE FAILED
+Type: String
+Length Constraints: Maximum length of 256.
+Required: No
+trainingHours 
+The time used to train the model. You are billed for the time it takes to train a model. This field is visible only after Amazon Personalize successfully trains a model.
+Type: Double
+Valid Range: Minimum value of 0.
+Required: No
+trainingMode 
+The scope of training used to create the solution version. The FULL option trains the solution version based on the entirety of the input solution's training data, while the UPDATE option processes only the training data that has changed since the creation of the last solution version. Choose UPDATE when you want to start recommending items added to the dataset without retraining the model.
+The UPDATE option can only be used after you've created a solution version with the FULL option and the training solution uses the HRNN-Coldstart Recipe.
+Type: String
+Valid Values:FULL | UPDATE 
+Required: No
+tunedHPOParams 
+If hyperparameter optimization was performed, contains the hyperparameter values of the best performing model.
+Type: TunedHPOParams object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

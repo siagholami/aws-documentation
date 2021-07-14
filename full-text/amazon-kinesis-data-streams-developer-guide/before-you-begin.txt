@@ -1,0 +1,34 @@
+Setting Up for Amazon Kinesis Data Streams
+Before you use Amazon Kinesis Data Streams for the first time, complete the following tasks.
+Topics
+ Sign Up for AWS
+ Download Libraries and Tools
+ Configure Your Development Environment
+Sign Up for AWS
+When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS, including Kinesis Data Streams. You are charged only for the services that you use.
+If you have an AWS account already, skip to the next task. If you don't have an AWS account, use the following procedure to create one.
+To sign up for an AWS account
+
+
+Open https://portal.aws.amazon.com/billing/signup.
+
+
+Follow the online instructions.
+
+
+Part of the sign-up procedure involves receiving a phone call and entering a verification code on the phone keypad.
+Download Libraries and Tools
+The following libraries and tools will help you work with Kinesis Data Streams: 
+ The Amazon Kinesis API Reference is the basic set of operations that Kinesis Data Streams supports. For more information about performing basic operations using Java code, see the following:
+   Developing Producers Using the Amazon Kinesis Data Streams API with the AWS SDK for Java
+   Developing Custom Consumers with Shared Throughput Using the AWS SDK for Java 
+   Creating and Managing Streams
+ The AWS SDKs for Go, Java, JavaScript, .NET, Node.js, PHP, Python, and Ruby include Kinesis Data Streams support and samples. If your version of the AWS SDK for Java does not include samples for Kinesis Data Streams, you can also download them from GitHub.
+ The Kinesis Client Library (KCL) provides an easy-to-use programming model for processing data. The KCL can help you get started quickly with Kinesis Data Streams in Java, Node.js, .NET, Python, and Ruby. For more information see Reading Data from Streams.
+ The AWS Command Line Interface supports Kinesis Data Streams. The AWS CLI enables you to control multiple AWS services from the command line and automate them through scripts.
+Configure Your Development Environment
+To use the KCL, ensure that your Java development environment meets the following requirements:
+ Java 1.7 (Java SE 7 JDK) or later. You can download the latest Java software from Java SE Downloads on the Oracle website.
+ Apache Commons package (Code, HTTP Client, and Logging)
+ Jackson JSON processor
+Note that the AWS SDK for Java includes Apache Commons and Jackson in the third-party folder. However, the SDK for Java works with Java 1.6, while the Kinesis Client Library requires Java 1.7.

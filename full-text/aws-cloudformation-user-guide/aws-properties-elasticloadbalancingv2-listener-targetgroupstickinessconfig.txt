@@ -1,0 +1,23 @@
+AWS::ElasticLoadBalancingV2::Listener TargetGroupStickinessConfig
+Information about the target group stickiness for a rule.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DurationSeconds](#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)" : Integer,
+  "[Enabled](#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled)" : Boolean
+}
+YAML
+[DurationSeconds](#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds): Integer
+  [Enabled](#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-enabled): Boolean
+Properties
+DurationSeconds 
+The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
+Required: No
+Type: Integer
+Update requires: No interruption
+Enabled 
+Indicates whether target group stickiness is enabled.
+Required: No
+Type: Boolean
+Update requires: No interruption

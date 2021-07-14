@@ -1,0 +1,7 @@
+Administer WorkSpace Users
+Each WorkSpace is assigned to a single user and cannot be shared by multiple users. By default, only one WorkSpace per user per directory is allowed.
+Topics
+ Manage WorkSpaces Users
+ Create Multiple WorkSpaces for a User
+ Customize How Users Log In to Their WorkSpaces
+ Enable Self-Service WorkSpace Management Capabilities for Your Users

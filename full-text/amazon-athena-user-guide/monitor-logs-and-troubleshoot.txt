@@ -1,0 +1,5 @@
+Monitoring Logs and Troubleshooting
+Examine Athena requests using CloudTrail logs and troubleshoot queries. 
+Topics
+ Logging Amazon Athena API Calls with AWS CloudTrail
+ Troubleshooting

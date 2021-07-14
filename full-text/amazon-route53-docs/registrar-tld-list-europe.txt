@@ -1,0 +1,4 @@
+Europe
+You can use the following top-level domains (TLDs) for Europe to register domains with Amazon Route 53.
+.be (Belgium), .berlin (city of Berlin in Germany), .ch (Switzerland), .co.uk (United Kingdom), .cz (Czech Republic), .de (Germany), .es (Spain) , .eu (European Union), .fi (Finland), .fr (France), .gg (Guernsey), .im (Isle of Man), .it (Italy), .me (Montenegro), .me.uk (United Kingdom), .nl (the Netherlands), .org.uk (United Kingdom), .ruhr (Ruhr region, western part of Germany), .se (Sweden), .uk (United Kingdom), .wien (city of Vienna in Austria) 
+Return to index

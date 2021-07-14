@@ -1,0 +1,6 @@
+Understanding Key Cloud Directory Concepts
+Amazon Cloud Directory is a directory-based data store that can create various types of objects in a schema-oriented fashion. 
+Topics
+ Schema
+ Directory
+ Directory Structure

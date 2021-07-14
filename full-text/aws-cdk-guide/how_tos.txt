@@ -1,0 +1,2 @@
+AWS CDK how-tos
+This section contains short code examples that show you how to accomplish a task using the AWS CDK.

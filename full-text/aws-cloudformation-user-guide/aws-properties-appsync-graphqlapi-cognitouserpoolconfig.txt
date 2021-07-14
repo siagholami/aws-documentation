@@ -1,0 +1,30 @@
+AWS::AppSync::GraphQLApi CognitoUserPoolConfig
+Describes an Amazon Cognito user pool configuration.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AppIdClientRegex](#cfn-appsync-graphqlapi-cognitouserpoolconfig-appidclientregex)" : String,
+  "[AwsRegion](#cfn-appsync-graphqlapi-cognitouserpoolconfig-awsregion)" : String,
+  "[UserPoolId](#cfn-appsync-graphqlapi-cognitouserpoolconfig-userpoolid)" : String
+}
+YAML
+[AppIdClientRegex](#cfn-appsync-graphqlapi-cognitouserpoolconfig-appidclientregex): String
+  [AwsRegion](#cfn-appsync-graphqlapi-cognitouserpoolconfig-awsregion): String
+  [UserPoolId](#cfn-appsync-graphqlapi-cognitouserpoolconfig-userpoolid): String
+Properties
+AppIdClientRegex 
+A regular expression for validating the incoming Amazon Cognito user pool app client ID.
+Required: No
+Type: String
+Update requires: No interruption
+AwsRegion 
+The AWS Region in which the user pool was created.
+Required: No
+Type: String
+Update requires: No interruption
+UserPoolId 
+The user pool ID.
+Required: No
+Type: String
+Update requires: No interruption

@@ -1,0 +1,6 @@
+AWS Amplify reference
+Use the topics in this section to find detailed reference material for AWS Amplify.
+Topics
+ AWS CloudFormation support
+ AWS CLI support
+ Resource tagging support

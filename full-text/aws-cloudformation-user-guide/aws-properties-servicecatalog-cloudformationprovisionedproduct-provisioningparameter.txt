@@ -1,0 +1,29 @@
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningParameter
+Information about a parameter used to provision a product.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Key](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key)" : String,
+  "[Value](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value)" : String
+}
+YAML
+[Key](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key): String
+  [Value](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value): String
+Properties
+Key 
+The parameter key.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1000
+Update requires: No interruption
+Value 
+The parameter value.
+Required: Yes
+Type: String
+Maximum: 4096
+Update requires: No interruption
+See also
+
+ProvisioningParameter in the AWS Service Catalog API Reference

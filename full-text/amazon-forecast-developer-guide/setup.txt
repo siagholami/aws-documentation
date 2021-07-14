@@ -1,0 +1,6 @@
+Setting Up
+Before using Amazon Forecast to evaluate or forecast time-series data, create an AWS account, configure access permissions, and set up the AWS Command Line Interface (AWS CLI).
+Topics
+ Sign Up for AWS
+ Set Up the AWS CLI
+ Set Up Permissions for Amazon Forecast

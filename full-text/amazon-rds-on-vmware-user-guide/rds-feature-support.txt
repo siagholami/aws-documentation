@@ -1,0 +1,186 @@
+Support for RDS Features in Amazon RDS on VMware
+The primary use case for Amazon RDS on VMware is to support the Amazon RDS service with your choice of database on a VMware infrastructure.
+The following table shows current Amazon RDS on VMware support for Amazon RDS features.
+
+
+
+
+Feature
+Supported
+Notes
+More Information
+
+
+
+
+DB instance provisioning
+Yes
+—
+Creating an Amazon RDS DB Instance
+
+
+Modifying the master user password
+No
+—
+Modifying an Amazon RDS DB Instance
+
+
+Modifying the DB engine version
+Yes
+For the PostgreSQL DB engine, RDS on VMware supports version 10.9-R1 and 10.10-R1. For the Microsoft SQL Server and MySQL DB engines, RDS on VMware currently only supports one DB engine version.
+Modifying an Amazon RDS DB Instance
+
+
+Renaming a DB instance
+Yes
+—
+Renaming a DB Instance
+
+
+Rebooting a DB instance
+Yes
+—
+Rebooting a DB Instance
+
+
+Stopping a DB instance
+No
+—
+Stopping an Amazon RDS DB Instance Temporarily
+
+
+Starting a DB instance
+No
+—
+Starting an Amazon RDS DB Instance That Was Previously Stopped
+
+
+Multi-AZ deployments
+No
+—
+High Availability (Multi-AZ) for Amazon RDS
+
+
+DB parameter groups
+No
+—
+Working with DB Parameter Groups
+
+
+Read replicas
+Yes
+Currently, this feature is supported for MySQL and PostgreSQL.
+Working with Read Replicas
+
+
+Encryption at rest and compliance certification
+No
+—
+Encrypting Amazon RDS Resources
+
+
+Tagging Amazon RDS resources
+Yes
+—
+Tagging Amazon RDS Resources
+
+
+Option groups
+No
+—
+Working with Option Groups
+
+
+Modifying the maintenance window
+Yes
+Modifying the maintenance window is supported, but you can't view or apply maintenance updates.
+Maintaining a DB Instance
+
+
+Modifying the backup window
+No
+—
+Working With Backups
+
+
+DB instance scaling
+Yes
+Modify the on-premises DB instance class to scale the DB instance.
+Modifying an Amazon RDS DB Instance Choosing the On-Premises DB Instance Class
+
+
+Manual and automatic DB snapshots
+Yes
+All DB snapshots are stored locally. DB snapshots aren't stored in Amazon S3. DB snapshot copying and sharing aren't supported.
+Creating a DB Snapshot
+
+
+Restoring from a DB snapshot
+Yes
+—
+Restoring from a DB Snapshot
+
+
+Point-in-time recovery
+Yes
+Currently, this feature is supported for MySQL and PostgreSQL. It isn't supported for Microsoft SQL Server.
+Restoring a DB Instance to a Specified Time
+
+
+Enhanced Monitoring
+No
+—
+Enhanced Monitoring
+
+
+Amazon CloudWatch monitoring
+Yes
+—
+Monitoring with Amazon CloudWatch
+
+
+Publishing database engine logs to Amazon CloudWatch Logs
+No
+—
+Publishing Database Engine Logs to Amazon CloudWatch Logs
+
+
+Event notification
+No
+—
+Using Amazon RDS Event Notification
+
+
+Amazon RDS Performance Insights
+No
+—
+Using Amazon RDS Performance Insights
+
+
+Stored procedures for Amazon RDS for MySQL
+Yes
+—
+MySQL on Amazon RDS SQL Reference
+
+
+Automatic minor engine version upgrade
+Yes
+RDS on VMware doesn't support creating read replicas or importing a DB instance from Amazon S3, so enabling auto minor version upgrade during these operations doesn't apply to RDS on VMware DB instances.
+ Automatically Upgrading the Minor Engine Version
+
+
+Replication with external databases (MySQL)
+No
+—
+Replication with a MySQL or MariaDB Instance Running External to Amazon RDS
+
+
+Importing backups from Amazon S3 (Microsoft SQL Server)
+No
+—
+Importing and Exporting SQL Server Databases
+
+
+
+Note
+Amazon RDS DB instance classes and storage types don't apply to Amazon RDS on VMware.

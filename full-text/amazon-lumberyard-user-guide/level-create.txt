@@ -1,0 +1,13 @@
+Creating a New Level
+The first step in creating a game world is to create a level.
+To create a new level
+
+
+In Lumberyard Editor, click File, New Level or press Control  N.
+
+
+In the New Level window, enter a file name and select a directory location for the file. Choose OK.
+
+
+In the Generate Terrain Texture window, for Texture Dimensions, select texture dimensions to determine texture tile resolution. Choose OK.
+

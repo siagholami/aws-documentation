@@ -1,0 +1,23 @@
+Adding the Particle Manager
+Next you'll add the particle manager slice to the level. The particle manager activates a range of visual fx in the game such as shoot and hit effects. It significantly enhances the combat experience with the AI that you have placed in the level.
+To add the Particle Manager slice
+
+
+In the Asset Browser, navigate to StarterGame\slices.
+
+
+Drag particle_manager.slice into the viewport.
+
+
+Press CtrlS to save your level.
+
+
+Press CtrlG to play your level.
+
+
+Shoot at the walls and at your sentries. Notice how weapon fire and hit FX now appear.
+
+
+To quit, press Esc.
+
+Next: 6: Scripting Gameplay

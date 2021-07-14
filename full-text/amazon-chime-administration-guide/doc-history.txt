@@ -1,0 +1,137 @@
+Document history for Amazon Chime
+The following table describes important changes to the Amazon Chime Administrator Guide, beginning in March 2018. For notifications about updates to this documentation, you can subscribe to an RSS feed.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Amazon Chime Voice Connector emergency call routing numbers
+Amazon Chime administrators can set up emergency call routing numbers for an Amazon Chime Voice Connector. For more information, see Setting up emergency call routing numbers for your Amazon Chime Voice Connector in the Amazon Chime Administrator Guide.
+July 1, 2020
+
+
+Amazon Chime on Dolby Voice Huddle
+Amazon Chime offers a native or first-party meeting experience on Dolby Voice Huddle audio and video conferencing hardware. For more information, see Setting up Amazon Chime on Dolby Hardware in the Amazon Chime Administrator Guide.
+June 3, 2020
+
+
+Setting chat retention policies
+Amazon Chime administrators can set chat retention policies for their Enterprise accounts. For more information, see Managing chat retention policies in the Amazon Chime Administrator Guide.
+May 21, 2020
+
+
+Removing chat messages
+If you have the ability to program, you can use the Amazon Chime API to remove messages from chat rooms and conversations in your account. For more information, see Managing messages in the Amazon Chime Administrator Guide.
+May 18, 2020
+
+
+CloudWatch media quality metrics for Amazon Chime Voice Connector
+Amazon Chime supports sending media quality metrics for your Amazon Chime Voice Connector to CloudWatch. For more information, see Monitoring Amazon Chime with CloudWatch in the Amazon Chime Administrator Guide.
+January 23, 2020
+
+
+Amazon Chime Meetings App for Slack
+Amazon Chime supports the Amazon Chime Meetings App for Slack. For more information, see Setting up the Amazon Chime Meetings App for Slack in the Amazon Chime Administrator Guide.
+December 4, 2019
+
+
+Meeting Region settings
+Amazon Chime supports processing meetings in the optimal AWS Region for all participants. For more information, see Meeting Region settings in the Amazon Chime Administrator Guide.
+December 3, 2019
+
+
+SIP-based media recording (SIPREC) compatibility
+Amazon Chime Voice Connectors support streaming media from a SIPREC-compatible voice infrastructure to Kinesis Video Streams. For more information, see SIP-based media recording (SIPREC) compatibility in the Amazon Chime Administrator Guide.
+November 25, 2019
+
+
+Amazon Chime on Dolby Voice Room
+If you want users to join meetings conveniently, Amazon Chime offers a native or first-party meeting experience on Dolby Voice Room audio and video conferencing hardware. For more information, see Setting up Amazon Chime on Dolby Voice Room in the Amazon Chime Administrator Guide.
+October 29, 2019
+
+
+Updating outbound calling names
+Set a default calling name that appears to recipients of outbound calls made using phone numbers in your Amazon Chime inventory. For more information, see Updating outbound calling names in the Amazon Chime Administrator Guide.
+October 24, 2019
+
+
+Streaming media to Amazon Kinesis
+Stream phone call audio from Amazon Chime Voice Connectors to Kinesis Video Streams for analytics, machine learning, and other processing. For more information, see Streaming Amazon Chime Voice Connector media to Kinesis and Using roles to stream Amazon Chime Voice Connector media to Kinesis in the Amazon Chime Administrator Guide.
+October 24, 2019
+
+
+Monitoring Amazon Chime with Amazon CloudWatch
+Monitor Amazon Chime using CloudWatch, which collects raw data and processes it into readable, near real-time metrics. For more information, see Monitoring Amazon Chime with CloudWatch in the Amazon Chime Administrator Guide.
+October 24, 2019
+
+
+Amazon Chime Voice Connector groups
+Create an Amazon Chime Voice Connector group that includes Amazon Chime Voice Connectors created in different AWS Regions. This allows incoming calls to fail over across Regions, which creates a fault-tolerant mechanism for fallback in case of availability events. For more information, see Working with Amazon Chime Voice Connector groups in the Amazon Chime Administrator Guide.
+October 24, 2019
+
+
+Network configuration updates
+Amazon Chime is simplifying its firewall requirements. For more information, see Network configuration and bandwidth requirements in the Amazon Chime Administrator Guide.
+September 6, 2019
+
+
+Moderated meetings
+Amazon Chime supports moderated meetings. For more information, see Joining a moderated meeting in the Amazon Chime Administrator Guide.
+July 25, 2019
+
+
+Compliance validation for Amazon Chime
+Amazon Chime is a HIPAA Eligible Service. For more information, see Compliance validation for Amazon Chime in the Amazon Chime Administrator Guide.
+June 11, 2019
+
+
+Porting toll-free phone numbers
+Amazon Chime supports porting toll-free United States phone numbers for use with Amazon Chime Voice Connectors. For more information, see Porting existing phone numbers in the Amazon Chime Administrator Guide.
+May 28, 2019
+
+
+Managing phone numbers in Amazon Chime
+Use Amazon Chime Business Calling to provision and assign phone numbers to Amazon Chime users. Integrate an Amazon Chime Voice Connector with an existing phone system. For more information, see Managing phone numbers in Amazon Chime in the Amazon Chime Administrator Guide.
+March 18, 2019
+
+
+Amazon Chime Add-In for Outlook
+Amazon Chime provides two add-ins for Microsoft Outlook: the Amazon Chime Add-In for Outlook on Windows and the Amazon Chime Add-In for Outlook. These add-ins offer the same scheduling features, but support different types of users. For more information, see Deploying the Add-In for Outlook in the Amazon Chime Administrator Guide.
+March 12, 2019
+
+
+Various updates
+Various updates to topic layout and organization.
+February 11, 2019
+
+
+Amazon Chime call me feature
+Administrators can enable the Amazon Chime call me feature under their Meetings settings. For more information, see Managing meeting settings in the Amazon Chime Administrator Guide.
+August 22, 2018
+
+
+Connect to Okta SSO
+If you have an enterprise account, you can connect to Okta SSO to authenticate and assign user permissions. For more information, see Connect to Okta SSO in the Amazon Chime Administrator Guide.
+August 1, 2018
+
+
+Request user attachments
+Receive attachments uploaded into Amazon Chime by users. For more information, see Request user attachments in the Amazon Chime Administrator Guide.
+April 23, 2018
+
+
+View additional report data
+View additional report data. For more information, see View reports in the Amazon Chime Administrator Guide.
+March 30, 2018
+
+
+Assign users Pro or Basic permissions
+Assign users Pro or Basic permissions. For more information, see Manage user access and permissions in the Amazon Chime Administrator Guide.
+March 29, 2018
+
+

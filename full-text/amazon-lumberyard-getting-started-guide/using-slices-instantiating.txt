@@ -1,0 +1,16 @@
+Instantiating Prebuilt Slices
+In this tutorial, you instantiate, or place, two previously created slices into the perspective viewport: the exterior maze walls and the interior maze walls. 
+
+
+In the Asset Browser, navigate to the StarterGame\Slices\GSG directory, and then select and drag the Maze_Wall_Exterior.slice into the viewport.
+
+
+
+In the same StarterGame\Slices\GSG directory, select and drag the Maze_Wall_Interior.slice into the viewport.
+
+
+
+Press CtrlS to save your level.
+
+
+Next: Aligning the Slices

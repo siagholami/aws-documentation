@@ -1,0 +1,17 @@
+AWS::WAFv2::RuleGroup AndStatementTwo
+Logical AND statement used in statement nesting.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Statements](#cfn-wafv2-rulegroup-andstatementtwo-statements)" : [ StatementThree, ... ]
+}
+YAML
+[Statements](#cfn-wafv2-rulegroup-andstatementtwo-statements): 
+    - StatementThree
+Properties
+Statements 
+Logical AND statements used in statement nesting.
+Required: Yes
+Type: List of StatementThree
+Update requires: No interruption

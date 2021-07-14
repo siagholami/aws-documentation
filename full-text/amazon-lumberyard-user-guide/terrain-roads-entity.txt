@@ -1,0 +1,19 @@
+Creating the Road Entity
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+You can create and place roads using the Road entity as follows.
+When performing this procedure, you may notice that parts of the road disappear into the terrain. The Align Height Map step resolves this by stretching the terrain height to match the path of the road based on its shape and on BorderWidth parameter. For information on BorderWidth and related settings, see Road Entity.
+To create and place the Road entity
+
+
+In the Rollup Bar, on the Objects tab, click Misc, Road.
+
+
+In your level, start at the beginning of the road and click to place a series of points that define the road’s path.
+
+
+When complete, double-click where you want the road to end.
+
+
+In the Rollup Bar, under Road Parameters, click Align Height Map to adjust the terrain height to match the path of the road.
+

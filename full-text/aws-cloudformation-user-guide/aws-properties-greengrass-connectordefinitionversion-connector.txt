@@ -1,0 +1,37 @@
+AWS::Greengrass::ConnectorDefinitionVersion Connector
+Connectors are modules that provide built-in integration with local infrastructure, device protocols, AWS, and other cloud services. For more information, see Integrate with Services and Protocols Using Greengrass Connectors in the AWS IoT Greengrass Developer Guide.
+ In an AWS CloudFormation template, the Connectors property of the  AWS::Greengrass::ConnectorDefinitionVersion  resource contains a list of Connector property types.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ConnectorArn](#cfn-greengrass-connectordefinitionversion-connector-connectorarn)" : String,
+  "[Id](#cfn-greengrass-connectordefinitionversion-connector-id)" : String,
+  "[Parameters](#cfn-greengrass-connectordefinitionversion-connector-parameters)" : Json
+}
+YAML
+[ConnectorArn](#cfn-greengrass-connectordefinitionversion-connector-connectorarn): String
+  [Id](#cfn-greengrass-connectordefinitionversion-connector-id): String
+  [Parameters](#cfn-greengrass-connectordefinitionversion-connector-parameters): Json
+Properties
+ConnectorArn 
+The Amazon Resource Name (ARN) of the connector.
+For more information about AWS-provided connectors, see AWS-Provided Greengrass Connectors.
+Required: Yes
+Type: String
+Update requires: Replacement
+Id 
+A descriptive or arbitrary ID for the connector. This value must be unique within the connector definition version. Maximum length is 128 characters with pattern [a-zA-Z0-9:_-].
+Required: Yes
+Type: String
+Update requires: Replacement
+Parameters 
+The parameters or configuration that the connector uses.
+For more information about AWS-provided connectors, see AWS-Provided Greengrass Connectors.
+Required: No
+Type: Json
+Update requires: Replacement
+See also
+
+Connector in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

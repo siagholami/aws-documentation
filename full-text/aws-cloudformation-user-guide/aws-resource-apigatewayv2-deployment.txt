@@ -1,0 +1,70 @@
+AWS::ApiGatewayV2::Deployment
+The AWS::ApiGatewayV2::Deployment resource creates a deployment for an API.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGatewayV2::Deployment",
+  "Properties" : {
+      "[ApiId](#cfn-apigatewayv2-deployment-apiid)" : String,
+      "[Description](#cfn-apigatewayv2-deployment-description)" : String,
+      "[StageName](#cfn-apigatewayv2-deployment-stagename)" : String
+    }
+}
+YAML
+Type: AWS::ApiGatewayV2::Deployment
+Properties: 
+  [ApiId](#cfn-apigatewayv2-deployment-apiid): String
+  [Description](#cfn-apigatewayv2-deployment-description): String
+  [StageName](#cfn-apigatewayv2-deployment-stagename): String
+Properties
+ApiId 
+The API identifier.
+Required: Yes
+Type: String
+Update requires: Replacement
+Description 
+The description for the deployment resource.
+Required: No
+Type: String
+Update requires: No interruption
+StageName 
+The name of the Stage resource for the Deployment resource to create.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the deployment ID, such as 123abc.
+For more information about using the Ref function, see Ref.
+Examples
+Deployment creation example
+The following example creates a deployment resource for the MyApi API, which has the MyRoute route defined.
+JSON
+{
+    "Deployment": {
+        "Type": "AWS::ApiGatewayV2::Deployment",
+        "DependsOn": [
+            "MyRoute"
+        ],
+        "Properties": {
+            "Description": "My deployment",
+            "ApiId": {
+                "Ref": "MyApi"
+            },
+            "StageName": "Beta"
+        }
+    }
+}
+YAML
+Deployment:
+  Type: 'AWS::ApiGatewayV2::Deployment'
+  DependsOn:
+    - MyRoute
+  Properties:
+    Description: My deployment
+    ApiId: !Ref MyApi
+    StageName: Beta
+See also
+
+CreateDeployment in the Amazon API Gateway Version 2 API Reference

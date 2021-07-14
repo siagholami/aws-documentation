@@ -1,0 +1,130 @@
+Creating a Robot
+Before you can deploy a robot application, you must configure your robot hardware. When you create a robot, you select the hardware architecture and an IAM role for AWS IoT Greengrass. After the robot is created, download the AWS IoT Greengrass core and security resources, then configure your robot hardware.
+Topics
+ Create deployment role
+ Create a robot
+Create deployment role
+Before you create a robot, create an IAM role for robot application deployment. The role will also be used by AWS RoboMaker to access resources like Amazon S3 (where your robot application is placed prior to deployment) and by your robot application to access resources it consumes like Amazon Lex or Amazon Rekognition.
+If you have already created these roles, you can skip to Create a robot. 
+To create the AWS IoT Greengrass role
+
+
+Sign in to the AWS Management Console and open the AWS Identity and Access Management console at console.aws.amazon.com/iam.
+
+
+Create the access policy. On the left, choose Policies, then choose Create policy. Choose JSON and paste the code below:
+
+
+{
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Effect": "Allow",
+               "Action": [
+                   "robomaker:UpdateRobotDeployment"
+               ],
+               "Resource": "*"
+           },
+           {
+               "Effect": "Allow",
+               "Action": [
+                   "s3:List*",
+                   "s3:Get*"
+               ],
+               "Resource": ["arn:aws:s3:::my-robot-application-source-bucket/*"]
+           }
+       ]
+   }
+Choose Review policy, type in a Name, and then choose Create policy.
+
+
+Choose Roles and then choose Create role.
+
+
+In the Create role: Step 1 page, choose Greengrass and then choose Next: Permissions.
+
+
+In the Permissions page, select the policy you created above, then choose Next: Tags.
+
+
+In the Add tags page, add optional tags to the role, then choose Next: Review.
+
+
+In the Review page, type in a Role name and then choose Create role.
+
+
+Next, update the trust policy to include AWS Lambda. Select the new role, then select the Trust relationships tab.
+
+
+In the Trust relationship tab, select Edit trust relationship.
+
+
+Update the trust relationship with the following policy document: 
+
+
+{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Service": [
+             "lambda.amazonaws.com",
+             "greengrass.amazonaws.com"
+           ]
+         },
+         "Action": "sts:AssumeRole"
+       }
+     ]
+   }
+
+Select Update Trust Policy.
+
+Create a robot
+To create a robot:
+
+
+Sign in to the AWS RoboMaker console at https://console.aws.amazon.com/robomaker/.
+
+
+In the left navigation pane, choose Fleet Management, and then choose Robots.
+
+
+Choose Create robot.
+
+
+In the Create robot page, type a name for the robot.
+
+
+Select the Architecture of the robot.
+
+
+Under AWS IoT Greengrass group defaults, select a Create new to create a new AWS IoT Greengrass group for the robot. Optionally, you can select an existing AWS IoT Greengrass group. Each robot must have its own AWS IoT Greengrass group.
+
+
+If you use an existing AWS IoT Greengrass group, it must have an IAM role associated with it. To create the role, see Create deployment role.
+
+
+Optionally, modify the Greengrass prefix. This string is prepended to AWS IoT Greengrass objects created on your behalf. 
+
+
+Select a IAM role to assign to the AWS IoT Greengrass group created for the robot. It grants permissions for AWS IoT Greengrass to access your robot application in Amazon S3 and read update status from AWS RoboMaker.
+
+
+Optionally, under Tags, specify one or more tags for the robot. Tags are words or phrases that act as metadata for identifying and organizing your AWS resources. Each tag consists of a key and a value. You can manage tags for your robot on the Robot details page.
+
+
+For more about tagging, see Tagging Your AWS RoboMaker Resources.
+
+
+Choose Create. 
+
+
+In the Download your Core device page, choose Download to download and store your robot's security resources.
+
+
+Download AWS IoT Greengrass core software matching the architecture of your physical robot. To configure and run the AWS IoT Greengrass core software, follow the steps in Module 1: Environment Setup for Greengrass. Then follow the steps in Start AWS Greengrass on the Core Device. 
+Use the following command to unzip your security resources: 
+
+
+$ sudo unzip RobotName-setup.zip -d /greengrass

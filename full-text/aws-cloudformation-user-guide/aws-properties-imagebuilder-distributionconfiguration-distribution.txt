@@ -1,0 +1,67 @@
+AWS::ImageBuilder::DistributionConfiguration Distribution
+The distribution configuration distribution defines the settings for a specific Region in the Distribution Configuration. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration)" : Json,
+  "[LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns)" : [ String, ... ],
+  "[Region](#cfn-imagebuilder-distributionconfiguration-distribution-region)" : String
+}
+YAML
+[AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration): Json
+  [LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns): 
+    - String
+  [Region](#cfn-imagebuilder-distributionconfiguration-distribution-region): String
+Properties
+AmiDistributionConfiguration 
+ The specific AMI settings, such as launch permissions and AMI tags. For details, see example schema below.
+Required: No
+Type: Json
+Update requires: No interruption
+LicenseConfigurationArns 
+ The License Manager Configuration to associate with the AMI in the specified Region. For more information, see the  LicenseConfiguration API.
+Required: No
+Type: List of String
+Update requires: No interruption
+Region 
+ The target Region for the Distribution Configuration. For example, eu-west-1. 
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+Examples
+Example AmiDistributionConfiguration schema
+The following example shows the schema for the AmiDistributionConfiguration property in both YAML and JSON format. To make an AMI public, set the launch permission authorized accounts to all. See the examples for making an AMI public at EC2 ModifyImageAttribute. 
+YAML
+AmiDistributionConfiguration:
+  Name: 'AmiCopyConfiguration - {{ imagebuilder:buildDate }}'
+  Description: 'description'
+  AmiTags:
+    AmiTagKey: 'AmiTagValue'
+  LaunchPermissionConfiguration:
+    UserGroups:
+      - 'String - group name 1'
+      - 'String - group name 1'
+    UserIds:
+      - 'String - account id 1'
+      - 'String - account id 2'
+JSON
+"AmiDistributionConfiguration": {
+    "Name": "AmiCopyConfiguration - {{ imagebuilder:buildDate }}",
+    "Description": "description",
+    "AmiTags": {
+        "AmiTagKey": "AmiTagValue"
+    },
+    "LaunchPermissionConfiguration": {
+        "UserGroups": [
+            "GroupName1",
+            "GroupName2"
+        ],
+        "UserIds": [
+            "123456789012",
+            "345678901234"
+        ]
+    }
+}

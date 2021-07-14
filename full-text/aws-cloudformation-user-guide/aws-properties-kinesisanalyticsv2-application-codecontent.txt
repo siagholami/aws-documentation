@@ -1,0 +1,36 @@
+AWS::KinesisAnalyticsV2::Application CodeContent
+Specifies either the application code, or the location of the application code, for a Flink-based Kinesis Data Analytics application. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation)" : S3ContentLocation,
+  "[TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent)" : String,
+  "[ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent)" : String
+}
+YAML
+[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation): 
+    S3ContentLocation
+  [TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent): String
+  [ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent): String
+Properties
+S3ContentLocation 
+Information about the Amazon S3 bucket containing the application code.
+Required: No
+Type: S3ContentLocation
+Update requires: No interruption
+TextContent 
+The text-format code for a Flink-based Kinesis Data Analytics application.
+Required: No
+Type: String
+Minimum: 0
+Maximum: 102400
+Update requires: No interruption
+ZipFileContent 
+The zip-format code for a Flink-based Kinesis Data Analytics application.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+CodeContent in the Amazon Kinesis Data Analytics API Reference 

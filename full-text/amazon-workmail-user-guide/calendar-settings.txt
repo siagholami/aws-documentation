@@ -1,0 +1,62 @@
+Working with calendar settings
+View your calendar by day, work week, week, or month. You can also view multiple calendars and update other calendar settings.
+Topics
+ Changing your calendar view
+ Changing calendar settings
+ Viewing multiple calendars
+Changing your calendar view
+You can switch the calendar layout to view appointments by day, work week, week, or month.
+To change the calendar view
+
+
+In the Amazon WorkMail web application, on the shortcut bar, choose the calendar icon.
+
+
+In the navigation pane, choose Day, Workweek, Week, or Month.
+
+
+Changing calendar settings
+You can change the default settings for the calendar.
+To change calendar settings
+
+
+On the menu bar, choose Settings (the gear icon).
+
+
+In the navigation pane, choose Calendar.
+
+
+In the contents pane, update the settings as appropriate.
+
+
+Viewing multiple calendars
+You can open multiple calendars in a single overview. You can open the calendars side by side or in an overlay to see the calendars transparently stacked on top of each other. By default, the calendars are opened side by side.
+To work with multiple calendars
+
+
+In the Amazon WorkMail web application, on the shortcut bar, choose the calendar icon.
+
+
+At the bottom of navigation pane, choose Open other calendars.
+
+
+In the Open other folders dialog box, choose Name.
+
+
+In the address book, select the owner of calendar to open and choose OK.
+
+
+For Folder type, choose Calendar.
+
+
+To show the subfolders of the shared calendar, choose Show subfolders.
+
+
+Choose OK.
+
+
+Repeat steps 1–5 for each calendar to open.
+
+
+To place calendars in the stacked overlay, use the arrow buttons on top of the calendars.
+

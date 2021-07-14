@@ -1,0 +1,33 @@
+Configuring cost allocation tags for an Amazon SQS queue (console)
+To help organize and identify your Amazon SQS queues, you can add cost allocation tags to them. For more information, see Amazon SQS cost allocation tags.
+On the Details page for a queue, the Tagging tab displays the tags for the queue.
+When you create or edit a queue, you can configure tags for it.
+To configure tags for an existing queue (console)
+
+
+Open the Amazon SQS console at https://console.aws.amazon.com/sqs/.
+
+
+In the navigation pane, choose Queues. 
+
+
+Choose a queue and choose Edit. 
+
+
+Scroll to the Tags section.
+
+
+Add, modify, or remove the queue tags:
+
+
+To add a tag, choose Add new tag, enter a Key and Value, and then choose Add new tag.
+
+
+To update a tag, change its Key and Value.
+
+
+To remove a tag, choose Remove next to its key-value pair.
+
+
+When you finish configuring the tags, choose Save.
+

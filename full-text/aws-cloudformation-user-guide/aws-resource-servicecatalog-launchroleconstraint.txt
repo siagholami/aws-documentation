@@ -1,0 +1,77 @@
+AWS::ServiceCatalog::LaunchRoleConstraint
+Specifies a launch constraint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ServiceCatalog::LaunchRoleConstraint",
+  "Properties" : {
+      "[AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage)" : String,
+      "[Description](#cfn-servicecatalog-launchroleconstraint-description)" : String,
+      "[LocalRoleName](#cfn-servicecatalog-launchroleconstraint-localrolename)" : String,
+      "[PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid)" : String,
+      "[ProductId](#cfn-servicecatalog-launchroleconstraint-productid)" : String,
+      "[RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn)" : String
+    }
+}
+YAML
+Type: AWS::ServiceCatalog::LaunchRoleConstraint
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-launchroleconstraint-description): String
+  [LocalRoleName](#cfn-servicecatalog-launchroleconstraint-localrolename): String
+  [PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-launchroleconstraint-productid): String
+  [RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn): String
+Properties
+AcceptLanguage 
+The language code.
+  en - English (default)
+  jp - Japanese
+  zh - Chinese
+Required: No
+Type: String
+Maximum: 100
+Update requires: No interruption
+Description 
+The description of the constraint.
+Required: No
+Type: String
+Maximum: 2000
+Update requires: No interruption
+LocalRoleName 
+You are required to specify either the RoleArn or the LocalRoleName but can't use both. 
+If you specify the LocalRoleName property, when an account uses the launch constraint, the IAM role with that name in the account will be used. This allows launch-role constraints to be account-agnostic so the administrator can create fewer resources per shared account. 
+The given role name must exist in the account used to create the launch constraint and the account of the user who launches a product with this launch constraint.
+Required: No
+Type: String
+Update requires: No interruption
+PortfolioId 
+The portfolio identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+ProductId 
+The product identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+RoleArn 
+The ARN of the launch role.
+You are required to specify RoleArn or LocalRoleName but can't use both.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns identifier of the constraint.
+For more information about using the Ref function, see Ref.
+See also
+
+CreateConstraint in the AWS Service Catalog API Reference

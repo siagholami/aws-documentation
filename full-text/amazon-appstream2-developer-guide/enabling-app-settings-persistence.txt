@@ -1,0 +1,37 @@
+Enabling Application Settings Persistence
+Topics
+ Prerequisites for Enabling Application Settings Persistence
+ Best Practices for Enabling Application Settings Persistence
+ How to Enable Application Settings Persistence
+Prerequisites for Enabling Application Settings Persistence
+To enable application settings persistence, you must first do the following:
+ Check that you have the correct AWS Identity and Access Management (IAM) permissions for Amazon S3 actions. For more information, see the IAM Policies and the Amazon S3 Bucket for Home Folders section in Identity and Access Management for Amazon AppStream 2.0.
+ Use an image that was created from a base image published by AWS on or after December 7, 2017. For a current list of released AWS base images, see AppStream 2.0 Base Image Version History.
+ Associate the stack on which you plan to enable this feature with a fleet based on an image that uses a version of the AppStream 2.0 agent released on or after August 29, 2018. For more information, see AppStream 2.0 Agent Version History.
+ Enable network connectivity to Amazon S3 from your virtual private cloud (VPC) by configuring internet access or a VPC endpoint for Amazon S3. For more information, see the Home Folders and VPC Endpoints section in Networking and Access for Amazon AppStream 2.0.
+Best Practices for Enabling Application Settings Persistence
+To enable application settings persistence without providing internet access to your instances, use a VPC endpoint. This endpoint must be in the VPC to which your AppStream 2.0 instances are connected. You must attach a custom policy to enable AppStream 2.0 access to the endpoint. For information about how to create the custom policy, see the Home Folders and VPC Endpoints section in Networking and Access for Amazon AppStream 2.0. For more information about private Amazon S3 endpoints, see VPC Endpoints and Endpoints for Amazon S3 in the Amazon VPC User Guide.
+How to Enable Application Settings Persistence
+You can enable or disable application settings persistence while creating a stack or after the stack is created by using the AppStream 2.0 console, AppStream 2.0 API, an AWS SDK, or the AWS Command Line Interface (CLI). For each AWS Region, persistent application settings are stored in an S3 bucket in your account.
+The first time you enable application settings persistence for a stack in an AWS Region, AppStream 2.0 creates an S3 bucket in your AWS account in the same Region. The same bucket stores the application settings VHD file for all users and all stacks in that AWS Region. For more information, see Amazon S3 Bucket Storage in Administer the VHDs for Your Users' Application Settings.
+To enable application settings persistence while creating a stack
+ Follow the steps in Create a Stack, and make sure that Enable Application Settings Persistence is selected.
+To enable application settings persistence for an existing stack
+
+
+Open the AppStream 2.0 console at https://console.aws.amazon.com/appstream2.
+
+
+In the left navigation pane, choose Stacks, and select the stack for which to enable application settings persistence.
+
+
+Below the stacks list, choose User Settings, Application Settings Persistence, Edit.
+
+
+In the Application Settings Persistence dialog box, choose Enable Application Settings Persistence. 
+
+
+Confirm the current settings group or type the name of a new settings group. When you're done, choose Update.
+
+
+New streaming sessions now have application settings persistence enabled.

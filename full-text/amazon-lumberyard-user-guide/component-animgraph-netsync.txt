@@ -1,0 +1,4 @@
+Anim Graph Net Sync
+The AnimGraph component, which adds an animation graph and motion set to a character, does not automatically synchronize its parameters across the network. Lumberyard's GridMate networking system provides a server an authoritative way of replicating these parameters. This replication enables the movements of a character on a server to be mirrored on all of the clients that are connected to the server. 
+To implement the replication, use Lumberyard's Anim Graph Net Sync component, which is included with the EMotion FX Animation gem. The Anim Graph Net Sync component requires the Network Binding component and can be added to any entity that has the AnimGraph component.
+For more information, see Synchronizing Animations Across a Network.

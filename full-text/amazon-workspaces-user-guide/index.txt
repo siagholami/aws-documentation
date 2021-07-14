@@ -1,0 +1,28 @@
+Amazon WorkSpaces User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+Getting Started with Your WorkSpace
+Manage Your WorkSpace from Your Client
+WorkSpaces Client Peripheral Device Support
+WorkSpaces High DPI Display Support
+Amazon WorkSpaces Clients
+Amazon WorkSpaces Android Client Application
+Amazon WorkSpaces iPad Client Application
+Amazon WorkSpaces Linux Client Application
+Amazon WorkSpaces macOS Client Application
+PCoIP Zero Client
+Amazon WorkSpaces Web Access
+Amazon WorkSpaces Windows Client Application
+Printing from a WorkSpace
+Troubleshooting Amazon WorkSpaces Client Issues

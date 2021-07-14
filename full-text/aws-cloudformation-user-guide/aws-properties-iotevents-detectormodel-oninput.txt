@@ -1,0 +1,25 @@
+AWS::IoTEvents::DetectorModel OnInput
+Specifies the actions performed when the condition evaluates to TRUE.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Events](#cfn-iotevents-detectormodel-oninput-events)" : [ Event, ... ],
+  "[TransitionEvents](#cfn-iotevents-detectormodel-oninput-transitionevents)" : [ TransitionEvent, ... ]
+}
+YAML
+[Events](#cfn-iotevents-detectormodel-oninput-events): 
+    - Event
+  [TransitionEvents](#cfn-iotevents-detectormodel-oninput-transitionevents): 
+    - TransitionEvent
+Properties
+Events 
+Specifies the actions performed when the condition evaluates to TRUE.
+Required: No
+Type: List of Event
+Update requires: No interruption
+TransitionEvents 
+Specifies the actions performed, and the next state entered, when a condition evaluates to TRUE.
+Required: No
+Type: List of TransitionEvent
+Update requires: No interruption

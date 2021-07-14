@@ -1,0 +1,15 @@
+Expanding and Collapsing Pivot Table Clusters
+If you are using grouped columns or rows in a pivot table, you can expand or collapse a group to show or hide its data in the table.
+Use the following procedure to expand or collapse a pivot table group.
+
+
+On the analysis page, choose the pivot table visual that you want to edit.
+
+
+On the group that you want to collapse, choose the collapse icon, as shown following:
+
+
+
+The group collapses and the data for the related group is summarized in the row or column, as shown following:
+
+To expand the group again, choose the expand icon:

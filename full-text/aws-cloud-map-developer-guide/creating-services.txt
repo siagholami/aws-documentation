@@ -1,0 +1,22 @@
+Creating Services
+To create a service, perform the following procedure.
+To create a service
+
+
+Sign in to the AWS Management Console and open the AWS Cloud Map console at https://console.aws.amazon.com/cloudmap/.
+
+
+In the navigation pane, choose Namespaces.
+
+
+On the Namespaces page, choose the namespace that you want to add the service to.
+
+
+On the Namespace: namespace-name page, choose Create service.
+
+
+On the Create service page, enter the applicable values. For more information, see Values That You Specify When You Create Services.
+
+
+Choose Create service.
+

@@ -1,0 +1,32 @@
+AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource S3ReferenceDataSource
+For an SQL-based Amazon Kinesis Data Analytics application, identifies the Amazon S3 bucket and object that contains the reference data.
+A Kinesis Data Analytics application loads reference data only once. If the data changes, you call the UpdateApplication operation to trigger reloading of data into your application. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BucketARN](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn)" : String,
+  "[FileKey](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey)" : String
+}
+YAML
+[BucketARN](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-bucketarn): String
+  [FileKey](#cfn-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource-filekey): String
+Properties
+BucketARN 
+The Amazon Resource Name (ARN) of the S3 bucket.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 2048
+Pattern: arn:.*
+Update requires: No interruption
+FileKey 
+The object key name containing the reference data.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+See also
+
+S3ReferenceDataSource in the Amazon Kinesis Data Analytics API Reference 

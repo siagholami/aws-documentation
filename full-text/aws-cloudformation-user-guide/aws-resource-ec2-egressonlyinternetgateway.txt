@@ -1,0 +1,45 @@
+AWS::EC2::EgressOnlyInternetGateway
+[IPv6 only] Specifies an egress-only internet gateway for your VPC. An egress-only internet gateway is used to enable outbound communication over IPv6 from instances in your VPC to the internet, and prevents hosts outside of your VPC from initiating an IPv6 connection with your instance.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::EgressOnlyInternetGateway",
+  "Properties" : {
+      "[VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::EgressOnlyInternetGateway
+Properties: 
+  [VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid): String
+Properties
+VpcId 
+The ID of the VPC for which to create the egress-only internet gateway.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the egress-only Internet gateway (the physical resource ID).
+For more information about using the Ref function, see Ref.
+Examples
+
+YAML
+myEgressOnlyInternetGateway: 
+    Type: AWS::EC2::EgressOnlyInternetGateway
+    Properties: 
+        VpcId: vpc-1a2b3c4d
+
+JSON
+{
+    "myEgressOnlyInternetGateway" : {
+        "Type" : "AWS::EC2::EgressOnlyInternetGateway",
+        "Properties" : {
+            "VpcId" : "vpc-1a2b3c4d"
+        }
+    }
+}
+See also
+
+CreateEgressOnlyInternetGateway in the Amazon Elastic Compute Cloud API Reference 

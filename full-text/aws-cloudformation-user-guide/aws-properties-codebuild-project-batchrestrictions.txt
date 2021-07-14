@@ -1,0 +1,24 @@
+AWS::CodeBuild::Project BatchRestrictions
+Specifies restrictions for the batch build.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ComputeTypesAllowed](#cfn-codebuild-project-batchrestrictions-computetypesallowed)" : [ String, ... ],
+  "[MaximumBuildsAllowed](#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed)" : Integer
+}
+YAML
+[ComputeTypesAllowed](#cfn-codebuild-project-batchrestrictions-computetypesallowed): 
+    - String
+  [MaximumBuildsAllowed](#cfn-codebuild-project-batchrestrictions-maximumbuildsallowed): Integer
+Properties
+ComputeTypesAllowed 
+An array of strings that specify the compute types that are allowed for the batch build. See Build environment compute types in the AWS CodeBuild User Guide for these values. 
+Required: No
+Type: List of String
+Update requires: No interruption
+MaximumBuildsAllowed 
+Specifies the maximum number of builds allowed.
+Required: No
+Type: Integer
+Update requires: No interruption

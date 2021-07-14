@@ -1,0 +1,25 @@
+Requesting a Quota Increase
+You can use Service Quotas to request an increase for a quota, if the quota is adjustable. Some requests are automatically resolved, while others are submitted to AWS Support. You can track the status of a quota increase request that is submitted to AWS Support. Requests to increase service quotas do not receive priority support. If you have an urgent request, contact AWS Support.
+To request a service quota increase
+
+
+Open the Service Quotas console at https://console.aws.amazon.com/servicequotas/.
+
+
+In the navigation pane, choose AWS services.
+
+
+Select a service from the list, or type the name of the service in the search field.
+
+
+If the quota is adjustable, you can select its radio button or its name, and then choose Request quota increase.
+
+
+For Change quota value, enter the new value. The new value must be greater than the current value.
+
+
+Choose Request. After the request is resolved, the Applied quota value for the quota is set to the new value.
+
+
+To view any pending or recently resolved requests, choose Dashboard from the navigation pane. For pending requests, choose the status of the request to open the request receipt. The initial status of a request is Pending. After the status changes to Quota requested, you'll see the case number with AWS Support. Choose the case number to open the ticket for your request.
+

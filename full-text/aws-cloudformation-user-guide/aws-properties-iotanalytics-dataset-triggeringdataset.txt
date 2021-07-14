@@ -1,0 +1,19 @@
+AWS::IoTAnalytics::Dataset TriggeringDataset
+Information about the dataset whose content generation triggers the new dataset content generation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DatasetName](#cfn-iotanalytics-dataset-triggeringdataset-datasetname)" : String
+}
+YAML
+[DatasetName](#cfn-iotanalytics-dataset-triggeringdataset-datasetname): String
+Properties
+DatasetName 
+The name of the data set whose content generation triggers the new data set content generation.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: ^[a-zA-Z0-9_]$
+Update requires: No interruption

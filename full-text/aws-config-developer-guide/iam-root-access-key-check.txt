@@ -1,0 +1,9 @@
+iam-root-access-key-check
+Checks whether the root user access key is available. The rule is COMPLIANT if the user access key does not exist.
+Identifier: IAM_ROOT_ACCESS_KEY_CHECK
+Trigger type: Periodic
+AWS Region: All supported AWS Regions except Middle East (Bahrain)
+Parameters:
+None   
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

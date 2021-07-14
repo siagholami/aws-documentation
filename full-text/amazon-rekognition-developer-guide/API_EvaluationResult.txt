@@ -1,0 +1,17 @@
+EvaluationResult
+The evaluation results for the training of a model.
+Contents
+F1Score 
+The F1 score for the evaluation of all labels. The F1 score metric evaluates the overall precision and recall performance of the model as a single value. A higher value indicates better precision and recall performance. A lower score indicates that precision, recall, or both are performing poorly. 
+Type: Float
+Required: No
+Summary 
+The S3 bucket that contains the training summary.
+Type: Summary object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

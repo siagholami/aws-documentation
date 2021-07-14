@@ -1,0 +1,9 @@
+Internetwork traffic privacy in AWS Direct Connect
+Traffic between service and on-premises clients and applications
+You have two connectivity options between your private network and AWS: 
+ An association to an AWS Site-to-Site VPN. For more information, see Infrastructure security in AWS Direct Connect.
+ An association to VPCs. For more information, see Virtual private gateway associations and Transit gateway associations.
+Traffic between AWS resources in the same Region
+You have two connectivity options:
+ An association to an AWS Site-to-Site VPN. For more information, see Infrastructure security in AWS Direct Connect.
+ An association to VPCs. For more information, see Virtual private gateway associations and Transit gateway associations.

@@ -1,0 +1,29 @@
+Set Up SDK Metrics
+To set up SDK Metrics, you perform some steps with your SDK and some with CloudWatch agent.
+To set up SDK Metrics
+
+
+Create an application with an AWS SDK that supports SDK Metrics.
+
+
+Host your project on an Amazon EC2 instance or in your local environment.
+
+
+Install and use the latest version of your SDK.
+
+
+Install the CloudWatch agent on the EC2 instance or the local environment that is running an application that you want to receive metrics for. For more information, see Installing the CloudWatch Agent.
+
+
+Configure the CloudWatch agent for SDK Metrics. For more information, see Configure the CloudWatch Agent for SDK Metrics.
+
+
+Authorize SDK Metrics to collect and send metrics. For more information, see Set IAM Permissions for SDK Metrics.
+
+
+Enable SDK Metrics. There are multiple methods to do this, depending on which SDK you're using. One method that is universal for all SDKs is to add the following to your environment variables:
+
+
+export AWS_CSM_ENABLED=true
+For information about the other methods, see your SDK documentation as shown in the following table.  
+[See the AWS documentation website for more details]

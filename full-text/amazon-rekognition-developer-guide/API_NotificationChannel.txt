@@ -1,0 +1,19 @@
+NotificationChannel
+The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the completion status of a video analysis operation. For more information, see Calling Amazon Rekognition Video Operations.
+Contents
+RoleArn 
+The ARN of an IAM role that gives Amazon Rekognition publishing permissions to the Amazon SNS topic. 
+Type: String
+Pattern: arn:aws:iam::\d{12}:role/?[a-zA-Z_0-9=,.@\-_/] 
+Required: Yes
+SNSTopicArn 
+The Amazon SNS topic to which Amazon Rekognition to posts the completion status.
+Type: String
+Pattern: (^arn:aws:sns:.*:\w{12}:.$) 
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,22 @@
+Configuration
+A configuration contains all of the settings for your ActiveMQ broker, in XML format (similar to ActiveMQ's activemq.xml file). You can create a configuration before creating any brokers. You can then apply the configuration to one or more brokers.
+Important
+Making changes to a configuration does not apply the changes to the broker immediately. To apply your changes, you must wait for the next maintenance window or reboot the broker. For more information, see Amazon MQ Broker Configuration Lifecycle.
+Currently, you can't delete a configuration.
+For information about creating, editing, and managing configurations, see the following:
+ Tutorial: Creating and Applying Amazon MQ Broker Configurations
+ Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions
+ Configurations
+ Amazon MQ Broker Configuration Parameters
+To keep track of the changes you make to your configuration, you can create configuration revisions. For more information, see Tutorial: Creating and Applying Amazon MQ Broker Configurations and Tutorial: Editing Amazon MQ Broker Configurations and Managing Configuration Revisions.
+Attributes
+A broker configuration has several attributes, for example:
+ A name (MyConfiguration)
+ An ID (c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9)
+ An Amazon Resource Name (ARN) (arn:aws:mq:us-east-2:123456789012:configuration:MyConfiguration:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9)
+For a full list of configuration attributes, see the following in the Amazon MQ REST API Reference:
+ REST Operation ID: Configuration
+ REST Operation ID: Configurations
+For a full list of configuration revision attributes, see the following:
+ REST Operation ID: Configuration Revision
+ REST Operation ID: Configuration Revisions

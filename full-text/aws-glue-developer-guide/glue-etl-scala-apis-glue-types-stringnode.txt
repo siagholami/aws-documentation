@@ -1,0 +1,13 @@
+AWS Glue Scala StringNode APIs
+Package: com.amazonaws.services.glue.types
+StringNode Case Class
+StringNode
+case class StringNode extends ScalarNode(value, TypeCode.STRING)  (
+           value : String )
+StringNode val Fields
+
+ordering
+
+StringNode def Methods
+def equals( other : Any )
+def this( value : UTF8String )

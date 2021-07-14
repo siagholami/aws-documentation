@@ -1,0 +1,55 @@
+Add or Remove a Text Widget from a CloudWatch Dashboard
+A text widget contains a block of text in Markdown format. You can add, edit, or remove text widgets from your CloudWatch dashboard.
+To add a text widget to a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Choose Add widget.
+
+
+Choose Text and then Configure.
+
+
+For Markdown, add and format your text using Markdown and choose Create widget.
+
+
+Choose Save dashboard.
+
+
+To edit a text widget on a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Hover over the upper-right corner of the text block and choose Widget actions and then Edit.
+
+
+Update the text as needed and choose Update widget.
+
+
+Choose Save dashboard.
+
+
+To remove a text widget from a dashboard
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Dashboards and select a dashboard.
+
+
+Hover over the upper-right corner of the text block and choose Widget actions and then Delete.
+
+
+Choose Save dashboard.
+

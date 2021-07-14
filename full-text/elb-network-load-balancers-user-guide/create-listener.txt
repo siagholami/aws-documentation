@@ -1,0 +1,49 @@
+Create a listener for your Network Load Balancer
+A listener is a process that checks for connection requests. You define a listener when you create your load balancer, and you can add listeners to your load balancer at any time.
+Prerequisites
+
+You must specify a target group for the listener rule. For more information, see Create a target group for your Network Load Balancer.
+You must specify an SSL certificate for a TLS listener. The load balancer uses the certificate to terminate the connection and decrypt requests from clients before routing them to targets. For more information, see Server certificates.
+
+Add a listener
+You configure a listener with a protocol and a port for connections from clients to the load balancer, and a target group for the default listener rule. For more information, see Listener configuration.
+To add a listener using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, under LOAD BALANCING, choose Load Balancers.
+
+
+Select the load balancer and choose Listeners.
+
+
+Choose Add listener.
+
+
+For Protocol : port, choose TCP, UDP, TCP_UDP, or TLS. Keep the default port or type a different port.
+
+
+[TLS listeners] For ALPN policy, choose a policy to enable ALPN or choose None to disable ALPN. For more information, see ALPN policies.
+
+
+For Default actions, choose Add action, Forward to and then choose an available target group.
+
+
+[TLS listeners] For Security policy, we recommend that you keep the default security policy.
+
+
+[TLS listeners] For Default SSL certificate, do one of the following:
+    If you created or imported a certificate using AWS Certificate Manager, choose From ACM and choose the certificate.
+    If you uploaded a certificate using IAM, choose From IAM and choose the certificate.
+
+
+Choose Save.
+
+
+[TLS listeners] To add an optional certificate list for use with the SNI protocol, see Add certificates to the certificate list.
+
+
+To add a listener using the AWS CLI
+Use the create-listener command to create the listener.

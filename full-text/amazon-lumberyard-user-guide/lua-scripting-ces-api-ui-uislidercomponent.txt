@@ -1,0 +1,86 @@
+UISliderComponent
+Controls the values of a slider.
+UiSliderBus
+Services messages for the UiSliderComponent.
+GetFillEntity
+Returns the fill element.
+Syntax
+AZ::EntityId GetFillEntity()
+GetManipulatorEntity
+Returns the entity ID of the manipulator element.
+Syntax
+AZ::EntityId GetManipulatorEntity()
+GetMaxValue
+Returns the maximum value of the slider.
+Syntax
+float GetMaxValue()
+GetMinValue
+Returns the minimum value of the slider.
+Syntax
+float GetMinValue()
+GetStepValue
+Returns the smallest increment allowed between values. Zero means no restriction.
+Syntax
+float GetStepValue()
+GetTrackEntity
+Returns the track element.
+Syntax
+AZ::EntityId GetTrackEntity()
+GetValue
+Returns the value of the slider.
+Syntax
+float GetValue()
+GetValueChangedActionName
+Returns the action triggered when the value has finished changing.
+Syntax
+const AZStd::string& GetValueChangedActionName()
+GetValueChangingActionName
+Returns the name of the action triggered while the value is changing.
+Syntax
+const AZStd::string& GetValueChangingActionName()
+SetFillEntity
+Sets the fill element.
+Syntax
+void SetFillEntity(AZ::EntityId entityId)
+SetManipulatorEntity
+Sets the manipulator element.
+Syntax
+void SetManipulatorEntity(AZ::EntityId entityId)
+SetMaxValue
+Sets the maximum value of the slider.
+Syntax
+void SetMaxValue(float value)
+SetMinValue
+Sets the minimum value of the slider.
+Syntax
+void SetMinValue(float value)
+SetStepValue
+Sets the smallest increment allowed between values. Use zero for no restriction.
+Syntax
+void SetStepValue(float step)
+SetTrackEntity
+Sets the track element.
+Syntax
+void SetTrackEntity(AZ::EntityId entityId)
+SetValue
+Sets the value of the slider.
+Syntax
+void SetValue(float value)
+SetValueChangedActionName
+Sets the action triggered when the value is done changing.
+Syntax
+void SetValueChangedActionName(const AZStd::string& actionName)
+SetValueChangingActionName
+Sets the action triggered while the value is changing.
+Syntax
+void SetValueChangingActionName(const AZStd::string& actionName)
+UiSliderNotificationBus
+Services notifications for the UiSliderComponent.
+OnSliderValueChanged
+The slider value has finished changing.
+Syntax
+void OnSliderValueChanged(float value)
+OnSliderValueChanging
+The slider value is changing.
+Syntax
+void OnSliderValueChanging(float value)

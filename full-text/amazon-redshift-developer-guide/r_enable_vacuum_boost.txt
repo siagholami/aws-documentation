@@ -1,0 +1,5 @@
+enable_vacuum_boost
+Values (default in bold)
+false, true
+Description
+Specifies whether to enable the vacuum boost option for all VACUUM commands run in a session. If enable_vacuum_boost is true, Amazon Redshift runs all VACUUM commands in the session with the BOOST option. If enable_vacuum_boost is false, Amazon Redshift doesn't run with the BOOST option by default. For more information about the BOOST option, see VACUUM. 

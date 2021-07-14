@@ -1,0 +1,175 @@
+Document History for User Guide
+The following table describes the documentation for this release of AWS Elemental MediaLive.
+ API version: latest 
+
+
+
+Change
+Description
+Date
+
+
+
+
+Standard channels and Single-pipeline channels
+You can now set up a channel with a single-pipeline. The Create channel page includes a Channel class field
+April 5, 2019
+
+
+Revision to documentation for setting up access
+The procedures for setting up the user and the service with AWS IAM access have been revised and split into two chapters, Setting Up> and Setting Up for Production.
+March 22, 2019
+
+
+MediaPackage output group
+There is a new output group type: MediaPackage, which lets your send output to AWS Elemental MediaPackage. This new output group type creates an HLS output that is streamlined for delivery to MediaPackage.
+March 13, 2019
+
+
+Support for pausing and unpausing a channel pipeline
+The channel schedule now supports the ability to enter actions to pause and unpause a pipeline in a channel.
+March 8, 2019
+
+
+Support for encrypted HLS inputs
+MediaLive now supports ingest of encrypted HLS inputs.
+March 5, 2019
+
+
+Push inputs from your VPC
+You can create an RTP push input or an RTMP push input to push content from an upstream system that is in your Amazon VPC to MediaLive. Several chapters have been updated, including the chapter about inputs and the chapter about creating a channel from scratch.
+February 20, 2019
+
+
+Limits for reservations
+The table for MediaLive limits now includes the limits for reservations
+February 11, 2019
+
+
+Tagging
+There is now support for attaching tags to channels, inputs, and input security groups.
+February 8, 2019
+
+
+Frame capture output group
+There is a new output group type: frame capture output group, to send a series of frame capture files to Amazon Simple Storage Service.
+January 25, 2019
+
+
+Integration with AWS CloudTrail
+There is now support for logging MediaLive API calls with CloudTrail.
+January 18, 2019
+
+
+Integration with AWS Elemental MediaConnect
+You can set up to use a flow from AWS Elemental MediaConnect as an input for a channel. Information has been added to the chapter about inputs and the chapter about creating a channel from scratch.
+December 7, 2018
+
+
+Revision to documentation for schedules
+The channel schedule now supports the ability to enter actions to switch the channel from ingesting one input to another input. This chapter has been revised.
+November 8, 2018
+
+
+Input switching
+There is now support for input switching. The channel must be set up with multiple inputs, and the schedule must contain actions to switch from one input to another. A new chapter on input switching has been added. In addition, information about multiple inputs (which are required for input switching) has been added in the existing chapters on planning and creating a channel.
+November 8, 2018
+
+
+Change in input limits
+Input limits are now split into two categories: push and pull.
+November 8, 2018
+
+
+QVBR rate control mode feature
+There is a new option for the rate control field that is part of setting up the video encode in the outputs of a channel. The option is "quality-defined variable bitrate" (QVBR).
+October 17, 2018
+
+
+Doc-only update, Introduced RSS feed
+You can now subscribe to RSS feeds for notifications of updates to this user guide.
+June 21, 2018
+
+
+
+
+
+
+
+Change
+Description
+Date
+
+
+
+
+Requirement for redundant channels in AWS Elemental MediaPackage
+If your downstream system is AWS Elemental MediaPackage, there is no longer a requirement to set up two channels in that service. The sections Step 2: Set Up the Downstream System and Setting Up the Downstream System have been revised to reflect this change.
+August 31, 2018
+
+
+Schedule feature
+There is now support for adding SCTE-35 messages and static image overlays to the channel's schedule, for inclusion in a running channel.The sections Working with the AWS Elemental MediaLive Schedule and Working with Image Overlays have been added.
+August 24, 2018
+
+
+Reservations feature
+There is now support for purchasing a reservation for processing. With a reservation, you pay a lower rate on specific processing. The section Working with Reservations in AWS Elemental MediaLive has been added.
+June 19, 2018
+
+
+Channel logs feature
+There is now support for sending log information to Amazon CloudWatch Logs. The sections Logging and Monitoring Using Amazon CloudWatch Logs have been added. The section Setting Up AWS Elemental MediaLive Permissions for a Production Environment has been revised to include setup for logs.
+June 13, 2018
+
+
+Console alerts feature
+There is now support for viewing channel alerts on the console. See Viewing and Monitoring Channels. The information on setting up for alerts has been moved to this chapter.
+June 6, 2018
+
+
+Support for RTMP outputs
+Setting Up the Downstream System now includes RTMP. The sections Creating an RTMP Output Group and Settings for an RTMP Output have been added.  Step 3: Match Formats to Categories now includes RTMP CaptionInfo. Formats Supported in an RTMP Output has been added.
+April 18, 2018
+
+
+Input edit feature, Input security group edit feature
+Editing of an existing input and an editing of an existing input security group are now supported. See Editing an Input Editing an Input Security Group
+March 23,2018
+
+
+Input delete feature, Input security group delete feature
+Deleting an input and deleting an input security group are now supported. See Editing an Input Editing an Input Security Group
+March 23, 2018
+
+
+Creating a channel
+Creating a Channel from Scratch has been extensively revised, particularly with more information and examples on setting up destinations for output groups.
+March 23, 2018
+
+
+Input specification feature
+Input specification fields ensure that the service allocates sufficient processing resources and correctly calculates processing charges. See Step 2: Attach Inputs to the Channel.
+February 15, 2018
+
+
+Channel edit feature
+Editing of the fields in an existing (saved) channel is now supported. See Editing a Channel.
+February 15, 2018
+
+
+Custom template feature
+Users can create custom templates from existing channels, and can import those templates into new channels. See Creating a Channel from a Template or by Cloning.
+February 15, 2018
+
+
+New service and guide
+This is the initial release of AWS Elemental MediaLive User Guide.
+November 27, 2017
+
+
+
+Note
+The AWS Media Services are not designed or intended for use with applications or in situations requiring fail‐safe performance, such as life safety operations, navigation or communication systems, air traffic control, or life support machines in which the unavailability, interruption or failure of the services could lead to death, personal injury, property damage or environmental damage.
+A component of AWS Elemental MediaLive is licensed under the AVC patent portfolio license for the personal and non-commercial use of a consumer to (i) encode video in compliance with the AVC standard ("AVC video") and/or (ii) decode AVC video that was encoded by a consumer engaged in a personal and non-commercial activity and/or was obtained from a video provider licensed to provide AVC video. No license is granted or shall be implied for any other use. A component of AWS Elemental MediaLive is licensed under the mpeg-4 patent portfolio license for the personal and non-commercial use of a consumer for (i) encoding video in compliance with the mpeg-4 visual standard (“mpeg-4 video”) and/or (ii) decoding mpeg-4 video that was encoded by a consumer engaged in a personal and non-commercial activity and/or was obtained from a video provider licensed to provide AVC video. No license is granted or shall be implied for any other use. Additional information may be obtained from MPEG-LA, LLC. See http://www.mpegla.com.
+AWS Elemental MediaLive may contain Dolby Digital and Dolby Digital Plus, which are protected under international and U.S. copyright laws as unpublished works. Dolby Digital and Dolby Digital Plus are confidential and proprietary to Dolby Laboratories. Their reproduction or disclosure, in whole or in part, or the production of derivative works therefrom without the express permission of Dolby Laboratories is prohibited. © Copyright 2003-2015 Dolby Laboratories. All rights reserved.

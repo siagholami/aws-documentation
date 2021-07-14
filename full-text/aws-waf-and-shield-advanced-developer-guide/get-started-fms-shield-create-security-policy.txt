@@ -1,0 +1,63 @@
+Step 2: Create and apply an AWS Firewall Manager Shield Advanced policy
+After completing the prerequisites, you create an AWS Firewall Manager Shield Advanced policy. A Firewall Manager Shield Advanced policy contains the accounts and resources that you want to protect with Shield Advanced.
+Important
+Firewall Manager does not support Amazon Route 53 or AWS Global Accelerator. If you need to protect these resources with Shield Advanced, you can't use a Firewall Manager policy. Instead, follow the instructions in Adding AWS Shield Advanced protection to AWS resources. 
+To create a Firewall Manager Shield Advanced policy (console)
+
+
+Sign in to the AWS Management Console using the Firewall Manager administrator account that you set up in the prerequisites, and then open the Firewall Manager console at https://console.aws.amazon.com/wafv2/fms. 
+Note
+For information about setting up a Firewall Manager administrator account, see Step 2: Set the AWS Firewall Manager administrator account.
+
+
+In the navigation pane, choose Security policies.
+
+
+Choose Create policy.
+
+
+For Policy type, choose Shield Advanced. 
+
+
+To create a Shield Advanced policy, your Firewall Manager administrator account must be subscribed to Shield Advanced. If you are not subscribed, you are prompted to do so. For more information, see AWS Shield pricing.
+Note
+You don't need to manually subscribe each member account to Shield Advanced. Firewall Manager does this for you as part of creating the policy.
+
+For Region, choose an AWS Region. To protect Amazon CloudFront resources, choose Global.
+
+To protect resources in multiple Regions (other than CloudFront resources), you must create separate Firewall Manager policies for each Region.
+
+
+Choose Next.
+
+
+For Name, enter a friendly name. 
+
+
+AWS accounts affected by this policy allows you to narrow the scope of your policy by specifying accounts to include or exclude. For this tutorial, choose Include all accounts under my organization. 
+
+
+Choose the types of resources that you want to protect.
+
+
+Firewall Manager doesn't support Amazon Route 53 or AWS Global Accelerator. If you need to protect these resources with Shield Advanced, you can't use a Firewall Manager policy. Instead, follow the instructions in Adding AWS Shield Advanced protection to AWS resources.
+
+If you want to protect only resources with specific tags, or alternatively exclude resources with specific tags, select Use tags to include/exclude resources, enter the tags, and then choose either Include or Exclude. You can choose only one option. 
+
+If you enter more than one tag (separated by commas), and if a resource has any of those tags, it is considered a match.
+For more information about tags, see Working with Tag Editor.
+
+Choose Create and apply this policy to existing and new resources.
+
+This option applies Shield Advanced protection to each applicable account within an organization in AWS Organizations, and associates the protection with the specified resources in the accounts. This option also applies the policy to all new resources that match the preceding criteria (resource type and tags). Alternatively, if you choose Create but do not apply this policy to existing or new resources, Firewall Manager doesn't apply Shield Advanced protection to any resources. You must apply the policy to resources later.
+Note
+Shield Advanced protects up to 1,000 resources per account.
+
+
+Choose Next.
+
+
+Review the new policy. To make any changes, choose Previous. When you are satisfied with the policy, choose Create policy.
+
+
+Continue to Step 3: (Optional) authorize the DDoS Response Team (DRT).

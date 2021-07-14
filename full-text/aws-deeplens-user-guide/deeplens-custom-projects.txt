@@ -1,0 +1,15 @@
+Working with AWS DeepLens Custom Projects
+After you've explored one or more sample projects, you may want to create and deploy your own AWS DeepLens projects. It means that you'll need to do all or most of the following.
+ Train a custom deep learning model either in Amazon SageMaker or elsewhere.
+ Import the model into AWS DeepLens.
+ Create and publish an inference function.
+ Create a AWS DeepLens project and add the model and the inference function to it.
+ Deploy the project to your AWS DeepLens device.
+We'll walk you through these tasks in this section.
+Topics
+ Import Your Amazon SageMaker Trained Model
+ Import an Externally Trained Model
+ Optimize a Custom Model
+ Create and Publish an AWS DeepLens Inference Lambda Function
+ Create and Deploy a Custom AWS DeepLens Project
+ Use Amazon SageMaker Neo to Optimize Inference on AWS DeepLens

@@ -1,0 +1,7 @@
+DESCRIBE VIEW
+Shows the list of columns for the named view. This allows you to examine the attributes of a complex view. 
+Synopsis
+DESCRIBE [view_name]
+Example
+DESCRIBE orders;
+See also SHOW COLUMNS, SHOW CREATE VIEW, SHOW VIEWS, and DROP VIEW.

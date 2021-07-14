@@ -1,0 +1,2 @@
+Using Amazon SageMaker Spark for Machine Learning
+When using Amazon EMR release version 5.11.0 and later, the aws-sagemaker-spark-sdk component is installed along with Spark. This component installs Amazon SageMaker Spark and associated dependencies for Spark integration with Amazon SageMaker. You can use Amazon SageMaker Spark to construct Spark machine learning (ML) pipelines using Amazon SageMaker stages. For more information, see the Amazon SageMaker Spark Readme on GitHub and Using Apache Spark with Amazon SageMaker in the Amazon SageMaker Developer Guide.

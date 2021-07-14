@@ -1,0 +1,26 @@
+Using the Rise/Lower Brush
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+The Rise/Lower brush is perhaps the most versatile of all the terrain brushes and is often the first used. With it you can create many macroterrain landforms and features such as mountains, hills, cliffs, valleys, and riverbeds, for example. After using this brush, see Using the Flatten Brush and Using the Smooth Brush to learn how to control the shape and overall visual look.
+To use the Rise/Lower brush
+
+
+In the Rollup Bar, on the Terrain tab, click Modify, Rise/Lower.
+
+
+Adjust the Height slider to the desired height:
+    Use positive values for landforms that rise above the base level.
+    Use negative values for valleys and other landforms that sink below the base level.
+
+
+Adjust the Outside Radius and Inner Radius sliders (and the difference between the values) to control the steepness of the terrain.
+
+
+In the level, drag the mouse around to achieve the desired effect. 
+
+
+Under Modify Terrain, adjust Brush Settings and Noise Settings parameters as needed. See Terrain Brush Parameters for more information.
+
+
+When done, click Terrain, Modify or press Esc.
+

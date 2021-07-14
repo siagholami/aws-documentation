@@ -1,0 +1,43 @@
+Windows
+The following procedures show how to establish a VPN connection using Windows-based VPN clients.
+Before you begin, ensure that your Client VPN administrator has created a Client VPN endpoint and provided you with the Client VPN endpoint configuration file.
+For troubleshooting information, see Windows troubleshooting.
+OpenVPN GUI
+The following procedure shows how to establish a VPN connection using the OpenVPN GUI client application on a Windows computer.
+Note
+For information about the OpenVPN client application, see Community Downloads on the OpenVPN website.
+To establish a VPN connection
+
+
+Start the OpenVPN client application.
+
+
+On the Windows taskbar, choose Show/Hide icons, right-click OpenVPN GUI, and choose Import file.
+
+
+
+In the Open dialog box, select the configuration file that you received from your Client VPN administrator and choose Open.
+
+
+On the Windows taskbar, choose Show/Hide icons, right-click OpenVPN GUI, and choose Connect.
+
+
+
+OpenVPN Connect Client
+The following procedure shows how to establish a VPN connection using the OpenVPN Connect Client application on a Windows computer.
+Note
+For more information, see Connecting to Access Server with Windows on the OpenVPN website.
+To establish a VPN connection
+
+
+Start the OpenVPN Connect Client application.
+
+
+On the Windows taskbar, choose Show/Hide icons, right-click OpenVPN, and choose Import profile.
+
+
+Choose Import from File and select the configuration file that you received from your Client VPN administrator.
+
+
+Choose the connection profile to begin the connection.
+

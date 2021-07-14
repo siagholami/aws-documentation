@@ -1,0 +1,24 @@
+AWS::ApiGatewayV2::Authorizer JWTConfiguration
+The JWTConfiguration property specifies the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Audience](#cfn-apigatewayv2-authorizer-jwtconfiguration-audience)" : [ String, ... ],
+  "[Issuer](#cfn-apigatewayv2-authorizer-jwtconfiguration-issuer)" : String
+}
+YAML
+[Audience](#cfn-apigatewayv2-authorizer-jwtconfiguration-audience): 
+    - String
+  [Issuer](#cfn-apigatewayv2-authorizer-jwtconfiguration-issuer): String
+Properties
+Audience 
+A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list. See RFC 7519. Required for the JWT authorizer type. Supported only for HTTP APIs.
+Required: No
+Type: List of String
+Update requires: No interruption
+Issuer 
+The base domain of the identity provider that issues JSON Web Tokens. For example, an Amazon Cognito user pool has the following format: https://cognito-idp.{region}.amazonaws.com/{userPoolId}. Required for the JWT authorizer type. Supported only for HTTP APIs.
+Required: No
+Type: String
+Update requires: No interruption

@@ -1,0 +1,24 @@
+AWS::ECS::Cluster ClusterSettings
+The settings to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a cluster.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-ecs-cluster-clustersettings-name)" : String,
+  "[Value](#cfn-ecs-cluster-clustersettings-value)" : String
+}
+YAML
+[Name](#cfn-ecs-cluster-clustersettings-name): String
+  [Value](#cfn-ecs-cluster-clustersettings-value): String
+Properties
+Name 
+The name of the cluster setting. The only supported value is containerInsights.
+Required: No
+Type: String
+Allowed values: containerInsights
+Update requires: No interruption
+Value 
+The value to set for the cluster setting. The supported values are enabled and disabled. If enabled is specified, CloudWatch Container Insights will be enabled for the cluster, otherwise it will be disabled unless the containerInsights account setting is enabled. If a cluster value is specified, it will override the containerInsights value set with PutAccountSetting or PutAccountSettingDefault.
+Required: No
+Type: String
+Update requires: No interruption

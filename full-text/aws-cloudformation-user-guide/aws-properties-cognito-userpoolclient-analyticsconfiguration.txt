@@ -1,0 +1,46 @@
+AWS::Cognito::UserPoolClient AnalyticsConfiguration
+The Amazon Pinpoint analytics configuration for collecting metrics for a user pool.
+Note
+In regions where Pinpoint is not available, Cognito User Pools only supports sending events to Amazon Pinpoint projects in us-east-1. In regions where Pinpoint is available, Cognito User Pools will support sending events to Amazon Pinpoint projects within that same region. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid)" : String,
+  "[ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid)" : String,
+  "[RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn)" : String,
+  "[UserDataShared](#cfn-cognito-userpoolclient-analyticsconfiguration-userdatashared)" : Boolean
+}
+YAML
+[ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid): String
+  [ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid): String
+  [RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn): String
+  [UserDataShared](#cfn-cognito-userpoolclient-analyticsconfiguration-userdatashared): Boolean
+Properties
+ApplicationId 
+The application ID for an Amazon Pinpoint application.
+Required: No
+Type: String
+Pattern: ^[0-9a-fA-F]$
+Update requires: No interruption
+ExternalId 
+The external ID.
+Required: No
+Type: String
+Minimum: 2
+Maximum: 1224
+Pattern: [\w=,.@:\/-]*
+Update requires: No interruption
+RoleArn 
+The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.
+Required: No
+Type: String
+Minimum: 20
+Maximum: 2048
+Pattern: arn:[\w=/,.@-]:[\w=/,.@-]:([\w=/,.@-]*)?:[0-9]:[\w=/,.@-](:[\w=/,.@-])?(:[\w=/,.@-])?
+Update requires: No interruption
+UserDataShared 
+If UserDataShared is true, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+Required: No
+Type: Boolean
+Update requires: No interruption

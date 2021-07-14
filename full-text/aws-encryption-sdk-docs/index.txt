@@ -1,0 +1,67 @@
+AWS Encryption SDK Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is the AWS Encryption SDK?
+How the AWS Encryption SDK works
+Concepts in the AWS Encryption SDK
+Getting started with the AWS Encryption SDK
+Using keyrings
+Supported algorithm suites in the AWS Encryption SDK
+AWS Encryption SDK programming languages
+AWS Encryption SDK for C
+Installing the AWS Encryption SDK for C
+Using the AWS Encryption SDK for C
+AWS Encryption SDK for C examples
+
+
+AWS Encryption SDK for Java
+AWS Encryption SDK for Java example code
+
+
+AWS Encryption SDK for JavaScript
+Compatibility of the AWS Encryption SDK for JavaScript
+Installing the AWS Encryption SDK for JavaScript
+Modules in the AWS Encryption SDK for JavaScript
+AWS Encryption SDK for JavaScript examples
+
+
+AWS Encryption SDK for Python
+AWS Encryption SDK for Python example code
+
+
+AWS Encryption SDK command line interface
+Installing the AWS Encryption SDK command line interface
+How to use the AWS Encryption SDK command line interface
+Examples of the AWS Encryption SDK command line interface
+AWS Encryption SDK CLI syntax and parameter reference
+
+
+Data key caching
+How to use data key caching
+Setting cache security thresholds
+Data key caching details
+Data key caching example
+Data key caching example in Java
+Data key caching example in Python
+Local cache example AWS CloudFormation template
+
+
+Frequently asked questions
+AWS Encryption SDK reference
+AWS Encryption SDK message format reference
+Body additional authenticated data (AAD) reference for the AWS Encryption SDK
+AWS Encryption SDK message format examples
+AWS Encryption SDK algorithms reference
+AWS Encryption SDK initialization vector reference
+Document history for the AWS Encryption SDK Developer Guide

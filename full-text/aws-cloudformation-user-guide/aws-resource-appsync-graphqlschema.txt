@@ -1,0 +1,86 @@
+AWS::AppSync::GraphQLSchema
+The AWS::AppSync::GraphQLSchema resource is used for your AWS AppSync GraphQL schema that controls the data model for your API. Schema files are text written in Schema Definition Language (SDL) format. For more information about schema authoring, see Designing a GraphQL API in the AWS AppSync Developer Guide.
+Note
+When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template. To cause this resource to be updated you must change a property value for this resource in the CloudFormation template. Changing the S3 file content without changing a property value will not result in an update operation.
+See Update Behaviors of Stack Resources in the AWS CloudFormation User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::AppSync::GraphQLSchema",
+  "Properties" : {
+      "[ApiId](#cfn-appsync-graphqlschema-apiid)" : String,
+      "[Definition](#cfn-appsync-graphqlschema-definition)" : String,
+      "[DefinitionS3Location](#cfn-appsync-graphqlschema-definitions3location)" : String
+    }
+}
+YAML
+Type: AWS::AppSync::GraphQLSchema
+Properties: 
+  [ApiId](#cfn-appsync-graphqlschema-apiid): String
+  [Definition](#cfn-appsync-graphqlschema-definition): String
+  [DefinitionS3Location](#cfn-appsync-graphqlschema-definitions3location): String
+Properties
+ApiId 
+The AWS AppSync GraphQL API identifier to which you want to apply this schema.
+Required: Yes
+Type: String
+Update requires: Replacement
+Definition 
+The text representation of a GraphQL schema in SDL format.
+For more information about using the Ref function, see Ref.
+Required: No
+Type: String
+Update requires: No interruption
+DefinitionS3Location 
+The location of a GraphQL schema file in an Amazon S3 bucket. Use this if you want to provision with the schema living in Amazon S3 rather than embedding it in your CloudFormation template.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of an AWS::AppSync::GraphQLSchema resource to the intrinsic Ref function, the function returns the GraphQL API id with the literal String GraphQLSchema attached to it. 
+Examples
+GraphQL Schema Creation Example
+The following example creates a GraphQL Schema and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter.
+YAML
+Parameters:
+  graphQlApiId:
+    Type: String
+  graphQlSchemaS3DescriptionLocation:
+    Type: String
+Resources:
+  Schema:
+    Type: AWS::AppSync::GraphQLSchema
+    Properties:
+      ApiId:
+    Ref: graphQlApiId
+      DefinitionS3Location:
+        Ref: graphQlSchemaS3DescriptionLocation
+JSON
+{
+  "Parameters": {
+    "graphQlApiId": {
+      "Type": "String"
+    },
+    "graphQlSchemaS3DescriptionLocation": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "Schema": {
+      "Type": "AWS::AppSync::GraphQLSchema",
+      "Properties": {
+        "ApiId": {
+          "Ref": "graphQlApiId"
+        },
+        "DefinitionS3Location": {
+          "Ref": "graphQlSchemaS3DescriptionLocation"
+        }
+      }       
+    }
+  }
+}
+See also
+
+StartSchemaCreation operation in the AWS AppSync API Reference.

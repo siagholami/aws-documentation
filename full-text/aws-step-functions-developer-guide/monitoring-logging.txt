@@ -1,0 +1,6 @@
+Monitoring and Logging
+This section provides information about monitoring and logging AWS Step Functions.
+Topics
+ Amazon CloudWatch Metrics
+ Amazon CloudWatch Events
+ Logging Step Functions Using AWS CloudTrail

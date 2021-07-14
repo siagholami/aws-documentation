@@ -1,0 +1,43 @@
+AWS::EC2::PlacementGroup
+Specifies a placement group in which to launch instances. The strategy of the placement group determines how the instances are organized within the group. 
+A cluster placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput. A spread placement group places instances on distinct hardware. A partition placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition.
+For more information, see Placement Groups in the Amazon Elastic Compute Cloud User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::PlacementGroup",
+  "Properties" : {
+      "[Strategy](#cfn-ec2-placementgroup-strategy)" : String
+    }
+}
+YAML
+Type: AWS::EC2::PlacementGroup
+Properties: 
+  [Strategy](#cfn-ec2-placementgroup-strategy): String
+Properties
+Strategy 
+The placement strategy.
+Required: No
+Type: String
+Allowed values: cluster | partition | spread
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the name of the placement group.
+For more information about using the Ref function, see Ref.
+Examples
+Create a Placement Group
+The following example declares a placement group with a cluster placement strategy. 
+JSON
+"PlacementGroup" : {
+   "Type" : "AWS::EC2::PlacementGroup",
+   "Properties" : {
+            "Strategy" : "cluster"
+   }
+}
+YAML
+PlacementGroup:
+  Type: AWS::EC2::PlacementGroup
+   Properties:
+     Strategy: cluster

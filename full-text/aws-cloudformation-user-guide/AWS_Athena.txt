@@ -1,0 +1,5 @@
+Amazon Athena resource type reference
+Resource types
+ AWS::Athena::DataCatalog
+ AWS::Athena::NamedQuery
+ AWS::Athena::WorkGroup

@@ -1,0 +1,23 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayPortMapping
+An object that represents a port mapping.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Port](#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port)" : Integer,
+  "[Protocol](#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol)" : String
+}
+YAML
+[Port](#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port): Integer
+  [Protocol](#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol): String
+Properties
+Port 
+The port used for the port mapping. Specify one protocol.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+Protocol 
+The protocol used for the port mapping.
+Required: Yes
+Type: String
+Update requires: No interruption

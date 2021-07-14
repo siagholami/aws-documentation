@@ -1,0 +1,33 @@
+Editing a Filter
+You can edit a filter by changing the filter criteria or enabling or disabling the filter.
+You can't change the field a filter applies to. To apply a filter to a different field, create a new filter instead.
+Enabling or Disabling a Filter
+You can use the filter menu to enable or disable a filter. When you create a filter, it's enabled by default.
+
+
+On the data preparation page, expand the Filters pane.
+
+
+Choose the filter you want to enable or disable, and then choose the selector to the right of the filter name.
+
+
+
+On the filter menu, choose Enable filter or Disable filter.
+
+
+
+Changing Filter Criteria
+Use the following procedure to modify a filter.
+
+
+On the data preparation page, expand the Filters pane.
+
+
+Choose the filter you want to modify to see the filter details.
+
+
+Change the comparison type or values.
+
+
+Choose Apply.
+

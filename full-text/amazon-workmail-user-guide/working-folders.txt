@@ -1,0 +1,45 @@
+Working with folders
+You can create folders to organize your email, contacts, and calendar items.
+To create a new folder
+
+
+In the Amazon WorkMail web application, press ShiftTab until the screen reader reads New item pop-up button. Press Enter to select it. Use the Up/Down arrows to select New folder. The cursor focus is in the Name field.
+
+
+Enter the name of your new folder. Navigate through the items using Tab.
+
+
+Select the destination folder of the new folder. Navigate through the items using the Up/Down arrows.
+
+
+Press Enter to select a destination folder, press Tab to navigate to Ok, and then press Enter to save. 
+
+
+To delete a folder
+You can delete folders you're no longer using. Deleting folders also deletes the email in the folders.
+
+
+In the Amazon WorkMail web application, press ShiftTab until the screen reader reads Inbox. Press Enter to select it. Use the Up/Down arrow keys to select the folder to delete.
+
+
+On the confirmation screen, the screen reader reads Are you sure you want to move the folder [subfolder] and all of its contents into the Deleted items folder?.
+
+
+The cursor focus is on the Yes option. Press Enter to delete the folder.
+
+
+To copy or move folders
+You can copy and move folders within Amazon WorkMail.
+
+
+In the Amazon WorkMail web application, press ShiftTab until the screen reader reads Inbox. Use the Up/Down arrow keys to select the folder to be copied or moved.
+
+
+Press ShiftF10 to open the context menu, and select Copy.
+
+
+In the dialog box press ShiftTab to move to the destination folder, then use the Up/Down arrows to choose the destination folder.
+
+
+Press Tab and Enter to copy or move the folder.
+

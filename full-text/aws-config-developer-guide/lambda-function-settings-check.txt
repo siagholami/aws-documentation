@@ -1,0 +1,16 @@
+lambda-function-settings-check
+Checks that the lambda function settings for runtime, role, timeout, and memory size match the expected values.
+Identifier: LAMBDA_FUNCTION_SETTINGS_CHECK
+Trigger type: Configuration changes
+AWS Region: All supported AWS Regions except China (Ningxia)
+Parameters:
+runtime
+Comma-separated list of runtime values. 
+role
+IAM role.
+timeout
+Timeout in seconds.
+memorySize
+Memory size in MB.
+AWS CloudFormation template
+To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

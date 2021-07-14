@@ -1,0 +1,39 @@
+Delete a target group
+You can delete a target group if it is not referenced by the forward actions of any listener rules. Deleting a target group does not affect the targets registered with the target group. If you no longer need a registered EC2 instance, you can stop or terminate it.
+
+[ New console ]
+To delete a target group using the new console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, under LOAD BALANCING, choose Target Groups.
+
+
+Select the target group and choose Actions, Delete.
+
+
+When prompted for confirmation, choose Yes, delete.
+
+
+
+[ Old console ]
+To delete a target group using the old console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+In the navigation pane, under LOAD BALANCING, choose Target Groups.
+
+
+Select the target group and choose Actions, Delete.
+
+
+When prompted for confirmation, choose Yes.
+
+
+
+To delete a target group using the AWS CLI
+Use the delete-target-group command.

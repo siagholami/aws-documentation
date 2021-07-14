@@ -1,0 +1,7 @@
+Understanding the Resource Manager Security System
+Cloud Canvas Resource Manager provides a robust set of features for securing your Amazon Lumberyard project and its cloud-connected resources. You can control the access to project resources of team members, players, Lambda functions, and specify other custom access control configuration for your project.
+Topics
+ Controlling Access to Resources
+ Cloud Canvas Built-In Roles and Policies
+ Player Identity
+ Using the Cloud Canvas Command Line to Manage Roles and Permissions

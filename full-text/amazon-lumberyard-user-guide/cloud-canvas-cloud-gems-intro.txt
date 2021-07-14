@@ -1,0 +1,28 @@
+Cloud Gems
+A cloud gem is an individual package of specific cloud-connected functionality, assets, and AWS resource definitions. A cloud gem includes everything required for you to add cloud-connected functionality to your project.
+Lumberyard includes the following cloud gems. You can enable them in a project from the Lumberyard Project Configurator tool.
+ Compute Farm – Divide and conquer large-scale tasks for processing on a fleet of Amazon EC2 instances.
+ Defect Reporter – Streamlines and customizes the collection and management of defect report data from users. 
+ Dynamic Content – Allows Lumberyard .pak files that contain new and updated game assets to be uploaded to the cloud for later automatic downloading to the game client.
+ Game Metrics – Collects event data on player behaviors for analysis or triggering event actions.
+  In-Game Survey – Create surveys for your game, test them, and publish them. View survey results and manage your surveys in the Cloud Gem Portal.
+ Leaderboard – Stores a player's high scores and provides leader boards that show player rankings.
+ Message of the Day – Schedules the delivery of messages (for example, new product announcements or holiday greetings) to game clients.
+ Player Account – Provides a standalone player authentication and management solution that uses Amazon Cognito.
+  Speech Recognition – Add speech recognition and natural language processing to your Lumberyard game. The Speech Recognition Cloud Gem uses the Amazon Lex service, which recognizes and understands spoken input.
+ Text to Speech – Enhance your gameplay and workflows with synthesized speech. The Cloud Canvas Text-to-Speech (TTS) Cloud Gem uses Amazon Polly, which is a text-to-speech service that turns text into lifelike speech.
+  Web Communicator – Send AWS cloud service events to your game's connected editors or clients. Your editors or game clients can use this information to update themselves without having to poll AWS for updates. 
+Topics
+ Cloud Gem Portal
+ Using the AWS Script Behaviors Cloud Gem
+ Compute Farm Cloud Gem
+ Defect Reporter Cloud Gem
+ Using Dynamic Content Manager
+ Game Metrics Cloud Gem
+ In-Game Survey Cloud Gem Portal
+ Leaderboard Cloud Gem Portal
+ Message Of The Day Cloud Gem Portal
+ Player Account Cloud Gem Portal
+ Speech Recognition Cloud Gem
+ Text to Speech Cloud Gem (Using Amazon Polly)
+ Web Communicator Cloud Gem

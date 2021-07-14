@@ -1,0 +1,17 @@
+AWS::MediaLive::Channel VideoSelectorProgramId
+Used to extract video by the program ID.
+The parent of this entity is VideoSelectorSettings.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ProgramId](#cfn-medialive-channel-videoselectorprogramid-programid)" : Integer
+}
+YAML
+[ProgramId](#cfn-medialive-channel-videoselectorprogramid-programid): Integer
+Properties
+ProgramId 
+Selects a specific program from within a multi-program transport stream. If the program doesn't exist, MediaLive selects the first program within the transport stream by default.
+Required: No
+Type: Integer
+Update requires: No interruption

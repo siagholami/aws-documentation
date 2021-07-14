@@ -1,0 +1,17 @@
+Viewing AWS Service Catalog Metrics
+You can view CloudWatch metrics in the CloudWatch console, which provides a fine-grained and customizable display of your resources, as well as the number of running tasks in a service.
+Topics
+ Viewing AWS Service Catalog Metrics in the CloudWatch Console
+Viewing AWS Service Catalog Metrics in the CloudWatch Console
+AWS Service Catalog metrics can be viewed in the CloudWatch console. The CloudWatch console provides a detailed view of AWS Service Catalog metrics, and you can tailor the views to suit your needs. For more information about CloudWatch, see the Amazon CloudWatch User Guide.
+To view metrics in the CloudWatch console
+
+
+Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the Metrics section in the left navigation, choose Service Catalog.
+
+
+Choose the metrics to view. 
+

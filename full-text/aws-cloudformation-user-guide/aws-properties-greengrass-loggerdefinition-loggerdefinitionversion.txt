@@ -1,0 +1,24 @@
+AWS::Greengrass::LoggerDefinition LoggerDefinitionVersion
+ A logger definition version contains a list of loggers.
+Note
+After you create a logger definition version that contains the loggers you want to deploy, you must add it to your group version. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html.
+ In an AWS CloudFormation template, LoggerDefinitionVersion is the property type of the InitialVersion property in the  AWS::Greengrass::LoggerDefinition  resource.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)" : [ Logger, ... ]
+}
+YAML
+[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers): 
+    - Logger
+Properties
+Loggers 
+The loggers in this version.
+Required: Yes
+Type: List of Logger
+Update requires: Replacement
+See also
+
+LoggerDefinitionVersion in the * AWS IoT Greengrass API Reference * 
+AWS IoT Greengrass Developer Guide 

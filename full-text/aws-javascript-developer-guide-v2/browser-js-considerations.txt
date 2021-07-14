@@ -1,0 +1,5 @@
+Browser Script Considerations
+The following topics describe special considerations for using the AWS SDK for JavaScript in browser scripts.
+Topics
+ Building the SDK for Browsers
+ Cross-Origin Resource Sharing (CORS)

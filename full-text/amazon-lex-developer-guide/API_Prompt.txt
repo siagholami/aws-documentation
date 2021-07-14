@@ -1,0 +1,24 @@
+Prompt
+Obtains information from the user. To define a prompt, provide one or more messages and specify the number of attempts to get information from the user. If you provide more than one message, Amazon Lex chooses one of the messages to use to prompt the user. For more information, see Amazon Lex: How It Works.
+Contents
+maxAttempts 
+The number of times to prompt the user for information.
+Type: Integer
+Valid Range: Minimum value of 1. Maximum value of 5.
+Required: Yes
+messages 
+An array of objects, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
+Type: Array of Message objects
+Array Members: Minimum number of 1 item. Maximum number of 15 items.
+Required: Yes
+responseCard 
+A response card. Amazon Lex uses this prompt at runtime, in the PostText API response. It substitutes session attributes and slot values for placeholders in the response card. For more information, see Example: Using a Response Card. 
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 50000.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

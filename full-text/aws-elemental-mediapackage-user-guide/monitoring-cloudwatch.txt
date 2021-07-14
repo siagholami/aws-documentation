@@ -1,0 +1,40 @@
+Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics
+You can monitor AWS Elemental MediaPackage using CloudWatch, which collects raw data and processes it into readable, near real-time metrics. These statistics are kept for 15 months, so that you can access historical information and gain a better perspective on how your web application or service is performing. You can also set alarms that watch for certain thresholds, and send notifications or take actions when those thresholds are met. For more information, see the Amazon CloudWatch User Guide.
+To view metrics using the AWS Elemental MediaPackage console
+AWS Elemental MediaPackage displays metrics throughout the console.
+
+
+Open the MediaPackage console at https://console.aws.amazon.com/mediapackage/.
+
+
+Navigate to the appropriate page to view metrics:
+    For metrics on all channels and endpoints in the AWS Region, go to the Channels page.
+    For metrics on a specific channel and all of its endpoints, go to the channel's details page.
+    For metrics on a specific endpoint and its channel, go to the endpoint's details page.
+
+
+(Optional) To refine the metrics view, choose Open in CloudWatch.
+
+
+To view metrics using the CloudWatch console
+Metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace.
+
+
+Sign in to the AWS Management Console and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
+
+
+In the navigation pane, choose Metrics.
+
+
+Under All metrics, choose the AWS/MediaPackage namespace.
+
+
+Choose the metric dimension to view the metrics (for example, choose channel to view metrics per channel).
+
+
+To view metrics using the AWS CLI
+At a command prompt, use the following command:
+aws cloudwatch list-metrics --namespace "AWS/MediaPackage"
+Topics
+ AWS Elemental MediaPackage Live Content Metrics
+ AWS Elemental MediaPackage VOD Content Metrics

@@ -1,0 +1,199 @@
+AWS::ResourceGroups::Group
+Creates a resource group with the specified name and description. You can optionally include a resource query, or a service configuration.
+Minimum permissions 
+To run this command, you must have the following permissions:
+  resourcegroups:CreateGroup 
+Related operations 
+ To delete a group, use DeleteGroup.
+ To retrieve the details about a group, use GetGroup.
+ To retrieve the configuration attached to the group, use GetGroupConfiguration.
+ To add individual resources to a group, use GroupResources.
+ To retrieve the query associated with the group, use GetGroupQuery.
+ To list the resources that are members of the group, use ListGroupResources.
+ To list your groups, use ListGroups.
+ To remove an individual resource from a group, use UngroupResources.
+ To modify a group, use UpdateGroup.
+ To modify the query attached to a group, use UpdateGroupQuery.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ResourceGroups::Group",
+  "Properties" : {
+      "[Description](#cfn-resourcegroups-group-description)" : String,
+      "[Name](#cfn-resourcegroups-group-name)" : String,
+      "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : ResourceQuery,
+      "[Tags](#cfn-resourcegroups-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
+}
+YAML
+Type: AWS::ResourceGroups::Group
+Properties: 
+  [Description](#cfn-resourcegroups-group-description): String
+  [Name](#cfn-resourcegroups-group-name): String
+  [ResourceQuery](#cfn-resourcegroups-group-resourcequery): 
+    ResourceQuery
+  [Tags](#cfn-resourcegroups-group-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+Properties
+Description 
+The description of the resource group.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+The name of a resource group. Specify a name that is unique in the Region. To create multiple resource groups based on the same CloudFormation stack, use unique names for each.
+Required: Yes
+Type: String
+Update requires: Replacement
+ResourceQuery 
+The resource query that determines which AWS resources are members of the associated resource group.
+Required: No
+Type: ResourceQuery
+Update requires: No interruption
+Tags 
+The tags associated with the specified resource group.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Return values
+Ref
+The name of a resource group.
+Fn::GetAtt
+
+Arn 
+The ARN of a resource group.
+Examples
+Creating a CloudFormation Stack-Based Group Using Defaults
+This example creates a CloudFormation stack-based group using defaults. It includes all supported resource types and uses the same StackIdentifier as the CloudFormation stack that defines the group.
+JSON
+{
+    "ResourceGroup": { 
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyResourceGroup" 
+        }
+    } 
+}
+YAML
+ResourceGroup:
+  Type: "AWS::ResourceGroups::Group" 
+  Properties:
+    Name: "MyMinimalResourceGroup"
+Creating a CloudFormation Stack-Based Group That Includes Specific Resources
+This example creates a CloudFormation stack-based group that's similar to the group shown in the previous example. The difference is that it includes only specific resource types: EC2 instances and DynamoDB tables.
+JSON
+{
+    "CloudFormationStackGroupForSelectedResourceTypes": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyCloudFormationResourceGroup-Filters",
+            "ResourceQuery": {
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::EC2::Instance",
+                        "AWS::DynamoDB::Table" 
+                    ] 
+                } 
+            }
+        }
+    }
+}
+YAML
+CloudFormationStackGroupForSelectedResourceTypes:
+  Type: "AWS::ResourceGroups::Group" 
+  Properties: 
+    Name: "MyCloudFormationResourceGroup-Filters" 
+    ResourceQuery: 
+      Query: 
+        ResourceTypeFilters: 
+          - "AWS::EC2::Instance" 
+          - "AWS::DynamoDB::Table"
+Creating a CloudFormation Stack-Based Group Based on Another Stack
+This example creates a group that's built from another stack. The StackIdentifier value specifies that resources in the arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9 stack are included in the group. The group is tagged with TagKey=TagValue.
+JSON
+{
+    "CloudFormationStackGroupForAnotherStack": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyCloudFormationResourceGroupForAnotherStack",
+            "Description": "A group that is created via CFN",
+            "ResourceQuery": { 
+                "Type": "CLOUDFORMATION_STACK_1_0",
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::AllSupported" 
+                    ],
+                    "StackIdentifier": "arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9"
+                }
+            },
+            "Tags": [
+                {
+                    "Key": "TagKey",
+                    "Value": "TagValue" 
+                }
+            ]
+        }
+    }
+}
+YAML
+CloudFormationStackGroupForAnotherStack:
+  Type: "AWS::ResourceGroups::Group" 
+  Properties: 
+    Name: "MyCloudFormationResourceGroupForAnotherStack" 
+    Description: "A group that is created via CFN" 
+    ResourceQuery: 
+      Type: "CLOUDFORMATION_STACK_1_0" 
+      Query: 
+        ResourceTypeFilters:
+          - "AWS::AllSupported" 
+        StackIdentifier: "arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9"
+    Tags: 
+      -
+        Key: "TagKey" 
+        Value: "TagValue"
+Creating a Tag-Based Group
+This example shows how to create a group based on tags. All resources that are tagged with the Usage key with a value of Integration Tests will be members of this group.
+JSON
+{
+    "TagBasedGroup": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyTagBasedResourceGroup",
+            "Description": "A group that is created via CFN",
+            "ResourceQuery": {
+                "Type": "TAG_FILTERS_1_0",
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::AllSupported" 
+                    ],
+                    "TagFilters": [
+                        {
+                            "Key": "Usage",
+                            "Values": [
+                                "Integration Tests" 
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+YAML
+TagBasedGroup:
+  Type: "AWS::ResourceGroups::Group"
+  Properties:
+    Name: "MyTagBasedResourceGroup"
+    Description: "A group that is created via CFN"
+    ResourceQuery:
+      Type:
+        "TAG_FILTERS_1_0" 
+        Query:
+          ResourceTypeFilters: 
+            - "AWS::AllSupported" 
+          TagFilters:
+            - 
+              Key: "Usage" 
+              Values: 
+                - "Integration Tests"

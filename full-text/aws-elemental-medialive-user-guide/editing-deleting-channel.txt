@@ -1,0 +1,48 @@
+Editing and Deleting a Channel
+You can edit an existing (saved) channel to change how it processes the input, and you can delete a channel. However, you can edit or delete a channel only when it is not running.
+Editing a Channel
+You can edit any existing channel by editing, adding, or deleting output groups and outputs. You can also edit, add, or delete the channel's video, audio, and caption encodes.
+The channel must be idle (not running).
+Note
+You can't edit a channel to change the input associated with that channel. Instead, you must clone  the channel and associate a different input.
+To edit a channel
+
+
+On the Channels page, choose the option by the channel name.
+
+
+Choose Actions, and then choose Edit. The Edit channel page appears. The details on this page are identical to those on the Create channel page. For information about working with this page, see Creating a Channel from Scratch.
+
+
+When done, choose Update channel. 
+
+
+Wait for the channel State to return to Idle before performing another action with this channel. 
+Editing the Tags Associated with a Channel
+You can edit the tags associated with a channel at any time, when the channel is running or when it is idle. You can add more tags (up to the limit), and you can delete tags.
+To edit the tags in a channel
+
+
+On the Channels page, choose the channel name.
+
+
+Choose the Tags tab. Add or delete tags. To edit the value of an existing tag, delete the tag and add it again. For more information, see Tagging AWS Elemental MediaLive Resources. 
+
+
+When done, choose Save. 
+
+
+Deleting a Channel
+You can delete a channel from the Channels list or the details view. 
+The channel must be idle (not running).
+To delete a channel
+
+
+On the Channels page, choose the option by the channel name.
+
+
+If the channel is running, choose Stop. 
+
+
+Choose Delete.
+

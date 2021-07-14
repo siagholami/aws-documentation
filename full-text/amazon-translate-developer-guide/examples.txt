@@ -1,0 +1,9 @@
+Examples
+The following examples show ways that you can use Amazon Translate.
+Topics
+ Using Amazon Polly with Amazon Translate
+ Using Amazon Translate to Translate a Chat Channel
+ Using Amazon Translate with Amazon DynamoDB
+ Using Amazon Translate to Translate a Web Page
+ Using Amazon Translate to Translate Large Documents
+ Using Signature Version 4 with Amazon Translate

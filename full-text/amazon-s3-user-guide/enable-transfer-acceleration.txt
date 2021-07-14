@@ -1,0 +1,27 @@
+How do I enable transfer acceleration for an S3 bucket?
+Amazon Simple Storage Service (Amazon S3) transfer acceleration enables fast, easy, and secure file transfers between your client and an S3 bucket over long distances. This topic describes how to enable Amazon S3 transfer acceleration for a bucket. For more information, see Amazon S3 Transfer Acceleration in the Amazon Simple Storage Service Developer Guide.
+To enable transfer acceleration for an S3 bucket
+
+
+Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+In the Buckets list, choose the name of the bucket that you want to enable transfer acceleration for.
+
+
+Choose Properties.
+
+
+
+Under Advanced settings, choose Transfer acceleration.
+
+
+
+(Optional) If you want to compare accelerated and non-accelerated upload speeds, to open the  Amazon S3 Transfer Acceleration Speed Comparison tool, choose the Want to compare your data transfer speed by region?.
+
+
+The Speed Comparison tool uses multipart upload to transfer a file from your browser to various AWS Regions with and without Amazon S3 transfer acceleration. You can compare the upload speed for direct uploads and transfer accelerated uploads by Region. 
+
+Choose Enabled, and choose Save.
+
+Endpoint displays the transfer acceleration endpoint for your bucket. You use this endpoint to access accelerated data transfers to and from your bucket. If you suspend transfer acceleration, the accelerate endpoint no longer works.

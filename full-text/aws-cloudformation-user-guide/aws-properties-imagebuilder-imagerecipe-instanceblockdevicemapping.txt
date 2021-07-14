@@ -1,0 +1,44 @@
+AWS::ImageBuilder::ImageRecipe InstanceBlockDeviceMapping
+Defines block device mappings for the instance used to configure your image.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeviceName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)" : String,
+  "[Ebs](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)" : EbsInstanceBlockDeviceSpecification,
+  "[NoDevice](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)" : String,
+  "[VirtualName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)" : String
+}
+YAML
+[DeviceName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename): String
+  [Ebs](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs): 
+    EbsInstanceBlockDeviceSpecification
+  [NoDevice](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice): String
+  [VirtualName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname): String
+Properties
+DeviceName 
+The device to which these mappings apply.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: Replacement
+Ebs 
+Manages the Amazon EBS-specific configuration for this mapping.
+Required: No
+Type: EbsInstanceBlockDeviceSpecification
+Update requires: Replacement
+NoDevice 
+Removes a mapping from the parent image, formatted as an empty string.
+The following is an example of an empty string value in the NoDevice field. 
+NoDevice:""
+Required: No
+Type: String
+Update requires: Replacement
+VirtualName 
+Manages the instance ephemeral devices.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: Replacement

@@ -1,0 +1,25 @@
+AWS::IoTAnalytics::Dataset DatasetContentDeliveryRuleDestination
+The destination to which dataset contents are delivered.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration)" : IotEventsDestinationConfiguration,
+  "[S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration)" : S3DestinationConfiguration
+}
+YAML
+[IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration): 
+    IotEventsDestinationConfiguration
+  [S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration): 
+    S3DestinationConfiguration
+Properties
+IotEventsDestinationConfiguration 
+Configuration information for delivery of dataset contents to AWS IoT Events.
+Required: No
+Type: IotEventsDestinationConfiguration
+Update requires: No interruption
+S3DestinationConfiguration 
+Configuration information for delivery of dataset contents to Amazon S3.
+Required: No
+Type: S3DestinationConfiguration
+Update requires: No interruption

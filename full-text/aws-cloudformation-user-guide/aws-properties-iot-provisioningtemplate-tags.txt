@@ -1,0 +1,17 @@
+AWS::IoT::ProvisioningTemplate Tags
+The Tags property type specifies Not currently supported by AWS CloudFormation. for an AWS::IoT::ProvisioningTemplate.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Tags](#cfn-iot-provisioningtemplate-tags-tags)" : [ Json, ... ]
+}
+YAML
+[Tags](#cfn-iot-provisioningtemplate-tags-tags): 
+    - Json
+Properties
+Tags 
+Not currently supported by AWS CloudFormation.
+Required: No
+Type: List of Json
+Update requires: No interruption

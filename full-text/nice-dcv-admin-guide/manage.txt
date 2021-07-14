@@ -1,0 +1,18 @@
+Managing the NICE DCV Server
+The NICE DCV server runs as an operating system service. You must be signed in as the administrator (Windows) or root (Linux) to start, stop, or configure the NICE DCV server.
+Topics
+ Starting the Server
+ Stopping the Server
+ Changing the TCP Port
+ Disconnecting Idle Clients
+ Enabling GPU Sharing on Linux
+ Changing the TLS Certificate
+ Enabling USB Remotization
+ Configuring Smart Card Caching
+ Enabling Session Storage
+ Configuring the Clipboard on Linux
+ Enabling Touchscreen and Stylus Support
+ Configuring Multi-Channel Audio
+ Configuring the HTTP headers
+ Configuring Authentication
+ Configuring Authorization

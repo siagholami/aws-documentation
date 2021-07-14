@@ -1,0 +1,5 @@
+Filtering visualization data
+This section contains information about how to filter profiling data.
+Topics
+ Selecting and coloring thread states
+ Hiding a frame

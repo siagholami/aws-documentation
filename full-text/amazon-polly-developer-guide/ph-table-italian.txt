@@ -1,0 +1,253 @@
+Italian (it-IT)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Italian voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+b
+b
+voiced bilabial plosive
+bacca
+p
+
+
+d
+d
+voiced alveolar plosive
+dama
+t
+
+
+d͡z
+dz
+voiced alveolar affricate
+zero
+s
+
+
+d͡ʒ
+dZ
+voiced postalveolar affricate
+giro
+S
+
+
+f
+f
+voiceless labiodental fricative
+famiglia
+f
+
+
+g
+g
+voiced velar plosive
+gatto
+k
+
+
+h
+h
+voiceless glottal fricative
+horror
+k
+
+
+j
+j
+palatal approximant
+dieci
+i
+
+
+k
+k
+voiceless velar plosive
+campo
+k
+
+
+l
+l
+alveolar lateral approximant
+lido
+t
+
+
+ʎ
+L
+palatal lateral approximant
+aglio
+J
+
+
+m
+m
+bilabial nasal
+mille
+p
+
+
+n
+n
+alveolar nasal
+nove
+t
+
+
+ɲ
+J
+palatal nasal
+lasagne
+J
+
+
+p
+p
+voiceless bilabial plosive
+pizza
+p
+
+
+r
+r
+alveolar trill
+risata
+r
+
+
+s
+s
+voiceless alveolar fricative
+sei
+s
+
+
+ʃ
+S
+voiceless postalveolar fricative
+scienza
+S
+
+
+t
+t
+voiceless alveolar plosive
+tavola
+t
+
+
+t͡s
+ts
+voiceless alveolar affricate
+forza
+s
+
+
+t͡ʃ
+tS
+voiceless postalveolar affricate
+cielo
+S
+
+
+v
+v
+voiced labiodental fricative
+venti
+f
+
+
+w
+w
+labial-velar approximant
+quattro
+u
+
+
+z
+z
+voiced alveolar fricative
+bisogno
+s
+
+
+ʒ
+Z
+voiced postalveolar fricative
+bijou
+S
+
+
+Vowels
+
+
+
+
+
+
+a
+a
+open front unrounded vowel
+arco
+a
+
+
+e
+e
+close-mid front unrounded vowel
+tre
+e
+
+
+ɛ
+E
+open-mid front unrounded vowel
+ettaro
+E
+
+
+i
+i
+close front unrounded vowel
+impero
+i
+
+
+o
+o
+close-mid back rounded vowel
+cento
+o
+
+
+ɔ
+O
+open-mid back rounded vowel
+otto
+O
+
+
+u
+u
+close back rounded vowel
+uno
+u
+
+

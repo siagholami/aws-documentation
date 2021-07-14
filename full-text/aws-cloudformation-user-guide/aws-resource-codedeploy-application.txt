@@ -1,0 +1,68 @@
+AWS::CodeDeploy::Application
+The AWS::CodeDeploy::Application resource creates an AWS CodeDeploy application. In CodeDeploy, an application is a name that functions as a container to ensure that the correct combination of revision, deployment configuration, and deployment group are referenced during a deployment. You can use the AWS::CodeDeploy::DeploymentGroup resource to associate the application with a CodeDeploy deployment group. For more information, see CodeDeploy Deployments in the AWS CodeDeploy User Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::CodeDeploy::Application",
+  "Properties" : {
+      "[ApplicationName](#cfn-codedeploy-application-applicationname)" : String,
+      "[ComputePlatform](#cfn-codedeploy-application-computeplatform)" : String
+    }
+}
+YAML
+Type: AWS::CodeDeploy::Application
+Properties: 
+  [ApplicationName](#cfn-codedeploy-application-applicationname): String
+  [ComputePlatform](#cfn-codedeploy-application-computeplatform): String
+Properties
+ApplicationName 
+ A name for the application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type. 
+ Updates to ApplicationName are not supported. 
+Required: No
+Type: String
+Minimum: 1
+Maximum: 100
+Update requires: Replacement
+ComputePlatform 
+The compute platform that CodeDeploy deploys the application to.
+Required: No
+Type: String
+Allowed values: ECS | Lambda | Server
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of an AWS::CodeDeploy::Application resource to the intrinsic Ref function, the function returns the application name, such as myapplication-a123d0d1.
+For more information about using the Ref function, see Ref.
+Examples
+Specify an application with a Lambda compute platform
+The following example specifies a CodeDeploy application with a Lambda compute platform.
+JSON
+"CodeDeployApplication": {
+  "Type": "AWS::CodeDeploy::Application",
+  "Properties": {
+    "ComputePlatform": "Lambda"
+  }
+}
+YAML
+CodeDeployApplication:
+  Type: AWS::CodeDeploy::Application
+  Properties:
+    ComputePlatform: Lambda
+Specify an application with a Server compute platform
+The following example creates a CodeDeploy application with a Server compute platform.
+JSON
+"CodeDeployApplication": {
+  "Type": "AWS::CodeDeploy::Application",
+  "Properties": {
+    "ComputePlatform": "Server"
+  }
+}
+YAML
+CodeDeployApplication:
+  Type: AWS::CodeDeploy::Application
+  Properties:
+    ComputePlatform: Server
+See also
+
+For configuring your deployment and specifying your application revisions, see  AWS::CodeDeploy::DeploymentConfig and  AWS::CodeDeploy::DeploymentGroup.

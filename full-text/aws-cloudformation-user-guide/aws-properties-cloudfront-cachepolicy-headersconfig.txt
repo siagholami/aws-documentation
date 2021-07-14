@@ -1,0 +1,27 @@
+AWS::CloudFront::CachePolicy HeadersConfig
+An object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[HeaderBehavior](#cfn-cloudfront-cachepolicy-headersconfig-headerbehavior)" : String,
+  "[Headers](#cfn-cloudfront-cachepolicy-headersconfig-headers)" : [ String, ... ]
+}
+YAML
+[HeaderBehavior](#cfn-cloudfront-cachepolicy-headersconfig-headerbehavior): String
+  [Headers](#cfn-cloudfront-cachepolicy-headersconfig-headers): 
+    - String
+Properties
+HeaderBehavior 
+Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are:
+  none – HTTP headers are not included in the cache key and are not automatically included in requests that CloudFront sends to the origin. Even when this field is set to none, any headers that are listed in an OriginRequestPolicy are included in origin requests.
+  whitelist – The HTTP headers that are listed in the Headers type are included in the cache key and are automatically included in requests that CloudFront sends to the origin.
+Required: Yes
+Type: String
+Allowed values: none | whitelist
+Update requires: No interruption
+Headers 
+Contains a list of HTTP header names.
+Required: No
+Type: List of String
+Update requires: No interruption

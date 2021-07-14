@@ -1,0 +1,4 @@
+AWS CDK examples
+For more examples of AWS CDK stacks and apps in your favorite supported programming language, see:
+ The CDK Examples repository on GitHub
+ The AWS Code Example Repository.

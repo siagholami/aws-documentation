@@ -1,0 +1,25 @@
+AWS::QLDB::Stream KinesisConfiguration
+The configuration settings of the Amazon Kinesis Data Streams destination for an Amazon QLDB journal stream.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AggregationEnabled](#cfn-qldb-stream-kinesisconfiguration-aggregationenabled)" : Boolean,
+  "[StreamArn](#cfn-qldb-stream-kinesisconfiguration-streamarn)" : String
+}
+YAML
+[AggregationEnabled](#cfn-qldb-stream-kinesisconfiguration-aggregationenabled): Boolean
+  [StreamArn](#cfn-qldb-stream-kinesisconfiguration-streamarn): String
+Properties
+AggregationEnabled 
+Enables QLDB to publish multiple data records in a single Kinesis Data Streams record. To learn more, see KPL Key Concepts in the Amazon Kinesis Data Streams Developer Guide.
+Required: No
+Type: Boolean
+Update requires: Replacement
+StreamArn 
+The Amazon Resource Name (ARN) of the Kinesis Data Streams resource.
+Required: No
+Type: String
+Minimum: 20
+Maximum: 1600
+Update requires: Replacement

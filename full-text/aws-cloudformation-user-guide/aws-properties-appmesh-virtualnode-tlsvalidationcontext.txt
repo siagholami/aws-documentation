@@ -1,0 +1,17 @@
+AWS::AppMesh::VirtualNode TlsValidationContext
+An object that represents a Transport Layer Security (TLS) validation context.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Trust](#cfn-appmesh-virtualnode-tlsvalidationcontext-trust)" : TlsValidationContextTrust
+}
+YAML
+[Trust](#cfn-appmesh-virtualnode-tlsvalidationcontext-trust): 
+    TlsValidationContextTrust
+Properties
+Trust 
+A reference to an object that represents a TLS validation context trust.
+Required: Yes
+Type: TlsValidationContextTrust
+Update requires: No interruption

@@ -1,0 +1,128 @@
+Testing Your Setup by Using Arcserve Backup r17.0
+You can back up your data to virtual tapes, archive the tapes, and manage your virtual tape library (VTL) devices by using Arcserve Backup r17.0. In this topic, you can find basic documentation to configure Arcserve Backup with a tape gateway and perform a backup and restore operation. For detailed information about to use Arcserve Backup r17.0, see Arcserve Backup r17 documentation in the *Arcserve Administration Guide. *
+The following screenshot shows the Arcserve menus.
+
+Topics
+ Configuring Arcserve to Work with VTL Devices
+ Loading Tapes into a Media Pool
+ Backing Up Data to a Tape
+ Archiving a Tape
+ Restoring Data from a Tape
+Configuring Arcserve to Work with VTL Devices
+After you have connected your virtual tape library (VTL) devices to your client, you scan for your devices.
+To scan for VTL devices
+
+
+In the Arcserve Backup Manager, choose the Utilities menu.
+
+
+Choose Media Assure and Scan.
+
+
+Loading Tapes into a Media Pool
+When the Arcserve software connects to your gateway and your tapes become available, Arcserve automatically loads your tapes. If your gateway is not found in the Arcserve software, try restarting the tape engine in Arcserve.
+To restart the tape engine
+
+
+Choose Quick Start, choose Administration, and then choose Device.
+
+
+On the navigation menu, open the context (right-click) menu for your gateway and choose an import/export slot.
+
+
+Choose Quick Import and assign your tape to an empty slot.
+
+
+Open the context (right-click) menu for your gateway and choose Inventory/Offline Slots.
+
+
+Choose Quick Inventory to retrieve media information from the database.
+
+
+If you add a new tape, you need to scan your gateway for the new tape to have it appear in Arcserve. If the new tapes don't appear, you must import the tapes.
+To import tapes
+
+
+Choose the Quick Start menu, choose Back up, and then choose Destination tap.
+
+
+Choose your gateway, open the context (right-click) menu for one tape, and then choose Import/Export Slot.
+
+
+Open the context (right-click) menu for each new tape and choose Inventory.
+
+
+Open the context (right-click) menu for each new tape and choose Format.
+
+
+Each tape's barcode now appears in your Storage Gateway console, and each tape is ready to use.
+Backing Up Data to a Tape
+When your tapes have been loaded into Arcserve, you can back up data. The backup process is the same as backing up physical tapes.
+To back up data to a tape
+
+
+From the Quick Start menu, open the restore a backup session.
+
+
+Choose the Source tab, and then choose the file system or database system that you want to back up.
+
+
+Choose the Schedule tab and choose the repeat method you want to use.
+
+
+Choose the Destination tab and then choose the tape you want to use. If the data you are backing up is larger than the tape can hold, Arcserve prompts you to mount a new tape.
+
+
+Choose Submit to back up your data.
+
+
+Archiving a Tape
+When you archive a tape, your tape gateway moves the tape from the tape library to the offline storage. Before you eject and archive a tape, you might want to check the content on it.
+To archive a tape
+
+
+From the Quick Start menu, open the restore a backup session.
+
+
+Choose the Source tab, and then choose the file system or database system you want to back up.
+
+
+Choose the Schedule tab and choose the repeat method you want to use.
+
+
+Choose your gateway, open the context (right-click) menu for one tape, and then choose Import/Export Slot.
+
+
+Assign a mail slot to load the tape. The status in the Storage Gateway console changes to Archive. The archive process might take some time.
+
+
+The archiving process can take some time to complete. The initial status of the tape appears as IN TRANSIT TO VTS. When archiving starts, the status changes to ARCHIVING. When archiving is completed, the tape is no longer listed in the VTL but is archived in S3 Glacier or S3 Glacier Deep Archive.
+Restoring Data from a Tape
+Restoring your archived data is a two-step process.
+To restore data from an archived tape
+
+
+Retrieve the archived tape to a tape gateway. For instructions, see Retrieving Archived Tapes.
+
+
+Use Arcserve to restore the data. This process is the same as restoring data from physical tapes. For instructions, see the Arcserve Backup r17 documentation. 
+
+
+To restore data from a tape, use the following procedure.
+To restore data from a tape
+
+
+From the Quick Start menu, open the restore a restore session.
+
+
+Choose the Source tab, and then choose the file system or database system you want to restore.
+
+
+Choose the Destination tab and accept the default settings.
+
+
+Choose the Schedule tab, choose the repeat method that you want to use, and then choose Submit.
+
+
+Next Step
+Cleaning Up Resources You Don't Need

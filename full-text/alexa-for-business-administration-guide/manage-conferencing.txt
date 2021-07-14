@@ -1,0 +1,11 @@
+Managing Conferencing and Room Booking
+After the calendaring system in Alexa for Business is linked, users can ask Alexa to control existing video conferencing equipment with their voice. They can also use Alexa to find and reserve available meeting rooms in the office. If the room isn't available, Alexa can tell them who made the reservation.
+Topics
+ Understanding Alexa-enabled Conferencing
+ Use Zoom Rooms with Alexa for Business
+ Use Cisco TelePresence with Alexa for Business
+ Use Polycom Group Series with Alexa for Business
+ Use Polycom Trio with Alexa for Business
+ Link Alexa for Business to Your Calendar System
+ Use the Alexa for Business Gateway
+ Manage Conferencing Providers

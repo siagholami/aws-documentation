@@ -1,0 +1,281 @@
+Polish (pl-PL)
+The following table lists the International Phonetic Alphabet (IPA) phonemes, the Extended Speech Assessment Methods Phonetic Alphabet (X-SAMPA) symbols, and the corresponding visemes for the Polish voices that are supported by Amazon Polly.
+Phoneme/Viseme Table 
+
+
+
+IPA
+X-SAMPA
+Description
+Example
+Viseme
+
+
+
+
+Consonants
+
+
+
+
+
+
+b
+b
+voiced bilabial plosive
+bobas, belka
+p
+
+
+d
+d
+voiced alveolar plosive
+dar, do
+t
+
+
+d͡z
+dz
+voiced alveolar affricate
+dzwon, widzowie
+s
+
+
+d͡ʑ
+dz\
+voiced alveolo-palatal affricate
+dźwięk
+J
+
+
+d͡ʐ
+dz`
+voiced retroflex affricate
+dżem, dżungla
+S
+
+
+f
+f
+voiceless labiodental fricative
+furtka, film
+f
+
+
+g
+g
+voiced velar plosive
+gazeta, waga
+k
+
+
+h
+h
+voiceless glottal fricative
+chleb, handel
+k
+
+
+j
+j
+palatal approximant
+jak, maja
+i
+
+
+k
+k
+voiceless velar plosive
+kura, marek
+k
+
+
+l
+l
+alveolar lateral approximant
+lipa, alicja
+t
+
+
+m
+m
+bilabial nasal
+matka, molo
+p
+
+
+n
+n
+alveolar nasal
+norka
+t
+
+
+ɲ
+J
+palatal nasal
+koń, toruń
+J
+
+
+p
+p
+voiceless bilabial plosive
+pora, stop
+p
+
+
+r
+r
+alveolar trill
+rok, park
+r
+
+
+s
+s
+voiceless alveolar fricative
+sum, pas
+s
+
+
+ɕ
+s\
+voiceless alveolo-palatal fricative
+śruba, śnieg
+J
+
+
+ʂ
+s`
+voiceless retroflex fricative
+szum, masz
+S
+
+
+t
+t
+voiceless alveolar plosive
+tok, stół
+t
+
+
+t͡s
+ts
+voiceless alveolar affricate
+car, co
+s
+
+
+t͡ɕ
+ts\
+voiceless alveolo-palatal affricate
+ćma, mieć
+J
+
+
+t͡ʂ
+ts`
+voiceless retroflex affricate
+czas, raczej
+S
+
+
+v
+v
+voiced labiodental fricative
+worek, mewa
+f
+
+
+w
+w
+labial-velar approximant
+łaska, mało
+u
+
+
+z
+z
+voiced alveolar fricative
+zero
+s
+
+
+ʑ
+z\
+voiced alveolo-palatal fricative
+źrebię, bieliźnie
+J
+
+
+ʐ
+z`
+voiced retroflex fricative
+żar, żona
+S
+
+
+Vowels
+
+
+
+
+
+
+a
+a
+open front unrounded vowel
+ja
+a
+
+
+ɛ
+E
+open-mid front unrounded vowel
+echo
+E
+
+
+ɛ̃
+E\~
+nasal open-mid front unrounded vowel
+węże
+E
+
+
+i
+i
+close front unrounded vowel
+ile
+i
+
+
+ɔ
+O
+open-mid back rounded vowel
+oczy
+O
+
+
+ɔ̃
+O\~
+nasal open-mid back rounded vowel
+wąż
+O
+
+
+u
+u
+close back rounded vowel
+uczta
+u
+
+
+ɨ
+1
+close central unrounded vowel
+byk
+i
+
+

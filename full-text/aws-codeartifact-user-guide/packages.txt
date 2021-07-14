@@ -1,0 +1,10 @@
+Working with packages in CodeArtifact
+These topics show you how to list, copy, delete, and search for packages using the CodeArtifact CLI and API.
+Topics
+ Packages overview
+ List package names
+ List package versions
+ List package version assets
+ Copy packages between repositories
+ Delete a package version
+ View and update package version details and dependencies

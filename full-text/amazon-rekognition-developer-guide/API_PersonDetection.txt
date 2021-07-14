@@ -1,0 +1,18 @@
+PersonDetection
+Details and path tracking information for a single time a person's path is tracked in a video. Amazon Rekognition operations that track people's paths return an array of PersonDetection objects with elements for each time a person's path is tracked in a video. 
+For more information, see GetPersonTracking. 
+Contents
+Person 
+Details about a person whose path was tracked in a video.
+Type: PersonDetail object
+Required: No
+Timestamp 
+The time, in milliseconds from the start of the video, that the person's path was tracked.
+Type: Long
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

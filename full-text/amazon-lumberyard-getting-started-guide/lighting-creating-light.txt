@@ -1,0 +1,61 @@
+Creating a Light Source
+Currently, the lamps in the level don't cast any light. To fix this, you create a light source for the lamps in the maze. 
+
+
+In the Perspective Viewport, navigate near any lamp post in your level. Right-click and choose Create entity.
+
+
+
+In the Entity Inspector, name the new entity lamplight.
+
+
+
+Still in the Entity Inspector, click Add Component. Under Rendering, click Projector Light. 
+
+
+
+You will notice that components also exist for an area light and a point light, but for this tutorial you use a projection light.
+
+
+In the Perspective Viewport, use the Rotate tool to rotate the lamp light entity so it points down Y: 90.00 degrees.
+
+
+
+Use the Move tool to position the lamp light entity under one of the lamp posts.
+
+
+
+In the Entity Inspector, use the following settings for the Projector Light properties:
+
+    Color: R:162, G:198, B:255
+    Diffuse Multiplier: 15
+    Specular Multiplier: 3
+    Max Distance: 20
+    Attenuation bulb size: 0.5
+    FOV: 80
+
+
+Experiment with these settings to find a brightness, color, and size that you like. Your lamp post should look similar to the image below. 
+
+
+Now that the light is positioned and set under the lamp, you can move the light entity into the Lamp slice and then save this change to the slice. 
+
+In the Entity Outliner, drag the lamplight entity into the Lamp parent slice that you have been working near.
+
+
+
+Now that the lamplight is in one of the lamp entities, under the LampParent group, right-click the lamp entity and choose Save slice overrides, maze_lamp.slice. This saves your changes to the source slice.
+
+
+
+All the lamp posts in your scene should now be casting light.
+
+
+
+Press CtrlS to save your level.
+
+
+Press CtrlG to play your level. When you are ready to exit, press Esc.
+
+
+Next: 11: Setting up the UI

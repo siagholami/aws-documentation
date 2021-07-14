@@ -1,0 +1,69 @@
+Configure the CloudWatch Agent for SDK Metrics
+After installing the CloudWatch agent, you need to configure it to work with SDK Metrics. The easiest way is to use AWS Systems Manager, but you can also do it manually.
+Topics
+ Configure the CloudWatch Agent for SDK Metrics Using AWS Systems Manager
+ Configure the CloudWatch Agent for SDK Metrics Manually
+Configure the CloudWatch Agent for SDK Metrics Using AWS Systems Manager
+This section explains how to use SSM to configure the CloudWatch agent to work with SDK Metrics. For more information about SSM agents, see Installing and Configuring SSM Agent.
+To configure SDK Metrics using SSM
+
+
+Open the Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Run Command.
+
+
+In the Command document list, choose the button next to AWS-UpdateSSMAgent.
+
+
+In the Targets area, choose the instance where you installed the CloudWatch agent.
+
+
+In the navigation pane, choose Parameter Store.
+
+
+Choose Create Parameter.
+
+
+Do the following:
+
+
+Name the parameter AmazonCSM.
+
+
+Select type string.
+
+
+For Value, enter { "csm": {"memory_limit_in_mb": 20, "port": 31000}}.
+
+
+Select Create Parameter.
+
+
+To complete the configuration, see your SDK documentation.
+Configure the CloudWatch Agent for SDK Metrics Manually
+This section explains how to manually configure the CloudWatch agent to work with SDK Metrics.
+Create Your CloudWatch Agent Configuration File
+If you don't already have a CloudWatch agent configuration file, create one. For more information, see Create the CloudWatch Agent Configuration File.
+Add the SDK Metrics Configuration
+Add the following csm entry to the top-level JSON object in the CloudWatch agent configuration file.
+"csm": {
+    "memory_limit_in_mb": 20,
+    "port": 31000
+  }
+For example:
+{
+    "agent": {
+      ...
+    },
+    "metrics": {
+      ...
+    },
+    "csm": {
+      "memory_limit_in_mb": 20,
+      "port": 31000
+    }
+  }
+You can now start the CloudWatch agent using this configuration file. For more information, see Start the CloudWatch Agent.
+To complete the configuration, see your SDK documentation.

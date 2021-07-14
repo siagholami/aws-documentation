@@ -1,0 +1,24 @@
+Configuring Smart Card Caching
+The smart card caching feature enables the NICE DCV server to cache smart card values. When this feature is enabled, the NICE DCV server caches the results of recent calls to the client's smart card. Future calls are retrieved directly from the server's cache, instead of from the client. This helps to reduce the amount of traffic that is transferred between the client and the server and improves performance. It is especially useful if the client has a slow internet connection.
+Note
+Smart card functionality is only supported with Linux NICE DCV servers.
+Smart card caching is disabled by default. Clients can manually enable smart card caching for each application they run by setting the DCV_PCSC_ENABLE_CACHE environment variable. For more information, see Using a Smart Card in the NICE DCV User Guide. Or, you can configure the NICE DCV server to permanently enable or disable smart card caching, regardless of the value specified for the DCV_PCSC_ENABLE_CACHE environment variable.
+To permanently enable or disable smart card caching
+
+
+Navigate to /etc/dcv/ and open the dcv.conf with your preferred text editor.
+
+
+Locate the enable-cache parameter in the [smartcard] section. To permanently enable smart card caching, enter 'always-on'. To permanently disable smart card caching, enter 'always-off'.
+
+
+If there is no enable-cache parameter in the [smartcard] section, add it manually using the following format:
+[smartcard]
+   enable-cache='always-on'|'always-off'
+
+
+Save and close the file.
+
+
+Stop and restart the NICE DCV server.
+

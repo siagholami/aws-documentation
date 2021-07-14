@@ -1,0 +1,166 @@
+Amazon Simple Notification Service Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon SNS?
+Setting up access for Amazon SNS
+Getting started with Amazon SNS
+Amazon SNS tutorials
+Basic workflows
+Tutorial: Creating an Amazon SNS topic
+Tutorial: Subscribing an endpoint to an Amazon SNS topic
+Tutorial: Publishing a message to an Amazon SNS topic
+Tutorial: Listing, adding, and removing tags for an Amazon SNS topic
+Tutorial: Configuring an Amazon SNS dead-letter queue for a subscription
+Tutorial: Deleting an Amazon SNS subscription and topic
+
+
+Publishing workflows
+Tutorial: Publishing a message with attributes to an Amazon SNS topic
+
+
+Working with Amazon SNS securely
+Tutorial: Enabling server-side encryption (SSE) for an Amazon SNS topic
+Tutorial: Enabling server-side encryption (SSE) for an Amazon SNS topic with an encrypted Amazon SQS queue subscribed
+Tutorial: Publishing Amazon SNS messages privately from Amazon VPC
+
+
+Working with AWS Event Fork Pipelines
+Tutorial: Deploying and testing the AWS Event Fork Pipelines sample application
+Example AWS Event Fork Pipelines use case
+Step 1: To deploy the sample application
+Step 2: To execute the sample application
+Step 3: To verify the execution of the sample application and its pipelines
+Step 4: To simulate an issue and replay events for recovery
+
+
+Subscribing AWS Event Fork Pipelines to an Amazon SNS topic
+Tutorial: To deploy and subscribe the event storage and backup pipeline
+Tutorial: To deploy and subscribe the event search and analytics pipeline
+Tutorial: To deploy and subscribe the event replay pipeline
+
+
+
+
+How Amazon SNS works
+Common Amazon SNS scenarios
+Amazon SNS message delivery status
+Message delivery retries
+Amazon SNS dead-letter queues
+Amazon SNS message attributes
+Amazon SNS message filtering
+Amazon SNS subscription filter policies
+Tutorial: Applying a subscription filter policy
+Tutorial: Removing a subscription filter policy
+Subscription filter policies as Java collections
+
+
+Amazon SNS message and JSON formats
+Raw message delivery
+Publishing large messages with Amazon SNS and Amazon S3
+Amazon SNS tags
+Using Amazon SNS for system-to-system messaging
+Using Amazon SNS for system-to-system messaging with an AWS Lambda function as a subscriber
+Using Amazon SNS for system-to-system messaging with an Amazon SQS queue as a subscriber
+Sending Amazon SNS messages to an Amazon SQS queue in a different account
+Using an AWS CloudFormation template to create a topic that sends messages to Amazon SQS queues
+
+
+Using Amazon SNS for system-to-system messaging with an HTTP/s endpoint as a subscriber
+Verifying the signatures of Amazon SNS messages
+Example code for an Amazon SNS endpoint Java servlet
+
+
+Using Amazon SNS for system-to-system messaging with AWS Event Fork Pipelines as a subscriber
+Using Amazon SNS for user notifications
+Using Amazon SNS for user notifications with a mobile application as a subscriber (mobile push)
+How user notifications work
+Prerequisites for Amazon SNS user notifications
+User notification process overview
+Using Amazon SNS mobile push
+Register your mobile app with AWS
+Add device tokens or registration IDs
+Create a platform endpoint and manage device tokens
+Send a direct message to a mobile device
+Send messages to mobile devices subscribed to a topic
+Send custom platform-specific payloads to mobile devices
+
+
+Using Amazon SNS application attributes for message delivery status
+Application event notifications
+Using the Amazon SNS time to live (TTL) message attribute for mobile push notifications
+Using Amazon SNS mobile push APIs
+API errors for Amazon SNS mobile push
+
+
+Text messaging (SMS)
+Originating identities for SMS messages
+Requesting support for SMS messaging with Amazon SNS
+Requesting dedicated short codes for SMS messaging with Amazon SNS
+Requesting dedicated long codes for SMS messaging with Amazon SNS
+Requesting increases to your monthly SMS spending quota for Amazon SNS
+Requesting sender IDs for SMS messaging with Amazon SNS
+
+
+SMS best practices
+Setting SMS messaging preferences
+Sending an SMS message
+Sending an SMS message to multiple phone numbers
+Monitoring SMS activity
+Viewing SMS delivery statistics
+Viewing Amazon CloudWatch metrics and logs for SMS deliveries
+Viewing daily SMS usage reports
+
+
+Managing phone numbers and SMS subscriptions
+Supported Regions and countries
+Special requirements for sending SMS messages to recipients in India
+
+
+Troubleshooting Amazon SNS topics
+Amazon SNS security
+Data protection in Amazon SNS
+Data encryption
+Encryption at rest
+Key management
+
+
+Internetwork traffic privacy
+
+
+Identity and access management in Amazon SNS
+Overview of managing access in Amazon SNS
+When to use access control
+Key concepts
+Architectural overview
+Using the Access Policy Language
+Evaluation logic
+Example cases for Amazon SNS access control
+
+
+Using identity-based policies with Amazon SNS
+Using temporary security credentials with Amazon SNS
+Amazon SNS API permissions: Actions and resources reference
+
+
+Logging and monitoring in Amazon SNS
+Logging Amazon SNS API calls using CloudTrail
+Monitoring Amazon SNS topics using CloudWatch
+
+
+Compliance validation for Amazon SNS
+Resilience in Amazon SNS
+Infrastructure security in Amazon SNS
+Amazon SNS security best practices
+Documentation history
+AWS glossary

@@ -1,0 +1,40 @@
+AWS Auto Scaling User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Auto Scaling?
+How Scaling Plans Work
+Getting Started with AWS Auto Scaling
+Step 1: Find Your Scalable Resources
+Step 2: Specify the Scaling Strategy
+Step 3: Configure Advanced Settings (Optional)
+Step 4: Create Your Scaling Plan
+Step 5: Clean Up
+Step 6: Next Steps
+Best Practices for AWS Auto Scaling Scaling Plans
+Security in AWS Auto Scaling
+AWS Auto Scaling and Data Protection
+Identity and Access Management for AWS Auto Scaling
+How AWS Auto Scaling Works with IAM
+Service-Linked Roles for AWS Auto Scaling
+AWS Auto Scaling Identity-Based Policy Examples
+
+
+Logging and Monitoring in AWS Auto Scaling
+Compliance Validation for AWS Auto Scaling
+Resilience in AWS Auto Scaling
+Infrastructure Security in AWS Auto Scaling
+AWS Auto Scaling and Interface VPC Endpoints
+AWS Auto Scaling Service Quotas
+AWS Auto Scaling Resources
+Document History

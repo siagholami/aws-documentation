@@ -1,0 +1,138 @@
+AWS::NetworkManager::Device
+Specifies a device.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::NetworkManager::Device",
+  "Properties" : {
+      "[Description](#cfn-networkmanager-device-description)" : String,
+      "[GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid)" : String,
+      "[Location](#cfn-networkmanager-device-location)" : Location,
+      "[Model](#cfn-networkmanager-device-model)" : String,
+      "[SerialNumber](#cfn-networkmanager-device-serialnumber)" : String,
+      "[SiteId](#cfn-networkmanager-device-siteid)" : String,
+      "[Tags](#cfn-networkmanager-device-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-networkmanager-device-type)" : String,
+      "[Vendor](#cfn-networkmanager-device-vendor)" : String
+    }
+}
+YAML
+Type: AWS::NetworkManager::Device
+Properties: 
+  [Description](#cfn-networkmanager-device-description): String
+  [GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid): String
+  [Location](#cfn-networkmanager-device-location): 
+    Location
+  [Model](#cfn-networkmanager-device-model): String
+  [SerialNumber](#cfn-networkmanager-device-serialnumber): String
+  [SiteId](#cfn-networkmanager-device-siteid): String
+  [Tags](#cfn-networkmanager-device-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Type](#cfn-networkmanager-device-type): String
+  [Vendor](#cfn-networkmanager-device-vendor): String
+Properties
+Description 
+A description of the device.
+Length Constraints: Maximum length of 256 characters.
+Required: No
+Type: String
+Update requires: No interruption
+GlobalNetworkId 
+The ID of the global network.
+Required: Yes
+Type: String
+Update requires: Replacement
+Location 
+The site location.
+Required: No
+Type: Location
+Update requires: No interruption
+Model 
+The model of the device.
+Length Constraints: Maximum length of 128 characters.
+Required: No
+Type: String
+Update requires: No interruption
+SerialNumber 
+The serial number of the device.
+Length Constraints: Maximum length of 128 characters.
+Required: No
+Type: String
+Update requires: No interruption
+SiteId 
+The site ID.
+Required: No
+Type: String
+Update requires: No interruption
+Tags 
+The tags for the device.
+Required: No
+Type: List of Tag
+Update requires: No interruption
+Type 
+The device type.
+Required: No
+Type: String
+Update requires: No interruption
+Vendor 
+The vendor of the device.
+Length Constraints: Maximum length of 128 characters.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the IDs of the global network and device. For example: global-network-01231231231231231|device-07f6fd08867abc123.
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+DeviceArn 
+The ARN of the device. For example, arn:aws:networkmanager::123456789012:device/global-network-01231231231231231/device-07f6fd08867abc123.
+DeviceId 
+The ID of the device. For example, device-07f6fd08867abc123.
+Examples
+Device
+The following example creates a device in a global network.
+JSON
+{
+    "Type": "AWS::NetworkManager::Device",
+    "Properties": {
+        "Description": "Chicago office device",
+        "GlobalNetworkId": {
+            "Ref": "GlobalNetwork"
+        },
+        "SiteId": {
+            "Fn::GetAtt": [
+                "Site",
+                "SiteId"
+            ]
+        },
+        "Location": {
+            "Address": "227 W Monroe St, Chicago, IL 60606",
+            "Latitude": "41.8",
+            "Longitude": "-87.6"
+        },
+        "Tags": [
+            {
+                "Key": "Network",
+                "Value": "north-america"
+            }
+        ]
+    }
+}
+YAML
+Type: AWS::NetworkManager::Device
+Properties:
+  Description: "Chicago office device"
+  GlobalNetworkId: !Ref GlobalNetwork
+  SiteId: !GetAtt Site.SiteId
+  Location:
+    Address: "227 W Monroe St, Chicago, IL 60606"
+    Latitude: "41.8"
+    Longitude: "-87.6"
+  Tags:
+    - Key: Network
+      Value: north-america

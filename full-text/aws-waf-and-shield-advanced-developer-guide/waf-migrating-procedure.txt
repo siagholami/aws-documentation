@@ -1,0 +1,7 @@
+Migrating a web ACL from AWS WAF Classic to AWS WAF
+To migrate a web ACL and switch over to it, perform the automated migration, then complete a series of manual steps. 
+Topics
+ Migrating a web ACL: automated migration
+ Migrating a web ACL: manual follow-up
+ Migrating a web ACL: additional considerations
+ Migrating a web ACL: switchover

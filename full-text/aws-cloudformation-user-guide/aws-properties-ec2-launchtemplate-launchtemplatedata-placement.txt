@@ -1,0 +1,70 @@
+AWS::EC2::LaunchTemplate Placement
+Specifies the placement of an instance.
+Placement is a property of AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity)" : String,
+  "[AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone)" : String,
+  "[GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname)" : String,
+  "[HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid)" : String,
+  "[HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn)" : String,
+  "[PartitionNumber](#cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber)" : Integer,
+  "[SpreadDomain](#cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain)" : String,
+  "[Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy)" : String
+}
+YAML
+[Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity): String
+  [AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone): String
+  [GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname): String
+  [HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid): String
+  [HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn): String
+  [PartitionNumber](#cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber): Integer
+  [SpreadDomain](#cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain): String
+  [Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy): String
+Properties
+Affinity 
+The affinity setting for an instance on a Dedicated Host.
+Required: No
+Type: String
+Update requires: No interruption
+AvailabilityZone 
+The Availability Zone for the instance.
+Required: No
+Type: String
+Update requires: No interruption
+GroupName 
+The name of the placement group for the instance.
+Required: No
+Type: String
+Update requires: No interruption
+HostId 
+The ID of the Dedicated Host for the instance.
+Required: No
+Type: String
+Update requires: No interruption
+HostResourceGroupArn 
+The ARN of the host resource group in which to launch the instances. If you specify a host resource group ARN, omit the Tenancy parameter or set it to host.
+Required: No
+Type: String
+Update requires: No interruption
+PartitionNumber 
+The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+Required: No
+Type: Integer
+Update requires: No interruption
+SpreadDomain 
+Reserved for future use.
+Required: No
+Type: String
+Update requires: No interruption
+Tenancy 
+The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware.
+Required: No
+Type: String
+Allowed values: dedicated | default | host
+Update requires: No interruption
+See also
+
+ LaunchTemplatePlacementRequest in the Amazon Elastic Compute Cloud API Reference 

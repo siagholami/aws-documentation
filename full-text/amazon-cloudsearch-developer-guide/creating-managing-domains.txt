@@ -1,0 +1,11 @@
+Creating and Managing Amazon CloudSearch Domains
+A search domain encapsulates the data you want to search, indexing options that control how you can search the data and what information you can retrieve from your search domain, and the search instances that index your data and process search requests. You can create, monitor, and delete domains using the Amazon CloudSearch console, AWS CLI, or AWS SDKs. All domain management actions are implemented by the Amazon CloudSearch configuration service. For more information, see the Configuration API Reference for Amazon CloudSearch .
+Topics
+ Creating an Amazon CloudSearch Domain
+ configure access policies
+ Configuring Scaling Options in Amazon CloudSearch
+ Configuring Availability Options in Amazon CloudSearch
+ Configuring Domain Endpoint Options in Amazon CloudSearch
+ Monitoring Amazon CloudSearch Domains
+ Deleting an Amazon CloudSearch Domain
+ Tagging Amazon CloudSearch Domains

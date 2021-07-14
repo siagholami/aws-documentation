@@ -1,0 +1,6 @@
+C Best Practices for Amazon Lumberyard
+The following topics present some best practice coding patterns that Lumberyard engineers have found helpful for writing high quality code. Because of the complexity of C and the variety of ways it is used in Lumberyard, consider these guidelines as suggestions rather than a formal standard.
+Topics
+ Memory Management
+ Use AzCore Standard Containers
+ Tracing

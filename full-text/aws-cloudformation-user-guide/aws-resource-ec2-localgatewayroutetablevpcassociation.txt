@@ -1,0 +1,52 @@
+AWS::EC2::LocalGatewayRouteTableVPCAssociation
+Associates the specified VPC with the specified local gateway route table.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
+  "Properties" : {
+      "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid)" : String,
+      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : Tags,
+      "[VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::LocalGatewayRouteTableVPCAssociation
+Properties: 
+  [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid): String
+  [Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags): 
+    Tags
+  [VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid): String
+Properties
+LocalGatewayRouteTableId 
+The ID of the local gateway route table.
+Required: Yes
+Type: String
+Update requires: Replacement
+Tags 
+The tags assigned to the association.
+Required: No
+Type: Tags
+Update requires: No interruption
+VpcId 
+The ID of the VPC.
+Required: Yes
+Type: String
+Update requires: Replacement
+Return values
+Ref
+Fn::GetAtt
+The Fn::GetAtt intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+For more information about using the Fn::GetAtt intrinsic function, see Fn::GetAtt.
+
+LocalGatewayId 
+The ID of the local gateway.
+LocalGatewayRouteTableVpcAssociationId 
+The ID of the association.
+State 
+The state of the association.
+See also
+
+Local Gateways in AWS Outposts User Guide
+CreateLocalGatewayRouteTableVpcAssociation in the Amazon EC2 API Reference

@@ -1,0 +1,10 @@
+Module 5: Interacting with device shadows
+This advanced module shows you how AWS IoT Greengrass devices can interact with AWS IoT device shadows in an AWS IoT Greengrass group. A shadow is a JSON document that is used to store current or desired state information for a thing. In this module, you discover how one AWS IoT Greengrass device (GG_Switch) can modify the state of another AWS IoT Greengrass device (GG_TrafficLight) and how these states can be synced to the AWS IoT Greengrass cloud:
+
+Before you begin, run the Greengrass device setup script, or make sure that you have completed Module 1 and Module 2. You should also understand how to connect devices to an AWS IoT Greengrass core (Module 4). You do not need other components or devices.
+This module should take about 30 minutes to complete.
+Topics
+ Configure devices and subscriptions
+ Download required files
+ Test communications (device syncs disabled)
+ Test communications (device syncs enabled)

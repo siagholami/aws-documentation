@@ -1,0 +1,3 @@
+FSx resource type reference
+Resource types
+ AWS::FSx::FileSystem

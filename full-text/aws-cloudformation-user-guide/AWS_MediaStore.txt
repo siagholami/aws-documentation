@@ -1,0 +1,3 @@
+MediaStore resource type reference
+Resource types
+ AWS::MediaStore::Container

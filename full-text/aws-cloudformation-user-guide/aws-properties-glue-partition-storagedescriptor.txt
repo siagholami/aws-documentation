@@ -1,0 +1,99 @@
+AWS::Glue::Partition StorageDescriptor
+Describes the physical storage of table data.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns)" : [ String, ... ],
+  "[Columns](#cfn-glue-partition-storagedescriptor-columns)" : [ Column, ... ],
+  "[Compressed](#cfn-glue-partition-storagedescriptor-compressed)" : Boolean,
+  "[InputFormat](#cfn-glue-partition-storagedescriptor-inputformat)" : String,
+  "[Location](#cfn-glue-partition-storagedescriptor-location)" : String,
+  "[NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets)" : Integer,
+  "[OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat)" : String,
+  "[Parameters](#cfn-glue-partition-storagedescriptor-parameters)" : Json,
+  "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : SerdeInfo,
+  "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : SkewedInfo,
+  "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ Order, ... ],
+  "[StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories)" : Boolean
+}
+YAML
+[BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns): 
+    - String
+  [Columns](#cfn-glue-partition-storagedescriptor-columns): 
+    - Column
+  [Compressed](#cfn-glue-partition-storagedescriptor-compressed): Boolean
+  [InputFormat](#cfn-glue-partition-storagedescriptor-inputformat): String
+  [Location](#cfn-glue-partition-storagedescriptor-location): String
+  [NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets): Integer
+  [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat): String
+  [Parameters](#cfn-glue-partition-storagedescriptor-parameters): Json
+  [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo): 
+    SerdeInfo
+  [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo): 
+    SkewedInfo
+  [SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns): 
+    - Order
+  [StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories): Boolean
+Properties
+BucketColumns 
+A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
+Required: No
+Type: List of String
+Update requires: No interruption
+Columns 
+A list of the Columns in the table.
+Required: No
+Type: List of Column
+Update requires: No interruption
+Compressed 
+True if the data in the table is compressed, or False if not.
+Required: No
+Type: Boolean
+Update requires: No interruption
+InputFormat 
+The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+Required: No
+Type: String
+Update requires: No interruption
+Location 
+The physical location of the table. By default, this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+Required: No
+Type: String
+Update requires: No interruption
+NumberOfBuckets 
+The number of buckets.
+You must specify this property if the partition contains any dimension columns.
+Required: Conditional
+Type: Integer
+Update requires: No interruption
+OutputFormat 
+The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+Required: No
+Type: String
+Update requires: No interruption
+Parameters 
+The user-supplied properties in key-value form.
+Required: No
+Type: Json
+Update requires: No interruption
+SerdeInfo 
+The serialization/deserialization (SerDe) information.
+Required: No
+Type: SerdeInfo
+Update requires: No interruption
+SkewedInfo 
+The information about values that appear frequently in a column (skewed values).
+Required: No
+Type: SkewedInfo
+Update requires: No interruption
+SortColumns 
+A list specifying the sort order of each bucket in the table.
+Required: No
+Type: List of Order
+Update requires: No interruption
+StoredAsSubDirectories 
+True if the table data is stored in subdirectories, or False if not.
+Required: No
+Type: Boolean
+Update requires: No interruption

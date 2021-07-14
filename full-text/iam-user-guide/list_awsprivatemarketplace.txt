@@ -1,0 +1,161 @@
+Actions, resources, and condition keys for AWS Private Marketplace
+AWS Private Marketplace (service prefix: aws-marketplace) provides the following service-specific resources, actions, and condition context keys for use in IAM permission policies.
+References:
+ Learn how to configure this service.
+ View a list of the API operations available for this service.
+ Learn how to secure this service and its resources by using IAM permission policies.
+Topics
+ Actions defined by AWS Private Marketplace
+ Resource types defined by AWS Private Marketplace
+ Condition keys for AWS Private Marketplace
+Actions defined by AWS Private Marketplace
+You can specify the following actions in the Action element of an IAM policy statement. Use policies to grant permissions to perform an operation in AWS. When you use an action in a policy, you usually allow or deny access to the API operation or CLI command with the same name. However, in some cases, a single action controls access to more than one operation. Alternatively, some operations require several different actions.
+The Resource types column indicates whether each action supports resource-level permissions. If there is no value for this column, you must specify all resources ("*") in the Resource element of your policy statement. If the column includes a resource type, then you can specify an ARN of that type in a statement with that action. Required resources are indicated in the table with an asterisk (*). If you specify a resource-level permission ARN in a statement using this action, then it must be of this type. Some actions support multiple resource types. If the resource type is optional (not indicated as required), then you can choose to use one but not the other.
+For details about the columns in the following table, see The actions table.
+
+
+
+
+Actions
+Description
+Access level
+Resource types (*required)
+Condition keys
+Dependent actions
+
+
+
+
+ AssociateProductsWithPrivateMarketplace  [permission only]
+Adds new approved products to the Private Marketplace. Also allows to approve a request for a product to be associated with the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ CreatePrivateMarketplace  [permission only]
+Creates a Private Marketplace for the individual account, or for the entire AWS Organization if one exists. This action can only be performed by the master account if using an AWS Organization.
+Write
+
+
+
+
+
+ CreatePrivateMarketplaceProfile  [permission only]
+Creates a Private Marketplace Profile that customizes the white label experience on the AWS Marketplace website for the individual account, or for the entire AWS Organization if one exists. This action can only be performed by the master account if using an AWS Organization.
+Write
+
+
+
+
+
+ CreatePrivateMarketplaceRequests  [permission only]
+Creates a new request for a product or products to be associated with the Private Marketplace. This action can be performed by any account in an in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ DescribePrivateMarketplaceProducts  [permission only]
+Describes the status of requested products in the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+List
+
+
+
+
+
+ DescribePrivateMarketplaceProfile  [permission only]
+Describes details about the Private Marketplace Profile for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Read
+
+
+
+
+
+ DescribePrivateMarketplaceRequests  [permission only]
+Describes requests and associated products in the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+List
+
+
+
+
+
+ DescribePrivateMarketplaceSettings  [permission only]
+Describes the Private Marketplace settings. This includes setting for enabling requests from end users and preferences for notifications. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Read
+
+
+
+
+
+ DescribePrivateMarketplaceStatus  [permission only]
+Describes the status of the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Read
+
+
+
+
+
+ DisassociateProductsFromPrivateMarketplace  [permission only]
+Removes approved products from the Private Marketplace. Also allows to decline a request for a product to be associated with the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ ListPrivateMarketplaceProducts  [permission only]
+Queryable list for the products and status of products in the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+List
+
+
+
+
+
+ ListPrivateMarketplaceRequests  [permission only]
+Queryable list for requests and associated products in the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+List
+
+
+
+
+
+ StartPrivateMarketplace  [permission only]
+Starts the Private Marketplace, enabling the customized AWS Marketplace experience, and enabling restrictions on the procurement of products based on what is available in the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ StopPrivateMarketplace  [permission only]
+Stops the Private Marketplace, disabling the customized AWS Marketplace experience and removing the Private Marketplace procurement restrictions on products. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ UpdatePrivateMarketplaceProfile  [permission only]
+Updates the Private Marketplace Profile that customizes the white label experience on the AWS Marketplace website for the individual account, or for the entire AWS Organization if one exists. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+ UpdatePrivateMarketplaceSettings  [permission only]
+Updates the Private Marketplace settings. This includes setting for enabling requests from end users and preferences for notifications. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.
+Write
+
+
+
+
+
+
+Resource types defined by AWS Private Marketplace
+AWS Private Marketplace does not support specifying a resource ARN in the Resource element of an IAM policy statement. To allow access to AWS Private Marketplace, specify “Resource”: “*” in your policy.
+Condition keys for AWS Private Marketplace
+Private Marketplace has no service-specific context keys that can be used in the Condition element of policy statements. For the list of the global context keys that are available to all services, see Available keys for conditions.

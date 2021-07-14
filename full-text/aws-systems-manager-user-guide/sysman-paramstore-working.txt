@@ -1,0 +1,10 @@
+Working with parameters
+This section describes how to organize and create tag parameters, and how to create different versions of parameters.
+Topics
+ Organizing parameters into hierarchies
+ Assigning parameter policies
+ About requirements and constraints for parameter names
+ Creating Systems Manager parameters
+ Searching for Systems Manager parameters
+ Working with parameter versions
+ Working with parameter labels

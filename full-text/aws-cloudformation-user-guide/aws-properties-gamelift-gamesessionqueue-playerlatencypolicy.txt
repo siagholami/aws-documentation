@@ -1,0 +1,30 @@
+AWS::GameLift::GameSessionQueue PlayerLatencyPolicy
+The queue setting that determines the highest latency allowed for individual players when placing a game session. When a latency policy is in force, a game session cannot be placed with any fleet in a Region where a player reports latency higher than the cap. Latency policies are only enforced when the placement request contains player latency information.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[MaximumIndividualPlayerLatencyMilliseconds](#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds)" : Integer,
+  "[PolicyDurationSeconds](#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds)" : Integer
+}
+YAML
+[MaximumIndividualPlayerLatencyMilliseconds](#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds): Integer
+  [PolicyDurationSeconds](#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds): Integer
+Properties
+MaximumIndividualPlayerLatencyMilliseconds 
+The maximum latency value that is allowed for any player, in milliseconds. All policies must have a value set for this property.
+Required: No
+Type: Integer
+Minimum: 0
+Update requires: No interruption
+PolicyDurationSeconds 
+The length of time, in seconds, that the policy is enforced while placing a new game session. A null value for this property means that the policy is enforced until the queue times out.
+Required: No
+Type: Integer
+Minimum: 0
+Update requires: No interruption
+See also
+
+ Create GameLift Resources Using AWS CloudFormation in the Amazon GameLift Developer Guide
+ Create a Queue in the Amazon GameLift Developer Guide
+PlayerLatencyPolicy in the Amazon GameLift API Reference

@@ -1,0 +1,10 @@
+Downloading a Vault Inventory Using the REST API
+To download a vault inventory using the REST API
+Downloading a vault inventory is a two-step process.
+
+
+Initiate a job of the inventory-retrieval type. For more information, see Initiate Job (POST jobs).
+
+
+After the job completes, download the inventory data. For more information, see Get Job Output (GET output).
+

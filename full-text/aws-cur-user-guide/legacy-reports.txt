@@ -1,0 +1,7 @@
+Legacy Reports
+This section describes legacy billing reports offered outside of AWS Cost and Usage Reports. These pages are available for reference, but we strongly recommend you use AWS Cost and Usage Reports since these reporting methods will be unavailable at a later date.
+Topics
+ Detailed Billing Reports
+ Monthly Report
+ Monthly Cost Allocation
+ AWS Usage Report

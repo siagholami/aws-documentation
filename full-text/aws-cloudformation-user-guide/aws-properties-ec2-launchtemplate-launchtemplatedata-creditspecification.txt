@@ -1,0 +1,20 @@
+AWS::EC2::LaunchTemplate CreditSpecification
+Specifies the credit option for CPU usage of a T2, T3, or T3a instance.
+CreditSpecification is a property of AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CpuCredits](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification-cpucredits)" : String
+}
+YAML
+[CpuCredits](#cfn-ec2-launchtemplate-launchtemplatedata-creditspecification-cpucredits): String
+Properties
+CpuCredits 
+The credit option for CPU usage of a T2, T3, or T3a instance. Valid values are standard and unlimited.
+Required: No
+Type: String
+Update requires: No interruption
+See also
+
+ CreditSpecificationRequest in the Amazon Elastic Compute Cloud API Reference 

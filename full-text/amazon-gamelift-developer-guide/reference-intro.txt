@@ -1,0 +1,7 @@
+Amazon GameLift Reference Guides
+This section contains reference documentation for using Amazon GameLift.
+Topics
+ Amazon GameLift Service API Reference (AWS SDK)
+ Amazon GameLift Realtime Servers Reference
+ Amazon GameLift Server SDK Reference
+ Amazon GameLift FlexMatch Reference

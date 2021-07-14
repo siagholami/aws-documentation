@@ -1,0 +1,5 @@
+Macie resource type reference
+Resource types
+ AWS::Macie::CustomDataIdentifier
+ AWS::Macie::FindingsFilter
+ AWS::Macie::Session

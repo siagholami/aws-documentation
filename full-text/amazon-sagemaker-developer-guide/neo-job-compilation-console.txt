@@ -1,0 +1,38 @@
+Compile a Model (Amazon SageMaker Console)
+You can create a Neo compilation job in the Amazon SageMaker console.
+
+
+In the Amazon SageMaker console, choose Compilation jobs, and then choose Create compilation job.
+
+
+
+On the Create compilation job page, for Job name, enter a name. Then select an IAM role.
+
+
+
+If you don’t have an IAM role, choose Create a new role.
+
+
+
+On the Create an IAM role page, choose Any S3 bucket, and choose Create role.
+
+
+
+Within the Input configuration section, enter the path of the S3 bucket that contains your model artifacts in the Location of model artifacts input field. For the Data input configuration field, enter the JSON string that specifies the shape of the input data. For Machine learning framework, choose the framework of your choice.
+
+
+
+To find the JSON string examples of input data shapes depending on frameworks, see What input data shapes Neo expects.
+
+
+Go to the Output configuration section. For S3 Output location, enter the path to the S3 bucket where you want to store the model. For Target device, choose which device you want to deploy your model to, and choose Create job.
+
+
+
+Check the status of the compilation job when started. This status of the job can be found at the top of the Compilation Job page as shown in the following screenshot. You can also check the status of it in the Status column.
+
+
+
+Check the status of the compilation job when completed. You can check the status in the Status column as shown in the following screenshot.
+
+

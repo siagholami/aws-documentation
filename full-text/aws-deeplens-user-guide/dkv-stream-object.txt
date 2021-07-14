@@ -1,0 +1,6 @@
+Stream Object
+An object that encapsulates a Kinesis stream for video feeds from your AWS DeepLens device and exposes methods for controlling when to start and stop streaming data.
+Topics
+ Stream.isActive Property
+ Stream.start Method
+ Stream.stop Method

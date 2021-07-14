@@ -1,0 +1,37 @@
+Amazon Virtual Private Cloud Traffic Mirroring
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is Traffic Mirroring?
+How Traffic Mirroring Works
+Traffic Mirror Targets
+Traffic Mirror Filters and Filter Rules
+Traffic Mirror Sessions
+Traffic Mirroring and VPC Flow Logs
+Traffic Mirror Source and Target Connectivity Options
+Traffic Mirroring Packet Format
+Traffic Mirroring Authentication and Access Control
+Getting Started with Traffic Mirroring
+Traffic Mirroring Examples
+Example: Mirror Inbound TCP Traffic to a Single Monitoring Appliance
+Example: Mirror Inbound TCP and UDP Traffic to Two Different Appliances
+Example: Mirror Non-Local VPC Traffic
+Working with Open-Source Tools for Traffic Mirroring
+Working with Traffic Mirroring
+Traffic Mirror Targets
+Cross-Account Traffic Mirror Targets
+Traffic Mirror Filters
+Traffic Mirror Sessions
+Monitoring Mirrored Traffic Using Amazon CloudWatch
+Traffic Mirroring Service Quotas and Considerations
+Document History for Traffic Mirroring

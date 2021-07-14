@@ -1,0 +1,3 @@
+CodeStar resource type reference
+Resource types
+ AWS::CodeStar::GitHubRepository

@@ -1,0 +1,22 @@
+dateDiff
+dateDiff returns the difference in days between two date fields.
+dateDiff is supported for use with analyses based on SPICE data sets.
+Syntax
+dateDiff(date1, date2)
+Arguments
+dateDiff takes two dates as arguments.
+date 
+A date field or a call to another function that outputs a date. 
+Return Type
+Integer
+Example
+The following example returns the difference between two dates.
+dateDiff(orderDate, shipDate)
+The following are the given field values.
+orderdDate          shipdate
+=============================
+01/01/14            01/05/14
+09/13/16            09/20/16
+For these field values, the following values are returned.
+4
+7

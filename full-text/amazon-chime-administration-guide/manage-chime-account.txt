@@ -1,0 +1,16 @@
+Managing your Amazon Chime accounts
+You can use Amazon Chime as an individual user or as a group with no administrators. But if you want to add administrator functionality or purchase Amazon Chime Pro, you must create an Amazon Chime account in the AWS Management Console. To learn how to create an Amazon Chime administrator account, or for more information about purchasing Amazon Chime Pro, see Getting started.
+For more information about the different types of Amazon Chime administrator accounts, see Choosing between an Amazon Chime Team account or Enterprise account. For more information about managing an existing administrator account, see the following topics.
+Topics
+ Choosing between an Amazon Chime Team account or Enterprise account
+ Converting a Team account to an Enterprise account
+ Renaming your account
+ Deleting your account
+ Managing meeting settings
+ Retention
+ Managing messages
+ Claiming a domain
+ Connecting to your Active Directory
+ Connecting to Okta SSO
+ Deploying the Amazon Chime Add-In for Outlook
+ Setting up the Amazon Chime Meetings App for Slack

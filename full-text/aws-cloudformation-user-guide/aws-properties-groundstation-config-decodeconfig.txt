@@ -1,0 +1,81 @@
+AWS::GroundStation::Config DecodeConfig
+Defines decoding settings. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson)" : JSON
+}
+YAML
+[UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson): 
+    JSON
+Properties
+UnvalidatedJSON 
+ The decoding settings are in JSON format and define a set of steps to perform to decode the data. 
+Required: Yes
+Type: JSON
+Update requires: No interruption
+Examples
+Create a DecodeConfig
+The following example creates a Ground Station DecodeConfig
+JSON
+{
+  "DecodeConfig": {
+    "UnvalidatedJSON": "{ \"edges\":[ { \"from\":\"I-Ingress\", \"to\":\"IQ-Recombiner\" }, { \"from\":\"Q-Ingress\", \"to\":\"IQ-Recombiner\" }, { \"from\":\"IQ-Recombiner\", \"to\":\"CcsdsViterbiDecoder\" }, { \"from\":\"CcsdsViterbiDecoder\", \"to\":\"NrzmDecoder\" }, { \"from\":\"NrzmDecoder\", \"to\":\"UncodedFramesEgress\" } ], \"nodeConfigs\":{ \"I-Ingress\":{ \"type\":\"CODED_SYMBOLS_INGRESS\", \"codedSymbolsIngress\":{ \"source\":\"I\" } }, \"Q-Ingress\":{ \"type\":\"CODED_SYMBOLS_INGRESS\", \"codedSymbolsIngress\":{ \"source\":\"Q\" } }, \"IQ-Recombiner\":{ \"type\":\"IQ_RECOMBINER\" }, \"CcsdsViterbiDecoder\":{ \"type\":\"CCSDS_171_133_VITERBI_DECODER\", \"ccsds171133ViterbiDecoder\":{ \"codeRate\":\"ONE_HALF\" } }, \"NrzmDecoder\":{ \"type\":\"NRZ_M_DECODER\" }, \"UncodedFramesEgress\":{ \"type\":\"UNCODED_FRAMES_EGRESS\" } } }"
+  }
+}
+YAML
+DecodeConfig:
+  UnvalidatedJSON: '{
+    "edges":[
+      {
+        "from":"I-Ingress",
+        "to":"IQ-Recombiner"
+      },
+      {
+        "from":"Q-Ingress",
+        "to":"IQ-Recombiner"
+      },
+      {
+        "from":"IQ-Recombiner",
+        "to":"CcsdsViterbiDecoder"
+      },
+      {
+        "from":"CcsdsViterbiDecoder",
+        "to":"NrzmDecoder"
+      },
+      {
+        "from":"NrzmDecoder",
+        "to":"UncodedFramesEgress"
+      }
+    ],
+    "nodeConfigs":{
+      "I-Ingress":{
+        "type":"CODED_SYMBOLS_INGRESS",
+        "codedSymbolsIngress":{
+          "source":"I"
+        }
+      },
+      "Q-Ingress":{
+        "type":"CODED_SYMBOLS_INGRESS",
+        "codedSymbolsIngress":{
+          "source":"Q"
+        }
+      },
+      "IQ-Recombiner":{
+        "type":"IQ_RECOMBINER"
+      },
+      "CcsdsViterbiDecoder":{
+        "type":"CCSDS_171_133_VITERBI_DECODER",
+        "ccsds171133ViterbiDecoder":{
+          "codeRate":"ONE_HALF"
+        }
+      },
+      "NrzmDecoder":{
+        "type":"NRZ_M_DECODER"
+      },
+      "UncodedFramesEgress":{
+        "type":"UNCODED_FRAMES_EGRESS"
+      }
+    }
+  }'

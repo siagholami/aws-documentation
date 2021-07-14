@@ -1,0 +1,29 @@
+Adding 3D Cloud Shadows
+
+This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
+3D clouds don't actually cast real-time shadows. Instead a moveable texture is imposed on the entire level, creating the illusion that the clouds cast shadows.
+Example 3D Cloud Shadows 
+
+To add 3D cloud shadows
+
+
+In the Rollup Bar, under Terrain, click Environment. 
+
+
+Under CloudShadows, click Cloud shadow texture and the folder icon.
+
+
+In Preview, select an asset.
+
+
+
+Drag the shadow to the desired location in your level. 
+
+
+Under CloudShadows, adjust the following parameters:
+    Cloud shadow speed – Sets the speed that shadows move across the terrain.
+    Cloud shadow tiling – Sets the tiling multiplier of the shadow texture. 
+    Cloud shadow brightness – Sets the brightness level of the shadow.
+    Cloud shadow invert – Enables inverting of the cloud shadow texture. 
+
+

@@ -1,0 +1,300 @@
+Script Canvas Tutorial: Opening and Closing a Door with Trigger Areas and Variables
+In the following tutorial, you create a door that opens and closes when your controllable sphere enters and exits a trigger area.
+Example 
+
+This involves several tasks:
+ Create a trigger area
+ Add event nodes
+ Add variables
+Prerequisites
+
+Complete the Script Canvas Tutorial: Creating a Controllable Entity.
+
+Topics
+ Prerequisites
+ Step 1: Create a Door and Trigger Area
+ Step 2: Create a Script to Open and Close the Door
+Step 1: Create a Door and Trigger Area
+To create a door and trigger area, create an entity with child entities and then add components to the child entities.
+To create a door and trigger area
+
+
+In Lumberyard Editor, right-click the Perspective viewport near your controllable sphere and choose Create entity.
+
+
+
+In the Entity Inspector, for Name, enter Door Group.
+
+
+Do the following to create a door:
+
+
+In the Entity Outliner, right-click Door Group and choose Create child entity. This child entity is your door.
+
+
+In the Entity Inspector, for Name, enter Door Mesh.
+
+
+
+For the Door Mesh entity, click Add Component and then choose the Mesh component.
+
+
+In the Mesh component, for Mesh asset, click the browse (…) icon and select the SamplesProject\Objects\Primitives\box_1x1.cgf file.
+
+
+
+Click Add Component and then choose the Static Physics component.
+
+
+Click Add Component and then choose the Mesh Collider component. This component defines the collision shape for the Door Mesh entity.
+
+
+In the Transform component, for Scale, set X to 2.5, Y to 0.5, and Z to 4.0. 
+
+
+Verify that your Door Mesh entity looks like the following.
+Example 
+
+
+
+Do the following to create a trigger area:
+
+
+In the Entity Outliner, right-click Door Group and choose Create child entity. This child entity is your trigger area.
+
+
+In the Entity Inspector, for Name, enter Door Trigger.
+
+
+Click Add Component and then choose the Trigger Area component.
+
+
+With the Move tool, adjust the Door Trigger entity so that its Z position fits the Door Mesh entity.
+
+
+In the Trigger Area component, click Add Required Component and choose Box Shape.
+
+
+For the Box Shape component, for Dimensions, set X to 3.0, Y to 9.0, and Z to 6.0.
+
+
+Click Add Component and then choose the Script Canvas component.
+
+
+In Lumberyard Editor, choose Tools, Script Canvas.
+
+
+In the Script Canvas editor, choose File, New Script.
+
+
+After the new canvas loads, choose File, Save As.
+
+
+For File name, enter door and then click Save.
+
+
+In the Script Canvas component, click the browse (...) icon, select the door.scriptcanvas file, and then click OK.
+
+
+Verify that your Door Trigger entity looks like the following.
+Example 
+
+
+
+Step 2: Create a Script to Open and Close the Door
+Now that you've set up your door and trigger area, you can create a script that opens and closes the door when another entity enters or leaves the trigger area.
+To create a script that opens and closes the door
+
+
+In the Script Canvas editor, open the door.scriptcanvas file.
+
+
+In the Node Palette, enter trigger in the search box and under Gameplay, Trigger Area, drag On Area Entered to the canvas. 
+Note
+With this event node you can easily use the Lumberyard EBus messaging system. For more information, see Working with the Event Bus (EBus) system.
+
+
+In the Trigger Area node, click Add/Remove Events and then select the On Area Exited check box. This exposes the entered and exited events from the Trigger Area EBus.
+
+
+
+In the bottom-right pane, in the Variable Manager, click Create Variable. 
+Note
+You can store and modify persistent values in your graph with variable nodes. For more information, see Managing Script Canvas Variables.
+
+
+Select Vector3, double-click Variable 1 and then rename the variable to opened_position.
+
+
+In the Node Inspector, specify 2 for the Z value. A positive value for the z-axis slides the door up. Because the door entity is a child of Door Group, you can specify local relative positions to control the open and closed positions of the door.
+
+
+Create another Vector3 variable and name it closed_position. Keep the default value of 0, 0, 0.
+
+
+Create another Vector3 variable and name it current_position. Keep the default value of 0, 0, 0. This variable sets the door's current position.
+
+
+Create another Vector3 variable and name it destination_position. Keep the default value of 0, 0, 0. This variable sets the door's destination position when the entity enters and exits the trigger area.
+Example 
+
+
+You should have four Vector3 variable nodes such as the following.
+
+
+
+In the Variable Manager, do the following:
+
+
+Select and drag the open_position node to the canvas and then click Get opened_position.
+
+
+Select and drag the closed_position node to the canvas and then click Get closed_position.
+
+
+Select and drag two destination_position nodes to the canvas and then click Set destination_position.
+
+
+In the canvas, make the following connections:
+
+
+From On Area Entered, drag the Out pin to connect it to the In pin of a Get opened_position node.
+
+
+From On Area Exited, drag the Out pin to connect it to the In pin of the Get closed_position node.
+
+
+From Get opened_position, drag the Out pin to connect it to the In pin of the Set destination_position node.
+
+
+From Get opened_position, drag the Vector3 pin to connect it to the Vector3 pin of the Set destination_position node.
+
+
+From Get closed_position, drag the Out pin to connect it to the In pin of the other Set destination_position node.
+
+
+From Get closed_position, drag the Vector3 pin to connect it to the Vector3 pin of the other Set destination_position node.
+
+
+Verify that your door.scriptcanvas graph looks like the following.
+Example 
+
+
+
+Do the following to get the Door Mesh entity's position and interpolate to the destination:
+
+
+In the Node Palette, enter get local in the search box.
+
+
+Under Entity, Transform, drag Get Local Translation to the canvas. You can use this node to get the current position of the Door Mesh entity and interpolate to the destination. A local translation applies to the translation of the entity relative to its parent.
+
+
+In the Get Local Translation node, pause on the Source text box and click the target button. When selected, the target button has an orange outline.
+
+
+
+In the Entity Outliner, select Door Mesh to assign the Door Mesh entity to the Source property in the Get Local Translation node.
+
+Note
+To reset an entity reference, right-click twice on the Source text box and choose Set to Self.
+
+
+In the Script Canvas editor, from both Set destination_position nodes, drag the Out pins to connect it to the In pin for Get Local Translation.
+
+Note
+When multiple connections enter a single logic pin, the node is executed each time either execution is triggered. The node is executed more than once in the same game tick if multiple executions are triggered simultaneously.
+
+
+Do the following to execute nodes for a specified amount of time, in seconds:
+
+
+In the Variable Manager, drag current_position to the canvas and click Set current_position.
+
+
+From Get Local Translation, drag the Out pin to connect it to the In pin of the Set current_position node.
+
+
+From Get Local Translation, drag the Translation pin to connect it to the Vector3 pin of the Set current_position node.
+
+
+In the Node Palette, enter duration in the search box and under Timing, drag Duration to the canvas.
+
+
+From Set current_position, drag the Out pin to connect it to the Start pin of the Duration node. Triggering the Duration node resets the time.
+
+
+In the Duration node, for Duration, enter 1.0 (seconds).
+Example 
+
+
+
+Do the following to set up interpolation between the current position and the destination:
+
+
+In the Variable Manager, select and drag current_position to the canvas and then click Get current_position.
+
+
+In the Variable Manager, select and drag destination_position to the canvas and then click Get destination_position.
+
+
+In the Node Palette, enter lerp in the search box and under Math, Vector3, drag Lerp from the Node Palette to the canvas. This node blends two values based on the Percentage property.
+
+
+From Duration, drag the Out pin to connect it to the In pin of the Get current_position node.
+
+
+From Duration, drag the Elapsed pin to connect it to the Percentage pin of the Lerp node.
+
+
+From Get current_position, drag the Out pin to connect it to the In pin of the Get destination_position node.
+
+
+From Get current_position, drag the Vector3 pin to connect it to the Start pin of the Lerp node.
+
+
+From Get destination_position, drag the Out pin to connect it to the In pin of the Lerp node.
+
+
+From Get destination_position, drag the Vector3 pin to connect it to the End pin of the Lerp node.
+Example 
+
+
+
+Do the following to set the position of the door when the Duration node blends between the current and destination positions:
+
+
+In the Node Palette, enter set local translation in the search box and under Entity, Transform, drag Set Local Translation to the canvas.
+
+
+From Lerp, drag the Out pin to connect it to the In pin of the Set Local Translation node.
+
+
+From Lerp, drag the Vector3 pin to connect it to the Translation pin of the Set Local Translation node.
+
+
+In the Set Local Translation node, pause on the Source text box and click the target button.
+
+
+In the Entity Outliner, select Door Mesh to assign the Door Mesh entity to the Source property in the Set Local Translation node.
+
+
+Verify that your door.scriptcanvas graph looks like the following.
+Example 
+
+
+
+Save your graph.
+
+
+In Lumberyard Editor, press CtrlG to enter game mode and test your script.
+
+
+To move the sphere forward into the door trigger area and slide open the door, press the W, A, D keys.
+
+
+To move the sphere backwards out of the trigger area and slide the door closed, press S.
+
+
+When you are done testing your script, press Esc.
+

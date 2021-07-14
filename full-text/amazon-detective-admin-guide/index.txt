@@ -1,0 +1,56 @@
+Amazon Detective Administration Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon Detective?
+Amazon Detective terms and concepts
+Amazon Detective Regions and quotas
+Setting up Amazon Detective
+Amazon Detective prerequisites and recommendations
+Enabling Amazon Detective
+About the free trial for behavior graphs
+Source data used in a behavior graph
+For master accounts: Managing the accounts in your behavior graph
+Viewing the list of accounts in a behavior graph
+Inviting member accounts to a behavior graph
+Enabling a member account that is Accepted (Not enabled)
+Removing member accounts from a behavior graph
+For member accounts: Managing behavior graph invitations and memberships
+Required IAM policy for a member account
+Viewing your list of behavior graph invitations
+Responding to a behavior graph invitation
+Removing your account from a behavior graph
+Tracking actions and usage in Amazon Detective
+Monitoring usage and cost for a behavior graph (master account)
+Monitoring usage and cost across behavior graphs (member account)
+How Amazon Detective calculates projected cost
+Logging Amazon Detective API calls with AWS CloudTrail
+Security in Amazon Detective
+Data protection in Amazon Detective
+Key management for Amazon Detective
+
+
+Identity and access management for Amazon Detective
+How Amazon Detective works with IAM
+Amazon Detective identity-based policy examples
+Troubleshooting Amazon Detective identity and access
+
+
+Logging and monitoring in Amazon Detective
+Compliance validation for Amazon Detective
+Resilience in Amazon Detective
+Infrastructure security in Amazon Detective
+Security best practices for Amazon Detective
+Disabling Amazon Detective
+Using the Amazon Detective Python scripts
+Document history for Detective Administration Guide

@@ -1,0 +1,2 @@
+Configuring Notifications for CloudWatch Logs Alarms
+You can configure CloudWatch Logs to send a notification whenever an alarm is triggered for CloudTrail. Doing so enables you to respond quickly to critical operational events captured in CloudTrail events and detected by CloudWatch Logs. CloudWatch uses Amazon Simple Notification Service (SNS) to send email. For more information, see Set Up Amazon SNS in the CloudWatch Developer Guide.

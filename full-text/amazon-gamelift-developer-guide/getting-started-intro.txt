@@ -1,0 +1,6 @@
+Getting Started with Amazon GameLift
+The resources in this section help you get started with Amazon GameLift.
+Topics
+ Explore Amazon GameLift
+ Get Started with Custom Servers
+ Get Started with Realtime Servers

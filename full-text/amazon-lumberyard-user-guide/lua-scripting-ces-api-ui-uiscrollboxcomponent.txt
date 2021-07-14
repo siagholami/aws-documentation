@@ -1,0 +1,160 @@
+UIScrollBoxComponent
+Controls the characteristics of a scroll box.
+UiScrollBoxBus
+Services messages for the UiScrollBoxComponent.
+FindClosestContentChildElement
+Finds the child of the content element that is closest to the content anchors at the current scroll offset (the currently selected child).
+Syntax
+AZ::EntityId FindClosestContentChildElement()
+GetContentEntity
+Returns the content element for the scroll box.
+Syntax
+AZ::EntityId GetContentEntity()
+GetHorizontalScrollBarEntity
+Returns the horizontal scroll bar element for the scroll box.
+Syntax
+AZ::EntityId GetHorizontalScrollBarEntity()
+GetHorizontalScrollBarVisibility
+Returns the visibility behavior for the horizontal scroll bar of the scroll box.
+Syntax
+eUiScrollBoxScrollBarVisibility GetHorizontalScrollBarVisibility()
+Following are possible values for eUiScrollBoxScrollBarVisibility.
+enum eUiScrollBoxScrollBarVisibility
+    {
+        eUiScrollBoxScrollBarVisibility_AlwaysShow,
+        eUiScrollBoxScrollBarVisibility_AutoHide,
+        eUiScrollBoxScrollBarVisibility_AutoHideAndResizeViewport
+    };
+GetIsHorizontalScrollingEnabled
+Returns whether the scroll box allows horizontal scrolling.
+Syntax
+bool GetIsHorizontalScrollingEnabled()
+GetIsScrollingConstrained
+Returns whether the scroll box restricts scrolling to the content area.
+Syntax
+bool GetIsScrollingConstrained()
+GetIsVerticalScrollingEnabled
+Returns whether the scroll box allows vertical scrolling.
+Syntax
+bool GetIsVerticalScrollingEnabled()
+GetNormalizedScrollValue
+Returns the scroll value from 0 – 1.
+Syntax
+AZ::Vector2 GetNormalizedScrollValue()
+GetScrollOffset
+Returns the scroll offset of the scroll box. The scroll offset is the offset from the content element's anchor point to the content element's pivot.
+Syntax
+AZ::Vector2 GetScrollOffset()
+GetScrollOffsetChangedActionName
+Returns the action triggered when the scroll box drag is completed.
+Syntax
+const AZStd::string& GetScrollOffsetChangedActionName()
+GetScrollOffsetChangingActionName
+Returns the action triggered while the scroll box is being dragged.
+Syntax
+AZStd::string& GetScrollOffsetChangingActionName()
+GetSnapGrid
+Returns the snapping grid of the scroll box.
+Syntax
+AZ::Vector2 GetSnapGrid()
+GetSnapMode
+Returns the snap mode for the scroll box.
+Syntax
+eUiScrollBoxSnapMode GetSnapMode()
+Following are possible values for eUiScrollBoxSnapMode.
+enum eUiScrollBoxSnapMode
+    {
+        eUiScrollBoxSnapMode_None,
+        eUiScrollBoxSnapMode_Children,
+        eUiScrollBoxSnapMode_Grid
+    };
+GetVerticalScrollBarEntity
+Returns the vertical scroll bar element for the scroll box.
+Syntax
+AZ::EntityId GetVerticalScrollBarEntity()
+GetVerticalScrollBarVisibility
+Returns the visibility behavior for the vertical scroll bar of the scroll box.
+Syntax
+eUiScrollBoxScrollBarVisibility GetVerticalScrollBarVisibility()
+HasHorizontalContentToScroll
+Returns whether there is content to scroll horizontally.
+Syntax
+bool HasHorizontalContentToScroll()
+HasVerticalContentToScroll
+Returns whether there is content to scroll vertically.
+Syntax
+bool HasVerticalContentToScroll()
+SetContentEntity
+Sets the content element for the scroll box.
+Syntax
+void SetContentEntity(AZ::EntityId entityId)
+SetHorizontalScrollBarEntity
+Sets the horizontal scroll bar element for the scroll box.
+Syntax
+void SetHorizontalScrollBarEntity(AZ::EntityId entityId)
+SetHorizontalScrollBarVisibility
+Sets the visibility behavior for the horizontal scroll bar of the scroll box.
+Syntax
+void SetHorizontalScrollBarVisibility(eUiScrollBoxScrollBarVisibility visibility)
+For possible values for eUiScrollBoxScrollBarVisibility, see GetHorizontalScrollBarVisibility.
+SetIsHorizontalScrollingEnabled
+Sets whether the scroll box allows horizontal scrolling.
+Syntax
+void SetIsHorizontalScrollingEnabled(bool isEnabled)
+SetIsScrollingConstrained
+Sets whether the scroll box restricts scrolling to the content area.
+Syntax
+void SetIsScrollingConstrained(bool isConstrained)
+SetIsVerticalScrollingEnabled
+Sets whether the scroll box allows vertical scrolling.
+Syntax
+void SetIsVerticalScrollingEnabled(bool isEnabled)
+SetScrollOffset
+Sets the scroll offset of the scroll box.
+Syntax
+void SetScrollOffset(AZ::Vector2 scrollOffset)
+SetScrollOffsetChangedActionName
+Sets the action triggered when the scroll box drag is completed.
+Syntax
+void SetScrollOffsetChangedActionName(const AZStd::string& actionName)
+SetScrollOffsetChangingActionName
+Sets the action triggered while the scroll box is being dragged.
+Syntax
+void SetScrollOffsetChangingActionName(const AZStd::string& actionName)
+SetSnapGrid
+Sets the snapping grid of the scroll box.
+Syntax
+void SetSnapGrid(AZ::Vector2 snapGrid)
+SetSnapMode
+Sets the snap mode for the scroll box.
+Syntax
+void SetSnapMode(eUiScrollBoxSnapMode snapMode)
+For possible values for eUiScrollBoxSnapMode, see GetSnapMode.
+SetVerticalScrollBarEntity
+Sets the vertical scroll bar element for the scroll box.
+Syntax
+void SetVerticalScrollBarEntity(AZ::EntityId entityId)
+SetVerticalScrollBarVisibility
+Sets the visibility behavior for the vertical scroll bar of the scroll box.
+Syntax
+void SetVerticalScrollBarVisibility(eUiScrollBoxScrollBarVisibility visibility
+UiScrollBoxNotificationBus
+Services scroll offset change notifications for the UiScrollBoxComponent.
+OnScrollOffsetChanged
+Called when the scroll offset has changed.
+Syntax
+void OnScrollOffsetChanged(AZ::Vector2 newScrollOffset)
+OnScrollOffsetChanging
+Called when the scroll offset is changing.
+Syntax
+void OnScrollOffsetChanging(AZ::Vector2 newScrollOffset)
+UiScrollableNotificationBus
+Services scrollable value change notifications for the UiScrollBoxComponent.
+OnScrollableValueChanged
+Called when the scroll value (0 - 1) has changed.
+Syntax
+void OnScrollableValueChanged(AZ::Vector2 value)
+OnScrollableValueChanging
+Called when the scroll value (0 - 1) is changing.
+Syntax
+void OnScrollableValueChanging(AZ::Vector2 value)

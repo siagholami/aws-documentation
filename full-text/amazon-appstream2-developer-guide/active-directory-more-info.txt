@@ -1,0 +1,5 @@
+More Info
+For more information related to this topic, see the following resources:
+ Troubleshooting Notification Codes—Resolutions to notification code errors.
+ Troubleshooting Active Directory Domain Join—Help with common difficulties.
+ Microsoft Active Directory—Information about using AWS Directory Service.

@@ -1,0 +1,23 @@
+Adding a Director (Scene) Node
+To determine what camera you want your sequence to use, you must add a Director (Scene) Node. 
+To add a Director node in the Track View
+
+
+In Lumberyard Editor, choose Tools, Track View.
+
+
+In the Track View, select or create a sequence.
+
+
+Do one of the following:
+    Right-click your sequence and choose Add Director (Scene) Node.
+    Click the Add Director Node icon.
+
+
+
+By default, the Camera track appears on the Director (Scene) Node to control which camera is active for the sequence. This is the only track that is needed to assign and switch between cameras. 
+For more information about other tracks that you can add, see the Director (Scene) Node.
+
+When you add an animation key on the Camera track, you can select the key and assign which camera should be active from the Key Properties pane. When a camera is set, you can see the name of the camera on the track.
+
+To create a series of jump cuts from one camera to another camera in a sequence, add animation keys on the Camera track for the Director node. The Director node uses the key properties set for the Camera track to determine which camera to switch.

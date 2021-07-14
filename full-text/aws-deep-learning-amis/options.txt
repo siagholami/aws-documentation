@@ -1,0 +1,13 @@
+Choosing Your DLAMI
+You may find there are many options for your DLAMI, and it's not clear which is best suited for your use case. This section helps you decide. When we refer to a DLAMI, often this is really a group of AMIs centered around a common type or functionality. There are three variables that define these types and/or functionality: 
+ Conda versus Base
+ CUDA 8 versus CUDA 9 versus CUDA 10
+ Amazon Linux versus Ubuntu versus Windows
+The rest of the topics in this guide will help further inform you and go into more details. 
+Topics
+ Deep Learning AMI with Conda
+ Deep Learning Base AMI
+ CUDA Installations and Framework Bindings
+ DLAMI Operating System Options
+Next Up
+Deep Learning AMI with Conda

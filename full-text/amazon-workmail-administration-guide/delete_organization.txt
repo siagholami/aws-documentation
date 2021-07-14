@@ -1,0 +1,27 @@
+Deleting an organization
+If you no longer want to use Amazon WorkMail for your organization's email, you can delete your organization from Amazon WorkMail. 
+Note
+This operation cannot be undone, and you will not be able to recover your mailbox data.
+To delete an organization
+
+
+Open the Amazon WorkMail console at https://console.aws.amazon.com/workmail/.
+
+
+If necessary, change the AWS Region. From the navigation bar, select the appropriate Region. For more information, see Regions and endpoints in the Amazon Web Services General Reference.
+
+
+On the Organizations screen, in the list of organizations, select the organization to delete and choose Delete.
+
+
+For Delete organization, choose whether to delete or keep the existing user directory, and then enter the name of the organization.
+
+
+Choose Delete organization.
+
+
+Note
+If you didn't provide your own directory for Amazon WorkMail, we created one for you. If you keep this existing directory when you delete the organization, you will be charged for it unless it is being used by Amazon WorkMail, Amazon WorkDocs, or Amazon WorkSpaces. For pricing information, see Other directory types pricing.
+In order to delete the directory, it cannot have any other AWS applications enabled. For more information, see Deleting a Simple AD directory or Deleting an AD Connector directory in the AWS Directory Service Administration Guide.
+If an invalid Amazon Simple Email Service (Amazon SES) rule set error message appears when you're attempting to delete an organization, edit the Amazon SES rule in the Amazon SES console and remove the invalid rule set. The rule that you edit should have your Amazon WorkMail organization ID in the rule name. For more information about editing Amazon SES rules, see Editing a receipt rule in the Amazon Simple Email Service Developer Guide.
+If you need to figure out which rule set is invalid, save the rule first. An error message appears for the invalid rule set. 

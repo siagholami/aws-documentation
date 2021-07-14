@@ -1,0 +1,16 @@
+AWS::S3::Bucket ReplicationTimeValue
+Not currently supported by AWS CloudFormation.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Minutes](#cfn-s3-bucket-replicationtimevalue-minutes)" : Integer
+}
+YAML
+[Minutes](#cfn-s3-bucket-replicationtimevalue-minutes): Integer
+Properties
+Minutes 
+Not currently supported by AWS CloudFormation.
+Required: Yes
+Type: Integer
+Update requires: No interruption

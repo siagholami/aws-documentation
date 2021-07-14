@@ -1,0 +1,8 @@
+Working with distributions
+You create a CloudFront distribution to tell CloudFront where you want content to be delivered from, and the details about how to track and manage content delivery. The following topics explain some basics about CloudFront distributions and provide detailed information about the settings you can choose to configure your distributions to meet your business needs.
+Topics
+ Overview of distributions
+ Creating, Updating, and Deleting Distributions
+ Using Amazon S3 Origins, MediaPackage Channels, and Custom Origins for Web Distributions
+ Using Custom URLs for Files by Adding Alternate Domain Names (CNAMEs)
+ Using WebSocket with CloudFront Distributions

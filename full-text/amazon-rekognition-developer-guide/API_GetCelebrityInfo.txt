@@ -1,0 +1,59 @@
+GetCelebrityInfo
+Gets the name and additional information about a celebrity based on his or her Amazon Rekognition ID. The additional information is returned as an array of URLs. If there is no additional information about the celebrity, this list is empty.
+For more information, see Getting Information About a Celebrity.
+This operation requires permissions to perform the rekognition:GetCelebrityInfo action. 
+Request Syntax
+{
+   "[Id](#rekognition-GetCelebrityInfo-request-Id)": "string"
+}
+Request Parameters
+The request accepts the following data in JSON format.
+ Id  
+The ID for the celebrity. You get the celebrity ID from a call to the RecognizeCelebrities operation, which recognizes celebrities in an image. 
+Type: String
+Pattern: [0-9A-Za-z]* 
+Required: Yes
+Response Syntax
+{
+   "[Name](#rekognition-GetCelebrityInfo-response-Name)": "string",
+   "[Urls](#rekognition-GetCelebrityInfo-response-Urls)": [ "string" ]
+}
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ Name  
+The name of the celebrity.
+Type: String
+ Urls  
+An array of URLs pointing to additional celebrity information. 
+Type: Array of strings
+Errors
+AccessDeniedException 
+You are not authorized to perform the action.
+HTTP Status Code: 400
+InternalServerError 
+Amazon Rekognition experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidParameterException 
+Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+HTTP Status Code: 400
+ProvisionedThroughputExceededException 
+The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon Rekognition.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The collection specified in the request cannot be found.
+HTTP Status Code: 400
+ThrottlingException 
+Amazon Rekognition is temporarily unable to process the request. Try your call again.
+HTTP Status Code: 500
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V3 

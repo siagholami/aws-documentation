@@ -1,0 +1,6 @@
+Amazon Connect and Zendesk integration
+To integrate Amazon Connect and Zendesk, you need:
+ An Amazon Connect instance.
+ A Zendesk Support account with a Zendesk Talk Partner Edition plan, or a Zendesk trial account.
+Install and configure the Amazon Connect for Zendesk app in your Zendesk Support account, then integrate the app with Amazon Connect. After integration, you can create contact flows to use Amazon Connect with Zendesk ticketing.
+For more information, see How do I integrate Amazon Connect with Zendesk? 

@@ -1,0 +1,74 @@
+Using Tabular Reports
+Use tabular reports to see a customized table view of your data.
+To create a table visual, choose at least one field of any data type. You can add as many columns as you need. Plus, you can add calculated columns. 
+The icon for a table is as follows.
+
+Tabular Report Features
+Tabular reports don't display a legend. You can hide or display the title on a tabular report. You can also hide or display totals, and choose to show totals at the top or the bottom of the table.
+Use the following table to understand the features supported by tabular reports. 
+
+
+
+
+Feature
+Supported?
+For More Information
+
+
+
+
+Changing the legend display
+No
+Customizing the Visual Legend
+
+
+Changing the title display
+Yes
+Customizing a Visual Title
+
+
+Sorting
+Yes
+Sorting Visual Data in Amazon QuickSight
+
+
+Calculated fields and aggregations
+Yes
+Changing Field Aggregation
+
+
+Adding drill-downs
+No
+Adding Drill-Downs to Visual Data in Amazon QuickSight
+
+
+Show/hide total
+Yes
+Use Totals on a Tabular Report
+
+
+
+Use Totals on a Tabular Report
+You can show or hide totals on a tabular report. Use the on-visual menu on the top right of the visual to access the option to Show Totals or Hide Totals.
+
+You can show totals at the top or the bottom of the visual. Use the on-visual menu to access the option for Format visual. If you enable Show Totals, you will see the options for Top and Bottom locations.
+
+Tabular reports can display up to 200 columns.
+Creating a Tabular Report
+Use the following procedure to create a tabular report (a table visual).
+
+
+On the analysis page, choose Visualize on the tool bar.
+
+
+Choose Add on the application bar, and then choose Add visual.
+
+
+On the Visual types pane, choose the table icon.
+
+
+From the Fields list pane, choose the fields that you want to use. If you want to add a calculated field, choose Add on the application bar, and then choose Add calculated field.
+
+
+To create a non-aggregated view of the data, add fields only to the Value field well. This shows data without any aggregations.
+To create an aggregated view of the data, choose the fields that you want to aggregate by, and then add them to the Group by field well.

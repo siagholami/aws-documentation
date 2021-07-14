@@ -1,0 +1,3 @@
+TEXTLEN function
+Synonym of LEN function. 
+See LEN function. 

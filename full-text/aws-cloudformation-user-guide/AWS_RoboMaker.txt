@@ -1,0 +1,8 @@
+RoboMaker resource type reference
+Resource types
+ AWS::RoboMaker::Fleet
+ AWS::RoboMaker::Robot
+ AWS::RoboMaker::RobotApplication
+ AWS::RoboMaker::RobotApplicationVersion
+ AWS::RoboMaker::SimulationApplication
+ AWS::RoboMaker::SimulationApplicationVersion

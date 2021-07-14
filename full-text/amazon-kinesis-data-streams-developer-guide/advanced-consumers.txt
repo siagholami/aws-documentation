@@ -1,0 +1,8 @@
+Advanced Topics for Amazon Kinesis Data Streams Consumers
+Learn how to optimize your Amazon Kinesis Data Streams consumer.
+Topics
+ Low-Latency Processing
+ Using AWS Lambda with the Kinesis Producer Library
+ Resharding, Scaling, and Parallel Processing
+ Handling Duplicate Records
+ Handling Startup, Shutdown, and Throttling

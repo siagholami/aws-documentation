@@ -1,0 +1,19 @@
+SVL_QUERY_QUEUE_INFO
+Summarizes details for queries that spent time in a workload management (WLM) query queue or a commit queue. 
+The SVL_QUERY_QUEUE_INFO view filters queries executed by the system and shows only queries executed by a user. 
+The SVL_QUERY_QUEUE_INFO view summarizes information from the STL_QUERY, STL_WLM_QUERY, and STL_COMMIT_STATS system tables. 
+This view is visible only to superusers. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+The following example shows the time that queries spent in WLM queues.
+```
+select query, service_class, queue_elapsed, exec_elapsed, wlm_total_elapsed
+from svl_query_queue_info
+where wlm_total_elapsed > 0;
+query  | service_class | queue_elapsed | exec_elapsed | wlm_total_elapsed
+------------------------------------------------------------------------
+ 2742669 |             6 |             2 |          916 |                918 
+ 2742668 |             6 |             4 |          197 |                201 
+(2 rows)
+```

@@ -1,0 +1,81 @@
+What is the AWS Toolkit for JetBrains?
+
+
+
+
+
+
+
+
+To start using the AWS Toolkit for JetBrains right away, skip ahead to the installation and first-time connection instructions.
+
+
+
+The AWS Toolkit for JetBrains is an open source plugin for the integrated development environments (IDEs) from JetBrains. The toolkit makes it easier for developers to develop, debug, and deploy serverless applications that use Amazon Web Services (AWS). 
+Topics
+ What the AWS Toolkit for JetBrains includes
+ How to get started
+ What you can do with the AWS Toolkit for JetBrains
+ Related information
+What the AWS Toolkit for JetBrains includes
+The AWS Toolkit for JetBrains includes the following specific toolkits:
+  AWS Toolkit for CLion (for C & C development)
+  AWS Toolkit for GoLand (for Go development)
+  AWS Toolkit for IntelliJ (for Java development)
+ AWS Toolkit for WebStorm (for Node.js development)
+ AWS Toolkit for Rider (for .NET development)
+ AWS Toolkit for PhpStorm  (for PHP development)
+ AWS Toolkit for PyCharm (for Python development)
+  AWS Toolkit for RubyMine (for Ruby development)
+Note
+When there are meaningful differences in functionality between the AWS Toolkits for the supported JetBrains IDEs, we note them in this guide.
+You can also use the AWS Toolkit for JetBrains to work with AWS Lambda functions, AWS CloudFormation stacks, and Amazon Elastic Container Service (Amazon ECS) clusters. The AWS Toolkit for JetBrains includes features such as AWS credentials management and AWS Region management, which simplify writing applications for AWS.
+How to get started
+To start using the AWS Toolkit for JetBrains, follow the installation and first-time connection instructions.
+After you install the AWS Toolkit and connect it to an AWS account, you can use it to work with AWS serverless applications, AWS Lambda functions, AWS CloudFormation stacks, and Amazon ECS clusters in that account.
+For brief instructions about how to use other available AWS Toolkit features, see the key tasks.
+What you can do with the AWS Toolkit for JetBrains
+You can use the AWS Toolkit for JetBrains to do the following:
+ Create, deploy, change, and delete AWS serverless applications in an AWS account.
+ Create, run (invoke) and debug locally, run (invoke) remotely, change, and delete AWS Lambda functions in an AWS account.
+ View event logs for and delete AWS CloudFormation stacks in an AWS account.
+ Debug code in Amazon ECS clusters in an AWS account. (Debugging code in Amazon ECS clusters is currently in beta.)
+ Work with Amazon EventBridge schemas in an AWS account.
+ Switch AWS credentials to connect with a different set of access permissions within the same AWS account or another one.
+ Switch to working with AWS resources in a different AWS Region for the connected AWS account.
+ Use an HTTP proxy and update it as needed.
+Related information
+Related videos
+
+Announcement | Introducing the AWS Toolkit for IntelliJ IDEA (16 minutes, April 2019, YouTube website)
+Getting Started with the AWS Toolkit for JetBrains (covers the AWS Toolkit for PyCharm only, 2 minutes, November 2018, YouTube website)
+Building Serverless Applications with the AWS Toolkit for JetBrains (covers the AWS Toolkit for PyCharm only, 6 minutes, November 2018, YouTube website)
+
+Related webpages
+
+The AWS Toolkit for IntelliJ is Now Generally Available (March 2019, blog post, AWS website)
+AWS Toolkit for IntelliJ – Now generally available (March 2019, blog post, AWS website)
+New – AWS Toolkits for PyCharm, IntelliJ (Preview) (November 2018, blog post, AWS website)
+Introducing the AWS Toolkit for PyCharm (November 2018, blog post, AWS website)
+AWS Toolkit for IntelliJ (part of the AWS Toolkit for JetBrains, AWS website)
+AWS Toolkit for PyCharm (part of the AWS Toolkit for JetBrains, AWS website)
+AWS Toolkit (JetBrains website)
+Develop on AWS with JetBrains Tools (JetBrains website)
+All Developer Tools and Products by JetBrains (JetBrains website)
+
+Questions and help
+To ask questions or seek help from the AWS developer community, see the following AWS Discussion Forums:
+ C & C Development
+ Go Development
+ Java Development
+ JavaScript Development
+ .NET Development
+ PHP Development
+ Python Development
+ Ruby Development
+(When you enter these forums, AWS might require you to sign in.) 
+You can also contact us directly. 
+Report a bug with the AWS Toolkit or make a feature request
+To report a bug with the AWS Toolkit for JetBrains or to make a feature request, go to the Issues tab in the aws/aws-toolkit-jetbrains repository on the GitHub website. Choose New issue, and then follow the on-screen instructions to finish making your bug report or feature request. (When you enter this website, GitHub might require you to sign in.)
+Contribute to the AWS Toolkit
+We greatly value your contributions to the AWS Toolkit. To begin contributing, read the Contributing Guidelines in the aws/aws-toolkit-jetbrains repository on the GitHub website. (When you enter this website, GitHub might require you to sign in.)

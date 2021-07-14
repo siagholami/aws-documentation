@@ -1,0 +1,24 @@
+HyperParameterRanges
+Specifies the hyperparameters and their ranges. Hyperparameters can be categorical, continuous, or integer-valued.
+Contents
+categoricalHyperParameterRanges 
+The categorical hyperparameters and their ranges.
+Type: Array of CategoricalHyperParameterRange objects
+Array Members: Maximum number of 100 items.
+Required: No
+continuousHyperParameterRanges 
+The continuous hyperparameters and their ranges.
+Type: Array of ContinuousHyperParameterRange objects
+Array Members: Maximum number of 100 items.
+Required: No
+integerHyperParameterRanges 
+The integer-valued hyperparameters and their ranges.
+Type: Array of IntegerHyperParameterRange objects
+Array Members: Maximum number of 100 items.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

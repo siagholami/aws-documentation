@@ -1,0 +1,25 @@
+Using AWS Managed Policies with AWS Directory Service
+AWS Directory Service provides the following AWS managed policies to give your users and groups access to AWS services and resources, such as access to the Amazon EC2 console. You must log in to the AWS Management Console before you can view these policies. 
+ Read Only Access
+ Power User Access
+ AWS Directory Service Full Access
+ AWS Directory Service Read Only Access
+ Amazon Cloud Directory Full Access
+ Amazon Cloud Directory Read Only Access
+ Amazon EC2 Full Access
+ Amazon EC2 Read Only Access
+ Amazon VPC Full Access
+ Amazon VPC Read Only Access
+ Amazon RDS Full Access
+ Amazon RDS Read Only Access
+ Amazon DynamoDB Full Access
+ Amazon DynamoDB Read Only Access
+ Amazon S3 Full Access
+ Amazon S3 Read Only Access
+ AWS CloudTrail Full Access
+ AWS CloudTrail Read Only Access
+ Amazon CloudWatch Full Access
+ Amazon CloudWatch Read Only Access
+ Amazon CloudWatch Logs Full Access
+ Amazon CloudWatch Logs Read Only Access
+For more information on how to create your own policies, see Example Policies for Administering AWS Resources in the IAM User Guide.

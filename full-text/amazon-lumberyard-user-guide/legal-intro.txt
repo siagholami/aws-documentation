@@ -1,0 +1,5 @@
+Legal
+The Amazon Lumberyard engine, integrated development environment, and related assets and tools are licensed as "Lumberyard Materials" under the terms and conditions of the AWS Customer Agreement and the Lumberyard Service Terms. Please see these terms and conditions for details.
+Topics
+ Lumberyard Redistributables
+ Alternate Web Services

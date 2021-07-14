@@ -1,0 +1,35 @@
+Creating serverless applications with the AWS Toolkit for Visual Studio Code
+This example shows how to use the AWS Toolkit for Visual Studio Code to create a serverless application and then run and debug it.
+Prerequisites
+
+Be sure your system meets the required prerequisites specified in Installing the Toolkit for VS Code.
+In addition, install the AWS SAM CLI and its prerequisites. See AWS SAM CLI in the setup prerequisites. If Visual Studio Code is open when you perform these installations, you might need to close and reopen the editor.
+Identify your default AWS Region in your AWS config file. For more information, see Configuration and Credential Files in the AWS CLI User Guide. If Visual Studio Code is open when you update your config file, you might need to close and reopen the editor.
+After installing your language SDK, be sure to configure your toolchain.
+
+Creating serverless applications with the Toolkit for VS Code
+This example shows how to create a serverless application with the Toolkit for VS Code by using the AWS Serverless Application Model (AWS SAM).
+
+
+To open the Command Palette, choose View, Command Palette, and then enter AWS.
+
+
+Choose AWS: Create new SAM Application.
+
+Note
+If the AWS SAM CLI isn't installed, you will get an error in the lower-right corner of the VS Code editor. If this happens, see the prerequisites described earlier.
+
+
+Choose the runtime for your SAM application. For this example, choose nodejs12.x.
+
+
+
+Choose a location for your new project. You can use an existing workspace folder if one is open, Select a different folder that already exists, or create a new folder and select it. For this example, choose There are no workspace folders open to create a folder named MY-SAM-APP.
+
+
+
+Enter a name for your new project. For this example, use my-sam-app-nodejs. After you press Enter, the Toolkit for VS Code takes a few moments to create the project.
+
+
+
+When the project is created, your application is added to your current workspace. You should see it listed in the Explorer window.

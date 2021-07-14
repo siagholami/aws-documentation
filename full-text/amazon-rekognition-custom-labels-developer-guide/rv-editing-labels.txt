@@ -1,0 +1,38 @@
+Editing Labels
+You can use the Amazon Rekognition Custom Labels console to add, change, or remove labels from a dataset.
+To add a label (console)
+
+
+Open the Amazon Rekognition console at https://console.aws.amazon.com/rekognition/.
+
+
+Choose Use Custom Labels.
+
+
+Choose Get started. 
+
+
+In the left navigation pane, choose the project that contains the dataset you want to use.
+
+
+In the Datasets section, choose the dataset that you want to use.
+
+
+In the dataset gallery page, choose Start labeling to enter labeling mode.
+
+
+In the Filter by labels section of the dataset gallery, choose Add to open the Edit labels dialog box.
+
+
+Enter a new label name.
+
+
+Choose Add label.
+
+
+
+Repeat steps 7 and 8 until you have created all the labels you need.
+
+
+Create Save to save the labels that you added.
+

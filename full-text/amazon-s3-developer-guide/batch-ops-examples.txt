@@ -1,0 +1,10 @@
+S3 Batch Operations examples
+You can use S3 Batch Operations to perform large-scale S3 Batch Operations on billions of S3 objects containing exabytes of data. You can use the AWS Management Console, AWS Command Line Interface (AWS CLI), AWS SDKs, or REST API to manage your Batch Operations jobs. 
+This section contains the following examples of creating and managing Batch Operations jobs in Amazon S3. In the examples, replace any variable values with those that suit your needs.
+Topics
+ S3 Batch Operations examples using the AWS CLI
+ S3 Batch Operations examples using the AWS SDK for Java
+ Example: Using job tags to control permissions for S3 Batch Operations
+ Example: Requesting S3 Batch Operations completion reports
+ Example: Copying objects across AWS accounts using S3 Batch Operations
+ Example: Tracking an S3 Batch Operations job in Amazon EventBridge through AWS CloudTrail

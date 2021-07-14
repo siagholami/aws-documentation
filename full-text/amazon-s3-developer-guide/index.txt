@@ -1,0 +1,528 @@
+Amazon Simple Storage Service Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is Amazon S3?
+Introduction to Amazon S3
+Making requests
+Making requests to Amazon S3 over IPv6
+Using Amazon S3 dual-stack endpoints
+
+
+Making requests using the AWS SDKs
+Making requests using AWS account or IAM user credentials
+Making requests using AWS account or IAM user credentials - AWS SDK for Java
+Making requests using AWS account or IAM user credentials - AWS SDK for .NET
+Making requests using AWS account or IAM user credentials - AWS SDK for PHP
+Making requests using AWS account or IAM user credentials - AWS SDK for Ruby
+
+
+Making requests using IAM user temporary credentials
+Making requests using IAM user temporary credentials - AWS SDK for Java
+Making requests using IAM user temporary credentials - AWS SDK for .NET
+Making requests using AWS account or IAM user temporary credentials - AWS SDK for PHP
+Making requests using IAM user temporary credentials - AWS SDK for Ruby
+
+
+Making requests using federated user temporary credentials
+Making requests using federated user temporary credentials - AWS SDK for Java
+Making requests using federated user temporary credentials - AWS SDK for .NET
+Making requests using federated user temporary credentials - AWS SDK for PHP
+Making requests using federated user temporary credentials - AWS SDK for Ruby
+
+
+
+
+Making requests using the REST API
+Virtual hosting of buckets
+Request redirection and the REST API
+
+
+Working with Amazon S3 Buckets
+Bucket restrictions and limitations
+Examples of creating a bucket
+Deleting or emptying a bucket
+Amazon S3 default encryption for S3 buckets
+Amazon S3 Transfer Acceleration
+Amazon S3 Transfer Acceleration Examples
+
+
+Requester Pays buckets
+Configure Requester Pays by using the Amazon S3 console
+Configure Requester Pays with the REST API
+Setting the requestPayment Bucket Configuration
+Retrieving the requestPayment Configuration
+Downloading objects in Requester Pays buckets
+
+
+
+
+Buckets and access control
+Billing and usage reporting for S3 buckets
+AWS Billing reports for Amazon S3
+AWS usage report for Amazon S3
+Understanding your AWS billing and usage reports for Amazon S3
+Using cost allocation S3 bucket tags
+
+
+Managing data access with Amazon S3 access points
+Creating access points
+Using access points
+Access points restrictions and limitations
+Working with Amazon S3 Objects
+Object key and metadata
+Amazon S3 storage classes
+Object subresources
+Object Versioning
+Object tagging
+Managing object tags
+Managing object tags using the console
+Managing tags using the AWS SDK for Java
+Managing tags using the AWS SDK for .NET
+
+
+
+
+Object lifecycle management
+Additional considerations for lifecycle configuration
+Transitioning objects using Amazon S3 Lifecycle
+Understanding object expiration
+Lifecycle and other bucket configurations
+
+
+Lifecycle configuration elements
+Examples of lifecycle configuration
+Setting lifecycle configuration on a bucket
+Manage an object's lifecycle using the Amazon S3 console
+Set lifecycle configurations using the AWS CLI
+Managing object lifecycles using the AWS SDK for Java
+Manage an object's lifecycle using the AWS SDK for .NET
+Manage an object's lifecycle using the AWS SDK for Ruby
+Manage an object's lifecycle using the REST API
+
+
+
+
+Cross-origin resource sharing (CORS)
+Enabling cross-origin resource sharing (CORS)
+Enabling cross-origin resource sharing (CORS) using the AWS Management Console
+Enabling cross-origin resource sharing (CORS) using the AWS SDK for Java
+Enabling cross-origin resource sharing (CORS) using the AWS SDK for .NET
+Enabling cross-origin resource sharing (CORS) using the REST API
+
+
+Troubleshooting CORS issues
+
+
+Operations on objects
+Getting objects
+Get an object Using the AWS SDK for Java
+Get an object Using the AWS SDK for .NET
+Get an object Using the AWS SDK for PHP
+Get an object Using the REST API
+Share an object with others
+Generate a presigned object URL using AWS explorer for Visual Studio
+Generate a presigned object URL using the AWS SDK for Java
+Generate a presigned object URL using AWS SDK for .NET
+
+
+
+
+Uploading objects
+Uploading an object in a single operation
+Upload an object Using the AWS SDK for Java
+Upload an object using the AWS SDK for .NET
+Upload an object using the AWS SDK for C
+Upload an object using the AWS SDK for PHP
+Upload an object using the AWS SDK for Ruby
+Upload an object using the REST API
+Upload an object using the CLI
+
+
+Uploading objects using multipart upload API
+Multipart upload overview
+Amazon S3 multipart upload limits
+API support for multipart upload
+Multipart upload API and permissions
+Using the AWS Java SDK for multipart upload (high-level API)
+Upload a file
+Stop multipart uploads
+Track multipart upload progress
+Using the AWS Java SDK for a multipart upload (low-level API)
+Upload a file
+List multipart uploads
+Abort a multipart upload
+Using the AWS SDK for .NET for multipart upload (high-level API)
+Upload a file to an S3 bucket using the AWS SDK for .NET (high-level API)
+Upload a directory
+Stop multipart uploads to an S3 Bucket using the AWS SDK for .NET (high-level API)
+Track the progress of a multipart upload to an S3 Bucket using the AWS SDK for .NET (high-level API)
+Using the AWS SDK for .NET for multipart upload (low-level API)
+Upload a file to an S3 Bucket using the AWS SDK for .NET (low-level API)
+List multipart uploads to an S3 Bucket using the AWS SDK for .NET (low-level)
+Track the progress of a multipart upload to an S3 Bucket using the AWS SDK for .NET (low-level)
+Stop multipart uploads to an S3 Bucket using the AWS SDK for .NET (low-level)
+Using the AWS PHP SDK for multipart upload
+Using the AWS PHP SDK for multipart upload (low-level API)
+Upload a file in multiple parts using the PHP SDK low-level API
+List multipart uploads using the low-level AWS SDK for PHP API
+Abort a multipart upload
+Using the AWS SDK for Ruby for Multipart Upload
+Using the REST API for multipart upload
+Using the AWS Command Line Interface for multipart upload
+
+
+Uploading objects using presigned URLs
+Upload an object using a presigned URL (AWS SDK for Java)
+Upload an object using a presigned URL (AWS SDK for .NET)
+Upload an object using a presigned URL (AWS SDK for Ruby)
+
+
+
+
+Copying objects
+Copying Objects in a Single Operation
+Copy an Object Using the AWS SDK for Java
+Copy an Amazon S3 Object in a Single Operation Using the AWS SDK for .NET
+Copy an Object Using the AWS SDK for PHP
+Copy an Object Using the AWS SDK for Ruby
+Copy an Object Using the REST API
+
+
+Copying objects using the multipart upload API
+Copy an object using the AWS SDK for Java multipart upload API
+Copy an Amazon S3 object using the AWS SDK for .NET multipart upload API
+Copy object using the REST multipart upload API
+
+
+
+
+Listing object keys
+Listing Keys Hierarchically Using a Prefix and Delimiter
+Listing Keys Using the AWS SDK for Java
+Listing Keys Using the AWS SDK for .NET
+Listing Keys Using the AWS SDK for PHP
+Listing Keys Using the REST API
+
+
+Deleting objects
+Deleting one object per request
+Deleting an object using the AWS SDK for Java
+Deleting an object using the AWS SDK for .NET
+Deleting an object using the AWS SDK for PHP
+Deleting an object using the REST API
+
+
+Deleting multiple objects per request
+Deleting multiple objects using the AWS SDK for Java
+Deleting multiple objects using the AWS SDK for .NET
+Deleting multiple objects using the AWS SDK for PHP
+Deleting multiple objects using the REST API
+
+
+
+
+Selecting content from objects
+Selecting content from objects using the SDK for Java
+Selecting content from objects using the REST API
+Selecting content from objects using other SDKs
+
+
+Restoring Archived Objects
+Restore an Archived Object Using the Amazon S3 Console
+Restore an Archived Object Using the AWS SDK for Java
+Restore an Archived Object Using the AWS SDK for .NET
+Restore an Archived Object Using the REST API
+
+
+Querying Archived Objects
+
+
+Amazon S3 analytics – Storage Class Analysis
+Amazon S3 Security
+Data protection in Amazon S3
+Internetwork traffic privacy
+Protecting data using encryption
+Protecting data using server-side encryption
+Protecting Data Using Server-Side Encryption with CMKs Stored in AWS Key Management Service (SSE-KMS)
+Specifying the AWS Key Management Service in Amazon S3 Using the AWS SDKs
+Specifying the AWS Key Management Service in Amazon S3 Using the REST API
+Protecting Data Using Server-Side Encryption with Amazon S3-Managed Encryption Keys (SSE-S3)
+Specifying Server-Side Encryption Using the AWS SDK for Java
+Specifying Server-Side Encryption Using the AWS SDK for .NET
+Specifying server-side encryption using the AWS SDK for PHP
+Specifying Server-Side Encryption Using the AWS SDK for Ruby
+Specifying Server-Side Encryption Using the REST API
+Specifying Server-Side Encryption Using the AWS Management Console
+Protecting data using server-side encryption with customer-provided encryption keys (SSE-C)
+Specifying server-side encryption with customer-provided encryption keys using the AWS SDK for Java
+Specifying server-side encryption with customer-provided encryption keys using the AWS SDK for .NET
+Specifying server-side encryption with customer-provided encryption keys using the REST API
+
+
+Protecting data using client-side encryption
+
+
+
+
+Identity and access management in Amazon S3
+Overview of managing access
+How Amazon S3 Authorizes a Request
+How Amazon S3 Authorizes a Request for a Bucket Operation
+How Amazon S3 Authorizes a Request for an Object Operation
+
+
+Guidelines for using the available access policy options
+Example walkthroughs: Managing access to your Amazon S3 resources
+Setting up the tools for the example walkthroughs
+Example 1: Bucket owner granting its users bucket permissions
+Example 2: Bucket owner granting cross-account bucket permissions
+Example 3: Bucket owner granting its users permissions to objects it does not own
+Example 4: Bucket owner granting cross-account permission to objects it does not own
+
+
+Using Bucket Policies and User Policies
+Policies and Permissions in Amazon S3
+Amazon S3 Resources
+Principals
+Amazon S3 Actions
+Amazon S3 Condition Keys
+Actions, resources, and condition keys for Amazon S3
+
+
+Bucket Policy Examples
+Example Bucket Policies for VPC Endpoints for Amazon S3
+
+
+User Policy Examples
+Walkthrough: Controlling access to a bucket with user policies
+
+
+
+
+Managing Access with ACLs
+Access Control List (ACL) Overview
+Managing ACLs
+Managing ACLs in the AWS Management Console
+Managing ACLs Using the AWS SDK for Java
+Managing ACLs Using the AWS SDK for .NET
+Managing ACLs Using the REST API
+
+
+
+
+Using Amazon S3 block public access
+
+
+Logging and monitoring in Amazon S3
+Compliance Validation for Amazon S3
+Amazon S3 inventory
+
+
+Resilience in Amazon S3
+Using versioning
+Examples of enabling bucket versioning
+Managing objects in a versioning-enabled bucket
+Adding objects to versioning-enabled buckets
+Listing objects in a versioning-enabled bucket
+Retrieving object versions
+Retrieving the metadata of an object version
+Deleting object versions
+Using MFA delete
+Working with delete markers
+Removing delete markers
+Transitioning object versions
+Restoring previous versions
+Versioned object permissions
+
+
+Managing objects in a versioning-suspended bucket
+Adding objects to versioning-suspended buckets
+Retrieving objects from versioning-suspended buckets
+Deleting objects from versioning-suspended buckets
+
+
+
+
+Locking objects using S3 Object Lock
+S3 Object Lock overview
+Managing Amazon S3 object locks
+
+
+
+
+Infrastructure security in Amazon S3
+Configuration and vulnerability analysis in Amazon S3
+Security Best Practices for Amazon S3
+Performing S3 Batch Operations
+The basics: S3 Batch Operations
+Creating an S3 Batch Operations job
+Granting permissions for Amazon S3 Batch Operations
+
+
+Operations
+PUT object copy
+Initiate restore object
+Invoking a Lambda function from Amazon S3 batch operations
+Put object ACL
+Put object tagging
+Managing S3 Object Lock retention dates
+Managing S3 Object Lock legal hold
+
+
+Managing S3 Batch Operations jobs
+S3 Batch Operations examples
+S3 Batch Operations examples using the AWS CLI
+S3 Batch Operations examples using the AWS SDK for Java
+Example: Using job tags to control permissions for S3 Batch Operations
+Example: Requesting S3 Batch Operations completion reports
+Example: Copying objects across AWS accounts using S3 Batch Operations
+Example: Tracking an S3 Batch Operations job in Amazon EventBridge through AWS CloudTrail
+
+
+Hosting a static website on Amazon S3
+Website endpoints
+Configuring a bucket as a static website using the AWS Management Console
+Enabling website hosting
+Configuring an index document
+Setting permissions for website access
+(Optional) Logging web traffic
+(Optional) configuring a custom error document
+(Optional) configuring a webpage redirect
+
+
+Programmatically configuring a bucket as a static website
+Managing websites with the AWS SDK for Java
+Managing websites with the AWS SDK for .NET
+Managing websites with the AWS SDK for PHP
+Managing websites with the REST API
+
+
+Example walkthroughs - hosting websites on Amazon S3
+Configuring a static website
+Configuring a static website using a custom domain registered with Route 53
+Speeding up your website with Amazon CloudFront
+Cleaning up your example resources
+
+
+
+
+Configuring Amazon S3 event notifications
+Walkthrough: Configure a bucket for notifications (SNS topic or SQS queue)
+Event message structure
+Replication
+What does Amazon S3 replicate?
+Overview of setting up replication
+Replication configuration overview
+Setting up permissions for replication
+
+
+Additional replication configurations
+Meet compliance requirements using S3 Replication Time Control (S3 RTC)
+Best practices and guidelines for S3 RTC
+
+
+Changing the replica owner
+Replicating objects created with server-side encryption (SSE) using encryption keys stored in AWS KMS
+
+
+Replication walkthroughs
+Example 1: Configuring replication when the source and destination buckets are owned by the same account
+Example 2: Configuring replication when the source and destination buckets are owned by different accounts
+Example 3: Changing the replica owner when the source and destination buckets are owned by different accounts
+Example 4: Replicating encrypted objects
+Example 5: S3 Replication Time Control (S3 RTC) configuration
+
+
+Replication status information
+Troubleshooting replication
+Replication additional considerations
+Request routing
+Request redirection and the REST API
+DNS considerations
+Best Practices Design Patterns: Optimizing Amazon S3 Performance
+Performance Guidelines for Amazon S3
+Performance Design Patterns for Amazon S3
+Monitoring Amazon S3
+Monitoring tools
+Monitoring metrics with Amazon CloudWatch
+Metrics configurations for buckets
+Logging with Amazon S3
+Logging Amazon S3 API calls using AWS CloudTrail
+Using AWS CloudTrail to identify Amazon S3 requests
+Using BitTorrent with Amazon S3
+How you are charged for BitTorrent delivery
+Using BitTorrent to retrieve objects stored in Amazon S3
+Publishing content using Amazon S3 and BitTorrent
+Handling REST and SOAP errors
+The REST error response
+Error response
+Error code
+Error message
+Further details
+
+
+
+
+The SOAP error response
+Amazon S3 error best practices
+Troubleshooting Amazon S3
+Amazon S3 server access logging
+Enabling logging using the console
+Enabling logging programmatically
+Amazon S3 Server Access Log Format
+Deleting Amazon S3 log files
+Using Amazon S3 access logs to identify requests
+Using the AWS SDKs, CLI, and Explorers
+Setting Up the AWS CLI
+Using the AWS SDK for Java
+Using the AWS SDK for .NET
+Using the AWS SDK for PHP and Running PHP Examples
+Using the AWS SDK for Ruby - Version 3
+Using the AWS SDK for Python (Boto)
+Using the AWS Mobile SDKs for iOS and Android
+Using the AWS Amplify JavaScript Library
+Appendices
+Appendix a: Using the SOAP API
+Common SOAP API elements
+Authenticating SOAP requests
+Setting access policy with SOAP
+
+
+Appendix b: Authenticating requests (AWS signature version 2)
+Authenticating requests using the REST API
+Signing and authenticating REST requests
+Browser-based uploads using POST (AWS signature version 2)
+HTML forms (AWS signature version 2)
+Upload examples (AWS signature version 2)
+POST with adobe flash
+
+
+
+
+Amazon S3 resources
+SQL Reference for Amazon S3 Select and S3 Glacier Select
+SELECT Command
+Data Types
+Operators
+Reserved Keywords
+SQL Functions
+Aggregate Functions (Amazon S3 Select only)
+Conditional Functions
+Conversion Functions
+Date Functions
+String Functions
+
+
+Document History
+AWS glossary

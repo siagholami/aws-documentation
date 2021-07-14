@@ -1,0 +1,33 @@
+AWS::ApplicationInsights::Application SubComponentConfigurationDetails
+The AWS::ApplicationInsights::Application SubComponentConfigurationDetails property type specifies the configuration settings of the sub-components.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[AlarmMetrics](#cfn-applicationinsights-application-subcomponentconfigurationdetails-alarmmetrics)" : [ AlarmMetric, ... ],
+  "[Logs](#cfn-applicationinsights-application-subcomponentconfigurationdetails-logs)" : [ Log, ... ],
+  "[WindowsEvents](#cfn-applicationinsights-application-subcomponentconfigurationdetails-windowsevents)" : [ WindowsEvent, ... ]
+}
+YAML
+[AlarmMetrics](#cfn-applicationinsights-application-subcomponentconfigurationdetails-alarmmetrics): 
+    - AlarmMetric
+  [Logs](#cfn-applicationinsights-application-subcomponentconfigurationdetails-logs): 
+    - Log
+  [WindowsEvents](#cfn-applicationinsights-application-subcomponentconfigurationdetails-windowsevents): 
+    - WindowsEvent
+Properties
+AlarmMetrics 
+A list of metrics to monitor for the component. All component types can use AlarmMetrics. 
+Required: No
+Type: List of AlarmMetric
+Update requires: No interruption
+Logs 
+A list of logs to monitor for the component. Only Amazon EC2 instances can use Logs.
+Required: No
+Type: List of Log
+Update requires: No interruption
+WindowsEvents 
+A list of Windows Events to monitor for the component. Only Amazon EC2 instances running on Windows can use WindowsEvents.
+Required: No
+Type: List of WindowsEvent
+Update requires: No interruption

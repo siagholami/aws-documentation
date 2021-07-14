@@ -1,0 +1,150 @@
+AWS::ApiGateway::VpcLink
+The AWS::ApiGateway::VpcLink resource creates an API Gateway VPC link for a REST API to access resources in an Amazon Virtual Private Cloud (VPC). For more information, see vpclink:create in the Amazon API Gateway REST API Reference.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ApiGateway::VpcLink",
+  "Properties" : {
+      "[Description](#cfn-apigateway-vpclink-description)" : String,
+      "[Name](#cfn-apigateway-vpclink-name)" : String,
+      "[TargetArns](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
+    }
+}
+YAML
+Type: AWS::ApiGateway::VpcLink
+Properties: 
+  [Description](#cfn-apigateway-vpclink-description): String
+  [Name](#cfn-apigateway-vpclink-name): String
+  [TargetArns](#cfn-apigateway-vpclink-targetarns): 
+    - String
+Properties
+Description 
+A description of the VPC link.
+Required: No
+Type: String
+Update requires: No interruption
+Name 
+A name for the VPC link.
+Required: Yes
+Type: String
+Update requires: No interruption
+TargetArns 
+The ARN of network load balancer of the VPC targeted by the VPC link. The network load balancer must be owned by the same AWS account of the API owner.
+Required: Yes
+Type: List of String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the VpcLink.
+For more information about using the Ref function, see Ref.
+Examples
+Create VPC link
+JSON
+{
+    "Parameters": {
+        "description": {
+            "Type": "String"
+        },
+        "name": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "MyVpcLink": {
+            "Type": "AWS::ApiGateway::VpcLink",
+            "Properties": {
+                "Description": {
+                    "Ref": "description"
+                },
+                "Name": {
+                    "Ref": "name"
+                },
+                "TargetArns": [
+                    {
+                        "Ref": "MyLoadBalancer"
+                    }
+                ]
+            }
+        },
+        "MyLoadBalancer": {
+            "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Properties": {
+                "Type": "network",
+                "Subnets": [
+                    {
+                        "Ref": "MySubnet"
+                    }
+                ]
+            }
+        },
+        "MySubnet": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "MyVPC"
+                },
+                "CidrBlock": "10.0.0.0/24"
+            }
+        },
+        "MyVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "10.0.0.0/16"
+            }
+        },
+        "MyInternetGateway": {
+            "Type": "AWS::EC2::InternetGateway"
+        },
+        "MyInternetGatewayAttachment": {
+            "Type": "AWS::EC2::VPCGatewayAttachment",
+            "Properties": {
+                "VpcId": {
+                    "Ref": "MyVPC"
+                },
+                "InternetGatewayId": {
+                    "Ref": "MyInternetGateway"
+                }
+            }
+        }
+    }
+}
+YAML
+Parameters:
+    description:
+        Type: String
+    name:
+        Type: String
+Resources:
+    MyVpcLink:
+        Type: AWS::ApiGateway::VpcLink
+        Properties:
+            Description: !Ref description
+            Name: !Ref name
+            TargetArns:
+               - !Ref MyLoadBalancer
+    MyLoadBalancer:
+            Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+            Properties:
+                Type: network
+                Subnets:
+                   - !Ref MySubnet
+    MySubnet:
+        Type: AWS::EC2::Subnet
+        Properties:
+            VpcId: !Ref MyVPC
+            CidrBlock: 10.0.0.0/24
+    MyVPC:
+        Type: AWS::EC2::VPC
+        Properties:
+            CidrBlock: 10.0.0.0/16
+    MyInternetGateway:
+        Type: AWS::EC2::InternetGateway
+    MyInternetGatewayAttachment:
+        Type: AWS::EC2::VPCGatewayAttachment
+        Properties:
+            VpcId: !Ref MyVPC
+            InternetGatewayId: !Ref MyInternetGateway
+See also
+
+vpclink:create in the Amazon API Gateway REST API Reference

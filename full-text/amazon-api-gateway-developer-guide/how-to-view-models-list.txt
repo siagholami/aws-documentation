@@ -1,0 +1,20 @@
+View a list of models in API Gateway
+Use the API Gateway console to view a list of models.
+Topics
+ Prerequisites
+ View a list of models with the API Gateway console
+Prerequisites
+
+You must have at least one model in API Gateway. Follow the instructions in Create a model.
+
+View a list of models with the API Gateway console
+
+
+Sign in to the API Gateway console at https://console.aws.amazon.com/apigateway.
+
+
+Choose a REST API.
+
+
+Choose Models.
+

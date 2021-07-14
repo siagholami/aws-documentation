@@ -1,0 +1,78 @@
+Managing user phone numbers
+You can use the Amazon Chime console to manage phone numbers for your Amazon Chime administrative account. For more information, see Managing phone numbers in Amazon Chime.
+The following tasks describe how to assign phone numbers to users, unassign phone numbers from users, and change calling and SMS permissions for users from the user profiles in your Amazon Chime administrative account.
+Note
+When you change a user's Amazon Chime Business Calling phone number or phone number permissions, we recommend contacting the user with their new phone number or permissions information. Users must also sign out of their Amazon Chime account and sign back in again before they can access their new phone number or permissions features.
+Assigning phone numbers to users
+Assign a phone number to a user from the Amazon Chime console.
+To assign a phone number to a user
+
+
+Open the Amazon Chime console at https://chime.aws.amazon.com/.
+
+
+For Accounts, choose the account name that the user belongs to.
+
+
+In the navigation pane, choose Users.
+
+
+Choose the full name of the user.
+
+
+On the user details page, for Actions, choose Assign phone number.
+
+
+Select the phone number to assign to the user.
+
+
+Choose Assign.
+
+
+The phone number is assigned to the user in your account. Calling and SMS permissions are turned off by default. For more information about editing these permissions, see Editing calling and SMS permissions.
+Editing calling and SMS permissions
+Change the calling and SMS permissions for a user from the Amazon Chime console.
+To edit a user's calling and SMS permissions
+
+
+Open the Amazon Chime console at https://chime.aws.amazon.com/.
+
+
+For Accounts, choose the account name that the user belongs to.
+
+
+In the navigation pane, choose Users.
+
+
+Choose the full name of the user.
+
+
+On the user details page, for Actions, choose Edit telephony permissions.
+
+
+Select the desired calling and SMS permissions for the user, and choose Save.
+
+
+For more information about how users can dial phone numbers and send text messages from Amazon Chime, see Dialing phone numbers with Amazon Chime in the Amazon Chime User Guide.
+Unassigning phone numbers from users
+Unassign a user's phone number using the Amazon Chime console.
+To unassign a phone number from a user
+
+
+Open the Amazon Chime console at https://chime.aws.amazon.com/.
+
+
+For Accounts, choose the account name that the user belongs to.
+
+
+In the navigation pane, choose Users.
+
+
+Choose the full name of the user.
+
+
+On the user details page, for Actions, choose Unassign phone number.
+
+
+Confirm the check box is selected, and choose Unassign.
+

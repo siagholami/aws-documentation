@@ -1,0 +1,130 @@
+Troubleshoot your Classic Load Balancer
+The following tables list the troubleshooting resources that you'll find useful as you work with a Classic Load Balancer.
+API errors 
+
+
+
+Error
+
+
+
+
+CertificateNotFound: Undefined
+
+
+OutofService: A transient error occurred
+
+
+
+HTTP errors 
+
+
+
+Error
+
+
+
+
+HTTP 400: BAD_REQUEST
+
+
+HTTP 405: METHOD_NOT_ALLOWED
+
+
+HTTP 408: Request timeout
+
+
+HTTP 502: Bad gateway
+
+
+HTTP 503: Service unavailable
+
+
+HTTP 504: Gateway timeout
+
+
+
+Response code metrics 
+
+
+
+Response code metric
+
+
+
+
+HTTPCode_ELB_4XX
+
+
+HTTPCode_ELB_5XX
+
+
+HTTPCode_Backend_2XX
+
+
+HTTPCode_Backend_3XX
+
+
+HTTPCode_Backend_4XX
+
+
+HTTPCode_Backend_5XX
+
+
+
+Health check issues 
+
+
+
+Issue
+
+
+
+
+Health check target page error
+
+
+Connection to the instances has timed out
+
+
+Public key authentication is failing
+
+
+Instance is not receiving traffic from the load balancer
+
+
+Ports on instance are not open
+
+
+Instances in an Auto Scaling group are failing the ELB health check
+
+
+
+Connectivity issues 
+
+
+
+Issue
+
+
+
+
+Clients cannot connect to the load balancer
+
+
+
+Instance registration issues 
+
+
+
+Issue
+
+
+
+
+Taking too long to register an EC2 instance
+
+
+Unable to register an instance launched from a paid AMI
+
+

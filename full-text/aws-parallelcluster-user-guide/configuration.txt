@@ -1,0 +1,29 @@
+Configuration
+Topics
+ Layout
+ [global] section
+ [aws] section
+ [aliases] section
+ [cluster] section
+ [compute_resource] section
+ [cw_log] section
+ [dcv] section
+ [ebs] section
+ [efs] section
+ [fsx] section
+ [queue] section
+ [raid] section
+ [scaling] section
+ [vpc] section
+ Example
+By default, AWS ParallelCluster uses the file ~/.parallelcluster/config for all configuration parameters. You can specify a custom configuration file by using the -c or --config command line option or the AWS_PCLUSTER_CONFIG_FILE environment variable.
+An example configuration file is installed with AWS ParallelCluster in the Python directory at site-packages/aws-parallelcluster/examples/config. The example configuration file is also available on GitHub, at https://github.com/aws/aws-parallelcluster/blob/v2.9.1/cli/pcluster/examples/config.
+Layout
+An AWS ParallelCluster configuration is defined in multiple sections.
+The following sections are required: [global] section and [aws] section.
+You also must include at least one [cluster] section and one [vpc] section.
+A section starts with the section name in brackets, followed by parameters and configuration.
+[global]
+cluster_template = default
+update_check = true
+sanity_check = true

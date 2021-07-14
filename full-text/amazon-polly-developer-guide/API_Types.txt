@@ -1,0 +1,15 @@
+Data Types
+The following data types are supported:
+
+
+Lexicon 
+
+
+LexiconAttributes 
+
+
+LexiconDescription 
+
+
+Voice 
+

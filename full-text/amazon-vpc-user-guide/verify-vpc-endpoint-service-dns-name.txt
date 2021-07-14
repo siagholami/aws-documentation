@@ -1,0 +1,26 @@
+Manually initiating the endpoint service private DNS name domain verification
+The service provider must prove that they own the private DNS name domain before consumers can use the private DNS name.
+
+[ Console ]
+To initiate the verification process of the private DNS name domain using the console
+
+
+Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+
+
+In the navigation pane, choose Endpoint Services.
+
+
+Select the endpoint service, and then choose Actions, Verify domain owernship for Private DNS Name. 
+
+
+Choose Verify.
+
+
+If the DNS settings are not correctly updated, the domain will display a status of failed on the Details tab. If this happens, complete the steps on the troubleshooting page at Troubleshooting common private DNS domain verification problems. 
+
+[ AWS CLI ]
+Use start-vpc-endpoint-service-private-dns-verification.
+
+[ API ]
+Use StartVpcEndpointServicePrivateDnsVerification.

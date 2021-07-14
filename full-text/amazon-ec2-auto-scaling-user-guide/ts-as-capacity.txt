@@ -1,0 +1,27 @@
+Troubleshooting Auto Scaling: Capacity limits
+This page provides information about issues with the capacity limits of your Auto Scaling group, potential causes, and the steps you can take to resolve the issues. For more information about Amazon EC2 Auto Scaling limits, see Amazon EC2 Auto Scaling service quotas.
+To retrieve an error message, see Retrieving an error message.
+If your EC2 instances fail to launch due to issues with the capacity limits of your Auto Scaling group, you might get one or more of the following error messages.
+Topics
+ We currently do not have sufficient  capacity in the Availability Zone you requested ()...
+  instance(s) are already running. Launching EC2 instance failed.
+We currently do not have sufficient  capacity in the Availability Zone you requested ()...
+
+Error message: We currently do not have sufficient  capacity in the Availability Zone you requested (). Our system will be working on provisioning additional capacity. You can currently get  capacity by not specifying an Availability Zone in your request or choosing . Launching EC2 instance failed.
+Cause: At this time, Auto Scaling cannot support your instance type in your requested Availability Zone. 
+Solution: 
+
+
+
+Create a new launch configuration by following the recommendations in the error message.
+
+
+Update your Auto Scaling group with the new launch configuration using the https://docs.aws.amazon.com/cli/latest/reference/autoscaling/update-auto-scaling-group.html command.
+
+
+ instance(s) are already running. Launching EC2 instance failed.
+
+Cause: The Auto Scaling group has reached the limit set by the DesiredCapacity parameter.
+Solution:
+Update your Auto Scaling group by providing a new value for the --desired-capacity parameter using the https://docs.aws.amazon.com/cli/latest/reference/autoscaling/update-auto-scaling-group.html command.
+If you've reached your limit for the number of EC2 instances, you can request an increase. For more information, see Amazon Elastic Compute Cloud endpoints and quotas.

@@ -1,0 +1,6 @@
+Amazon ECS Deployment types
+An Amazon ECS deployment type determines the deployment strategy that your service uses. There are three deployment types: rolling update, blue/green, and external.
+Topics
+ Rolling update
+ Blue/Green deployment with CodeDeploy
+ External Deployment

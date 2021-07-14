@@ -1,0 +1,39 @@
+ApiStateMachineAuth
+Configures authorization at the event level, for a specific API, path, and method.
+Syntax
+To declare this entity in your AWS Serverless Application Model (AWS SAM) template, use the following syntax.
+YAML
+[ApiKeyRequired](#sam-statemachine-apistatemachineauth-apikeyrequired): Boolean
+  [AuthorizationScopes](#sam-statemachine-apistatemachineauth-authorizationscopes): List
+  [Authorizer](#sam-statemachine-apistatemachineauth-authorizer): String
+  [ResourcePolicy](#sam-statemachine-apistatemachineauth-resourcepolicy): ResourcePolicyStatement
+Properties
+ApiKeyRequired 
+Requires an API key for this API, path, and method.
+Type: Boolean
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+AuthorizationScopes 
+The authorization scopes to apply to this API, path, and method.
+The scopes that you specify will override any scopes applied by the DefaultAuthorizer property if you have specified it.
+Type: List
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Authorizer 
+The Authorizer for a specific state machine.
+If you have specified a global authorizer for the API and want to make this state machine public, override the global authorizer by setting Authorizer to NONE.
+Type: String
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+ResourcePolicy 
+Configure the resource policy for this API and path.
+Type: ResourcePolicyStatement
+Required: No
+AWS CloudFormation compatibility: This property is unique to AWS SAM and doesn't have an AWS CloudFormation equivalent.
+Examples
+StateMachine-Auth
+The following example specifies authorization at the state machine level.
+YAML
+Auth:
+  ApiKeyRequired: true
+  Authorizer: NONE

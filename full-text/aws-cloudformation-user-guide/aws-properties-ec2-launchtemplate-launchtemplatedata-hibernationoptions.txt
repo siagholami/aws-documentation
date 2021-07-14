@@ -1,0 +1,18 @@
+AWS::EC2::LaunchTemplate HibernationOptions
+Specifies whether your instance is configured for hibernation. This parameter is valid only if the instance meets the hibernation prerequisites. For more information, see Hibernate Your Instance in the Amazon Elastic Compute Cloud User Guide.
+HibernationOptions is a property of AWS::EC2::LaunchTemplate LaunchTemplateData.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Configured](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions-configured)" : Boolean
+}
+YAML
+[Configured](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions-configured): Boolean
+Properties
+Configured 
+If you set this parameter to true, the instance is enabled for hibernation.
+Default: false 
+Required: No
+Type: Boolean
+Update requires: No interruption

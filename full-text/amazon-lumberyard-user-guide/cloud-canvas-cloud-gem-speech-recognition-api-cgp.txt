@@ -1,0 +1,6 @@
+Speech Recognition Cloud Gem Portal API
+You can use the Speech Recognition Cloud Gem Portal API to manage bots, intents, and slots. For more information about bots, intents, and slots, see Speech Recognition Cloud Gem.
+Topics
+ Bots
+ Intents
+ Slot Types

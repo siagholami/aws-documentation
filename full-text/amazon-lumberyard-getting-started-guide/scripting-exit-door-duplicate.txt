@@ -1,0 +1,21 @@
+Duplicating and Renaming the Door Entity
+Because you have already performed the tasks of setting up the entry door, there is no need to do it all again from the beginning to create your exit door. Instead, you'll duplicate the existing entry door and then modify its name and properties.
+To duplicate and rename the door entity
+
+
+In the Entity Outliner, select EntryDoor_Parent. To duplicate it, press CtrlD. 
+
+
+
+Use the Move tool to move the duplicated door entity to the other side of the maze. Align the door in the opening of the exit doorway. 
+
+
+
+In the Entity Outliner, select the duplicated entity. In the Entity Inspector, rename it ExitDoor_Parent.
+
+
+
+Press CtrlS to save your level.
+
+
+Next: Adding Lua Scripts to Exit Door

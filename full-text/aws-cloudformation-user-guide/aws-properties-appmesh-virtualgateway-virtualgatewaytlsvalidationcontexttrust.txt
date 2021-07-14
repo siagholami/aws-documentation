@@ -1,0 +1,25 @@
+AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContextTrust
+An object that represents a Transport Layer Security (TLS) validation context trust.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ACM](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-acm)" : VirtualGatewayTlsValidationContextAcmTrust,
+  "[File](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-file)" : VirtualGatewayTlsValidationContextFileTrust
+}
+YAML
+[ACM](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-acm): 
+    VirtualGatewayTlsValidationContextAcmTrust
+  [File](#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-file): 
+    VirtualGatewayTlsValidationContextFileTrust
+Properties
+ACM 
+A reference to an object that represents a TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
+Required: No
+Type: VirtualGatewayTlsValidationContextAcmTrust
+Update requires: No interruption
+File 
+An object that represents a TLS validation context trust for a local file.
+Required: No
+Type: VirtualGatewayTlsValidationContextFileTrust
+Update requires: No interruption

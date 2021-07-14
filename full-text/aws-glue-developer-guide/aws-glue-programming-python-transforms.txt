@@ -1,0 +1,21 @@
+AWS Glue PySpark Transforms Reference
+AWS Glue has created the following transform Classes to use in PySpark ETL operations.
+ GlueTransform Base Class
+ ApplyMapping Class
+ DropFields Class
+ DropNullFields Class
+ ErrorsAsDynamicFrame Class
+ Filter Class
+ Join Class
+ Map Class
+ MapToCollection Class
+ Relationalize Class
+ RenameField Class
+ ResolveChoice Class
+ SelectFields Class
+ SelectFromCollection Class
+ Spigot Class
+ SplitFields Class
+ SplitRows Class
+ Unbox Class
+ UnnestFrame Class

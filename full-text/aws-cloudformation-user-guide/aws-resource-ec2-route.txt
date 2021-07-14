@@ -1,0 +1,118 @@
+AWS::EC2::Route
+Specifies a route in a route table within a VPC.
+You must specify one of the following targets: EgressOnlyInternetGatewayId, GatewayId, InstanceId, NatGatewayId, NetworkInterfaceId, TransitGatewayId, or VpcPeeringConnectionId.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::EC2::Route",
+  "Properties" : {
+      "[DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock)" : String,
+      "[DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock)" : String,
+      "[EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid)" : String,
+      "[GatewayId](#cfn-ec2-route-gatewayid)" : String,
+      "[InstanceId](#cfn-ec2-route-instanceid)" : String,
+      "[NatGatewayId](#cfn-ec2-route-natgatewayid)" : String,
+      "[NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid)" : String,
+      "[RouteTableId](#cfn-ec2-route-routetableid)" : String,
+      "[TransitGatewayId](#cfn-ec2-route-transitgatewayid)" : String,
+      "[VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid)" : String
+    }
+}
+YAML
+Type: AWS::EC2::Route
+Properties: 
+  [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
+  [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
+  [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid): String
+  [GatewayId](#cfn-ec2-route-gatewayid): String
+  [InstanceId](#cfn-ec2-route-instanceid): String
+  [NatGatewayId](#cfn-ec2-route-natgatewayid): String
+  [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
+  [RouteTableId](#cfn-ec2-route-routetableid): String
+  [TransitGatewayId](#cfn-ec2-route-transitgatewayid): String
+  [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
+Properties
+DestinationCidrBlock 
+The IPv4 CIDR block used for the destination match.
+You must specify the DestinationCidrBlock or DestinationIpv6CidrBlock property.
+Required: No
+Type: String
+Update requires: Replacement
+DestinationIpv6CidrBlock 
+The IPv6 CIDR block used for the destination match.
+You must specify the DestinationCidrBlock or DestinationIpv6CidrBlock property.
+Required: No
+Type: String
+Update requires: No interruption
+EgressOnlyInternetGatewayId 
+The ID of the egress-only internet gateway.
+Required: No
+Type: String
+Update requires: No interruption
+GatewayId 
+The ID of an internet gateway or virtual private gateway attached to your VPC.
+Required: No
+Type: String
+Update requires: No interruption
+InstanceId 
+The ID of a NAT instance in your VPC.
+Required: No
+Type: String
+Update requires: No interruption
+NatGatewayId 
+The ID of a NAT gateway.
+Required: No
+Type: String
+Update requires: No interruption
+NetworkInterfaceId 
+The ID of the network interface.
+Required: No
+Type: String
+Update requires: No interruption
+RouteTableId 
+The ID of the route table. The routing table must be associated with the same VPC that the virtual private gateway is attached to. 
+Required: Yes
+Type: String
+Update requires: Replacement
+TransitGatewayId 
+The ID of a transit gateway.
+Required: No
+Type: String
+Update requires: No interruption
+VpcPeeringConnectionId 
+The ID of a VPC peering connection.
+Required: No
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ID of the route.
+For more information about using the Ref function, see Ref.
+Examples
+Add a Route
+The following example adds a route that is added to a gateway.
+JSON
+"myRoute" : {
+   "Type" : "AWS::EC2::Route",
+   "DependsOn" : "GatewayToInternet",
+   "Properties" : {
+      "RouteTableId" : { "Ref" : "myRouteTable" },
+      "DestinationCidrBlock" : "0.0.0.0/0",
+      "GatewayId" : { "Ref" : "myInternetGateway" }
+   }
+}
+YAML
+myRoute:
+    Type: AWS::EC2::Route
+    DependsOn: GatewayToInternet
+    Properties:
+       RouteTableId:
+         Ref: myRouteTable
+       DestinationCidrBlock: 0.0.0.0/0
+       GatewayId:
+         Ref: myInternetGateway
+See also
+
+CreateRoute in the Amazon EC2 API Reference
+Route Tables in the Amazon VPC User Guide

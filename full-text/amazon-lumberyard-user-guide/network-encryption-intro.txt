@@ -1,0 +1,57 @@
+Using Encryption
+GridMate uses the OpenSSL implementation of Datagram Transport Layer Security (DTLS) to support encryption of all UDP traffic sent between clients and servers. 
+Limitations
+GridMate's implementation of encryption has the following limitations: 
+  Only 64-bit Windows is supported. 
+  Only client-server topologies are supported. 
+Implementation Support
+GridMate supports encryption for the following implementations: 
+  Server and client authentication 
+  Self-signed certificates 
+  A single strong OpenSSL cipher 
+Cipher
+GridMate uses the following single OpenSSL cipher for all encrypted connections: ECDHE-RSA-AES256-GCM-SHA384. 
+This cipher uses the technologies listed in the following table: 
+Cipher Technologies in GridMate 
+
+
+
+Technology
+ Role
+ Description
+
+
+
+
+ECDHE
+Master key exchange
+Ephemeral Elliptic Curve Diffie-Hellman anonymous key agreement protocol
+
+
+RSA
+Peer authentication
+RSA algorithm used to authenticate client and server
+
+
+AES256
+Symmetric encryption cipher
+Advanced Encryption Standard that uses a 256-bit master key
+
+
+GCM
+Block cipher mode of operation
+Galois/Counter Mode authenticated encryption algorithm
+
+
+SHA384
+Hashing algorithm
+SHA-2 with a 384-bit digest size
+
+
+
+Topics
+ Limitations
+ Implementation Support
+ Cipher
+ Building with Encryption
+ Enabling Encryption

@@ -1,0 +1,14 @@
+Change an Amazon SageMaker Image
+With Amazon SageMaker Studio notebooks, you can change the notebook's SageMaker image and kernel from within the notebook.
+The following screenshot shows the menu from a Studio notebook. The current SageMaker image and kernel are displayed as Python 3 (Data Science), where Python 3 denotes the kernel and Data Science denotes the SageMaker image that contains the kernel. The color of the circle to the right of the SageMaker image indicates the idle or busy status of the kernel.
+
+To change a notebook's image
+
+
+Choose the kernel name.
+
+
+From the drop-down list, choose an image.
+
+
+For a list of available SageMaker images, see Available Amazon SageMaker Images. 

@@ -1,0 +1,16 @@
+AWS::MediaLive::InputSecurityGroup InputWhitelistRuleCidr
+An IPv4 CIDR range to include in this input security group.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Cidr](#cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr)" : String
+}
+YAML
+[Cidr](#cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr): String
+Properties
+Cidr 
+An IPv4 CIDR range to include in this input security group.
+Required: No
+Type: String
+Update requires: No interruption

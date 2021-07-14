@@ -1,0 +1,32 @@
+Availability Zones for your Application Load Balancer
+You can enable or disable the Availability Zones for your load balancer at any time. After you enable an Availability Zone, the load balancer starts routing requests to the registered targets in that Availability Zone. Your load balancer is most effective if you ensure that each enabled Availability Zone has at least one registered target.
+After you disable an Availability Zone, the targets in that Availability Zone remain registered with the load balancer, but the load balancer will not route requests to them.
+To update Availability Zones using the console
+
+
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+
+On the navigation pane, under LOAD BALANCING, choose Load Balancers.
+
+
+Select the load balancer.
+
+
+On the Description tab, under Basic Configuration, choose Edit Availability Zones.
+
+
+To enable a zone, select the check box for that zone and select one subnet. If there is only one subnet for that zone, it is selected. If there is more than one subnet for that zone, select one of the subnets.
+
+
+To change the subnet for an enabled Availability Zone, choose Change subnet and select one of the other subnets.
+
+
+To remove an Availability Zone, clear the check box for that Availability Zone.
+
+
+Choose Save.
+
+
+To update Availability Zones using the AWS CLI
+Use the set-subnets command.

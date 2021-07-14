@@ -1,0 +1,25 @@
+Assign a security profile to a user
+Required permissions to assign security profiles
+Before you can assign a security profile to a user, you must be logged in with an Amazon Connect account that has the Users - Edit permission. Or, if you're creating the user's account for the first time, you need Users - Create permission. 
+
+By default, the Amazon Connect Admin security profile has these permissions.
+How to assign security profiles
+
+
+Review Best practices for security profiles.
+
+
+Log in to your contact center using your access URL (https://instance name.awsapps.com/connect/login).
+
+
+Choose Users, User management.
+
+
+Select one or more users and choose Edit.
+
+
+For Security Profiles, add or remove security profiles as needed. To add a security profile, put your cursor in the field and select the security profile from the list. To remove a security profile, click the x next to its name. 
+
+
+Choose Save.
+

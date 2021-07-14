@@ -1,0 +1,7 @@
+API Reference
+This section provides documentation for the Amazon Forecast API operations.
+Topics
+ Actions
+ Data Types
+ Common Errors
+ Common Parameters

@@ -1,0 +1,70 @@
+Tutorial: Create a Prepared Data Set
+Use the following procedure to prepare the Marketing data set and create an analysis. If you don't see the Web and Social Media Analytics sample data already in Amazon QuickSight, you can download it from http://quicksightsampledata.s3.amazonaws.com/MarketingData_QuickSightSample.csv.
+
+
+On the Amazon QuickSight start page, choose Manage data.
+
+
+
+On the Your data sets page, choose New data set.
+
+
+
+In the FROM EXISTING DATA SOURCES section of the Create a Data Set page, choose the Web and Social Media Analytics Amazon S3 data source and then choose Edit/Preview data.
+
+
+Amazon QuickSight opens the data preparation page.
+
+Name the data set.
+
+Highlight Group 1 in the data set name box, and type Marketing Sample.
+
+
+Change the field selection to remove some fields we won't be working with.
+
+In the Fields pane, unselect the Twitter followers cumulative and Mailing list cumulative fields.
+
+
+Rename a field.
+
+In the data preview pane, scroll to the Website Pageviews field and choose the edit icon.
+
+Highlight the field name, type Website page views, and then choose Apply.
+
+
+
+Add a calculated field that substitutes a text string for any 0-length string value in the Events field.
+
+
+On the data preparation page, expand the Fields pane, and then choose New Field.
+
+
+
+In the New calculated field pane, highlight the value in Calculated field name, and then type populated_event.
+
+
+
+Choose the ifelse function from the Function list and then choose Add. This adds the function to the calculated field formula.
+
+
+
+Scroll down in the Field list, choose the Events field, and then choose Add. This adds the field to the calculated field formula.
+
+
+
+In Formula, type the additional functions and parameters required, highlighted following:
+
+
+
+Choose Create.
+
+The new calculated field is created, and appears in the Calculated fields section at the top of the Fields pane.
+
+
+
+Choose Save.
+
+
+
+Next Steps
+Create an analysis by using the procedure in Tutorial: Create an Analysis.

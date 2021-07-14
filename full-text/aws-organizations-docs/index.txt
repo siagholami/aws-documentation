@@ -1,0 +1,129 @@
+AWS Organizations User Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What is AWS Organizations?
+AWS services that you can use with AWS Organizations
+Getting started with AWS Organizations
+AWS Organizations terminology and concepts
+AWS Organizations tutorials
+Tutorial: Creating and configuring an organization
+Tutorial: Monitor important changes to your organization with CloudWatch Events
+Creating and managing an organization
+Creating an organization
+Enabling all features in your organization
+Viewing details about your organization
+Delete the organization by removing the master account
+Managing the AWS accounts in your organization
+Inviting an AWS account to join your organization
+Creating an AWS account in your organization
+Accessing and administering the member accounts in your organization
+Removing a member account from your organization
+Closing an AWS account
+Managing organizational units (OUs)
+Managing AWS Organizations policies
+Enabling and disabling policy types
+Getting information about your organization's policies
+Understanding policy inheritance
+Inheritance for service control policies
+Policy syntax and inheritance for management policy types
+
+
+Service control policies
+Creating and updating SCPs
+Attaching SCPs
+How SCPs work
+Strategies for using SCPs
+SCP syntax
+Example service control policies
+
+
+AI services opt-out policies
+Creating, updating, and deleting AI services opt-out policies
+Attaching and detaching AI services opt-out policies
+Viewing effective AI services opt-out policies
+AI services opt-out policy syntax and examples
+Using the AWS CLI to manage AI services opt-out policies
+
+
+Backup policies
+Prerequisites and permissions for managing backup policies
+Best practices for using backup policies
+Creating, updating, and deleting backup policies
+Attaching and detaching backup policies
+Viewing effective backup policies
+Backup policy syntax and examples
+Using backup policies in the AWS CLI
+
+
+Tag policies
+Prerequisites and permissions for managing tag policies
+Best practices for using tag policies
+Getting started with tag policies
+Creating and updating tag policies
+Attaching tag policies
+
+
+Viewing effective tag policies
+Using CloudWatch Events to monitor noncompliant tags
+Understanding enforcement
+Services and resource types that support enforcement
+
+
+Tag policy syntax and examples
+Using tag policies in the AWS CLI
+Supported Regions
+
+
+Tagging AWS Organizations resources
+Enabling trusted access with other AWS services
+Services that support trusted access with your organization
+AWS Artifact and AWS Organizations
+AWS Backup and AWS Organizations
+AWS CloudFormation StackSets and AWS Organizations
+AWS CloudTrail and AWS Organizations
+AWS Compute Optimizer and AWS Organizations
+AWS Config and AWS Organizations
+AWS Directory Service and AWS Organizations
+AWS Firewall Manager and AWS Organizations
+Amazon GuardDuty and AWS Organizations
+AWS Health and AWS Organizations
+AWS License Manager and AWS Organizations
+Amazon Macie and AWS Organizations
+AWS RAM and AWS Organizations
+AWS Service Catalog and AWS Organizations
+Service quotas and AWS Organizations
+AWS Single Sign-On and AWS Organizations
+AWS Systems Manager and AWS Organizations
+AWS Trusted Advisor and AWS Organizations
+Tag policies and AWS Organizations
+
+
+Security in AWS Organizations
+AWS Identity and Access Management in AWS Organizations
+Managing access permissions for your AWS organization
+
+
+Logging and monitoring in AWS Organizations
+Compliance validation for AWS Organizations
+Resilience in AWS Organizations
+Infrastructure security in AWS Organizations
+AWS Organizations reference
+Quotas for AWS Organizations
+AWS managed policies available for use with AWS Organizations
+Troubleshooting AWS Organizations
+Troubleshooting general issues
+Troubleshooting AWS Organizations policies
+Calling the API by making HTTP Query requests
+Document history for AWS Organizations
+AWS glossary

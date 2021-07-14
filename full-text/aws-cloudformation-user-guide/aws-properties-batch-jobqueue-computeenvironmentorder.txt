@@ -1,0 +1,23 @@
+AWS::Batch::JobQueue ComputeEnvironmentOrder
+The order in which compute environments are tried for job placement within a queue. Compute environments are tried in ascending order. For example, if two compute environments are associated with a job queue, the compute environment with a lower order integer value is tried for job placement first.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment)" : String,
+  "[Order](#cfn-batch-jobqueue-computeenvironmentorder-order)" : Integer
+}
+YAML
+[ComputeEnvironment](#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): String
+  [Order](#cfn-batch-jobqueue-computeenvironmentorder-order): Integer
+Properties
+ComputeEnvironment 
+The Amazon Resource Name (ARN) of the compute environment.
+Required: Yes
+Type: String
+Update requires: No interruption
+Order 
+The order of the compute environment.
+Required: Yes
+Type: Integer
+Update requires: No interruption

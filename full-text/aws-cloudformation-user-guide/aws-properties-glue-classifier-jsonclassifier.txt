@@ -1,0 +1,26 @@
+AWS::Glue::Classifier JsonClassifier
+A classifier for JSON content.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[JsonPath](#cfn-glue-classifier-jsonclassifier-jsonpath)" : String,
+  "[Name](#cfn-glue-classifier-jsonclassifier-name)" : String
+}
+YAML
+[JsonPath](#cfn-glue-classifier-jsonclassifier-jsonpath): String
+  [Name](#cfn-glue-classifier-jsonclassifier-name): String
+Properties
+JsonPath 
+A JsonPath string defining the JSON data for the classifier to classify. AWS Glue supports a subset of JsonPath, as described in Writing JsonPath Custom Classifiers.
+Required: Yes
+Type: String
+Update requires: No interruption
+Name 
+The name of the classifier.
+Required: No
+Type: String
+Update requires: Replacement
+See also
+
+JsonClassifier Structure in the AWS Glue Developer Guide 

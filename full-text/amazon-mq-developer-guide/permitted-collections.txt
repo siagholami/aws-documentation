@@ -1,0 +1,4 @@
+Elements, Child Collection Elements, and Their Child Elements Permitted in Amazon MQ Configurations
+The following is a detailed listing of the elements, child collection elements, and their child elements permitted in Amazon MQ configurations. For more information, see XML Configuration in the Apache ActiveMQ documentation.
+Use the scroll bars to see the rest of the table.
+[See the AWS documentation website for more details]

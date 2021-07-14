@@ -1,0 +1,67 @@
+Document history for AWS SMS
+The following table describes the releases of AWS SMS.
+
+
+
+Change
+Description
+Date
+
+
+
+
+Application validation
+Added support for validating applications before launching them. With application validation, you run validation scripts on your EC2 instances using AWS Systems Manager. With instance validation, you can run a configuration script when your EC2 instance first boots using Amazon EC2 user data.
+August 10, 2020
+
+
+Azure support
+Added support for Microsoft Azure.
+April 18, 2019
+
+
+Integration with AWS Migration Hub
+Added support for importing and migrating applications discovered by Migration Hub.
+February 22, 2019
+
+
+Application migration
+Added support for migrating groups of servers organized as applications, and or automated application launching using CloudFormation.
+December 5, 2018
+
+
+Larger disk size support
+Added support for VMs with disk-size larger than 4 TB using the S3 Manifest functionality.
+June 11, 2018
+
+
+Migrate multiple servers with single connector
+Added support for migrating VMs from multiple Hyper-V servers using a single connector.
+April 25, 2018
+
+
+Hyper-V support
+Added support for Microsoft’s Hyper-V environment.
+December 14, 2017
+
+
+Upload resilience
+Improved resilience in disk uploads.
+November 8, 2017
+
+
+Enhanced upload speeds
+Improved VM disk upload speeds.
+August 29, 2017
+
+
+vCenter 5.1; one-time migration; error messages; security
+Added support for vCenter 5.1. Support for one-time migration. Improved error messages and security-related bug fixes.
+May 5, 2017
+
+
+Initial release
+Server Migration Connector virtual appliance for VMware environments. AWS Server Migration Service console to manage VM migrations and SMS replication tasks using a graphical interface. AWS Server Migration Service CLI to manage VM migrations and SMS replication tasks using the command line.
+November 3, 2016
+
+

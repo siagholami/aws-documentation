@@ -1,0 +1,7 @@
+Common Tasks
+The topics in this section provide practical knowledge about common tasks associated with Script Canvas, including best practices, advice on troubleshooting, and use of the debugger.
+Topics
+ Adding Scripts to Entities
+ Script Canvas Best Practices
+ Script Canvas Errors and Troubleshooting
+ Script Canvas Debugging

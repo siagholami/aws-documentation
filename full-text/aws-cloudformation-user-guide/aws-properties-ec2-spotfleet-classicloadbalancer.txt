@@ -1,0 +1,16 @@
+AWS::EC2::SpotFleet ClassicLoadBalancer
+Specifies a Classic Load Balancer.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Name](#cfn-ec2-spotfleet-classicloadbalancer-name)" : String
+}
+YAML
+[Name](#cfn-ec2-spotfleet-classicloadbalancer-name): String
+Properties
+Name 
+The name of the load balancer.
+Required: Yes
+Type: String
+Update requires: No interruption

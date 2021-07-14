@@ -1,0 +1,7 @@
+Creating a Volume Gateway
+In this section, you can find instructions about how to create and use a volume gateway.
+Topics
+ Creating a Gateway
+ Creating a Volume
+ Using Your Volume
+ Backing Up Your Volumes

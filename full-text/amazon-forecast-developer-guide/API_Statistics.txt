@@ -1,0 +1,45 @@
+Statistics
+Provides statistics for each data field imported into to an Amazon Forecast dataset with the CreateDatasetImportJob operation.
+Contents
+Avg 
+For a numeric field, the average value in the field.
+Type: Double
+Required: No
+Count 
+The number of values in the field.
+Type: Integer
+Required: No
+CountDistinct 
+The number of distinct values in the field.
+Type: Integer
+Required: No
+CountNan 
+The number of NAN (not a number) values in the field.
+Type: Integer
+Required: No
+CountNull 
+The number of null values in the field.
+Type: Integer
+Required: No
+Max 
+For a numeric field, the maximum value in the field.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\_]$ 
+Required: No
+Min 
+For a numeric field, the minimum value in the field.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\_]$ 
+Required: No
+Stddev 
+For a numeric field, the standard deviation.
+Type: Double
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

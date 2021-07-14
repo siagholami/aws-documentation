@@ -1,0 +1,23 @@
+AWS::Glue::Crawler SchemaChangePolicy
+A policy that specifies update and deletion behaviors for the crawler.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[DeleteBehavior](#cfn-glue-crawler-schemachangepolicy-deletebehavior)" : String,
+  "[UpdateBehavior](#cfn-glue-crawler-schemachangepolicy-updatebehavior)" : String
+}
+YAML
+[DeleteBehavior](#cfn-glue-crawler-schemachangepolicy-deletebehavior): String
+  [UpdateBehavior](#cfn-glue-crawler-schemachangepolicy-updatebehavior): String
+Properties
+DeleteBehavior 
+The deletion behavior when the crawler finds a deleted object.
+Required: No
+Type: String
+Update requires: No interruption
+UpdateBehavior 
+The update behavior when the crawler finds a changed schema.
+Required: No
+Type: String
+Update requires: No interruption

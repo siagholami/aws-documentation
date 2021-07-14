@@ -1,0 +1,12 @@
+Sample Projects
+In the AWS Step Functions console, you can choose one of the following state machine sample projects to automatically create the state machine Code, Visual Workflow, and all related AWS resources for the project. 
+Each of the sample projects provisions a fully functional state machine, and creates the related resources for it to run. When you create a sample project, Step Functions uses AWS CloudFormation to create the related resources referenced by the state machine.
+Topics
+ Manage a Batch Job (AWS Batch, Amazon SNS)
+ Manage a Container Task (Amazon ECS, Amazon SNS)
+ Transfer Data Records (Lambda, DynamoDB, Amazon SQS)
+ Poll for Job Status (Lambda, AWS Batch)
+ Task Timer
+ Callback Pattern Example
+ Start a Workflow Within a Workflow (AWS Step Functions, AWS Lambda)
+ Dynamically Process Data with a Map State

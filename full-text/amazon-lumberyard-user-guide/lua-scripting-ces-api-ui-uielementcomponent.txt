@@ -1,0 +1,79 @@
+UIElementComponent
+Provides functionality for UI elements.
+UiElementBus
+Services messages for the UiElementComponent.
+DestroyElement
+Deletes this element and removes it from its parent element.
+Syntax
+void DestroyElement()
+FindChildByName
+Returns the first immediate child with the specified name. Returns AZ::InvalidEntityId if no match is found.
+Syntax
+AZ::EntityId FindChildByName(const AZStd::string & name)
+FindDescendantByName
+Returns the first descendent entity with the specified name. Returns AZ::InvalidEntityId if no match is found.
+Syntax
+AZ::EntityId FindDescendantByName(const AZStd::string & name)
+GetCanvas
+Returns the canvas that contains this element. Returns AZ::InvalidEntityId if the element has no canvas.
+Syntax
+AZ::EntityId GetCanvas()
+GetChild
+Returns the child entity ID at the specified index. The specified index must be less than GetNumChildElements().
+Syntax
+AZ::EntityId GetChild(int index)
+GetChildren
+Returns the child entity IDs of this element.
+Syntax
+AZStd::vector<AZ::EntityId> GetChildren()
+GetIndexOfChildByEntityId
+Returns the index of the specified child element.
+Syntax
+int GetIndexOfChildByEntityId(AZ::EntityId childId)
+GetName
+Returns the name of this element.
+Syntax
+AZStd::string GetName()
+GetNumChildElements
+Returns the number of child elements of this element.
+Syntax
+int GetNumChildElements()
+GetParent
+Returns the parent entity ID of this element. Returns an invalid entity ID if the element has no parent.
+Syntax
+AZ::EntityId GetParent()
+IsAncestor
+Returns whether a specified element is an ancestor of this element.
+Syntax
+bool IsAncestor(AZ::EntityId id)
+IsEnabled
+Returns true if the element is enabled; false otherwise.
+Syntax
+bool IsEnabled()
+Reparent
+Makes this element the child of a different parent. The element is removed from its current parent and added as a child of the parent specified by newParent. 
+Syntax
+void Reparent(AZ::EntityId newParent, AZ::EntityId insertBefore)
+
+
+
+
+Parameter
+Description
+
+
+
+
+newParent
+Specifies the entity ID of the new parent element. If newParent is invalid, the element becomes a top-level element (that is, the canvas becomes the parent).
+
+
+insertBefore
+Child element of the new parent before which to insert this element. If null, the element is put at the end of the child list.
+
+
+
+SetIsEnabled
+Sets the enabled state of the element.
+Syntax
+void SetIsEnabled(bool isEnabled)

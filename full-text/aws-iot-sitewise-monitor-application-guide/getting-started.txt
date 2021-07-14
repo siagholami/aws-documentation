@@ -1,0 +1,55 @@
+Getting started with AWS IoT SiteWise Monitor
+You use AWS IoT SiteWise Monitor portals to view, analyze, and share access to your operational data. Each AWS IoT SiteWise Monitor portal is a managed web application that is created from the AWS IoT SiteWise console. When you are given access to a portal, you receive an email that contains a link to the portal. The topics in this section help you understand what you can do in the portal.
+Depending on your role, you might have different tasks to perform.
+Roles and tasks for AWS IoT SiteWise Monitor 
+
+
+
+Role
+Tasks
+Getting started
+
+
+
+
+Portal administrator
+[See the AWS documentation website for more details]
+Getting started as an AWS IoT SiteWise Monitor portal administrator
+
+
+Project owner
+[See the AWS documentation website for more details]
+Getting started as an AWS IoT SiteWise Monitor project owner
+
+
+Project viewer
+[See the AWS documentation website for more details]
+Getting started as an AWS IoT SiteWise Monitor project viewer
+
+
+
+If you don't have an AWS IoT SiteWise Monitor portal, contact your AWS administrator. For information about how to create a portal, see Getting started with AWS IoT SiteWise Monitor in the AWS IoT SiteWise User Guide.
+Signing in to an AWS IoT SiteWise Monitor portal
+Whether you're a portal administrator, a project owner, or a viewer, your first step is to log in to the AWS IoT SiteWise Monitor application using your enterprise email and password. Your credentials are validated using AWS Single Sign-On to ensure that only authorized users can access your company assets.
+To sign in to the AWS IoT SiteWise Monitor portal
+
+
+Open the email that contains the link to the portal and open the web portal.
+
+
+In the dialog box, for Email, enter your enterprise email address.
+
+
+For Password, enter your enterprise password.
+
+
+Choose Sign In.
+
+
+AWS SSO validates your credentials and, if valid, you can access the portal to perform tasks permitted for your role.
+Navigation in the AWS IoT SiteWise Monitor portal
+You use the left navigation bar to navigate within the AWS IoT SiteWise Monitor portal.
+
+When the bar is collapsed, only the icons are shown.
+Note
+Only portal administrators see all four icons.

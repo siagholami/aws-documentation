@@ -1,0 +1,21 @@
+Getting started with AWS IoT SiteWise
+With AWS IoT SiteWise, you can collect, organize, and analyze your data.
+AWS IoT SiteWise provides a demo that you can use to explore the service without configuring a real data source. For more information, see Using the AWS IoT SiteWise demo.
+You can complete the following tutorials to explore certain features of AWS IoT SiteWise:
+ Ingesting data to AWS IoT SiteWise from AWS IoT things
+ Visualizing and sharing wind farm data in AWS IoT SiteWise Monitor
+ Publishing property value updates to Amazon DynamoDB
+See the following topics to learn more about AWS IoT SiteWise:
+ Ingesting data to AWS IoT SiteWise
+ Modeling industrial assets
+ Monitoring data with AWS IoT SiteWise Monitor
+ Querying asset property values and aggregates
+ Interacting with other AWS services
+Requirements
+You must have an AWS account to get started with AWS IoT SiteWise. If you don't have one, see Setting up an AWS account.
+AWS IoT SiteWise is available in the following AWS Regions:
+ US East (N. Virginia) – us-east-1
+ US West (Oregon) – us-west-2
+ Europe (Frankfurt) – eu-central-1
+ Europe (Ireland) – eu-west-1
+Use the Region selector in the AWS Management Console to switch to one of these Regions.

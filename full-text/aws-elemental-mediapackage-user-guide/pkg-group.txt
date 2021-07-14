@@ -1,0 +1,8 @@
+Working with Packaging Groups in AWS Elemental MediaPackage
+A packaging group holds one or more packaging configurations. When a packaging group is associated with an asset, the packaging configurations define the outputs that are available from the asset. You can associate multiple assets with one packaging group. This enables you to apply the same configurations to multiple assets.
+Topics
+ Creating a Packaging Group
+ Viewing Packaging Group Details
+ Editing a Packaging Group
+ Deleting a Packaging Group
+ Adding a Packaging Configuration to a Packaging Group

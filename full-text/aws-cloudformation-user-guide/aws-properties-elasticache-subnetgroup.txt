@@ -1,0 +1,69 @@
+AWS::ElastiCache::SubnetGroup
+Creates a cache subnet group. For more information about cache subnet groups, go to Cache Subnet Groups in the Amazon ElastiCache User Guide or go to CreateCacheSubnetGroup in the Amazon ElastiCache API Reference Guide. 
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ElastiCache::SubnetGroup",
+  "Properties" : {
+      "[CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname)" : String,
+      "[Description](#cfn-elasticache-subnetgroup-description)" : String,
+      "[SubnetIds](#cfn-elasticache-subnetgroup-subnetids)" : [ String, ... ]
+    }
+}
+YAML
+Type: AWS::ElastiCache::SubnetGroup
+Properties: 
+  [CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname): String
+  [Description](#cfn-elasticache-subnetgroup-description): String
+  [SubnetIds](#cfn-elasticache-subnetgroup-subnetids): 
+    - String
+Properties
+CacheSubnetGroupName 
+The name for the cache subnet group. This value is stored as a lowercase string.
+Constraints: Must contain no more than 255 alphanumeric characters or hyphens.
+Example: mysubnetgroup 
+Required: No
+Type: String
+Update requires: Replacement
+Description 
+The description for the cache subnet group.
+Required: Yes
+Type: String
+Update requires: No interruption
+SubnetIds 
+The EC2 subnet IDs for the cache subnet group.
+Required: Yes
+Type: List of String
+Update requires: No interruption
+Return values
+Ref
+When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the resource name.
+For more information about using the Ref function, see Ref. 
+Examples
+
+JSON
+{
+    "SubnetGroup": {
+        "Type": "AWS::ElastiCache::SubnetGroup",
+        "Properties": {
+            "Description": "Cache Subnet Group",
+            "SubnetIds": [
+                {
+                    "Ref": "Subnet1"
+                },
+                {
+                    "Ref": "Subnet2"
+                }
+            ]
+        }
+    }
+}
+YAML
+SubnetGroup:
+  Type: 'AWS::ElastiCache::SubnetGroup'
+  Properties:
+    Description: Cache Subnet Group
+    SubnetIds:
+      - !Ref Subnet1
+      - !Ref Subnet2

@@ -1,0 +1,36 @@
+Creating Nested Slices
+A nested slice contains instances of other slices. Nested slices can store their own overrides for component and entity properties. They can also contain their own entities. 
+For example, suppose that you have a slice called wheel.slice, composed of one wheel. You have another slice called motorcyle_body.slice, composed of an engine, seat, and frame. You create a new slice called motorcycle.slice and add two instances of the wheel slice and one instance of the motorcycle body slice, and then save the changes. The body and wheel slices are now nested in the motorcycle slice.
+To create a nested slice
+
+
+In the Entity Outliner, drag one or more slices onto another slice. The slices become child entities of the slice you dropped them on.
+
+
+Right-click the parent entity and choose Create slice.
+
+
+The Create Slice dialog box will appear giving you a choice of creating a fresh slice or a nested slice. Choose Nested Slice.
+
+
+
+Enter a file name for the slice and then save.
+
+
+When you create a slice hierarchy, you can select the root slice for that slice. This is useful if you have a large slice hierarchy and you want to quickly navigate between the slice instances.
+To move up or down the slice hierarchy
+
+
+In the Entity Outliner, right-click a child entity in the slice hierarchy and choose Select slice root.
+
+
+In the dialog menu, view the slice hierarchy for the selected slice.
+
+
+
+Choose a slice to select that slice in the Entity Outliner.
+
+
+Note
+To select the top slice in the hierarchy, select a slice and press ShiftR.
+To select the next parent slice up, press R.

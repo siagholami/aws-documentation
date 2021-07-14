@@ -1,0 +1,45 @@
+AWS::IoTAnalytics::Pipeline Math
+An activity that computes an arithmetic expression using the message's attributes.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[Attribute](#cfn-iotanalytics-pipeline-math-attribute)" : String,
+  "[Math](#cfn-iotanalytics-pipeline-math-math)" : String,
+  "[Name](#cfn-iotanalytics-pipeline-math-name)" : String,
+  "[Next](#cfn-iotanalytics-pipeline-math-next)" : String
+}
+YAML
+[Attribute](#cfn-iotanalytics-pipeline-math-attribute): String
+  [Math](#cfn-iotanalytics-pipeline-math-math): String
+  [Name](#cfn-iotanalytics-pipeline-math-name): String
+  [Next](#cfn-iotanalytics-pipeline-math-next): String
+Properties
+Attribute 
+The name of the attribute that contains the result of the math operation.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Update requires: No interruption
+Math 
+An expression that uses one or more existing attributes and must return an integer value.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 256
+Update requires: No interruption
+Name 
+The name of the 'math' activity.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption
+Next 
+The next activity in the pipeline.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 128
+Update requires: No interruption

@@ -1,0 +1,286 @@
+AWS Directory Service Administration Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+What Is AWS Directory Service?
+Setting Up AWS Directory Service
+Sign Up for an AWS Account
+Create an IAM User
+AWS Managed Microsoft AD
+Getting Started with AWS Managed Microsoft AD
+AWS Managed Microsoft AD Prerequisites
+Create Your AWS Managed Microsoft AD directory
+What Gets Created
+Admin Account
+
+
+Key Concepts for AWS Managed Microsoft AD
+Active Directory Schema
+Patching and Maintenance for AWS Managed Microsoft AD
+Group Managed Service Accounts
+Kerberos Constrained Delegation
+
+
+Use Cases for AWS Managed Microsoft AD
+Use Case 1: Sign In to AWS Applications and Services with AD Credentials
+Use Case 2: Manage Amazon EC2 Instances
+Use Case 3: Provide Directory Services to Your AD-Aware Workloads
+Use Case 4: SSO to Office 365 and Other Cloud Applications
+Use Case 5: Extend Your On-Premises AD to the AWS Cloud
+Use Case 6: Share Your Directory to Seamlessly Join Amazon EC2 Instances to a Domain Across AWS Accounts
+
+
+How To Administer AWS Managed Microsoft AD
+Secure Your AWS Managed Microsoft AD Directory
+Manage Password Policies for AWS Managed Microsoft AD
+Supported Policy Settings
+Delegate Who Can Manage Your Password Policies
+Assign Password Policies to Your Users
+
+
+Enable Multi-Factor Authentication for AWS Managed Microsoft AD
+Enable Secure LDAP (LDAPS)
+Enable Server-Side LDAPS Using AWS Managed Microsoft AD
+Enable Client-Side LDAPS Using AWS Managed Microsoft AD
+
+
+Manage Compliance for AWS Managed Microsoft AD
+Enhance Your AWS Managed Microsoft AD Network Security Configuration
+
+
+Monitor Your AWS Managed Microsoft AD
+Understanding Your Directory Status
+Configure Directory Status Notifications
+Review Your AWS Managed Microsoft AD Directory Logs
+Enable Log Forwarding
+
+
+Share Your Directory
+Key Directory Sharing Concepts
+Tutorial: Sharing Your AWS Managed Microsoft AD Directory for Seamless EC2 Domain-Join
+Step 1: Set Up Your Networking Environment
+Step 2: Share Your Directory
+Step 3: Accept Shared Directory Invite (Optional)
+Step 4: Test Seamlessly Joining an EC2 Instance for Windows Server to a Domain
+
+
+Unshare Your Directory
+
+
+Join an EC2 Instance to Your AWS Managed Microsoft AD Directory
+Seamlessly Join a Windows EC2 Instance
+Manually Join a Windows Instance
+Seamlessly Join a Linux EC2 Instance to Your AWS Managed Microsoft AD Directory
+Manually Join a Linux Instance
+Delegate Directory Join Privileges for AWS Managed Microsoft AD
+Create a DHCP Options Set
+
+
+Manage Users and Groups in AWS Managed Microsoft AD
+Installing the Active Directory Administration Tools
+Create a User
+Reset a User Password
+Create a Group
+Add a User to a Group
+
+
+Connect to Your Existing AD Infrastructure
+When to Create a Trust Relationship
+Adding IP Routes When Using Public IP Addresses
+
+
+Tutorial: Create a Trust Relationship Between Your AWS Managed Microsoft AD and Your On-Premises Domain
+Prerequisites
+Step 1: Prepare Your On-Premises Domain
+Step 2: Prepare Your AWS Managed Microsoft AD
+Step 3: Create the Trust Relationship
+
+
+
+
+Extend Your Schema
+When to Extend Your AWS Managed Microsoft AD Schema
+Tutorial: Extending Your AWS Managed Microsoft AD Schema
+Step 1: Create Your LDIF File
+Step 2: Import Your LDIF File
+Step 3: Verify If The Schema Extension Was Successful
+(Optional) Add a value to the new attribute
+Related Resources
+
+
+
+
+Maintain Your AWS Managed Microsoft AD Directory
+Add Alternate UPN Suffixes
+Delete Your Directory
+Rename Your Directory's Site Name
+Snapshot or Restore Your Directory
+View Directory Information
+
+
+Grant Users and Groups Access to AWS Resources
+Creating a New Role
+Editing the Trust Relationship for an Existing Role
+Assigning Users or Groups to an Existing Role
+Viewing Users and Groups Assigned to a Role
+Removing a User or Group from a Role
+Using AWS Managed Policies with AWS Directory Service
+
+
+Enable Access to AWS Applications and Services
+Creating an Access URL
+Single Sign-On
+
+
+Enable Access to the AWS Management Console with AD Credentials
+Deploy Additional Domain Controllers
+Migrate Users from Active Directory to AWS Managed Microsoft AD
+
+
+Best Practices for AWS Managed Microsoft AD
+Limits for AWS Managed Microsoft AD
+Application Compatibility Policy for AWS Managed Microsoft AD
+AWS Managed Microsoft AD Test Lab Tutorials
+Tutorial: Setting Up Your Base AWS Managed Microsoft AD Test Lab in AWS
+Prerequisites
+Step 1: Set Up Your AWS Environment for AWS Managed Microsoft AD
+Step 2: Create Your AWS Managed Microsoft AD Directory in AWS
+Step 3: Deploy an EC2 Instance to Manage AWS Managed Microsoft AD
+Step 4: Verify That the Base Test Lab Is Operational
+
+
+Tutorial: Creating a Trust from AWS Managed Microsoft AD to a Self-Managed Active Directory Installation on Amazon EC2
+Step 1: Set Up Your Environment for Trusts
+Step 2: Create the Trusts
+Step 3: Verify the Trust
+
+
+
+
+Troubleshooting AWS Managed Microsoft AD
+DNS Troubleshooting
+Linux Domain Join Errors
+Active Directory Low Available Storage Space
+Schema Extension Errors
+Trust Creation Status Reasons
+
+
+Active Directory Connector
+Getting Started with AD Connector
+AD Connector Prerequisites
+Create an AD Connector
+What Gets Created
+
+
+How To Administer AD Connector
+Secure Your AD Connector Directory
+Update Your AD Connector Service Account Credentials in AWS Directory Service
+Enable Multi-Factor Authentication for AD Connector
+Enable Client-Side LDAPS Using AD Connector
+
+
+Monitor Your AD Connector Directory
+Understanding Your Directory Status
+Configure Directory Status Notifications
+
+
+Join an EC2 Instance to Your AD Connector Directory
+Seamlessly Join a Windows EC2 Instance
+Seamlessly Join a Linux EC2 Instance to Your AD Connector Directory
+
+
+Maintain Your AD Connector Directory
+Delete Your Directory
+View Directory Information
+
+
+Update the DNS Address for Your AD Connector
+
+
+Best Practices for AD Connector
+Limits for AD Connector
+Application Compatibility Policy for AD Connector
+Troubleshooting AD Connector
+Simple Active Directory
+Getting Started with Simple AD
+Simple AD Prerequisites
+Create a Simple AD Directory
+What Gets Created
+Configure DNS
+
+
+How To Administer Simple AD
+Manage Users and Groups in Simple AD
+Installing the Active Directory Administration Tools
+Create a User
+Reset a User Password
+Create a Group
+Add a User to a Group
+
+
+Monitor Your Simple AD Directory
+Understanding Your Directory Status
+Configure Directory Status Notifications
+
+
+Join an EC2 Instance to Your Simple AD Directory
+Seamlessly Join a Windows EC2 Instance
+Manually Join a Windows Instance
+Seamlessly Join a Linux EC2 Instance to Your Simple AD Directory
+Manually Join a Linux Instance
+Delegate Directory Join Privileges for Simple AD
+Create a DHCP Options Set
+
+
+Maintain Your Simple AD Directory
+Delete Your Directory
+Snapshot or Restore Your Directory
+View Directory Information
+
+
+Enable Access to AWS Applications and Services
+Creating an Access URL
+Single Sign-On
+
+
+Enable Access to the AWS Management Console with AD Credentials
+
+
+Tutorial: Create a Simple AD Directory
+Prerequisites
+Step 1: Create and Configure Your VPC
+Step 2: Create Your Simple AD Directory
+
+
+Best Practices for Simple AD
+Limits for Simple AD
+Application Compatibility Policy for Simple AD
+Troubleshooting Simple AD
+Simple AD Directory Status Reasons
+
+
+Security in AWS Directory Service
+Identity and Access Management for AWS Directory Service
+Overview of Managing Access Permissions to Your AWS Directory Service Resources
+Using Identity-Based Policies (IAM Policies) for AWS Directory Service
+AWS Directory Service API Permissions: Actions, Resources, and Conditions Reference
+
+
+Logging and Monitoring in AWS Directory Service
+Compliance Validation for AWS Directory Service
+Resilience in AWS Directory Service
+Infrastructure Security in AWS Directory Service
+Service Level Agreement for AWS Directory Service
+Region Availability for AWS Directory Service
+Browser Compatibility
+Document History

@@ -1,0 +1,11 @@
+
+Take the survey!
+Help us improve the AWS SDK for .NET and its documentation by sharing your experience. Click here to take a quick survey.
+
+Migrating your project for the AWS SDK for .NET
+This section provides information about migration tasks that might apply to you, and instructions about how to perform those tasks.
+Topics
+ What's new
+ Supported platforms
+ Migrating to version 3.5
+ Migrating from .NET Standard 1.3

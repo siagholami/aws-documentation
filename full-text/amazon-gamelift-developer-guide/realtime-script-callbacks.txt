@@ -1,0 +1,54 @@
+Script Callbacks for Realtime Servers
+You can provide custom logic to respond to events by implementing these callbacks in your Realtime script.
+init
+Initializes the Realtime server and receives a Realtime server interface. 
+Syntax
+init(rtsession)
+onMessage
+Invoked when a received message is sent to the server. 
+Syntax
+onMessage(gameMessage)
+onHealthCheck
+Invoked to set the status of the game session health. By default, health status is healthy (or true. This callback can be implemented to perform custom health checks and return a status.
+Syntax
+onHealthCheck()
+onStartGameSession
+Invoked when a new game session starts, with a game session object passed in.
+Syntax
+onStartGameSession(session)
+onProcessTerminate
+Invoked when the server process is being terminated by the Amazon GameLift service. This can act as a trigger to exit cleanly from the game session. There is no need to call processEnding().
+Syntax
+onProcessTerminate()
+onPlayerConnect
+Invoked when a player requests a connection and has passed initial validation. 
+Syntax
+onPlayerConnect(connectMessage)
+onPlayerAccepted
+Invoked when a player connection is accepted.
+Syntax
+onPlayerAccepted(player)
+onPlayerDisconnect
+Invoked when a player disconnects from the game session, either by sending a disconnect request or by other means.
+Syntax
+onPlayerDisconnect(peerId)
+onProcessStarted
+Invoked when a server process is started. This callback allows the script to perform any custom tasks needed to prepare to host a game session. 
+Syntax
+onProcessStarted(args)
+onSendToPlayer
+Invoked when a message is received on the server from one player to be delivered to another player. This process runs before the message is delivered. 
+Syntax
+nSendToPlayer(gameMessage)
+onSendToGroup
+Invoked when a message is received on the server from one player to be delivered to a group. This process runs before the message is delivered. 
+Syntax
+onSendToGroup(gameMessage))
+onPlayerJoinGroup
+Invoked when a player sends a request to join a group.
+Syntax
+onPlayerJoinGroup(groupId, peerId)
+onPlayerLeaveGroup
+Invoked when a player sends a request to leave a group.
+Syntax
+onPlayerLeaveGroup(groupId, peerId)

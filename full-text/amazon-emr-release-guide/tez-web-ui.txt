@@ -1,0 +1,3 @@
+Tez Web UI
+Tez has its own web user interface. To view the web UI, see:
+http://masterDNS:8080/tez-ui

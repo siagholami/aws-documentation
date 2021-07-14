@@ -1,0 +1,98 @@
+Automation document details reference
+This section includes topics that describe each of the Systems Manager Automation documents that are owned by AWS and AWS Support. Each page provides an explanation of the required and optional parameters you can specify when using the document. Each page also lists the steps in the document and the output of the execution, if any. 
+This section does not include a separate page for documents that require approval such as the AWS-CreateManagedLinuxInstanceWithApproval or AWS-StopEC2InstanceWithApproval document. Any document name that includes WithApproval, means the document includes the aws:approve – Pause an execution for manual approval action. This action temporarily pauses an Automation execution until designated principals either approve or reject the action. After the required number of approvals is reached, the Automation execution resumes. 
+For information about running Automation documents, see Running a simple automation. For information about running Automation documents on multiple targets, see Running automations that use targets and rate controls.
+View Automation document content
+You can view the content for Automation documents in the Systems Manager console.
+To view Automation document content
+
+
+Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
+
+In the navigation pane, choose Documents.
+
+
+-or-
+If the AWS Systems Manager home page opens first, choose the menu icon () to open the navigation pane, and then choose Documents in the navigation pane.
+
+
+Choose a document, and then choose View details.
+
+
+Choose the Content tab.
+
+
+Topics
+ View Automation document content
+ AWSSupport-ActivateWindowsWithAmazonLicense
+ AWS-ASGEnterStandby
+ AWS-ASGExitStandby
+ AWS-AttachEBSVolume
+ AWS-AttachIAMToInstance
+ AWSEC2-CloneInstanceAndUpgradeWindows
+ AWSEC2-CloneInstanceAndUpgradeSQLServer
+ AWS-ConfigureCloudWatchOnEC2Instance
+ AWS-ConfigureS3BucketLogging
+ AWS-ConfigureS3BucketVersioning
+ AWSEC2-ConfigureSTIG
+ AWS-CopySnapshot
+ AWS-CreateDynamoDBBackup
+ AWS-CreateImage
+ AWS-CreateJiraIssue
+ AWS-CreateManagedLinuxInstance
+ AWS-CreateManagedWindowsInstance
+ AWS-CreateRdsSnapshot
+ AWS-CreateServiceNowIncident
+ AWS-CreateSnapshot
+ AWS-DeleteCloudFormationStack
+ AWS-DeleteDynamoDBBackup
+ AWS-DeleteDynamoDBTableBackups
+ AWS-DeleteEBSVolumeSnapshots
+ AWS-DeleteImage
+ AWSConfigRemediation-DeleteUnusedIAMGroup
+ AWS-DeleteSnapshot
+ AWS-DetachEBSVolume
+ AWS-DisablePublicAccessForSecurityGroup
+ AWS-DisableS3BucketPublicReadWrite
+ AWS-EnableCloudTrail
+ AWSConfigRemediation-EnableEnhancedMonitoringOnRDSInstance
+ AWS-EnableS3BucketEncryption
+ AWSSupport-ExecuteEC2Rescue
+ AWS-ExportOpsDataToS3
+ AWSSupport-GrantPermissionsToIAMUser
+ AWSSupport-ListEC2Resources
+ AWSSupport-ManageRDPSettings
+ AWSSupport-ManageWindowsService
+ AWS-PatchAsgInstance
+ AWS-PatchInstanceWithRollback
+ AWS-PublishSNSNotification
+ AWS-RebootRDSInstance
+ AWS-ReleaseElasticIP
+ AWSSupport-ResetAccess
+ AWS-ResizeInstance
+ AWS-RestartEC2Instance
+ AWS-RunCfnLint
+ AWS-RunPacker
+ AWSSupport-SendLogBundleToS3Bucket
+ AWS-SetupInventory
+ AWSSupport-SetupIPMonitoringFromVPC
+ AWS-SetupManagedInstance
+ AWS-SetupManagedRoleOnEC2Instance
+ AWSSupport-ShareRDSSnapshot
+ AWSEC2-SQLServerDBRestore
+ AWS-StartEC2Instance
+ AWSSupport-StartEC2RescueWorkflow
+ AWS-StartRDSInstance
+ AWS-StopEC2Instance
+ AWS-StopRDSInstance
+ AWS-TerminateEC2Instance
+ AWSSupport-TerminateIPMonitoringFromVPC
+ AWSSupport-TroubleshootConnectivityToRDS
+ AWSSupport-TroubleshootDirectoryTrust
+ AWSSupport-TroubleshootRDP
+ AWSSupport-TroubleshootSSH
+ AWS-UpdateCloudFormationStack
+ AWS-UpdateLinuxAmi
+ AWS-UpdateWindowsAmi
+ AWSSupport-UpgradeWindowsAWSDrivers

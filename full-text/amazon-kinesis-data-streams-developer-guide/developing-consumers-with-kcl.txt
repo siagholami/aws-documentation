@@ -1,0 +1,8 @@
+Developing KCL 1.x Consumers
+You can develop a consumer application for Amazon Kinesis Data Streams using the Kinesis Client Library (KCL). For more information about KCL, see What is the Kinesis Client Library? .
+Topics
+ Developing a Kinesis Client Library Consumer in Java
+ Developing a Kinesis Client Library Consumer in Node.js
+ Developing a Kinesis Client Library Consumer in .NET
+ Developing a Kinesis Client Library Consumer in Python
+ Developing a Kinesis Client Library Consumer in Ruby

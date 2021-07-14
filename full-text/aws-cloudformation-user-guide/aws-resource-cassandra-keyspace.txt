@@ -1,0 +1,50 @@
+AWS::Cassandra::Keyspace
+The AWS::Cassandra::Keyspace resource allows you to create a new keyspace in Amazon Keyspaces (for Apache Cassandra). For more information, see Create a Keyspace and a Table in the Amazon Keyspaces Developer Guide.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::Cassandra::Keyspace",
+  "Properties" : {
+      "[KeyspaceName](#cfn-cassandra-keyspace-keyspacename)" : String
+    }
+}
+YAML
+Type: AWS::Cassandra::Keyspace
+Properties: 
+  [KeyspaceName](#cfn-cassandra-keyspace-keyspacename): String
+Properties
+KeyspaceName 
+The name of the keyspace to be created. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the keyspace name. For more information, see Name Type.
+Length Constraints: Minimum length of 3. Maximum length of 255.
+Pattern: ^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$
+Required: No
+Type: String
+Update requires: Replacement
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the name of the keyspace. For example:
+{ "Ref": "MyNewKeyspace" } 
+For more information about using the Ref function, see Ref.
+Examples
+Create a New Keyspace
+The following example creates a new keyspace named MyNewKeyspace:
+JSON
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyNewKeyspace": {
+      "Type": "AWS::Cassandra::Keyspace",
+      "Properties": {
+        "KeyspaceName": "MyNewKeyspace"
+      }
+    }
+  }
+}
+YAML
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyNewKeyspace:
+    Type: AWS::Cassandra::Keyspace
+    Properties:
+      KeyspaceName: MyNewKeyspace

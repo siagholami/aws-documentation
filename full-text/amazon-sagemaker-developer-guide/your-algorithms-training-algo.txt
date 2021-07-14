@@ -1,0 +1,7 @@
+Use Your Own Training Algorithms
+This section explains how Amazon SageMaker interacts with a Docker container that runs your custom training algorithm. Use this information to write training code and create a Docker image for your training algorithms. 
+Topics
+ How Amazon SageMaker Runs Your Training Image
+ How Amazon SageMaker Provides Training Information
+ How Amazon SageMaker Signals Algorithm Success and Failure
+ How Amazon SageMaker Processes Training Output

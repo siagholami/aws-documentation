@@ -1,0 +1,163 @@
+AWS::GameLift::Build
+The AWS::GameLift::Build resource creates a game server build that is installed and run on instances in an Amazon GameLift fleet. This resource points to an Amazon S3 location that contains a zip file with all of the components of the game server build.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::GameLift::Build",
+  "Properties" : {
+      "[Name](#cfn-gamelift-build-name)" : String,
+      "[OperatingSystem](#cfn-gamelift-build-operatingsystem)" : String,
+      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : S3Location,
+      "[Version](#cfn-gamelift-build-version)" : String
+    }
+}
+YAML
+Type: AWS::GameLift::Build
+Properties: 
+  [Name](#cfn-gamelift-build-name): String
+  [OperatingSystem](#cfn-gamelift-build-operatingsystem): String
+  [StorageLocation](#cfn-gamelift-build-storagelocation): 
+    S3Location
+  [Version](#cfn-gamelift-build-version): String
+Properties
+Name 
+A descriptive label that is associated with a build. Build names do not need to be unique.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+OperatingSystem 
+The operating system that the game server binaries are built to run on. This value determines the type of fleet resources that you can use for this build. If your game build contains multiple executables, they all must run on the same operating system. If an operating system is not specified when creating a build, Amazon GameLift uses the default value (WINDOWS_2012). This value cannot be changed later.
+Required: No
+Type: String
+Allowed values: AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012
+Update requires: Replacement
+StorageLocation 
+Information indicating where your game build files are stored. Use this parameter only when creating a build with files stored in an S3 bucket that you own. The storage location must specify an S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your S3 bucket. The S3 bucket and your new build must be in the same Region.
+Required: No
+Type: S3Location
+Update requires: Replacement
+Version 
+Version information that is associated with this build. Version strings do not need to be unique.
+Required: No
+Type: String
+Minimum: 1
+Maximum: 1024
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the build ID, such as build-1111aaaa-22bb-33cc-44dd-5555eeee66ff.
+For more information about using the Ref function, see Ref.
+Examples
+Create a Custom Game Server Build
+The following example creates a GameLift build named MyGameServerBuild. The build package is located in an S3 bucket, specified by the S3Bucket and S3Key input parameters. The example also creates the AWS Identity and Access Management (IAM) role that GameLift assumes so that it has permissions to download the build package files.
+JSON
+{
+    "Resources": {
+        "IAMRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "cloudformation.amazonaws.com",
+                                    "gamelift.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                },
+                "RoleName": "BuildIAMRole",
+                "Policies": [
+                    {
+                        "PolicyName": "gamelift-s3-access-policy",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:GetObjectVersion",
+                                        "s3:GetObjectMetadata",
+                                        "s3:*Object*"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::MyBucketName/*"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "BuildResource": {
+            "Type": "AWS::GameLift::Build",
+            "Properties": {
+                "Name": "MyGameServerBuild",
+                "Version": "v1.0",
+                "OperatingSystem": "WINDOWS_2012",
+                "StorageLocation": {
+                    "Bucket": "MyBucketName",
+                    "Key": "MyGameBuildFiles.zip",
+                    "RoleArn": {
+                        "Fn::GetAtt": [
+                            "IAMRole",
+                            "Arn"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
+YAML
+Resources:
+  IAMRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: ["cloudformation.amazonaws.com", "gamelift.amazonaws.com"]
+            Action: "sts:AssumeRole"
+      RoleName: "BuildIAMRole"
+      Policies:
+        - PolicyName: gamelift-s3-access-policy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:GetObject"
+                  - "s3:GetObjectVersion"
+                  - "s3:GetObjectMetadata"
+                  - "s3:*Object*"
+                Resource:
+                  - "arn:aws:s3:::MyBucketName/*"
+  BuildResource:
+    Type: AWS::GameLift::Build
+    Properties:
+      Name: MyGameServerBuild
+      Version: v1.0
+      OperatingSystem: WINDOWS_2012
+      StorageLocation:
+        Bucket: "MyBucketName"
+        Key: "MyGameBuildFiles.zip"        
+        RoleArn: !GetAtt IAMRole.Arn
+See also
+
+ Create GameLift Resources Using AWS CloudFormation in the Amazon GameLift Developer Guide
+ Create a Build with Files in Amazon S3 in the Amazon GameLift Developer Guide
+ Upload Script Files in Amazon S3 in the Amazon GameLift Developer Guide
+CreateBuild in the Amazon GameLift API Reference 

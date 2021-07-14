@@ -1,0 +1,23 @@
+Update security profiles
+You can update a security profile at any time to add or remove permissions.
+Required permissions to update security profiles
+Before you can update permissions in a security profile, you must be logged in with an Amazon Connect account that has the following permissions: Security profiles - Edit. 
+
+By default, the Amazon Connect Admin security profile has these permissions.
+How to update security profiles
+
+
+Log in to your contact center using your access URL (https://instance name.awsapps.com/connect/login). You must be logged in with an Amazon Connect account that has permissions to update security profiles.
+
+
+Choose Users, Security profiles.
+
+
+Select the name of the profile.
+
+
+Update the name, description, and permissions as needed.
+
+
+Choose Save.
+

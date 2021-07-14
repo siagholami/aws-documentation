@@ -1,0 +1,17 @@
+STV_STARTUP_RECOVERY_STATE
+Records the state of tables that are temporarily locked during cluster restart operations. Amazon Redshift places a temporary lock on tables while they are being processed to resolve stale transactions following a cluster restart. 
+STV_STARTUP_RECOVERY_STATE is visible only to superusers. For more information, see Visibility of data in system tables and views.
+Table columns
+[See the AWS documentation website for more details]
+Sample queries
+To monitor which tables are temporarily locked, execute the following query after a cluster restart. 
+```
+select * from STV_STARTUP_RECOVERY_STATE;
+db_id | tbl_id | table_name 
+----------------------------
+ 100044 | 100058 | lineorder
+ 100044 | 100068 | part
+ 100044 | 100072 | customer 
+ 100044 | 100192 | supplier
+(4 rows)
+```

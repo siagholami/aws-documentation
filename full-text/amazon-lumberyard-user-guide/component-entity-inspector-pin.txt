@@ -1,0 +1,31 @@
+Pinning an Entity's Inspector
+You can pin an entity's inspector to keep it open and visible even when you select another entity. You can pin inspectors for multiple entities, and also pin multiple inspector instances of the same entity. This helps you compare the entities and their components to each other.
+A pinned inspector has the following features:
+ Always shows the pinned entity even when you select a different entity.
+ Functions like the main Entity Inspector window.
+ Closes when you open a different level or exit Lumberyard.
+ If you convert a loose entity to a slice, the pinned inspector points to the new slice entity that corresponds to the previously loose entity.
+ Persists when entering and exiting game mode.
+ Updates all pinned inspectors for a particular entity when you modify that entity.
+You can pin an inspector from the Entity Outliner or the Entity Inspector.
+To pin an inspector
+
+
+Select an entity.
+
+
+Do one of the following:
+
+
+In the Entity Outliner, right-click the entity and then choose Open pinned Inspector.
+
+
+
+In the Entity Inspector, click the pin icon.
+
+
+
+In Lumberyard Editor, you can view the pinned entity inspectors.
+Example 
+
+

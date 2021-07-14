@@ -1,0 +1,67 @@
+AWS::ServiceCatalog::LaunchTemplateConstraint
+Specifies a template constraint.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::ServiceCatalog::LaunchTemplateConstraint",
+  "Properties" : {
+      "[AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage)" : String,
+      "[Description](#cfn-servicecatalog-launchtemplateconstraint-description)" : String,
+      "[PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid)" : String,
+      "[ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid)" : String,
+      "[Rules](#cfn-servicecatalog-launchtemplateconstraint-rules)" : String
+    }
+}
+YAML
+Type: AWS::ServiceCatalog::LaunchTemplateConstraint
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage): String
+  [Description](#cfn-servicecatalog-launchtemplateconstraint-description): String
+  [PortfolioId](#cfn-servicecatalog-launchtemplateconstraint-portfolioid): String
+  [ProductId](#cfn-servicecatalog-launchtemplateconstraint-productid): String
+  [Rules](#cfn-servicecatalog-launchtemplateconstraint-rules): String
+Properties
+AcceptLanguage 
+The language code.
+  en - English (default)
+  jp - Japanese
+  zh - Chinese
+Required: No
+Type: String
+Maximum: 100
+Update requires: No interruption
+Description 
+The description of the constraint.
+Required: No
+Type: String
+Maximum: 2000
+Update requires: No interruption
+PortfolioId 
+The portfolio identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+ProductId 
+The product identifier.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 100
+Pattern: ^[a-zA-Z0-9_\-]*
+Update requires: Replacement
+Rules 
+The constraint rules.
+Required: Yes
+Type: String
+Update requires: No interruption
+Return values
+Ref
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the identifier of the constraint.
+For more information about using the Ref function, see Ref.
+See also
+
+CreateConstraint in the AWS Service Catalog API Reference

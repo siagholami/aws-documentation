@@ -1,0 +1,14 @@
+DocumentMetadata
+Information about the input document.
+Contents
+Pages 
+The number of pages that are detected in the document.
+Type: Integer
+Valid Range: Minimum value of 0.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

@@ -1,0 +1,46 @@
+AWS::DLM::LifecyclePolicy CreateRule
+Specifies when to create snapshots of EBS volumes.
+You must specify either a Cron expression or an interval, interval unit, and start time. You cannot specify both.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[CronExpression](#cfn-dlm-lifecyclepolicy-createrule-cronexpression)" : String,
+  "[Interval](#cfn-dlm-lifecyclepolicy-createrule-interval)" : Integer,
+  "[IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit)" : String,
+  "[Times](#cfn-dlm-lifecyclepolicy-createrule-times)" : [ String, ... ]
+}
+YAML
+[CronExpression](#cfn-dlm-lifecyclepolicy-createrule-cronexpression): String
+  [Interval](#cfn-dlm-lifecyclepolicy-createrule-interval): Integer
+  [IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit): String
+  [Times](#cfn-dlm-lifecyclepolicy-createrule-times): 
+    - String
+Properties
+CronExpression 
+The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year. For more information, see Cron expressions in the Amazon CloudWatch User Guide.
+Required: No
+Type: String
+Minimum: 17
+Maximum: 106
+Pattern: cron\([^\n]{11,100}\)
+Update requires: No interruption
+Interval 
+The interval between snapshots. The supported values are 1, 2, 3, 4, 6, 8, 12, and 24.
+Required: No
+Type: Integer
+Minimum: 1
+Update requires: No interruption
+IntervalUnit 
+The interval unit.
+Required: No
+Type: String
+Allowed values: HOURS
+Update requires: No interruption
+Times 
+The time, in UTC, to start the operation. The supported format is hh:mm.
+The operation occurs within a one-hour window following the specified time. If you do not specify a time, Amazon DLM selects a time within the next 24 hours.
+Required: No
+Type: List of String
+Maximum: 1
+Update requires: No interruption

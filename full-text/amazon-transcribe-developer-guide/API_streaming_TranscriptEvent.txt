@@ -1,0 +1,13 @@
+TranscriptEvent
+Represents a set of transcription results from the server to the client. It contains one or more segments of the transcription.
+Contents
+Transcript 
+The transcription of the audio stream. The transcription is composed of all of the items in the results list.
+Type: Transcript object
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

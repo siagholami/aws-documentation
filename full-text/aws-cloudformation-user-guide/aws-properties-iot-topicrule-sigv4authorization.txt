@@ -1,0 +1,30 @@
+AWS::IoT::TopicRule SigV4Authorization
+Use Sig V4 authorization.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[RoleArn](#cfn-iot-topicrule-sigv4authorization-rolearn)" : String,
+  "[ServiceName](#cfn-iot-topicrule-sigv4authorization-servicename)" : String,
+  "[SigningRegion](#cfn-iot-topicrule-sigv4authorization-signingregion)" : String
+}
+YAML
+[RoleArn](#cfn-iot-topicrule-sigv4authorization-rolearn): String
+  [ServiceName](#cfn-iot-topicrule-sigv4authorization-servicename): String
+  [SigningRegion](#cfn-iot-topicrule-sigv4authorization-signingregion): String
+Properties
+RoleArn 
+The ARN of the signing role.
+Required: Yes
+Type: String
+Update requires: No interruption
+ServiceName 
+The service name to use while signing with Sig V4.
+Required: Yes
+Type: String
+Update requires: No interruption
+SigningRegion 
+The signing region.
+Required: Yes
+Type: String
+Update requires: No interruption

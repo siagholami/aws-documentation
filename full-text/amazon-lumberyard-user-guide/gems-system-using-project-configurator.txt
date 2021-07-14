@@ -1,0 +1,26 @@
+Enabling Gems
+You can enable gems using the Project Configurator or from a command line. To enable a gem from a command line, see Gems Commands.
+To enable gems with the Project Configurator
+
+
+Open the Lumberyard Project Configurator, located at lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe.
+
+
+In the Project Configurator, select your active game project and choose Set as default.
+
+
+Click Enable Gems.
+
+
+
+Select the gems that you want to enable.
+
+
+
+Click Save.
+
+
+If you enabled gems labeled CODE & ASSETS, you must build your game project to make the gems available in Lumberyard Editor. If you enabled only gems labeled ASSETS ONLY, you do not need to build your game project before opening it in Lumberyard Editor. 
+
+
+For more information, see Building Lumberyard projects.

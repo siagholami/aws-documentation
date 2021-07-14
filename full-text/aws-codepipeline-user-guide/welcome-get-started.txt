@@ -1,0 +1,15 @@
+How do I get started with CodePipeline?
+To get started with CodePipeline:
+
+
+Learn how CodePipeline works by reading the CodePipeline concepts section.
+
+
+Prepare to use CodePipeline by following the steps in Getting started with CodePipeline.
+
+
+Experiment with CodePipeline by following the steps in the CodePipeline tutorials tutorials.
+
+
+Use CodePipeline for your new or existing projects by following the steps in Create a pipeline in CodePipeline.
+

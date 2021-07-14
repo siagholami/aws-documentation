@@ -1,0 +1,21 @@
+
+
+DocumentAttribute
+A custom attribute value assigned to a document. 
+Contents
+Key 
+The identifier for the attribute.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 200.
+Pattern: [a-zA-Z0-9_][a-zA-Z0-9_-]* 
+Required: Yes
+Value 
+The value of the attribute.
+Type: DocumentAttributeValue object
+Required: Yes
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 

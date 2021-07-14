@@ -1,0 +1,297 @@
+DescribeSimulationJobBatch
+Describes a simulation job batch.
+Request Syntax
+```
+POST /describeSimulationJobBatch HTTP/1.1
+Content-type: application/json
+{
+   "batch": "string"
+}
+```
+URI Request Parameters
+The request does not use any URI parameters.
+Request Body
+The request accepts the following data in JSON format.
+ batch  
+The id of the batch to describe.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+Required: Yes
+Response Syntax
+```
+HTTP/1.1 200
+Content-type: application/json
+{
+   "arn": "string",
+   "batchPolicy": { 
+      "maxConcurrency": number,
+      "timeoutInSeconds": number
+   },
+   "clientRequestToken": "string",
+   "createdAt": number,
+   "createdRequests": [ 
+      { 
+         "arn": "string",
+         "dataSourceNames": [ "string" ],
+         "lastUpdatedAt": number,
+         "name": "string",
+         "robotApplicationNames": [ "string" ],
+         "simulationApplicationNames": [ "string" ],
+         "status": "string"
+      }
+   ],
+   "failedRequests": [ 
+      { 
+         "failedAt": number,
+         "failureCode": "string",
+         "failureReason": "string",
+         "request": { 
+            "dataSources": [ 
+               { 
+                  "name": "string",
+                  "s3Bucket": "string",
+                  "s3Keys": [ "string" ]
+               }
+            ],
+            "failureBehavior": "string",
+            "iamRole": "string",
+            "loggingConfig": { 
+               "recordAllRosTopics": boolean
+            },
+            "maxJobDurationInSeconds": number,
+            "outputLocation": { 
+               "s3Bucket": "string",
+               "s3Prefix": "string"
+            },
+            "robotApplications": [ 
+               { 
+                  "application": "string",
+                  "applicationVersion": "string",
+                  "launchConfig": { 
+                     "environmentVariables": { 
+                        "string" : "string" 
+                     },
+                     "launchFile": "string",
+                     "packageName": "string",
+                     "portForwardingConfig": { 
+                        "portMappings": [ 
+                           { 
+                              "applicationPort": number,
+                              "enableOnPublicIp": boolean,
+                              "jobPort": number
+                           }
+                        ]
+                     }
+                  }
+               }
+            ],
+            "simulationApplications": [ 
+               { 
+                  "application": "string",
+                  "applicationVersion": "string",
+                  "launchConfig": { 
+                     "environmentVariables": { 
+                        "string" : "string" 
+                     },
+                     "launchFile": "string",
+                     "packageName": "string",
+                     "portForwardingConfig": { 
+                        "portMappings": [ 
+                           { 
+                              "applicationPort": number,
+                              "enableOnPublicIp": boolean,
+                              "jobPort": number
+                           }
+                        ]
+                     }
+                  }
+               }
+            ],
+            "tags": { 
+               "string" : "string" 
+            },
+            "useDefaultApplications": boolean,
+            "vpcConfig": { 
+               "assignPublicIp": boolean,
+               "securityGroups": [ "string" ],
+               "subnets": [ "string" ]
+            }
+         }
+      }
+   ],
+   "failureCode": "string",
+   "failureReason": "string",
+   "lastUpdatedAt": number,
+   "pendingRequests": [ 
+      { 
+         "dataSources": [ 
+            { 
+               "name": "string",
+               "s3Bucket": "string",
+               "s3Keys": [ "string" ]
+            }
+         ],
+         "failureBehavior": "string",
+         "iamRole": "string",
+         "loggingConfig": { 
+            "recordAllRosTopics": boolean
+         },
+         "maxJobDurationInSeconds": number,
+         "outputLocation": { 
+            "s3Bucket": "string",
+            "s3Prefix": "string"
+         },
+         "robotApplications": [ 
+            { 
+               "application": "string",
+               "applicationVersion": "string",
+               "launchConfig": { 
+                  "environmentVariables": { 
+                     "string" : "string" 
+                  },
+                  "launchFile": "string",
+                  "packageName": "string",
+                  "portForwardingConfig": { 
+                     "portMappings": [ 
+                        { 
+                           "applicationPort": number,
+                           "enableOnPublicIp": boolean,
+                           "jobPort": number
+                        }
+                     ]
+                  }
+               }
+            }
+         ],
+         "simulationApplications": [ 
+            { 
+               "application": "string",
+               "applicationVersion": "string",
+               "launchConfig": { 
+                  "environmentVariables": { 
+                     "string" : "string" 
+                  },
+                  "launchFile": "string",
+                  "packageName": "string",
+                  "portForwardingConfig": { 
+                     "portMappings": [ 
+                        { 
+                           "applicationPort": number,
+                           "enableOnPublicIp": boolean,
+                           "jobPort": number
+                        }
+                     ]
+                  }
+               }
+            }
+         ],
+         "tags": { 
+            "string" : "string" 
+         },
+         "useDefaultApplications": boolean,
+         "vpcConfig": { 
+            "assignPublicIp": boolean,
+            "securityGroups": [ "string" ],
+            "subnets": [ "string" ]
+         }
+      }
+   ],
+   "status": "string",
+   "tags": { 
+      "string" : "string" 
+   }
+}
+```
+Response Elements
+If the action is successful, the service sends back an HTTP 200 response.
+The following data is returned in JSON format by the service.
+ arn  
+The Amazon Resource Name (ARN) of the batch.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 1224.
+Pattern: arn:.* 
+ batchPolicy  
+The batch policy.
+Type: BatchPolicy object
+ clientRequestToken  
+Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 64.
+Pattern: [a-zA-Z0-9_\-=]* 
+ createdAt  
+The time, in milliseconds since the epoch, when the simulation job batch was created.
+Type: Timestamp
+ createdRequests  
+A list of created simulation job summaries.
+Type: Array of SimulationJobSummary objects
+Array Members: Minimum number of 0 items. Maximum number of 100 items.
+ failedRequests  
+A list of failed create simulation job requests. The request failed to be created into a simulation job. Failed requests do not have a simulation job ID. 
+Type: Array of FailedCreateSimulationJobRequest objects
+ failureCode  
+The failure code of the simulation job batch.
+Type: String
+Valid Values:InternalServiceError 
+ failureReason  
+The reason the simulation job batch failed.
+Type: String
+ lastUpdatedAt  
+The time, in milliseconds since the epoch, when the simulation job batch was last updated.
+Type: Timestamp
+ pendingRequests  
+A list of pending simulation job requests. These requests have not yet been created into simulation jobs.
+Type: Array of SimulationJobRequest objects
+Array Members: Minimum number of 1 item.
+ status  
+The status of the batch.  
+Pending
+The simulation job batch request is pending.
+InProgress
+The simulation job batch is in progress. 
+Failed
+The simulation job batch failed. One or more simulation job requests could not be completed due to an internal failure (like InternalServiceError). See failureCode and failureReason for more information.
+Completed
+The simulation batch job completed. A batch is complete when (1) there are no pending simulation job requests in the batch and none of the failed simulation job requests are due to InternalServiceError and (2) when all created simulation jobs have reached a terminal state (for example, Completed or Failed). 
+Canceled
+The simulation batch job was cancelled.
+Canceling
+The simulation batch job is being cancelled.
+Completing
+The simulation batch job is completing.
+TimingOut
+The simulation job batch is timing out.
+If a batch timing out, and there are pending requests that were failing due to an internal failure (like InternalServiceError), the batch status will be Failed. If there are no such failing request, the batch status will be TimedOut. 
+TimedOut
+The simulation batch job timed out.
+Type: String
+Valid Values:Pending | InProgress | Failed | Completed | Canceled | Canceling | Completing | TimingOut | TimedOut 
+ tags  
+A map that contains tag keys and tag values that are attached to the simulation job batch.
+Type: String to string map
+Key Length Constraints: Minimum length of 1. Maximum length of 128.
+Key Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Value Length Constraints: Minimum length of 0. Maximum length of 256.
+Value Pattern: [a-zA-Z0-9 _.\-\/=:]* 
+Errors
+For information about the errors that are common to all actions, see Common Errors.
+InternalServerException 
+AWS RoboMaker experienced a service issue. Try your call again.
+HTTP Status Code: 500
+InvalidParameterException 
+A parameter specified in a request is not valid, is unsupported, or cannot be used. The returned message provides an explanation of the error value.
+HTTP Status Code: 400
+ResourceNotFoundException 
+The specified resource does not exist.
+HTTP Status Code: 400
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS Command Line Interface 
+  AWS SDK for .NET 
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for JavaScript 
+  AWS SDK for PHP V3 
+  AWS SDK for Python 
+  AWS SDK for Ruby V2 

@@ -1,0 +1,16 @@
+AWS::MediaLive::Input InputDestinationRequest
+The settings for a push input, to set up the destination addresses on MediaLive.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[StreamName](#cfn-medialive-input-inputdestinationrequest-streamname)" : String
+}
+YAML
+[StreamName](#cfn-medialive-input-inputdestinationrequest-streamname): String
+Properties
+StreamName 
+The stream name (application name/application instance) for the location the RTMP source content will be pushed to in MediaLive. 
+Required: No
+Type: String
+Update requires: No interruption

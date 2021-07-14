@@ -1,0 +1,87 @@
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+Adds an Amazon CloudWatch log stream to monitor application configuration errors.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "Type" : "AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption",
+  "Properties" : {
+      "[ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname)" : String,
+      "[CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption)" : CloudWatchLoggingOption
+    }
+}
+YAML
+Type: AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+Properties: 
+  [ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname): String
+  [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption): 
+    CloudWatchLoggingOption
+Properties
+ApplicationName 
+The name of the application.
+Required: Yes
+Type: String
+Minimum: 1
+Maximum: 128
+Pattern: [a-zA-Z0-9_.-]
+Update requires: Replacement
+CloudWatchLoggingOption 
+Provides a description of Amazon CloudWatch logging options, including the log stream Amazon Resource Name (ARN). 
+Required: Yes
+Type: CloudWatchLoggingOption
+Update requires: No interruption
+Examples
+Create an ApplicationCloudWatchLoggingOption resource
+JSON
+{
+    "BasicApplicationV2CloudWatchLoggingOption": {
+        "Type": "AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption",
+        "Properties": {
+            "ApplicationName": {
+                "Ref": "BasicApplication"
+            },
+            "CloudWatchLoggingOption": {
+                "LogStreamARN": {
+                    "Fn::Join": [
+                        ":",
+                        [
+                            "arn:aws:logs",
+                            {
+                                "Ref": "AWS::Region"
+                            },
+                            {
+                                "Ref": "AWS::AccountId"
+                            },
+                            "log-group",
+                            {
+                                "Ref": "TestCWLogGroup"
+                            },
+                            "log-stream",
+                            {
+                                "Ref": "TestCWLogStream"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }
+    }
+}
+YAML
+BasicApplicationV2CloudWatchLoggingOption:
+  Type: 'AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption'
+  Properties:
+    ApplicationName: !Ref BasicApplication
+    CloudWatchLoggingOption:
+      LogStreamARN: !Join 
+        - ':'
+        - - 'arn:aws:logs'
+          - !Ref 'AWS::Region'
+          - !Ref 'AWS::AccountId'
+          - log-group
+          - !Ref TestCWLogGroup
+          - log-stream
+          - !Ref TestCWLogStream
+See also
+
+AddApplicationCloudWatchLoggingOption in the Amazon Kinesis Data Analytics API Reference 

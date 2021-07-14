@@ -1,0 +1,23 @@
+AWS::Lambda::Alias ProvisionedConcurrencyConfiguration
+A provisioned concurrency configuration for a function's alias.
+Syntax
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
+{
+  "[ProvisionedConcurrentExecutions](#cfn-lambda-alias-provisionedconcurrencyconfiguration-provisionedconcurrentexecutions)" : Integer
+}
+YAML
+[ProvisionedConcurrentExecutions](#cfn-lambda-alias-provisionedconcurrencyconfiguration-provisionedconcurrentexecutions): Integer
+Properties
+ProvisionedConcurrentExecutions 
+The amount of provisioned concurrency to allocate for the alias.
+Required: Yes
+Type: Integer
+Update requires: No interruption
+Examples
+Provisioned Concurrency
+An alias with 20 provisioned concurrency.
+YAML
+alias: Type: AWS::Lambda::Alias Properties: FunctionName: !Ref function FunctionVersion:
+        !GetAtt newVersion.Version Name: BLUE ProvisionedConcurrencyConfig: ProvisionedConcurrentExecutions:
+        20

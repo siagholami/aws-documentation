@@ -1,0 +1,1056 @@
+Amazon Redshift Database Developer Guide
+
+*Copyright © 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.***
+
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+Contents
+
+Amazon Redshift system overview
+Are you a first-time Amazon Redshift user?
+Are you a database developer?
+Prerequisites
+System and architecture overview
+Data warehouse system architecture
+Performance
+Columnar storage
+Workload management
+Using Amazon Redshift with other services
+
+
+Getting started using databases
+Step 1: Create a database
+Step 2: Create a database user
+Delete a database user
+
+
+Step 3: Create a database table
+Insert data rows into a table
+Select data from a table
+
+
+Step 4: Load sample data
+Step 5: Query the system tables
+Determine the process ID of a running query
+
+
+Step 6: Cancel a query
+Step 7: Clean up your resources
+Amazon Redshift best practices
+Conducting a proof of concept for Amazon Redshift
+Amazon Redshift best practices for designing tables
+Take the tuning table design tutorial
+Choose the best sort key
+Choose the best distribution style
+Let COPY choose compression encodings
+Define primary key and foreign key constraints
+Use the smallest possible column size
+Use date/time data types for date columns
+
+
+Amazon Redshift best practices for loading data
+Take the loading data tutorial
+Take the tuning table design tutorial
+Use a COPY command to load data
+Use a single COPY command to load from multiple files
+Split your load data into multiple files
+Compress your data files
+Use a manifest file
+Verify data files before and after a load
+Use a multi-row insert
+Use a bulk insert
+Load data in sort key order
+Load data in sequential blocks
+Use time-series tables
+Use a staging table to perform a merge (upsert)
+Schedule around maintenance windows
+
+
+Amazon Redshift best practices for designing queries
+Working with recommendations from Amazon Redshift Advisor
+Viewing Amazon Redshift Advisor recommendations on the console
+Amazon Redshift Advisor recommendations
+
+
+Tutorials for Amazon Redshift
+Designing tables
+Choosing a column compression type
+Compression encodings
+Raw encoding
+AZ64 encoding
+Byte-dictionary encoding
+Delta encoding
+LZO encoding
+Mostly encoding
+Runlength encoding
+Text255 and Text32k encodings
+Zstandard encoding
+
+
+Testing compression encodings
+Example: Choosing compression encodings for the CUSTOMER table
+
+
+Choosing a data distribution style
+Distribution styles
+Viewing distribution styles
+Evaluating query patterns
+Designating distribution styles
+Evaluating the query plan
+Query plan example
+Distribution examples
+
+
+Choosing sort keys
+Comparing sort styles
+
+
+Defining constraints
+Analyzing table design
+Tutorial: Tuning table design
+Step 1: Create a test data set
+Step 2: Test system performance to establish a baseline
+Step 3: Select sort keys
+Step 4: Select distribution styles
+Step 5: Review compression encodings
+Step 6: Recreate the test data set
+Step 7: Retest system performance after tuning
+Step 8: Evaluate the results
+Step 9: Clean up your resources
+Summary
+
+
+Loading data
+Using a COPY command to load data
+Credentials and access permissions
+Preparing your input data
+Loading data from Amazon S3
+Splitting your data into multiple files
+Uploading files to Amazon S3
+Managing data consistency
+Uploading encrypted data to Amazon S3
+Verifying that the correct files are present in your bucket
+
+
+Using the COPY command to load from Amazon S3
+Using a manifest to specify data files
+Loading compressed data files from Amazon S3
+Loading fixed-width data from Amazon S3
+Loading multibyte data from Amazon S3
+Loading encrypted data files from Amazon S3
+
+
+
+
+Loading data from Amazon EMR
+Step 1: Configure IAM permissions
+Step 2: Create an Amazon EMR cluster
+Step 3: Retrieve the Amazon Redshift cluster public key and cluster node IP addresses
+Step 4: Add the Amazon Redshift cluster public key to each Amazon EC2 host's authorized keys file
+Step 5: Configure the hosts to accept all of the Amazon Redshift cluster's IP addresses
+Step 6: Run the COPY command to load the data
+
+
+Loading data from remote hosts
+Step 1: Retrieve the cluster public key and cluster node IP addresses
+Step 2: Add the Amazon Redshift cluster public key to the host's authorized keys file
+Step 3: Configure the host to accept all of the Amazon Redshift cluster's IP addresses
+Step 4: Get the public key for the host
+Step 5: Create a manifest file
+Step 6: Upload the manifest file to an Amazon S3 bucket
+Step 7: Run the COPY command to load the data
+
+
+Loading data from an Amazon DynamoDB table
+Verifying that the data loaded correctly
+Validating input data
+Loading tables with automatic compression
+Optimizing storage for narrow tables
+Loading default column values
+Troubleshooting data loads
+S3ServiceException errors
+System tables for troubleshooting data loads
+Multibyte character load errors
+Load error reference
+
+
+
+
+Updating tables with DML commands
+Updating and inserting new data
+Creating a temporary staging table
+Performing a merge operation by replacing existing rows
+Performing a merge operation by specifying a column list
+Merge examples
+
+
+Performing a deep copy
+Analyzing tables
+ANALYZE command history
+
+
+Vacuuming tables
+Managing vacuum times
+Deciding whether to reindex
+Managing the size of the unsorted region
+Managing the volume of merged rows
+Loading your data in sort key order
+Using time series tables
+
+
+
+
+Managing concurrent write operations
+Serializable isolation
+Write and read-write operations
+Concurrent write examples
+
+
+Tutorial: Loading data from Amazon S3
+Step 1: Create a cluster
+Step 2: Download the data files
+Step 3: Upload the files to an Amazon S3 bucket
+Step 4: Create the sample tables
+Step 5: Run the COPY commands
+Step 6: Vacuum and analyze the database
+Step 7: Clean up your resources
+Summary
+
+
+Unloading data
+Unloading data to Amazon S3
+Unloading encrypted data files
+Unloading data in delimited or fixed-width format
+Reloading unloaded data
+Creating user-defined functions
+UDF security and privileges
+Creating a scalar SQL UDF
+Creating a scalar Python UDF
+Python UDF data types
+Python language support for UDFs
+UDF constraints
+
+
+Naming UDFs
+Logging errors and warnings in UDFs
+Creating stored procedures in Amazon Redshift
+Overview of stored procedures in Amazon Redshift
+Naming stored procedures
+Security and privileges for stored procedures
+Returning a result set
+Managing transactions
+Trapping errors
+Logging stored procedures
+Limits and differences for stored procedure support
+
+
+PL/pgSQL language reference
+PL/pgSQL reference conventions
+Structure of PL/pgSQL
+Supported PL/pgSQL statements
+
+
+Creating materialized views in Amazon Redshift
+Querying spatial data in Amazon Redshift
+Limitations when using spatial data with Amazon Redshift
+Querying data with federated queries in Amazon Redshift
+Getting started with using federated queries
+Creating a secret and an IAM role to use federated queries
+Example of using a federated query
+Data type differences between Amazon Redshift and supported RDS PostgreSQL or Aurora PostgreSQL databases
+Limitations and considerations when accessing federated data with Amazon Redshift
+Querying external data using Amazon Redshift Spectrum
+Getting started with Amazon Redshift Spectrum
+Step 1. Create an IAM role for Amazon Redshift
+Step 2: Associate the IAM role with your cluster
+Step 3: Create an external schema and an external table
+Step 4: Query your data in Amazon S3
+
+
+IAM policies for Amazon Redshift Spectrum
+Using Redshift Spectrum with AWS Lake Formation
+Creating data files for queries in Amazon Redshift Spectrum
+Creating external schemas for Amazon Redshift Spectrum
+Creating external tables for Amazon Redshift Spectrum
+Improving Amazon Redshift Spectrum query performance
+Monitoring metrics in Amazon Redshift Spectrum
+Troubleshooting queries in Amazon Redshift Spectrum
+Tutorial: Querying nested data with Amazon Redshift Spectrum
+Step 1: Create an external table that contains nested data
+Step 2: Query your nested data in Amazon S3 with SQL extensions
+Nested data use cases
+Nested data limitations
+Serializing complex nested JSON
+
+
+Tuning query performance
+Query processing
+Query planning and execution workflow
+Query plan
+Reviewing query plan steps
+Factors affecting query performance
+
+
+Analyzing and improving queries
+Query analysis workflow
+Reviewing query alerts
+Analyzing the query plan
+Analyzing the query summary
+Using the SVL_QUERY_SUMMARY view
+Using the SVL_QUERY_REPORT view
+Mapping the query plan to the query summary
+
+
+Improving query performance
+Diagnostic queries for query tuning
+
+
+Troubleshooting queries
+Implementing workload management
+Modifying the WLM configuration
+Implementing automatic WLM
+Query priority
+
+
+Implementing manual WLM
+WLM query queue hopping
+Tutorial: Configuring manual workload management (WLM) queues
+Section 1: Understanding the default queue processing behavior
+Section 2: Modifying the WLM query queue configuration
+Section 3: Routing queries to queues based on user groups and query groups
+Section 4: Using wlm_query_slot_count to temporarily override the concurrency level in a queue
+Section 5: Cleaning up your resources
+
+
+
+
+Working with concurrency scaling
+Working with short query acceleration
+WLM queue assignment rules
+Assigning queries to queues
+WLM dynamic and static configuration properties
+WLM dynamic memory allocation
+Dynamic WLM example
+
+
+WLM query monitoring rules
+WLM system tables and views
+Managing database security
+Amazon Redshift security overview
+Default database user privileges
+Superusers
+Users
+Groups
+Schemas
+Example for controlling user and group access
+SQL reference
+Amazon Redshift SQL
+SQL functions supported on the leader node
+Amazon Redshift and PostgreSQL
+Amazon Redshift and PostgreSQL JDBC and ODBC
+Features that are implemented differently
+Unsupported PostgreSQL features
+Unsupported PostgreSQL data types
+Unsupported PostgreSQL functions
+
+
+
+
+Using SQL
+SQL reference conventions
+Basic elements
+Names and identifiers
+Literals
+Nulls
+Data types
+Numeric types
+Computations with numeric values
+Integer and floating-point literals
+Examples with numeric types
+Character types
+Examples with character types
+Datetime types
+Examples with datetime types
+Date and timestamp literals
+Interval literals
+Boolean type
+Type compatibility and conversion
+
+
+Collation sequences
+
+
+Expressions
+Compound expressions
+Expression lists
+Scalar subqueries
+Function expressions
+
+
+Conditions
+Comparison condition
+Logical conditions
+Pattern-matching conditions
+LIKE
+SIMILAR TO
+POSIX operators
+
+
+BETWEEN range condition
+Null condition
+EXISTS condition
+IN condition
+
+
+
+
+SQL commands
+ABORT
+ALTER DATABASE
+ALTER DEFAULT PRIVILEGES
+ALTER GROUP
+ALTER PROCEDURE
+ALTER SCHEMA
+ALTER TABLE
+ALTER TABLE examples
+ALTER EXTERNAL TABLE examples
+ALTER TABLE ADD and DROP COLUMN examples
+
+
+ALTER TABLE APPEND
+ALTER USER
+ANALYZE
+ANALYZE COMPRESSION
+BEGIN
+CALL
+CANCEL
+CLOSE
+COMMENT
+COMMIT
+COPY
+COPY parameter reference
+Data sources
+COPY from Amazon S3
+COPY from Amazon EMR
+COPY from remote host (SSH)
+COPY from Amazon DynamoDB
+Authorization parameters
+Column mapping options
+Data format parameters
+File compression parameters
+Data conversion parameters
+Data load operations
+Alphabetical parameter list
+
+
+Usage notes
+Permissions to access other AWS Resources
+Loading multibyte data from Amazon S3
+Loading a column of the GEOMETRY data type
+Errors when reading multiple files
+COPY from JSON format
+COPY from columnar data formats
+DATEFORMAT and TIMEFORMAT strings
+Using automatic recognition with DATEFORMAT and TIMEFORMAT
+
+
+COPY examples
+
+
+CREATE DATABASE
+CREATE EXTERNAL SCHEMA
+CREATE EXTERNAL TABLE
+CREATE FUNCTION
+CREATE GROUP
+CREATE LIBRARY
+CREATE MATERIALIZED VIEW
+CREATE PROCEDURE
+CREATE SCHEMA
+CREATE TABLE
+Usage notes
+Examples
+
+
+CREATE TABLE AS
+CTAS usage notes
+CTAS examples
+
+
+CREATE USER
+CREATE VIEW
+DEALLOCATE
+DECLARE
+DELETE
+DROP DATABASE
+DROP FUNCTION
+DROP GROUP
+DROP LIBRARY
+DROP MATERIALIZED VIEW
+DROP PROCEDURE
+DROP SCHEMA
+DROP TABLE
+DROP USER
+DROP VIEW
+END
+EXECUTE
+EXPLAIN
+FETCH
+GRANT
+INSERT
+INSERT examples
+
+
+INSERT (external table)
+LOCK
+PREPARE
+REFRESH MATERIALIZED VIEW
+RESET
+REVOKE
+ROLLBACK
+SELECT
+WITH clause
+SELECT list
+Examples with TOP
+SELECT DISTINCT examples
+
+
+FROM clause
+WHERE clause
+Oracle-Style outer joins in the WHERE clause
+
+
+GROUP BY clause
+HAVING clause
+UNION, INTERSECT, and EXCEPT
+Example UNION queries
+Example UNION ALL query
+Example INTERSECT queries
+Example EXCEPT query
+
+
+ORDER BY clause
+Examples with ORDER BY
+
+
+Join examples
+Subquery examples
+Correlated subqueries
+
+
+SELECT INTO
+SET
+SET SESSION AUTHORIZATION
+SET SESSION CHARACTERISTICS
+SHOW
+SHOW PROCEDURE
+START TRANSACTION
+TRUNCATE
+UNLOAD
+UNLOAD examples
+
+
+UPDATE
+Examples of UPDATE statements
+
+
+VACUUM
+
+
+SQL functions reference
+Leader node–only functions
+Compute node–only functions
+Aggregate functions
+APPROXIMATE PERCENTILE_DISC function
+AVG function
+COUNT function
+LISTAGG function
+MAX function
+MEDIAN function
+MIN function
+PERCENTILE_CONT function
+STDDEV_SAMP and STDDEV_POP functions
+SUM function
+VAR_SAMP and VAR_POP functions
+
+
+Bit-wise aggregate functions
+BIT_AND function
+BIT_OR function
+BOOL_AND function
+BOOL_OR function
+
+
+Window functions
+Window function syntax summary
+Unique ordering of data for window functions
+AVG window function
+COUNT window function
+CUME_DIST window function
+DENSE_RANK window function
+FIRST_VALUE and LAST_VALUE window functions
+LAG window function
+LEAD window function
+LISTAGG window function
+MAX window function
+MEDIAN window function
+MIN window function
+NTH_VALUE window function
+NTILE window function
+PERCENT_RANK window function
+PERCENTILE_CONT window function
+PERCENTILE_DISC window function
+RANK window function
+RATIO_TO_REPORT window function
+ROW_NUMBER window function
+STDDEV_SAMP and STDDEV_POP window functions
+SUM window function
+VAR_SAMP and VAR_POP window functions
+
+
+Conditional expressions
+CASE expression
+COALESCE
+DECODE expression
+GREATEST and LEAST
+NVL expression
+NVL2 expression
+NULLIF expression
+
+
+Date and time functions
+ADD_MONTHS function
+AT TIME ZONE function
+CONVERT_TIMEZONE function
+CURRENT_DATE function
+DATE_CMP function
+DATE_CMP_TIMESTAMP function
+DATE_CMP_TIMESTAMPTZ function
+DATE_PART_YEAR function
+DATEADD function
+DATEDIFF function
+DATE_PART function
+DATE_TRUNC function
+EXTRACT function
+GETDATE function
+INTERVAL_CMP function
+LAST_DAY function
+MONTHS_BETWEEN function
+NEXT_DAY function
+SYSDATE function
+TIMEOFDAY function
+TIMESTAMP_CMP function
+TIMESTAMP_CMP_DATE function
+TIMESTAMP_CMP_TIMESTAMPTZ function
+TIMESTAMPTZ_CMP function
+TIMESTAMPTZ_CMP_DATE function
+TIMESTAMPTZ_CMP_TIMESTAMP function
+TIMEZONE function
+TO_TIMESTAMP function
+TRUNC Date function
+Dateparts for Date or Time Stamp functions
+
+
+Spatial functions
+GeometryType
+ST_AddPoint
+ST_Area
+ST_AsBinary
+ST_AsEWKB
+ST_AsEWKT
+ST_AsGeoJSON
+ST_AsText
+ST_Azimuth
+ST_Contains
+ST_CoveredBy
+ST_Covers
+ST_Dimension
+ST_Disjoint
+ST_Distance
+ST_DistanceSphere
+ST_DWithin
+ST_EndPoint
+ST_Envelope
+ST_Equals
+ST_GeometryN
+ST_GeometryType
+ST_GeomFromEWKB
+ST_GeomFromText
+ST_GeomFromWKB
+ST_Intersects
+ST_IsClosed
+ST_IsCollection
+ST_IsEmpty
+ST_Length
+ST_Length2D
+ST_LineFromMultiPoint
+ST_MakeLine
+ST_MakePoint
+ST_MakePolygon
+ST_MemSize
+ST_NPoints
+ST_NRings
+ST_NumGeometries
+ST_NumInteriorRings
+ST_NumPoints
+ST_Perimeter
+ST_Perimeter2D
+ST_Point
+ST_PointN
+ST_Polygon
+ST_RemovePoint
+ST_SetSRID
+ST_SRID
+ST_StartPoint
+ST_Touches
+ST_Within
+ST_X
+ST_XMax
+ST_XMin
+ST_Y
+ST_YMax
+ST_YMin
+
+
+Math functions
+Mathematical operator symbols
+ABS function
+ACOS function
+ASIN function
+ATAN function
+ATAN2 function
+CBRT function
+CEILING (or CEIL) function
+COS function
+COT function
+DEGREES function
+DEXP function
+DLOG1 function
+DLOG10 function
+EXP function
+FLOOR function
+LN function
+LOG function
+MOD function
+PI function
+POWER function
+RADIANS function
+RANDOM function
+ROUND function
+SIN function
+SIGN function
+SQRT function
+TAN function
+TO_HEX function
+TRUNC function
+
+
+String functions
+|| (Concatenation) operator
+BPCHARCMP function
+BTRIM function
+BTTEXT_PATTERN_CMP function
+CHAR_LENGTH function
+CHARACTER_LENGTH function
+CHARINDEX Function
+CHR function
+CONCAT
+CRC32 function
+INITCAP function
+LEFT and RIGHT functions
+LEN function
+LENGTH function
+LOWER function
+LPAD and RPAD functions
+LTRIM function
+OCTET_LENGTH function
+POSITION function
+QUOTE_IDENT function
+QUOTE_LITERAL function
+REGEXP_COUNT function
+REGEXP_INSTR function
+REGEXP_REPLACE function
+REGEXP_SUBSTR function
+REPEAT function
+REPLACE function
+REPLICATE function
+REVERSE function
+RTRIM function
+SPLIT_PART function
+STRPOS function
+STRTOL function
+SUBSTRING function
+TEXTLEN function
+TRANSLATE function
+TRIM function
+UPPER function
+
+
+Hash functions
+CHECKSUM function
+FUNC_SHA1 function
+FNV_HASH function
+MD5 function
+SHA function
+SHA1 function
+SHA2 function
+
+
+JSON functions
+IS_VALID_JSON function
+IS_VALID_JSON_ARRAY function
+JSON_ARRAY_LENGTH function
+JSON_EXTRACT_ARRAY_ELEMENT_TEXT function
+JSON_EXTRACT_PATH_TEXT function
+
+
+Data type formatting functions
+CAST and CONVERT functions
+TO_CHAR
+TO_DATE
+TO_NUMBER
+Datetime format strings
+Numeric Format Strings
+
+
+System administration functions
+CHANGE_QUERY_PRIORITY
+CHANGE_SESSION_PRIORITY
+CHANGE_USER_PRIORITY
+CURRENT_SETTING
+PG_CANCEL_BACKEND
+PG_TERMINATE_BACKEND
+SET_CONFIG
+
+
+System information functions
+CURRENT_DATABASE
+CURRENT_SCHEMA
+CURRENT_SCHEMAS
+CURRENT_USER
+CURRENT_USER_ID
+HAS_DATABASE_PRIVILEGE
+HAS_SCHEMA_PRIVILEGE
+HAS_TABLE_PRIVILEGE
+PG_BACKEND_PID
+PG_GET_COLS
+PG_GET_LATE_BINDING_VIEW_COLS
+PG_LAST_COPY_COUNT
+PG_LAST_COPY_ID
+PG_LAST_UNLOAD_ID
+PG_LAST_QUERY_ID
+PG_LAST_UNLOAD_COUNT
+SESSION_USER
+SLICE_NUM Function
+USER
+VERSION
+
+
+
+
+Reserved words
+System tables reference
+System tables and views
+Types of system tables and views
+Visibility of data in system tables and views
+STV tables for snapshot data
+STV_ACTIVE_CURSORS
+STV_BLOCKLIST
+STV_CURSOR_CONFIGURATION
+STV_EXEC_STATE
+STV_INFLIGHT
+STV_LOAD_STATE
+STV_LOCKS
+STV_MV_INFO
+STV_PARTITIONS
+STV_QUERY_METRICS
+STV_RECENTS
+STV_SESSIONS
+STV_SLICES
+STV_STARTUP_RECOVERY_STATE
+STV_TBL_PERM
+STV_TBL_TRANS
+STV_WLM_QMR_CONFIG
+STV_WLM_CLASSIFICATION_CONFIG
+STV_WLM_QUERY_QUEUE_STATE
+STV_WLM_QUERY_STATE
+STV_WLM_QUERY_TASK_STATE
+STV_WLM_SERVICE_CLASS_CONFIG
+STV_WLM_SERVICE_CLASS_STATE
+
+
+System views
+STL views for logging
+STL_AGGR
+STL_ALERT_EVENT_LOG
+STL_ANALYZE
+STL_ANALYZE_COMPRESSION
+STL_BCAST
+STL_COMMIT_STATS
+STL_CONNECTION_LOG
+STL_DDLTEXT
+STL_DELETE
+STL_DISK_FULL_DIAG
+STL_DIST
+STL_ERROR
+STL_EXPLAIN
+STL_FILE_SCAN
+STL_HASH
+STL_HASHJOIN
+STL_INSERT
+STL_LIMIT
+STL_LOAD_COMMITS
+STL_LOAD_ERRORS
+STL_LOADERROR_DETAIL
+STL_MERGE
+STL_MERGEJOIN
+STL_MV_STATE
+STL_NESTLOOP
+STL_PARSE
+STL_PLAN_INFO
+STL_PROJECT
+STL_QUERY
+STL_QUERY_METRICS
+STL_QUERYTEXT
+STL_REPLACEMENTS
+STL_RESTARTED_SESSIONS
+STL_RETURN
+STL_S3CLIENT
+STL_S3CLIENT_ERROR
+STL_SAVE
+STL_SCAN
+STL_SCHEMA_QUOTA_VIOLATIONS
+STL_SESSIONS
+STL_SORT
+STL_SSHCLIENT_ERROR
+STL_STREAM_SEGS
+STL_TR_CONFLICT
+STL_UNDONE
+STL_UNIQUE
+STL_UNLOAD_LOG
+STL_USAGE_CONTROL
+STL_USERLOG
+STL_UTILITYTEXT
+STL_VACUUM
+STL_WINDOW
+STL_WLM_ERROR
+STL_WLM_RULE_ACTION
+STL_WLM_QUERY
+
+
+SVCS views
+SVCS_ALERT_EVENT_LOG
+SVCS_COMPILE
+SVCS_CONCURRENCY_SCALING_USAGE
+SVCS_EXPLAIN
+SVCS_PLAN_INFO
+SVCS_QUERY_SUMMARY
+SVCS_S3LIST
+SVCS_S3LOG
+SVCS_S3PARTITION_SUMMARY
+SVCS_S3QUERY_SUMMARY
+SVCS_STREAM_SEGS
+SVCS_UNLOAD_LOG
+
+
+SVL views
+SVL_COMPILE
+SVL_FEDERATED_QUERY
+SVL_MULTI_STATEMENT_VIOLATIONS
+SVL_MV_REFRESH_STATUS
+SVL_QERROR
+SVL_QLOG
+SVL_QUERY_METRICS
+SVL_QUERY_METRICS_SUMMARY
+SVL_QUERY_QUEUE_INFO
+SVL_QUERY_REPORT
+SVL_QUERY_SUMMARY
+SVL_S3LIST
+SVL_S3LOG
+SVL_S3PARTITION
+SVL_S3PARTITION_SUMMARY
+SVL_S3QUERY
+SVL_S3QUERY_SUMMARY
+SVL_S3RETRIES
+SVL_STATEMENTTEXT
+SVL_STORED_PROC_CALL
+SVL_STORED_PROC_MESSAGES
+SVL_TERMINATE
+SVL_UDF_LOG
+SVL_USER_INFO
+SVL_VACUUM_PERCENTAGE
+
+
+SVV views
+SVV_COLUMNS
+SVV_DISKUSAGE
+SVV_EXTERNAL_COLUMNS
+SVV_EXTERNAL_DATABASES
+SVV_EXTERNAL_PARTITIONS
+SVV_EXTERNAL_SCHEMAS
+SVV_EXTERNAL_TABLES
+SVV_INTERLEAVED_COLUMNS
+SVV_QUERY_INFLIGHT
+SVV_QUERY_STATE
+SVV_SCHEMA_QUOTA_STATE
+SVV_TABLES
+SVV_TABLE_INFO
+SVV_TRANSACTIONS
+SVV_VACUUM_PROGRESS
+SVV_VACUUM_SUMMARY
+
+
+
+
+System catalog tables
+PG_ATTRIBUTE_INFO
+PG_CLASS_INFO
+PG_DATABASE_INFO
+PG_DEFAULT_ACL
+PG_EXTERNAL_SCHEMA
+PG_LIBRARY
+PG_PROC_INFO
+PG_STATISTIC_INDICATOR
+PG_TABLE_DEF
+Querying the catalog tables
+Examples of catalog queries
+
+
+
+
+Configuration reference
+Modifying the server configuration
+analyze_threshold_percent
+datestyle
+describe_field_name_in_uppercase
+enable_result_cache_for_session
+enable_vacuum_boost
+error_on_nondeterministic_update
+extra_float_digits
+json_serialization_enable
+json_serialization_parse_nested_strings
+max_concurrency_scaling_clusters
+max_cursor_result_set_size
+query_group
+search_path
+statement_timeout
+stored_proc_log_min_messages
+timezone
+wlm_query_slot_count
+Sample database
+CATEGORY table
+DATE table
+EVENT table
+VENUE table
+USERS table
+LISTING table
+SALES table
+Appendix: Time zone names and abbreviations
+Time zone names
+Time zone abbreviations
+Document history

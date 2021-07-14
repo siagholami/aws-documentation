@@ -1,0 +1,17 @@
+Quotas for CodeGuru Profiler
+The following tables list the current quotas in Amazon CodeGuru Profiler. These quotas are for each supported AWS Region for each AWS account, unless otherwise specified. 
+Profiling groups
+
+
+
+
+Resource
+Default
+
+
+
+
+Maximum number of profiling groups
+50
+
+

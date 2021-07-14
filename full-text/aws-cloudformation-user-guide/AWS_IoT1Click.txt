@@ -1,0 +1,5 @@
+IoT1Click resource type reference
+Resource types
+ AWS::IoT1Click::Device
+ AWS::IoT1Click::Placement
+ AWS::IoT1Click::Project

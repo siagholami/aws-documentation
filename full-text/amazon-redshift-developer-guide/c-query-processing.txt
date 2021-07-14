@@ -1,0 +1,7 @@
+Query processing
+Amazon Redshift routes a submitted SQL query through the parser and optimizer to develop a query plan. The execution engine then translates the query plan into code and sends that code to the compute nodes for execution.
+Topics
+ Query planning and execution workflow
+ Query plan
+ Reviewing query plan steps
+ Factors affecting query performance

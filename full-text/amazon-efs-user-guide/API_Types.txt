@@ -1,0 +1,12 @@
+Data Types
+The following data types are supported:
+  AccessPointDescription 
+  BackupPolicy 
+  CreationInfo 
+  FileSystemDescription 
+  FileSystemSize 
+  LifecyclePolicy 
+  MountTargetDescription 
+  PosixUser 
+  RootDirectory 
+  Tag 

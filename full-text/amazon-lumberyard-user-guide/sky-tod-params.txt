@@ -1,0 +1,15 @@
+Setting Dawn and Dusk Effects
+You can simulate the changing lighting effects that are caused by the sun moving across a dynamic sky. You can set sunrise time, duration of dawn, sunset time, duration of dusk, current time, and the path of the sun.
+To set dawn and dusk effects
+
+
+In Lumberyard Editor, choose Tools, Other, Sun Trajectory Tool.
+
+
+In the Sun Trajectory Tool, set the following properties and parameter values as needed.  
+
+
+
+[See the AWS documentation website for more details]
+
+Close the Sun Trajectory Tool editor.

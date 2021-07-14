@@ -1,0 +1,82 @@
+Cleaning up your example resources
+If you created your static website as a learning exercise, you should delete the AWS resources that you allocated so that you no longer accrue charges. After you delete your AWS resources, your website is no longer available.
+Topics
+ Step 1: Delete the Amazon CloudFront distribution
+ Step 2: Delete the Route 53 hosted zone
+ Step 3: Disable logging and delete your S3 bucket
+Step 1: Delete the Amazon CloudFront distribution
+Before you delete an Amazon CloudFront distribution, you must disable it. A disabled distribution is no longer functional and does not accrue charges. You can enable a disabled distribution at any time. After you delete a disabled distribution, it is no longer available.
+To disable and delete a CloudFront distribution
+
+
+Open the CloudFront console at  https://console.aws.amazon.com/cloudfront/.
+
+
+Select the distribution that you want to disable, and then choose Disable.
+
+
+When prompted for confirmation, choose Yes, Disable.
+
+
+Select the disabled distribution, and then choose Delete.
+
+
+When prompted for confirmation, choose Yes, Delete.
+
+
+Step 2: Delete the Route 53 hosted zone
+Before you delete the hosted zone, you must delete the record sets that you created. You don't need to delete the NS and SOA records; these are automatically deleted when you delete the hosted zone.
+To delete the record sets
+
+
+Open the Route 53 console at https://console.aws.amazon.com/route53/.
+
+
+In the list of domain names, select your domain name, and then choose Go to Record Sets. 
+
+
+In the list of record sets, select the A records that you created. 
+
+
+The type of each record set is listed in the Type column. 
+
+
+Choose Delete Record Set. 
+
+
+When prompted for confirmation, choose Confirm. 
+
+
+To delete a Route 53 hosted zone
+
+
+Continuing from the previous procedure, choose Back to Hosted Zones. 
+
+
+Select your domain name, and then choose Delete Hosted Zone. 
+
+
+When prompted for confirmation, choose Confirm. 
+
+
+Step 3: Disable logging and delete your S3 bucket
+Before you delete your S3 bucket, make sure that logging is disabled for the bucket. Otherwise, AWS continues to write logs to your bucket as you delete it.
+To disable logging for a bucket
+
+
+Open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+
+
+Under Buckets, choose your bucket name, and then choose Properties.
+
+
+From Properties, choose Logging.
+
+
+Clear the Enabled check box.
+
+
+Choose Save.
+
+
+Now, you can delete your bucket. For more information, see How Do I Delete an S3 Bucket? in the Amazon Simple Storage Service Console User Guide.

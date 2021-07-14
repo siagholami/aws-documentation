@@ -1,0 +1,30 @@
+Amazon Lex Model Building Service
+The following data types are supported by Amazon Lex Model Building Service:
+  BotAliasMetadata 
+  BotChannelAssociation 
+  BotMetadata 
+  BuiltinIntentMetadata 
+  BuiltinIntentSlot 
+  BuiltinSlotTypeMetadata 
+  CodeHook 
+  ConversationLogsRequest 
+  ConversationLogsResponse 
+  EnumerationValue 
+  FollowUpPrompt 
+  FulfillmentActivity 
+  Intent 
+  IntentMetadata 
+  KendraConfiguration 
+  LogSettingsRequest 
+  LogSettingsResponse 
+  Message 
+  Prompt 
+  ResourceReference 
+  Slot 
+  SlotTypeConfiguration 
+  SlotTypeMetadata 
+  SlotTypeRegexConfiguration 
+  Statement 
+  Tag 
+  UtteranceData 
+  UtteranceList 

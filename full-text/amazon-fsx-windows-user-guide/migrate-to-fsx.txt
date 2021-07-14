@@ -1,0 +1,5 @@
+Migrating Existing File Storage to Amazon FSx
+You can migrate files and file share configurations from your on-premises file systems to your Amazon FSx for Windows File Server file systems, as described following.
+Topics
+ Migrating Existing File Storage to Amazon FSx for Windows File Server
+ Migrating File Share Configurations to Amazon FSx

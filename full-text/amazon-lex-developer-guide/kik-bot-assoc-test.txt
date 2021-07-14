@@ -1,0 +1,12 @@
+Step 4: Test the Integration
+Now that you have created an association between your Amazon Lex bot and Kik, you can use the Kik app to test the association.
+
+
+Start the Kik app and log in. Select the bot that you created.
+
+
+You can test the bot with the following:
+
+
+
+As you enter each phrase, your Amazon Lex bot will respond through Kik with the prompt that you created for each slot.

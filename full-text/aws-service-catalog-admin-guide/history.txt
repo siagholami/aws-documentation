@@ -1,0 +1,92 @@
+Document History
+The following table describes important additions to the AWS Service Catalog documentation.
+
+
+
+Feature
+Description
+Release Date
+
+
+
+
+AWS Service Quotas
+To learn about how AWS Service Catalog works with AWS Service Quotas, see AWS Service Catalog default service quotas.
+March 24, 2020
+
+
+Getting Started Library
+To learn about the library of well-architected product templates offered by AWS Service Catalog, see Getting Started Library.
+March 10, 2020
+
+
+Version Guidance
+To learn about product version guidance, see Version Guidance.
+December 17, 2019
+
+
+Connector for Jira Service Desk
+To begin using the Connector for Jira Service Desk, see AWS Service Management Connector for Jira Service Desk.
+November 21, 2019
+
+
+New Version of Connector for ServiceNow
+To learn about the updates to the Connector for ServiceNow, see AWS Service Catalog Connector for ServiceNow.
+November 18, 2019
+
+
+New Security Chapter
+To learn about security in AWS Service Catalog, see Security in AWS Service Catalog.
+October 31, 2019
+
+
+Changing Provisioned Product Owner
+To learn about how to change the owner of provisioned products, see Changing Provisioned Product Owner.
+October 31, 2019
+
+
+New Resource Update Constraint
+To learn about how to use the RESOURCE_UPDATE constraint to update tags in provisioned products, see AWS Service Catalog Tag Update Constraints.
+April 17, 2019
+
+
+Connector for ServiceNow
+To begin using the Connector for ServiceNow, see AWS Service Catalog Connector for ServiceNow.
+March 19, 2019
+
+
+Support for AWS CloudFormation StackSets
+To begin using AWS CloudFormation StackSets, see Using AWS CloudFormation StackSets.
+November 14, 2018
+
+
+Self-service actions
+To begin using self-service actions, see AWS Service Catalog Service Actions.
+October 17, 2018
+
+
+CloudWatch metrics
+To learn about CloudWatch metrics, see AWS Service Catalog CloudWatch Metrics.
+September 26, 2018
+
+
+Support for TagOptions
+To manage tags, see AWS Service Catalog TagOption Library.
+June 28, 2017
+
+
+Importing a portfolio
+To import a portfolio shared from another AWS account, see Importing a Portfolio.
+February 16, 2016
+
+
+Updates to permissions information
+To grant access to the end user console view, see Console Access for End Users.
+February 16, 2016
+
+
+Initial release
+This is the initial release of the AWS Service Catalog Administrator Guide.
+July 9, 2015
+
+

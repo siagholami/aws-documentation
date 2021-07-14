@@ -1,0 +1,8 @@
+x-amazon-apigateway-importexport-version
+Specifies the version of the API Gateway import and export algorithm for HTTP APIs. Currently, the only supported value is 1.0. To learn more, see exportVersion in the API Gateway Version 2 API Reference.
+x-amazon-apigateway-importexport-version example
+The following example sets the import and export version to 1.0.
+{
+    "openapi": "3.0.1",
+    "x-amazon-apigateway-importexport-version": "1.0",
+    "info": { ...

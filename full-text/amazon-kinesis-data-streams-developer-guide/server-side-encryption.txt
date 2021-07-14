@@ -1,0 +1,10 @@
+Data Protection in Amazon Kinesis Data Streams
+Server-side encryption using AWS Key Management Service (AWS KMS) keys makes it easy for you to meet strict data management requirements by encrypting your data at rest within Amazon Kinesis Data Streams.
+Topics
+ What Is Server-Side Encryption for Kinesis Data Streams?
+ Costs, Regions, and Performance Considerations
+ How Do I Get Started with Server-Side Encryption?
+ Creating and Using User-Generated KMS Master Keys
+ Permissions to Use User-Generated KMS Master Keys
+ Verifying and Troubleshooting KMS Key Permissions
+ Using Amazon Kinesis Data Streams with Interface VPC Endpoints

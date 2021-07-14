@@ -1,0 +1,46 @@
+ForecastExportJobSummary
+Provides a summary of the forecast export job properties used in the ListForecastExportJobs operation. To get the complete set of properties, call the DescribeForecastExportJob operation, and provide the listed ForecastExportJobArn.
+Contents
+CreationTime 
+When the forecast export job was created.
+Type: Timestamp
+Required: No
+Destination 
+The path to the Amazon Simple Storage Service (Amazon S3) bucket where the forecast is exported.
+Type: DataDestination object
+Required: No
+ForecastExportJobArn 
+The Amazon Resource Name (ARN) of the forecast export job.
+Type: String
+Length Constraints: Maximum length of 256.
+Pattern: ^[a-zA-Z0-9\-\_\.\/\:]$ 
+Required: No
+ForecastExportJobName 
+The name of the forecast export job.
+Type: String
+Length Constraints: Minimum length of 1. Maximum length of 63.
+Pattern: ^[a-zA-Z][a-zA-Z0-9_]* 
+Required: No
+LastModificationTime 
+When the last successful export job finished.
+Type: Timestamp
+Required: No
+Message 
+If an error occurred, an informational message about the error.
+Type: String
+Required: No
+Status 
+The status of the forecast export job. States include:
+  ACTIVE 
+  CREATE_PENDING, CREATE_IN_PROGRESS, CREATE_FAILED 
+  DELETE_PENDING, DELETE_IN_PROGRESS, DELETE_FAILED 
+The Status of the forecast export job must be ACTIVE before you can access the forecast in your S3 bucket.
+Type: String
+Length Constraints: Maximum length of 256.
+Required: No
+See Also
+For more information about using this API in one of the language-specific AWS SDKs, see the following:
+  AWS SDK for C 
+  AWS SDK for Go 
+  AWS SDK for Java 
+  AWS SDK for Ruby V3 
