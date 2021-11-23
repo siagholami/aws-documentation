@@ -1,1 +1,3 @@
 # aws-documentation
+
+We present the AWS documentation corpus, an open-book QA dataset, which contains 25,175 documents along with 100 matched questions and answers. These questions are based on real customer questions on AWS services. There are two types of answers: text and yes-no-none answers. Text answers range from a few words to a full paragraph sourced from a continuous series of words in a document or from different locations within the same document. Yes-no-none answers can be yes, no, or none for cases where the returned result is empty and does not lead to a binary answer (i.e., yes or no). All questions in the dataset have a valid answer within the accompanying documents.
