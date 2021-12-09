@@ -1,0 +1,7 @@
+# Amazon Pinpoint Segments<a name="segments"></a>
+
+When you create a campaign, you choose a *segment* to send that campaign to\. A segment is a group of your customers that share certain attributes\. For example, a segment might contain all of your customers who use version 2\.0 of your app on an Android device, or all customers who live in the city of Los Angeles\. You can send multiple campaigns to a single segment, and you can send a single campaign to multiple segments\.
+
+There are two types of segments that you can create in Amazon Pinpoint:
++ **Dynamic segments** – Segments that are based on attributes that you define\. Dynamic segments can change over time\. For example, if you add new endpoints to Amazon Pinpoint, or if you modify or delete existing endpoints, the number of endpoints in that segment may increase or decrease\. For more information about dynamic segments, see [Building Segments](segments-building.md)\.
++ **Imported segments** – Segments that are created outside of Amazon Pinpoint and saved in CSV or JSON format\. When you create an imported segment, you upload your files to Amazon Simple Storage Service \(Amazon S3\)\. Amazon Pinpoint retrieves the files from Amazon S3 and creates new endpoints based on the contents of those files\. Imported segments are static—they never change\. When you create a new segment, you can use an imported segment as a base segment, and then refine it by adding filters\. For more information about importing segments, see [Importing Segments](segments-importing.md)\.

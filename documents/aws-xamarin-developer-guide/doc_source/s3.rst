@@ -1,0 +1,169 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+.. highlight:: csharp
+
+##################################
+Amazon Simple Storage Service (S3)
+##################################
+
+What is S3?
+===========
+
+`Amazon Simple Storage Service (Amazon S3) <http://aws.amazon.com/s3/>`_, provides developers with
+secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web
+services interface to store and retrieve any amount of data from anywhere on the web. With Amazon
+S3, you pay only for the storage you actually use. There is no minimum fee and no setup cost.
+
+Amazon S3 provides cost-effective object storage for a wide variety of use cases including cloud
+applications, content distribution, backup and archiving, disaster recovery, and big data analytics.
+
+For information about AWS S3 Region availability, see `AWS Service Region Availability
+<http://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/>`_.
+
+Key Concepts
+============
+
+Bucket
+------
+
+Every object you store in Amazon S3 resides in a bucket. You can use buckets to group related
+objects in the same way that you use a directory to group files in a file system. Buckets have
+properties, such as access permissions and versioning status, and you can specify the region where
+you want them to reside.
+
+To learn more about S3 Buckets, see `Working with Buckets
+<http://docs.aws.amazon.com/AmazonS3/latest/UG/BucketOperations.html>`_ in the S3 Developer Guide.
+
+Objects
+-------
+
+Objects are the data that you store in Amazon S3. Every object resides within a bucket you create in
+specific AWS region.
+
+Objects stored in a region never leave the region unless you explicitly transfer them to another
+region. For example, objects stored in the EU (Ireland) region never leave it. The objects stored in
+an Amazon S3 region physically remain in that region. Amazon S3 does not keep copies or move it to
+any other region. However, you can access the objects from anywhere, as long as you have necessary
+permissions.
+
+Objects can be any file type: images, backup data, movies, etc. An object can be as large as 5 TB.
+You can have an unlimited number of objects in a bucket.
+
+Before you can upload an object into Amazon S3, you must have write permissions to a bucket. For
+more information on setting bucket permissions, see `Editing Bucket Permissions
+<http://docs.aws.amazon.com/AmazonS3/latest/UG/EditingBucketPermissions.html>`_ in the S3 Developer
+Guide.
+
+To learn more about S3 objects, see `Working with Objects
+<http://docs.aws.amazon.com/AmazonS3/latest/UG/ObjectOperations.html>`_ in the S3 Developer Guide.
+
+Object Metadata
+---------------
+
+Each object in Amazon S3 has a set of key-value pairs that represents its metadata. There are two
+types of metadata:
+
+* **System metadata** – Sometimes processed by Amazon S3, e.g., Content-Type, and Content-Length.
+
+* **User metadata** – Never processed by Amazon S3. User metadata is stored with the object and
+  returned with it. The maximum size for user metadata is 2 KB, and both the keys and their values
+  must conform to US-ASCII standards.
+
+To learn more about S3 object metadata, see `Editing Object Metadata
+<http://docs.aws.amazon.com/AmazonS3/latest/UG/EditingtheMetadataofanObject.html>`_.
+
+Project Setup
+=============
+
+Prerequisites
+-------------
+
+To use Amazon S3 in your application, you'll need to add the SDK to your project. To do so, follow
+the instructions in :doc:`setup`.
+
+Create an S3 Bucket
+-------------------
+
+Amazon S3 stores your application's resources in Amazon S3 buckets - cloud storage containers that
+live in a specific `region <http://docs.aws.amazon.com/general/latest/gr/rande.html>`_. Each Amazon
+S3 bucket must have a globally unique name. You can use the `Amazon S3 Console
+<https://console.aws.amazon.com/s3/>`_ to create a bucket.
+
+#. Sign in to the `Amazon S3 console <https://console.aws.amazon.com/s3/>`_ and click
+   :guilabel:`Create Bucket`.
+
+#. Enter a bucket name, select a region, and click :guilabel:`Create`.
+
+Set Permissions for S3
+----------------------
+
+The default IAM role policy grants your application access to Amazon Mobile Analytics and Amazon
+Cognito Sync. In order for your Cognito identity pool to access Amazon S3, you must modify the
+identity pool's roles.
+
+#. Go to the `Identity and Access Management Console`_ and click :guilabel:`Roles` in the left-hand
+   pane.
+
+#. Type your identity pool name into the search box. Two roles will be listed: one for
+   unauthenticated users and one for authenticated users.
+
+#. Click the role for unauthenticated users (it will have unauth appended to your identity pool
+   name).
+
+#. Click :guilabel:`Create Role Policy`, select :guilabel:`Policy Generator`, and then click
+   :guilabel:`Select`.
+
+#. On the **Edit Permissions** page, enter the settings shown in the following image, replacing the
+   Amazon Resource Name (ARN) with your own. The ARN of an S3 bucket looks like
+   :code:`arn:aws:s3:::examplebucket/*` and is composed of the region in which the bucket is located
+   and the name of the bucket. The settings shown below will give your identity pool full to access
+   to all actions for the specified bucket.
+
+   .. image:: images/edit-permissions.png
+
+6. Click the :guilabel:`Add Statement` button and then click :guilabel:`Next Step`.
+
+7. The Wizard will show you the configuration that you generated. Click :guilabel:`Apply Policy`.
+
+For more information on granting access to S3, see `Granting Access to an Amazon S3 Bucket`_.
+
+(optional) Configure the Signature Version for S3 Requests
+----------------------------------------------------------
+
+Every interaction with Amazon S3 is either authenticated or anonymous. AWS uses the Signature
+Version 4 or Signature Version 2 algorithms to authenticate calls to the service.
+
+All new AWS regions created after January 2014 only support Signature Version 4. However, many older
+regions still support Signature Version 4 and Signature Version 2 requests.
+
+If your bucket is in one of the regions that does not support Signature Version 2 requests as listed
+on `this page <http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html>`_, you must
+set the AWSConfigsS3.UseSignatureVersion4 property to "true" like so::
+
+  AWSConfigsS3.UseSignatureVersion4 = true;
+
+For more information on AWS Signature versions, see `Authenticating Requests (AWS Signature Version
+4) <http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html>`_.
+
+Integrating S3 with Your Application
+====================================
+
+There are two ways to interact with S3 in your Xamarin application. The two methods are explored
+in-depth in the following topics:
+
+.. toctree::
+	:maxdepth: 1
+
+	s3-integration-transferutility
+	s3-integration-lowlevelapi
+
+.. _Identity and Access Management Console: https://console.aws.amazon.com/iam/home
+.. _Granting Access to an Amazon S3 Bucket: http://blogs.aws.amazon.com/security/post/Tx3VRSWZ6B3SHAV/Writing-IAM-Policies-How-to-grant-access-to-an-Amazon-S3-bucket

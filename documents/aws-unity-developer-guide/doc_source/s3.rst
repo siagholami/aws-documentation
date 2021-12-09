@@ -1,0 +1,250 @@
+.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+.. highlight:: csharp
+
+Amazon Simple Storage Service (S3)
+##################################
+
+Amazon Simple Storage Service (Amazon S3), provides developers and IT teams with secure, durable,
+highly-scalable object storage. Unity developers can take advantage of S3 to dynamically load assets
+used by their games. This can make games initially download quicker from app stores.
+
+For more information about S3, see `Amazon S3 <http://aws.amazon.com/s3/>`_.
+
+For information about AWS S3 Region availability, see `AWS Service Region Availability
+<http://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/>`_.
+
+.. note:: Some of the samples in this document assume the use of a text box variable called
+   ResultText to display trace output.
+
+Create and Configure an S3 Bucket
+=================================
+
+Amazon S3 stores your resources in Amazon S3 buckets - cloud storage containers that live in a
+specific `region <http://docs.aws.amazon.com/general/latest/gr/rande.html>`_. Each Amazon S3 bucket
+must have a globally unique name. You can use the `Amazon S3 Console
+<https://console.aws.amazon.com/s3/>`_ to create a bucket.
+
+Create an S3 Bucket
+-------------------
+
+#. Sign in to the `Amazon S3 console <https://console.aws.amazon.com/s3/>`_ and click
+   :guilabel:`Create Bucket`.
+
+#. Enter a bucket name, select a region, and click :guilabel:`Create`.
+
+Set Permissions for S3
+----------------------
+
+The default IAM role policy grants your application access to Amazon Mobile Analytics and Amazon
+Cognito Sync. In order for your Cognito identity pool to access Amazon S3, you must modify the
+identity pool's roles.
+
+#. Go to the `Identity and Access Management Console`_ and click :guilabel:`Roles` in the left-hand pane.
+
+#. Type your identity pool name into the search box. Two roles will be listed: one for
+   unauthenticated users and one for authenticated users.
+
+#. Click the role for unauthenticated users (it will have unauth appended to your identity pool name).
+
+#. Click :guilabel:`Create Role Policy`, select :guilabel:`Policy Generator`, and then click
+   :guilabel:`Select`.
+
+#. On the **Edit Permissions** page, enter the settings shown in the following image, replacing the
+   Amazon Resource Name (ARN) with your own. The ARN of an S3 bucket looks like
+   :code:`arn:aws:s3:::examplebucket/*` and is composed of the region in which the bucket is located
+   and the name of the bucket. The settings shown below will give your identity pool full to access
+   to all actions for the specified bucket.
+
+   .. image:: images/edit-permissions.png
+
+6. Click the :guilabel:`Add Statement` button and then click :guilabel:`Next Step`.
+
+7. The Wizard will show you the configuration that you generated. Click :guilabel:`Apply Policy`.
+
+For more information on granting access to S3, see `Granting Access to an Amazon S3 Bucket`_.
+
+Upload Files from the Console
+-----------------------------
+
+To upload a test file to your bucket:
+
+#. In the S3 console, in your bucket view, click :guilabel:`Upload`.
+
+#. Click :guilabel:`Add Files` and select a test file to upload. For this tutorial, we'll assume
+   you're uploading an image called :file:`myImage.jpg`.
+
+#. With your test image selected, click :guilabel:`Start Upload`.
+
+(optional) Configure the Signature Version for S3 Requests
+----------------------------------------------------------
+
+Every interaction with Amazon S3 is either authenticated or anonymous. AWS uses the Signature
+Version 4 or Signature Version 2 algorithms to authenticate calls to the service.
+
+All new AWS regions created after January 2014 only support Signature Version 4. However, many older
+regions still support Signature Version 4 and Signature Version 2 requests.
+
+If your bucket is in one of the regions that does not support Signature Version 2 requests as listed
+on `this page <http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html>`_, you must
+set the AWSConfigsS3.UseSignatureVersion4 property to "true".
+
+For more information on AWS Signature versions, see `Authenticating Requests (AWS Signature Version
+4) <http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html>`_.
+
+Create the Amazon S3 Client
+===========================
+
+To use Amazon S3, we first need to create an AmazonS3Client instance which takes a reference to the
+CognitoAWSCredentials instance you created previously::
+
+    AmazonS3Client S3Client = new AmazonS3Client (credentials);
+
+The ``AmazonS3Client`` class is the entry point to the high-level S3 API.
+
+List Buckets
+============
+
+To list the buckets in an AWS account call the ``AmazonS3Client.ListBucketsAsync`` method as shown
+in the following sample code::
+
+    // ResultText is a label used for displaying status information
+    ResultText.text = "Fetching all the Buckets";
+     Client.ListBucketsAsync(new ListBucketsRequest(), (responseObject) =>
+     {
+         ResultText.text += "\n";
+         if (responseObject.Exception == null)
+         {
+             ResultText.text += "Got Response \nPrinting now \n";
+             responseObject.Response.Buckets.ForEach((s3b) =>
+             {
+                 ResultText.text += string.Format("bucket = {0}, created date = {1} \n",
+                 s3b.BucketName, s3b.CreationDate);
+             });
+         }
+         else
+         {
+             ResultText.text += "Got Exception \n";
+         }
+     });
+
+List Objects
+============
+
+To list all of the objects in a bucket call the ``AmazonS3Client.ListObjectsAsync`` method as shown
+in the following sample code::
+
+    // ResultText is a label used for displaying status information
+    ResultText.text = "Fetching all the Objects from " + S3BucketName;
+
+    var request = new ListObjectsRequest()
+    {
+        BucketName = S3BucketName
+    };
+
+    Client.ListObjectsAsync(request, (responseObject) =>
+    {
+        ResultText.text += "\n";
+        if (responseObject.Exception == null)
+        {
+            ResultText.text += "Got Response \nPrinting now \n";
+            responseObject.Response.S3Objects.ForEach((o) =>
+            {
+                ResultText.text += string.Format("{0}\n", o.Key);
+            });
+        }
+        else
+        {
+            ResultText.text += "Got Exception \n";
+        }
+    });
+
+Download an Object
+==================
+
+To download an object, create a GetObjectRequest, specifying the bucket name and key and pass the
+object to a call to Client.GetObjectAsync::
+
+   private void GetObject()
+   {
+       ResultText.text = string.Format("fetching {0} from bucket {1}",
+       SampleFileName, S3BucketName);
+       Client.GetObjectAsync(S3BucketName, SampleFileName, (responseObj) =>
+       {
+          string data = null;
+          var response = responseObj.Response;
+          if (response.ResponseStream != null)
+          {
+             using (StreamReader reader = new StreamReader(response.ResponseStream))
+             {
+                data = reader.ReadToEnd();
+             }
+
+             ResultText.text += "\n";
+             ResultText.text += data;
+          }
+     });
+   }
+
+
+GetObjectAsync takes an instance of the GetObjectRequest, a callback, and an AsyncOptions instance.
+The callback must be of type: ``AmazonServiceCallback<GetObjectRequest, GetObjectResponse>``. The
+AsyncOptions instance is optional. If specified, it determines if the callback will run on the main
+thread.
+
+Upload an Object
+================
+
+To upload an object, write your object to a stream, create a new PostObjectRequest and specify the
+key, bucket name and stream data.
+
+The AWS SDK for Unity uses the WWW HTTP client which does not support the HTTP PUT operation. In
+order to upload an object to your S3 bucket, you need to use S3's Browser Post, as shown below.
+
+::
+
+    public void PostObject(string fileName)
+    {
+        ResultText.text = "Retrieving the file";
+
+        var stream = new FileStream(Application.persistentDataPath +
+        Path.DirectorySeparatorChar + fileName,
+        FileMode.Open, FileAccess.Read, FileShare.Read);
+
+        ResultText.text += "\nCreating request object";
+        var request = new PostObjectRequest()
+        {
+            Bucket = S3BucketName,
+            Key = fileName,
+            InputStream = stream,
+            CannedACL = S3CannedACL.Private
+        };
+
+        ResultText.text += "\nMaking HTTP post call";
+
+        Client.PostObjectAsync(request, (responseObj) =>
+        {
+            if (responseObj.Exception == null)
+            {
+                ResultText.text += string.Format("\nobject {0} posted to bucket {1}",
+                responseObj.Request.Key, responseObj.Request.Bucket);
+            }
+            else
+            {
+                ResultText.text += "\nException while posting the result object";
+                ResultText.text += string.Format("\n receieved error {0}",
+                responseObj.Response.HttpStatusCode.ToString());
+            }
+        });
+    }
+
+.. _Identity and Access Management Console: https://console.aws.amazon.com/iam/home
+.. _Granting Access to an Amazon S3 Bucket: http://blogs.aws.amazon.com/security/post/Tx3VRSWZ6B3SHAV/Writing-IAM-Policies-How-to-grant-access-to-an-Amazon-S3-bucket

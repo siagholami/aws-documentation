@@ -1,0 +1,46 @@
+# Monitoring your Amazon SES sending activity<a name="monitor-sending-activity"></a>
+
+Amazon SES provides methods to monitor your sending activity\. We recommend that you implement these methods so that you can keep track of important measures, such as your account's bounce, complaint and reject rates\. Excessively high bounce and complaint rates may jeopardize your ability to send emails using Amazon SES\. 
+
+You can also use these methods to measure the rates at which your customers engage with the emails you send\. For example, these sending metrics can help you identify your overall open and clickthrough rates\.
+
+The metrics that you can measure using Amazon SES are referred to as *email sending events*\. The email sending events that you can monitor are:
++ **Sends** – The call to Amazon SES was successful and Amazon SES will attempt to deliver the email\.
++ **Rejects** – Amazon SES accepted the email, determined that it contained a virus, and rejected it\. Amazon SES didn't attempt to deliver the email to the recipient's mail server\.
++ **Bounces** – The recipient's mail server permanently rejected the email\. This event corresponds to hard bounces\. Soft bounces are only included when Amazon SES fails to deliver the email after retrying for a period of time\.
++ **Complaints** – The email was successfully delivered to the recipient\. The recipient marked the email as spam\.
++ **Deliveries** – Amazon SES successfully delivered the email to the recipient's mail server\.
++ **Opens** – The recipient received the message and opened it in their email client\.
++ **Clicks** – The recipient clicked one or more links in the email\.
++ **Rendering Failures** – The email wasn't sent because of a template rendering issue\. This event type only occurs when you send email using the [SendTemplatedEmail](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html) or [SendBulkTemplatedEmail](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html) API operations\. This event type can occur when template data is missing, or when there is a mismatch between template parameters and data\.
++ **Delivery Delays** – The email couldn't be delivered to the recipient because a temporary issue occurred\. Delivery delays can occur, for example, when the recipient's inbox is full, or when the receiving email server experiences a transient issue\.
+**Note**  
+To add the `DELIVERY_DELAY` event type to an event destination, you have to use the [ UpdateConfigurationSetEventDestination](https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_UpdateConfigurationSetEventDestination.html) operation in the Amazon SES API V2\. Currently, you can't add this event type to a configuration set by using the Amazon SES console\.
+
+You can monitor email sending events in several ways\. The method you choose depends on the type of event you want to monitor, the granularity and level of detail you want to monitor it with, and the location where you want Amazon SES to publish the data\. You're required to use either feedback notifications or event publishing to track bounce and complaint events\. You can also choose to use multiple monitoring methods\. The characteristics of each method are listed in the following table\.
+
+
+| Monitoring Method | Events You Can Monitor | How to Access the Data | Level of Detail | Granularity | 
+| --- | --- | --- | --- | --- | 
+|  Amazon SES console  |  Deliveries and rejects  |  [Sending Statistics page](monitor-sending-activity-console.md) in Amazon SES console  |  Count only  |  Across entire AWS account  | 
+|  Amazon SES console  |  Bounce and complaint rates  |  [Reputation Dashboard page](reputation-dashboard-dg.md) in Amazon SES console  |  Calculated rates only  |  Across entire AWS account  | 
+|  Amazon SES API  |  Deliveries, bounces, complaints, and rejects  |  `GetSendStatistics` API operation  |  Count only  |  Across entire AWS account  | 
+|  Amazon CloudWatch console  |  Sends, deliveries, opens, clicks, bounces, bounce rate, complaints, complaint rate, and rejects  |  CloudWatch console  Some metrics don't appear in CloudWatch until the associated event occurs\. For example, bounce metrics don't appear in CloudWatch until at least one email that you send bounces, or until you generate a simulated bounce event by using the [mailbox simulator](send-email-simulator.md)\.   |  Count only  |  Across entire AWS account  | 
+|  Feedback notifications  |  Deliveries, bounces, and complaints  |  Amazon SNS notification \(deliveries, bounces, and complaints\) or email \(bounces and complaints only\)  |  Details on each event  |  Across entire AWS account  | 
+|  Event publishing  |  Sends, deliveries, opens, clicks, bounces, complaints, rejects, and rendering failures\.  |  Amazon CloudWatch or Amazon Kinesis Data Firehose, or by Amazon SNS notification  |  Details on each event  |  Fine\-grained \(based on user\-definable email characteristics\)  | 
+
+**Note**  
+The metrics measured by email sending events may not align perfectly with your sending quotas\. This discrepancy can be caused by email bounces and rejections, or by using the Amazon SES inbox simulator\. To find out how close you are to your sending quotas, see [Monitoring your sending quotas](manage-sending-quotas-monitor.md)\.
+
+**Topics**
++ [Monitoring your sending statistics using the Amazon SES console](monitor-sending-activity-console.md)
++ [Monitoring your usage statistics using the Amazon SES API](monitor-sending-activity-api.md)
++ [Monitoring Amazon SES email sending using notifications](monitor-sending-activity-using-notifications.md)
++ [Monitor email sending using Amazon SES event publishing](monitor-using-event-publishing.md)
+
+
+****  
+
+|  | 
+| --- |
+| For information and discussions about a variety of topics related to Amazon SES, see the [AWS Messaging and Targeting Blog](https://aws.amazon.com//blogs/messaging-and-targeting/)\. To browse and post questions, go to the [Amazon SES Forum](https://forums.aws.amazon.com/forum.jspa?forumID=90)\. | 

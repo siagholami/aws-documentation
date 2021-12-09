@@ -1,0 +1,10 @@
+# Next Steps<a name="gettingstarted-next-steps"></a>
+
+We hope that you use this tutorial as a starting point as you discover the additional capabilities of Amazon Pinpoint\. For example:
++ You can improve the delivery of your email campaigns by making sure that your campaigns align with industry best practices\. For more information, see [Tips and Best Practices](channels-email-best-practices.md)\.
++ You can verify an entire domain, which allows you to send email from any address on that domain\. For more information about verifying domains, see [Verifying a Domain](channels-email-manage-verify.md#channels-email-manage-verify-domain)\.
++ You can obtain dedicated IP addresses for sending your email\. Dedicated IP addresses are a great option for sending email in certain use cases\. For more information, see [Using Dedicated IP Addresses with Amazon Pinpoint](channels-email-dedicated-ips.md)\.
++ You can enable the Amazon Pinpoint Deliverability dashboard\. The Deliverability dashboard helps you identify issues that could impact the delivery of your emails\. For more information, see [The Amazon Pinpoint Deliverability Dashboard](channels-email-deliverability-dashboard.md)\.
++ You can send messages through other channels, such as SMS or push\. Before you can use these channels, you have to enable and configure them on the Settings page\. For more information about using the Settings page to enable and configure channels, see [Amazon Pinpoint Settings](settings.md)\.
++ You can send data about your campaigns outside of Amazon Pinpoint\. For example, you can send delivery and response data for your campaigns to Amazon S3 for long\-term storage\. You can also send data to Amazon Redshift to perform custom analyses\. For more information about sending your data outside of Amazon Pinpoint, see [Event Stream Settings](settings-event-streams.md)\.
++ You can integrate Amazon Pinpoint with your apps, or interact with Amazon Pinpoint programmatically, by using an AWS SDK\. For more information, see the [Amazon Pinpoint Developer Guide](https://docs.aws.amazon.com/pinpoint/latest/developerguide/)\.

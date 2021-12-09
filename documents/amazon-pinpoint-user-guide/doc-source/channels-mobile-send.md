@@ -1,0 +1,11 @@
+# Sending Email in Amazon Pinpoint<a name="channels-mobile-send"></a>
+
+There are several types of email that you can send using Amazon Pinpoint: campaign\-based email, journey\-based email, and transactional email\. *Campaign\-based emails* are messages that are sent either one time or on a recurring schedule, and that target customers based on their attributes\. *Journey\-based emails* are messages that are sent when participants in a journey arrive at an email activity as part of a larger workflow\. *Transactional emails* are sent one time only, and are typically sent in response to another action occurring\. For example, you can use transactional messages to send an email when a customer chooses the "Forgot my password" link in your app, or to send a confirmation when a customer places an order on your site\.
+
+In Amazon Pinpoint, you typically use the web\-based management console to send campaign\-based emails and journey\-based emails, whereas transactional emails are usually sent from applications that use an AWS SDK or call the Amazon Pinpoint API directly\.
+
+When you send a campaign\-based email, you first create a [segment](segments-building.md)\. A segment is a group of recipients for the campaign\. Next, you create a campaign\. In Amazon Pinpoint, a campaign consists of one or more target segments, a message, and a delivery schedule for that message\. To learn about creating campaigns, see [Amazon Pinpoint Campaigns](campaigns.md)\.
+
+When you send a journey\-based email, you also start by creating a [segment](segments-building.md)\. A segment is a group of participants in the journey\. Next, you create an email template for each message that you want activities in the journey to send\. Then, you create the journey\. To learn about creating journeys, see [Amazon Pinpoint Journeys](journeys.md)\.
+
+To send a transactional email, you can use the `SendMessage` operation of the Amazon Pinpoint API\. To learn more about using the Amazon Pinpoint API, see the [Amazon Pinpoint API Reference](https://docs.aws.amazon.com/pinpoint/latest/apireference/)\. You can also send transactional email by using the [Amazon Pinpoint SMTP interface](channels-email-send-smtp.md)\.
