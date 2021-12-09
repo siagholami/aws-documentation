@@ -1,5 +1,0 @@
-How to...
-Topics
- Use External Authentication
- Find and Stop Idle Sessions
- Enable Remote X Connections to the X Server

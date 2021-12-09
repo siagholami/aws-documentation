@@ -1,7 +1,0 @@
-AWS Elemental MediaTailor Manifest Handling
-A manifest is the input to AWS Elemental MediaTailor from an upstream encoder. When MediaTailor receives a request for content playback, it manipulates the manifest and adds personalized content, tailored for the viewing session. This section describes how MediaTailor handles manifests. For information about ad handling and insertion, see Ad Behavior in AWS Elemental MediaTailor.
-Topics
- Ad Transcoding
- Alternate Audio and Subtitles
- HLS .m3u8 Manifests
- DASH .mpd Manifests

@@ -1,8 +1,0 @@
-Best Practices for Working with Skinned Meshes for Animation
-See the following guidelines when working with skinned meshes for the Animation Editor.
-Topics
- Creating Skinned Meshes for Actors
- Exporting Actors and Motions
- Tutorials: Importing FBX Files as Actors and Motions
- Troubleshooting Skinned Meshes
- Using Actor LODs to Optimize Game Performance

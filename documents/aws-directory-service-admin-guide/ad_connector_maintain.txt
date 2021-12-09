@@ -1,5 +1,0 @@
-Maintain Your AD Connector Directory
-This section describes how to maintain common administrative tasks for your AD Connector environment.
-Topics
- Delete Your Directory
- View Directory Information

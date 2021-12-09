@@ -1,9 +1,0 @@
-Amazon FSx Walkthroughs
-Following, you can find a number of task-oriented walkthroughs that guide you through various processes.
-Topics
- Walkthrough 1: Prerequisites for Getting Started
- Walkthrough 2: Create a File System from a Backup
- Walkthrough 3: Update an Existing File System
- Walkthrough 4: Using Amazon FSx with Amazon AppStream 2.0
- Walkthrough 5: Using a Custom DNS Name for Your File System
- Walkthrough 6: Scaling Out Performance with Shards

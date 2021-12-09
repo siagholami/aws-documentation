@@ -1,7 +1,0 @@
-Working with models and mapping templates
-The following sections show you how to create and manage models and mapping templates.
-Topics
- Create a model in API Gateway
- View a list of models in API Gateway
- Delete a model in API Gateway
- Use a mapping template to override an API's request and response parameters and status codes

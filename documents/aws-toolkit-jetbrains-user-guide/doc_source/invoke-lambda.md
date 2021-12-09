@@ -1,0 +1,15 @@
+# Running \(invoking\) or debugging the local version of an AWS Lambda function by using the AWS Toolkit for JetBrains<a name="invoke-lambda"></a>
+
+To complete this procedure, you must [create the AWS Lambda function](key-tasks.md#key-tasks-lambda-create) that you want to run \(invoke\) or debug, if you have not created it already\.
+**Note**  
+To run \(invoke\) or debug the local version of a Lambda function, and run \(invoke\) or debug that function locally with any nondefault or optional properties, you must first set those properties in the function's corresponding AWS SAM template file \(for example, in a file named `template.yaml` within the project\)\. For a list of available properties, see [AWS::Serverless::Function](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction) in the [awslabs/serverless\-application\-model](https://github.com/awslabs/serverless-application-model/) repository on GitHub\.
+
+1. Do one of the following:
+   + In the code file that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), choose the Lambda icon in the gutter next to the function handler\. Choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.   
+![\[Running or debugging the local version of a Lambda function by starting from the function handler in the code file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+   + With the **Project** tool window already open and displaying the project that contains the function, open the project's `template.yaml` file\. Choose the **Run** icon in the gutter next to the function's resource definition, and then choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.  
+![\[Running or debugging the local version of a Lambda function by starting from the function definition in the AWS SAM template file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+   + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](key-tasks.md#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
+   + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 

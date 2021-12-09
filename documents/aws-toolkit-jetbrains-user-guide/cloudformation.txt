@@ -1,5 +1,0 @@
-Working with AWS CloudFormation by using the AWS Toolkit for JetBrains
-The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS CloudFormation stacks in an AWS account.
-Topics
- Viewing event logs for a stack
- Deleting a stack

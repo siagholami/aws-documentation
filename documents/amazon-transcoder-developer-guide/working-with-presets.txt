@@ -1,8 +1,0 @@
-Working with Presets
-Topics
- Creating a Preset in Elastic Transcoder
- Listing Presets and Viewing Preset Settings in Elastic Transcoder
- Modifying Presets in Elastic Transcoder
- Deleting an Elastic Transcoder Preset
- Settings that You Specify When You Create an Elastic Transcoder Preset
-A preset is a template that contains the settings that you want Elastic Transcoder to apply during the transcoding process, for example, the number of audio channels and the video resolution that you want in the transcoded file. When you create a job, you specify which preset you want to use. Elastic Transcoder includes default presets for a number of common output formats. You can also add presets for other output formats. For a list of system presets, see System Presets.

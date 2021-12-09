@@ -1,8 +1,0 @@
-Tutorials for Amazon EC2 instances running Windows Server
-The following tutorials show you how to perform common tasks using EC2 instances running Windows Server.
-Topics
- Tutorial: Deploying a WordPress blog on your Amazon EC2 instance running Windows Server
- Tutorial: Installing a WAMP Server on an Amazon EC2 Instance Running Windows Server
- Tutorial: Installing a WIMP server on an Amazon EC2 instance running Windows Server
- Tutorial: Increase the availability of your application on Amazon EC2
- Tutorial: Setting Up a Windows HPC Cluster on Amazon EC2

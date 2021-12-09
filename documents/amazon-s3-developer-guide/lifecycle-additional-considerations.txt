@@ -1,6 +1,0 @@
-Additional considerations for lifecycle configuration
-When configuring the lifecycle of objects, you need to understand the following guidelines for transitioning objects, setting expiration dates, and other object configurations.
-Topics
- Transitioning objects using Amazon S3 Lifecycle
- Understanding object expiration
- Lifecycle and other bucket configurations

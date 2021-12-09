@@ -1,5 +1,0 @@
-Creating Example Tables and Uploading Data
-Topics
- Creating Example Tables and Uploading Data Using the AWS SDK for Java
- Creating Example Tables and Uploading Data Using the AWS SDK for .NET
-In Creating Tables and Loading Data for Code Examples in DynamoDB, you first create tables using the DynamoDB console and then use the AWS CLI to add data to the tables. This appendix provides code to both create the tables and add data programmatically. 

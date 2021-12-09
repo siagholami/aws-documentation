@@ -1,0 +1,18 @@
+# Amazon Cloud Directory Compliance<a name="compliance"></a>
+
+Amazon Cloud Directory has undergone auditing for the following standards and can be part of your solution when you need to obtain compliance certification\. 
+
+
+****  
+
+|  |  | 
+| --- |--- |
+| ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/FedRAMP.png) | Amazon Cloud Directory meets Federal Risk and Authorization Management Program \(FedRAMP\) security requirements and has received a FedRAMP Joint Authorization Board \(JAB\) Provisional Authority to Operate \(P\-ATO\) at the FedRAMP Moderate Baseline\. For more information about FedRAMP, see [FedRAMP Compliance](https://aws.amazon.com/compliance/fedramp/)\. | 
+| ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/PCI.png) | Amazon Cloud Directory has an Attestation of Compliance for Payment Card Industry \(PCI\) Data Security Standard \(DSS\) version 3\.2 at Service Provider Level 1\. Customers who use AWS products and services to store, process, or transmit cardholder data can use Cloud Directory as they manage their own PCI DSS compliance certification\. For more information about PCI DSS, including how to request a copy of the AWS PCI Compliance Package, see [PCI DSS Level 1](http://aws.amazon.com/compliance/pci-dss-level-1-faqs/)\. | 
+| ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/HIPAA.jpg) | AWS has expanded its Health Insurance Portability and Accountability Act \(HIPAA\) compliance program to include Amazon Cloud Directory as a [HIPAA Eligible Service](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/)\. If you have an executed Business Associate Agreement \(BAA\) with AWS, you can use Cloud Directory to help build your HIPAA\-compliant applications\. AWS offers a [HIPAA\-focused Whitepaper](https://d0.awsstatic.com/whitepapers/compliance/AWS_HIPAA_Compliance_Whitepaper.pdf) for customers who are interested in learning more about how they can leverage AWS for the processing and storage of health information\. For more information, see [HIPAA Compliance](https://aws.amazon.com/compliance/hipaa-compliance/) | 
+| ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/ISO.png) | Amazon Cloud Directory has successfully completed compliance certification for ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, and ISO 9001\. For more information, see [ISO 27001](https://aws.amazon.com/compliance/iso-27001-faqs/), [ISO 27017](https://aws.amazon.com/compliance/iso-27017-faqs/), [ISO 27018](https://aws.amazon.com/compliance/iso-27018-faqs/), and [ISO 9001](https://aws.amazon.com/compliance/iso-9001-faqs/)\. | 
+| ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/clouddirectory/latest/developerguide/images/SOC.png) | System and Organization Control \(SOC\) reports are independent third\-party examination reports that demonstrate how Amazon Cloud Directory achieves key compliance controls and objectives\. The purpose of these reports is to help you and your auditors understand the AWS controls that are established to support operations and compliance\. For more information, see [SOC Compliance](https://aws.amazon.com/compliance/soc-faqs/)\. | 
+
+## Shared Responsibility<a name="compliance_sharedresponsibility"></a>
+
+Security, including HIPAA and PCI compliance, is a [shared responsibility](https://aws.amazon.com/compliance/shared-responsibility-model/)\. It is important to understand that Cloud Directory compliance status does not automatically apply to applications that you run in the AWS Cloud\. You must ensure that your use of AWS services complies with the standards\. 

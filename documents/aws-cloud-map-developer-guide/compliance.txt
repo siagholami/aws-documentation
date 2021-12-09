@@ -1,4 +1,0 @@
-AWS Cloud Map and AWS Cloud Compliance
-For information about AWS Cloud Map compliance with various security compliance regulations and audits standards, see the following pages:
- AWS Cloud Compliance
- AWS Services in Scope by Compliance Program

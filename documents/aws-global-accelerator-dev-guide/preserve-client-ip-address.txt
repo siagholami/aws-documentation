@@ -1,3 +1,0 @@
-Supported AWS Regions for client IP address preservation
-You can enable client IP address preservation for AWS Global Accelerator in the following AWS Regions.
-[See the AWS documentation website for more details]

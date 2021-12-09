@@ -1,2 +1,0 @@
-USER
-Synonym for CURRENT_USER. See CURRENT_USER. 

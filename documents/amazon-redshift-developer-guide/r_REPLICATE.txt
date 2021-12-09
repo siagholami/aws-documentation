@@ -1,3 +1,0 @@
-REPLICATE function
-Synonym for the REPEAT function. 
-See REPEAT function. 

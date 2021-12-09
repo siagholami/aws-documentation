@@ -1,9 +1,0 @@
-Managing Conformance Packs (API)
-Use the following AWS Config API actions to manage conformance packs:
- DeleteConformancePack
- DescribeConformancePackCompliance
- DescribeConformancePacks
- DescribeConformancePackStatus
- GetConformancePackComplianceDetails
- GetConformancePackComplianceSummary
- PutConformancePack

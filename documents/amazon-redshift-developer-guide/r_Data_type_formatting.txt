@@ -1,9 +1,0 @@
-Data type formatting functions
-Topics
- CAST and CONVERT functions
- TO_CHAR
- TO_DATE
- TO_NUMBER
- Datetime format strings
- Numeric Format Strings
-Data type formatting functions provide an easy way to convert values from one data type to another. For each of these functions, the first argument is always the value to be formatted and the second argument contains the template for the new format. Amazon Redshift supports several data type formatting functions.

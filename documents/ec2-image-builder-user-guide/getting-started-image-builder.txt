@@ -1,6 +1,0 @@
-Getting started with EC2 Image Builder
-This section contains information you need to set up your environment and create an image pipeline with EC2 Image Builder.
-Topics
- Prerequisites
- Accessing EC2 Image Builder
- Build and automate an operating system image deployment using the EC2 Image Builder console

@@ -1,0 +1,3 @@
+# Change an AWS Lambda Function in Source Code<a name="how-to-change-project-lambda"></a>
+
+You can change the code or settings of a Lambda function, or its IAM role or API Gateway API, that AWS CodeStar creates in a project\. To do this, we recommend that you use the AWS Serverless Application Model \(AWS SAM\) along with the `template.yaml` file in your project's CodeCommit repository\. This `template.yaml` file defines your function's name, handler, runtime, IAM role, and API in API Gateway\. For more information, see [How to Create Serverless Applications Using AWS SAM](https://github.com/awslabs/serverless-application-model/blob/master/HOWTO.md) on the GitHub website\.

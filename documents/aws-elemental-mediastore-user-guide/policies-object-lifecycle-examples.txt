@@ -1,8 +1,0 @@
-Example object lifecycle policies
-The following examples show object lifecycle policies. 
-Topics
- Example object lifecycle policy: Expire within seconds
- Example object lifecycle policy: Expire within days
- Example object lifecycle policy: Transition to infrequent access storage class
- Example object lifecycle policy: Multiple rules
- Example object lifecycle policy: Empty container

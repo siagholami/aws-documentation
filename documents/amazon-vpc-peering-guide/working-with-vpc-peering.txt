@@ -1,9 +1,0 @@
-Working with VPC Peering Connections
-You can use the Amazon VPC console to create and work with VPC peering connections.
-Topics
- Creating and Accepting a VPC Peering Connection
- Rejecting a VPC Peering Connection
- Updating Your Route Tables for a VPC Peering Connection
- Updating Your Security Groups to Reference Peer VPC Groups
- Modifying VPC Peering Connection Options
- Deleting a VPC Peering Connection

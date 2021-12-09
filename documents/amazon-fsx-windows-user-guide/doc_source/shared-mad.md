@@ -1,0 +1,11 @@
+# Using Amazon FSx with AWS Managed Microsoft AD in a Different VPC or Account<a name="shared-mad"></a>
+
+You can join your Amazon FSx file system to an AWS Managed Microsoft AD directory that's in a different VPC within the same account by using VPC peering\. You can also join your file system to an AWS Managed Microsoft AD directory that's in a different AWS account by using directory sharing\. 
+
+To join your file system to an AWS Managed Microsoft AD directory that's in a different VPC, make sure that the two VPCs have network connectivity\. To do this, you can use AWS Transit Gateway or Amazon VPC peering\. In addition, make sure that network traffic is allowed between them\. 
+
+A *transit gateway *is a network transit hub that you can use to interconnect your VPCs and on\-premises networks\. For more information about using VPC transit gateways, see [Getting Started with Transit Gateways](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html) in the *Amazon VPC Transit Gateways Guide*\. 
+
+A *VPC peering connection* is a networking connection between two VPCs\. This connection enables you to route traffic between them using private Internet Protocol version 4 \(IPv4\) or Internet Protocol version 6 \(IPv6\) addresses\. You can use VPC peering to connect VPCs within the same AWS Region or between AWS Regions\. For more information on VPC peering, see [What is VPC Peering?](https://docs.aws.amazon.com/vpc/latest/peering/Welcome.html) in the *Amazon VPC Peering Guide*\. 
+
+There is another prerequisite when you join your file system to an AWS Managed Microsoft AD directory in a different account than that of your file system\. You also share your Microsoft AD directory with the other account\. To do this, you can use AWS Managed Microsoft Active Directory's directory sharing feature\. To learn more, see [Share Your Directory](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_directory_sharing.html) in the *AWS Directory Service Administration Guide*\.

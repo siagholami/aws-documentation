@@ -1,6 +1,0 @@
-Integrate with your CRM
-You can integrate Amazon Connect with your customer relationship management (CRM) application. Integration allows you to launch your contact center in your CRM of choice, maintain your existing user base, and use the Amazon Connect cloud-based infrastructure.
-To integrate the Contact Control Panel (CCP) into your CRM, see Amazon Connect Streams. When completed, add the origin URLs to your instance settings. This enables communication between Amazon Connect and your CRM. For more information, see Use an allow list for integrated applications.
-Topics
- Salesforce integration
- Zendesk integration

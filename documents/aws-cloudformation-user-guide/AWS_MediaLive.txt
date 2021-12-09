@@ -1,5 +1,0 @@
-AWS Elemental MediaLive resource type reference
-Resource types
- AWS::MediaLive::Channel
- AWS::MediaLive::Input
- AWS::MediaLive::InputSecurityGroup

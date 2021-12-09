@@ -1,5 +1,0 @@
-CodePipeline resource type reference
-Resource types
- AWS::CodePipeline::CustomActionType
- AWS::CodePipeline::Pipeline
- AWS::CodePipeline::Webhook

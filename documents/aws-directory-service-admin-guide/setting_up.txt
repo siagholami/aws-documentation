@@ -1,6 +1,0 @@
-Setting Up AWS Directory Service
-To work with AWS Directory Service, you need to meet the prerequisites for AWS Directory Service for Microsoft Active Directory, AD Connector, or Simple AD. For more information, see AWS Managed Microsoft AD Prerequisites, AD Connector Prerequisites, or Simple AD Prerequisites.
-If you haven't already done so, you'll also need to create an AWS account and use the AWS Identity and Access Management service to control access.
-Topics
- Sign Up for an AWS Account
- Create an IAM User

@@ -1,5 +1,0 @@
-Inspector resource type reference
-Resource types
- AWS::Inspector::AssessmentTarget
- AWS::Inspector::AssessmentTemplate
- AWS::Inspector::ResourceGroup

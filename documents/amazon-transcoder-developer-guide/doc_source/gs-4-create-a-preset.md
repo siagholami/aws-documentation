@@ -1,0 +1,5 @@
+# Step 4: \(Optional\) Create a Preset<a name="gs-4-create-a-preset"></a>
+
+A preset is a template that contains the settings that you want Elastic Transcoder to apply during the transcoding process, for example, the codec and the resolution that you want in the transcoded file\. When you create a job, you specify which preset you want to use\. We provide system presets that create media files that play on many common devices and system presets that target specific devices\. For maximum compatibility, choose a preset that creates output that plays on a wide range of devices\. For optimum quality and file size, choose a preset that creates output for a specific device or class of devices\. For the current list of system presets, see the list of presets on the Elastic Transcoder detail page\.
+
+If none of the system presets contain the settings that you need, you can create your own presets\. For more information, see [Creating a Preset in Elastic Transcoder](creating-presets.md)\. 

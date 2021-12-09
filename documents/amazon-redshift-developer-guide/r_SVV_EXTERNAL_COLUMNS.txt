@@ -1,5 +1,0 @@
-SVV_EXTERNAL_COLUMNS
-Use SVV_EXTERNAL_COLUMNS to view details for columns in external tables.
-SVV_EXTERNAL_COLUMNS is visible to all users. Superusers can see all rows; regular users can see only metadata to which they have access. For more information, see CREATE EXTERNAL SCHEMA.
-Table columns
-[See the AWS documentation website for more details]

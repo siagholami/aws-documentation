@@ -1,9 +1,0 @@
-Working with accessibility features
-You can use screen readers and keyboard shortcuts with Amazon WorkMail for easier accessibility.
-Topics
- Supported screen readers
- Using shortcut keys with Amazon WorkMail
- Working with general and email settings
- Using the global address book
- Working with email
- Working with folders

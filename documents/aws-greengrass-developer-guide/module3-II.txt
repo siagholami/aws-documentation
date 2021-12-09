@@ -1,9 +1,0 @@
-Module 3 (part 2): Lambda functions on AWS IoT Greengrass
-This module explores the differences between on-demand and long-lived Lambda functions running on the AWS IoT Greengrass core.
-Before you begin, run the Greengrass Device Setup script or make sure you have completed Module 1, Module 2, and Module 3 (Part 1).
-This module should take about 30 minutes to complete.
-Topics
- Create and package the Lambda function
- Configure long-lived Lambda functions for AWS IoT Greengrass
- Test long-lived Lambda functions
- Test on-demand Lambda functions

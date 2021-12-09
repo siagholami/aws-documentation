@@ -1,8 +1,0 @@
-Scenarios and examples
-This section provides examples for creating and configuring Client VPN access for your clients.
-Topics
- Access to a VPC
- Access to a peered VPC
- Access to an on-premises network
- Access to the internet
- Restrict access to specific resources in your VPC

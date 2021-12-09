@@ -1,8 +1,0 @@
-GuardDuty resource type reference
-Resource types
- AWS::GuardDuty::Detector
- AWS::GuardDuty::Filter
- AWS::GuardDuty::IPSet
- AWS::GuardDuty::Master
- AWS::GuardDuty::Member
- AWS::GuardDuty::ThreatIntelSet

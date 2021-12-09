@@ -1,5 +1,0 @@
-Non-API Events Captured by CloudTrail
-In addition to logging AWS API calls, CloudTrail captures other related events that might have a security or compliance impact on your AWS account or that might help you troubleshoot operational problems. 
-Topics
- AWS Service Events
- AWS Console Sign-in Events

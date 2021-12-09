@@ -1,6 +1,0 @@
-Supported Inputs and Outputs
-This section describes the input types, input codecs, and output codecs that AWS Elemental MediaPackage supports for live and video on demand (VOD) content.
-Topics
- Live Supported Codecs and Input Types
- Live-to-VOD Supported Codecs and Input Types
- VOD Supported Codecs and Input Types

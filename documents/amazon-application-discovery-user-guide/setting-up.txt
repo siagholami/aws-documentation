@@ -1,4 +1,0 @@
-Setting Up AWS Application Discovery Service
-Before you use AWS Application Discovery Service for the first time, complete the following tasks:
- Step 1: Sign Up for AWS
- Step 2: Create IAM Users

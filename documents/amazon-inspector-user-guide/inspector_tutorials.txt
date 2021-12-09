@@ -1,5 +1,0 @@
-Tutorials for Amazon Inspector
-The following tutorials show you how to perform Amazon Inspector assessment runs on the Red Hat Enterprise Linux and Ubuntu operating systems.
-Tutorials
- Tutorial: Using Amazon Inspector with Red Hat Enterprise Linux
- Tutorial: Using Amazon Inspector with Ubuntu Server

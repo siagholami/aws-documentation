@@ -1,0 +1,14 @@
+# Authentication and Access Control<a name="managed-blockchain-auth-and-access-control"></a>
+
+AWS Identity and Access Management \(IAM\) permission policies, VPC endpoint services powered by AWS PrivateLink, and Amazon EC2 security groups provide the primary means for you to control access to Amazon Managed Blockchain\. In addition to these AWS services, open\-source frameworks that run on Managed Blockchain have authentication and access control features that you can configure\.
+
+IAM permission policies are associated with AWS users in your account and determine who has access to what\. Permission policies specify the actions that each user can perform using Managed Blockchain and other AWS services\. VPC endpoint services allow each Managed Blockchain network member to connect privately to Managed Blockchain resources\. Amazon EC2 security groups act as virtual firewalls and determine the inbound and outbound network traffic that is allowed between Managed Blockchain resources and other Amazon EC2 resources\. In Managed Blockchain, these security groups are associated with the VPC endpoint in your account and with any framework clients that run on AWS, such as a Hyperledger Fabric client running on an Amazon EC2 instance\.
+
+Before you configure authentication and access control using AWS services and open\-source features, we recommend that you review the following resources:
++ For more information about IAM and IAM permission policies, see [Identity and Access Management for Amazon Managed Blockchain](security-iam.md)\. We also recommend [What is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) and [IAM JSON Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
++ For more information about VPC endpoints, see [Create an Interface VPC Endpoint to Connect to Managed Blockchain Network Resources](managed-blockchain-endpoints.md) and [VPC Endpoints ](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*\.
++ For more information about Amazon EC2 security groups, see [Configuring Security Groups](managed-blockchain-security-sgs.md) and [Amazon EC2 Security Groups for Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*\.
++ For more information about the Hyperledger Fabric Certificate Authority \(CA\), see [Certificate Authority \(CA\) Setup](https://openblockchain.readthedocs.io/en/latest/Setup/ca-setup/) in the Hyperledger Fabric documentation\.
++ For more information about Hyperledger Fabric application access control lists, see [Application Access Control Lists](https://openblockchain.readthedocs.io/en/latest/tech/application-ACL/) in the Hyperledger Fabric documentation\.
+
+**Topics**

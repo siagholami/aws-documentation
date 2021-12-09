@@ -1,8 +1,0 @@
-Getting Started with Amazon Transcribe
-To get started using Amazon Transcribe, set up an AWS account and create an AWS Identity and Access Management (IAM) user. To use the AWS Command Line Interface (AWS CLI), download and configure it. 
-Topics
- Step 1: Set up an AWS Account and Create an Administrator User
- Step 2: Set up the AWS Command Line Interface (AWS CLI)
- Step 3: Getting Started Using the Console
- Step 4: Getting Started Using the API
- Step 5: Getting Started With Streaming Audio

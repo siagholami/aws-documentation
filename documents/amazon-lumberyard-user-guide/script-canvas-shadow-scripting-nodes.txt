@@ -1,5 +1,0 @@
-Shadow Nodes
-You use can use the following shadow nodes in the Script Canvas editor to configure shadow effects.
-Topics
- High Quality Shadow
- Recompute Static Shadows

@@ -1,4 +1,0 @@
-Numeric Format Strings
-This topic provides a reference for numeric format strings. 
-The following format strings apply to functions such as TO_NUMBER and TO_CHAR: 
-[See the AWS documentation website for more details]

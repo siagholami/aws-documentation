@@ -1,3 +1,0 @@
-October 3, 2017
-Published on 2017-10-03
-Create named Athena queries with CloudFormation. For more information, see AWS::Athena::NamedQuery in the AWS CloudFormation User Guide.

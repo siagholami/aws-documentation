@@ -1,3 +1,0 @@
-June 22, 2017
-Published on 2017-06-22
-Added support for Asia Pacific (Tokyo) and Asia Pacific (Singapore). For a list of supported regions, see AWS Regions and Endpoints.

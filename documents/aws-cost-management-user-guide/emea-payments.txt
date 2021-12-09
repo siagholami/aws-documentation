@@ -1,8 +1,0 @@
-Managing your payments in AWS Europe
-If your account is with AWS Europe, follow the procedures in this section to manage your payment methods and payments. 
-Topics
- Managing your AWS Europe payment methods
- Managing your AWS Europe credit card payment methods
- Managing your AWS Europe credit card payment verifications
- Managing your SEPA direct debit payment methods
-If you have questions about payment methods, see Getting help with AWS Billing and Cost Management.

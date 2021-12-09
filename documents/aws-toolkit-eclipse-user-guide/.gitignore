@@ -1,0 +1,6 @@
+output/
+build/
+shared_content/
+.project
+.DS_Store
+.gradle/

@@ -1,6 +1,0 @@
-Amazon DocumentDB resource type reference
-Resource types
- AWS::DocDB::DBCluster
- AWS::DocDB::DBClusterParameterGroup
- AWS::DocDB::DBInstance
- AWS::DocDB::DBSubnetGroup

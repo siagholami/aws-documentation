@@ -1,6 +1,0 @@
-Amazon WorkDocs Content Manager
-Amazon WorkDocs Content Manager is a high-level utility tool that uploads content or downloads it from an Amazon WorkDocs site.
-Topics
- Constructing Amazon WorkDocs Content Manager
- Downloading a document
- Uploading a document

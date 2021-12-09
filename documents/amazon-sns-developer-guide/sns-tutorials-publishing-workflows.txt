@@ -1,4 +1,0 @@
-Publishing workflows
-This section contains additional tutorials on the publishing workflows of Amazon SNS.
-Topics
- Tutorial: Publishing a message with attributes to an Amazon SNS topic

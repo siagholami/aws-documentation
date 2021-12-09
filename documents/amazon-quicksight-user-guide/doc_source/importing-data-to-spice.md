@@ -1,0 +1,9 @@
+# Importing Data into SPICE<a name="importing-data-to-spice"></a>
+
+SPICE is Amazon QuickSight's in\-memory optimized calculation engine, designed specifically for fast, ad hoc data visualization\. SPICE stores your data in a system architected for high availability, where it is saved until you choose to delete it\. You can improve the performance of database data sets by importing the data into SPICE instead of using a direct query to the database\. All data sets that aren't based on database data sources must use SPICE\.
+
+Each Amazon QuickSight account receives 10 GB of SPICE capacity per paid user, which is allocated when the user signs into Amazon QuickSight for the first time\. Each Amazon QuickSight account also receives one free user with 1 GB of SPICE capacity\. SPICE capacity is pooled across users for the Amazon QuickSight account\. For example, if you have four users \(three paid and one free\), you have 31 GB of SPICE capacity available, which can be utilized by any of the users in the account\. All of your default SPICE capacity is allocated to your home AWS Region, and the other regions have no SPICE capacity unless you choose to purchase some\.
+
+To free up SPICE capacity, delete any unused data sets that you have imported into SPICE\. For more information about deleting a data set, see [Deleting a Data Set](delete-a-data-set.md)\.
+
+You can purchase additional SPICE capacity if you want to, and you can also release purchased SPICE capacity that you aren't using\. For information about purchasing or releasing SPICE capacity, as well as monitoring SPICE usage, see [Managing SPICE Capacity](managing-spice-capacity.md)\.

@@ -1,9 +1,0 @@
-Catalog API
-The Catalog API describes the data types and API related to working with catalogs in AWS Glue.
-Topics
- Database API
- Table API
- Partition API
- Connection API
- User-Defined Function API
- Importing an Athena Catalog to AWS Glue

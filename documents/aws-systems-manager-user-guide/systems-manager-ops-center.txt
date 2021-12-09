@@ -1,7 +1,0 @@
-Operations Management
-Operations Management is a suite of capabilities that help you manage your AWS resources.
-Topics
- AWS Systems Manager Explorer
- AWS Systems Manager OpsCenter
- Amazon CloudWatch dashboards hosted by Systems Manager
- Trusted Advisor and Personal Health Dashboards hosted by Systems Manager

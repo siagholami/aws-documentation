@@ -1,9 +1,0 @@
-How To Administer Simple AD
-This section lists all of the procedures for operating and maintaining an Simple AD environment.
-Topics
- Manage Users and Groups in Simple AD
- Monitor Your Simple AD Directory
- Join an EC2 Instance to Your Simple AD Directory
- Maintain Your Simple AD Directory
- Enable Access to AWS Applications and Services
- Enable Access to the AWS Management Console with AD Credentials

@@ -1,2 +1,0 @@
-Use Case 3: Provide Directory Services to Your AD-Aware Workloads
-AWS Managed Microsoft AD is an actual Microsoft AD that enables you to run traditional AD-aware workloads such as Remote Desktop Licensing Manager and Microsoft SharePoint and Microsoft SQL Server Always On in the AWS Cloud. AWS Managed Microsoft AD also helps you to simplify and improve the security of AD-integrated .NET applications by using group Managed Service Accounts (gMSAs) and Kerberos constrained delegation (KCD).

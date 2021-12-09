@@ -1,4 +1,0 @@
-Amazon Personalize Runtime
-The following actions are supported by Amazon Personalize Runtime:
-  GetPersonalizedRanking 
-  GetRecommendations 

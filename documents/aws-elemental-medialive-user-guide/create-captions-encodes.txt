@@ -1,5 +1,0 @@
-Step 4: Create Captions Encodes
-Go through the list of outputs that you created and set up the captions in each output group, one by one.
-Follow the procedure that applies to the format category of the captions output:
- All Captions Except Sidecar or SMPTE-TT in Microsoft Smooth
- Sidecar Captions and SMPTE-TT in Microsoft Smooth

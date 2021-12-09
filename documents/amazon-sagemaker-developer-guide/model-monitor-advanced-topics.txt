@@ -1,5 +1,0 @@
-Advanced Topics
-The following sections contain more advanced tasks that explain how to customize monitoring using preprocessing and postprocessing scripts, how to build your own container, and how to use CloudFormation to create a monitoring schedule.
-Topics
- Customize Monitoring
- Create a Monitoring Schedule with an AWS CloudFormation Custom Resource

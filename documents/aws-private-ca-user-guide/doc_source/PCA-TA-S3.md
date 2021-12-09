@@ -1,0 +1,5 @@
+# Amazon S3 Permissions and CRL Buckets<a name="PCA-TA-S3"></a>
+
+Both ACM Private CA and the IAM principal must have permission to write to the Amazon S3 bucket that you specify for your CRLs\. If the IAM principal making the call does not have permission to write to the bucket, then an exception is thrown\. To provide notice of this, configure an alarm for the `MisconfiguredCRLBucket` metric in Amazon CloudWatch\. For more information, see [Configure Access to ACM Private CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuthAccess.html) and [Supported CloudWatch Metrics](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCloudWatch.html)\.
+
+If you encounter this exception, check that you have not selected the **Block public access to buckets and objects granted through new access control lists \(ACLs\)** configuration option in your Amazon S3 account\. For more information, see [How Do I Edit Public Access Settings for S3 Buckets?](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access-bucket.html)\. CRLs may also fail to update as expected if you have inadvertently changed S3 permissions since the CRL was created\.

@@ -1,6 +1,0 @@
-Amazon EBS data services
-Amazon EBS provides the following data services.
-Topics
- Amazon EBS Elastic Volumes
- Amazon EBS encryption
- Amazon EBS fast snapshot restore

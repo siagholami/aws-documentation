@@ -1,0 +1,9 @@
+# Resilience in AWS Global Accelerator<a name="disaster-recovery-resiliency"></a>
+
+The AWS global infrastructure is built around AWS Regions and Availability Zones\. AWS Regions provide multiple physically separated and isolated Availability Zones, which are connected with low\-latency, high\-throughput, and highly redundant networking\. With Availability Zones, you can design and operate applications and databases that automatically fail over between Availability Zones without interruption\. Availability Zones are more highly available, fault tolerant, and scalable than traditional single or multiple data center infrastructures\. 
+
+For more information about AWS Regions and Availability Zones, see [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)\.
+
+In addition to the support of AWS global infrastructure, Global Accelerator offers the following features that help support data resiliency: 
++ A network zone services the static IP addresses for your accelerator from a unique IP subnet\. Similar to an AWS Availability Zone, a network zone is an isolated unit with its own set of physical infrastructure\.  When you configure an accelerator, Global Accelerator allocates two IPv4 addresses for it\. If one IP address from a network zone becomes unavailable due to IP address blocking by certain client networks, or due to network disruptions, client applications can retry on the healthy static IP address from the other isolated network zone\.
++ Global Accelerator continuously monitors the health of all endpoints\. When it determines that an active endpoint is unhealthy, Global Accelerator instantly begins directing traffic to another available endpoint\. This allows you to create a high\-availability architecture for your applications on AWS\.

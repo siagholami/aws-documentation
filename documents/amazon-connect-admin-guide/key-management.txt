@@ -1,3 +1,0 @@
-Key management
-You can specify AWS KMS keys, including bring your own keys (BYOK), to use for envelope encryption with Amazon S3 input/output buckets.
-For information about AWS KMS keys see What is AWS Key Management Service? in the AWS Key Management Service Developer Guide.

@@ -1,3 +1,0 @@
-Amazon Kinesis Video Streams Media
-The following data types are supported by Amazon Kinesis Video Streams Media:
-  StartSelector 

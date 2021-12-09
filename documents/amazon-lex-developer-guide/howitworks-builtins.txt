@@ -1,5 +1,0 @@
-Built-in Intents and Slot Types
-To make it easier to create bots, Amazon Lex allows you to use standard Alexa built-in intents and slot types. 
-Topics
- Built-in Intents
- Built-in Slot Types

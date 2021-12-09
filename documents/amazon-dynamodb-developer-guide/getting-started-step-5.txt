@@ -1,4 +1,0 @@
-Step 5: Query Data in a Table
-In this step, you query the data that you wrote to the Music table in Step 2: Write Data to a Table Using the Console or AWS CLI by specifying Artist. 
-For more information about query operations, see Working with Queries in DynamoDB. 
-To create a global secondary index for your table, proceed to Step 6: Create a Global Secondary Index.

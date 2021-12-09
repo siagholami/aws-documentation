@@ -1,9 +1,0 @@
-AWS::MediaLive::Channel AribSourceSettings
-Information about the ARIB captions to extract from the input.
-The parent of this entity is CaptionSelectorSettings.
-Syntax
-To declare this entity in your AWS CloudFormation template, use the following syntax:
-JSON
-{
-}
-YAML

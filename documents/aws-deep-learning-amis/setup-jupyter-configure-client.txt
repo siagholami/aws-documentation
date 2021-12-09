@@ -1,6 +1,0 @@
-Configure the Client to Connect to the Jupyter Server
-After configuring your client to connect to the Jupyter notebook server, you can create and access notebooks on the server in your workspace and run your deep learning code on the server.
-For configuration information, choose one of the following links.
-Topics
- Configure a Windows Client
- Configure a Linux or macOS Client

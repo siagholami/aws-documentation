@@ -1,2 +1,0 @@
-Comment Attribute
-Save or edit comments about an emitter in the Comment text box.

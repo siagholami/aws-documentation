@@ -1,8 +1,0 @@
-Install the CodeDeploy agent using the command line
-Note
-We recommend installing the CodeDeploy agent with AWS Systems Manager to be able to configure scheduled updates of the agent. For more information, see Install the CodeDeploy agent using AWS Systems Manager.
-Use the following topics to install and run the CodeDeploy agent using the command line.
-Topics
- Install the CodeDeploy agent for Amazon Linux or RHEL
- Install the CodeDeploy agent for Ubuntu Server
- Install the CodeDeploy agent for Windows Server

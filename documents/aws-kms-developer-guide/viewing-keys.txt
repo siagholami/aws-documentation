@@ -1,8 +1,0 @@
-Viewing keys
-You can use AWS Management Console or the AWS Key Management Service (AWS KMS) API to view customer master keys (CMKs), including CMKs that you manage and CMKs that are managed by AWS.
-Topics
- Viewing CMKs in the console
- Viewing CMKs with the API
- Finding the key ID and ARN
- Finding the alias name and alias ARN
- Identifying symmetric and asymmetric CMKs

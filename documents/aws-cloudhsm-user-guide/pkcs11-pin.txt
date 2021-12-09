@@ -1,6 +1,0 @@
-Authenticating to PKCS #11
-When you use PKCS #11 with AWS CloudHSM, your application runs as a particular crypto user (CU) in your HSMs. Your application can view and manage only the keys that the CU owns and shares. You can use an existing CU in your HSMs or create a new CU for your application.
-To specify the CU to PKCS #11, use the pin parameter of the PKCS #11 C_Login function. For AWS CloudHSM, the pin parameter has the following format:
-<CU_user_name>:<password>
-For example, the following command sets the PKCS #11 pin to the CU with user name CryptoUser and password CUPassword123!.
-CryptoUser:CUPassword123!

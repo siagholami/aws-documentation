@@ -1,5 +1,0 @@
-Graphics Scripting
-The Graphics Scripting gem enables graphics features in your scripts. With the gem enabled, you can use Script Canvas or Lua to write scripts to control features such as full screen effects, color correction, environment settings, shadow calculations, and more.
-
-To use the Graphics Scripting gem, you must also enable the Script Canvas gem. The LmbrCentral Gem gem, which is also required, is enabled by default and includes material scripting controls and the High Quality Shadow component.
-To enable gems, see Enabling Gems.

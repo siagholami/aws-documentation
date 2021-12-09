@@ -1,7 +1,0 @@
-Reflecting Lumberyard Classes, Methods, and EBus Interfaces
-You can use Lumberyard's reflection system to expose runtime code for C-based objects, for Lumberyard Editor, and for scripting.
-Lumberyard provides the following reflection contexts for these purposes:
- Serialization Context – Provides persistence for C based objects through reflection for serialization.
- Edit Context – Enhances the serialization context to enable manipulation of data by Lumberyard Editor.
- Behavior Context – Provides reflection for Lumberyard's Script Canvas and for scripting languages like Lua.
-All these reflection systems use a C builder design pattern.

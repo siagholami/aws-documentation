@@ -1,5 +1,0 @@
-LakeFormation resource type reference
-Resource types
- AWS::LakeFormation::DataLakeSettings
- AWS::LakeFormation::Permissions
- AWS::LakeFormation::Resource

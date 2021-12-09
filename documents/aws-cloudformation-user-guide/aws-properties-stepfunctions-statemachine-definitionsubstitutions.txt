@@ -1,2 +1,0 @@
-AWS::StepFunctions::StateMachine DefinitionSubstitutions
-Substitute variables in a state machine defined by a DefinitionS3Location.

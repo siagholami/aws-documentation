@@ -1,9 +1,0 @@
-Working with Amazon RDS on VMware
-Working with an Amazon RDS on VMware DB instance is similar to working with any Amazon RDS DB instance. To run your DB instances, you can provision on-premises DB instance classes for Amazon RDS on VMware that work in your vSphere cluster.
-Topics
- Installing the Media for Microsoft SQL Server
- Choosing the On-Premises DB Instance Class
- Creating an On-Premises DB Instance
- Creating Additional Custom AZs in a Region
- Creating Read Replicas
- Managing Your On-Premises DB Instances

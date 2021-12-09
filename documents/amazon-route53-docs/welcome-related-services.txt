@@ -1,2 +1,0 @@
-Related services
-For information about the AWS services that Amazon Route 53 integrates with, see Integration with other services.

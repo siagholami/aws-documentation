@@ -1,2 +1,0 @@
-Selecting content from objects using the REST API
-You can use the AWS SDK to select content from objects. However, if your application requires it, you can send REST requests directly. For more information about the request and response format, see SELECT Object Content.

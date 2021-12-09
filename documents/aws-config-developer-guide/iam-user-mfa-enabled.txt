@@ -1,9 +1,0 @@
-iam-user-mfa-enabled
-Checks whether the AWS Identity and Access Management users have multi-factor authentication (MFA) enabled.
-Identifier: IAM_USER_MFA_ENABLED
-Trigger type: Periodic
-AWS Region: All supported AWS Regions 
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

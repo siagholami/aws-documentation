@@ -1,2 +1,0 @@
-Detecting Custom Labels
-Amazon Rekognition Custom Labels can identify the objects and scenes in images that are specific to your business needs, such as logos or engineering machine parts. For more information, see What Is Amazon Rekognition Custom Labels? in the Amazon Rekognition Custom Labels Developer Guide.

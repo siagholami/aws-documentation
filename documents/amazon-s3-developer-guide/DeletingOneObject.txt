@@ -1,9 +1,0 @@
-Deleting one object per request
-Topics
- Deleting an object using the AWS SDK for Java
- Deleting an object using the AWS SDK for .NET
- Deleting an object using the AWS SDK for PHP
- Deleting an object using the REST API
- Deleting an Object Using the AWS Command Line Interface
-To delete one object per request, use the DELETE API (see DELETE Object). To learn more about object deletion, see Deleting objects. 
-You can use either the REST API directly or the wrapper libraries provided by the AWS SDKs that simplify application development. 

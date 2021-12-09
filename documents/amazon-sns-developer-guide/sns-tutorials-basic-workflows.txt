@@ -1,9 +1,0 @@
-Basic workflows
-This section contains the tutorials that encompass the basic workflows of Amazon SNS.
-Topics
- Tutorial: Creating an Amazon SNS topic
- Tutorial: Subscribing an endpoint to an Amazon SNS topic
- Tutorial: Publishing a message to an Amazon SNS topic
- Tutorial: Listing, adding, and removing tags for an Amazon SNS topic
- Tutorial: Configuring an Amazon SNS dead-letter queue for a subscription
- Tutorial: Deleting an Amazon SNS subscription and topic

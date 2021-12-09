@@ -1,6 +1,0 @@
-AWS Toolkit for Eclipse Basics
-This section provides information about how to accomplish common development tasks with the AWS Toolkit for Eclipse.
-Topics
- Building an AWS Java Application
- Serverless Projects
- Differentiating AWS Resources with Naming

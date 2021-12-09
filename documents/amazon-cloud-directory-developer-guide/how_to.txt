@@ -1,5 +1,0 @@
-How To Administer Cloud Directory
-This section lists all of the procedures for operating and maintaining a Cloud Directory environment.
-Topics
- Manage Your Directories
- Manage Your Schema

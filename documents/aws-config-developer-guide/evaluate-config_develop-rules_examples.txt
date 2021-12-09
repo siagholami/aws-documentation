@@ -1,6 +1,0 @@
-Example AWS Lambda Functions and Events for AWS Config Rules
-Each custom Config rule is associated with an AWS Lambda function, which is custom code that contains the evaluation logic for the rule. When the trigger for a Config rule occurs (for example, when AWS Config detects a configuration change), AWS Config invokes the rule's Lambda function by publishing an event, which is a JSON object that provides the configuration data that the function evaluates.
-For more information about functions and events in AWS Lambda, see Function and Event Sources in the AWS Lambda Developer Guide.
-Topics
- Example AWS Lambda Functions for AWS Config Rules (Node.js)
- Example Events for AWS Config Rules

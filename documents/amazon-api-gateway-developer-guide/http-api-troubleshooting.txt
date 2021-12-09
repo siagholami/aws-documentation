@@ -1,5 +1,0 @@
-Troubleshooting issues with HTTP APIs
-The following topics provide troubleshooting advice for errors and issues that you might encounter when using HTTP APIs.
-Topics
- Troubleshooting issues with HTTP API Lambda integrations
- Troubleshooting issues with HTTP API JWT authorizers

@@ -1,7 +1,0 @@
-Monitor Your AWS Managed Microsoft AD
-You can monitor your AWS Managed Microsoft AD directory with the following methods:
-Topics
- Understanding Your Directory Status
- Configure Directory Status Notifications
- Review Your AWS Managed Microsoft AD Directory Logs
- Enable Log Forwarding

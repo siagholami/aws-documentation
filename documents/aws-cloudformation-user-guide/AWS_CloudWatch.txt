@@ -1,7 +1,0 @@
-CloudWatch resource type reference
-Resource types
- AWS::CloudWatch::Alarm
- AWS::CloudWatch::AnomalyDetector
- AWS::CloudWatch::CompositeAlarm
- AWS::CloudWatch::Dashboard
- AWS::CloudWatch::InsightRule

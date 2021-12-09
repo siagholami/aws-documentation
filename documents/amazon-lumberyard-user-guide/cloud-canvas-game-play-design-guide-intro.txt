@@ -1,6 +1,0 @@
-Cloud Canvas Gameplay Design and Engineering Guide
-You can use Cloud Canvas's deployments, resource groups, and cloud gems (provided by yourself or others) to design and engineer the cloud connected features of your game.
-Topics
- Cloud Canvas Tools in Lumberyard Editor
- Managing Cloud Canvas Profiles
- Using Resource Manager in Game Design

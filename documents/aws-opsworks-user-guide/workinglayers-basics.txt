@@ -1,7 +1,0 @@
-OpsWorks Layer Basics
-This section describes how to perform operations that are common to all AWS OpsWorks Stacks layers.
-Topics
- Creating an OpsWorks Layer
- Editing an OpsWorks Layer's Configuration
- Using Auto Healing to Replace Failed Instances
- Deleting an OpsWorks Layer

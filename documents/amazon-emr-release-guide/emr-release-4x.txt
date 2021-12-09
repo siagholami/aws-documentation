@@ -1,4 +1,0 @@
-Amazon EMR 4.x Release Versions
-Topics
- Details for Amazon EMR 4.x Release Versions
- Differences in Amazon EMR 4.x Release Versions

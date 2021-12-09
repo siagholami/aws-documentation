@@ -1,3 +1,0 @@
-Using instant cache invalidations to manage app performance
-The Amplify Console supports instant cache invalidation of the content delivery network (CDN) on every code commit. This enables you to deploy updates to your single page or static app instantly, without giving up the performance benefits of CDN caching.
-To learn more about how the Amplify Console handles cache invalidations, see the blog post AWS Amplify Console supports instant cache invalidation and delta deployments on every code commit.

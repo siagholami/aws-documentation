@@ -1,8 +1,0 @@
-Step 2: Create a Bot
-In this step, you create a bot to handle pizza orders. 
-Topics
- Create the Bot
- Create an Intent
- Create Slot Types
- Configure the Intent
- Configure the Bot

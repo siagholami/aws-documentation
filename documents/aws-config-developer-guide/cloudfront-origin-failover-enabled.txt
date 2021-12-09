@@ -1,9 +1,0 @@
-cloudfront-origin-failover-enabled
-Checks whether an origin group is configured for the distribution of at least 2 origins in the origin group for Amazon CloudFront. This rule is NON_COMPLIANT if there are no origin groups for the distribution. 
-Identifier: CLOUDFRONT_ORIGIN_FAILOVER_ENABLED
-Trigger type: Configuration changes
-AWS Region: Only available in US East (N. Virginia) Region
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

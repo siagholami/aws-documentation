@@ -1,5 +1,0 @@
-
-AWS Glossary
-Blank
-placeholder
-This page redirects to the AWS Glossary in the AWS General Reference.

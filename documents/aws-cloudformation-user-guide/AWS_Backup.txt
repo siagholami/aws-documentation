@@ -1,5 +1,0 @@
-AWS Backup resource type reference
-Resource types
- AWS::Backup::BackupPlan
- AWS::Backup::BackupSelection
- AWS::Backup::BackupVault

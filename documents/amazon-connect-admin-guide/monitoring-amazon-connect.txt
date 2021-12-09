@@ -1,5 +1,0 @@
-Monitor live and recorded conversations
-The articles in this section explain how to monitor (listen-in) on conversations between agents and contacts. 
-Topics
- Monitor live conversations
- Review recorded conversations

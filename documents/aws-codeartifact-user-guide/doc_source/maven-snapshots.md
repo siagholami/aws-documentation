@@ -1,0 +1,11 @@
+# Use Maven snapshots<a name="maven-snapshots"></a>
+
+ A Maven *snapshot* is a special version of a Maven package that refers to the latest production branch code\. It is a development version that precedes the final release version\. You can identify a snapshot version of a Maven package by the suffix `SNAPSHOT` that is appended to the package version\. For example, the snapshot of version `1.1` is `1.1-SNAPSHOT`\. For more information, see [What is a SNAPSHOT version?](https://maven.apache.org/guides/getting-started/index.html#What_is_a_SNAPSHOT_version) on the Apache Maven Project website\. 
+
+ AWS CodeArtifact supports publishing and consuming Maven snapshots\. You can publish a Maven snapshot to an AWS CodeArtifact repository or, if you are directly connected, to an upstream repository\. However, a snapshot version in both a repository and one of its upstream repositories is not supported\. For example, if you upload a Maven package with version `1.2-SNAPSHOT` to your repository, CodeArtifact does not support uploading a Maven package with the same snapshot version to one of its upstream repositories\. This scenario might return unpredictable results\. 
+
+ When a Maven snapshot is published, its previous version is preserved in a new version called a *build*\. Each time a Maven snapshot is published, a new build version is created\. All previous versions of a snapshot are maintained in its build versions\. When a Maven snapshot is published, its status is set to `Published` and the status of the build that contains the previous version is set to `Unlisted`\. 
+
+ If you request a snapshot, the version with status `Published` is returned\. This is always the most recent version of the Maven snapshot\. You can also request a particular build of a snapshot\. To see the build versions of a Maven snapshot, use [ListPackageVersions](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html) and set the `status` parameter to `Unlisted`\. 
+
+To delete all build versions of a Maven snapshot, use [DeletePackageVersions](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DeletePackageVersions.html) and set the `expectedStatus` parameter to `Unlisted`\. 

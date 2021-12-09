@@ -1,3 +1,0 @@
-Deleting an Analysis
-You can delete an analysis by using the All analyses tab of the Amazon QuickSight start page. Deleting an analysis doesn't affect any dashboards that are based on that analysis.
-To remove an analysis, choose the details icon ( ⋮ ) on the analysis, and choose Delete. Confirm your choice by choosing Delete again. 

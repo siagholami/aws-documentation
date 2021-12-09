@@ -1,0 +1,5 @@
+# Change AWS Elastic Beanstalk Environment Settings<a name="how-to-change-project-beanstalk"></a>
+
+You can change the settings of an Elastic Beanstalk environment that AWS CodeStar creates in a project\. For example, you might want to change the default Elastic Beanstalk environment in your AWS CodeStar project from Single Instance to Load Balanced\. To do this, edit the `template.yml` file in your project's repository\. You might also need to change permissions for your project's worker roles\. After you push the template change, AWS CodeStar and AWS CloudFormation provision the resources for you\.
+
+For more information about editing the `template.yml` file, see [Change Application Resources with the Template\.yml File](templates.md#update-project-application-template)\. For more information about Elastic Beanstalk environments, see [AWS Elastic Beanstalk Environment Management Console](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-console.html) in the *AWS Elastic Beanstalk Developer Guide*\.

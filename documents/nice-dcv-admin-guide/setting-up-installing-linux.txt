@@ -1,6 +1,0 @@
-Installing the NICE DCV Server on Linux
-This section explains how into install the NICE DCV server on Linux.
-Topics
- Prerequisites
- Installing the Server
- Post-Installation Checks

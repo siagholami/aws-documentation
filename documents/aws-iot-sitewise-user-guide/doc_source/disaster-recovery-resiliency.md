@@ -1,0 +1,10 @@
+# Resilience in AWS IoT SiteWise<a name="disaster-recovery-resiliency"></a>
+
+The AWS global infrastructure is built around AWS Regions and Availability Zones\. AWS Regions provide multiple physically separated and isolated Availability Zones, which are connected with low\-latency, high\-throughput, and highly redundant networking\. With Availability Zones, you can design and operate applications and databases that automatically fail over between zones without interruption\. Availability Zones are more highly available, fault tolerant, and scalable than traditional single or multiple data center infrastructures\. 
+
+For more information about AWS Regions and Availability Zones, see [AWS Global Infrastructure](http://aws.amazon.com/about-aws/global-infrastructure/)\.
+
+In addition to the AWS global infrastructure, AWS IoT SiteWise offers several features to help support your data resiliency and backup needs:
++ You can publish property value updates to AWS IoT Core through MQTT messages, then configure rules to act upon that data\. With this feature, you can back up data in other AWS services such as Amazon S3 and Amazon DynamoDB\. For more information, see [Interacting with other AWS services](interact-with-other-services.md) and [Exporting data to Amazon Simple Storage Service](export-to-s3.md)\.
++ You can use the AWS IoT SiteWise `Get*` APIs to retrieve and backup historical asset property data\. For more information, see [Querying historical asset property values](query-industrial-data.md#historical-values)\.
++ You can use the AWS IoT SiteWise `Describe*` APIs to retrieve the definitions for your resources, such as assets and models\. You can backup these definitions and later use them to recreate your resources\. For more information, see the [https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/)\.

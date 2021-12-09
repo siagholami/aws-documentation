@@ -1,2 +1,0 @@
-ST_Perimeter2D
-ST_Perimeter2D is an alias for ST_Perimeter. For more information, see ST_Perimeter. 

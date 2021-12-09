@@ -1,0 +1,5 @@
+# Create a repository for your source code<a name="get-set-up-setup-repository"></a>
+
+Before you use Amazon CodeGuru Reviewer to create code reviews, the source code that you want to analyze must be set up in a supported repository type\. CodeGuru Reviewer supports AWS CodeCommit, Bitbucket, GitHub, and GitHub Enterprise Server\. If you use Bitbucket or GitHub Enterprise Server, you must also create a connection to your repository using AWS CodeStar connections\. For more information, see [What are connections?](https://docs.aws.amazon.com/dtconsole/latest/userguide/welcome-connections.html) in the *AWS Developer Tools User Guide*\. 
+
+After you know the repository type and the name of your repository, you need to create a repository association\. For GitHub repositories, you can create a repository association using only the CodeGuru Reviewer console\. For the other supported repository types, you can use the console, AWS CLI, or Amazon CodeGuru Reviewer SDK to create a repository association\. For more information, see [Working with repository associations in Amazon CodeGuru Reviewer](working-with-repositories.md)\. 

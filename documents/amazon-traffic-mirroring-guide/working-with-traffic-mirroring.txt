@@ -1,7 +1,0 @@
-Working with Traffic Mirroring
-You can work with traffic mirror targets, sessions, and filters by using the Amazon VPC console or the AWS CLI.
-Topics
- Traffic Mirror Targets
- Cross-Account Traffic Mirror Targets
- Traffic Mirror Filters
- Traffic Mirror Sessions

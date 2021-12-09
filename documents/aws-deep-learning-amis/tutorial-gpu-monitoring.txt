@@ -1,9 +1,0 @@
-Monitoring
-Your DLAMI comes preinstalled with several GPU monitoring tools. This guide also mentions tools that are available to download and install.
- Monitor GPUs with CloudWatch - a preinstalled utility that reports GPU usage statistics to Amazon CloudWatch.
- nvidia-smi CLI - a utility to monitor overall GPU compute and memory utilization. This is preinstalled on your AWS Deep Learning AMI (DLAMI).
- NVML C library - a C-based API to directly access GPU monitoring and management functions. This used by the nvidia-smi CLI under the hood and is preinstalled on your DLAMI. It also has Python and Perl bindings to facilitate development in those languages. The gpumon.py utility preinstalled on your DLAMI uses the pynvml package from nvidia-ml-py.
- NVIDIA DCGM - A cluster management tool. Visit the developer page to learn how to install and configure this tool.
-Tip
-Check out NVIDIA's developer blog for the latest info on using the CUDA tools installed your DLAMI:
-Monitoring TensorCore utilization using Nsight IDE and nvprof.

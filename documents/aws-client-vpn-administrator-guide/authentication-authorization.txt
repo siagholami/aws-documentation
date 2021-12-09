@@ -1,5 +1,0 @@
-Client authentication and authorization
-Client VPN provides authentication and authorization capabilities.
-Topics
- Authentication
- Authorization

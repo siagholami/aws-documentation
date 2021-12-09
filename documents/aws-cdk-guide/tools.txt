@@ -1,6 +1,0 @@
-AWS CDK tools
-This section contains information about the AWS CDK tools listed below.
-Topics
- AWS CDK Toolkit (cdk command)
- AWS Toolkit for Visual Studio Code
- SAM CLI

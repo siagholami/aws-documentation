@@ -1,0 +1,11 @@
+# Monitoring and Troubleshooting AWS Elemental MediaTailor<a name="monitoring"></a>
+
+Monitoring is an important part of maintaining the reliability, availability, and performance of AWS Elemental MediaTailor and your other AWS solutions\. AWS provides the following monitoring tools to watch MediaTailor, report when something is wrong, and take automatic actions when appropriate:
++ *Amazon CloudWatch* monitors your AWS resources and the applications that you run on AWS in real time\. You can collect and track metrics, create customized dashboards, and set alarms that notify you or take actions when a specified metric reaches a threshold that you specify\. For example, you can have CloudWatch track CPU usage or other metrics of your Amazon EC2 instances and automatically launch new instances when needed\. For more information, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\.
++ *Amazon CloudWatch Logs* enables you to monitor, store, and access your log files from all interactions with your ad decision server \(ADS\)\. AWS Elemental MediaTailor emits logs for ad requests, redirects, responses, and reporting requests and responses\. Errors from the ADS and origin servers are also emitted to log groups in Amazon CloudWatch\. You can also archive your log data in highly durable storage\. For general information, see the [Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)\. For information on the ADS logs and how to access them for analysis through Amazon CloudWatch Logs Insights, see [Viewing and Querying AWS Elemental MediaTailor ADS Logs](monitor-cloudwatch-ads-logs.md)\.
+
+**Topics**
++ [Setting Up Permissions for Amazon CloudWatch](monitoring-permissions.md)
++ [Monitoring AWS Elemental MediaTailor with Amazon CloudWatch Metrics](monitoring-cloudwatch-metrics.md)
++ [Viewing and Querying AWS Elemental MediaTailor ADS Logs](monitor-cloudwatch-ads-logs.md)
++ [Logging AWS Elemental MediaTailor API Calls with AWS CloudTrail](logging-using-cloudtrail.md)

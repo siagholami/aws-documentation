@@ -1,6 +1,0 @@
-PinpointEmail resource type reference
-Resource types
- AWS::PinpointEmail::ConfigurationSet
- AWS::PinpointEmail::ConfigurationSetEventDestination
- AWS::PinpointEmail::DedicatedIpPool
- AWS::PinpointEmail::Identity

@@ -1,0 +1,9 @@
+# Audience in CodeGuru Reviewer<a name="security_iam_audience"></a>
+
+How you use AWS Identity and Access Management \(IAM\) differs, depending on the work you do in CodeGuru Reviewer\.
+
+**Service user** – If you use the CodeGuru Reviewer service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more CodeGuru Reviewer features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in CodeGuru Reviewer, see [Troubleshooting CodeGuru Reviewer identity and access](security_iam_troubleshoot.md)\.
+
+**Service administrator** – If you're in charge of CodeGuru Reviewer resources at your company, you probably have full access to CodeGuru Reviewer\. It's your job to determine which CodeGuru Reviewer features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with CodeGuru Reviewer, see [Overview of managing access permissions to your CodeGuru Reviewer resources](security_iam_service-with-iam.md)\.
+
+**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to CodeGuru Reviewer\. To view example CodeGuru Reviewer identity\-based policies that you can use in IAM, see [Customer managed policy examples](auth-and-access-control-iam-identity-based-access-control.md#security_iam_id-based-policy-examples)\.

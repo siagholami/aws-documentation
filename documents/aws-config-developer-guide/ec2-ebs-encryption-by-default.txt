@@ -1,8 +1,0 @@
-ec2-ebs-encryption-by-default
-Check that Amazon Elastic Block Store (EBS) encryption is enabled by default. The rule is NON_COMPLIANT if the encryption is not enabled.
-Identifier: EC2_EBS_ENCRYPTION_BY_DEFAULT
-Trigger type: Periodic
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

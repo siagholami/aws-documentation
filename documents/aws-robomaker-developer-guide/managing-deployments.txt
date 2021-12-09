@@ -1,6 +1,0 @@
-Managing Deployments
-In AWS RoboMaker, a robot application is delivered and installed onto a fleet of physical robots using deployment job. The robot application must be build for the platform supported by the physical robot (for example, ARMHF). 
-Topics
- Conditional Deployment
- Creating a deployment job
- Viewing a Deployment Job

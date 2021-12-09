@@ -1,8 +1,0 @@
-Integrating your Game Server for Amazon GameLift
-The topics in this section describe how to integrate Amazon GameLift into a multiplayer game server.
-Adding Amazon GameLift to your game server is Step 2 on the Get Started with Custom Servers roadmap. The integration topics in this section assume that you've created an AWS account and have an existing game server project.
-Topics
- Add Amazon GameLift to Your Game Server
- Amazon GameLift Server API (C) Reference
- Amazon GameLift Server API (C#) Reference
- Amazon GameLift Server API Reference for Unreal Engine

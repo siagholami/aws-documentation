@@ -1,7 +1,0 @@
-
-
-Getting Started with AWS IoT Things Graph in AWS IoT Greengrass
-This section contains instructions and provides examples to get you started with end-to-end development using AWS IoT Greengrass deployments of AWS IoT Things Graph.
-Topics
- Setting Up Your Environment for AWS IoT Greengrass Deployments
- AWS IoT Greengrass Flow Examples

@@ -1,6 +1,0 @@
-Maintain Your Simple AD Directory
-This section describes how to maintain common administrative tasks for your Simple AD environment.
-Topics
- Delete Your Directory
- Snapshot or Restore Your Directory
- View Directory Information

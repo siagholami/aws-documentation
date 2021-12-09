@@ -1,5 +1,0 @@
-Installing the NICE DCV Server on Windows
-This section explains how to install the NICE DCV server on Windows.
-Topics
- Prerequisites
- Installing the Server

@@ -1,9 +1,0 @@
-AppSync resource type reference
-Resource types
- AWS::AppSync::ApiCache
- AWS::AppSync::ApiKey
- AWS::AppSync::DataSource
- AWS::AppSync::FunctionConfiguration
- AWS::AppSync::GraphQLApi
- AWS::AppSync::GraphQLSchema
- AWS::AppSync::Resolver

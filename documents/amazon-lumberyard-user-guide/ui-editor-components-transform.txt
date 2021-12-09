@@ -1,5 +1,0 @@
-Transform2D Component
-The Transform2D component is automatically added to every UI element you create. This component defines the element's position, rotation, size, and scale.
-Topics
- Managing UI Anchors and Offsets
- Scale to Device

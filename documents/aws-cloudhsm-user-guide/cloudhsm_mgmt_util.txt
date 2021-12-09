@@ -1,7 +1,0 @@
-cloudhsm_mgmt_util
-The cloudhsm_mgmt_util command line tool helps crypto officers manage users in the HSMs. It includes tools that create, delete, and list users, and change user passwords. 
-cloudhsm_mgmt_util also includes commands that allow crypto users (CUs) to share keys and get and set key attributes. These commands complement the key management commands in the primary key management tool, key_mgmt_util. 
-For a quick start, see Getting Started with cloudhsm_mgmt_util. For detailed information about the cloudhsm_mgmt_util commands and examples of using the commands, see cloudhsm_mgmt_util Command Reference. 
-Topics
- Getting Started with cloudhsm_mgmt_util
- cloudhsm_mgmt_util Command Reference

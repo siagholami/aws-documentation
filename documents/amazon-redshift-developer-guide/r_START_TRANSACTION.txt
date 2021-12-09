@@ -1,3 +1,0 @@
-START TRANSACTION
-Synonym of the BEGIN function. 
-See BEGIN. 

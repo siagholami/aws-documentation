@@ -1,2 +1,0 @@
-Installing Applications with Earlier AMI Versions of Amazon EMR
-When using an AMI version, applications are installed in any number of ways, including using the NewSupportedProducts parameter for the RunJobFlow action, using bootstrap actions, and using the Step action.

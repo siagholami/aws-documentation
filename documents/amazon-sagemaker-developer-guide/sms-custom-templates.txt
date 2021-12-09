@@ -1,9 +1,0 @@
-Creating Custom Labeling Workflows
-This document guides you through the process of setting up a workflow with a custom labeling template. For more information about starting a labeling job, see Getting started. In that section, when you choose the Task type, select Custom labeling task, and then follow this section's instructions to configure it.
-Topics
- Step 1: Setting up your workforce
- Step 2: Creating your custom labeling task template
- Demo Template: Annotation of Images with crowd-bounding-box
- Demo Template: Labeling Intents with crowd-classifier
- Step 3: Processing with AWS Lambda
- Custom Workflows via the API

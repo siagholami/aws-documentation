@@ -1,4 +1,0 @@
-mysql.rds_collect_global_status_history
-Takes a snapshot on demand for the Global Status History (GoSH). For more information, see Managing the Global Status History.
-Syntax
-CALL mysql.rds_collect_global_status_history;

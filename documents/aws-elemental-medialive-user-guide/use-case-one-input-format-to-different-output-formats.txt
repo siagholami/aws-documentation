@@ -1,3 +1,0 @@
-Use Case B: One Input Format Converted to One Different Format in One Output
-The input is set up with one format of captions and two or more languages. You want to convert the captions to a different format in the output. You want to produce only one type of output and include all the languages in that output.
-For example, the input has embedded captions in German and French. You want to convert the captions to DVB-Sub and include these captions in both languages in a UDP output. 

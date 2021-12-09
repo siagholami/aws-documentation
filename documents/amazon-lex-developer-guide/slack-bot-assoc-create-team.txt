@@ -1,4 +1,0 @@
-Step 2: Sign Up for Slack and Create a Slack Team
-Sign up for a Slack account and create a Slack team. For instructions, see Using Slack. In the next section, you create a Slack application, which any Slack team can install.
-Next Step
-Step 3: Create a Slack Application

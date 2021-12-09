@@ -1,5 +1,0 @@
-Monitor Your Simple AD Directory
-You can monitor your Simple AD directory with the following methods:
-Topics
- Understanding Your Directory Status
- Configure Directory Status Notifications

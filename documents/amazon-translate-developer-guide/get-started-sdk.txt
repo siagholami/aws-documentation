@@ -1,8 +1,0 @@
-Step 5: Getting Started (SDK)
-The following examples demonstrate how to use Amazon Translate TranslateText operation using Java and Python. Use them to learn about the TranslateText operation and as building blocks for your own applications.
-To run the Java examples, you need to install the AWS SDK for Java. For instructions for installing the SDK for Java, see Set up the AWS SDK for Java.
-Topics
- Translating Text Using the AWS SDK for Java
- Translating Text Using the AWS SDK for Python (Boto)
- Translating Text Using the AWS Mobile SDK for Android
- Translating Text Using the AWS Mobile SDK for iOS

@@ -1,6 +1,0 @@
-Logging and Monitoring in Amazon Personalize
-This section provides information about monitoring and logging Amazon Personalize with Amazon CloudWatch and AWS CloudTrail.
-Topics
- Monitoring Amazon Personalize
- CloudWatch Metrics for Amazon Personalize
- Logging Amazon Personalize API Calls with AWS CloudTrail

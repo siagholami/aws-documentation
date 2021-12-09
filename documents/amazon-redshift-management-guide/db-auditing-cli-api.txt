@@ -1,9 +1,0 @@
-Configuring logging by using the Amazon Redshift CLI and API
-You can use the following Amazon Redshift CLI operations to configure audit logging:
-  describe-logging-status 
-  disable-logging 
-  enable-logging 
-You can use the following Amazon Redshift API actions to configure audit logging:
-  DescribeLoggingStatus 
-  DisableLogging 
-  EnableLogging 

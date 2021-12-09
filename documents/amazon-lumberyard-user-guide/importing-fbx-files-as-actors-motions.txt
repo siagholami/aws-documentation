@@ -1,2 +1,0 @@
-Tutorials: Importing FBX Files as Actors and Motions
-For more information, see Importing Assets into Lumberyard.

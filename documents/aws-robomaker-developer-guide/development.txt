@@ -1,9 +1,0 @@
-Developing Applications
-This section helps you get set up to develop with the Robot Operating System (ROS). You learn how to create robot applications and simulation applications with the configured AWS Cloud9 development environment. You learn about how to extend your robot application with AWS RoboMaker cloud extensions. 
-It also describes how to create and manage AWS RoboMaker robot applications and AWS RoboMaker simulation applications.
-Topics
- Creating a New Robotic Application
- Building and Bundling Robotic Applications with Colcon
- Creating a Simulation Job
- AWS RoboMaker Cloud Extensions
- Developing with AWS Cloud9

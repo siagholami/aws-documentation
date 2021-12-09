@@ -1,8 +1,0 @@
-Managing IAM groups
-Amazon Web Services offers multiple tools for managing IAM groups. For information about the permissions that you need in order to add and remove users in a group, see Permissions required to access IAM resources. 
-Topics
- Listing IAM groups
- Adding and removing users in an IAM group
- Attaching a policy to an IAM group
- Renaming an IAM group
- Deleting an IAM group

@@ -1,4 +1,0 @@
-FMS resource type reference
-Resource types
- AWS::FMS::NotificationChannel
- AWS::FMS::Policy

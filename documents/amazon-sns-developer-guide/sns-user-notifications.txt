@@ -1,5 +1,0 @@
-Using Amazon SNS for user notifications
-This section provides information about using Amazon SNS for user notifications with subscribers such as mobile applications, mobile phone numbers, and email addresses.
-Topics
- Using Amazon SNS for user notifications with a mobile application as a subscriber (mobile push)
- Text messaging (SMS)

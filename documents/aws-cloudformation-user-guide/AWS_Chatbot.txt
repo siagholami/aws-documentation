@@ -1,3 +1,0 @@
-Chatbot resource type reference
-Resource types
- AWS::Chatbot::SlackChannelConfiguration

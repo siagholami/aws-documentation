@@ -1,8 +1,0 @@
-DescribeAnalysisSchemesResult
-Description
-The result of a DescribeAnalysisSchemes request. Contains the analysis schemes configured for the domain specified in the request.
-Contents
-AnalysisSchemes 
-The analysis scheme descriptions.
-Type: AnalysisSchemeStatus list 
- Required: Yes 

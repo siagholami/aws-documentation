@@ -1,4 +1,0 @@
-Amazon Kinesis Video Streams Media
-The following actions are supported by Amazon Kinesis Video Streams Media:
-  GetMedia 
-  PutMedia 

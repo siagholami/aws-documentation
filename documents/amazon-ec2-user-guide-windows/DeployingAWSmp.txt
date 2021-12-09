@@ -1,8 +1,0 @@
-Deploying the AWS Management Pack
-Before you can deploy the AWS Management Pack, you must download it. For more information, see Downloading the AWS Management Pack.
-Topics
- Step 1: Installing the AWS Management Pack
- Step 2: Configuring the Watcher Node
- Step 3: Create an AWS Run As Account
- Step 4: Run the Add Monitoring Wizard
- Step 5: Configure Ports and Endpoints

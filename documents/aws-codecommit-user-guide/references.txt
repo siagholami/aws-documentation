@@ -1,8 +1,0 @@
-AWS CodeCommit reference
-The following reference topics can help you better understand CodeCommit, Git, AWS Regions, service limits, and more.
-Topics
- Regions and Git connection endpoints for AWS CodeCommit
- Using AWS CodeCommit with interface VPC endpoints
- Quotas in AWS CodeCommit
- AWS CodeCommit command line reference
- Basic Git commands

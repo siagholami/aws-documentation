@@ -1,6 +1,0 @@
-Font Features
-Language-Specific Font Assets
-You can group Font Family XML definitions by using a lang attribute. This attribute tells the localization system to load font assets only for the currently actively language. To see an example, open the Samples Project and, in the UI Editor, open dev/Gems/LyShineExamples/Assets/UI/Fonts/LyShineExamples/NotoSans/NotoSans.fontfamily.
-Unique Characters
-Some languages feature a large variety of unique characters. Font XML files contain attributes for adjusting font texture resolution and number of slots for storing unique characters. For more information, see Configuring Font Quality.
-For an example of unique character support in action, open the Samples Project, then load the UiFeatures level. Press CtrlG to play the game. Choose Language Support, then choose either Unique Characters: 32px or Unique Characters: 64px.

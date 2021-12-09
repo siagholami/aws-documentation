@@ -1,3 +1,0 @@
-Amazon Personalize Events
-The following data types are supported by Amazon Personalize Events:
-  Event 

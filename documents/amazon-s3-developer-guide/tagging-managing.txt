@@ -1,6 +1,0 @@
-Managing object tags
-This section explains how you can add object tags programmatically using the AWS SDK for Java or the Amazon S3 console.
-Topics
- Managing object tags using the console
- Managing tags using the AWS SDK for Java
- Managing tags using the AWS SDK for .NET

@@ -1,5 +1,0 @@
-AWS Organizations reference
-Use the topics in this section to find detailed reference information for various aspects of AWS Organizations.
-Topics
- Quotas for AWS Organizations
- AWS managed policies available for use with AWS Organizations

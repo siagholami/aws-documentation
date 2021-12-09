@@ -1,9 +1,0 @@
-Preconditions
-The following are the AWS Data Pipeline precondition objects:
-Topics
- DynamoDBDataExists
- DynamoDBTableExists
- Exists
- S3KeyExists
- S3PrefixNotEmpty
- ShellCommandPrecondition

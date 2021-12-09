@@ -1,9 +1,0 @@
-s3-bucket-default-lock-enabled
-Checks whether Amazon Simple Storage Service (Amazon S3) bucket has lock enabled, by default. The rule is NON_COMPLIANT if the lock is not enabled.
-Identifier: S3_BUCKET_DEFAULT_LOCK_ENABLED
-Trigger type: Configuration changes
-Parameters:
-mode (Optional)
-A mode parameter with valid values of GOVERNANCE or COMPLIANCE.
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

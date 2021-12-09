@@ -1,5 +1,0 @@
-Sample Code
-This topic contains code samples for various functionality which can be used to explore Amazon Polly.
-
-Java Samples
-Python Samples

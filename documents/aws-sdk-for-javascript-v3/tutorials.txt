@@ -1,5 +1,0 @@
-Tutorials for the AWS SDK for JavaScript
-The following tutorials show you how to perform different tasks related to using the AWS SDK for JavaScript.
-Topics
- Tutorial: Setting Up Node.js on an Amazon EC2 Instance
- Tutorial: Creating and Using Lambda Functions

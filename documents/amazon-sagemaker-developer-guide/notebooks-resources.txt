@@ -1,6 +1,0 @@
-Available Resources
-The following sections list the available resources for Amazon SageMaker Studio notebooks.
-Topics
- Available Instance Types
- Available Amazon SageMaker Images
- Available Amazon SageMaker Kernels

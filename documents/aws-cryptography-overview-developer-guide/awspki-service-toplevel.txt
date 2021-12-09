@@ -1,6 +1,0 @@
-AWS public key infrastructure (PKI) services and tools
-AWS offers multiple PKI services that can help you easily and securely manage your certificate infrastructure. The primary AWS offerings for PKI are tightly linked:
- AWS Certificate Manager (ACM) is used to generate, issue, and manage public and private SSL/TLS certificates for use with your AWS based websites and applications.
- AWS Certificate Manager Private Certificate Authority (ACM PCA) is a managed private certificate authority (CA) service with which you can manage your CA infrastructure and your private certificates.
-Many AWS services rely on these PKI services to authenticate the actors involved in a data transfer process. For a list of such services and an overview of how they use PKI practices, see Other AWS Services That Use SSL/TLS Certificates.
-AWS PKI services comply with a wide range of security standards, making it easy for you to protect your data without worrying about governmental or professional regulations. For a full list of AWS data security standard compliances, see AWS Compliance Programs.

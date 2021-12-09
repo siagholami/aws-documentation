@@ -1,5 +1,0 @@
-Amazon CloudSearch API Reference
-You use three APIs to interact with Amazon CloudSearch:
- Configuration API—Set up and manage your search domain.
- Document Service API—Submit the data you want to search.
- Search API—Search your domain.

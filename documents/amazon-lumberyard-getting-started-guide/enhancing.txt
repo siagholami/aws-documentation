@@ -1,8 +1,0 @@
-9: Enhancing Your Level with Details
-You can enhance the look of your level with details that significantly heighten the sense of ambiance and mood in your game.
-Topics
- Adding Decals to the Maze
- Using the Particle System to Add Steam
- Adding Ambient Particles
- Adding a Distance Mesh
-Next: Adding Decals to the Maze

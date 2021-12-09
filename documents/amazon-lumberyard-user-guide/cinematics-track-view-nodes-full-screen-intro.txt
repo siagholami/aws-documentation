@@ -1,7 +1,0 @@
-Full Screen Effect Nodes
-Full Screen Effect nodes create post-processing effects for a sequence. They are added by using the context menu for a Sequence or Director node.
-Topics
- Radial Blur Node
- Color Correction Node
- Adding a Depth of Field Node
- Screen Fader Node

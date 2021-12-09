@@ -1,9 +1,0 @@
-elb-deletion-protection-enabled
-Checks whether Elastic Load Balancing has deletion protection enabled. The rule is NON_COMPLIANT if deletion_protection.enabled is false.
-Identifier: ELB_DELETION_PROTECTION_ENABLED
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

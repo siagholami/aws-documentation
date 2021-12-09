@@ -1,0 +1,3 @@
+# How Amazon Transcribe Medical Works<a name="how-it-works-med"></a>
+
+ Amazon Transcribe Medical enables you to transcribe individual audio content with medical information into text\. You can use either the streaming transcription API or the batch transcription API\. Streaming transcription enables you to transcribe real\-time streams of audio into text\. To transcribe recorded audio files, use batch transcription\. For more information on transcribing streaming audio, see [Streaming Transcription Overview](how-streaming-transcription-med.md) and [Establish a Bi\-Directional Connection Using the WebSocket Protocol](websocket-med.md)\. For more information on batch transcription, see [Batch Transcription Overview](batch-med-transcription.md)

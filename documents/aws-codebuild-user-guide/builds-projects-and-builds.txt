@@ -1,5 +1,0 @@
-Working with build projects and builds in AWS CodeBuild
-To get started, follow the steps in Create a build project, and then follow the steps in Run a build. For more information about build projects and builds, see the following topics.
-Topics
- Working with build projects
- Working with builds in AWS CodeBuild

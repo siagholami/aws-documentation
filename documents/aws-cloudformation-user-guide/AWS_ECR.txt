@@ -1,3 +1,0 @@
-Amazon ECR resource type reference
-Resource types
- AWS::ECR::Repository

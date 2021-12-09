@@ -1,9 +1,0 @@
-iam-group-has-users-check
-Checks whether IAM groups have at least one IAM user.
-Identifier: IAM_GROUP_HAS_USERS_CHECK
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

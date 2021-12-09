@@ -1,5 +1,0 @@
-Script Canvas Gem
-The Script Canvas gem enables Lumberyard's visual scripting environment. With the gem enabled, you can use the Script Canvas editor to create game logic without needing to write your own code.
-
-To enable gems, see Enabling Gems.
-For more information about working with Script Canvas graphs, see Creating Gameplay with Script Canvas.

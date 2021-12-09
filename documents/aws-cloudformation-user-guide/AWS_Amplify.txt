@@ -1,5 +1,0 @@
-Amplify Console resource type reference
-Resource types
- AWS::Amplify::App
- AWS::Amplify::Branch
- AWS::Amplify::Domain

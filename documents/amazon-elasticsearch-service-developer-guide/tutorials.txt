@@ -1,6 +1,0 @@
-Amazon Elasticsearch Service Tutorials
-This chapter includes several start-to-finish tutorials for working with Amazon Elasticsearch Service, including how to migrate to the service, build a simple search application, and create a Kibana dashboard.
-Topics
- Migrating to Amazon Elasticsearch Service
- Creating a Search Application with Amazon Elasticsearch Service
- Visualizing Customer Support Calls with Amazon Elasticsearch Service and Kibana

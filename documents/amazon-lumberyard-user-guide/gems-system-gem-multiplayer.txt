@@ -1,7 +1,0 @@
-Multiplayer Gem
-The Multiplayer Gem makes it easy for you to add some basic network functionality to your games without digging too deeply into specific details or customization. To make this possible, Lumberyard has created a Multiplayer Lobby component and CVars for general networking use.
-You can also use the Multiplayer sample project for an example of how to build and structure multiplayer games that use the various features of the GridMate networking library.
-For more information about networking in Lumberyard, see Using Lumberyard Networking.
-Topics
- The Multiplayer Lobby Component
- Multiplayer Gem CVars

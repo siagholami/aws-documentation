@@ -1,9 +1,0 @@
-root-account-hardware-mfa-enabled
-Checks whether your AWS account is enabled to use multi-factor authentication (MFA) hardware device to sign in with root credentials. The rule is NON_COMPLIANT if any virtual MFA devices are permitted for signing in with root credentials.
-Identifier: ROOT_ACCOUNT_HARDWARE_MFA_ENABLED
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except China (Beijing), China (Ningxia), AWS GovCloud (US-East), and AWS GovCloud (US-West)
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

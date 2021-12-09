@@ -1,3 +1,0 @@
-June 8, 2017
-Published on 2017-06-08
-Added support for Europe (Ireland). For more information, see AWS Regions and Endpoints.

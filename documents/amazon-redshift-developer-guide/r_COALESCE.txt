@@ -1,3 +1,0 @@
-COALESCE
-Synonym of the NVL expression. 
-See NVL expression. 

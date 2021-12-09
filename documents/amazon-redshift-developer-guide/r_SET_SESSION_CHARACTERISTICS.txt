@@ -1,2 +1,0 @@
-SET SESSION CHARACTERISTICS
-This command is deprecated.

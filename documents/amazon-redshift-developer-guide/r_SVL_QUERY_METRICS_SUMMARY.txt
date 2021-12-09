@@ -1,5 +1,0 @@
-SVL_QUERY_METRICS_SUMMARY
-The SVL_QUERY_METRICS_SUMMARY view shows the maximum values of metrics for completed queries. This view is derived from the STL_QUERY_METRICS system table. Use the values in this view as an aid to determine threshold values for defining query monitoring rules. For more information, see WLM query monitoring rules.
-This view is visible to all users. Superusers can see all rows; regular users can see only their own data. For more information, see Visibility of data in system tables and views.
-Table columns
-[See the AWS documentation website for more details]

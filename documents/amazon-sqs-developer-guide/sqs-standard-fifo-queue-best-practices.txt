@@ -1,6 +1,0 @@
-Recommendations for Amazon SQS standard and FIFO queues
-The following best practices can help you reduce costs and process messages efficiently using Amazon SQS.
-Topics
- Working with Amazon SQS messages
- Reducing Amazon SQS costs
- Moving from an Amazon SQS Standard queue to a FIFO queue

@@ -1,8 +1,0 @@
-AWS Systems Manager State Manager walkthroughs
-The following walkthroughs demonstrate how to create and configure State Manager associations by using the Systems Manager console or the AWS CLI. These walkthrough also demonstrate how to automatically perform common administrative tasks by using State Manager.
-Topics
- Creating associations that run MOF files
- Creating associations that run Ansible playbooks
- Creating associations that run Chef recipes
- Automatically update SSM Agent (CLI)
- Walkthrough: Automatically update PV drivers on EC2 instances for Windows Server (console)

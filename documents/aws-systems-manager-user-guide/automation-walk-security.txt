@@ -1,6 +1,0 @@
-Running automations by using different security models
-This section includes information about how to run automations by using different security models.
-Topics
- Running an automation as the current authenticated user
- Running an automation by using an IAM service role
- Running an automation by using delegated administration

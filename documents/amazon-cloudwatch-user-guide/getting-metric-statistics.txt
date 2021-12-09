@@ -1,7 +1,0 @@
-Getting Statistics for a Metric
-The following examples show you how to get statistics for the CloudWatch metrics for your resources, such as your EC2 instances.
-Topics
- Getting Statistics for a Specific Resource
- Aggregating Statistics Across Resources
- Aggregating Statistics by Auto Scaling Group
- Aggregating Statistics by Amazon Machine Image (AMI)

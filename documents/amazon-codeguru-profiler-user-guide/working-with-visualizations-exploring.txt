@@ -1,9 +1,0 @@
-Exploring visualization data
-CodeGuru Profiler makes it easy to explore visualization data. You can pause over frames to see information about methods, zoom in on a frame to see more context, and inspect a frame to see the data in an Inspect visualization.
-Topics
- Choosing my code in visualizations
- Pausing over a frame
- Zooming in on a frame
- Resetting zoom in a visualization
- Inspecting a frame
- Understanding the dollar estimate of the CPU cost for frames

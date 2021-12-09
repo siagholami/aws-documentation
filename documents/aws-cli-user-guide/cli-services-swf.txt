@@ -1,9 +1,0 @@
-Using Amazon SWF with the AWS CLI
-You can access the features of Amazon Simple Workflow Service (Amazon SWF) using the AWS Command Line Interface (AWS CLI). 
-To list the AWS CLI commands for Amazon SWF, use the following command.
-aws swf help
-Before you run any commands, set your default credentials. For more information, see Configuring the AWS CLI.
-The following topics show examples of CLI commands that perform common tasks for Amazon SWF.
-Topics
- List of Amazon SWF commands by category
- Working with Amazon SWF domains using the AWS CLI

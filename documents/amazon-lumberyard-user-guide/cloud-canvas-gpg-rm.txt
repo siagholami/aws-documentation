@@ -1,7 +1,0 @@
-Using Resource Manager in Game Design
-You can use Cloud Canvas Resource Manager to make deployments active, test mappings, use protected deployments, and to delete deployments and resources.
-For information, see the following links in the Working with Deployments section of the Cloud Canvas documentation.
- Making a Cloud Canvas Deployment Active
- Testing Different Mappings
- Using Protected Deployments 
- Deleting Cloud Canvas Deployments and Their Resources

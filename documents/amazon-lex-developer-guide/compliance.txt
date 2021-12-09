@@ -1,9 +1,0 @@
-Compliance Validation for Amazon Lex
-Third-party auditors assess the security and compliance of Amazon Lex as part of multiple AWS compliance programs. Amazon Lex is a HIPAA eligible service. It is PCI, SOC, and ISO compliant. You can download third-party audit reports using AWS Artifact. For more information, see Downloading Reports in AWS Artifact.
-Your compliance responsibility when using Amazon Lex is determined by the sensitivity of your data, your organization’s compliance objectives, and applicable laws and regulations. If your use of Amazon Lex is subject to compliance with standards such as PCI, AWS provides the following resources to help:
- Security and Compliance Quick Start Guides – Deployment guides that discuss architectural considerations and provide steps for deploying security- and compliance-focused baseline environments on AWS
- Architecting for HIPAA Security and Compliance Whitepaper – This whitepaper describes how companies can use AWS to create HIPAA-compliant applications.
- AWS Compliance Resources – A collection of workbooks and guides that might apply to your industry and location
- AWS Config – A service that assesses how well your resource configurations comply with internal practices, industry guidelines, and regulations
- AWS Security Hub – A comprehensive view of your security state within AWS that helps you check your compliance with security industry standards and best practices
-For a list of AWS services in scope for specific compliance programs, see AWS Services in Scope by Compliance Program. For general information, see AWS Compliance Programs.

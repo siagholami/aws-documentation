@@ -1,2 +1,0 @@
-Using the AWS SDK for Python (Boto)
-Boto is a Python package that provides interfaces to AWS including Amazon S3. For more information about Boto, go to the AWS SDK for Python (Boto). The getting started link on this page provides step-by-step instructions to get started. 

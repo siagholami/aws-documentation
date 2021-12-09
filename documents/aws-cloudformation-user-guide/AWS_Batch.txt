@@ -1,5 +1,0 @@
-AWS Batch resource type reference
-Resource types
- AWS::Batch::ComputeEnvironment
- AWS::Batch::JobDefinition
- AWS::Batch::JobQueue

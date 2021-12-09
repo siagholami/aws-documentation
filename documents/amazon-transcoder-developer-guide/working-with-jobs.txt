@@ -1,7 +1,0 @@
-Working with Jobs
-Topics
- Creating a Job in Elastic Transcoder
- Listing Jobs and Viewing Job Settings in Elastic Transcoder
- Canceling an Elastic Transcoder Job
- Settings that You Specify When You Create an Elastic Transcoder Job
-A job does the work of transcoding a media file from one format into another format. When you create a job, you specify the information that Elastic Transcoder needs to perform the transcoding: which file to transcode, what to name the transcoded file, which preset to use (a preset is a template that contains the settings that you want Elastic Transcoder to apply), and so on.

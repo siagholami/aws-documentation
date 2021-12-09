@@ -1,9 +1,0 @@
-cloudfront-origin-access-identity-enabled
-Checks that Amazon CloudFront distribution with Amazon S3 Origin type has Origin Access Identity (OAI) configured. This rule is NON_COMPLIANT if the CloudFront distribution is backed by Amazon S3 and any of Amazon S3 Origin type is not OAI configured. 
-Identifier: CLOUDFRONT_ORIGIN_ACCESS_IDENTITY_ENABLED
-Trigger type: Configuration changes
-AWS Region: Only available in US East (N. Virginia) Region
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

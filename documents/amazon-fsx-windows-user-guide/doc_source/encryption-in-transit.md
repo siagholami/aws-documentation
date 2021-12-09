@@ -1,0 +1,5 @@
+# Encryption in Transit<a name="encryption-in-transit"></a>
+
+Encryption of data in transit is supported on file shares that are mapped on a compute instance that supports SMB protocol 3\.0 or newer\. This includes all Windows versions starting from Windows Server 2012 and Windows 8, and all Linux clients with Samba client version 4\.2 or newer\. Amazon FSx automatically encrypts data in transit using SMB encryption as you access your file system without the need for you to modify your applications\. SMB encryption uses AES\-CCM \[RFC5084\] as its encryption algorithm, and also provides data integrity with signing using SMB Kerberos session keys\.
+
+To meet compliance requirements for always encrypting data\-in\-transit, you can limit file system access to only allow access to clients that support SMB encryption\. You can also enable or disable in\-transit encryption per file share or to the entire file system\. This allows you to have a mix of encrypted and unencrypted file shares on the same file system\. To learn more about managing encryption\-in\-transit on your file system, see [Encryption in Transit](manage-encrypt-in-transit.md)\.

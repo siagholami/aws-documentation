@@ -1,5 +1,0 @@
-Amazon Simple Notification Service resource type reference
-Resource types
- AWS::SNS::Subscription
- AWS::SNS::Topic
- AWS::SNS::TopicPolicy

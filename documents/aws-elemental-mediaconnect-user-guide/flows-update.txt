@@ -1,7 +1,0 @@
-Updating a flow
-You can change a flow's source, entitlements, and outputs even if the flow is running. However, you can't change the flow's name, ARN, or Availability Zone. For more information, see the following topics:
- Managing tags on a flow
- Updating the source
- Updating outputs
- Updating entitlements
- Adding a VPC interface to a flow

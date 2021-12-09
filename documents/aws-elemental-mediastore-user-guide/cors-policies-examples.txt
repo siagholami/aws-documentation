@@ -1,5 +1,0 @@
-Example CORS policies
-The following examples show cross-origin resource sharing (CORS) policies.
-Topics
- Example CORS policy: Read access for any domain
- Example CORS policy: Read access for a specific domain

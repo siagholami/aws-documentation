@@ -1,6 +1,0 @@
-Sample Code for Amazon Elasticsearch Service
-This chapter contains common sample code for working with Amazon Elasticsearch Service: HTTP request signing in a variety of programming languages, using the AWS SDKs to create domains, and using Curator with AWS Lambda to perform periodic index and snapshot management tasks.
-Topics
- Signing HTTP Requests to Amazon Elasticsearch Service
- Compressing HTTP Requests
- Using the AWS SDKs with Amazon Elasticsearch Service

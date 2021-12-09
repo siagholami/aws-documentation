@@ -1,7 +1,0 @@
-Resources for learning about AWS Security Hub
-The following materials can help you to better understand the AWS Security Hub solution and how AWS customers can use the service.
- Introduction to AWS Security Hub video
- https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html
- https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html
- Onboarding webinar
-We also encourage you to enable Security Hub in one of your AWS accounts and get some hands-on experience with the service.

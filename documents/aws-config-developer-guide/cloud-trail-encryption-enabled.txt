@@ -1,9 +1,0 @@
-cloud-trail-encryption-enabled
-Checks whether AWS CloudTrail is configured to use the server side encryption (SSE) AWS Key Management Service (AWS KMS) customer master key (CMK) encryption. The rule is COMPLIANT if the KmsKeyId is defined.
-Identifier: CLOUD_TRAIL_ENCRYPTION_ENABLED
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except China (Beijing) and China (Ningxia)
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

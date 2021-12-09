@@ -1,2 +1,0 @@
-Editing a Harvest Job
-You can't edit a harvest job. To create a harvest job with different settings, see Creating a Harvest Job.

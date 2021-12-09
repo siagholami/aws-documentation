@@ -1,3 +1,0 @@
-Amazon Athena CloudWatch Metrics Connector
-The Amazon Athena CloudWatch Metrics connector enables Amazon Athena to communicate with CloudWatch Metrics so that you can query your metrics data with SQL.
-For information about configuration options, table mapping, permissions, deployment, performance considerations, and licensing, see Amazon Athena Cloudwatch Metrics Connector on GitHub.

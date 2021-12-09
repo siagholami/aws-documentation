@@ -1,5 +1,0 @@
-Configure Requester Pays with the REST API
-Topics
- Setting the requestPayment Bucket Configuration
- Retrieving the requestPayment Configuration
- Downloading objects in Requester Pays buckets

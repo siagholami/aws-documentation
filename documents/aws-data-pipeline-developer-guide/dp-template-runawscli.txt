@@ -1,2 +1,0 @@
-Run AWS CLI Command
-This template runs a user-specified AWS CLI command at scheduled intervals. 

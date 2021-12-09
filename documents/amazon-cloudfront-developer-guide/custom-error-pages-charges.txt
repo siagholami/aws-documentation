@@ -1,2 +1,0 @@
-Pricing for Custom Error Pages
-When CloudFront returns a custom error page to a viewer, you pay the standard CloudFront charges for the custom error page, not the charges for the requested object. For more information about CloudFront charges, see Amazon CloudFront Pricing.

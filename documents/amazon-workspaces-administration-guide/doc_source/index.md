@@ -1,0 +1,85 @@
+# Amazon WorkSpaces Administration Guide
+
+-----
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+
+-----
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+-----
+## Contents
++ [What Is Amazon WorkSpaces?](amazon-workspaces.md)
++ [Get Started with Amazon WorkSpaces Quick Setup](getting-started.md)
++ [Networking and Access for Amazon WorkSpaces](amazon-workspaces-networking.md)
+   + [Configure a VPC for Amazon WorkSpaces](amazon-workspaces-vpc.md)
+   + [Availability Zones for Amazon WorkSpaces](azs-workspaces.md)
+   + [IP Address and Port Requirements for Amazon WorkSpaces](workspaces-port-requirements.md)
+   + [Amazon WorkSpaces Client Network Requirements](workspaces-network-requirements.md)
+   + [Restrict WorkSpaces Access to Trusted Devices](trusted-devices.md)
+   + [Provide Internet Access from Your WorkSpace](amazon-workspaces-internet-access.md)
+   + [Security Groups for Your WorkSpaces](amazon-workspaces-security-groups.md)
+   + [IP Access Control Groups for Your WorkSpaces](amazon-workspaces-ip-access-control-groups.md)
+   + [Set Up PCoIP Zero Client for WorkSpaces](set-up-pcoip-zero-client.md)
+   + [Set Up Android for Chromebooks](set-up-android-chromebook.md)
+   + [Enable and Configure Amazon WorkSpaces Web Access](web-access.md)
+   + [Set Up Amazon WorkSpaces for FedRAMP Authorization or DoD SRG Compliance](fips-encryption.md)
+   + [Enable SSH Connections for Your Linux WorkSpaces](connect-to-linux-workspaces-with-ssh.md)
+   + [Required Configuration and Service Components for WorkSpaces](required-service-components.md)
++ [Manage Directories for Amazon WorkSpaces](manage-workspaces-directory.md)
+   + [Register a Directory with Amazon WorkSpaces](register-deregister-directory.md)
+   + [Update Directory Details for Your WorkSpaces](update-directory-details.md)
+   + [Update DNS Servers for Amazon WorkSpaces](update-dns-server.md)
+   + [Delete the Directory for Your WorkSpaces](delete-workspaces-directory.md)
+   + [Enable Amazon WorkDocs for Microsoft Active Directory](enable-workdocs-active-directory.md)
+   + [Set Up Active Directory Administration Tools for Amazon WorkSpaces](directory_administration.md)
+   + [Manage Your Windows WorkSpaces Using Group Policy](group_policy.md)
+   + [Manage Your Amazon Linux WorkSpaces](manage_linux_workspace.md)
++ [Launch a Virtual Desktop Using Amazon WorkSpaces](launch-workspaces-tutorials.md)
+   + [Launch a WorkSpace Using AWS Managed Microsoft AD](launch-workspace-microsoft-ad.md)
+   + [Launch a WorkSpace Using Simple AD](launch-workspace-simple-ad.md)
+   + [Launch a WorkSpace Using AD Connector](launch-workspace-ad-connector.md)
+   + [Launch a WorkSpace Using a Trusted Domain](launch-workspace-trusted-domain.md)
++ [Administer WorkSpace Users](administer-workspace-users.md)
+   + [Manage WorkSpaces Users](manage-workspaces-users.md)
+   + [Create Multiple WorkSpaces for a User](create-multiple-workspaces-for-user.md)
+   + [Customize How Users Log In to Their WorkSpaces](customize-workspaces-user-login.md)
+   + [Enable Self-Service WorkSpace Management Capabilities for Your Users](enable-user-self-service-workspace-management.md)
++ [Administer Your WorkSpaces](administer-workspaces.md)
+   + [Manage the WorkSpace Running Mode](running-mode.md)
+   + [Modify a WorkSpace](modify-workspaces.md)
+   + [Tag WorkSpaces Resources](tag-workspaces-resources.md)
+   + [WorkSpace Maintenance](workspace-maintenance.md)
+   + [Encrypted WorkSpaces](encrypt-workspaces.md)
+   + [Restart a WorkSpace](reboot-workspaces.md)
+   + [Rebuild a WorkSpace](rebuild-workspace.md)
+   + [Restore a WorkSpace](restore-workspace.md)
+   + [Upgrade Windows 10 BYOL WorkSpaces](upgrade-windows-10-byol-workspaces.md)
+   + [Migrate a WorkSpace](migrate-workspaces.md)
+   + [Delete a WorkSpace](delete-workspaces.md)
++ [WorkSpace Bundles and Images](amazon-workspaces-bundles.md)
+   + [Create a Custom WorkSpaces Image and Bundle](create-custom-bundle.md)
+   + [Update a Custom WorkSpaces Bundle](update-custom-bundle.md)
+   + [Copy a Custom WorkSpaces Image](copy-custom-image.md)
+   + [Delete a Custom WorkSpaces Bundle or Image](delete_bundle.md)
+   + [Bring Your Own Windows Desktop Licenses](byol-windows-images.md)
++ [Monitor Your WorkSpaces](amazon-workspaces-monitoring.md)
+   + [Monitor Your WorkSpaces Using CloudWatch Metrics](cloudwatch-metrics.md)
+   + [Monitor Your WorkSpaces Using CloudWatch Events](cloudwatch-events.md)
++ [Business Continuity for Amazon WorkSpaces](business-continuity.md)
+   + [Cross-Region Redirection for Amazon WorkSpaces](cross-region-redirection.md)
++ [Security in Amazon WorkSpaces](security.md)
+   + [Data Protection in Amazon WorkSpaces](data-protection.md)
+   + [Identity and Access Management for Amazon WorkSpaces](workspaces-access-control.md)
+   + [Compliance Validation for Amazon WorkSpaces](compliance-validation.md)
+   + [Resilience in Amazon WorkSpaces](disaster-recovery-resiliency.md)
+   + [Infrastructure Security in Amazon WorkSpaces](infrastructure-security.md)
+   + [Update Management in Amazon WorkSpaces](update-management.md)
++ [Troubleshooting Amazon WorkSpaces Issues](amazon-workspaces-troubleshooting.md)
++ [Amazon WorkSpaces Quotas](workspaces-limits.md)
++ [Document History](workspaces-document-history.md)

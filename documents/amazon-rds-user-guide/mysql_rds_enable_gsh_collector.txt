@@ -1,4 +1,0 @@
-mysql.rds_enable_gsh_collector
-Enables the Global Status History (GoSH) to take default snapshots at intervals specified by rds_set_gsh_collector. For more information, see Managing the Global Status History.
-Syntax
-CALL mysql.rds_enable_gsh_collector;

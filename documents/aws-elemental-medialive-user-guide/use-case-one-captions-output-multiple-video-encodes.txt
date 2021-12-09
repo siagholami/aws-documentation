@@ -1,3 +1,0 @@
-Use Case D: One Captions Output Shared by Multiple Video Encodes
-This use case deals with captions in an ABR workflow. 
-For example, assume that there are three video/audio media combinations: one for low-resolution video, one for medium, and one for high. Assume that there is one output captions asset (English and Spanish embedded) that you want toc associate with all three video/audio media combinations.

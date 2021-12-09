@@ -1,0 +1,87 @@
+# Amazon Elasticsearch Service Developer Guide
+
+-----
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+
+-----
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+-----
+## Contents
++ [What Is Amazon Elasticsearch Service?](what-is-amazon-elasticsearch-service.md)
++ [Getting Started with Amazon Elasticsearch Service](es-gsg.md)
+   + [Step 1: Create an Amazon ES Domain](es-gsg-create-domain.md)
+   + [Step 2: Upload Data to an Amazon ES Domain for Indexing](es-gsg-upload-data.md)
+   + [Step 3: Search Documents in an Amazon ES Domain](es-gsg-search.md)
+   + [Step 4: Delete an Amazon ES Domain](es-gsg-deleting.md)
++ [Creating and Managing Amazon Elasticsearch Service Domains](es-createupdatedomains.md)
+   + [Configuration Changes](es-managedomains-configuration-changes.md)
+   + [Service Software Updates](es-service-software.md)
+   + [Configuring a Multi-AZ Domain](es-managedomains-multiaz.md)
+   + [VPC Support for Amazon Elasticsearch Service Domains](es-vpc.md)
+   + [Monitoring Cluster Metrics with Amazon CloudWatch](es-managedomains-cloudwatchmetrics.md)
+   + [Configuring Elasticsearch Logs](es-createdomain-configure-slow-logs.md)
+   + [Working with Amazon Elasticsearch Service Index Snapshots](es-managedomains-snapshots.md)
+   + [Upgrading Elasticsearch](es-version-migration.md)
+   + [Tagging Amazon Elasticsearch Service Domains](es-managedomains-awsresourcetagging.md)
++ [Security in Amazon Elasticsearch Service](security.md)
+   + [Data Protection in Amazon Elasticsearch Service](es-data-protection.md)
+      + [Encryption of Data at Rest for Amazon Elasticsearch Service](encryption-at-rest.md)
+      + [Node-to-node Encryption for Amazon Elasticsearch Service](ntn.md)
+   + [Identity and Access Management in Amazon Elasticsearch Service](es-ac.md)
+   + [Fine-Grained Access Control in Amazon Elasticsearch Service](fgac.md)
+   + [Audit Logs for Amazon Elasticsearch Service](audit-logs.md)
+   + [Configuration API Monitoring in Amazon Elasticsearch Service](es-managedomains-cloudtrailauditing.md)
+   + [Compliance Validation for Amazon Elasticsearch Service](es-compliance.md)
+   + [Resilience in Amazon Elasticsearch Service](disaster-recovery-resiliency.md)
+   + [Infrastructure Security in Amazon Elasticsearch Service](infrastructure-security.md)
+   + [Amazon Cognito Authentication for Kibana](es-cognito-auth.md)
+   + [Using Service-Linked Roles for Amazon ES](slr-es.md)
++ [Sample Code for Amazon Elasticsearch Service](es-samplecode.md)
+   + [Signing HTTP Requests to Amazon Elasticsearch Service](es-request-signing.md)
+   + [Compressing HTTP Requests](gzip.md)
+   + [Using the AWS SDKs with Amazon Elasticsearch Service](es-configuration-samples.md)
++ [Indexing Data in Amazon Elasticsearch Service](es-indexing.md)
+   + [Loading Streaming Data into Amazon Elasticsearch Service](es-aws-integrations.md)
+   + [Loading Data with Logstash](es-managedomains-logstash.md)
++ [Searching Data in Amazon Elasticsearch Service](es-searching.md)
+   + [Custom Packages for Amazon Elasticsearch Service](custom-packages.md)
+   + [SQL Support for Amazon Elasticsearch Service](sql-support.md)
+   + [KNN](knn.md)
+   + [Cross-Cluster Search for Amazon Elasticsearch Service](cross-cluster-search.md)
+   + [Learning to Rank for Amazon Elasticsearch Service](learning-to-rank.md)
++ [Kibana](es-kibana.md)
++ [Managing Indices](managing-indices.md)
+   + [UltraWarm for Amazon Elasticsearch Service](ultrawarm.md)
+   + [Index State Management](ism.md)
+   + [Using Curator to Rotate Data in Amazon Elasticsearch Service](curator.md)
++ [Monitoring Data](monitoring-data.md)
+   + [Alerting for Amazon Elasticsearch Service](alerting.md)
+   + [Anomaly Detection for Amazon Elasticsearch Service](ad.md)
++ [Amazon Elasticsearch Service Best Practices](aes-bp.md)
+   + [Sizing Amazon ES Domains](sizing-domains.md)
+   + [Petabyte Scale for Amazon Elasticsearch Service](petabyte-scale.md)
+   + [Dedicated Master Nodes](es-managedomains-dedicatedmasternodes.md)
+   + [Recommended CloudWatch Alarms](cloudwatch-alarms.md)
++ [Amazon Elasticsearch Service General Reference](aes-genref.md)
+   + [Supported Instance Types](aes-supported-instance-types.md)
+   + [Features by Elasticsearch Version](aes-features-by-version.md)
+   + [Plugins by Elasticsearch Version](aes-supported-plugins.md)
+   + [Supported Elasticsearch Operations](aes-supported-es-operations.md)
+   + [Amazon Elasticsearch Service Limits](aes-limits.md)
+   + [Amazon Elasticsearch Service Reserved Instances](aes-ri.md)
+   + [Other Supported Resources](aes-supported-resources.md)
++ [Amazon Elasticsearch Service Tutorials](tutorials.md)
+   + [Migrating to Amazon Elasticsearch Service](migration.md)
+   + [Creating a Search Application with Amazon Elasticsearch Service](search-example.md)
+   + [Visualizing Customer Support Calls with Amazon Elasticsearch Service and Kibana](es-walkthrough.md)
++ [Amazon Elasticsearch Service Troubleshooting](aes-handling-errors.md)
++ [Amazon Elasticsearch Service Configuration API Reference](es-configuration-api.md)
++ [Document History for Amazon Elasticsearch Service](release-notes.md)
++ [AWS glossary](glossary.md)

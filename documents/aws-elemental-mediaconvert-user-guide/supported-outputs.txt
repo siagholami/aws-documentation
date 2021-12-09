@@ -1,5 +1,0 @@
-Outputs supported by AWS Elemental MediaConvert
-The following sections provide support tables for AWS Elemental MediaConvert outputs.
-Topics
- Supported output codecs and containers
- Supported output resolution maximums by codec

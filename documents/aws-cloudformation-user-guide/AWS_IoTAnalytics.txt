@@ -1,6 +1,0 @@
-AWS IoT Analytics resource type reference
-Resource types
- AWS::IoTAnalytics::Channel
- AWS::IoTAnalytics::Dataset
- AWS::IoTAnalytics::Datastore
- AWS::IoTAnalytics::Pipeline

@@ -1,2 +1,0 @@
-Getting Started (Python Notebook)
-To explore the Amazon Forecast APIs, you can use a Jupyter (Python) notebook. For information, see the Forecast samples on GitHub.

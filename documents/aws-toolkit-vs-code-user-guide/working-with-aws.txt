@@ -1,6 +1,0 @@
-Working with AWS Services
-The AWS Toolkit for Visual Studio Code enables you a view and work with various AWS services. It assumes that you've already installed and configured the Toolkit for VS Code on your system.
-Topics
- Working with AWS Services in the AWS Explorer
- Working with Amazon Elastic Container Service
- Working with the AWS CDK Explorer

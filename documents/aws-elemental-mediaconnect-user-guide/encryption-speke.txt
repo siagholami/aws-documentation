@@ -1,5 +1,0 @@
-SPEKE encryption in AWS Elemental MediaConnect
-You can use Secure Packager and Encoder Key Exchange (SPEKE) with AWS Elemental MediaConnect to encrypt an entitlement. This gives you, as the content originator, full control of permissions for this content. This usage is a customization of the SPEKE cloud-based architecture described in the SPEKE documentation. 
-Topics
- Key management for SPEKE
- Setting up SPEKE encryption using AWS Elemental MediaConnect

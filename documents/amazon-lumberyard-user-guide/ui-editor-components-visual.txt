@@ -1,6 +1,0 @@
-Visual Components
-You can add one visual component to an element: Image, Particle Emitter, or Text.
-Topics
- Image
- Particle Emitter
- Text

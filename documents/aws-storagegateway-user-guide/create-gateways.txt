@@ -1,9 +1,0 @@
-Creating Your Gateway
-To create your gateway, open the AWS Storage Gateway Management Console and choose the AWS Region that you want to create your gateway in. If you haven't created a gateway in this AWS Region, the Storage Gateway service homepage is displayed.
-
-Choose Get started to open the Create gateway page. On this page, you choose a gateway type. If you have a gateway in the current AWS Region, the console shows your gateway in the console.
-Topics
- Creating a file gateway
- Creating a Volume Gateway
- Creating a Tape Gateway
- Activating a Gateway in a Virtual Private Cloud

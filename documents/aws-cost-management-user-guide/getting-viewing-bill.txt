@@ -1,8 +1,0 @@
-Viewing your bill
-You receive AWS invoices monthly for usage charges and recurring fees. For one-time fees, such as fees for purchasing an All Upfront Reserved Instance, you are charged immediately. 
-At any time, you can view estimated charges for the current month and final charges for previous months. This section describes how to view your monthly bill and past bills and how to receive and read billing reports.
-Topics
- Viewing your monthly charges
- Getting an invoice emailed to you
- https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html
- Managing your payments

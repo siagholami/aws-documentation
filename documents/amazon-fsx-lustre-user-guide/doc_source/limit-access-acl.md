@@ -1,0 +1,3 @@
+# Amazon VPC Network ACLs<a name="limit-access-acl"></a>
+
+Another option for securing access to the file system within your VPC is to establish network access control lists \(network ACLs\)\. Network ACLs are separate from security groups, but have similar functionality to add an additional layer of security to the resources in your VPC\. For more information on implementing access control using network ACLs, see [File System Access Control with Amazon VPC](limit-access-security-groups.md)\.  

@@ -1,9 +1,0 @@
-Validating a AWS CloudFormation Template in Eclipse
-To validate an CloudFormation template in Eclipse 
- Perform either one of the following actions:
-   Right-click the template name in the Package Explorer view and click Validate on the context menu.
-
-   Right-click the template that you are editing in the editor pane and click Validate on the context menu.
-
-Important
-Your template will be validated for JSON correctness only; it will not be validated for CloudFormation correctness. A stack template validated in this way can still fail to launch or update.

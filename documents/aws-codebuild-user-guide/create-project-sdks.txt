@@ -1,2 +1,0 @@
-Create a build project (AWS SDKs)
-For information about using AWS CodeBuild with the AWS SDKs, see the AWS SDKs and tools reference.

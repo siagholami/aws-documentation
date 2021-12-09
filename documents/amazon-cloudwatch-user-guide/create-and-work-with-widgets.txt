@@ -1,2 +1,0 @@
-Creating and working with widgets on CloudWatch dashboards
-Use the topics in this section to create and work with graphs, alarms, and text widgets in your dashboards.

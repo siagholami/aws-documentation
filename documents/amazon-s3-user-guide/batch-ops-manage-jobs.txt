@@ -1,8 +1,0 @@
-Managing S3 Batch Operations jobs
-Amazon S3 provides a set of tools to help you manage your S3 Batch Operations jobs after you create them. For more information about managing S3 Batch Operations, see Managing S3 Batch Operations Jobs in the Amazon Simple Storage Service Developer Guide. 
-
-More info
-
-The Basics: S3 Batch Operations Jobs in the Amazon Simple Storage Service Developer Guide
-Creating a S3 Batch Operations Job in the Amazon Simple Storage Service Developer Guide
-Operations in the Amazon Simple Storage Service Developer Guide

@@ -1,7 +1,0 @@
-Making requests using IAM user temporary credentials
-Topics
- Making requests using IAM user temporary credentials - AWS SDK for Java
- Making requests using IAM user temporary credentials - AWS SDK for .NET
- Making requests using AWS account or IAM user temporary credentials - AWS SDK for PHP
- Making requests using IAM user temporary credentials - AWS SDK for Ruby
-An AWS Account or an IAM user can request temporary security credentials and use them to send authenticated requests to Amazon S3. This section provides examples of how to use the AWS SDK for Java, .NET, and PHP to obtain temporary security credentials and use them to authenticate your requests to Amazon S3.

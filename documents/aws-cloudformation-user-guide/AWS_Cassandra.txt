@@ -1,4 +1,0 @@
-Cassandra resource type reference
-Resource types
- AWS::Cassandra::Keyspace
- AWS::Cassandra::Table

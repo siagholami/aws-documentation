@@ -1,0 +1,3 @@
+# Securely Boot Your AWS DeepLens Device<a name="deeplens-secure-boot"></a>
+
+To protect the AWS DeepLens device from malicious attacks, it is configured to boot securely\. The secure boot settings prevent the device from loading unauthorized operating systems, including versions that are under mainstream support\. If an attacker bypasses the secure boot settings and loads other operating systems or other versions, the device could become unstable and the warranty will be void\. 

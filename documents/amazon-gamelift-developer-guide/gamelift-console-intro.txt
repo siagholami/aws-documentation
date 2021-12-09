@@ -1,9 +1,0 @@
-Viewing Your Game Data in the Console
-Amazon GameLift continually collects data for active games to help you understand player behavior and performance. With the Amazon GameLift console, you can view, manage, and analyze this information for your builds, fleets, game sessions, and player sessions.
-Topics
- View Your Current Amazon GameLift Status
- View Your Builds
- View Your Fleets
- View Fleet Details
- View Data on Game and Player Sessions
- View Your Aliases

@@ -1,5 +1,0 @@
-Getting Started with AWS RAM
-With AWS RAM, you can share resources that you own with individual AWS accounts or through AWS Organizations, and you can use resources that were shared with you by other AWS accounts or through AWS Organizations.
-Topics
- Sharing Your Resources
- Using Shared Resources

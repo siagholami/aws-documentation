@@ -1,9 +1,0 @@
-ec2-instance-detailed-monitoring-enabled
-Checks whether detailed monitoring is enabled for EC2 instances. The rule is NON_COMPLIANT if detailed monitoring is not enabled.
-Identifier: EC2_INSTANCE_DETAILED_MONITORING_ENABLED
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

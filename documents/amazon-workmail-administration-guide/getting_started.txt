@@ -1,8 +1,0 @@
-Getting started With Amazon WorkMail
-After you have completed the Prerequisites, you're ready to get started with Amazon WorkMail. For more information, see Getting started with Amazon WorkMail.
-You can also learn more about migrating existing mailboxes to Amazon WorkMail, interoperability with Microsoft Exchange, and Amazon WorkMail quotas in the following sections.
-Topics
- Getting started with Amazon WorkMail
- Migrating to Amazon WorkMail
- Interoperability between Amazon WorkMail and Microsoft Exchange
- Amazon WorkMail quotas

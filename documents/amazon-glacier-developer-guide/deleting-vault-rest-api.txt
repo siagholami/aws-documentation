@@ -1,2 +1,0 @@
-Deleting a Vault in S3 Glacier Using the REST API
-To delete a vault using the REST API, see Delete Vault (DELETE vault).

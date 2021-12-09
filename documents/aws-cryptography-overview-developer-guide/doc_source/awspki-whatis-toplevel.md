@@ -1,0 +1,7 @@
+# What is public key infrastructure?<a name="awspki-whatis-toplevel"></a>
+
+[Public key infrastructure \(PKI\)](pki-concepts.md#concept-pki) is a system of hardware, software, people, policies, documents, and procedures\. It includes the creation, issuance, management, distribution, usage, storage, and revocation of digital certificates\. These certificates are then used to authenticate the identities of various actors across the data transfer process\. They also assure that the data being moved between these actors is secured and encrypted in a way that both parties can decrypt\. This way, information is only being sent to and received from [known and trusted](pki-concepts.md#concept-trust) sources, and both parties are assured of the information's integrity\. To learn more about the encryption and decryption processes that are used in data transfer and storage, see the [What is Cryptography?](awscryp-whatis-toplevel.md) section of this guide\.
+
+PKI trust is established by a [*certificate authority*](pki-concepts.md#concept-ca), which is an organization or governing body that can issue certificates and verify the identity of the certificate requestor\. AWS offers multiple PKI certificate authority services that can help you easily and securely manage your certificate infrastructure\.
+
+To learn more about the terms and concepts used in PKI, see [PKI Concepts\.](pki-concepts.md#concept-pki)

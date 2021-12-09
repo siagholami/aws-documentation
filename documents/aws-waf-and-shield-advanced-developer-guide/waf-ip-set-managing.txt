@@ -1,8 +1,0 @@
-Creating and managing an IP set
-An IP set provides a collection of IP addresses and IP address ranges that you want to use together in a rule statement. IP sets are AWS resources. 
-To use an IP set in a web ACL or rule group, you first create an AWS resource, IPSet with your address specifications. Then you reference the set when you add an IP set rule statement to a web ACL or rule group. 
-Topics
- Creating an IP set
- Using an IP set in a rule group or Web ACL
- Editing an IP set
- Deleting an IP set

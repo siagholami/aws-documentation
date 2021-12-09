@@ -1,8 +1,0 @@
-AI System Concept Examples
-
-This topic references tools and features that are legacy. If you want to use legacy tools in Lumberyard Editor, disable the CryEntity Removal gem using the Project Configurator or the command line. To learn more about legacy features, see the Lumberyard Legacy Reference.
-Topics
- AI Multi-Layered Navigation
- Individual AI: Dynamic Covers
- Individual AI: Tactical Points
- Group and Global AI: Factions

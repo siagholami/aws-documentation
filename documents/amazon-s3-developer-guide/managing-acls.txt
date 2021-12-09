@@ -1,7 +1,0 @@
-Managing ACLs
-Topics
- Managing ACLs in the AWS Management Console
- Managing ACLs Using the AWS SDK for Java
- Managing ACLs Using the AWS SDK for .NET
- Managing ACLs Using the REST API
-There are several ways you can add grants to your resource ACL. You can use the AWS Management Console, which provides a UI to manage permissions without writing any code. You can use the REST API or one of the AWS SDKs. These libraries further simplify your programming tasks. 

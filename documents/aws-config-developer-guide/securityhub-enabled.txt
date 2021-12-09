@@ -1,8 +1,0 @@
-securityhub-enabled
-Checks that AWS Security Hub is enabled for an AWS account. The rule is NON_COMPLIANT if Security Hub is not enabled.
-Identifier: SECURITYHUB_ENABLED
-Trigger type: Periodic
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

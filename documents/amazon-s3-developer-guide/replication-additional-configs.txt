@@ -1,6 +1,0 @@
-Additional replication configurations
-This section describes additional replication configuration options that are available in Amazon S3. For information about core replication configuration, see Overview of setting up replication.
-Topics
- Meet compliance requirements using S3 Replication Time Control (S3 RTC)
- Changing the replica owner
- Replicating objects created with server-side encryption (SSE) using encryption keys stored in AWS KMS

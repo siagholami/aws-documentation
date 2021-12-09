@@ -1,8 +1,0 @@
-COPY parameter reference
-Topics
- Data sources
- Authorization parameters
- Column mapping options
- Data format parameters
- Data load operations
- Alphabetical parameter list

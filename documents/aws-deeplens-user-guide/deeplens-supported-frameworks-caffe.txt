@@ -1,5 +1,0 @@
-Supported Caffe Models and Supporting Caffe Layers
-AWS DeepLens supports the following deep learning models trained with Caffe and Caffe modeling layers.
-Topics
- Supported Caffe Models
- Supporting Caffe Layers

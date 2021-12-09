@@ -1,7 +1,0 @@
-Focusing on Visual Elements
-When viewing visuals, you can choose an element on the visual, and then choose to focus on the element. Elements to focus on can include, for example, a bar or bubble, or a row or column header in the case of a pivot table.
-Focusing on the element creates a filter that removes all other elements except for the one you selected:
-
-
-To see the other elements again, either choose Undo on the application bar, or disable or delete the filter.
-For more information about filters, see Filtering Visual Data in Amazon QuickSight.

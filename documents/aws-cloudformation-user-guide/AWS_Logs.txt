@@ -1,7 +1,0 @@
-CloudWatch Logs resource type reference
-Resource types
- AWS::Logs::Destination
- AWS::Logs::LogGroup
- AWS::Logs::LogStream
- AWS::Logs::MetricFilter
- AWS::Logs::SubscriptionFilter

@@ -1,8 +1,0 @@
-DeleteIndexFieldResult
-Description
-The result of a DeleteIndexField request.
-Contents
-IndexField 
-The status of the index field being deleted.
-Type: IndexFieldStatus 
- Required: Yes 

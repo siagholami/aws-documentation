@@ -1,4 +1,0 @@
-Detective resource type reference
-Resource types
- AWS::Detective::Graph
- AWS::Detective::MemberInvitation

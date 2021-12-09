@@ -1,8 +1,0 @@
-Integration examples: Videos
-
-Create a Pipeline Using the CodePipeline Console
-
-Learn how to use the CodePipeline console to create a pipeline that uses CodeDeploy and Amazon S3.
-
-Published March 2016
-Duration: 8:53

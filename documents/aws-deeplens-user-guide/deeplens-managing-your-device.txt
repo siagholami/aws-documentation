@@ -1,8 +1,0 @@
-Managing Your AWS DeepLens Device
-The following topics explain how to manage your AWS DeepLens device and access device resource from a AWS IoT Greengrass Lambda function:
-Topics
- Securely Boot Your AWS DeepLens Device
- Update Your AWS DeepLens Device
- Deregistering Your AWS DeepLens Device
- Deleting AWS DeepLens Resources
- Restoring Your AWS DeepLens Device to Factory Settings

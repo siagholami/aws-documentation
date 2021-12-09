@@ -1,7 +1,0 @@
-Getting Started with Amazon Rekognition
-This section provides topics to get you started using Amazon Rekognition. If you're new to Amazon Rekognition, we recommend that you first review the concepts and terminology presented in How Amazon Rekognition Works. 
-Topics
- Step 1: Set Up an AWS Account and Create an IAM User
- Step 2: Set Up the AWS CLI and AWS SDKs
- Step 3: Getting Started Using the AWS CLI and AWS SDK API
- Step 4: Getting Started Using the Amazon Rekognition Console

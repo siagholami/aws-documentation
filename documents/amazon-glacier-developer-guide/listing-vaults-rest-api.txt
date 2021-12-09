@@ -1,2 +1,0 @@
-Retrieving Vault Metadata Using the REST API
-To list vaults using the REST API, see List Vaults (GET vaults). To describe one vault, see Describe Vault (GET vault).

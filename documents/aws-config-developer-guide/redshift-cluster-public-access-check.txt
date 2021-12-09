@@ -1,9 +1,0 @@
-redshift-cluster-public-access-check
-Checks whether Amazon Redshift clusters are not publicly accessible. The rule is NON_COMPLIANT if the publiclyAccessible field is true in the cluster configuration item.
-Identifier: REDSHIFT_CLUSTER_PUBLIC_ACCESS_CHECK
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

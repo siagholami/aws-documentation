@@ -1,9 +1,0 @@
-Using the REST API for multipart upload
-The following sections in the Amazon Simple Storage Service API Reference describe the REST API for multipart upload. 
- Initiate Multipart Upload
- Upload Part
- Complete Multipart Upload
- Stop Multipart Upload
- List Parts
- List Multipart Uploads
-You can use these APIs to make your own REST requests, or you can use the AWS Command Line Interface, or you can use one the SDKs we provide. For more information about using Multipard Upload with the AWS CLI, see Using the AWS Command Line Interface for multipart upload. For more information about the SDKs, see API support for multipart upload.

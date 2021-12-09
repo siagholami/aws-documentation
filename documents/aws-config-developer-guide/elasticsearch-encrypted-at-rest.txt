@@ -1,9 +1,0 @@
-elasticsearch-encrypted-at-rest
-Checks whether Amazon Elasticsearch Service (Amazon ES) domains have encryption at rest configuration enabled. The rule is NON_COMPLIANT if the EncryptionAtRestOptions field is not enabled.
-Identifier: ELASTICSEARCH_ENCRYPTED_AT_REST
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except China (Beijing) and China (Ningxia)
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

@@ -1,5 +1,0 @@
-EFS resource type reference
-Resource types
- AWS::EFS::AccessPoint
- AWS::EFS::FileSystem
- AWS::EFS::MountTarget

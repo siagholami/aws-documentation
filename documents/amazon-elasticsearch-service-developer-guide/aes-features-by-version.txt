@@ -1,5 +1,0 @@
-Features by Elasticsearch Version
-Many Amazon ES features have a minimum Elasticsearch version requirement.
-
-[See the AWS documentation website for more details]
-For information about plugins, which enable some of these features and additional functionality, see Plugins by Elasticsearch Version. For information about the Elasticsearch API for each version, see Supported Elasticsearch Operations.

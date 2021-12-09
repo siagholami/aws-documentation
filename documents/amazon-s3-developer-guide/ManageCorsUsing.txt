@@ -1,7 +1,0 @@
-Enabling cross-origin resource sharing (CORS)
-Enable cross-origin resource sharing by setting a CORS configuration on your bucket using the AWS Management Console, the REST API, or the AWS SDKs.
-Topics
- Enabling cross-origin resource sharing (CORS) using the AWS Management Console
- Enabling cross-origin resource sharing (CORS) using the AWS SDK for Java
- Enabling cross-origin resource sharing (CORS) using the AWS SDK for .NET
- Enabling cross-origin resource sharing (CORS) using the REST API

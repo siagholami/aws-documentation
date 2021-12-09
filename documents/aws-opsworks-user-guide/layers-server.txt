@@ -1,9 +1,0 @@
-Application Server Layers Reference
-AWS OpsWorks Stacks supports several different application and static web page servers.
-Topics
- AWS Flow (Ruby) Layer Reference
- Java App Server Layer Reference
- Node.js App Server Layer Reference
- PHP App Server Layer Reference
- Rails App Server Layer Reference
- Static Web Server Layer Reference

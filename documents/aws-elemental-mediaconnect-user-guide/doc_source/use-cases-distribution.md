@@ -1,0 +1,7 @@
+# Use case: distribution<a name="use-cases-distribution"></a>
+
+You can use AWS Elemental MediaConnect to distribute your content to different geographical locations\. For example, suppose that your on\-premises contribution encoder is located in Portland, Oregon and your receivers are located around the world\. \(A receiver is any entity that will receive content from your flow\. This could be an encoder in the cloud, an on\-premises encoder at your recipient facility, or another AWS Elemental MediaConnect flow\.\) You set up your initial AWS Elemental MediaConnect flow in the us\-west\-1 Region, which is the closest physical AWS Region to your encoder\. After your content is in the AWS Cloud, you send it to other MediaConnect flows located in Regions that are closer to your receivers\.
+
+This following illustration shows an on\-premises contribution encoder located in Portland, Oregon that uploads content to AWS Elemental MediaConnect in the AWS Cloud\. The flow has three outputs that send content to others flows in different AWS Regions\. These secondary flows are closer to the receivers, which are located in various cities around the world\.
+
+![\[This illustration shows an on-premises contribution encoder located in Portland, Oregon that uploads content to AWS Elemental MediaConnect in the AWS Cloud. The flow has three outputs that send content to others flows in different AWS Regions. These secondary flows are closer to the receivers, which are located in various cities around the world.\]](http://docs.aws.amazon.com/mediaconnect/latest/ug/)

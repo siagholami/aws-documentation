@@ -1,7 +1,0 @@
-Using a DLAMI
-Topics
- Using the Deep Learning AMI with Conda
- Using the Deep Learning Base AMI
- Running Jupyter Notebook Tutorials
- Tutorials
-The following sections describe how the Deep Learning AMI with Conda can be used to switch environments, run sample code from each of the frameworks, and run Jupyter so you can try out different notebook tutorials.

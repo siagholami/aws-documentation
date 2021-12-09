@@ -1,4 +1,0 @@
-Editing an Asset
-You can't edit an asset. To make changes, ingest the asset again and delete the original.
- To ingest an asset, see Creating a Packaging Configuration.
- To delete an asset, see Deleting a Packaging Configuration.

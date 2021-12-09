@@ -1,4 +1,0 @@
-Run twine
-After you configure twine, you can run twine commands. Use the following command to publish Python package assets.
-twine upload --repository codeartifact mypackage-1.0.tgz
-For information about how to build and package your Python application, see Generating Distribution Archives on the Python Packaging Authority website.

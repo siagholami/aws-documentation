@@ -1,5 +1,0 @@
-API Reference
-This section provides documentation for the Amazon Textract API operations.
-Topics
- Actions
- Data Types

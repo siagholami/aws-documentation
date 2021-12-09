@@ -1,4 +1,0 @@
-Load error reference
-If any errors occur while loading data from a file, query the STL_LOAD_ERRORS table to identify the error and determine the possible explanation. The following table lists all error codes that might occur during data loads:
-Load error codes
-[See the AWS documentation website for more details]

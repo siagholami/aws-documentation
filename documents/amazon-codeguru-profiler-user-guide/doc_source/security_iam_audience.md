@@ -1,0 +1,9 @@
+# Audience in CodeGuru Profiler<a name="security_iam_audience"></a>
+
+How you use AWS Identity and Access Management \(IAM\) differs, depending on the work you do in CodeGuru Profiler\.
+
+**Service user** – If you use the CodeGuru Profiler service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more CodeGuru Profiler features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in CodeGuru Profiler, see [Troubleshooting CodeGuru Profiler identity and access](security_iam_troubleshoot.md)\.
+
+**Service administrator** – If you're in charge of CodeGuru Profiler resources at your company, you probably have full access to CodeGuru Profiler\. It's your job to determine which CodeGuru Profiler features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with CodeGuru Profiler, see [Overview of managing access permissions to your CodeGuru Profiler resources](security_iam_service-with-iam.md)\.
+
+**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to CodeGuru Profiler\. To view example CodeGuru Profiler identity\-based policies that you can use in IAM, see [Customer managed policy examples](auth-and-access-control-iam-identity-based-access-control.md#security_iam_id-based-policy-examples)\.

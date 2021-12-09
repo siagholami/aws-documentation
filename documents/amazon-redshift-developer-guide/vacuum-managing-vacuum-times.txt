@@ -1,8 +1,0 @@
-Managing vacuum times
-Depending on the nature of your data, we recommend following the practices in this section to minimize vacuum times.
-Topics
- Deciding whether to reindex
- Managing the size of the unsorted region
- Managing the volume of merged rows
- Loading your data in sort key order
- Using time series tables

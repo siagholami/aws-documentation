@@ -1,0 +1,14 @@
+# Monitoring and tagging in AWS Elemental MediaStore<a name="monitoring"></a>
+
+Monitoring is an important part of maintaining the reliability, availability, and performance of AWS Elemental MediaStore and your other AWS solutions\. AWS provides the following monitoring tools to watch MediaStore, report when something is wrong, and take automatic actions when appropriate:
++ *AWS CloudTrail* captures API calls and related events made by or on behalf of your AWS account and delivers the log files to an Amazon S3 bucket that you specify\. You can identify which users and accounts called AWS, the source IP address from which the calls were made, and when the calls occurred\. For more information, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
++ *Amazon CloudWatch* monitors your AWS resources and the applications that you run on AWS in real time\. You can collect and track metrics, create customized dashboards, and set alarms that notify you or take actions when a specified metric reaches a threshold that you specify\. For example, you can have CloudWatch track CPU usage or other metrics of your Amazon EC2 instances and automatically launch new instances when needed\. For more information, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\.
++ *Amazon CloudWatch Events* delivers a near real\-time stream of system events that describe changes in AWS resources\. CloudWatch Events enables automated event\-driven computing, as you can write rules that watch for certain events and trigger automated actions in other AWS services when these events happen\. For more information, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
++ *Amazon CloudWatch Logs* enables you to monitor, store, and access your log files from Amazon EC2 instances, CloudTrail, and other sources\. CloudWatch Logs can monitor information in the log files and notify you when certain thresholds are met\. You can also archive your log data in highly durable storage\. For more information, see the [Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)\.
+
+You can also assign metadata to your MediaStore containers in the form of tags\. Each tag is a label that consists of a key and value that you define\. Tags can make it easier to manage, search for, and filter resources\. You can use tags to organize your AWS resources in the AWS Management Console, create usage and billing reports across all of your AWS resources, and filter resources during infrastructure automation activities\.
+
+**Topics**
++ [Logging AWS Elemental MediaStore API calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Monitoring AWS Elemental MediaStore with Amazon CloudWatch](monitoring-cloudwatch.md)
++ [Tagging AWS Elemental MediaStore resources](tagging.md)

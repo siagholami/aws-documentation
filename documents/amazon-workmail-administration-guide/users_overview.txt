@@ -1,7 +1,0 @@
-Working with users
-You can create and remove users from Amazon WorkMail. In addition, you can reset their email passwords and wipe the data from their mobile devices.
-Topics
- Managing user accounts
- Managing user mailboxes
- Managing mobile devices
- Enabling signed or encrypted email

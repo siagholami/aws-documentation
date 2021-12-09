@@ -1,5 +1,0 @@
-Best practices for Amazon SQS
-These best practices can help you make the most of Amazon SQS.
-Topics
- Recommendations for standard and FIFO queues
- Additional recommendations for FIFO queues

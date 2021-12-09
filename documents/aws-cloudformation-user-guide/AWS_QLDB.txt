@@ -1,4 +1,0 @@
-QLDB resource type reference
-Resource types
- AWS::QLDB::Ledger
- AWS::QLDB::Stream

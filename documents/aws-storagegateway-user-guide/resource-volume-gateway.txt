@@ -1,4 +1,0 @@
-Volume Gateway
-Topics
- Removing Disks from Your Gateway
- Adding and Removing Amazon EBS Volumes for Your Gateway Hosted on Amazon EC2

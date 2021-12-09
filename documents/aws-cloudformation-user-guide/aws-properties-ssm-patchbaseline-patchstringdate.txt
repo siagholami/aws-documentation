@@ -1,2 +1,0 @@
-AWS::SSM::PatchBaseline PatchStringDate
-The PatchStringDate property type specifies Not currently supported by AWS CloudFormation. for an AWS::SSM::PatchBaseline.

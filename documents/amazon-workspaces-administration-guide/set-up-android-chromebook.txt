@@ -1,5 +1,0 @@
-Set Up Android for Chromebooks
-Version 2.4.13 is the final release of the Amazon WorkSpaces Chromebook client application. Because  Google is phasing out support for Chrome Apps, there will be no further updates to the WorkSpaces Chromebook client application, and its use is unsupported.
-For  Chromebooks that support installing Android applications, we recommend using the  Amazon WorkSpaces Android client application instead.
-Some Chromebooks launched before 2019 must be enabled to  install Android apps before users can install the Amazon WorkSpaces Android client application. For more information, see  Chrome OS Systems Supporting Android Apps.
-To remotely manage enabling your users' Chromebooks to install Android apps, see Set up Android on Chrome devices.

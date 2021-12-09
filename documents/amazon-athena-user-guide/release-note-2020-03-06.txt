@@ -1,3 +1,0 @@
-March 6, 2020
-Published on 2020-03-06
-You can now create and update Amazon Athena workgroups by using the AWS CloudFormation AWS::Athena::WorkGroup resource. For more information, see AWS::Athena::WorkGroup in the AWS CloudFormation User Guide.

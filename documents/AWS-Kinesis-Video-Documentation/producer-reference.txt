@@ -1,9 +1,0 @@
-Producer SDK Reference
-This section contains limits, error codes, and other reference information for the Kinesis Video Streams Producer Libraries.
-Topics
- Producer SDK Limits
- Error Code Reference
- Network Abstraction Layer (NAL) Adaptation Flag Reference
- Producer SDK Structures
- Kinesis Video Stream Structures
- Producer SDK Callbacks

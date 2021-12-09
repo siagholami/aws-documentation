@@ -1,8 +1,0 @@
-
-
-Monitoring and logging for Amazon Kendra
-Topics
- Monitoring your index (Console)
- Logging Amazon Kendra API calls with AWS CloudTrail logs
- Monitoring Amazon Kendra with Amazon CloudWatch
- Monitoring Amazon Kendra with Amazon CloudWatch Logs

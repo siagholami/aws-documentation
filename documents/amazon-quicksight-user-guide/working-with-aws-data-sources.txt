@@ -1,7 +1,0 @@
-Working with AWS Data Sources
-Use this section to help you configure autodiscovery, manage permissions, and authorize connections.
-Topics
- Allowing Autodiscovery of AWS Resources
- Authorizing Connections from Amazon QuickSight to AWS Data Stores
- Exploring Your AWS Data in Amazon QuickSight
- Managing Amazon QuickSight Permissions to AWS Resources

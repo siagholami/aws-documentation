@@ -1,4 +1,0 @@
-Application Auto Scaling resource type reference
-Resource types
- AWS::ApplicationAutoScaling::ScalableTarget
- AWS::ApplicationAutoScaling::ScalingPolicy

@@ -1,8 +1,0 @@
-Copying Objects in a Single Operation
-The examples in this section show how to copy objects up to 5 GB in a single operation. For copying objects greater than 5 GB, you must use multipart upload API. For more information, see Copying objects using the multipart upload API.
-Topics
- Copy an Object Using the AWS SDK for Java
- Copy an Amazon S3 Object in a Single Operation Using the AWS SDK for .NET
- Copy an Object Using the AWS SDK for PHP
- Copy an Object Using the AWS SDK for Ruby
- Copy an Object Using the REST API

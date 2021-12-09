@@ -1,8 +1,0 @@
-Installing the AWS Tools for PowerShell
-To successfully install and use the AWS Tools for PowerShell cmdlets, see the steps in the following topics.
-Topics
- Prerequisites
- Installing on Windows
- Installing on Linux or macOS
- Migrating from AWS Tools for PowerShell Version 3.3 to Version 4
- AWS Account and Access Keys

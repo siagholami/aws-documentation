@@ -1,9 +1,0 @@
-Purchasing a reserved node offering using the AWS CLI and Amazon Redshift API
-You can use the following AWS CLI operations to purchase reserved node offerings.
- purchase-reserved-node-offering
- describe-reserved-node-offerings
- describe-orderable-cluster-options
-You can use the following Amazon Redshift API operations to purchase reserved node offerings.
-  PurchaseReservedNodeOffering
- DescribeReservedNodeOfferings
- DescribeOrderableClusterOptions

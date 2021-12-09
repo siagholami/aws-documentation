@@ -1,5 +1,0 @@
-STV_CURSOR_CONFIGURATION
-STV_CURSOR_CONFIGURATION displays cursor configuration constraints. For more information, see Cursor constraints.
-STV_CURSOR_CONFIGURATION is visible only to superusers. For more information, see Visibility of data in system tables and views.
-Table columns
-[See the AWS documentation website for more details]

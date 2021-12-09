@@ -1,7 +1,0 @@
-WAFv2 resource type reference
-Resource types
- AWS::WAFv2::IPSet
- AWS::WAFv2::RegexPatternSet
- AWS::WAFv2::RuleGroup
- AWS::WAFv2::WebACL
- AWS::WAFv2::WebACLAssociation

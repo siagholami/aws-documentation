@@ -1,7 +1,0 @@
-Using CodeArtifact with CodeBuild
-These topics describe how to use packages in an CodeArtifact repository in an AWS CodeBuild build project. 
-Topics
- Using npm packages in CodeBuild
- Using Python Packages in CodeBuild
- Using Maven packages in CodeBuild
- Dependency caching

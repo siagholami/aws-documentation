@@ -1,9 +1,0 @@
-Amazon AppStream 2.0 resource type reference
-Resource types
- AWS::AppStream::DirectoryConfig
- AWS::AppStream::Fleet
- AWS::AppStream::ImageBuilder
- AWS::AppStream::Stack
- AWS::AppStream::StackFleetAssociation
- AWS::AppStream::StackUserAssociation
- AWS::AppStream::User

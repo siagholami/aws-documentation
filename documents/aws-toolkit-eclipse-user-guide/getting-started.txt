@@ -1,6 +1,0 @@
-Getting Started
-This section provides information for those getting started with the AWS Toolkit for Eclipse, including information about how to install and configure the AWS Toolkit for Eclipse.
-Topics
- Set up the Toolkit
- Set up AWS Credentials
- Associate Private Keys with Your Amazon EC2 Key Pairs

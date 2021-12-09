@@ -1,0 +1,27 @@
+# Creating an AWS Lambda function by using the AWS Toolkit for JetBrains<a name="create-new-lambda"></a>
+
+You can use the AWS Toolkit for JetBrains to create an AWS Lambda function that is part of an AWS serverless application\. Or you can create a standalone Lambda function\.
+
+To create a Lambda function that is part of an AWS serverless application, skip the rest of this topic and see [Creating an application](deploy-serverless-app.md) instead\.
+
+To create a standalone Lambda function, you must first [install the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install) and, if you haven't yet, [connect to an AWS account for the first time](key-tasks.md#key-tasks-first-connect)\. Then, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do one of the following:
++ [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](key-tasks.md#key-tasks-switch-region) to create the function in, do that now\. Then right\-click **Lambda**, and choose **Create new AWS Lambda**\.  
+![\[Creating an AWS Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+  Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\. The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment, and adds the function name to the **Lambda** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](key-tasks.md#key-tasks-cloudformation-logs)\.
++ Create a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html)\. 
+
+  If you need to [switch to a different AWS Region](key-tasks.md#key-tasks-switch-region) to create the remote function to be run \(invoked\), do that now\. Then in the code file, choose the **Lambda** icon in the gutter next to the function handler, and then choose **Create new AWS Lambda**\. Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.  
+![\[Creating an AWS Lambda function by starting from an existing function handler in a code file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+**Note**  
+If the **Lambda** icon isn't displayed in the gutter next to the function handler, try displaying it for the current project by selecting the following box in **Settings**/**Preferences**: **Tools**, **AWS**, **Project settings**, **Show gutter icons for all potential AWS Lambda handlers**\. Also, if the function handler is already defined in the corresponding AWS SAM template, the **Create new AWS Lambda** command won't appear\.
+
+  After you choose **Create Function**, the AWS Toolkit for JetBrains creates a corresponding function in the Lambda service for the connected AWS account\. If the operation succeeds, after you refresh **AWS Explorer**, the **Lambda** list displays the name of the new function\.
++ If you already have a project that contains an AWS Lambda function, and if you need to first [switch to a different AWS Region](key-tasks.md#key-tasks-switch-region) to create the function in, do that now\. Then in the code file that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), choose the **Lambda** icon in the gutter next to the function handler\. Choose **Create new AWS Lambda**, complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.  
+![\[Creating an AWS Lambda function by starting from an existing function handler in a code file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+**Note**  
+If the **Lambda** icon isn't displayed in the gutter next to the function handler, try displaying it for the current project by selecting the following box in **Settings**/**Preferences**: **Tools**, **AWS**, **Project settings**, **Show gutter icons for all potential AWS Lambda handlers**\. Also, the **Create new AWS Lambda** command won't be displayed if the function handler is already defined in the corresponding AWS SAM template\.
+
+  After you choose **Create Function**, the AWS Toolkit for JetBrains creates a corresponding function in the Lambda service for the connected AWS account\. If the operation succeeds, after you refresh **AWS Explorer**, the new function's name appears in the **Lambda** list\.
+
+After you create the function, you can [run \(invoke\) or debug the local version of the function](key-tasks.md#key-tasks-lambda-local) or [run \(invoke\) the remote version](key-tasks.md#key-tasks-lambda-remote)\.

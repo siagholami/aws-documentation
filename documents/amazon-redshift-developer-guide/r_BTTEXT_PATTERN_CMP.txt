@@ -1,3 +1,0 @@
-BTTEXT_PATTERN_CMP function
-Synonym for the BPCHARCMP function. 
-See BPCHARCMP function for details. 

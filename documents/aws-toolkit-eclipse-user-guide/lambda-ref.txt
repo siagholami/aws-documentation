@@ -1,6 +1,0 @@
-AWS Lambda Interface Reference
-This section provides detailed information about each of the user interface elements added to Eclipse by the AWS Toolkit for Eclipse for AWS Lambda.
-Topics
- New AWS Lambda Java Project Dialog
- Upload Function to AWS Lambda Dialog Box
- Run AWS Lambda Function Dialog

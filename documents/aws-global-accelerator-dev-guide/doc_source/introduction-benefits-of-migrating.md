@@ -1,0 +1,15 @@
+# AWS Global Accelerator use cases<a name="introduction-benefits-of-migrating"></a>
+
+Using AWS Global Accelerator can help you accomplish a variety of goals\. This section lists some of them, to give you an idea how you can use Global Accelerator to meet your needs\.
+
+**Scale for increased application utilization**  
+When application usage grows, the number of IP addresses and endpoints that you need to manage also increases\. Global Accelerator enables you to scale your network up or down\. It lets you associate regional resources, such as load balancers and EC2 instances, to two static IP addresses\. You include these addresses on allow lists just once in your client applications, firewalls, and DNS records\. With Global Accelerator, you can add or remove endpoints in AWS Regions, run blue/green deployment, and do A/B testing without having to update the IP addresses in your client applications\. This is particularly useful for IoT, retail, media, automotive, and healthcare use cases in which you can't easily update client applications frequently\.
+
+**Acceleration for latency\-sensitive applications**  
+Many applications, especially in areas such as gaming, media, mobile apps, and financials, require very low latency for a great user experience\. To improve the user experience, Global Accelerator directs user traffic to the application endpoint that is nearest to the client, which reduces internet latency and jitter\. Global Accelerator routes traffic to the closest edge location by using Anycast, and then routes it to the closest regional endpoint over the AWS global network\. Global Accelerator quickly reacts to changes in network performance to improve your users’ application performance\. 
+
+**Disaster recovery and multi\-region resiliency**  
+You must be able to rely on your network to be available\. You might be running your application across multiple AWS Regions to support disaster recovery, higher availability, lower latency, or compliance\. If Global Accelerator detects that your application endpoint is failing in the primary AWS Region, it instantly triggers traffic re\-routing to your application endpoint in the next available, closest AWS Region\.
+
+**Protect your applications**  
+You can configure Application Load Balancers to be internet\-facing or Amazon EC2 instances to be public to serve your users\. However, access from the internet also increases your exposure to malicious attacks\. You can help mitigate this risk by using AWS Global Accelerator\. First, add an internal Application Load Balancer or a private EC2 instance as an endpoint in Global Accelerator\. Then you can use Global Accelerator as the single internet\-facing access point for the endpoint\. This reduces the risk of distributed denial of service \(DDoS\) attacks and controls how your users reach your applications\. Global Accelerator creates a peering connection between your accelerator’s Virtual Private Cloud \(VPC\) and your Amazon VPC\. The traffic between the two VPCs uses private IP addresses\.

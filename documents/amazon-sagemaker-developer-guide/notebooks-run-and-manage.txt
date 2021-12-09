@@ -1,7 +1,0 @@
-Manage Resources
-You can change the instance type, and SageMaker image and kernel from within an Amazon SageMaker Studio notebook. You can create a custom kernel to use with your notebooks.
-Topics
- Change an Instance Type
- Change an Amazon SageMaker Image
- Create a Custom Kernel
- Shut Down Resources

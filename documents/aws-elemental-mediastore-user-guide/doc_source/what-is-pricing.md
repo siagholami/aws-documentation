@@ -1,0 +1,3 @@
+# Pricing for AWS Elemental MediaStore<a name="what-is-pricing"></a>
+
+As with other AWS products, there are no contracts or minimum commitments for using MediaStore\. You are charged a per GB ingest fee when content enters into the service and a per GB monthly fee for content that you store in the service\. For more information, see [AWS Elemental MediaStore Pricing](https://aws.amazon.com/mediastore/pricing/)\.

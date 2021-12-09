@@ -1,5 +1,0 @@
-Creating a non-admin IAM user
-Users in the Administrators group for an account have access to all AWS services and resources in that account. This section describes how to create users with permissions that are limited to AWS Elemental MediaStore.
-Topics
- Step 1: Create user groups
- Step 2: Create users

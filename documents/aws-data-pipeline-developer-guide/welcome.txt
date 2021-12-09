@@ -1,8 +1,0 @@
-Tutorials
-The following tutorials walk you step-by-step through the process of creating and using pipelines with AWS Data Pipeline.
-Topics
- Process Data Using Amazon EMR with Hadoop Streaming
- Import and Export DynamoDB Data Using AWS Data Pipeline
- Copy CSV Data Between Amazon S3 Buckets Using AWS Data Pipeline
- Export MySQL Data to Amazon S3 Using AWS Data Pipeline
- Copy Data to Amazon Redshift Using AWS Data Pipeline

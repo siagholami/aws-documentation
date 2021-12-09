@@ -1,8 +1,0 @@
-Maintain Your AWS Managed Microsoft AD Directory
-This section describes how to maintain common administrative tasks for your AWS Managed Microsoft AD environment.
-Topics
- Add Alternate UPN Suffixes
- Delete Your Directory
- Rename Your Directory's Site Name
- Snapshot or Restore Your Directory
- View Directory Information

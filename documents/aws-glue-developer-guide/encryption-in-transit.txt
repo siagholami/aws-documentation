@@ -1,3 +1,0 @@
-Encryption in Transit
-AWS provides Secure Sockets Layer (SSL) encryption for data in motion. You can configure encryption settings for crawlers, ETL jobs, and development endpoints using security configurations in AWS Glue. You can enable AWS Glue Data Catalog encryption via the settings for the Data Catalog.
-As of September 4, 2018, AWS KMS (bring your own key and server-side encryption) for AWS Glue ETL and the AWS Glue Data Catalog is supported.

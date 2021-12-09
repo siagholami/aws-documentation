@@ -1,5 +1,0 @@
-API Reference
-This section provides documentation for the Amazon Lex API operations. For a list of AWS Regions where Amazon Lex is available, see AWS Regions and Endpoints in the Amazon Web Services General Reference.
-Topics
- Actions
- Data Types

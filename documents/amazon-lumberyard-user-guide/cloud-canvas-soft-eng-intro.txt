@@ -1,5 +1,0 @@
-Cloud Canvas Software Engineering Guide
-This section provides in-depth information for Cloud Canvas Resource Manager and the cloud gem framework.
-Topics
- Resource Manager in Depth
- Cloud Gem Framework

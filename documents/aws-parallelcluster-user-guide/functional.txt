@@ -1,6 +1,0 @@
-How AWS ParallelCluster works
-AWS ParallelCluster was built not only as a way to manage clusters, but as a reference on how to use AWS services to build your HPC environment.
-Topics
- AWS ParallelCluster processes
- AWS services used in AWS ParallelCluster
- AWS ParallelCluster Auto Scaling

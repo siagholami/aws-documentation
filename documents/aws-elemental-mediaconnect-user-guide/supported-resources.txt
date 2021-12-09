@@ -1,7 +1,0 @@
-Supported resources in AWS Elemental MediaConnect
-The following resources in AWS Elemental MediaConnect support tagging: 
- Flows
- Entitlements
- Outputs
-For information about adding and managing tags, see Managing tags.
-AWS Elemental MediaConnect doesn't support the tag-based access control feature of AWS Identity and Access Management (IAM). 

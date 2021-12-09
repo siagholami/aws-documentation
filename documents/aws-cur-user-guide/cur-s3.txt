@@ -1,4 +1,0 @@
-Setting Up an Amazon S3 Bucket for Cost and Usage Reports
-To receive billing reports, you must have an Amazon S3 bucket in your AWS account to store your reports. You can specify an existing bucket or create one. To create a bucket, see Creating a Bucket in the Amazon Simple Storage Service Console User Guide.
-Rates
-Storing the billing reports data in your Amazon S3 bucket is billed at standard Amazon S3 rates. For more information, see Quotas and Restrictions.

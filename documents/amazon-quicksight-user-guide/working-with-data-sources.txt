@@ -1,8 +1,0 @@
-Working with Data Sources in Amazon QuickSight
-Use a data source to access an external data store. Amazon S3 data sources save the manifest file information, while Salesforce and database data sources save connection information like credentials, so you can easily create multiple data sets from that data store without having to re-enter information. Connection information isn't saved for text or Microsoft Excel files. 
-Topics
- Supported Data Sources
- Data Source Limits
- Creating a Data Source
- Editing a Data Source
- Deleting a Data Source

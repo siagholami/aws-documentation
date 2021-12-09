@@ -1,0 +1,9 @@
+# Step 6: Next Steps<a name="gs-next-steps"></a>
+
+Now that you have familiarized yourself with AWS Auto Scaling and some of its features, you may want to try creating your own scaling plan template using AWS CloudFormation\. 
+
+An AWS CloudFormation template is a JSON or YAML\-formatted text file that describes the AWS infrastructure needed to run an application or service along with any interconnections among infrastructure components\. With AWS CloudFormation, you deploy and manage an associated collection of resources as a *stack*\. AWS CloudFormation is available at no additional charge, and you pay only for the AWS resources needed to run your applications\. Resources can consist of any AWS resource you define within the template\. For more information, see [AWS CloudFormation Concepts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-concepts.html) in the *AWS CloudFormation User Guide*\. 
+
+In the *AWS CloudFormation User Guide*, we provide a simple template to get you started\. The sample template is available as an example in the [AWS::AutoScalingPlans::ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html) section of the AWS CloudFormation template reference documentation\. The sample template creates a scaling plan for a single Auto Scaling group and enables predictive scaling and dynamic scaling\.
+
+For more information, see [Getting Started with AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.html) the *AWS CloudFormation User Guide*\. 

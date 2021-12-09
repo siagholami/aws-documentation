@@ -1,7 +1,0 @@
-Formatting a AWS CloudFormation Template in Visual Studio
-
-In Solution Explorer, open the context (right-click) menu for the template and choose Format Template.
-
-Alternatively, to format the template you're currently editing, from the Template menu, choose Format Template.
-
-Your JSON code will be formatted so that its structure is clearly presented.

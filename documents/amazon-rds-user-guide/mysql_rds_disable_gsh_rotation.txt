@@ -1,4 +1,0 @@
-mysql.rds_disable_gsh_rotation
-Disables rotation of the mysql.global_status_history table. For more information, see Managing the Global Status History.
-Syntax
-CALL mysql.rds_disable_gsh_rotation;

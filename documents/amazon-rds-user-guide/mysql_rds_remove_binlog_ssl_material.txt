@@ -1,6 +1,0 @@
-mysql.rds_remove_binlog_ssl_material
-Removes the certificate authority certificate, client certificate, and client key for SSL communication and encrypted replication. This information is imported by using mysql.rds_import_binlog_ssl_material.
-Note
-Currently, this procedure is only supported for Aurora MySQL version 5.6.
-Syntax
-CALL mysql.rds_remove_binlog_ssl_material;

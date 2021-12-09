@@ -1,7 +1,0 @@
-Amazon VPC console wizard configurations
-You can use the Amazon VPC Console wizard to create one of the following nondefault VPC configurations.
-Topics
- VPC with a single public subnet
- VPC with public and private subnets (NAT)
- VPC with public and private subnets and AWS Site-to-Site VPN access
- VPC with a private subnet only and AWS Site-to-Site VPN access

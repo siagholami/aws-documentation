@@ -1,8 +1,0 @@
-Example metric policies
-The following examples show metric policies that are constructed for different use cases.
-Topics
- Example metric policy: Container-level metrics
- Example metric policy: Path-level metrics
- Example metric policy: Container-level and path-level metrics
- Example metric policy: Path-level metrics using wildcards
- Example metric policy: Path-level metrics with overlapping rules

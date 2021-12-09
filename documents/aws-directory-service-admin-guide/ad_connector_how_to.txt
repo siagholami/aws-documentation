@@ -1,8 +1,0 @@
-How To Administer AD Connector
-This section lists all of the procedures for operating and maintaining an AD Connector environment.
-Topics
- Secure Your AD Connector Directory
- Monitor Your AD Connector Directory
- Join an EC2 Instance to Your AD Connector Directory
- Maintain Your AD Connector Directory
- Update the DNS Address for Your AD Connector

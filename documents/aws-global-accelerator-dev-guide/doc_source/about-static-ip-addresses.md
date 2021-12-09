@@ -1,0 +1,7 @@
+# Static IP Addresses in AWS Global Accelerator<a name="about-static-ip-addresses"></a>
+
+Static IP addresses for Global Accelerator are advertised globally using anycast from edge locations\. You associate the addresses with Elastic Load Balancing resources or Elastic IP addresses that run in a single AWS Region or multiple Regions\. By using static IP addresses, you can onboard internet traffic to the AWS global network close to where your users are, regardless of their location\. Using the AWS global network improves availability and performance because traffic doesn't have to take multiple hops over the public internet\.
+
+Using static IP addresses also makes it easier to add your application to more Regions or to migrate applications between AWS Regions\. Using fixed IP addresses means that users have a consistent way to connect to your application\.
+
+AWS Global Accelerator provides static IP addresses for you\. The first step in creating your accelerator is to provision the static IP addresses by entering a name for your accelerator\.  After you provision the addresses to create your accelerator, you can edit or delete the accelerator\. To create an accelerator, see [ Creating, Editing, or Deleting an Accelerator](about-accelerators.creating-editing.md)\.

@@ -1,4 +1,0 @@
-Prerequisites
-Before you start this tutorial, do the following:
- Install Git on your local machine. To install Git, see Git downloads.
- Complete the steps in Getting started with CodeDeploy, including installing and configuring the AWS CLI. This is especially important if you want to use the AWS CLI to deploy a revision from GitHub to the instance.

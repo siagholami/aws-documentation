@@ -1,9 +1,0 @@
-efs-in-backup-plan
-Checks whether Amazon Elastic File System (Amazon EFS) file systems are added in the backup plans of AWS Backup. The rule is NON_COMPLIANT if EFS file systems are not included in the backup plans. 
-Identifier: EFS_IN_BACKUP_PLAN
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except AWS GovCloud (US-East), AWS GovCloud (US-West), Europe (Milan), Africa (Cape Town) Regions
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

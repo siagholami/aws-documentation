@@ -1,6 +1,0 @@
-Working with AWS Serverless Application
-The AWS Toolkit for Visual Studio Code provides support for serverless applications. Using the Toolkit for VS Code, you can create serverless applications that contain AWS Lambda functions, and then deploy the applications to an AWS CloudFormation stack.
-Topics
- Creating serverless applications with the AWS Toolkit for Visual Studio Code
- Running and debugging serverless applications with the AWS Toolkit for Visual Studio Code
- Deploying serverless applications with the AWS Toolkit for Visual Studio Code

@@ -1,0 +1,86 @@
+# Amazon WorkMail Administrator Guide
+
+-----
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+
+-----
+Amazon's trademarks and trade dress may not be used in 
+     connection with any product or service that is not Amazon's, 
+     in any manner that is likely to cause confusion among customers, 
+     or in any manner that disparages or discredits Amazon. All other 
+     trademarks not owned by Amazon are the property of their respective
+     owners, who may or may not be affiliated with, connected to, or 
+     sponsored by Amazon.
+
+-----
+## Contents
++ [What is Amazon WorkMail?](what_is.md)
++ [Prerequisites](prereqs.md)
++ [Security in Amazon WorkMail](security.md)
+   + [Identity and access management for Amazon WorkMail](security-iam.md)
+      + [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)
+      + [Amazon WorkMail identity-based policy examples](security_iam_id-based-policy-examples.md)
+      + [Troubleshooting Amazon WorkMail identity and access](security_iam_troubleshoot.md)
+   + [Using service-linked roles for Amazon WorkMail](using-service-linked-roles.md)
+   + [Logging and monitoring in Amazon WorkMail](monitoring-overview.md)
+      + [Monitoring Amazon WorkMail with Amazon CloudWatch](monitoring-workmail-cloudwatch.md)
+      + [Logging Amazon WorkMail API calls with AWS CloudTrail](logging-using-cloudtrail.md)
+   + [Compliance validation for Amazon WorkMail](compliance.md)
+   + [Resilience in Amazon WorkMail](disaster-recovery-resiliency.md)
+   + [Infrastructure security in Amazon WorkMail](infrastructure-security.md)
++ [Getting started With Amazon WorkMail](getting_started.md)
+   + [Getting started with Amazon WorkMail](howto-start.md)
+   + [Migrating to Amazon WorkMail](migration_overview.md)
+   + [Interoperability between Amazon WorkMail and Microsoft Exchange](interoperability.md)
+      + [Enable email routing between Microsoft Exchange and Amazon WorkMail users](setup-msexchange.md)
+      + [Configure availability settings on Amazon WorkMail](enable_interop_wm.md)
+      + [Configure availability settings in Microsoft Exchange](enable_interop_ms.md)
+      + [Disabling interoperability and decommissioning your mail server](disable_interop.md)
+      + [Troubleshooting](troubleshooting_interop.md)
+   + [Amazon WorkMail quotas](workmail_limits.md)
++ [Working with organizations](organizations_overview.md)
+   + [Adding an organization](add_new_organization.md)
+   + [Deleting an organization](delete_organization.md)
+   + [Tagging an organization](org-tag.md)
+   + [Working with access control rules](access-rules.md)
+   + [Setting mailbox retention policies](mailbox-retention-policy.md)
+   + [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)
+   + [Managing email flows](email-flows.md)
+      + [Creating an email flow rule](create-email-rules.md)
+      + [Configuring SMTP gateways](smtp-gateway.md)
+      + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
+      + [Retrieving message content with AWS Lambda](lambda-content.md)
+      + [Testing an email flow rule](test-email-flow-rule.md)
+      + [Modifying an email flow rule](modify-email-flow-rule.md)
+      + [Removing an email flow rule](remove-email-flow-rule.md)
+   + [Tracking messages](tracking.md)
+   + [Enforcing DMARC policies on incoming email](inbound-dmarc.md)
++ [Working with domains](domains_overview.md)
+   + [Adding a domain](add_domain.md)
+   + [Removing a domain](remove_domain.md)
+   + [Choosing the default domain](default_domain.md)
+   + [Verifying domains](domain_verification.md)
+   + [Enabling AutoDiscover to configure endpoints](autodiscover.md)
+   + [Editing domain identity policies](editing_domains.md)
+   + [Authenticating email with SPF](authenticate_domain.md)
+   + [Configuring a custom MAIL FROM domain in Amazon WorkMail](custom-mail-from-domain.md)
++ [Working with users](users_overview.md)
+   + [Managing user accounts](manage-users.md)
+   + [Managing user mailboxes](manage-mailboxes.md)
+   + [Managing mobile devices](manage-devices.md)
+   + [Enabling signed or encrypted email](enable_encryption.md)
++ [Working with groups](groups_overview.md)
+   + [Create a group](add_new_group.md)
+   + [Enable an existing group](enable_existing_group.md)
+   + [Add users to a group](add-group-users.md)
+   + [Remove users from a group](remove-group-users.md)
+   + [Disable a group](remove_group.md)
++ [Working with mailbox permissions](mail_perms_overview.md)
++ [Exporting mailbox content](mail-export.md)
++ [Working with resources](resources_overview.md)
+   + [Creating a resource](create_resource.md)
+   + [Editing a resource](edit_resource.md)
+   + [Removing a resource](remove_resource.md)
++ [Using email journaling with Amazon WorkMail](journaling_overview.md)
++ [Document history](DocumentHistory.md)
++ [AWS glossary](glossary.md)

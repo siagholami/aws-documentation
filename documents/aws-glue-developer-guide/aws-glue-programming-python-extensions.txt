@@ -1,9 +1,0 @@
-AWS Glue PySpark Extensions Reference
-AWS Glue has created the following extensions to the PySpark Python dialect.
- Accessing Parameters Using getResolvedOptions
- PySpark Extension Types
- DynamicFrame Class
- DynamicFrameCollection Class
- DynamicFrameWriter Class
- DynamicFrameReader Class
- GlueContext Class

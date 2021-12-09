@@ -1,7 +1,0 @@
-Reference information for AWS Identity and Access Management
-Use the topics in this section to find detailed reference material for various aspects of IAM and AWS STS.
-Topics
- IAM identifiers
- IAM and STS quotas
- AWS services that work with IAM
- IAM JSON policy reference

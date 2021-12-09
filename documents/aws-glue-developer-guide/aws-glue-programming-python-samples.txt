@@ -1,4 +1,0 @@
-AWS Glue Python Code Samples
-
-Code Example: Joining and Relationalizing Data
-Code Example: Data Preparation Using ResolveChoice, Lambda, and ApplyMapping

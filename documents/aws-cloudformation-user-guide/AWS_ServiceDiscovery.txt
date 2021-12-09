@@ -1,7 +1,0 @@
-AWS Cloud Map resource type reference
-Resource types
- AWS::ServiceDiscovery::HttpNamespace
- AWS::ServiceDiscovery::Instance
- AWS::ServiceDiscovery::PrivateDnsNamespace
- AWS::ServiceDiscovery::PublicDnsNamespace
- AWS::ServiceDiscovery::Service

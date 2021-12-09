@@ -1,6 +1,0 @@
-EventSchemas resource type reference
-Resource types
- AWS::EventSchemas::Discoverer
- AWS::EventSchemas::Registry
- AWS::EventSchemas::RegistryPolicy
- AWS::EventSchemas::Schema

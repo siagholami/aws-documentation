@@ -1,2 +1,0 @@
-SVL_QERROR
-The SVL_QERROR view is deprecated.

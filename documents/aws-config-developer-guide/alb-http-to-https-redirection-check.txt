@@ -1,9 +1,0 @@
-alb-http-to-https-redirection-check
-Checks whether HTTP to HTTPS redirection is configured on all HTTP listeners of Application Load Balancer. The rule is NON_COMPLIANT if one or more HTTP listeners of Application Load Balancer do not have HTTP to HTTPS redirection configured.
-Identifier: ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except Africa (Cape Town) and Europe (Milan)
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

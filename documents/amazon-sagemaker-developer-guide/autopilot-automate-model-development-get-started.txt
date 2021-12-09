@@ -1,6 +1,0 @@
-Get started with Amazon SageMaker Autopilot
-Amazon SageMaker Autopilot provides samples, videos, and tutorials to get started with Amazon SageMaker Autopilot
-Topics
- Samples: Explore modeling with Amazon SageMaker Autopilot
- Videos: Use Autopilot to automate and explore the machine learning process
- Tutorials: Get started with Amazon SageMaker Autopilot

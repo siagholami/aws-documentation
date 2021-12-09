@@ -1,7 +1,0 @@
-Registering domains
-For information about registering new domains, see the applicable topic.
-Topics
- Registering a new domain
- Values that you specify when you register or transfer a domain
- Values that Amazon Route 53 returns when you register a domain
- Viewing the status of a domain registration

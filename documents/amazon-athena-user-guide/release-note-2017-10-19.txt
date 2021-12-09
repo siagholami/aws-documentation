@@ -1,3 +1,0 @@
-October 19, 2017
-Published on 2017-10-19
-Added support for EU (Frankfurt). For a list of supported regions, see AWS Regions and Endpoints.

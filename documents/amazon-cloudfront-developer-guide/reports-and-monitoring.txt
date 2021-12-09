@@ -1,8 +1,0 @@
-Reports, Metrics, and Logs
-This section includes topics that provide details on your options for reports and monitoring for CloudFront. A variety of reports are available for you to see usage and activity for your CloudFront distributions, including billing reports, cache statistics, popular content, and top referrers. In addition, you can monitor and track CloudFront—including Lambda@Edge activity—directly in the CloudFront console, and by using tools such as CloudTrail and CloudWatch. 
-Topics
- AWS Billing and Usage Reports for CloudFront
- CloudFront Reports in the Console
- Monitoring CloudFront with Amazon CloudWatch
- CloudFront logging
- Tracking Configuration Changes with AWS Config

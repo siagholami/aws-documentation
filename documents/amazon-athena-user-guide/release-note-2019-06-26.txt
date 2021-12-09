@@ -1,2 +1,0 @@
-June 26, 2019
-Amazon Athena is now available in the Europe (Stockholm) Region. For a list of supported Regions, see AWS Regions and Endpoints.

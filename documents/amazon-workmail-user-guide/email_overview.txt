@@ -1,8 +1,0 @@
-Working with email
-You can send and receive email, add or remove attachments, share inboxes, and send signed or encrypted email with the Amazon WorkMail web application.
-Topics
- Working with email messages
- Working with email rules
- Working with attachments
- Working with shared and full access inboxes
- Sending encrypted or signed email

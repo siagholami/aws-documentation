@@ -1,4 +1,0 @@
-Amazon Simple Queue Service resource type reference
-Resource types
- AWS::SQS::Queue
- AWS::SQS::QueuePolicy

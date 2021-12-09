@@ -1,6 +1,0 @@
-Creating a Tape Gateway
-In this section, you can find instructions about how to create and use a tape gateway.
-Topics
- Creating a Gateway
- Creating Tapes
- Using Your Tape Gateway

@@ -1,8 +1,0 @@
-Integrating with Amazon CodeGuru Profiler
-The Amazon CodeGuru Profiler agent is currently available for any JVM-based language or runtime environment. To start profiling your application, enable the CodeGuru Profiler agent to be loaded and started when your JVM-based application starts. After the agent starts, it automatically sends profiles to CodeGuru Profiler service. You’ll see continuous updates and recommendations.
-The following sections explain which environments and languages are supported by CodeGuru Profiler.
-Topics
- Choosing the right integration option
- Profiling your applications that run on AWS Lambda
- Enabling the agent from the command line
- Enabling the agent with code

@@ -1,9 +1,0 @@
-Step 1: Complete general Systems Manager setup steps
-If you haven't already done so, complete the following general setup steps for Systems Manager in the Setting up AWS Systems Manager section of this user guide. The other steps in that section are required only if you plan to manage EC2 instances.
- Sign up for AWS
- Create an Admin IAM user for AWS
-  Create non-Admin IAM users and groups for Systems Manager
- (Optional) Create a Virtual Private Cloud endpoint
- (Optional) Create Systems Manager service roles
- (Optional) Set Up integrations with other AWS services
-After ensuring that you have completed those steps, continue to Step 2: Create an IAM service role for a hybrid environment.

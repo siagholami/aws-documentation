@@ -1,9 +1,0 @@
-SHOW PARTITIONS
-Lists all the partitions in a table.
-Synopsis
-SHOW PARTITIONS table_name
- To show the partitions in a table and list them in a specific order, see the Listing Partitions for a Specific Table section on the Querying AWS Glue Data Catalog page.
- To view the contents of a partition, see the Query the Data section on the Partitioning Data page.
- SHOW PARTITIONS does not list partitions that are projected by Athena but not registered in the AWS Glue catalog. For information about partition projection, see Partition Projection with Amazon Athena.
-Examples
-SHOW PARTITIONS clicks;

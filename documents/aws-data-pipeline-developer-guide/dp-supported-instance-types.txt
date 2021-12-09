@@ -1,8 +1,0 @@
-Supported Instance Types for Pipeline Work Activities
-When AWS Data Pipeline runs a pipeline, it compiles the pipeline components to create a set of actionable Amazon EC2 instances. Each instance contains all the information for performing a specific task. The complete set of instances is the to-do list of the pipeline. AWS Data Pipeline hands the instances out to task runners to process.
-EC2 instances come in different configurations, which are known as instance types. Each instance type has a different CPU, input/output, and storage capacity. In addition to specifying the instance type for an activity, you can choose different purchasing options. Not all instance types are available in all AWS Regions. If an instance type is not available, your pipeline may fail to provision or may be stuck provisioning. For information about instance availability, see the Amazon EC2 Pricing Page. Open the link for your instance purchasing option and filter by Region to see if an instance type is available in the Region. For more information about these instance types, families, and virtualization types, see Amazon EC2 Instances and Amazon Linux AMI Instance Type Matrix.
-The following tables describe the instance types that AWS Data Pipeline supports. You can use AWS Data Pipeline to launch Amazon EC2 instances in any Region, including Regions where AWS Data Pipeline is not supported. For information about Regions where AWS Data Pipeline is supported, see AWS Regions and Endpoints. 
-Topics
- Default Amazon EC2 Instances by AWS Region
- Additional Supported Amazon EC2 Instances
- Supported Amazon EC2 Instances for Amazon EMR Clusters

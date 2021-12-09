@@ -1,4 +1,0 @@
-KMS resource type reference
-Resource types
- AWS::KMS::Alias
- AWS::KMS::Key

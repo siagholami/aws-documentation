@@ -1,5 +1,0 @@
-AWS Systems Manager Patch Manager walkthroughs
-The walkthroughs in this section demonstrate how to use Patch Manager for a selection of patching scenarios.
-Topics
- Walkthrough: Create a patch baseline for installing Windows Service Packs (console)
- Walkthrough: Patch a server environment (AWS CLI)

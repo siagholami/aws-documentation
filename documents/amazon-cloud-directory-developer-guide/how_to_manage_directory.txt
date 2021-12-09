@@ -1,7 +1,0 @@
-Manage Your Directories
-This section describes how to maintain common directory tasks for your Cloud Directory environment.
-Topics
- Create Your Directory
- Delete Your Directory
- Disable Your Directory
- Enable Your Directory

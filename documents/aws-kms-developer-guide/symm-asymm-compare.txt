@@ -1,7 +1,0 @@
-Comparing symmetric and asymmetric CMKs
-You can create and manage symmetric and asymmetric CMKs by using the AWS KMS console and the AWS KMS API. However, AWS KMS supports different features for CMKs of different types. 
-For example, you can only use symmetric CMKs to generate symmetric data keys and asymmetric data key pairs. Also, importing key material and automatic key rotation are supported only for symmetric CMKs, and you can create only symmetric CMKs in a custom key store. 
-The following table lists the AWS KMS operations that you can use to create and manage CMKs of each type. If you use the operation on a CMK that doesn't not support it, the operation fails.
-AWS KMS operations with symmetric and asymmetric CMKs
-[See the AWS documentation website for more details]
-[1] GenerateDataKeyPair and GenerateDataKeyPairWithoutPlaintext generate an asymmetric data key pair that is protected by a symmetric CMK.

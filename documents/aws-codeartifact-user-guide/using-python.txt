@@ -1,9 +1,0 @@
-Using CodeArtifact with Python
-These topics describe how to use pip, the Python package manager, and twine, the Python package publishing utility, with CodeArtifact.
-Topics
- Configure clients with the login command
- Configure pip without the login command
- Configure twine without the login command
- Run pip
- Run twine
- Python compatibility

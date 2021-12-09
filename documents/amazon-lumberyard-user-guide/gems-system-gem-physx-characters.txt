@@ -1,9 +1,0 @@
-PhysX Characters
-The PhysX Characters gem provides physics for your characters in your game. The gem integrates with the EMotion FX Animation Editor system. 
-
-Note
-To enable the PhysX Characters gem, you must first enable the PhysX gem.
-The PhysX Characters gem adds the following components:
-  PhysX Character Controller 
-  PhysX Ragdoll 
-For more information, see Simulating physics behavior with the PhysX system.

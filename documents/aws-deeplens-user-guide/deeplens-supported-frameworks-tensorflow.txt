@@ -1,5 +1,0 @@
-Supported TensorFlow Models and Supporting TensorFlow Layers
-AWS DeepLens supports the following TensorFlow models and layers for deep learning.
-Topics
- Supported TensorFlow Models
- Supporting TensorFlow Layers

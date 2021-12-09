@@ -1,8 +1,0 @@
-Containers in AWS Elemental MediaStore
-You use containers in MediaStore to store your folders and objects. Related objects can be grouped in containers in the same way that you use a directory to group files in a file system. You aren’t charged when you create containers; you are charged only when you upload an object to a container. For more information about charges, see AWS Elemental MediaStore Pricing.
-Topics
- Rules for container names
- Creating a container
- Viewing the details for a container
- Viewing a list of containers
- Deleting a container

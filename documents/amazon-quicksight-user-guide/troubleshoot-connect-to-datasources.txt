@@ -1,9 +1,0 @@
-I Can't Connect to My Data Source
-Use this section to help you troubleshoot connections to data sources. Before you continue, verify that the database is currently available. Also, verify that you have the correct connection information and valid credentials. 
-Topics
- I Need to Validate the Connection to My Data Source, or Change Data Source Settings
- I Can't Connect to Amazon Athena
- I Can't Connect Although My Data Source Connection Options Look Right (SSL)
- I Can't Connect to MySQL (Issues with SSL and Authorization)
- I Can't Connect to Amazon S3
- I Can't Connect to RDS

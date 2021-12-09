@@ -1,0 +1,7 @@
+# Best Practices<a name="ct-best-practices"></a>
+
+The following are suggested best practices when using custom terminologies
++ Keep your custom terminology minimal\. Only include words which you want to control and which are completely unambiguous\. Only use words that you know you will never want to use an alternate meaning of, and you want it to only ever be translated in a single way\. Ideally, limit the list to proper names, like brand names and product names\.
++ Custom terminologies are case\-sensitive\. If you need both capitalized and non\-capitalized versions of a word to be included, you must include an entry for each version\.
++ Do not include different translations for the same source phrase \(for example, entry \#1\-EN: Amazon, FR: Amazon; entry \#2\-EN: Amazon FR: Amazone\)\. 
++ Some languages do not change the shape of a word based on sentence context\. With these languages, applying a custom terminology is most likely to improve overall translation quality\. However, some languages do have extensive word shape changes\. We do not recommend applying the feature to those languages, but we do not restrict you from doing so\. For more information, see [Compatible Languages](permissible-language-pairs.md)\.

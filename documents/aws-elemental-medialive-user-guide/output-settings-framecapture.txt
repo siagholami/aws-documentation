@@ -1,6 +1,0 @@
-Settings for a Frame Capture Output
-On the Output page for a Frame Capture output group, you provide information about the still images to create.
-Output Settings Section
-For Name modifier, enter a name as described in Frame Capture Destinations.
-Streams Section
-For information about the fields in the video encode, see Step 7: Set Up the Video Encode.

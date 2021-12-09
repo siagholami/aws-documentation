@@ -1,6 +1,0 @@
-How MediaConvert uses timelines to assemble jobs
-MediaConvert assembles inputs and input clips according to input timelines and the output timeline. The service constructs these timelines based on your settings, and then assembles your inputs into outputs based on them. The following illustration shows three independent input timelines and an output timeline.
-
-Topics
- Input timelines
- Output timeline

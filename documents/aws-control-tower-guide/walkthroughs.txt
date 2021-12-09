@@ -1,8 +1,0 @@
-Walkthroughs
-This chapter contains walkthrough procedures that can help you in your use of AWS Control Tower.
-Topics
- Walkthrough: Cleaning up AWS Control Tower Managed Resources
- Walkthrough: Configuring AWS Control Tower Without a VPC
- Walkthrough: Customize Your AWS Control Tower Landing Zone
- Walkthrough: Automated Account Provisioning in AWS Control Tower
- Walkthrough: Setting Up Security Groups in AWS Control Tower With AWS Firewall Manager

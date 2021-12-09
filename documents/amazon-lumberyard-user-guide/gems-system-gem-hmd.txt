@@ -1,2 +1,0 @@
-HMD Framework Gem
-Use the HMD Framework Gem to provide the developmental framework for managing VR devices in Lumberyard. You must enable this gem when you enable any other VR Gem, such as NullVR, Oculus, and OpenVR.

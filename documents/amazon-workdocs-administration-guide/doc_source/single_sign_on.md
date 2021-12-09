@@ -1,0 +1,5 @@
+# Enabling single sign\-on<a name="single_sign_on"></a>
+
+AWS Directory Service allows users to access Amazon WorkDocs from a computer joined to the same directory with which Amazon WorkDocs is registered, without entering credentials separately\. Amazon WorkDocs administrators can enable single sign\-on using the AWS Directory Service console\. For more information, see [Single sign\-on](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_single_sign_on.html) in the *AWS Directory Service Administration Guide*\.
+
+After the Amazon WorkDocs administrator enables single sign\-on, the Amazon WorkDocs site users might also need to modify their web browser settings to allow single sign\-on\. For more information, see [Single sign\-on for IE and Chrome](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_single_sign_on.html#ie_sso) and [Single sign\-on for Firefox](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_single_sign_on.html#firefox_sso) in the *AWS Directory Service Administration Guide*\.

@@ -1,7 +1,0 @@
-Deploying ServiceLens
-Deploying ServiceLens requires two steps:
- Deploy AWS X-Ray so that you can view the service map.
- Deploy the CloudWatch agent and the X-Ray daemon to enable the service map integration with CloudWatch metrics and CloudWatch Logs.
-Topics
- Deploying AWS X-Ray
- Deploying the CloudWatch Agent and the X-Ray Daemon

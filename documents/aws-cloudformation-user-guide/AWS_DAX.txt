@@ -1,5 +1,0 @@
-DAX resource type reference
-Resource types
- AWS::DAX::Cluster
- AWS::DAX::ParameterGroup
- AWS::DAX::SubnetGroup

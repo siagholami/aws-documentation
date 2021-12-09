@@ -1,7 +1,0 @@
-TagList
-Description
-A list of resource tags for the specified Amazon CloudSearch domain. The list is a result of a ListTags request.
-Contents
-TagList
-List of resource tags for the specified Amazon CloudSearch domain.
-Type: a list of strings that specify the resource tags for the domain.

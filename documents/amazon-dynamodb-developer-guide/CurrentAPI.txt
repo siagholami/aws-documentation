@@ -1,5 +1,0 @@
-Low-Level API Reference
-The Amazon DynamoDB API Reference contains a complete list of operations supported by:
- DynamoDB.
- DynamoDB Streams .
- DynamoDB Accelerator (DAX).

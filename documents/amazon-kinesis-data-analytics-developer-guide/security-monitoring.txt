@@ -1,2 +1,0 @@
-Monitoring Amazon Kinesis Data Analytics
-Kinesis Data Analytics provides monitoring functionality for your applications. For more information, see Monitoring Amazon Kinesis Data Analytics for SQL Applications.

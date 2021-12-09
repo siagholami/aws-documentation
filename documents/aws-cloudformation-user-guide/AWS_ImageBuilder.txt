@@ -1,8 +1,0 @@
-ImageBuilder resource type reference
-Resource types
- AWS::ImageBuilder::Component
- AWS::ImageBuilder::DistributionConfiguration
- AWS::ImageBuilder::Image
- AWS::ImageBuilder::ImagePipeline
- AWS::ImageBuilder::ImageRecipe
- AWS::ImageBuilder::InfrastructureConfiguration

@@ -1,6 +1,0 @@
-Managing your account
-Use the procedures in this chapter to manage your account settings, your default currency, your alternate contacts, and more. 
-Topics
- Managing an AWS account
- Managing an account in India
- close your account

@@ -1,9 +1,0 @@
-Amazon GameLift resource type reference
-Resource types
- AWS::GameLift::Alias
- AWS::GameLift::Build
- AWS::GameLift::Fleet
- AWS::GameLift::GameSessionQueue
- AWS::GameLift::MatchmakingConfiguration
- AWS::GameLift::MatchmakingRuleSet
- AWS::GameLift::Script

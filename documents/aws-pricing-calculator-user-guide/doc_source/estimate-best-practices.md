@@ -1,0 +1,5 @@
+# Best practices for generating estimates<a name="estimate-best-practices"></a>
+
+To get the most out of your estimates, you should have a good idea of your basic requirements\. For example, if you're going to try Amazon Elastic Compute Cloud \(Amazon EC2\), it might help if you know what kind of operating system you need, what your memory requirements are, and how much I/O you need\. You should also decide whether you need storage, such as if you're going to run a database and how long you intend to use the servers\. You don't need to make these decisions before generating an estimate, though\. You can play around with the service configuration and parameters to see which options fit your use case and budget best\.
+
+It's also a good idea to consider how you want to organize your estimate\. For more information, see [Using groups](estimate-groups.md)\. 

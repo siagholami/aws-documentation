@@ -1,0 +1,3 @@
+# Pricing for AWS Elemental MediaConnect<a name="what-is-pricing"></a>
+
+As with other AWS products, there are no contracts or minimum commitments for using AWS Elemental MediaConnect\. You are charged a per GB fee when content is processed by the service and a per hour fee for active resources\. For more information, see [AWS Elemental MediaConnect Pricing](https://aws.amazon.com/mediaconnect/pricing/)\.

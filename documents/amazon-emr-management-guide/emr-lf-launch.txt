@@ -1,9 +1,0 @@
-Launch an Amazon EMR Cluster with Lake Formation
-This section provides information about how to launch an Amazon EMR cluster integrated with Lake Formation. It also shows how to update the single sign-on URL in your IdP, how to use notebooks with Lake Formation, and how to customize proxy agent certificate. 
-For more information about troubleshooting common issues, see Troubleshooting a Lake Formation Cluster in the Amazon EMR Management Guide.
-Topics
- Launch an Amazon EMR cluster with Lake Formation using the console
- Launch an Amazon EMR cluster integrated with Lake Formation using the CLI
- Update the callback or single sign-on URL in IdP
- Using Notebooks with Lake Formation
- Customize Proxy Agent Certificate

@@ -1,2 +1,0 @@
-Step 5. (Optional) Install the AWS CLI
-To use the AWS CLI with AWS Elemental MediaConnect, install the latest AWS CLI version. For information about installing the AWS CLI or upgrading it to the latest version, see Installing the AWS Command Line Interface in the AWS Command Line Interface User Guide. 

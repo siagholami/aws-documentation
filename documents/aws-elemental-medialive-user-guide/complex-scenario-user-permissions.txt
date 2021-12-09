@@ -1,6 +1,0 @@
-Setting Up Permissions for Non-Administrator Users
-This section applies if you have determined that your deployment requires the complex option for the trusted entity role, as described in Options for Implementing the Role. 
-This section describes how you set up permission for regular users to work with the trusted entity roles that you created in Creating Trusted Entity Roles.
-Topics
- Identifying Permissions
- Setting Up Permissions

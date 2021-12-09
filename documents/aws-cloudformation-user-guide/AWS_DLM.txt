@@ -1,3 +1,0 @@
-DLM resource type reference
-Resource types
- AWS::DLM::LifecyclePolicy

@@ -1,6 +1,0 @@
-Guidelines and Quotas in Amazon Lex
-The following sections provide guidelines and quotas when using Amazon Lex.
-Topics
- Supported Regions
- General Guidelines
- Quotas

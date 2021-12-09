@@ -1,9 +1,0 @@
-Amazon SQS Java SDK examples
-You can use the AWS SDK for Java to build Java applications that interact with Amazon Simple Queue Service (Amazon SQS) and other AWS services. To install and set up the SDK, see Getting started in the AWS SDK for Java 2.x Developer Guide.
-For examples of basic Amazon SQS queue operations, such as how to create a queue or send a message, see  Working with Amazon SQS Message Queues in the AWS SDK for Java 2.x Developer Guide. 
-The examples in this topic demonstrate additional Amazon SQS features, such as server-side encryption (SSE), cost-allocation tags, and message attributes. 
-Topics
- Using server-side encryption (SSE)
- Configuring tags for a queue
- Sending message attributes
- Managing large Amazon SQS messages using Amazon S3

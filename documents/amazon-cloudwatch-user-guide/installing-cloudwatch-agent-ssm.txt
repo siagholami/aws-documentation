@@ -1,7 +1,0 @@
-Installing the CloudWatch Agent Using AWS Systems Manager
-Use the following topics to install and run the CloudWatch agent using AWS Systems Manager.
-Topics
- Create IAM Roles and Users for Use with the CloudWatch Agent
- Download and Configure the CloudWatch Agent
- Installing the CloudWatch Agent on EC2 Instances Using Your Agent Configuration
- Installing the CloudWatch Agent on On-Premises Servers

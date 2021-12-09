@@ -1,9 +1,0 @@
-Tutorials
-The following tutorials explain how to use Amazon Route 53 as the DNS service for a subdomain while still using another DNS service for the domain and how to use Route 53 for several use cases related to weighted and latency records.
-Topics
- Using Amazon Route 53 as the DNS service for subdomains without migrating the parent domain
- Transitioning to latency-based routing in Amazon Route 53
- Adding another Region to your latency-based routing in Amazon Route 53
- Using latency and weighted records in Amazon Route 53 to route traffic to multiple Amazon EC2 instances in a Region
- Managing over 100 weighted records in Amazon Route 53
- Weighting fault-tolerant multi-record answers in Amazon Route 53

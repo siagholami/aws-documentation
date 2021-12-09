@@ -1,8 +1,0 @@
-Adding Clouds
-You can create realistic-looking clouds in your level that move, cast shadows, and that objects can fly through. 
-To add clouds to your level, you add the Sky Cloud component to an entity. With the Sky Cloud component, you can define the cloud's shape, its volume, how fast it moves, the dimensions of its loop box, and more.
-See the following sections to set other cloud effects, such as cloud shading, cloud shadows, and 2D distance clouds.
-Topics
- Placing Distance Clouds
- Adding 3D Cloud Shadows
- Setting Cloud Shading Parameters

@@ -1,7 +1,0 @@
-Installing the CloudWatch Agent
-You can download and install the CloudWatch agent using either the command line with an Amazon S3 download link, using SSM, or using an AWS CloudFormation template.
-Topics
- Installing the CloudWatch Agent Using the Command Line
- Installing the CloudWatch Agent Using AWS Systems Manager
- Installing the CloudWatch Agent Using AWS CloudFormation
- Verifying the Signature of the CloudWatch Agent Package

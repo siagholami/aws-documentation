@@ -1,0 +1,14 @@
+# Prerequisites<a name="CHAP_RDSOracle2Aurora.Prerequisites"></a>
+
+The following prerequisites are also required to complete this walkthrough:
++  Familiarity with Amazon RDS, the applicable database technologies, and SQL\. 
++ The custom scripts that include creating the tables to be migrated and SQL queries for confirming the migration\. The scripts and queries are available at the following links\. Each step in the walkthrough also contains a link to download the file or includes the exact query in the step\.
+  + SQL statements to build the HR schema— [ https://dms\-sbs\.s3\.amazonaws\.com/Oracle\-HR\-Schema\-Build\.sql](https://dms-sbs.s3.amazonaws.com/Oracle-HR-Schema-Build.sql)\. 
+  + SQL queries to validate the schema contents — \(text\) [ https://dms\-sbs\.s3\.amazonaws\.com/AWSDMSDemoStats\.txt](https://dms-sbs.s3.amazonaws.com/AWSDMSDemoStats.txt) and \(spreadsheet\) [ https://dms\-sbs\.s3\.amazonaws\.com/AWSDMSDemoStats\.xlsx](https://dms-sbs.s3.amazonaws.com/AWSDMSDemoStats.xlsx)\.
+  + AWS CloudFormation template — [ https://dms\-sbs\.s3\.amazonaws\.com/Oracle\_Aurora\_RDS\_For\_DMSDemo\.template](https://dms-sbs.s3.amazonaws.com/Oracle_Aurora_RDS_For_DMSDemo.template)\.
++ An AWS account with AWS Identity and Access Management \(IAM\) credentials that allow you to launch Amazon Relational Database Service \(Amazon RDS\) and AWS Database Migration Service \(AWS DMS\) instances in your AWS Region\. For information about IAM credentials, see [Creating an IAM User](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_SettingUp.html#CHAP_SettingUp.IAM)\.
++ Basic knowledge of the Amazon Virtual Private Cloud \(Amazon VPC\) service and of security groups\. For information about using Amazon VPC with Amazon RDS, see [ Virtual Private Clouds \(VPCs\) and Amazon RDS](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html)\. For information about Amazon RDS security groups, see [ Amazon RDS Security Groups](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html)\.
++ An understanding of the supported features and limitations of AWS DMS\. For information about AWS DMS, see [ What Is AWS Database Migration Service? ](http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html)\.
++ Knowledge of the supported data type conversion options for Oracle and Amazon Aurora MySQL\. For information about data types for Oracle as a source, see [ Using an Oracle Database as a Source for AWS Database Migration Service ](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html)\. For information about data types for Amazon Aurora MySQL as a target, see [ Using a MySQL\-Compatible Database as a Target for AWS Database Migration Service ](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.MySQL.html)\.
+
+For more information on AWS DMS, see [the AWS DMS documentation](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_GettingStarted.html)\.

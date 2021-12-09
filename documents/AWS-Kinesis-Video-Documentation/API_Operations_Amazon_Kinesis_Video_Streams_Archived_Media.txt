@@ -1,7 +1,0 @@
-Amazon Kinesis Video Streams Archived Media
-The following actions are supported by Amazon Kinesis Video Streams Archived Media:
-  GetClip 
-  GetDASHStreamingSessionURL 
-  GetHLSStreamingSessionURL 
-  GetMediaForFragmentList 
-  ListFragments 

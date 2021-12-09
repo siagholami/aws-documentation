@@ -1,7 +1,0 @@
-Fleet Management
-This section contains information on working with robots, fleets, and deployments. 
-Topics
- Deploying a Robot Application
- Managing Robots
- Managing Fleets
- Managing Deployments

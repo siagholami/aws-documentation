@@ -1,2 +1,0 @@
-Deleting a Self-signed CA Certificate
-You cannot revoke a self-signed CA certificate. Instead, you must delete the CA.

@@ -1,7 +1,0 @@
-Adding Wind Effects
-You can create realistic wind effects in your level environment.
-Topics
- Adding Global Wind
- Adding Ocean Wind
- Creating Wind Areas
- Adding Localized Wind

@@ -1,8 +1,0 @@
-ECS resource type reference
-Resource types
- AWS::ECS::CapacityProvider
- AWS::ECS::Cluster
- AWS::ECS::PrimaryTaskSet
- AWS::ECS::Service
- AWS::ECS::TaskDefinition
- AWS::ECS::TaskSet

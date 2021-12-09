@@ -1,3 +1,0 @@
-CodeGuruProfiler resource type reference
-Resource types
- AWS::CodeGuruProfiler::ProfilingGroup

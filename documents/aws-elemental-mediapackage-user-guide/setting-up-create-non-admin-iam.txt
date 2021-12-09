@@ -1,6 +1,0 @@
-Creating a Non-Admin IAM User
-Users in the Administrators group for an account have access to all AWS services and resources in that account. This section describes how to create users with permissions that are limited to AWS Elemental MediaPackage.
-Topics
- Step 1: (Optional) Create a Policy for Amazon CloudFront
- Step 2: (Optional) Create a Policy for AWS Elemental MediaPackage VOD
- Step 3: Create Users

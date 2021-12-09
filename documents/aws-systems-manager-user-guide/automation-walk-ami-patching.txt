@@ -1,8 +1,0 @@
-Patching Amazon Machine Images
-This section includes walkthroughs that describe how to patch or update Amazon Machines Images (AMIs). 
-Topics
- Walkthrough: Patch a Linux AMI (console)
- Walkthrough: Patch a Linux AMI (AWS CLI)
- Walkthrough: Patch a Windows Server AMI
- Walkthrough: Simplify AMI patching using Automation, AWS Lambda, and Parameter Store
- Walkthrough: Patch an AMI and update an Auto Scaling group

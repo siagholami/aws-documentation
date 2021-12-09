@@ -1,8 +1,0 @@
-Viewing Filters
-To see the filters for a data set, start on the data preparation page. Choose the Filters pane on the left side of the screen. It's located beneath the Fields pane. 
-
-If a single field has multiple filters, they are grouped together. They display in order of create date, with the oldest filter on top.
-
-Viewing Filter Details
-Choose the filter to open the Edit Filter view and see filter details.
-Choose the Edit filter selector to close that view and return to the Filters view.

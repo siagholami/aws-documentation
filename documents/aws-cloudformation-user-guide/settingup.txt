@@ -1,9 +1,0 @@
-Setting up
-Before you start using AWS CloudFormation, you might need to know what IAM permissions you need, how to start logging AWS CloudFormation API calls, or what endpoints to use. The following topics provide this information so that you can start using AWS CloudFormation.
-Topics
- Signing up for an AWS account and pricing
- Controlling access with AWS Identity and Access Management
- Logging AWS CloudFormation API calls with AWS CloudTrail
- AWS CloudFormation quotas
- AWS CloudFormation endpoints
- Setting up VPC endpoints for AWS CloudFormation

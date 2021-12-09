@@ -1,5 +1,0 @@
-Step 5: Test a Bot (AWS CLI)
-To test the bot,you can use either a text-based or a speech-based test.
-Topics
- Test the Bot Using Text Input (AWS CLI)
- Test the Bot Using Speech Input (AWS CLI)

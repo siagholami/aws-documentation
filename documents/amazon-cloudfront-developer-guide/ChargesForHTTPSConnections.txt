@@ -1,2 +1,0 @@
-Charges for HTTPS connections
-You always incur a surcharge for HTTPS requests. For more information, see Amazon CloudFront Pricing.

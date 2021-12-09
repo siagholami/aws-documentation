@@ -1,5 +1,0 @@
-Automating and troubleshooting Amazon SQS queues
-This section provides information about automating and troubleshooting Amazon SQS queues.
-Topics
- Automating notifications from AWS services to Amazon SQS using CloudWatch Events
- Troubleshooting Amazon Simple Queue Service queues using AWS X-Ray

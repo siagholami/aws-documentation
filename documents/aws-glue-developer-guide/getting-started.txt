@@ -1,9 +1,0 @@
-Getting Started Using AWS Glue
-The following sections provide an overview and walk you through setting up and using AWS Glue. For information about AWS Glue concepts and components, see AWS Glue: How It Works.
-Topics
- Setting up IAM Permissions for AWS Glue
- Setting Up DNS in Your VPC
- Setting Up Your Environment to Access Data Stores
- Setting Up Your Environment for Development Endpoints
- Setting Up Encryption in AWS Glue
- AWS Glue Console Workflow Overview

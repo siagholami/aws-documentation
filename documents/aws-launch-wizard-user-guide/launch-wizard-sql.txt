@@ -1,9 +1,0 @@
-AWS Launch Wizard for SQL Server
-This section of the AWS Launch Wizard documentation contains guidance specific to the deployment of a Microsoft SQL Server Always On application on AWS using the Launch Wizard service. 
-Topics
- What Is AWS Launch Wizard for SQL Server?
- Getting started with AWS Launch Wizard for SQL Server
- Managing application resources with AWS Launch Wizard for SQL Server
- Monitoring SQL Server Always On deployments
- High availability and security best practices for AWS Launch Wizard for SQL Server
- Troubleshooting AWS Launch Wizard for SQL Server

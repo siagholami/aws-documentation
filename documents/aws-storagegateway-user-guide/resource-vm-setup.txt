@@ -1,6 +1,0 @@
-Host Setup
-Topics
- Configuring VMware for Storage Gateway
- Synchronizing Your Gateway VM Time
- Deploying a Volume or Tape Gateway on an Amazon EC2 Host
- Deploying a file gateway on an Amazon EC2 host

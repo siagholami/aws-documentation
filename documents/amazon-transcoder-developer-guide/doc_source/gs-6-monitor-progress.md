@@ -1,0 +1,3 @@
+# Step 6: Monitor the Progress of Your Job<a name="gs-6-monitor-progress"></a>
+
+When you created a pipeline in [Step 3: Create a Pipeline](gs-3-create-a-pipeline.md), you had the option to configure notifications, so Elastic Transcoder sends a message to an Amazon Simple Notification Service \(Amazon SNS\) topic when Elastic Transcoder begins processing a job and finishes processing a job\. If you configured notifications and if you subscribed to the applicable Amazon SNS topic, you can monitor the progress of your job\. 

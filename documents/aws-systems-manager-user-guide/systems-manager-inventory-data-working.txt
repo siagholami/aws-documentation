@@ -1,6 +1,0 @@
-Working with Systems Manager inventory data
-This section includes topics that describe how to query and aggregate inventory data. 
-Topics
- Querying inventory data from multiple Regions and accounts
- Querying an inventory collection by using filters
- Aggregating inventory data

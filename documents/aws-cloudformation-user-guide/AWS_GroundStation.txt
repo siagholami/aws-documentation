@@ -1,5 +1,0 @@
-GroundStation resource type reference
-Resource types
- AWS::GroundStation::Config
- AWS::GroundStation::DataflowEndpointGroup
- AWS::GroundStation::MissionProfile

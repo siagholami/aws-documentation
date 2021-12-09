@@ -1,8 +1,0 @@
-DefineSuggesterResult
-Description
-The result of a DefineSuggester request. Contains the status of the newly-configured suggester.
-Contents
-Suggester 
-The value of a Suggester and its current status.
-Type: SuggesterStatus 
- Required: Yes 

@@ -1,9 +1,0 @@
-codebuild-project-envvar-awscred-check
-Checks whether the project contains environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY. The rule is NON_COMPLIANT when the project environment variables contains plaintext credentials.
-Identifier: CODEBUILD_PROJECT_ENVVAR_AWSCRED_CHECK
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions except China (Beijing), China (Ningxia), AWS GovCloud (US-East), AWS GovCloud (US-West), Europe (Stockholm), Africa (Cape Town) and Europe (Milan)
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

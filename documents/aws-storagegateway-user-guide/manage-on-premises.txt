@@ -1,9 +1,0 @@
-Performing Maintenance Tasks on the Local Console
-You can perform the following maintenance tasks using the host's local console. Local console tasks can be performed on the VM host or the Amazon EC2 instance. Many of the tasks are common among the different hosts, but there are also some differences.
-Topics
- Performing Tasks on the VM Local Console (File Gateway)
- Performing Tasks on the Amazon EC2 Local Console (File Gateway)
- Performing Tasks on the VM Local Console (Volume and Tape Gateways)
- Performing Tasks on the Amazon EC2 Local Console (Volume and Tape Gateways)
- Accessing the Gateway Local Console
- Configuring Network Adapters for Your Gateway

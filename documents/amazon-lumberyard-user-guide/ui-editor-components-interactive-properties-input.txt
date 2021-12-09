@@ -1,3 +1,0 @@
-Input Enabled
-The Input Enabled setting, selected by default, determines whether the component can be interacted with.
-To visualize how the interactive element looks in its disabled state, deselect the Input Enabled setting, and then use Preview mode to preview your canvas.

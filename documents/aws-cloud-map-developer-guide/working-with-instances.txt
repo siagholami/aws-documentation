@@ -1,8 +1,0 @@
-Working with Service Instances
-A service instance contains information about how to locate a resource, such as a web server, for an application. After you register instances, you locate them by using DNS queries or the AWS Cloud Map DiscoverInstances API action.
-Topics
- Registering Instances
- Values That You Specify When You Register or Update Instances
- Updating Instances
- Viewing a List of Service Instances
- Deregistering Service Instances

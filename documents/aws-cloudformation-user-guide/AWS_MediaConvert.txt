@@ -1,5 +1,0 @@
-AWS Elemental MediaConvert resource type reference
-Resource types
- AWS::MediaConvert::JobTemplate
- AWS::MediaConvert::Preset
- AWS::MediaConvert::Queue

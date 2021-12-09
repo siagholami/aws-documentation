@@ -1,7 +1,0 @@
-GPU Monitoring and Optimization
-The following section will guide you through GPU optimization and monitoring options. This section is organized like a typical workflow with monitoring overseeing preprocessing and training. 
- Monitoring
-   Monitor GPUs with CloudWatch
- Optimization
-   Preprocessing
-   Training

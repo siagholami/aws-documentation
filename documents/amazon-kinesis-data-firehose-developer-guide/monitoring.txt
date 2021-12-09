@@ -1,6 +1,0 @@
-Monitoring Amazon Kinesis Data Firehose
-You can monitor Amazon Kinesis Data Firehose using the following features:
- Amazon CloudWatch metrics— Kinesis Data Firehose sends Amazon CloudWatch custom metrics with detailed monitoring for each delivery stream.
- Amazon CloudWatch Logs— Kinesis Data Firehose sends CloudWatch custom logs with detailed monitoring for each delivery stream.
- Kinesis Agent— Kinesis Agent publishes custom CloudWatch metrics to help assess whether the agent is working as expected.
- API logging and history— Kinesis Data Firehose uses AWS CloudTrail to log API calls and store the data in an Amazon S3 bucket, and to maintain API call history.

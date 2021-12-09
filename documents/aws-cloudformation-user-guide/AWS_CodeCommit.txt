@@ -1,3 +1,0 @@
-CodeCommit resource type reference
-Resource types
- AWS::CodeCommit::Repository

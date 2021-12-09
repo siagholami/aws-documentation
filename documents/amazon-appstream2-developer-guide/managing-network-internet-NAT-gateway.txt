@@ -1,8 +1,0 @@
-Configure a VPC with Private Subnets and a NAT Gateway
-If you plan to provide your streaming instances (fleet instances and image builders) with access to the internet, we recommend that you configure a VPC with two private subnets for your streaming instances and a NAT gateway in a public subnet. You can create and configure a new VPC to use with a NAT gateway, or add a NAT gateway to an existing VPC. For additional VPC configuration recommendations, see VPC Setup Recommendations.
-The NAT gateway lets the streaming instances in your private subnets connect to the internet or other AWS services, but prevents the internet from initiating a connection with those instances. In addition, unlike configurations that use the Default Internet Access option for enabling internet access for AppStream 2.0 streaming instances, this configuration is not limited to 100 fleet instances.
-For information about using NAT Gateways and this configuration, see NAT Gateways and VPC with Public and Private Subnets (NAT) in the Amazon VPC User Guide.
-Topics
- Create and Configure a New VPC
- Add a NAT Gateway to an Existing VPC
- Enable Internet Access for Your Fleet and Image Builder

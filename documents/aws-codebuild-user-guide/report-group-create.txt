@@ -1,7 +1,0 @@
-Create a report group
-You can use the CodeBuild console, the AWS CLI, or a buildspec file to create a report group. Your IAM role must have the permissions required to create a report group. For more information, see Working with test report permissions. 
-Topics
- Create a report group (buildspec)
- Create a report group (CLI)
- Create a report group (console)
- Create a report group (AWS CloudFormation)

@@ -1,8 +1,0 @@
-Supported Features
-This section provides information on the different features of captions that AWS Elemental MediaLive supports.
-Topics
- Supported Formats
- Format Support by Output Container
- Support for Languages
- Support for Font Styles in Output Captions
- Captions in Channels with Multiple Inputs

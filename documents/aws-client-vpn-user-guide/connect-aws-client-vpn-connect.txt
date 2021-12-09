@@ -1,8 +1,0 @@
-Connect using the AWS-provided client
-The following topics provide steps for connecting to a Client VPN endpoint using the AWS-provided client.
-The AWS-provided client does not support automatic updates. You can download the latest version at AWS Client VPN download.
-The AWS-provided client is currently supported on Windows and macOS only.
-Topics
- Windows
- macOS
- Release notes for the AWS-provided client

@@ -1,4 +1,0 @@
-Deleting a Harvest Job
-You can't delete a harvest job.
- To create a harvest job with different settings, see Creating a Harvest Job.
- To delete a VOD asset that MediaPackage created with a harvest job, see Delete an Object and a Bucket in the Amazon Simple Storage Service Getting Started Guide.

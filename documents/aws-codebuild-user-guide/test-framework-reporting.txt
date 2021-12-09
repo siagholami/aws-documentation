@@ -1,7 +1,0 @@
-Test reporting with test frameworks
-The topics in this section demonstrate how to set up test reporting in AWS CodeBuild for various test frameworks.
-Topics
- Set up test reporting with Jasmine
- Set up test reporting with Jest
- Set up test reporting with pytest
- Set up test reporting with RSpec

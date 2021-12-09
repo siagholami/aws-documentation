@@ -1,2 +1,0 @@
-AWS Elemental MediaStore resource-based policy examples
-Each container has a resource-based policy that governs access rights to all folders and objects in that container. To view examples of MediaStore resource-based policies, see Container policies.

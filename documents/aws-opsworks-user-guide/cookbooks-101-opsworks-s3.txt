@@ -1,9 +1,0 @@
-Using the SDK for Ruby: Downloading Files from Amazon S3
-There are some tasks, such as interacting with AWS services, that cannot be handled with Chef resources. For example, it is sometimes preferable to store files remotely and have a recipe download them to the instance. You can use the remote_file resource to download files from remote servers. However, if you want to store your files in an Amazon S3 bucket, remote_file can download those files only if the ACL allows the operation.
-Recipes can use the AWS SDK for Ruby to access most AWS services. This topic shows how to use the SDK for Ruby to download a file from an S3 bucket.
-Note
-For more information about how to use the AWS SDK for Ruby to handle encryption and decryption, see AWS::S3::S3Object. Content delivered to Amazon S3 buckets might contain customer content. For more information about removing sensitive data, see How Do I Empty an S3 Bucket? or How Do I Delete an S3 Bucket?.
-Topics
- Using the SDK for Ruby on a Vagrant Instance
- Using the SDK for Ruby on an AWS OpsWorks Stacks Linux Instance
- Using the SDK for Ruby on an AWS OpsWorks Stacks Windows Instance

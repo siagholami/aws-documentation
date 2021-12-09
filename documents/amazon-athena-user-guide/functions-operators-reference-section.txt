@@ -1,7 +1,0 @@
-DML Queries, Functions, and Operators
-Athena DML query statements are based on Presto 0.172. For more information about these functions, see Presto 0.172 Functions and Operators in the open source Presto documentation. We provide links to specific subsections of that documentation in the Presto Functions topic.
-Athena does not support all of Presto's features, and there are some significant differences. For more information, see the reference topics for specific statements in this section and Considerations and Limitations.
-Topics
- SELECT
- INSERT INTO
- Presto Functions in Amazon Athena

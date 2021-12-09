@@ -1,9 +1,0 @@
-Job Operations
-Topics
- Create Job
- List Jobs by Pipeline
- List Jobs by Status
- Read Job
- Cancel Job
-Jobs do the work of transcoding. Each job converts one file into one format. For example, if you want to convert a media file into six different formats, you create six jobs.
-This section describes operations that you can perform on jobs using the Elastic Transcoder API. For more information about jobs, including how to perform the same operations using the Elastic Transcoder console, see Working with Jobs.

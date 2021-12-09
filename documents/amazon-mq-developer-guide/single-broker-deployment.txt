@@ -1,5 +1,0 @@
-Amazon MQ Single-Instance Broker
-A single-instance broker is comprised of one broker in one Availability Zone. The broker communicates with your application and with Amazon EFS (by default) or with Amazon EBS. For more information, see Storage.
-The following diagram illustrates a single-instance broker with Amazon EFS storage replicated across multiple Availability Zones (AZs).
-
-The following diagram illustrates a single-instance broker with Amazon EBS storage replicated across multiple servers within a single AZ.

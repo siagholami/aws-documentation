@@ -1,9 +1,0 @@
-Tutorial: Create a Trust Relationship Between Your AWS Managed Microsoft AD and Your On-Premises Domain
-This tutorial walks you through all the steps necessary to set up a trust relationship between AWS Directory Service for Microsoft Active Directory and your on-premises Microsoft Active Directory. Although creating the trust requires only a few steps, you must first complete the following prerequisite steps. 
-Topics
- Prerequisites
- Step 1: Prepare Your On-Premises Domain
- Step 2: Prepare Your AWS Managed Microsoft AD
- Step 3: Create the Trust Relationship
-See Also
-When to Create a Trust Relationship

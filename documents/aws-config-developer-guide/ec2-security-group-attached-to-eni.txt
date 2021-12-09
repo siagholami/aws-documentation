@@ -1,9 +1,0 @@
-ec2-security-group-attached-to-eni
-Checks that security groups are attached to Amazon Elastic Compute Cloud (Amazon EC2) instances or to an elastic network interface. The rule returns NON_COMPLIANT if the security group is not associated with an Amazon EC2 instance or an elastic network interface.
-Identifier: EC2_SECURITY_GROUP_ATTACHED_TO_ENI
-Trigger type: Configuration changes
-AWS Region: All supported AWS Regions except Africa (Cape Town) and Europe (Milan)
-Parameters:
-None  
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

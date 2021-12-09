@@ -1,9 +1,0 @@
-sagemaker-notebook-no-direct-internet-access
-Checks whether direct internet access is disabled for an Amazon SageMaker notebook instance. The rule is NON_COMPLIANT if SageMaker notebook instances are internet-enabled.
-Identifier: SAGEMAKER_NOTEBOOK_NO_DIRECT_INTERNET_ACCESS
-Trigger type: Periodic
-AWS Region: All supported AWS Regions except AWS GovCloud (US-East), China (Beijing), China (Ningxia), Africa (Cape Town) and Europe (Milan)
-Parameters:
-None   
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

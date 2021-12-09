@@ -1,2 +1,0 @@
-Traffic privacy
-You can improve the security of your builds by configuring CodeBuild to use an interface VPC endpoint. To do this, you do not need an internet gateway, NAT device, or virtual private gateway. It also is not required to configure PrivateLink, though it is recommended. For more information, see Use VPC endpoints. For more information about PrivateLink and VPC endpoints, see AWS PrivateLink and Accessing AWS services through PrivateLink. 

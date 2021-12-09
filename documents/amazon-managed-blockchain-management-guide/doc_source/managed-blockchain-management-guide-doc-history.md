@@ -1,0 +1,11 @@
+# Document History for Amazon Managed Blockchain Management Guide<a name="managed-blockchain-management-guide-doc-history"></a>
+
+The following table describes important additions to the Amazon Managed Blockchain Management Guide\. For notification about updates to this documentation, you can subscribe to the RSS feed\.
+
+| Change | Description | Date | 
+| --- |--- |--- |
+| [Updated for support of Amazon CloudWatch Logs and streamlined Getting Started experience\.](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html) | Added Monitoring chapter for publishing peer node, chaincode, and CA logs to CloudWatch Logs\. Miscellaneous improvements to getting started tutorial to streamline and simplify\. | March 25, 2020 | 
+| [Major updates for new proposal and voting work flow for member invitations and removals](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/) | Updated Getting Started tutorial, conceptual information, and procedures for new voting proposal design\. | April 8, 2019 | 
+| [Added security group configuration guidance](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-prerequisites.html#get-started-prerequisites-sgs) | Added prescriptive guidance for configuring security groups for the tutorial\. Added references for minimum inbound and outbound security group rules required for Hyperledger Fabric client and interface VPC endpoint for reference and customization\. | February 28, 2019 | 
+| [Updates to getting started steps](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html#get-started-client-setup-CA-client) | Removed redundant steps in 3\.2\. The step to update \.bash\_profile with path to fabric\-ca was already covered in step 3\.1\. | December 3, 2018 | 
+| [Initial release of Amazon Managed Blockchain \(Preview\)](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/) | Initial documentation for Amazon Managed Blockchain\. | November 28, 2018 | 

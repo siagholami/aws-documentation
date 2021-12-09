@@ -1,7 +1,0 @@
-Configure availability settings in Microsoft Exchange
-To redirect all calendar free/busy information requests for enabled users to Amazon WorkMail, set up an availability address space on Microsoft Exchange.
-Use the following PowerShell command:
-$credentials = Get-Credential
-At the prompt, enter the credentials of the Amazon WorkMail service account. The username should be entered as domain\username (that is, orgname.awsapps.com\workmail_service_account_username. Here, orgname represents the name of the Amazon WorkMail organization. For more information, see Create service accounts in Microsoft Exchange and Amazon WorkMail.
-Add-AvailabilityAddressSpace -ForestName orgname.awsapps.com -AccessMethod OrgWideFB -Credentials $credentials
-For more information, see Add-AvailabilityAddressSpace on Microsoft TechNet.

@@ -1,9 +1,0 @@
-sns-encrypted-kms
-Checks whether Amazon SNS topic is encrypted with AWS Key Management Service (AWS KMS). The rule is NON_COMPLIANT if the Amazon SNS topic is not encrypted with AWS KMS. The rule is also NON_COMPLIANT when encrypted KMS key is not present in kmsKeyIds input parameter. 
-Identifier: SNS_ENCRYPTED_KMS
-Trigger type: Configuration changes
-Parameters:
-kmsKeyIds (Optional)
-Comma separated list of AWS KMS key ARN list.
-AWS CloudFormation template
-To create AWS Config managed rules with AWS CloudFormation templates, see Creating AWS Config Managed Rules With AWS CloudFormation Templates.

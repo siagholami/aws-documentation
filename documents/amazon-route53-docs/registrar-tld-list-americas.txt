@@ -1,4 +1,0 @@
-Americas
-You can use the following top-level domains (TLDs) for the Americas to register domains with Amazon Route 53.
-.ca (Canada), .cl (Chile), .co (Colombia), .com.ar (Argentina), .com.br (Brazil), .com.mx (Mexico), .mx (Mexico), .us (United States), .vc (Saint Vincent and the Grenadines), .vg (British Virgin Islands) 
-Return to index

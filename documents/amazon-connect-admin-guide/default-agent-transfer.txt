@@ -1,5 +1,0 @@
-Default agent transfer: "Transferring now"
-This default transfer flow is the what the agent experiences when transferring a contact to another agent by using Create quick connects. A Play prompt plays the message “Transferring now.” Then the Transfer to agent block is used to transfer the contact to the agent. 
-Tip
-The Transfer to Agent block is a beta feature and only works for voice interactions. To transfer a chat contact to another agent, follow these instructions: Use contact attributes to route contacts to a specific agent.
-For instructions about how to override and change a default contact flow, see Change a default contact flow.

@@ -1,5 +1,0 @@
-Troubleshooting Certificate Requests
-Consult the following topics if you have encounter problems when requesting an ACM certificate.
-Topics
- Certificate Request Times Out
- Certificate Request Fails

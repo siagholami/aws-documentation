@@ -1,7 +1,0 @@
-key_mgmt_util
-The key_mgmt_util command line tool helps Crypto Users (CU) manage keys in the HSMs. It includes multiple commands that generate, delete, import, and export keys, get and set attributes, find keys, and perform cryptographic operations. 
-For a quick start, see Getting Started with key_mgmt_util. For detailed information about the commands, see key_mgmt_util Command Reference. For help interpreting the key attributes, see the Key Attribute Reference. 
-To use key_mgmt_util if you are using Linux, connect to your client instance and then see Install and Configure the AWS CloudHSM Client (Linux). If you are using Windows, see Install and Configure the AWS CloudHSM Client (Windows). 
-Topics
- Getting Started with key_mgmt_util
- key_mgmt_util Command Reference

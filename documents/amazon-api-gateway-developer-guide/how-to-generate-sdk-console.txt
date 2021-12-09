@@ -1,8 +1,0 @@
-Generate SDKs for an API using the API Gateway console
-To generate a platform- or language-specific SDK for an API in API Gateway, you must first create, test, and deploy the API in a stage. For illustration purposes, we use the Simple Calculator API as an example to generate language-specific or platform-specific SDKs throughout this section. For instructions on how to create, test, and deploy this API, see Create the Simple Calculator API. 
-Topics
- Generate the Java SDK of an API
- Generate the Android SDK of an API
- Generate the iOS SDK of an API
- Generate the JavaScript SDK of an API
- Generate the Ruby SDK of an API
